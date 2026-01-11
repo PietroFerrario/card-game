@@ -1,11 +1,11 @@
 #ifndef CARDMATCH_H
 #define CARDMATCH_H
 
-class CardMatch {
+class CardMatch
+{
 
-    public:
-
-    private:
+public:
+private:
 };
 
 #endif

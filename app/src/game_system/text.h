@@ -4,16 +4,15 @@
 #include <string_view>
 #include <nlohmann/json.hpp>
 
-class Text{
-    public:
+class Text
+{
+public:
     Text();
 
-    const std::string& getText(const char* key) const;
+    const std::string &getText(const char *key) const;
 
-    private: 
-
-    nlohmann::json m_data;
-
+private:
+    nlohmann::json m_data{};
 };
 
 #endif
