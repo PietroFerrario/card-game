@@ -6,10 +6,9 @@
 #include <string>
 #include <string_view>
 
-#include <nlohmann/json.hpp>
-
 #include "player.h"
 #include "iotext.h"
+#include "text.h"
 
 
 class Game{
@@ -33,7 +32,7 @@ class Game{
 
     private:
     IOText& m_io;
-    json m_data;
+    Text m_text;
     Player m_main_player {};
 
 

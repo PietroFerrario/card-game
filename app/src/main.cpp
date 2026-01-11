@@ -11,8 +11,8 @@ int main(){
 
     game.intro();
 
-    while(!game.isLost()){
-    }
+    //while(!game.isLost()){
+    //}
 
     game.lossMessage();
 

@@ -3,16 +3,9 @@
 #include <ranges>
 #include <algorithm>
 #include <cctype>
-#include <fstream>
 
-using json = nlohmann::json;
 
-Game::Game(IOText& io): m_io{io}{
-
-    // Add throwable exceptions
-    std::ifstream f("data/text.json");
-    m_data = json::parse(f);
-}
+Game::Game(IOText& io): m_io{io}{}
 
 bool Game::isLost() const {
     return(m_main_player.getHp()<0);
@@ -46,12 +39,11 @@ const bool Game::isValidName(std::string_view name) const {
     });
 }
 
-
 void Game::intro() {
     m_io.println("Welcome traveler, what is your name?");
     setMainPlayerName();
 }
 
 void Game::lossMessage() const {
-    m_io.print(m_data)
+    m_io.print(m_text.getText("outro"));
 }

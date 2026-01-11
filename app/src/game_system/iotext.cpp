@@ -5,7 +5,7 @@ void IOText::println(std::string_view msg){
     m_out << msg <<"\n";
 }
 
-void IOText::print(std::string_view msg){
+void IOText::print(std::string_view msg) const{
     m_out << msg;
 }
 

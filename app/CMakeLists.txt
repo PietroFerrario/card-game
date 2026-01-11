@@ -18,6 +18,7 @@ target_sources(${PROJECT_NAME} PRIVATE
     src/game_system/player.cpp
     src/game_system/game.cpp
     src/game_system/iotext.cpp
+    src/game_system/text.cpp
 )
 
 target_link_libraries(${PROJECT_NAME} PRIVATE nlohmann_json::nlohmann_json)
