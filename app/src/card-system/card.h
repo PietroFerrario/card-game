@@ -7,6 +7,7 @@
 class Card
 {
 public:
+    // Card(std::string_view card_name);
     std::string_view get_name() const { return m_card_name; }
     std::string_view get_effect() const { return m_card_effect; }
     std::string_view get_effect_short() const { return m_card_effect_short; }
