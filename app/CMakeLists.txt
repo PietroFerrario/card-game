@@ -18,10 +18,13 @@ target_sources(cardgame_core PRIVATE
     src/game_system/game.cpp
     src/game_system/iotext.cpp
     src/game_system/text.cpp
-    src/card-system/card.cpp
-    src/card-system/deckCombat.cpp
-    src/card-system/deckPlayer.cpp
+    src/card_system/card.cpp
+    src/card_system/deckCombat.cpp
+    src/card_system/deckPlayer.cpp
     )
+
+target_compile_definitions(cardgame_core PUBLIC
+    $<$<CONFIG:Debug>:CARDGAME_DEBUG>)
 
 target_include_directories(cardgame_core PUBLIC src)
 target_link_libraries(cardgame_core PUBLIC nlohmann_json::nlohmann_json)
