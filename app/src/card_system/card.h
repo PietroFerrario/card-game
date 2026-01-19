@@ -1,24 +1,22 @@
 #ifndef CARD_H
 #define CARD_H
 
-#include <string>
-#include <string_view>
+class CardDefinition;
 
 class Card
 {
 public:
-    // Card(std::string_view card_name);
-    std::string_view get_name() const { return m_card_name; }
-    std::string_view get_effect() const { return m_card_effect; }
-    std::string_view get_effect_short() const { return m_card_effect_short; }
+    Card(const CardDefinition &definition);
 
     int get_dmg() const { return m_dmg; }
+    int get_def() const { return m_armor; }
 
 private:
-    std::string m_card_name{};
-    std::string m_card_effect{};
-    std::string m_card_effect_short{};
+    const CardDefinition *m_definition;
+
     int m_dmg{};
+    int m_armor{};
+    int m_cost{};
 };
 
 #endif // CARD_H

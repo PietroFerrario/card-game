@@ -21,6 +21,7 @@ target_sources(cardgame_core PRIVATE
     src/card_system/card.cpp
     src/card_system/deckCombat.cpp
     src/card_system/deckPlayer.cpp
+    src/card_system/effects/effect.cpp
     )
 
 target_compile_definitions(cardgame_core PUBLIC

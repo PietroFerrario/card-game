@@ -1,3 +1,9 @@
 #include "card.h"
+#include "cardDefinition.h"
 
-// Card::Card(std::string_view card_name) : m_card_name{card_name} {}
+Card::Card(const CardDefinition &definition) : m_definition{&definition},
+                                               m_dmg{m_definition->get_base_dmg()},
+                                               m_armor{m_definition->get_base_armor()},
+                                               m_cost{m_definition->get_base_cost()}
+{
+}
