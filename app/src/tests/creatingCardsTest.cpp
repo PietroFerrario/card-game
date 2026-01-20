@@ -1,11 +1,12 @@
-#include "card_system/cardMaker.h"
-#include "card_system/card.h"
+#include "cards/cardInstance.h"
+#include "factories/cardFactory.h"
+
+#include <memory>
 
 int main()
 {
-    CardMaker cardMaker;
-
-    Card shieldWarrior = cardMaker.makeSingleCard("shieldWarrior");
+    const CardFactory factory;
+    std::unique_ptr<CardInstance> shieldWarrior = factory.makeSingleCard("shieldWarrior");
 
     return 0;
 }

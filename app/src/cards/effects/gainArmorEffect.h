@@ -1,12 +1,12 @@
 #ifndef GAINBLOCKEFFECT_H
 #define GAINBLOCKEFFECT_H
 
-#include "effect.h"
+#include "cards/effect.h"
 
 class GainArmorEffect : public Effect
 {
 public:
-    void apply(CardMatch &card_match, Card &card) override;
+    void apply(CardMatch &card_match, CardInstance &card) override;
 
 private:
 };

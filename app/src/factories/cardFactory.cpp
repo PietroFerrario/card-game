@@ -1,10 +1,10 @@
 #include "cardFactory.h"
 #include "util/debug.h"
-#include "cardInstance.h"
-#include "effects/effect.h"
-#include "cardDefinition.h"
+#include "cards/cardInstance.h"
+#include "cards/cardDefinition.h"
+#include "cards/effect.h"
 
-#include "effects/gainArmorEffect.h"
+#include "cards/effects/gainArmorEffect.h"
 
 #include <memory>
 
@@ -35,9 +35,9 @@ void CardFactory::registerCards()
     registerDefinition("shieldWarrior", std::make_unique<CardDefinition>("shieldWarrior", "Shield Warrior", 2, 1, 1, std::move(shieldWarriorEffects)));
 }
 
-std::unique_ptr<Card> CardFactory::makeSingleCard(const std::string &cardId)
+std::unique_ptr<CardInstance> CardFactory::makeSingleCard(const std::string &cardId) const
 {
-    std::unique_ptr<Card> card{std::make_unique<Card>(*m_cardMap.at(cardId))};
-    DEBUG_LOG("Card " << cardId << " has been created ");
+    std::unique_ptr<CardInstance> card{std::make_unique<CardInstance>(*m_cardMap.at(cardId))};
+    DEBUG_LOG("CardInstance of " << cardId << " has been created.");
     return card;
 }

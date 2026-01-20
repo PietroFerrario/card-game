@@ -1,16 +1,15 @@
 #ifndef CARDFACTORY_H
 #define CARDFACTORY_H
 
-#include <vector>
+#include "ICardFactory.h"
+
 #include <string_view>
-#include <memory>
 #include <unordered_map>
 
 class CardDefinition;
-class Card;
-struct DeckEntry;
+class CardInstance;
 
-class CardFactory
+class CardFactory : public ICardFactory
 {
 public:
     CardFactory();
@@ -19,7 +18,7 @@ public:
 
     void registerCards();
 
-    std::unique_ptr<Card> makeSingleCard(const std::string &cardId);
+    std::unique_ptr<CardInstance> makeSingleCard(const std::string &cardId) const override;
 
     ~CardFactory();
 

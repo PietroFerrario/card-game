@@ -13,18 +13,23 @@ FetchContent_MakeAvailable(nlohmann)
 
 add_library(cardgame_core)
 target_sources(cardgame_core PRIVATE 
+    src/cards/cardInstance.cpp
+    src/cards/cardDefinition.cpp
+    src/cards/effects/gainArmorEffect.cpp
+
+    src/deck/deckCombat.cpp
+    src/deck/deckPlayer.cpp
+    
+    src/entities/player.cpp
+    src/entities/enemies/enemy.cpp  
+
+    src/factories/cardFactory.cpp
+
     src/game_system/cardmatch.cpp
-    src/game_system/player.cpp
     src/game_system/game.cpp
-    src/game_system/iotext.cpp
-    src/game_system/text.cpp
-    src/enemies/enemy.cpp
-    src/card_system/cardInstance.cpp
-    src/card_system/cardDefinition.cpp
-    src/card_system/cardFactory.cpp
-    src/card_system/deckCombat.cpp
-    src/card_system/deckPlayer.cpp
-    src/card_system/effects/gainArmorEffect.cpp
+
+    src/ui/iotext.cpp
+    src/ui/text.cpp
     )
 
 target_compile_definitions(cardgame_core PUBLIC

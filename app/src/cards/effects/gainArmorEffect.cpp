@@ -1,8 +1,8 @@
 #include "gainArmorEffect.h"
-#include "../card.h"
+#include "cards/cardInstance.h"
 #include "game_system/cardmatch.h"
 
-void GainArmorEffect::apply(CardMatch &card_match, Card &card)
+void GainArmorEffect::apply(CardMatch &card_match, CardInstance &card)
 {
     card_match.gainArmor(card.getArmor());
 }

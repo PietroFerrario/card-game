@@ -6,20 +6,21 @@
 #include <memory>
 
 class DeckPlayer;
+class DeckEntry;
 class CardInstance;
-class CardMaker;
+class ICardFactory;
 
 class DeckCombat
 {
 public:
-    DeckCombat(const DeckPlayer &deck_player);
+    DeckCombat(const DeckPlayer &deck_player, const ICardFactory &factory);
 
-    void DeckCombat::populateDeck(const std::vector<DeckEntry> &cardList);
+    void populateDeck(const std::vector<DeckEntry> &cardList);
 
 private:
     std::vector<std::unique_ptr<CardInstance>> m_cards;
 
-    CardMaker &m_cardMaker;
+    const ICardFactory &m_factory;
 };
 
 #endif // DECKCOMBAT_H

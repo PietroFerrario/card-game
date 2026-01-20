@@ -1,5 +1,5 @@
-#include "card_system/deckPlayer.h"
-#include "card_system/deckEntry.h"
+#include "deck/deckPlayer.h"
+#include "deck/deckEntry.h"
 
 #include <vector>
 #include <iostream>

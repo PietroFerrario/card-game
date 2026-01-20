@@ -1,4 +1,4 @@
-#include "deckPlayer.h"
+#include "deck/deckPlayer.h"
 #include "util/debug.h"
 
 #include <algorithm>

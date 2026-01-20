@@ -1,13 +1,13 @@
 #ifndef GAME_H
 #define GAME_H
 
+#include "entities/player.h"
+#include "ui/iotext.h"
+#include "ui/text.h"
+
 #include <memory>
 #include <string>
 #include <string_view>
-
-#include "player.h"
-#include "iotext.h"
-#include "text.h"
 
 class Game
 {
@@ -29,7 +29,7 @@ public:
 private:
     IOText &m_io;
     Text m_text{};
-    Player m_main_player{};
+    Player m_mainPlayer{};
 };
 
 #endif // GAME_H

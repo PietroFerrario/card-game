@@ -8,22 +8,22 @@ Game::Game(IOText &io) : m_io{io} {}
 
 bool Game::isLost() const
 {
-    return (m_main_player.getHp() < 0);
+    return (m_mainPlayer.getHp() < 0);
 }
 
 bool Game::isPlayerAlive() const
 {
-    return m_main_player.getHp() > 0;
+    return m_mainPlayer.getHp() > 0;
 }
 
 Player &Game::getMainPlayer()
 {
-    return m_main_player;
+    return m_mainPlayer;
 }
 
 const Player &Game::getMainPlayer() const
 {
-    return m_main_player;
+    return m_mainPlayer;
 }
 
 void Game::setMainPlayerName()
@@ -35,7 +35,7 @@ void Game::setMainPlayerName()
         m_io.promptln(name, "Enter your name: ");
     } while (!isValidName(name));
 
-    m_main_player.setName(name);
+    m_mainPlayer.setName(name);
 }
 
 const bool Game::isValidName(std::string_view name) const

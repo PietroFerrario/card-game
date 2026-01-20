@@ -2,12 +2,12 @@
 #define EFFECT_H
 
 class CardMatch;
-class Card;
+class CardInstance;
 
 class Effect
 {
 public:
-    virtual void apply(CardMatch &card_match, Card &card) = 0;
+    virtual void apply(CardMatch &card_match, CardInstance &card) = 0;
 
     virtual ~Effect() = default;
 

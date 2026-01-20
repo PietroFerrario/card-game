@@ -1,5 +1,5 @@
 #include "cardDefinition.h"
-#include "effects/effect.h"
+#include "effect.h"
 
 #include <utility>
 
