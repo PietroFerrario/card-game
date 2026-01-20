@@ -18,10 +18,13 @@ target_sources(cardgame_core PRIVATE
     src/game_system/game.cpp
     src/game_system/iotext.cpp
     src/game_system/text.cpp
+    src/enemies/enemy.cpp
     src/card_system/card.cpp
+    src/card_system/cardDefinition.cpp
+    src/card_system/cardMaker.cpp
     src/card_system/deckCombat.cpp
     src/card_system/deckPlayer.cpp
-    src/card_system/effects/effect.cpp
+    src/card_system/effects/gainArmorEffect.cpp
     )
 
 target_compile_definitions(cardgame_core PUBLIC
@@ -41,5 +44,8 @@ add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
 
 )
 
-add_executable(deck_test src/tests/deck_test.cpp)
-target_link_libraries(deck_test PRIVATE cardgame_core)
+add_executable(deckTest src/tests/deckTest.cpp)
+target_link_libraries(deckTest PRIVATE cardgame_core)
+
+add_executable(creatingCardsTest src/tests/creatingCardsTest.cpp)
+target_link_libraries(creatingCardsTest PRIVATE cardgame_core)

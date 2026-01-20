@@ -12,27 +12,28 @@ class CardDefinition
 {
 
 public:
-    CardDefinition::CardDefinition(std::string_view card_id, std::string_view card_name,
-                                   int base_dmg = 0, int base_armor = 0, int base_cost = 1,
-                                   std::vector<std::unique_ptr<Effect>> effect_list = {});
+    CardDefinition(std::string_view cardId, std::string_view cardName,
+                   int baseDamage = 0, int baseArmor = 0, int baseCost = 1,
+                   std::vector<std::unique_ptr<Effect>> effectList = {});
 
-    std::string_view get_name() const { return m_card_name; }
+    std::string_view getName() const { return m_cardName; }
+    std::string_view getID() const { return m_cardId; }
 
-    int get_base_dmg() const { return m_base_dmg; }
-    int get_base_armor() const { return m_base_armor; }
-    int get_base_cost() const { return m_base_cost; }
+    int getBaseDamage() const { return m_baseDamage; }
+    int getBaseArmor() const { return m_baseArmor; }
+    int getBaseCost() const { return m_baseCost; }
 
     ~CardDefinition();
 
 private:
-    std::string m_card_id{};
-    std::string m_card_name{};
+    std::string m_cardId{};
+    std::string m_cardName{};
 
-    int m_base_dmg{0};
-    int m_base_armor{0};
-    int m_base_cost{1};
+    int m_baseDamage{0};
+    int m_baseArmor{0};
+    int m_baseCost{1};
 
-    std::vector<std::unique_ptr<Effect>> m_effect_list{};
+    std::vector<std::unique_ptr<Effect>> m_effectList{};
 };
 
 #endif // CARDDEFINITION_H

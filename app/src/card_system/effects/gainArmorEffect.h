@@ -3,7 +3,7 @@
 
 #include "effect.h"
 
-class GainBlockEffect : public Effect
+class GainArmorEffect : public Effect
 {
 public:
     void apply(CardMatch &card_match, Card &card) override;

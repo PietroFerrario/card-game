@@ -5,8 +5,8 @@
 
 struct DeckEntry
 {
-    std::string card_id;
-    int card_count;
+    std::string cardId;
+    int cardCount;
 };
 
 #endif // DECKENTRY_H

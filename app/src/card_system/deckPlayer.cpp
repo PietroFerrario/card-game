@@ -3,57 +3,57 @@
 
 #include <algorithm>
 
-DeckPlayer::DeckPlayer(std::vector<DeckEntry> &starting_card_list, int max_card_number)
-    : m_cards_list{std::move(starting_card_list)}, m_max_card_number{max_card_number}
+DeckPlayer::DeckPlayer(std::vector<DeckEntry> startingCardList, int maxCardNumber)
+    : m_cardsList{std::move(startingCardList)}, m_maxCardNumber{maxCardNumber}
 {
 }
 
 std::ostream &operator<<(std::ostream &out, const DeckPlayer &deck)
 {
-    for (auto &card : deck.m_cards_list)
+    for (auto &card : deck.m_cardsList)
     {
-        std::cout << "id: " << card.card_id << " - count: " << card.card_count << "\t \t";
+        out << "id: " << card.cardId << " - count: " << card.cardCount << "\t \t";
     }
 
-    std::cout << std::endl;
+    out << "\n";
 
     return out;
 }
 
-const int DeckPlayer::getCurrentCardNumber() const
+int DeckPlayer::getCurrentCardNumber() const
 {
-    int card_count{};
-    for (const auto &el : m_cards_list)
+    int cardCount{};
+    for (const auto &el : m_cardsList)
     {
-        card_count += el.card_count;
+        cardCount += el.cardCount;
     }
 
-    return card_count;
+    return cardCount;
 }
 
-bool DeckPlayer::isCardPresent(std::string_view card_id) const
+bool DeckPlayer::isCardPresent(std::string_view cardId) const
 {
-    auto it = std::find_if(m_cards_list.begin(), m_cards_list.end(), [card_id](const DeckEntry &deck_entry)
-                           { return deck_entry.card_id == card_id; });
+    auto it = std::find_if(m_cardsList.begin(), m_cardsList.end(), [cardId](const DeckEntry &deckEntry)
+                           { return deckEntry.cardId == cardId; });
 
-    return (it != m_cards_list.end());
+    return (it != m_cardsList.end());
 }
 
-bool DeckPlayer::addCard(std::string_view card_id)
+bool DeckPlayer::addCard(std::string_view cardId)
 {
-    if (getCurrentCardNumber() < m_max_card_number)
+    if (getCurrentCardNumber() < m_maxCardNumber)
     {
-        auto it = std::find_if(m_cards_list.begin(), m_cards_list.end(), [card_id](const DeckEntry &deck_entry)
-                               { return deck_entry.card_id == card_id; });
-        if (it != m_cards_list.end())
+        auto it = std::find_if(m_cardsList.begin(), m_cardsList.end(), [cardId](const DeckEntry &deckEntry)
+                               { return deckEntry.cardId == cardId; });
+        if (it != m_cardsList.end())
         {
-            it->card_count++;
-            DEBUG_LOG("Added an already existing card to the deck: " << card_id);
+            it->cardCount++;
+            DEBUG_LOG("Added an already existing card to the deck: " << cardId);
         }
         else
         {
-            m_cards_list.emplace_back(DeckEntry{std::string{card_id}, 1});
-            DEBUG_LOG("Added a new card to the deck: " << card_id);
+            m_cardsList.emplace_back(DeckEntry{std::string{cardId}, 1});
+            DEBUG_LOG("Added a new card to the deck: " << cardId);
         }
         return true;
     }
@@ -61,26 +61,26 @@ bool DeckPlayer::addCard(std::string_view card_id)
         return false;
 }
 
-bool DeckPlayer::removeCard(std::string_view card_id)
+bool DeckPlayer::removeCard(std::string_view cardId)
 {
-    if (getCurrentCardNumber() > m_min_card_number)
+    if (getCurrentCardNumber() > m_minCardNumber)
     {
-        auto it = std::find_if(m_cards_list.begin(), m_cards_list.end(), [card_id](const DeckEntry &deck_entry)
-                               { return deck_entry.card_id == card_id; });
-        if (it != m_cards_list.end())
+        auto it = std::find_if(m_cardsList.begin(), m_cardsList.end(), [cardId](const DeckEntry &deckEntry)
+                               { return deckEntry.cardId == cardId; });
+        if (it != m_cardsList.end())
         {
-            it->card_count--;
-            DEBUG_LOG("Removed a card from the deck: " << card_id);
-            if (it->card_count == 0)
+            it->cardCount--;
+            DEBUG_LOG("Removed a card from the deck: " << cardId);
+            if (it->cardCount == 0)
             {
-                it = m_cards_list.erase(it);
-                DEBUG_LOG("No more " << card_id << " left in the deck");
+                it = m_cardsList.erase(it);
+                DEBUG_LOG("No more " << cardId << " left in the deck");
             }
             return true;
         }
         else
         {
-            DEBUG_LOG("Tried to remove a card that is not in the deck: " << card_id);
+            DEBUG_LOG("Tried to remove a card that is not in the deck: " << cardId);
         }
     }
     else
