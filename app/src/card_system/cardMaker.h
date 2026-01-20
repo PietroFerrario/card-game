@@ -20,6 +20,8 @@ public:
 
     Card makeSingleCard(const std::string &cardId);
 
+    ~CardMaker();
+
 private:
     std::unordered_map<std::string, std::unique_ptr<CardDefinition>> m_cardMap;
 };

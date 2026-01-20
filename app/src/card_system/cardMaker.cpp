@@ -13,6 +13,8 @@ CardMaker::CardMaker()
     registerCards();
 }
 
+CardMaker::~CardMaker() {}
+
 void CardMaker::registerDefinition(std::string_view cardId, std::unique_ptr<CardDefinition> uniqueCardDefinition)
 {
     auto [it, inserted] = m_cardMap.emplace(std::string(cardId), std::move(uniqueCardDefinition));
