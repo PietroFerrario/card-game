@@ -1,12 +1,12 @@
-#ifndef CARD_H
-#define CARD_H
+#ifndef CARDINSTANCE_H
+#define CARDINSTANCE_H
 
 class CardDefinition;
 
-class Card
+class CardInstance
 {
 public:
-    Card(const CardDefinition &definition);
+    CardInstance(const CardDefinition &definition);
 
     int getDamage() const { return m_damage; }
     int getArmor() const { return m_armor; }
@@ -19,4 +19,4 @@ private:
     int m_cost{};
 };
 
-#endif // CARD_H
+#endif // CARDINSTANCE_H

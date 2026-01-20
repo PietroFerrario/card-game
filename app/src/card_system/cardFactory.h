@@ -1,5 +1,5 @@
-#ifndef CARDMAKER_H
-#define CARDMAKER_H
+#ifndef CARDFACTORY_H
+#define CARDFACTORY_H
 
 #include <vector>
 #include <string_view>
@@ -8,22 +8,23 @@
 
 class CardDefinition;
 class Card;
+struct DeckEntry;
 
-class CardMaker
+class CardFactory
 {
 public:
-    CardMaker();
+    CardFactory();
 
     void registerDefinition(std::string_view cardId, std::unique_ptr<CardDefinition> uniqueCardDefinition);
 
     void registerCards();
 
-    Card makeSingleCard(const std::string &cardId);
+    std::unique_ptr<Card> makeSingleCard(const std::string &cardId);
 
-    ~CardMaker();
+    ~CardFactory();
 
 private:
     std::unordered_map<std::string, std::unique_ptr<CardDefinition>> m_cardMap;
 };
 
-#endif // CARDMAKER_H
+#endif // CARDFACTORY_H

@@ -19,9 +19,9 @@ target_sources(cardgame_core PRIVATE
     src/game_system/iotext.cpp
     src/game_system/text.cpp
     src/enemies/enemy.cpp
-    src/card_system/card.cpp
+    src/card_system/cardInstance.cpp
     src/card_system/cardDefinition.cpp
-    src/card_system/cardMaker.cpp
+    src/card_system/cardFactory.cpp
     src/card_system/deckCombat.cpp
     src/card_system/deckPlayer.cpp
     src/card_system/effects/gainArmorEffect.cpp
