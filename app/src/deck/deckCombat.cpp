@@ -1,4 +1,5 @@
 #include "deckCombat.h"
+#include "cards/cardDefinition.h"
 #include "cards/cardInstance.h"
 #include "deckEntry.h"
 #include "deckPlayer.h"
@@ -27,9 +28,9 @@ void DeckCombat::drawCard()
 {
     if (!m_cards.empty())
     {
-        m_handPile.emplace_back(std::move(m_cards.front()));
+        m_handPile.emplace_back(std::move(m_cards.back()));
         m_cards.pop_back();
-        DEBUG_LOG("Drawn " << m_handPile.front()->getCardId()
+        DEBUG_LOG("Drawn " << m_handPile.back()->getCardDefinition().getID()
                            << " from the deck, placed in the handPile.");
     }
     else

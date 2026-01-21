@@ -13,7 +13,7 @@ class CardInstance
     int getDamage() const { return m_damage; }
     int getArmor() const { return m_armor; }
 
-    std::string_view getCardId();
+    const CardDefinition& getCardDefinition() const;
 
   private:
     const CardDefinition* m_definition;

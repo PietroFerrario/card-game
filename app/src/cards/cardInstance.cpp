@@ -7,4 +7,4 @@ CardInstance::CardInstance(const CardDefinition& definition)
 {
 }
 
-std::string_view CardInstance::getCardId() { return m_definition->getID(); }
+const CardDefinition& CardInstance::getCardDefinition() const { return *m_definition; }
