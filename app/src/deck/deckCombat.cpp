@@ -38,3 +38,18 @@ void DeckCombat::drawCard()
         DEBUG_LOG("The deck is empty: no more cards to drawn");
     }
 }
+
+void DeckCombat::discardFromHand(int handIndex)
+{
+    if (m_handPile.size() > handIndex)
+    {
+        m_discardPile.emplace_back(std::move(m_handPile.at(handIndex)));
+        m_handPile.erase(m_handPile.begin() + handIndex);
+        DEBUG_LOG("Discarded " << m_discardPile.back()->getCardDefinition().getID()
+                               << "from the handPile, and placed in the discardPile");
+    }
+    else
+    {
+        DEBUG_LOG("The index " << handIndex << " is out of bounds");
+    }
+}

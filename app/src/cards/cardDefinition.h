@@ -23,6 +23,8 @@ class CardDefinition
     int getBaseArmor() const { return m_baseArmor; }
     int getBaseCost() const { return m_baseCost; }
 
+    const std::vector<std::unique_ptr<Effect>>& getEffectList() const { return m_effectList; }
+
     ~CardDefinition();
 
   private:

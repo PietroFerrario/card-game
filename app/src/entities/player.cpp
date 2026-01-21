@@ -1,5 +1,10 @@
 #include "player.h"
 
+Player::Player(const std::vector<DeckEntry>& startingCardList, int hp = 10)
+    : m_deckPlayer{startingCardList}, m_hp{hp}
+{
+}
+
 void Player::takeDamage(int amount) { m_hp -= amount; }
 void Player::heal(int amount) { m_hp += amount; }
 

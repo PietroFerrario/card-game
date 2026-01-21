@@ -16,6 +16,9 @@ class DeckCombat
     DeckCombat(const DeckPlayer& deck_player, const ICardFactory& factory);
 
     void drawCard();
+    void discardFromHand(int handIndex);
+
+    std::vector<std::unique_ptr<CardInstance>>& getHandPile() { return m_handPile; }
 
   private:
     std::vector<std::unique_ptr<CardInstance>> m_cards;
