@@ -12,23 +12,24 @@
 
 class DeckPlayer
 {
-public:
-	DeckPlayer(std::vector<DeckEntry> startingCardList, int maxCardNumbers = 20);
+  public:
+    DeckPlayer() {}
+    DeckPlayer(std::vector<DeckEntry> startingCardList, int maxCardNumbers = 20);
 
-	friend std::ostream &operator<<(std::ostream &out, const DeckPlayer &deck);
+    friend std::ostream& operator<<(std::ostream& out, const DeckPlayer& deck);
 
-	int getCurrentCardNumber() const;
-	bool isCardPresent(std::string_view cardId) const;
+    int getCurrentCardNumber() const;
+    bool isCardPresent(std::string_view cardId) const;
 
-	bool addCard(std::string_view cardId);
-	bool removeCard(std::string_view cardId);
+    bool addCard(std::string_view cardId);
+    bool removeCard(std::string_view cardId);
 
-	const std::vector<DeckEntry> &getCardList() const { return m_cardsList; }
+    const std::vector<DeckEntry>& getCardList() const { return m_cardsList; }
 
-private:
-	int m_maxCardNumber{};
-	int m_minCardNumber{5};
-	std::vector<DeckEntry> m_cardsList{};
+  private:
+    int m_maxCardNumber{};
+    int m_minCardNumber{5};
+    std::vector<DeckEntry> m_cardsList{};
 };
 
 #endif // DECKPLAYER_H

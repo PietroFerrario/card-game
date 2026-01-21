@@ -46,7 +46,7 @@ void DeckCombat::discardFromHand(int handIndex)
         m_discardPile.emplace_back(std::move(m_handPile.at(handIndex)));
         m_handPile.erase(m_handPile.begin() + handIndex);
         DEBUG_LOG("Discarded " << m_discardPile.back()->getCardDefinition().getID()
-                               << "from the handPile, and placed in the discardPile");
+                               << " from the handPile, and placed in the discardPile");
     }
     else
     {

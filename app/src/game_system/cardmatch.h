@@ -13,7 +13,8 @@ class CardMatch
   public:
     CardMatch(Player& player, Enemy& enemy);
 
-    void CardMatch::playCard(int handIndex);
+    void drawMultipleCards(int amount);
+    void playCard(int handIndex);
 
     void gainArmor(int defense);
 

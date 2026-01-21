@@ -54,3 +54,6 @@ target_link_libraries(deckTest PRIVATE cardgame_core)
 
 add_executable(creatingCardsTest src/tests/creatingCardsTest.cpp)
 target_link_libraries(creatingCardsTest PRIVATE cardgame_core)
+
+add_executable(cardMatchTest src/tests/cardMatchTest.cpp)
+target_link_libraries(cardMatchTest PRIVATE cardgame_core)

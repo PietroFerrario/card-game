@@ -11,6 +11,7 @@
 class Player
 {
   public:
+    Player() {}
     Player(const std::vector<DeckEntry>& startingCardList, int hp = 10);
 
     void setName(std::string_view name) { m_name = name; }

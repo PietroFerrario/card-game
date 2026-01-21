@@ -1,6 +1,6 @@
 #include "player.h"
 
-Player::Player(const std::vector<DeckEntry>& startingCardList, int hp = 10)
+Player::Player(const std::vector<DeckEntry>& startingCardList, int hp)
     : m_deckPlayer{startingCardList}, m_hp{hp}
 {
 }
