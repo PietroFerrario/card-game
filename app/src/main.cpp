@@ -1,18 +1,18 @@
 #include <iostream>
 
 #include "game_system/game.h"
-#include "game_system/iotext.h"
+#include "ui/iotext.h"
 
-
-int main(){
+int main()
+{
 
     IOText io{std::cout, std::cin};
     Game game{io};
 
     game.intro();
 
-    //while(!game.isLost()){
-    //}
+    // while(!game.isLost()){
+    // }
 
     game.lossMessage();
 

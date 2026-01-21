@@ -1,6 +1,4 @@
 {
-    
-    "outro":"Your knee drop to the ground, but your body is too heavy.\nYou blink, and realize that you are now laying on the ground.\nYou can't focus on what's happening around you, only on how cold you feel. So very cold.\nDarkness sorrounds you.\nYou lose.\n"
-
-        
-}    
+    "intro": "Welcome traveler, what is your name?",
+    "outro": "Your knee drop to the ground, but your body is too heavy.\nYou blink, and realize that you are now laying on the ground.\nYou can't focus on what's happening around you, only on how cold you feel. So very cold.\nDarkness sorrounds you.\nYou lose.\n"
+}

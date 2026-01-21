@@ -1,11 +1,20 @@
 #ifndef CARDMATCH_H
 #define CARDMATCH_H
 
-class CardMatch {
+class Player;
+class Enemy;
 
-    public:
+class CardMatch
+{
 
-    private:
+public:
+    CardMatch(Player &player, Enemy &enemy);
+
+    void gainArmor(int defense);
+
+private:
+    Player &m_player;
+    Enemy &m_enemy;
 };
 
 #endif
