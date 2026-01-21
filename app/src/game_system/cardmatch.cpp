@@ -26,8 +26,12 @@ void CardMatch::drawMultipleCards(int amount)
 
 void CardMatch::playCard(int handIndex)
 {
-    DEBUG_LOG("HandPile is " << m_deckCombat.getHandPile().size() << ".");
-    if (m_deckCombat.getHandPile().size() > handIndex)
+    DEBUG_LOG("Card amount in HandPile: " << m_deckCombat.getHandPile().size() << ".");
+    if (m_deckCombat.getHandPile().size() <= 0)
+    {
+        DEBUG_LOG("The HandPile is empty, you can't play more cards.");
+    }
+    else if (m_deckCombat.getHandPile().size() > handIndex)
     {
         std::unique_ptr<CardInstance>& cardToPlay = m_deckCombat.getHandPile()[handIndex];
         DEBUG_LOG("Selected a valid card to play, at index: " << handIndex << ".");
