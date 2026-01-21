@@ -1,9 +1,9 @@
 #ifndef DECKCOMBAT_H
 #define DECKCOMBAT_H
 
-#include <vector>
-#include <string>
 #include <memory>
+#include <string>
+#include <vector>
 
 class DeckPlayer;
 class DeckEntry;
@@ -12,15 +12,19 @@ class ICardFactory;
 
 class DeckCombat
 {
-public:
-    DeckCombat(const DeckPlayer &deck_player, const ICardFactory &factory);
+  public:
+    DeckCombat(const DeckPlayer& deck_player, const ICardFactory& factory);
 
-    void populateDeck(const std::vector<DeckEntry> &cardList);
+    void drawCard();
 
-private:
+  private:
     std::vector<std::unique_ptr<CardInstance>> m_cards;
+    std::vector<std::unique_ptr<CardInstance>> m_handPile;
+    std::vector<std::unique_ptr<CardInstance>> m_discardPile;
 
-    const ICardFactory &m_factory;
+    const ICardFactory& m_factory;
+
+    void populateDeck(const std::vector<DeckEntry>& cardList);
 };
 
 #endif // DECKCOMBAT_H

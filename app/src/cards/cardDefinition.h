@@ -1,19 +1,19 @@
 #ifndef CARDDEFINITION_H
 #define CARDDEFINITION_H
 
+#include <memory>
 #include <string>
 #include <string_view>
 #include <vector>
-#include <memory>
 
 class Effect;
 
 class CardDefinition
 {
 
-public:
-    CardDefinition(std::string_view cardId, std::string_view cardName,
-                   int baseDamage = 0, int baseArmor = 0, int baseCost = 1,
+  public:
+    CardDefinition(std::string_view cardId, std::string_view cardName, int baseDamage = 0,
+                   int baseArmor = 0, int baseCost = 1,
                    std::vector<std::unique_ptr<Effect>> effectList = {});
 
     std::string_view getName() const { return m_cardName; }
@@ -25,7 +25,7 @@ public:
 
     ~CardDefinition();
 
-private:
+  private:
     std::string m_cardId{};
     std::string m_cardName{};
 

@@ -1,21 +1,39 @@
 #include "deckCombat.h"
-#include "deckPlayer.h"
-#include "deckEntry.h"
 #include "cards/cardInstance.h"
+#include "deckEntry.h"
+#include "deckPlayer.h"
 #include "factories/ICardFactory.h"
 
-DeckCombat::DeckCombat(const DeckPlayer &deck_player, const ICardFactory &factory) : m_factory{factory}
+#include "util/debug.h"
+
+DeckCombat::DeckCombat(const DeckPlayer& deck_player, const ICardFactory& factory)
+    : m_factory{factory}
 {
-    // call factory here
+    populateDeck(deck_player.getCardList());
 }
 
-void DeckCombat::populateDeck(const std::vector<DeckEntry> &cardList)
+void DeckCombat::populateDeck(const std::vector<DeckEntry>& cardList)
 {
-    for (const auto &deckEntry : cardList)
+    for (const auto& deckEntry : cardList)
     {
         for (int i{0}; i < deckEntry.cardCount; ++i)
         {
             m_cards.emplace_back(m_factory.makeSingleCard(deckEntry.cardId));
         }
+    }
+}
+
+void DeckCombat::drawCard()
+{
+    if (!m_cards.empty())
+    {
+        m_handPile.emplace_back(std::move(m_cards.front()));
+        m_cards.pop_back();
+        DEBUG_LOG("Drawn " << m_handPile.front()->getCardId()
+                           << " from the deck, placed in the handPile.");
+    }
+    else
+    {
+        DEBUG_LOG("The deck is empty: no more cards to drawn");
     }
 }
