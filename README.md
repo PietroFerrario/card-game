@@ -1,46 +1,51 @@
 # Deckbuilding Game Prototype (C++)
 
-This repository contains an early-stage prototype of a videogame project developed in C++.
+Turn-based, roguelike-inspired deckbuilding game written in C++.
 
-The current version uses a terminal-based interface to support rapid iteration on gameplay systems and internal architecture. The terminal presentation layer is not intended to represent the final form of the game.
+This repository contains an early-stage prototype focused on gameplay systems, internal architecture, and system boundaries.
 
-At this stage, the project focuses on designing and validating core mechanics, system boundaries, and data flow before introducing a graphical frontend.
+The current implementation uses a terminal-based interface to allow rapid iteration and validation of mechanics.  
+The terminal layer is not intended to represent the final presentation of the game.
+
+## Documentation
+
+Full source-level documentation is available here:
+
+https://pietroferrario.github.io/card-game/
+
+Documentation is generated using Doxygen and describes the architecture, class responsibilities, and system interactions.
 
 ## Game Concept
 
-This project is a prototype of a single-player, turn-based roguelike deckbuilding game.
+The project explores the design of a single-player, turn-based deckbuilding game inspired by roguelike mechanics.
 
-Gameplay is centered around hand-based combat, where the player uses cards to perform actions, manage temporary effects, and reduce enemy HP through a structured turn loop.
+Combat is centered around hand-based gameplay, where cards trigger effects, modify combat state, and interact through a structured turn loop.
 
-Between combats, the player progresses through a branching story structure. Narrative events and choices modify the player’s deck, allowing cards to be added, removed, or transformed, shaping each run differently.
+Between combats, the player progresses through branching narrative events. These events influence the player’s deck by adding, removing, or transforming cards, shaping each run differently.
 
-The project focuses on building a clean and extensible combat and progression foundation.
-
-## Project Status
-Development stage: early prototype (v0)
-
-The project is under active development and should be considered experimental.
-Features, structure, and APIs may change as gameplay systems evolve.
+The primary goal is to build a clean, extensible foundation for combat and progression systems.
 
 ## Current Scope
 
-The current implementation is intentionally minimal and includes:
+The current prototype includes:
 
-- turn-based combat prototype
-- deck-based card mechanics
+- turn-based combat system
+- deck and hand management
 - runtime card instantiation
 - effect-driven gameplay logic
 - terminal-based interaction layer
 
-The purpose of this version is to verify correctness and extensibility of the gameplay systems rather than presentation or user experience.
+This version prioritizes clarity and extensibility over presentation.
+
+## Project Status
+
+**Development stage:** early prototype (v0)
+
+The project is under active development.  
+Structure, features, and APIs may evolve as gameplay systems mature.
 
 ## Long-Term Direction
 
-The long-term goal of this project is to develop a complete videogame with a dedicated graphical interface.
+The long-term objective is to develop a complete game with a dedicated graphical interface.
 
-The terminal version exists solely as a development and validation layer. All gameplay logic is written independently of the user interface so that a graphical frontend can be introduced later without rewriting core systems.
-
-## Documentation
-
-Source-level documentation is generated using Doxygen and is available through GitHub Pages.
-Detailed class and system documentation is maintained in the generated documentation.
+All gameplay logic is intentionally decoupled from the presentation layer, allowing a future graphical frontend to be introduced without rewriting core systems.
