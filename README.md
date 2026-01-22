@@ -49,3 +49,7 @@ Structure, features, and APIs may evolve as gameplay systems mature.
 The long-term objective is to develop a complete game with a dedicated graphical interface.
 
 All gameplay logic is intentionally decoupled from the presentation layer, allowing a future graphical frontend to be introduced without rewriting core systems.
+
+## License
+Source code is publicly viewable for learning and review purposes.
+See LICENSE for details.
