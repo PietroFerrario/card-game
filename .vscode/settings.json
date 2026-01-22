@@ -1,3 +1,4 @@
 {
-    "cmake.sourceDirectory": "C:/Users/pietro/Development/card-game/app"
+    "cmake.sourceDirectory": "${workspaceFolder}",
+    "cmake.useCMakePresets": "always"
 }

@@ -30,30 +30,38 @@ target_sources(cardgame_core PRIVATE
 
     src/ui/iotext.cpp
     src/ui/text.cpp
-    )
+)
 
+# Debug Macro
 target_compile_definitions(cardgame_core PUBLIC
     $<$<CONFIG:Debug>:CARDGAME_DEBUG>)
 
-target_include_directories(cardgame_core PUBLIC src)
+target_include_directories(cardgame_core PUBLIC 
+${CMAKE_CURRENT_SOURCE_DIR}/src)
+
 target_link_libraries(cardgame_core PUBLIC nlohmann_json::nlohmann_json)
+
 target_compile_features(cardgame_core PUBLIC cxx_std_23)
 
+# Main game executable
 add_executable(${PROJECT_NAME} src/main.cpp)
 target_link_libraries(${PROJECT_NAME} PRIVATE cardgame_core)
 
+# Copy data folder in build
 add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
     COMMAND ${CMAKE_COMMAND} -E copy_directory 
-            ${CMAKE_SOURCE_DIR}/data
+            ${CMAKE_CURRENT_SOURCE_DIR}/data
             $<TARGET_FILE_DIR:${PROJECT_NAME}>/data
 
 )
 
-add_executable(deckTest src/tests/deckTest.cpp)
-target_link_libraries(deckTest PRIVATE cardgame_core)
+# Sandbox executables
 
-add_executable(creatingCardsTest src/tests/creatingCardsTest.cpp)
-target_link_libraries(creatingCardsTest PRIVATE cardgame_core)
+add_executable(sandbox_test sandbox/deckTest.cpp)
+target_link_libraries(sandbox_test PRIVATE cardgame_core)
 
-add_executable(cardMatchTest src/tests/cardMatchTest.cpp)
-target_link_libraries(cardMatchTest PRIVATE cardgame_core)
+add_executable(sandbox_creating_cards sandbox/creatingCardsTest.cpp)
+target_link_libraries(sandbox_creating_cards PRIVATE cardgame_core)
+
+add_executable(sandbox_card_match sandbox/cardMatchTest.cpp)
+target_link_libraries(sandbox_card_match PRIVATE cardgame_core)
