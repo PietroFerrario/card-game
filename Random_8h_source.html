@@ -93,7 +93,7 @@ $(document).ready(function(){initNavTree('Random_8h_source.html',''); initResiza
   <div class="headertitle"><div class="title">Random.h</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef RANDOM_MT_H</span></div>
+<a href="Random_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef RANDOM_MT_H</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define RANDOM_MT_H</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;chrono&gt;</span></div>
@@ -103,12 +103,12 @@ $(document).ready(function(){initNavTree('Random_8h_source.html',''); initResiza
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">// Requires C++17 or newer.</span></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">// It can be #included into as many code files as needed (The inline keyword avoids ODR violations)</span></div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">// Freely redistributable, courtesy of learncpp.com (https://www.learncpp.com/cpp-tutorial/global-random-numbers-random-h/)</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">namespace </span>Random</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="namespaceRandom.html">   11</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceRandom.html">Random</a></div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>{</div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="comment">// Returns a seeded Mersenne Twister</span></div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="comment">// Note: we&#39;d prefer to return a std::seed_seq (to initialize a std::mt19937), but std::seed can&#39;t be copied, so it can&#39;t be returned by value.</span></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="comment">// Instead, we&#39;ll create a std::mt19937, seed it, and then return the std::mt19937 (which can be copied).</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="keyword">inline</span> std::mt19937 generate()</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="namespaceRandom.html#a00531c42906741611a38c489e8723280">   16</a></span>    <span class="keyword">inline</span> std::mt19937 <a class="code hl_function" href="namespaceRandom.html#a00531c42906741611a38c489e8723280">generate</a>()</div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    {</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        std::random_device rd{};</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
@@ -122,13 +122,13 @@ $(document).ready(function(){initNavTree('Random_8h_source.html',''); initResiza
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="comment">// Here&#39;s our global std::mt19937 object.</span></div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="comment">// The inline keyword means we only have one global instance for our whole program.</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keyword">inline</span> std::mt19937 mt{generate()}; <span class="comment">// generates a seeded std::mt19937 and copies it into our global object</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="namespaceRandom.html#aa4354db31fa7d64040939b905ab12ee1">   30</a></span>    <span class="keyword">inline</span> std::mt19937 <a class="code hl_variable" href="namespaceRandom.html#aa4354db31fa7d64040939b905ab12ee1">mt</a>{<a class="code hl_function" href="namespaceRandom.html#a00531c42906741611a38c489e8723280">generate</a>()}; <span class="comment">// generates a seeded std::mt19937 and copies it into our global object</span></div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="comment">// Generate a random int between [min, max] (inclusive)</span></div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="comment">// * also handles cases where the two arguments have different types but can be converted to int</span></div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keyword">inline</span> <span class="keywordtype">int</span> get(<span class="keywordtype">int</span> min, <span class="keywordtype">int</span> max)</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="namespaceRandom.html#a47378d26d412b6b6238c03a27f33a04f">   34</a></span>    <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code hl_function" href="namespaceRandom.html#a47378d26d412b6b6238c03a27f33a04f">get</a>(<span class="keywordtype">int</span> min, <span class="keywordtype">int</span> max)</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    {</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <span class="keywordflow">return</span> std::uniform_int_distribution{min, max}(mt);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <span class="keywordflow">return</span> std::uniform_int_distribution{min, max}(<a class="code hl_variable" href="namespaceRandom.html#aa4354db31fa7d64040939b905ab12ee1">mt</a>);</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    }</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="comment">// The following function templates can be used to generate random numbers in other cases</span></div>
@@ -145,9 +145,9 @@ $(document).ready(function(){initNavTree('Random_8h_source.html',''); initResiza
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="comment">// Sample call: Random::get(1L, 6L);             // returns long</span></div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="comment">// Sample call: Random::get(1u, 6u);             // returns unsigned int</span></div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    T get(T min, T max)</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="namespaceRandom.html#a23e711619804cd68f6732e0b3dd8059e">   53</a></span>    T <a class="code hl_function" href="namespaceRandom.html#a47378d26d412b6b6238c03a27f33a04f">get</a>(T min, T max)</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    {</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <span class="keywordflow">return</span> std::uniform_int_distribution&lt;T&gt;{min, max}(mt);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <span class="keywordflow">return</span> std::uniform_int_distribution&lt;T&gt;{min, max}(<a class="code hl_variable" href="namespaceRandom.html#aa4354db31fa7d64040939b905ab12ee1">mt</a>);</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    }</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="comment">// Generate a random value between [min, max] (inclusive)</span></div>
@@ -158,19 +158,23 @@ $(document).ready(function(){initNavTree('Random_8h_source.html',''); initResiza
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="comment">// Sample call: Random::get&lt;std::size_t&gt;(0, 6u); // returns std::size_t</span></div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="comment">// Sample call: Random::get&lt;std::int&gt;(0, 6u);    // returns int</span></div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> R, <span class="keyword">typename</span> S, <span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    R get(S min, T max)</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="namespaceRandom.html#ac0711bde793b216f2b241d2587db2b1d">   66</a></span>    R <a class="code hl_function" href="namespaceRandom.html#a47378d26d412b6b6238c03a27f33a04f">get</a>(S min, T max)</div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    {</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        <span class="keywordflow">return</span> get&lt;R&gt;(<span class="keyword">static_cast&lt;</span>R<span class="keyword">&gt;</span>(min), <span class="keyword">static_cast&lt;</span>R<span class="keyword">&gt;</span>(max));</div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    }</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>}</div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="anamespaceRandom_html"><div class="ttname"><a href="namespaceRandom.html">Random</a></div><div class="ttdef"><b>Definition:</b> Random.h:12</div></div>
+<div class="ttc" id="anamespaceRandom_html_a00531c42906741611a38c489e8723280"><div class="ttname"><a href="namespaceRandom.html#a00531c42906741611a38c489e8723280">Random::generate</a></div><div class="ttdeci">std::mt19937 generate()</div><div class="ttdef"><b>Definition:</b> Random.h:16</div></div>
+<div class="ttc" id="anamespaceRandom_html_a47378d26d412b6b6238c03a27f33a04f"><div class="ttname"><a href="namespaceRandom.html#a47378d26d412b6b6238c03a27f33a04f">Random::get</a></div><div class="ttdeci">int get(int min, int max)</div><div class="ttdef"><b>Definition:</b> Random.h:34</div></div>
+<div class="ttc" id="anamespaceRandom_html_aa4354db31fa7d64040939b905ab12ee1"><div class="ttname"><a href="namespaceRandom.html#aa4354db31fa7d64040939b905ab12ee1">Random::mt</a></div><div class="ttdeci">std::mt19937 mt</div><div class="ttdef"><b>Definition:</b> Random.h:30</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_23ec12649285f9fabf3a6b7380226c28.html">util</a></li><li class="navelem"><b>Random.h</b></li>
+    <li class="navelem"><a class="el" href="dir_23ec12649285f9fabf3a6b7380226c28.html">util</a></li><li class="navelem"><a class="el" href="Random_8h.html">Random.h</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
   </ul>
 </div>

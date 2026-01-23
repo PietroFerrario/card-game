@@ -93,7 +93,7 @@ $(document).ready(function(){initNavTree('deckCombat_8h_source.html',''); initRe
   <div class="headertitle"><div class="title">deckCombat.h</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef DECKCOMBAT_H</span></div>
+<a href="deckCombat_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef DECKCOMBAT_H</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define DECKCOMBAT_H</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
@@ -105,38 +105,42 @@ $(document).ready(function(){initNavTree('deckCombat_8h_source.html',''); initRe
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">class </span><a class="code hl_class" href="classCardInstance.html">CardInstance</a>;</div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">class </span><a class="code hl_class" href="classICardFactory.html">ICardFactory</a>;</div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="classDeckCombat.html">   13</a></span><span class="keyword">class </span><a class="code hl_class" href="classDeckCombat.html">DeckCombat</a></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>{</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>  <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <a class="code hl_class" href="classDeckCombat.html">DeckCombat</a>(<span class="keyword">const</span> <a class="code hl_class" href="classDeckPlayer.html">DeckPlayer</a>&amp; deck_player, <span class="keyword">const</span> <a class="code hl_class" href="classICardFactory.html">ICardFactory</a>&amp; factory);</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keywordtype">void</span> drawCard();</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keywordtype">void</span> discardFromHand(<span class="keywordtype">int</span> handIndex);</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    std::vector&lt;std::unique_ptr&lt;CardInstance&gt;&gt;&amp; getHandPile() { <span class="keywordflow">return</span> m_handPile; }</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>  <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    std::vector&lt;std::unique_ptr&lt;CardInstance&gt;&gt; m_cards;</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    std::vector&lt;std::unique_ptr&lt;CardInstance&gt;&gt; m_handPile;</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    std::vector&lt;std::unique_ptr&lt;CardInstance&gt;&gt; m_discardPile;</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keyword">const</span> <a class="code hl_class" href="classICardFactory.html">ICardFactory</a>&amp; m_factory;</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keywordtype">void</span> populateDeck(<span class="keyword">const</span> std::vector&lt;DeckEntry&gt;&amp; cardList);</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>};</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#endif </span><span class="comment">// DECKCOMBAT_H</span></div>
-<div class="ttc" id="aclassCardInstance_html"><div class="ttname"><a href="classCardInstance.html">CardInstance</a></div><div class="ttdef"><b>Definition:</b> cardInstance.h:9</div></div>
-<div class="ttc" id="aclassDeckCombat_html"><div class="ttname"><a href="classDeckCombat.html">DeckCombat</a></div><div class="ttdef"><b>Definition:</b> deckCombat.h:14</div></div>
-<div class="ttc" id="aclassDeckPlayer_html"><div class="ttname"><a href="classDeckPlayer.html">DeckPlayer</a></div><div class="ttdef"><b>Definition:</b> deckPlayer.h:14</div></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="classDeckCombat.html">   28</a></span><span class="keyword">class </span><a class="code hl_class" href="classDeckCombat.html">DeckCombat</a></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>{</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>  <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <a class="code hl_class" href="classDeckCombat.html">DeckCombat</a>(<span class="keyword">const</span> <a class="code hl_class" href="classDeckPlayer.html">DeckPlayer</a>&amp; deck_player, <span class="keyword">const</span> <a class="code hl_class" href="classICardFactory.html">ICardFactory</a>&amp; factory);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classDeckCombat.html#adc186615536f9422731321b3c1988285">drawCard</a>();</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classDeckCombat.html#a3ed556035ec64030a32e8f995d26459a">discardFromHand</a>(<span class="keywordtype">int</span> handIndex);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="classDeckCombat.html#a2220e79c071491e02bb9f5fda4f242cd">   57</a></span>    std::vector&lt;std::unique_ptr&lt;CardInstance&gt;&gt;&amp; <a class="code hl_function" href="classDeckCombat.html#a2220e79c071491e02bb9f5fda4f242cd">getHandPile</a>() { <span class="keywordflow">return</span> m_handPile; }</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>  <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    std::vector&lt;std::unique_ptr&lt;CardInstance&gt;&gt; m_cards;       </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    std::vector&lt;std::unique_ptr&lt;CardInstance&gt;&gt; m_handPile;    </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    std::vector&lt;std::unique_ptr&lt;CardInstance&gt;&gt; m_discardPile; </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keyword">const</span> <a class="code hl_class" href="classICardFactory.html">ICardFactory</a>&amp; m_factory; </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <span class="keywordtype">void</span> populateDeck(<span class="keyword">const</span> std::vector&lt;DeckEntry&gt;&amp; cardList);</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>};</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="preprocessor">#endif </span><span class="comment">// DECKCOMBAT_H</span></div>
+<div class="ttc" id="aclassCardInstance_html"><div class="ttname"><a href="classCardInstance.html">CardInstance</a></div><div class="ttdoc">Represents a runtime instance of a card during combat.</div><div class="ttdef"><b>Definition:</b> cardInstance.h:19</div></div>
+<div class="ttc" id="aclassDeckCombat_html"><div class="ttname"><a href="classDeckCombat.html">DeckCombat</a></div><div class="ttdoc">Manages all card piles during a single combat.</div><div class="ttdef"><b>Definition:</b> deckCombat.h:29</div></div>
+<div class="ttc" id="aclassDeckCombat_html_a2220e79c071491e02bb9f5fda4f242cd"><div class="ttname"><a href="classDeckCombat.html#a2220e79c071491e02bb9f5fda4f242cd">DeckCombat::getHandPile</a></div><div class="ttdeci">std::vector&lt; std::unique_ptr&lt; CardInstance &gt; &gt; &amp; getHandPile()</div><div class="ttdoc">Returns a reference to the current hand pile.</div><div class="ttdef"><b>Definition:</b> deckCombat.h:57</div></div>
+<div class="ttc" id="aclassDeckCombat_html_a3ed556035ec64030a32e8f995d26459a"><div class="ttname"><a href="classDeckCombat.html#a3ed556035ec64030a32e8f995d26459a">DeckCombat::discardFromHand</a></div><div class="ttdeci">void discardFromHand(int handIndex)</div><div class="ttdoc">Discards a card from the hand to the discard pile.</div><div class="ttdef"><b>Definition:</b> deckCombat.cpp:42</div></div>
+<div class="ttc" id="aclassDeckCombat_html_adc186615536f9422731321b3c1988285"><div class="ttname"><a href="classDeckCombat.html#adc186615536f9422731321b3c1988285">DeckCombat::drawCard</a></div><div class="ttdeci">void drawCard()</div><div class="ttdoc">Draws one card from the draw pile to the hand.</div><div class="ttdef"><b>Definition:</b> deckCombat.cpp:27</div></div>
+<div class="ttc" id="aclassDeckPlayer_html"><div class="ttname"><a href="classDeckPlayer.html">DeckPlayer</a></div><div class="ttdoc">Represents the player's persistent deck outside of combat.</div><div class="ttdef"><b>Definition:</b> deckPlayer.h:23</div></div>
 <div class="ttc" id="aclassICardFactory_html"><div class="ttname"><a href="classICardFactory.html">ICardFactory</a></div><div class="ttdef"><b>Definition:</b> ICardFactory.h:11</div></div>
-<div class="ttc" id="astructDeckEntry_html"><div class="ttname"><a href="structDeckEntry.html">DeckEntry</a></div><div class="ttdef"><b>Definition:</b> deckEntry.h:7</div></div>
+<div class="ttc" id="astructDeckEntry_html"><div class="ttname"><a href="structDeckEntry.html">DeckEntry</a></div><div class="ttdoc">Represents a single card entry in the player's persistent deck.</div><div class="ttdef"><b>Definition:</b> deckEntry.h:16</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_70398d026f8dc8cc45517d8e684fbc42.html">deck</a></li><li class="navelem"><b>deckCombat.h</b></li>
+    <li class="navelem"><a class="el" href="dir_70398d026f8dc8cc45517d8e684fbc42.html">deck</a></li><li class="navelem"><a class="el" href="deckCombat_8h.html">deckCombat.h</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
   </ul>
 </div>

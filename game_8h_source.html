@@ -93,12 +93,12 @@ $(document).ready(function(){initNavTree('game_8h_source.html',''); initResizabl
   <div class="headertitle"><div class="title">game.h</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef GAME_H</span></div>
+<a href="game_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef GAME_H</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define GAME_H</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;entities/player.h&quot;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;ui/iotext.h&quot;</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;ui/text.h&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="player_8h.html">entities/player.h</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="iotext_8h.html">ui/iotext.h</a>&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="text_8h.html">ui/text.h</a>&quot;</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;string&gt;</span></div>
@@ -110,16 +110,16 @@ $(document).ready(function(){initNavTree('game_8h_source.html',''); initResizabl
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>  <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <a class="code hl_class" href="classGame.html">Game</a>(<a class="code hl_class" href="classIOText.html">IOText</a>&amp; io);</div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keywordtype">void</span> intro();</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keywordtype">void</span> lossMessage() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classGame.html#aef4c95adfd14ba30d0aa6192ec823baa">intro</a>();</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classGame.html#a753e6f6be6efd418dabba7199aacfdfb">lossMessage</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keywordtype">bool</span> isLost() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classGame.html#a8f39b84cf10366da2dfd4bf780bc1c1b">isLost</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <a class="code hl_class" href="classPlayer.html">Player</a>&amp; getMainPlayer();</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keyword">const</span> <a class="code hl_class" href="classPlayer.html">Player</a>&amp; getMainPlayer() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keywordtype">void</span> setMainPlayerName();</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keyword">const</span> <span class="keywordtype">bool</span> isValidName(std::string_view name) <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keywordtype">bool</span> isPlayerAlive() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <a class="code hl_class" href="classPlayer.html">Player</a>&amp; <a class="code hl_function" href="classGame.html#a14e29e4ce2c89d65d6c49531be3de144">getMainPlayer</a>();</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keyword">const</span> <a class="code hl_class" href="classPlayer.html">Player</a>&amp; <a class="code hl_function" href="classGame.html#a14e29e4ce2c89d65d6c49531be3de144">getMainPlayer</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classGame.html#af2a5fb886755d0c28a6b674ff8d485e3">setMainPlayerName</a>();</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keyword">const</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classGame.html#afd6c7e00e229a08913b8ee6becc75fe9">isValidName</a>(std::string_view name) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classGame.html#aaf22d390c98b0fd98b7b90ac80beb08a">isPlayerAlive</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>  <span class="keyword">private</span>:</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <a class="code hl_class" href="classIOText.html">IOText</a>&amp; m_io;</div>
@@ -129,15 +129,25 @@ $(document).ready(function(){initNavTree('game_8h_source.html',''); initResizabl
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">#endif </span><span class="comment">// GAME_H</span></div>
 <div class="ttc" id="aclassGame_html"><div class="ttname"><a href="classGame.html">Game</a></div><div class="ttdef"><b>Definition:</b> game.h:13</div></div>
+<div class="ttc" id="aclassGame_html_a14e29e4ce2c89d65d6c49531be3de144"><div class="ttname"><a href="classGame.html#a14e29e4ce2c89d65d6c49531be3de144">Game::getMainPlayer</a></div><div class="ttdeci">Player &amp; getMainPlayer()</div><div class="ttdef"><b>Definition:</b> game.cpp:19</div></div>
+<div class="ttc" id="aclassGame_html_a753e6f6be6efd418dabba7199aacfdfb"><div class="ttname"><a href="classGame.html#a753e6f6be6efd418dabba7199aacfdfb">Game::lossMessage</a></div><div class="ttdeci">void lossMessage() const</div><div class="ttdef"><b>Definition:</b> game.cpp:53</div></div>
+<div class="ttc" id="aclassGame_html_a8f39b84cf10366da2dfd4bf780bc1c1b"><div class="ttname"><a href="classGame.html#a8f39b84cf10366da2dfd4bf780bc1c1b">Game::isLost</a></div><div class="ttdeci">bool isLost() const</div><div class="ttdef"><b>Definition:</b> game.cpp:9</div></div>
+<div class="ttc" id="aclassGame_html_aaf22d390c98b0fd98b7b90ac80beb08a"><div class="ttname"><a href="classGame.html#aaf22d390c98b0fd98b7b90ac80beb08a">Game::isPlayerAlive</a></div><div class="ttdeci">bool isPlayerAlive() const</div><div class="ttdef"><b>Definition:</b> game.cpp:14</div></div>
+<div class="ttc" id="aclassGame_html_aef4c95adfd14ba30d0aa6192ec823baa"><div class="ttname"><a href="classGame.html#aef4c95adfd14ba30d0aa6192ec823baa">Game::intro</a></div><div class="ttdeci">void intro()</div><div class="ttdef"><b>Definition:</b> game.cpp:47</div></div>
+<div class="ttc" id="aclassGame_html_af2a5fb886755d0c28a6b674ff8d485e3"><div class="ttname"><a href="classGame.html#af2a5fb886755d0c28a6b674ff8d485e3">Game::setMainPlayerName</a></div><div class="ttdeci">void setMainPlayerName()</div><div class="ttdef"><b>Definition:</b> game.cpp:29</div></div>
+<div class="ttc" id="aclassGame_html_afd6c7e00e229a08913b8ee6becc75fe9"><div class="ttname"><a href="classGame.html#afd6c7e00e229a08913b8ee6becc75fe9">Game::isValidName</a></div><div class="ttdeci">const bool isValidName(std::string_view name) const</div><div class="ttdef"><b>Definition:</b> game.cpp:41</div></div>
 <div class="ttc" id="aclassIOText_html"><div class="ttname"><a href="classIOText.html">IOText</a></div><div class="ttdef"><b>Definition:</b> iotext.h:8</div></div>
 <div class="ttc" id="aclassPlayer_html"><div class="ttname"><a href="classPlayer.html">Player</a></div><div class="ttdef"><b>Definition:</b> player.h:12</div></div>
 <div class="ttc" id="aclassText_html"><div class="ttname"><a href="classText.html">Text</a></div><div class="ttdef"><b>Definition:</b> text.h:8</div></div>
+<div class="ttc" id="aiotext_8h_html"><div class="ttname"><a href="iotext_8h.html">iotext.h</a></div></div>
+<div class="ttc" id="aplayer_8h_html"><div class="ttname"><a href="player_8h.html">player.h</a></div></div>
+<div class="ttc" id="atext_8h_html"><div class="ttname"><a href="text_8h.html">text.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_18d58962dcdf46ba17fa85f38bb069c5.html">game_system</a></li><li class="navelem"><b>game.h</b></li>
+    <li class="navelem"><a class="el" href="dir_18d58962dcdf46ba17fa85f38bb069c5.html">game_system</a></li><li class="navelem"><a class="el" href="game_8h.html">game.h</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
   </ul>
 </div>

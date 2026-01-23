@@ -97,37 +97,289 @@ $(document).ready(function(){initNavTree('classDeckPlayer.html',''); initResizab
   <div class="headertitle"><div class="title">DeckPlayer Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Represents the player's persistent deck outside of combat.  
+ <a href="classDeckPlayer.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="deckPlayer_8h_source.html">deckPlayer.h</a>&gt;</code></p>
+<div class="dynheader">
+Collaboration diagram for DeckPlayer:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classDeckPlayer__coll__graph.svg" width="210" height="176"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:abfb9be69b9f8f63693acff53590c6b9e"><td class="memItemLeft" align="right" valign="top"><a id="abfb9be69b9f8f63693acff53590c6b9e" name="abfb9be69b9f8f63693acff53590c6b9e"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>DeckPlayer</b> (std::vector&lt; <a class="el" href="structDeckEntry.html">DeckEntry</a> &gt; startingCardList, int maxCardNumbers=20)</td></tr>
+<tr class="memitem:aa6360b15a643662ed205b67b28f98369"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDeckPlayer.html#aa6360b15a643662ed205b67b28f98369">DeckPlayer</a> ()</td></tr>
+<tr class="memdesc:aa6360b15a643662ed205b67b28f98369"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an empty deck.  <br /></td></tr>
+<tr class="separator:aa6360b15a643662ed205b67b28f98369"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfb9be69b9f8f63693acff53590c6b9e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDeckPlayer.html#abfb9be69b9f8f63693acff53590c6b9e">DeckPlayer</a> (std::vector&lt; <a class="el" href="structDeckEntry.html">DeckEntry</a> &gt; startingCardList, int maxCardNumbers=20)</td></tr>
+<tr class="memdesc:abfb9be69b9f8f63693acff53590c6b9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a deck from an initial list of entries.  <br /></td></tr>
 <tr class="separator:abfb9be69b9f8f63693acff53590c6b9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a95614c6f996b594e5ffb281966aafb78"><td class="memItemLeft" align="right" valign="top"><a id="a95614c6f996b594e5ffb281966aafb78" name="a95614c6f996b594e5ffb281966aafb78"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>getCurrentCardNumber</b> () const</td></tr>
+<tr class="memitem:a95614c6f996b594e5ffb281966aafb78"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDeckPlayer.html#a95614c6f996b594e5ffb281966aafb78">getCurrentCardNumber</a> () const</td></tr>
+<tr class="memdesc:a95614c6f996b594e5ffb281966aafb78"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the total number of cards (sum of all counts).  <br /></td></tr>
 <tr class="separator:a95614c6f996b594e5ffb281966aafb78"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a16f106fc12e1015f1483de8db2f28a01"><td class="memItemLeft" align="right" valign="top"><a id="a16f106fc12e1015f1483de8db2f28a01" name="a16f106fc12e1015f1483de8db2f28a01"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>isCardPresent</b> (std::string_view cardId) const</td></tr>
+<tr class="memitem:a16f106fc12e1015f1483de8db2f28a01"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDeckPlayer.html#a16f106fc12e1015f1483de8db2f28a01">isCardPresent</a> (std::string_view cardId) const</td></tr>
+<tr class="memdesc:a16f106fc12e1015f1483de8db2f28a01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if a card ID is present in the deck.  <br /></td></tr>
 <tr class="separator:a16f106fc12e1015f1483de8db2f28a01"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab7fbfcfc52e0ecb093631c7fa070d8f1"><td class="memItemLeft" align="right" valign="top"><a id="ab7fbfcfc52e0ecb093631c7fa070d8f1" name="ab7fbfcfc52e0ecb093631c7fa070d8f1"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>addCard</b> (std::string_view cardId)</td></tr>
+<tr class="memitem:ab7fbfcfc52e0ecb093631c7fa070d8f1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDeckPlayer.html#ab7fbfcfc52e0ecb093631c7fa070d8f1">addCard</a> (std::string_view cardId)</td></tr>
+<tr class="memdesc:ab7fbfcfc52e0ecb093631c7fa070d8f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a card to the deck, if below max size.  <br /></td></tr>
 <tr class="separator:ab7fbfcfc52e0ecb093631c7fa070d8f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab39bc3a66e5ec2d58532987fe173a1e8"><td class="memItemLeft" align="right" valign="top"><a id="ab39bc3a66e5ec2d58532987fe173a1e8" name="ab39bc3a66e5ec2d58532987fe173a1e8"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>removeCard</b> (std::string_view cardId)</td></tr>
+<tr class="memitem:ab39bc3a66e5ec2d58532987fe173a1e8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDeckPlayer.html#ab39bc3a66e5ec2d58532987fe173a1e8">removeCard</a> (std::string_view cardId)</td></tr>
+<tr class="memdesc:ab39bc3a66e5ec2d58532987fe173a1e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes one copy of a card, if above minimum size.  <br /></td></tr>
 <tr class="separator:ab39bc3a66e5ec2d58532987fe173a1e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a85848e76f0fef7bc1ccdf959020abe9e"><td class="memItemLeft" align="right" valign="top"><a id="a85848e76f0fef7bc1ccdf959020abe9e" name="a85848e76f0fef7bc1ccdf959020abe9e"></a>
-const std::vector&lt; <a class="el" href="structDeckEntry.html">DeckEntry</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getCardList</b> () const</td></tr>
+<tr class="memitem:a85848e76f0fef7bc1ccdf959020abe9e"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="structDeckEntry.html">DeckEntry</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDeckPlayer.html#a85848e76f0fef7bc1ccdf959020abe9e">getCardList</a> () const</td></tr>
+<tr class="memdesc:a85848e76f0fef7bc1ccdf959020abe9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the full list of card entries.  <br /></td></tr>
 <tr class="separator:a85848e76f0fef7bc1ccdf959020abe9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
 Friends</h2></td></tr>
-<tr class="memitem:a0719834c61b61216816ddab083467b1d"><td class="memItemLeft" align="right" valign="top"><a id="a0719834c61b61216816ddab083467b1d" name="a0719834c61b61216816ddab083467b1d"></a>
-std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;&lt;</b> (std::ostream &amp;out, const <a class="el" href="classDeckPlayer.html">DeckPlayer</a> &amp;deck)</td></tr>
+<tr class="memitem:a0719834c61b61216816ddab083467b1d"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDeckPlayer.html#a0719834c61b61216816ddab083467b1d">operator&lt;&lt;</a> (std::ostream &amp;out, const <a class="el" href="classDeckPlayer.html">DeckPlayer</a> &amp;deck)</td></tr>
+<tr class="memdesc:a0719834c61b61216816ddab083467b1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Outputs the deck contents to an output stream.  <br /></td></tr>
 <tr class="separator:a0719834c61b61216816ddab083467b1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Represents the player's persistent deck outside of combat. </p>
+<p><a class="el" href="classDeckPlayer.html" title="Represents the player&#39;s persistent deck outside of combat.">DeckPlayer</a> stores card ownership data between matches. It does not contain CardInstances — only card IDs and counts.</p>
+<p>Modifiable by rewards, progression, or deck editing. Serialized separately from combat systems. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="aa6360b15a643662ed205b67b28f98369" name="aa6360b15a643662ed205b67b28f98369"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6360b15a643662ed205b67b28f98369">&#9670;&#160;</a></span>DeckPlayer() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">DeckPlayer::DeckPlayer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructs an empty deck. </p>
+
+</div>
+</div>
+<a id="abfb9be69b9f8f63693acff53590c6b9e" name="abfb9be69b9f8f63693acff53590c6b9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abfb9be69b9f8f63693acff53590c6b9e">&#9670;&#160;</a></span>DeckPlayer() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DeckPlayer::DeckPlayer </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="structDeckEntry.html">DeckEntry</a> &gt;&#160;</td>
+          <td class="paramname"><em>startingCardList</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>maxCardNumbers</em> = <code>20</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructs a deck from an initial list of entries. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">startingCardList</td><td>Initial list of card IDs and quantities. </td></tr>
+    <tr><td class="paramname">maxCardNumbers</td><td>Maximum total card count allowed. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="ab7fbfcfc52e0ecb093631c7fa070d8f1" name="ab7fbfcfc52e0ecb093631c7fa070d8f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7fbfcfc52e0ecb093631c7fa070d8f1">&#9670;&#160;</a></span>addCard()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DeckPlayer::addCard </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view&#160;</td>
+          <td class="paramname"><em>cardId</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds a card to the deck, if below max size. </p>
+<p>If the card already exists, increments its count.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cardId</td><td>ID of the card to add. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if added, false if deck is full. </dd></dl>
+
+</div>
+</div>
+<a id="a85848e76f0fef7bc1ccdf959020abe9e" name="a85848e76f0fef7bc1ccdf959020abe9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85848e76f0fef7bc1ccdf959020abe9e">&#9670;&#160;</a></span>getCardList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::vector&lt; <a class="el" href="structDeckEntry.html">DeckEntry</a> &gt; &amp; DeckPlayer::getCardList </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the full list of card entries. </p>
+
+</div>
+</div>
+<a id="a95614c6f996b594e5ffb281966aafb78" name="a95614c6f996b594e5ffb281966aafb78"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95614c6f996b594e5ffb281966aafb78">&#9670;&#160;</a></span>getCurrentCardNumber()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int DeckPlayer::getCurrentCardNumber </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the total number of cards (sum of all counts). </p>
+
+</div>
+</div>
+<a id="a16f106fc12e1015f1483de8db2f28a01" name="a16f106fc12e1015f1483de8db2f28a01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16f106fc12e1015f1483de8db2f28a01">&#9670;&#160;</a></span>isCardPresent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DeckPlayer::isCardPresent </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view&#160;</td>
+          <td class="paramname"><em>cardId</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Checks if a card ID is present in the deck. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cardId</td><td>ID to search for. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if at least one copy exists, false otherwise. </dd></dl>
+
+</div>
+</div>
+<a id="ab39bc3a66e5ec2d58532987fe173a1e8" name="ab39bc3a66e5ec2d58532987fe173a1e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab39bc3a66e5ec2d58532987fe173a1e8">&#9670;&#160;</a></span>removeCard()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DeckPlayer::removeCard </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view&#160;</td>
+          <td class="paramname"><em>cardId</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Removes one copy of a card, if above minimum size. </p>
+<p>If the last copy is removed, the entry is erased entirely.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cardId</td><td>ID of the card to remove. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if removed, false otherwise. </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Friends And Related Function Documentation</h2>
+<a id="a0719834c61b61216816ddab083467b1d" name="a0719834c61b61216816ddab083467b1d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0719834c61b61216816ddab083467b1d">&#9670;&#160;</a></span>operator&lt;&lt;</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream &amp; operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>out</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classDeckPlayer.html">DeckPlayer</a> &amp;&#160;</td>
+          <td class="paramname"><em>deck</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Outputs the deck contents to an output stream. </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>deck/<a class="el" href="deckPlayer_8h_source.html">deckPlayer.h</a></li>
-<li>deck/deckPlayer.cpp</li>
+<li>deck/<a class="el" href="deckPlayer_8cpp.html">deckPlayer.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

@@ -1,0 +1,25 @@
+var searchData=
+[
+  ['gainarmor_0',['gainArmor',['../classCardMatch.html#a7932e3e85d254f12a6690530b0bed17a',1,'CardMatch']]],
+  ['game_1',['Game',['../classGame.html#a850cca21b9c27f3539107b5d2846a893',1,'Game']]],
+  ['generate_2',['generate',['../namespaceRandom.html#a00531c42906741611a38c489e8723280',1,'Random']]],
+  ['get_3',['get',['../namespaceRandom.html#ac0711bde793b216f2b241d2587db2b1d',1,'Random::get(S min, T max)'],['../namespaceRandom.html#a23e711619804cd68f6732e0b3dd8059e',1,'Random::get(T min, T max)'],['../namespaceRandom.html#a47378d26d412b6b6238c03a27f33a04f',1,'Random::get(int min, int max)']]],
+  ['getarmor_4',['getArmor',['../classCardInstance.html#a78804190aba6da65f9fd04b2b9f0c4ee',1,'CardInstance::getArmor()'],['../classPlayer.html#a7c84d4b3d9ac5a91d77b0a979ee9e670',1,'Player::getArmor()']]],
+  ['getattack_5',['getAttack',['../classEnemy.html#a8206171e0f391e1860ebafb5a5450bf3',1,'Enemy']]],
+  ['getbasearmor_6',['getBaseArmor',['../classCardDefinition.html#a0cab73e10f6a1644de1f7bcb6f06fc11',1,'CardDefinition']]],
+  ['getbasecost_7',['getBaseCost',['../classCardDefinition.html#a3e03b5baa2349af37dcfdefff9aa0bb2',1,'CardDefinition']]],
+  ['getbasedamage_8',['getBaseDamage',['../classCardDefinition.html#a45b570fb49f0638ad7e4ae6bf8f8ba40',1,'CardDefinition']]],
+  ['getcarddefinition_9',['getCardDefinition',['../classCardInstance.html#a31f8c452b8efa989b16762c12d56417f',1,'CardInstance']]],
+  ['getcardlist_10',['getCardList',['../classDeckPlayer.html#a85848e76f0fef7bc1ccdf959020abe9e',1,'DeckPlayer']]],
+  ['getcurrentcardnumber_11',['getCurrentCardNumber',['../classDeckPlayer.html#a95614c6f996b594e5ffb281966aafb78',1,'DeckPlayer']]],
+  ['getdamage_12',['getDamage',['../classCardInstance.html#a516d4c4202169e459650b0ca248ae052',1,'CardInstance']]],
+  ['getdeckplayer_13',['getDeckPlayer',['../classPlayer.html#abf35cade0f12a30ac3926ca8c47b524c',1,'Player']]],
+  ['geteffectlist_14',['getEffectList',['../classCardDefinition.html#a88cb791e738bdbf86a46536f250c2ff3',1,'CardDefinition']]],
+  ['gethandpile_15',['getHandPile',['../classDeckCombat.html#a2220e79c071491e02bb9f5fda4f242cd',1,'DeckCombat']]],
+  ['gethp_16',['getHp',['../classEnemy.html#abc4b83878be690920a59499a17d6019c',1,'Enemy::getHp()'],['../classPlayer.html#aa1e4de605eb436711fcff947cfee2cc2',1,'Player::getHp()']]],
+  ['getid_17',['getID',['../classCardDefinition.html#afb5d62a40699159266839c41ba9ce8f2',1,'CardDefinition']]],
+  ['getln_18',['getln',['../classIOText.html#a243be749bc0f604ef777dcc2191fce4e',1,'IOText']]],
+  ['getmainplayer_19',['getMainPlayer',['../classGame.html#a14e29e4ce2c89d65d6c49531be3de144',1,'Game::getMainPlayer()'],['../classGame.html#a2d5e49d80ed85b5e22dfa36ff05d9042',1,'Game::getMainPlayer() const']]],
+  ['getname_20',['getName',['../classCardDefinition.html#a0de92c6f28b1a53fe9678a52693b5ed1',1,'CardDefinition::getName()'],['../classPlayer.html#ae6c59cf02275c7ba78ae4cf4d1771412',1,'Player::getName()']]],
+  ['gettext_21',['getText',['../classText.html#ae5a6625830c7162ac0512fdf949911e3',1,'Text']]]
+];

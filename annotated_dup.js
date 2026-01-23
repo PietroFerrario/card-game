@@ -1,18 +1,18 @@
 var annotated_dup =
 [
-    [ "CardDefinition", "classCardDefinition.html", null ],
-    [ "CardFactory", "classCardFactory.html", null ],
-    [ "CardInstance", "classCardInstance.html", null ],
+    [ "CardDefinition", "classCardDefinition.html", "classCardDefinition" ],
+    [ "CardFactory", "classCardFactory.html", "classCardFactory" ],
+    [ "CardInstance", "classCardInstance.html", "classCardInstance" ],
     [ "CardMatch", "classCardMatch.html", "classCardMatch" ],
-    [ "DeckCombat", "classDeckCombat.html", null ],
-    [ "DeckEntry", "structDeckEntry.html", null ],
-    [ "DeckPlayer", "classDeckPlayer.html", null ],
-    [ "Effect", "classEffect.html", null ],
-    [ "Enemy", "classEnemy.html", null ],
-    [ "GainArmorEffect", "classGainArmorEffect.html", null ],
-    [ "Game", "classGame.html", null ],
-    [ "ICardFactory", "classICardFactory.html", null ],
-    [ "IOText", "classIOText.html", null ],
-    [ "Player", "classPlayer.html", null ],
-    [ "Text", "classText.html", null ]
+    [ "DeckCombat", "classDeckCombat.html", "classDeckCombat" ],
+    [ "DeckEntry", "structDeckEntry.html", "structDeckEntry" ],
+    [ "DeckPlayer", "classDeckPlayer.html", "classDeckPlayer" ],
+    [ "Effect", "classEffect.html", "classEffect" ],
+    [ "Enemy", "classEnemy.html", "classEnemy" ],
+    [ "GainArmorEffect", "classGainArmorEffect.html", "classGainArmorEffect" ],
+    [ "Game", "classGame.html", "classGame" ],
+    [ "ICardFactory", "classICardFactory.html", "classICardFactory" ],
+    [ "IOText", "classIOText.html", "classIOText" ],
+    [ "Player", "classPlayer.html", "classPlayer" ],
+    [ "Text", "classText.html", "classText" ]
 ];

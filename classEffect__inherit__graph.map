@@ -1,0 +1,4 @@
+<map id="Effect" name="Effect">
+<area shape="rect" id="node1" title="Abstract base class for all card effects." alt="" coords="23,5,117,97"/>
+<area shape="rect" id="node2" href="$classGainArmorEffect.html" title="Effect that grants armor to the player based on the card&#39;s armor value." alt="" coords="5,145,135,223"/>
+</map>

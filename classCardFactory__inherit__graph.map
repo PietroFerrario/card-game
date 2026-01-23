@@ -1,0 +1,4 @@
+<map id="CardFactory" name="CardFactory">
+<area shape="rect" id="node1" title="Central factory for creating CardInstances from registered definitions." alt="" coords="5,145,165,281"/>
+<area shape="rect" id="node2" href="$classICardFactory.html" title=" " alt="" coords="9,5,162,97"/>
+</map>

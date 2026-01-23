@@ -6,5 +6,6 @@ var files_dup =
     [ "factories", "dir_bec78ecbdc42a5401a3b082f36c4b809.html", "dir_bec78ecbdc42a5401a3b082f36c4b809" ],
     [ "game_system", "dir_18d58962dcdf46ba17fa85f38bb069c5.html", "dir_18d58962dcdf46ba17fa85f38bb069c5" ],
     [ "ui", "dir_1788f8309b1a812dcb800a185471cf6c.html", "dir_1788f8309b1a812dcb800a185471cf6c" ],
-    [ "util", "dir_23ec12649285f9fabf3a6b7380226c28.html", "dir_23ec12649285f9fabf3a6b7380226c28" ]
+    [ "util", "dir_23ec12649285f9fabf3a6b7380226c28.html", "dir_23ec12649285f9fabf3a6b7380226c28" ],
+    [ "main.cpp", "main_8cpp.html", "main_8cpp" ]
 ];

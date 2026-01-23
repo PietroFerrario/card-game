@@ -1,0 +1,3 @@
+<map id="DeckPlayer" name="DeckPlayer">
+<area shape="rect" id="node1" title="Represents the player&#39;s persistent deck outside of combat." alt="" coords="5,5,204,171"/>
+</map>

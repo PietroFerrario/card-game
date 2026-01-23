@@ -96,30 +96,95 @@ $(document).ready(function(){initNavTree('classCardFactory.html',''); initResiza
   <div class="headertitle"><div class="title">CardFactory Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Central factory for creating CardInstances from registered definitions.  
+ <a href="classCardFactory.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="cardFactory_8h_source.html">cardFactory.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for CardFactory:</div>
 <div class="dyncontent">
- <div class="center">
-  <img src="classCardFactory.png" usemap="#CardFactory_map" alt=""/>
-  <map id="CardFactory_map" name="CardFactory_map">
-<area href="classICardFactory.html" alt="ICardFactory" shape="rect" coords="0,0,87,24"/>
-  </map>
-</div></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classCardFactory__inherit__graph.svg" width="171" height="287"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+Collaboration diagram for CardFactory:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classCardFactory__coll__graph.svg" width="171" height="287"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:af37ec9e2f92ca8fbf756db18ba4599e4"><td class="memItemLeft" align="right" valign="top"><a id="af37ec9e2f92ca8fbf756db18ba4599e4" name="af37ec9e2f92ca8fbf756db18ba4599e4"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>registerDefinition</b> (std::string_view cardId, std::unique_ptr&lt; <a class="el" href="classCardDefinition.html">CardDefinition</a> &gt; uniqueCardDefinition)</td></tr>
+<tr class="memitem:a55607cb22e595af44cef12010be53e94"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCardFactory.html#a55607cb22e595af44cef12010be53e94">CardFactory</a> ()</td></tr>
+<tr class="memdesc:a55607cb22e595af44cef12010be53e94"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs and registers all cards at startup.  <br /></td></tr>
+<tr class="separator:a55607cb22e595af44cef12010be53e94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af37ec9e2f92ca8fbf756db18ba4599e4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCardFactory.html#af37ec9e2f92ca8fbf756db18ba4599e4">registerDefinition</a> (std::string_view cardId, std::unique_ptr&lt; <a class="el" href="classCardDefinition.html">CardDefinition</a> &gt; uniqueCardDefinition)</td></tr>
+<tr class="memdesc:af37ec9e2f92ca8fbf756db18ba4599e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers a new card definition.  <br /></td></tr>
 <tr class="separator:af37ec9e2f92ca8fbf756db18ba4599e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a07e105674e7d1e5aadea529ae01d83d8"><td class="memItemLeft" align="right" valign="top"><a id="a07e105674e7d1e5aadea529ae01d83d8" name="a07e105674e7d1e5aadea529ae01d83d8"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>registerCards</b> ()</td></tr>
+<tr class="memitem:a07e105674e7d1e5aadea529ae01d83d8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCardFactory.html#a07e105674e7d1e5aadea529ae01d83d8">registerCards</a> ()</td></tr>
+<tr class="memdesc:a07e105674e7d1e5aadea529ae01d83d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Populates the factory with all static card definitions.  <br /></td></tr>
 <tr class="separator:a07e105674e7d1e5aadea529ae01d83d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad84658f1bed6a00f1484022899369a82"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classCardInstance.html">CardInstance</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCardFactory.html#ad84658f1bed6a00f1484022899369a82">makeSingleCard</a> (const std::string &amp;cardId) const override</td></tr>
+<tr class="memdesc:ad84658f1bed6a00f1484022899369a82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new <a class="el" href="classCardInstance.html" title="Represents a runtime instance of a card during combat.">CardInstance</a> based on the registered definition.  <br /></td></tr>
 <tr class="separator:ad84658f1bed6a00f1484022899369a82"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afeea595a6787983bff6909b01fce49cd"><td class="memItemLeft" align="right" valign="top"><a id="afeea595a6787983bff6909b01fce49cd" name="afeea595a6787983bff6909b01fce49cd"></a>
-virtual std::unique_ptr&lt; <a class="el" href="classCardInstance.html">CardInstance</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>makeSingleCard</b> (const std::string &amp;cardId) const =0</td></tr>
-<tr class="separator:afeea595a6787983bff6909b01fce49cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad80116a303fb48c7d0af5871556c58a7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCardFactory.html#ad80116a303fb48c7d0af5871556c58a7">~CardFactory</a> ()</td></tr>
+<tr class="memdesc:ad80116a303fb48c7d0af5871556c58a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <br /></td></tr>
+<tr class="separator:ad80116a303fb48c7d0af5871556c58a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classICardFactory"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classICardFactory')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classICardFactory.html">ICardFactory</a></td></tr>
+<tr class="memitem:afeea595a6787983bff6909b01fce49cd inherit pub_methods_classICardFactory"><td class="memItemLeft" align="right" valign="top">virtual std::unique_ptr&lt; <a class="el" href="classCardInstance.html">CardInstance</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classICardFactory.html#afeea595a6787983bff6909b01fce49cd">makeSingleCard</a> (const std::string &amp;cardId) const =0</td></tr>
+<tr class="separator:afeea595a6787983bff6909b01fce49cd inherit pub_methods_classICardFactory"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25e5f79224a1b7e4ccbea1bf2c17346d inherit pub_methods_classICardFactory"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classICardFactory.html#a25e5f79224a1b7e4ccbea1bf2c17346d">~ICardFactory</a> ()=default</td></tr>
+<tr class="separator:a25e5f79224a1b7e4ccbea1bf2c17346d inherit pub_methods_classICardFactory"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Central factory for creating CardInstances from registered definitions. </p>
+<p><a class="el" href="classCardFactory.html" title="Central factory for creating CardInstances from registered definitions.">CardFactory</a> owns all immutable CardDefinitions used during combat. It is responsible for:</p><ul>
+<li>Registering cards at startup</li>
+<li>Storing definitions mapped by unique ID</li>
+<li>Creating new CardInstances from definitions</li>
+</ul>
+<p><a class="el" href="classCardFactory.html" title="Central factory for creating CardInstances from registered definitions.">CardFactory</a> is only responsible for card data and instantiation; not for deck or match logic. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a55607cb22e595af44cef12010be53e94" name="a55607cb22e595af44cef12010be53e94"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55607cb22e595af44cef12010be53e94">&#9670;&#160;</a></span>CardFactory()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CardFactory::CardFactory </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructs and registers all cards at startup. </p>
+<p>Construct a new Card Factory:: Card Factory object.</p>
+
+</div>
+</div>
+<a id="ad80116a303fb48c7d0af5871556c58a7" name="ad80116a303fb48c7d0af5871556c58a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad80116a303fb48c7d0af5871556c58a7">&#9670;&#160;</a></span>~CardFactory()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CardFactory::~CardFactory </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Destructor. </p>
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="ad84658f1bed6a00f1484022899369a82" name="ad84658f1bed6a00f1484022899369a82"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad84658f1bed6a00f1484022899369a82">&#9670;&#160;</a></span>makeSingleCard()</h2>
@@ -145,13 +210,81 @@ virtual std::unique_ptr&lt; <a class="el" href="classCardInstance.html">CardInst
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="classICardFactory.html">ICardFactory</a>.</p>
+<p>Creates a new <a class="el" href="classCardInstance.html" title="Represents a runtime instance of a card during combat.">CardInstance</a> based on the registered definition. </p>
+<p>Looks up the card ID and returns a runtime copy (<a class="el" href="classCardInstance.html" title="Represents a runtime instance of a card during combat.">CardInstance</a>). Throws if the ID is not registered.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cardId</td><td>ID of the card to create. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A unique_ptr to the new <a class="el" href="classCardInstance.html" title="Represents a runtime instance of a card during combat.">CardInstance</a>. </dd></dl>
+
+<p>Implements <a class="el" href="classICardFactory.html#afeea595a6787983bff6909b01fce49cd">ICardFactory</a>.</p>
+
+</div>
+</div>
+<a id="a07e105674e7d1e5aadea529ae01d83d8" name="a07e105674e7d1e5aadea529ae01d83d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07e105674e7d1e5aadea529ae01d83d8">&#9670;&#160;</a></span>registerCards()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CardFactory::registerCards </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Populates the factory with all static card definitions. </p>
+<p>Called during construction. </p>
+
+</div>
+</div>
+<a id="af37ec9e2f92ca8fbf756db18ba4599e4" name="af37ec9e2f92ca8fbf756db18ba4599e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af37ec9e2f92ca8fbf756db18ba4599e4">&#9670;&#160;</a></span>registerDefinition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CardFactory::registerDefinition </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view&#160;</td>
+          <td class="paramname"><em>cardId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="classCardDefinition.html">CardDefinition</a> &gt;&#160;</td>
+          <td class="paramname"><em>uniqueCardDefinition</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Registers a new card definition. </p>
+<p>Adds the <a class="el" href="classCardDefinition.html" title="Immutable static data representing a card type.">CardDefinition</a> to the internal map, keyed by its unique ID. If the ID is already present, the definition is not replaced.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cardId</td><td>Unique string identifier for the card. </td></tr>
+    <tr><td class="paramname">uniqueCardDefinition</td><td>Ownership of the new definition. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>factories/<a class="el" href="cardFactory_8h_source.html">cardFactory.h</a></li>
-<li>factories/cardFactory.cpp</li>
+<li>factories/<a class="el" href="cardFactory_8cpp.html">cardFactory.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

@@ -96,16 +96,67 @@ $(document).ready(function(){initNavTree('structDeckEntry.html',''); initResizab
   <div class="headertitle"><div class="title">DeckEntry Struct Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Represents a single card entry in the player's persistent deck.  
+ <a href="structDeckEntry.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="deckEntry_8h_source.html">deckEntry.h</a>&gt;</code></p>
+<div class="dynheader">
+Collaboration diagram for DeckEntry:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="structDeckEntry__coll__graph.svg" width="187" height="228"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:aa4b18f402203fead4c07596f411ae248"><td class="memItemLeft" align="right" valign="top"><a id="aa4b18f402203fead4c07596f411ae248" name="aa4b18f402203fead4c07596f411ae248"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>cardId</b></td></tr>
+<tr class="memitem:aa4b18f402203fead4c07596f411ae248"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structDeckEntry.html#aa4b18f402203fead4c07596f411ae248">cardId</a></td></tr>
+<tr class="memdesc:aa4b18f402203fead4c07596f411ae248"><td class="mdescLeft">&#160;</td><td class="mdescRight">Identifier matching a <a class="el" href="classCardDefinition.html" title="Immutable static data representing a card type.">CardDefinition</a>.  <br /></td></tr>
 <tr class="separator:aa4b18f402203fead4c07596f411ae248"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a84543f00f630aa87b49a323462db7943"><td class="memItemLeft" align="right" valign="top"><a id="a84543f00f630aa87b49a323462db7943" name="a84543f00f630aa87b49a323462db7943"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>cardCount</b></td></tr>
+<tr class="memitem:a84543f00f630aa87b49a323462db7943"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structDeckEntry.html#a84543f00f630aa87b49a323462db7943">cardCount</a></td></tr>
+<tr class="memdesc:a84543f00f630aa87b49a323462db7943"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of copies owned.  <br /></td></tr>
 <tr class="separator:a84543f00f630aa87b49a323462db7943"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Represents a single card entry in the player's persistent deck. </p>
+<p>Each entry stores:</p><ul>
+<li>The card's ID (matches a <a class="el" href="classCardDefinition.html" title="Immutable static data representing a card type.">CardDefinition</a> ID)</li>
+<li>The number of copies the player owns</li>
+</ul>
+<p>Used for saving, loading, and modifying the player's deck outside of combat. </p>
+</div><h2 class="groupheader">Member Data Documentation</h2>
+<a id="a84543f00f630aa87b49a323462db7943" name="a84543f00f630aa87b49a323462db7943"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84543f00f630aa87b49a323462db7943">&#9670;&#160;</a></span>cardCount</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int DeckEntry::cardCount</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Number of copies owned. </p>
+
+</div>
+</div>
+<a id="aa4b18f402203fead4c07596f411ae248" name="aa4b18f402203fead4c07596f411ae248"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4b18f402203fead4c07596f411ae248">&#9670;&#160;</a></span>cardId</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string DeckEntry::cardId</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Identifier matching a <a class="el" href="classCardDefinition.html" title="Immutable static data representing a card type.">CardDefinition</a>. </p>
+
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li>deck/<a class="el" href="deckEntry_8h_source.html">deckEntry.h</a></li>
 </ul>

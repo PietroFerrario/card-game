@@ -96,25 +96,158 @@ $(document).ready(function(){initNavTree('classDeckCombat.html',''); initResizab
   <div class="headertitle"><div class="title">DeckCombat Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Manages all card piles during a single combat.  
+ <a href="classDeckCombat.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="deckCombat_8h_source.html">deckCombat.h</a>&gt;</code></p>
+<div class="dynheader">
+Collaboration diagram for DeckCombat:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classDeckCombat__coll__graph.svg" width="172" height="132"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a8ee7cea4e28b669e3b609c77726185eb"><td class="memItemLeft" align="right" valign="top"><a id="a8ee7cea4e28b669e3b609c77726185eb" name="a8ee7cea4e28b669e3b609c77726185eb"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>DeckCombat</b> (const <a class="el" href="classDeckPlayer.html">DeckPlayer</a> &amp;deck_player, const <a class="el" href="classICardFactory.html">ICardFactory</a> &amp;factory)</td></tr>
+<tr class="memitem:a8ee7cea4e28b669e3b609c77726185eb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDeckCombat.html#a8ee7cea4e28b669e3b609c77726185eb">DeckCombat</a> (const <a class="el" href="classDeckPlayer.html">DeckPlayer</a> &amp;deck_player, const <a class="el" href="classICardFactory.html">ICardFactory</a> &amp;factory)</td></tr>
+<tr class="memdesc:a8ee7cea4e28b669e3b609c77726185eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the combat deck from a player's persistent deck.  <br /></td></tr>
 <tr class="separator:a8ee7cea4e28b669e3b609c77726185eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adc186615536f9422731321b3c1988285"><td class="memItemLeft" align="right" valign="top"><a id="adc186615536f9422731321b3c1988285" name="adc186615536f9422731321b3c1988285"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>drawCard</b> ()</td></tr>
+<tr class="memitem:adc186615536f9422731321b3c1988285"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDeckCombat.html#adc186615536f9422731321b3c1988285">drawCard</a> ()</td></tr>
+<tr class="memdesc:adc186615536f9422731321b3c1988285"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws one card from the draw pile to the hand.  <br /></td></tr>
 <tr class="separator:adc186615536f9422731321b3c1988285"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3ed556035ec64030a32e8f995d26459a"><td class="memItemLeft" align="right" valign="top"><a id="a3ed556035ec64030a32e8f995d26459a" name="a3ed556035ec64030a32e8f995d26459a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>discardFromHand</b> (int handIndex)</td></tr>
+<tr class="memitem:a3ed556035ec64030a32e8f995d26459a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDeckCombat.html#a3ed556035ec64030a32e8f995d26459a">discardFromHand</a> (int handIndex)</td></tr>
+<tr class="memdesc:a3ed556035ec64030a32e8f995d26459a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Discards a card from the hand to the discard pile.  <br /></td></tr>
 <tr class="separator:a3ed556035ec64030a32e8f995d26459a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2220e79c071491e02bb9f5fda4f242cd"><td class="memItemLeft" align="right" valign="top"><a id="a2220e79c071491e02bb9f5fda4f242cd" name="a2220e79c071491e02bb9f5fda4f242cd"></a>
-std::vector&lt; std::unique_ptr&lt; <a class="el" href="classCardInstance.html">CardInstance</a> &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getHandPile</b> ()</td></tr>
+<tr class="memitem:a2220e79c071491e02bb9f5fda4f242cd"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::unique_ptr&lt; <a class="el" href="classCardInstance.html">CardInstance</a> &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDeckCombat.html#a2220e79c071491e02bb9f5fda4f242cd">getHandPile</a> ()</td></tr>
+<tr class="memdesc:a2220e79c071491e02bb9f5fda4f242cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a reference to the current hand pile.  <br /></td></tr>
 <tr class="separator:a2220e79c071491e02bb9f5fda4f242cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Manages all card piles during a single combat. </p>
+<p><a class="el" href="classDeckCombat.html" title="Manages all card piles during a single combat.">DeckCombat</a> is the runtime deck system used during an encounter. It is initialized from the player's persistent <a class="el" href="classDeckPlayer.html" title="Represents the player&#39;s persistent deck outside of combat.">DeckPlayer</a> and builds a fresh set of CardInstances using the provided <a class="el" href="classICardFactory.html">ICardFactory</a>.</p>
+<p>It owns and manages:</p><ul>
+<li>Draw pile (main deck)</li>
+<li>Hand pile (cards in hand)</li>
+<li>Discard pile (used cards)</li>
+</ul>
+<p>Cards are never duplicated. Ownership moves between piles via std::move. The deck is destroyed at the end of combat. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a8ee7cea4e28b669e3b609c77726185eb" name="a8ee7cea4e28b669e3b609c77726185eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ee7cea4e28b669e3b609c77726185eb">&#9670;&#160;</a></span>DeckCombat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DeckCombat::DeckCombat </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classDeckPlayer.html">DeckPlayer</a> &amp;&#160;</td>
+          <td class="paramname"><em>deck_player</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classICardFactory.html">ICardFactory</a> &amp;&#160;</td>
+          <td class="paramname"><em>factory</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructs the combat deck from a player's persistent deck. </p>
+<p>Creates runtime CardInstances for each entry in the <a class="el" href="classDeckPlayer.html" title="Represents the player&#39;s persistent deck outside of combat.">DeckPlayer</a>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">deck_player</td><td>The source persistent deck. </td></tr>
+    <tr><td class="paramname">factory</td><td>Card creation system used to instantiate CardInstances. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a3ed556035ec64030a32e8f995d26459a" name="a3ed556035ec64030a32e8f995d26459a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ed556035ec64030a32e8f995d26459a">&#9670;&#160;</a></span>discardFromHand()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DeckCombat::discardFromHand </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>handIndex</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Discards a card from the hand to the discard pile. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">handIndex</td><td>Index of the card in the hand pile. If index is out of bounds, no action is taken. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="adc186615536f9422731321b3c1988285" name="adc186615536f9422731321b3c1988285"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc186615536f9422731321b3c1988285">&#9670;&#160;</a></span>drawCard()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DeckCombat::drawCard </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Draws one card from the draw pile to the hand. </p>
+<p>If the draw pile is empty, no action is taken. </p>
+
+</div>
+</div>
+<a id="a2220e79c071491e02bb9f5fda4f242cd" name="a2220e79c071491e02bb9f5fda4f242cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2220e79c071491e02bb9f5fda4f242cd">&#9670;&#160;</a></span>getHandPile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; std::unique_ptr&lt; <a class="el" href="classCardInstance.html">CardInstance</a> &gt; &gt; &amp; DeckCombat::getHandPile </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a reference to the current hand pile. </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>deck/<a class="el" href="deckCombat_8h_source.html">deckCombat.h</a></li>
-<li>deck/deckCombat.cpp</li>
+<li>deck/<a class="el" href="deckCombat_8cpp.html">deckCombat.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

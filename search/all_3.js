@@ -1,6 +1,8 @@
 var searchData=
 [
-  ['gainarmor_0',['gainArmor',['../classCardMatch.html#a7932e3e85d254f12a6690530b0bed17a',1,'CardMatch']]],
-  ['gainarmoreffect_1',['GainArmorEffect',['../classGainArmorEffect.html',1,'']]],
-  ['game_2',['Game',['../classGame.html',1,'']]]
+  ['effect_0',['Effect',['../classEffect.html',1,'']]],
+  ['effect_2eh_1',['effect.h',['../effect_8h.html',1,'']]],
+  ['enemy_2',['Enemy',['../classEnemy.html',1,'Enemy'],['../classEnemy.html#ad2b9ecf5f3201a7d2974e63cb04d65ec',1,'Enemy::Enemy()']]],
+  ['enemy_2ecpp_3',['enemy.cpp',['../enemy_8cpp.html',1,'']]],
+  ['enemy_2eh_4',['enemy.h',['../enemy_8h.html',1,'']]]
 ];
