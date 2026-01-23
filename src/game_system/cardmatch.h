@@ -1,3 +1,8 @@
+/// @cond DOXYGEN_SHOULD_SKIP_THIS
+#include "entities/enemies/enemy.h"
+#include "entities/player.h"
+/// @endcond
+
 #ifndef CARDMATCH_H
 #define CARDMATCH_H
 
