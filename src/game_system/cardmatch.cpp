@@ -26,27 +26,20 @@ void CardMatch::drawMultipleCards(int amount)
 
 void CardMatch::playCard(int handIndex)
 {
-    DEBUG_LOG("Card amount in HandPile: " << m_deckCombat.getHandPile().size() << ".");
-    if (m_deckCombat.getHandPile().size() <= 0)
-    {
-        DEBUG_LOG("The HandPile is empty, you can't play more cards.");
-    }
-    else if (m_deckCombat.getHandPile().size() > handIndex)
-    {
-        std::unique_ptr<CardInstance>& cardToPlay = m_deckCombat.getHandPile()[handIndex];
-        DEBUG_LOG("Selected a valid card to play, at index: " << handIndex << ".");
 
-        for (const auto& effectPtr : cardToPlay->getCardDefinition().getEffectList())
-        {
-            effectPtr->apply(*this, *cardToPlay);
-        }
-        DEBUG_LOG("Applied all the effect from card " << cardToPlay->getCardDefinition().getID()
-                                                      << ".");
+    std::unique_ptr<CardInstance> cardBeingPlayed = m_deckCombat.takeFromHand(handIndex);
 
-        m_deckCombat.discardFromHand(handIndex);
-    }
-    else
+    if (!cardBeingPlayed)
     {
-        DEBUG_LOG("Index " << handIndex << " is not a valid one to play a card.");
+        return;
     }
+
+    for (const auto& effectPtr : cardBeingPlayed->getCardDefinition().getEffectList())
+    {
+        effectPtr->apply(*this, *cardBeingPlayed);
+    }
+    DEBUG_LOG("Applied all the effect from card " << cardBeingPlayed->getCardDefinition().getID()
+                                                  << ".");
+
+    m_deckCombat.discard(std::move(cardBeingPlayed));
 }

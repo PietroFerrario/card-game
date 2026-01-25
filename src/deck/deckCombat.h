@@ -53,6 +53,15 @@ class DeckCombat
      */
     void discardFromHand(int handIndex);
 
+    int getHandSize() const { return m_handPile.size(); }
+
+    bool isValidHandIndex(int index) const;
+
+    void discard(std::unique_ptr<CardInstance> exhaustedCard);
+
+    std::unique_ptr<CardInstance> takeFromHand(int index);
+
+    CardInstance& getCardInHand(int index) { return *m_handPile[index]; }
     /// @brief Returns a reference to the current hand pile.
     std::vector<std::unique_ptr<CardInstance>>& getHandPile() { return m_handPile; }
 

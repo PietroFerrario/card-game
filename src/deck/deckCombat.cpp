@@ -39,6 +39,32 @@ void DeckCombat::drawCard()
     }
 }
 
+std::unique_ptr<CardInstance> DeckCombat::takeFromHand(int index)
+{
+    if (index < 0 || index > getHandSize())
+    {
+        DEBUG_LOG("Invalid inxex: " << index);
+        return nullptr;
+    }
+    else
+    {
+        DEBUG_LOG("Took a card from hand");
+        std::unique_ptr<CardInstance> cardToMove{std::move(m_handPile[index])};
+        m_handPile.erase(m_handPile.begin() + index);
+        return cardToMove;
+    }
+}
+
+void DeckCombat::discard(std::unique_ptr<CardInstance> Card)
+{
+    if (!Card)
+    {
+        return;
+    }
+    DEBUG_LOG("Moved the exhausted card to the discard pile");
+    m_discardPile.emplace_back(std::move(Card));
+}
+
 void DeckCombat::discardFromHand(int handIndex)
 {
     if (m_handPile.size() > handIndex)
