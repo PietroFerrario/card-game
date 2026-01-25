@@ -15,13 +15,13 @@ add_library(cardgame_core)
 target_sources(cardgame_core PRIVATE 
     src/cards/cardInstance.cpp
     src/cards/cardDefinition.cpp
-    src/cards/effects/gainArmorEffect.cpp
+    
+    src/effects/gainArmorEffect.cpp
 
     src/deck/deckCombat.cpp
     src/deck/deckPlayer.cpp
     
     src/entities/player.cpp
-    src/entities/enemies/enemy.cpp  
 
     src/factories/cardFactory.cpp
 

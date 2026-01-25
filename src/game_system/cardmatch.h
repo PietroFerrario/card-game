@@ -70,6 +70,8 @@ class CardMatch
      */
     void gainArmor(int defense);
 
+    void enemyTurn();
+
   private:
     Player& m_player; ///< Non-owning reference to the player in the encounter.
     Enemy& m_enemy;   ///< Non-owning reference to the enemy in the encounter.

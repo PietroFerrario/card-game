@@ -16,7 +16,7 @@ int main()
     Player mainPlayer{initialCardList};
     mainPlayer.setName("Malliano");
     std::cout << "Player name: " << mainPlayer.getName() << "\n";
-    Enemy enemy{10, 10};
+    Enemy enemy{10};
     std::cout << "\n";
 
     std::cout << "Instantiating CardMatch from the Player and the Enemy:\n";

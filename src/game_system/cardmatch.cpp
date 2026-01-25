@@ -1,8 +1,8 @@
 #include "cardMatch.h"
 #include "cards/CardInstance.h"
 #include "cards/cardDefinition.h"
-#include "cards/effect.h"
 #include "combat/combatContext.h"
+#include "effects/effect.h"
 #include "entities/enemies/enemy.h"
 #include "entities/player.h"
 #include "util/debug.h"
@@ -35,6 +35,7 @@ void CardMatch::playCard(int handIndex)
     }
     DEBUG_LOG("Playing card: " << cardBeingPlayed->getCardDefinition().getID()
                                << " from hand index: " << handIndex);
+
     CombatContext currentContext{m_combatSystem, m_player, m_enemy};
 
     for (const auto& effectPtr : cardBeingPlayed->getCardDefinition().getEffectList())
@@ -46,3 +47,5 @@ void CardMatch::playCard(int handIndex)
 
     m_deckCombat.discard(std::move(cardBeingPlayed));
 }
+
+void CardMatch::enemyTurn() {}

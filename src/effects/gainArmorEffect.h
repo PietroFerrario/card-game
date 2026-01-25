@@ -1,8 +1,8 @@
 #ifndef GAINBLOCKEFFECT_H
 #define GAINBLOCKEFFECT_H
 
-#include "cards/effect.h"
 #include "combat/combatTarget.h"
+#include "effect.h"
 
 /**
  * @brief Effect that grants armor to the player based on the card's armor value.

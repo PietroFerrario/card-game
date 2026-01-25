@@ -1,30 +1,18 @@
 #include "game.h"
 
-#include <ranges>
 #include <algorithm>
 #include <cctype>
+#include <ranges>
 
-Game::Game(IOText &io) : m_io{io} {}
+Game::Game(IOText& io) : m_io{io} {}
 
-bool Game::isLost() const
-{
-    return (m_mainPlayer.getHp() < 0);
-}
+bool Game::isLost() const { return (m_mainPlayer.getHp() < 0); }
 
-bool Game::isPlayerAlive() const
-{
-    return m_mainPlayer.getHp() > 0;
-}
+bool Game::isPlayerAlive() const { return m_mainPlayer.getHp() > 0; }
 
-Player &Game::getMainPlayer()
-{
-    return m_mainPlayer;
-}
+Player& Game::getMainPlayer() { return m_mainPlayer; }
 
-const Player &Game::getMainPlayer() const
-{
-    return m_mainPlayer;
-}
+const Player& Game::getMainPlayer() const { return m_mainPlayer; }
 
 void Game::setMainPlayerName()
 {
@@ -40,8 +28,7 @@ void Game::setMainPlayerName()
 
 const bool Game::isValidName(std::string_view name) const
 {
-    return std::ranges::all_of(name, [](char ch)
-                               { return std::isalpha(ch) || std::isspace(ch); });
+    return std::ranges::all_of(name, [](char ch) { return std::isalpha(ch) || std::isspace(ch); });
 }
 
 void Game::intro()
@@ -50,7 +37,4 @@ void Game::intro()
     setMainPlayerName();
 }
 
-void Game::lossMessage() const
-{
-    m_io.print(m_text.getText("outro"));
-}
+void Game::lossMessage() const { m_io.print(m_text.getText("outro")); }

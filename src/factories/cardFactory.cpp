@@ -1,12 +1,10 @@
 #include "cardFactory.h"
 #include "cards/cardDefinition.h"
 #include "cards/cardInstance.h"
-#include "cards/effect.h"
-#include "util/debug.h"
-
-#include "cards/effects/gainArmorEffect.h"
-
 #include "combat/combatTarget.h"
+#include "effects/effect.h"
+#include "effects/gainArmorEffect.h"
+#include "util/debug.h"
 
 #include <memory>
 /**
