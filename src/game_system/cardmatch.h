@@ -1,12 +1,12 @@
-/// @cond DOXYGEN_SHOULD_SKIP_THIS
-#include "entities/enemies/enemy.h"
-#include "entities/player.h"
-/// @endcond
+
 
 #ifndef CARDMATCH_H
 #define CARDMATCH_H
 
+#include "combatSystem.h"
 #include "deck/deckCombat.h"
+#include "entities/enemies/enemy.h"
+#include "entities/player.h"
 #include "factories/cardFactory.h"
 
 class Player;
@@ -77,6 +77,8 @@ class CardMatch
     CardFactory m_cardFactory; ///< Populate the CombatDeck with CardInstances.
 
     DeckCombat m_deckCombat; ///< Manage draw/discard/piles during combat.
+
+    CombatSystem m_combatSystem;
 };
 
 #endif

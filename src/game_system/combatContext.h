@@ -1,0 +1,4 @@
+#ifndef COMBATCONTEXT_H
+#define COMBATCONTEXT_H
+
+#endif // COMBATCONTEXT_H

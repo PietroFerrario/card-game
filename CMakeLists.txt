@@ -26,6 +26,7 @@ target_sources(cardgame_core PRIVATE
     src/factories/cardFactory.cpp
 
     src/game_system/cardMatch.cpp
+    src/game_system/combatSystem.cpp
     src/game_system/game.cpp
 
     src/ui/iotext.cpp

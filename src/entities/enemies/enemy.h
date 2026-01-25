@@ -1,19 +1,14 @@
 #ifndef ENEMY_H
 #define ENEMY_H
 
-class Enemy
+#include "entities/entity.h"
+
+class Enemy : public Entity
 {
-public:
+  public:
     Enemy(int hp, int attack);
 
-    int getHp() const { return m_hp; }
-    int getAttack() const { return m_attack; }
-
-    void takeDamage(int amount);
-    void heal(int amount);
-
-private:
-    int m_hp{};
+  private:
     int m_attack{};
 };
 

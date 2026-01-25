@@ -4,11 +4,13 @@
 #include "deck/deckEntry.h"
 #include "deck/deckPlayer.h"
 
+#include "entity.h"
+
 #include <string>
 #include <string_view>
 #include <vector>
 
-class Player
+class Player : public Entity
 {
   public:
     Player() {}
@@ -17,23 +19,9 @@ class Player
     void setName(std::string_view name) { m_name = name; }
     std::string_view getName() const { return m_name; }
 
-    int getHp() const { return m_hp; }
-
-    int getArmor() const { return m_armor; }
-    void resetArmor() { m_armor = 0; }
-    void lowerArmor(int amount);
-    void increaseArmor(int amount);
-
-    void takeDamage(int amount);
-    void heal(int amount);
-
     const DeckPlayer& getDeckPlayer() { return m_deckPlayer; }
 
   private:
-    int m_hp{};
-    int m_armor{};
-    std::string m_name{};
-
     DeckPlayer m_deckPlayer;
 };
 
