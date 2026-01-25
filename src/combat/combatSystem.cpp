@@ -1,7 +1,12 @@
 #include "combatSystem.h"
 #include "entities/entity.h"
+#include "util/debug.h"
 
-void CombatSystem::gainArmor(Entity& target, int amount) { target.increaseArmor(amount); }
+void CombatSystem::gainArmor(Entity& target, int amount)
+{
+    target.increaseArmor(amount);
+    DEBUG_LOG("Increasing Armor of " << target.getName() << ": +" << amount);
+}
 void CombatSystem::resetArmor(Entity& target) { target.resetArmor(); }
 
 void CombatSystem::heal(Entity& target, int amount) { target.increaseHp(amount); }

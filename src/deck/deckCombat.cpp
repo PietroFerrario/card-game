@@ -41,7 +41,7 @@ void DeckCombat::drawCard()
 
 std::unique_ptr<CardInstance> DeckCombat::takeFromHand(int index)
 {
-    if (index < 0 || index > getHandSize())
+    if (index < 0 || index >= getHandSize())
     {
         DEBUG_LOG("Invalid inxex: " << index);
         return nullptr;

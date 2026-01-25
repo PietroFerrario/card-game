@@ -8,3 +8,5 @@ CardInstance::CardInstance(const CardDefinition& definition)
 }
 
 const CardDefinition& CardInstance::getCardDefinition() const { return *m_definition; }
+
+EffectParams CardInstance::getEffectParams() const { return EffectParams{m_damage, m_armor}; }

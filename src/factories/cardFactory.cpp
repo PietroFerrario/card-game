@@ -6,6 +6,8 @@
 
 #include "cards/effects/gainArmorEffect.h"
 
+#include "combat/combatTarget.h"
+
 #include <memory>
 /**
  * @brief Construct a new Card Factory:: Card Factory object
@@ -32,7 +34,7 @@ void CardFactory::registerDefinition(std::string_view cardId,
 void CardFactory::registerCards()
 {
     std::vector<std::unique_ptr<Effect>> shieldWarriorEffects;
-    shieldWarriorEffects.emplace_back(std::make_unique<GainArmorEffect>());
+    shieldWarriorEffects.emplace_back(std::make_unique<GainArmorEffect>(Target::Self));
     registerDefinition("shieldWarrior",
                        std::make_unique<CardDefinition>("shieldWarrior", "Shield Warrior", 2, 1,
                                                         std::move(shieldWarriorEffects)));

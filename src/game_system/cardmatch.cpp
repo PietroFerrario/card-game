@@ -2,6 +2,7 @@
 #include "cards/CardInstance.h"
 #include "cards/cardDefinition.h"
 #include "cards/effect.h"
+#include "combat/combatContext.h"
 #include "entities/enemies/enemy.h"
 #include "entities/player.h"
 #include "util/debug.h"
@@ -28,15 +29,17 @@ void CardMatch::playCard(int handIndex)
 {
 
     std::unique_ptr<CardInstance> cardBeingPlayed = m_deckCombat.takeFromHand(handIndex);
-
     if (!cardBeingPlayed)
     {
         return;
     }
+    DEBUG_LOG("Playing card: " << cardBeingPlayed->getCardDefinition().getID()
+                               << " from hand index: " << handIndex);
+    CombatContext currentContext{m_combatSystem, m_player, m_enemy};
 
     for (const auto& effectPtr : cardBeingPlayed->getCardDefinition().getEffectList())
     {
-        effectPtr->apply(*this, *cardBeingPlayed);
+        effectPtr->resolve(currentContext, cardBeingPlayed->getEffectParams());
     }
     DEBUG_LOG("Applied all the effect from card " << cardBeingPlayed->getCardDefinition().getID()
                                                   << ".");

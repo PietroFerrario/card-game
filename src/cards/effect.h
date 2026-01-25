@@ -1,8 +1,9 @@
 #ifndef EFFECT_H
 #define EFFECT_H
 
-class CardMatch;
-class CardInstance;
+#include "effects/effectParams.h"
+
+class CombatContext;
 
 /**
  * @brief Abstract base class for all card effects.
@@ -23,7 +24,7 @@ class Effect
      * @param card_match Reference to the combat authority managing the encounter.
      * @param card The card instance triggering this effect.
      */
-    virtual void apply(CardMatch& card_match, CardInstance& card) = 0;
+    virtual void resolve(CombatContext& combatContext, const EffectParams& effectParams) = 0;
 
     /// @brief Virtual destructor.
     virtual ~Effect() = default;

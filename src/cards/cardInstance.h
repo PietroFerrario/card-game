@@ -1,6 +1,8 @@
 #ifndef CARDINSTANCE_H
 #define CARDINSTANCE_H
 
+#include "effects/effectParams.h"
+
 #include <string_view>
 
 class CardDefinition;
@@ -38,6 +40,8 @@ class CardInstance
      * Used for name, ID, effect list, and base values.
      */
     const CardDefinition& getCardDefinition() const;
+
+    EffectParams getEffectParams() const;
 
   private:
     const CardDefinition* m_definition; ///< Non-owning pointer to shared static definition.

@@ -3,7 +3,7 @@
 #ifndef CARDMATCH_H
 #define CARDMATCH_H
 
-#include "combatSystem.h"
+#include "combat/combatSystem.h"
 #include "deck/deckCombat.h"
 #include "entities/enemies/enemy.h"
 #include "entities/player.h"

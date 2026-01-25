@@ -9,7 +9,7 @@ class CombatSystem
 {
   public:
     void gainArmor(Entity& target, int amount);
-    DamageResult CombatSystem::dealDamage(const DamageInfo& damageInfo);
+    DamageResult dealDamage(const DamageInfo& damageInfo);
     void heal(Entity& target, int amount);
     void resetArmor(Entity& target);
     bool isDead(const Entity& target);

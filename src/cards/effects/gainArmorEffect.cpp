@@ -1,11 +1,11 @@
 #include "gainArmorEffect.h"
 #include "cards/cardDefinition.h"
 #include "cards/cardInstance.h"
-#include "game_system/cardmatch.h"
+#include "combat/combatContext.h"
 #include "util/debug.h"
 
-void GainArmorEffect::apply(CardMatch& card_match, CardInstance& card)
+void GainArmorEffect::resolve(CombatContext& combatContext, const EffectParams& values)
 {
-    card_match.gainArmor(card.getArmor());
-    DEBUG_LOG("Applied effect GainArmor from card: " << card.getCardDefinition().getID());
+    combatContext.gainArmor(m_target, values.armor);
+    DEBUG_LOG("Applied effect GainArmor");
 }

@@ -25,8 +25,10 @@ target_sources(cardgame_core PRIVATE
 
     src/factories/cardFactory.cpp
 
+    src/combat/combatContext.cpp
+    src/combat/combatSystem.cpp
+
     src/game_system/cardMatch.cpp
-    src/game_system/combatSystem.cpp
     src/game_system/game.cpp
 
     src/ui/iotext.cpp

@@ -14,6 +14,8 @@ int main()
 
     std::cout << "Instantiating Player from initial list of cards:\n";
     Player mainPlayer{initialCardList};
+    mainPlayer.setName("Malliano");
+    std::cout << "Player name: " << mainPlayer.getName() << "\n";
     Enemy enemy{10, 10};
     std::cout << "\n";
 

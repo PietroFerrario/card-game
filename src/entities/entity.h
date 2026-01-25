@@ -8,7 +8,7 @@ class Entity
 {
   public:
     Entity() {}
-    Entity(int hp) : m_hp{hp} {}
+    Entity(int hp, int attack = 0, int armor = 0) : m_hp{hp}, m_attack{attack}, m_armor{armor} {}
 
     std::string_view getName() const { return m_name; }
 
@@ -29,6 +29,7 @@ class Entity
   protected:
     int m_hp{};
     int m_armor{};
+    int m_attack{};
     std::string m_name{};
 };
 

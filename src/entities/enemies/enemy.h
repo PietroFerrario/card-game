@@ -6,10 +6,9 @@
 class Enemy : public Entity
 {
   public:
-    Enemy(int hp, int attack);
+    Enemy(int hp);
 
   private:
-    int m_attack{};
 };
 
 #endif // ENEMY_H
