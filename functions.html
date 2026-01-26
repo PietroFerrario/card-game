@@ -94,7 +94,14 @@ $(document).ready(function(){initNavTree('functions.html',''); initResizable(); 
 
 <h3><a id="index_a" name="index_a"></a>- a -</h3><ul>
 <li>addCard()&#160;:&#160;<a class="el" href="classDeckPlayer.html#ab7fbfcfc52e0ecb093631c7fa070d8f1">DeckPlayer</a></li>
-<li>apply()&#160;:&#160;<a class="el" href="classEffect.html#ab8697868a6ab78d29497ec72113081b8">Effect</a>, <a class="el" href="classGainArmorEffect.html#a9783c5ad4e856cdde8f5746ef51499a0">GainArmorEffect</a></li>
+<li>amount&#160;:&#160;<a class="el" href="structDamageInfo.html#a52bbd9e6d4452d050c519e48e44332b5">DamageInfo</a></li>
+<li>armor&#160;:&#160;<a class="el" href="structEffectParams.html#af22dfed5bca4d831bb20c077d590493a">EffectParams</a></li>
+<li>attacker&#160;:&#160;<a class="el" href="structDamageInfo.html#aa878827ed255fa231f4435a93efc1ec7">DamageInfo</a></li>
+</ul>
+
+
+<h3><a id="index_b" name="index_b"></a>- b -</h3><ul>
+<li>blocked&#160;:&#160;<a class="el" href="structDamageResult.html#af1e039e82158e0492c039d617d49be2c">DamageResult</a></li>
 </ul>
 
 
@@ -105,12 +112,17 @@ $(document).ready(function(){initNavTree('functions.html',''); initResizable(); 
 <li>cardId&#160;:&#160;<a class="el" href="structDeckEntry.html#aa4b18f402203fead4c07596f411ae248">DeckEntry</a></li>
 <li>CardInstance()&#160;:&#160;<a class="el" href="classCardInstance.html#a5e76c58d0a43a81eab1eedb65c525067">CardInstance</a></li>
 <li>CardMatch()&#160;:&#160;<a class="el" href="classCardMatch.html#a977765d9f0cd90e79608eddc8c0a03b5">CardMatch</a></li>
+<li>CombatContext()&#160;:&#160;<a class="el" href="classCombatContext.html#aa0a7c5344b49416979ef6a7a47653ce2">CombatContext</a></li>
 </ul>
 
 
 <h3><a id="index_d" name="index_d"></a>- d -</h3><ul>
+<li>damage&#160;:&#160;<a class="el" href="structEffectParams.html#a4ab91915ee0cb05778b6298c83b50816">EffectParams</a></li>
+<li>damageResolution&#160;:&#160;<a class="el" href="structDamageInfo.html#a744822e59214644c3d1b812a896fce79">DamageInfo</a></li>
+<li>dealDamage()&#160;:&#160;<a class="el" href="classCombatSystem.html#a475b8c70105815742e483ae8d51aaeaa">CombatSystem</a></li>
 <li>DeckCombat()&#160;:&#160;<a class="el" href="classDeckCombat.html#a8ee7cea4e28b669e3b609c77726185eb">DeckCombat</a></li>
 <li>DeckPlayer()&#160;:&#160;<a class="el" href="classDeckPlayer.html#aa6360b15a643662ed205b67b28f98369">DeckPlayer</a></li>
+<li>discard()&#160;:&#160;<a class="el" href="classDeckCombat.html#a8ae7602e1f0d244d654d5dc9ae7c4bfa">DeckCombat</a></li>
 <li>discardFromHand()&#160;:&#160;<a class="el" href="classDeckCombat.html#a3ed556035ec64030a32e8f995d26459a">DeckCombat</a></li>
 <li>drawCard()&#160;:&#160;<a class="el" href="classDeckCombat.html#adc186615536f9422731321b3c1988285">DeckCombat</a></li>
 <li>drawMultipleCards()&#160;:&#160;<a class="el" href="classCardMatch.html#abcb652a15f8f273427ce359fa03143ef">CardMatch</a></li>
@@ -118,58 +130,82 @@ $(document).ready(function(){initNavTree('functions.html',''); initResizable(); 
 
 
 <h3><a id="index_e" name="index_e"></a>- e -</h3><ul>
-<li>Enemy()&#160;:&#160;<a class="el" href="classEnemy.html#ad2b9ecf5f3201a7d2974e63cb04d65ec">Enemy</a></li>
+<li>effectList&#160;:&#160;<a class="el" href="structEnemyMove.html#a7220e6611fe15602bd774e1bea2193a4">EnemyMove</a></li>
+<li>effectParams&#160;:&#160;<a class="el" href="structEnemyMove.html#a45937745665d2220954a6021432428f7">EnemyMove</a></li>
+<li>Enemy()&#160;:&#160;<a class="el" href="classEnemy.html#a414bfba434f60bb3eab9a82c3aa779bd">Enemy</a></li>
+<li>enemyTurn()&#160;:&#160;<a class="el" href="classCardMatch.html#a15dd37b9798f747a609d12e5dda4b21a">CardMatch</a></li>
+<li>Entity()&#160;:&#160;<a class="el" href="classEntity.html#a980f368aa07ce358583982821533a54a">Entity</a></li>
 </ul>
 
 
 <h3><a id="index_g" name="index_g"></a>- g -</h3><ul>
-<li>gainArmor()&#160;:&#160;<a class="el" href="classCardMatch.html#a7932e3e85d254f12a6690530b0bed17a">CardMatch</a></li>
+<li>gainArmor()&#160;:&#160;<a class="el" href="classCardMatch.html#a7932e3e85d254f12a6690530b0bed17a">CardMatch</a>, <a class="el" href="classCombatContext.html#a5ed170813b89f1fb8b838f093115a5cd">CombatContext</a>, <a class="el" href="classCombatSystem.html#a4bc9281ac194aaf1c5c376383468ad59">CombatSystem</a></li>
+<li>GainArmorEffect()&#160;:&#160;<a class="el" href="classGainArmorEffect.html#a83f8d9698c4599523a0877ad0d41e03b">GainArmorEffect</a></li>
 <li>Game()&#160;:&#160;<a class="el" href="classGame.html#a850cca21b9c27f3539107b5d2846a893">Game</a></li>
-<li>getArmor()&#160;:&#160;<a class="el" href="classCardInstance.html#a78804190aba6da65f9fd04b2b9f0c4ee">CardInstance</a>, <a class="el" href="classPlayer.html#a7c84d4b3d9ac5a91d77b0a979ee9e670">Player</a></li>
-<li>getAttack()&#160;:&#160;<a class="el" href="classEnemy.html#a8206171e0f391e1860ebafb5a5450bf3">Enemy</a></li>
+<li>getArmor()&#160;:&#160;<a class="el" href="classCardInstance.html#a78804190aba6da65f9fd04b2b9f0c4ee">CardInstance</a>, <a class="el" href="classEntity.html#a7b31b7c0076c1ec866f8d46696b5846a">Entity</a></li>
 <li>getBaseArmor()&#160;:&#160;<a class="el" href="classCardDefinition.html#a0cab73e10f6a1644de1f7bcb6f06fc11">CardDefinition</a></li>
 <li>getBaseCost()&#160;:&#160;<a class="el" href="classCardDefinition.html#a3e03b5baa2349af37dcfdefff9aa0bb2">CardDefinition</a></li>
 <li>getBaseDamage()&#160;:&#160;<a class="el" href="classCardDefinition.html#a45b570fb49f0638ad7e4ae6bf8f8ba40">CardDefinition</a></li>
 <li>getCardDefinition()&#160;:&#160;<a class="el" href="classCardInstance.html#a31f8c452b8efa989b16762c12d56417f">CardInstance</a></li>
+<li>getCardInHand()&#160;:&#160;<a class="el" href="classDeckCombat.html#ac0534f47f7476d0e7c8e5d109e31f57b">DeckCombat</a></li>
 <li>getCardList()&#160;:&#160;<a class="el" href="classDeckPlayer.html#a85848e76f0fef7bc1ccdf959020abe9e">DeckPlayer</a></li>
 <li>getCurrentCardNumber()&#160;:&#160;<a class="el" href="classDeckPlayer.html#a95614c6f996b594e5ffb281966aafb78">DeckPlayer</a></li>
 <li>getDamage()&#160;:&#160;<a class="el" href="classCardInstance.html#a516d4c4202169e459650b0ca248ae052">CardInstance</a></li>
 <li>getDeckPlayer()&#160;:&#160;<a class="el" href="classPlayer.html#abf35cade0f12a30ac3926ca8c47b524c">Player</a></li>
 <li>getEffectList()&#160;:&#160;<a class="el" href="classCardDefinition.html#a88cb791e738bdbf86a46536f250c2ff3">CardDefinition</a></li>
+<li>getEffectParams()&#160;:&#160;<a class="el" href="classCardInstance.html#a37fa0aaf9ea87d5c62d59dd4158e2c56">CardInstance</a></li>
 <li>getHandPile()&#160;:&#160;<a class="el" href="classDeckCombat.html#a2220e79c071491e02bb9f5fda4f242cd">DeckCombat</a></li>
-<li>getHp()&#160;:&#160;<a class="el" href="classEnemy.html#abc4b83878be690920a59499a17d6019c">Enemy</a>, <a class="el" href="classPlayer.html#aa1e4de605eb436711fcff947cfee2cc2">Player</a></li>
+<li>getHandSize()&#160;:&#160;<a class="el" href="classDeckCombat.html#a82d175e425abcb3966af228018ac0aff">DeckCombat</a></li>
+<li>getHp()&#160;:&#160;<a class="el" href="classEntity.html#aa6080cdbf25bece934c49e79634011ef">Entity</a></li>
 <li>getID()&#160;:&#160;<a class="el" href="classCardDefinition.html#afb5d62a40699159266839c41ba9ce8f2">CardDefinition</a></li>
 <li>getln()&#160;:&#160;<a class="el" href="classIOText.html#a243be749bc0f604ef777dcc2191fce4e">IOText</a></li>
 <li>getMainPlayer()&#160;:&#160;<a class="el" href="classGame.html#a14e29e4ce2c89d65d6c49531be3de144">Game</a></li>
-<li>getName()&#160;:&#160;<a class="el" href="classCardDefinition.html#a0de92c6f28b1a53fe9678a52693b5ed1">CardDefinition</a>, <a class="el" href="classPlayer.html#ae6c59cf02275c7ba78ae4cf4d1771412">Player</a></li>
+<li>getName()&#160;:&#160;<a class="el" href="classCardDefinition.html#a0de92c6f28b1a53fe9678a52693b5ed1">CardDefinition</a>, <a class="el" href="classEntity.html#abd594e05bdb875b0e6c934fe3a4f44bb">Entity</a>, <a class="el" href="classPlayer.html#ae6c59cf02275c7ba78ae4cf4d1771412">Player</a></li>
 <li>getText()&#160;:&#160;<a class="el" href="classText.html#ae5a6625830c7162ac0512fdf949911e3">Text</a></li>
 </ul>
 
 
 <h3><a id="index_h" name="index_h"></a>- h -</h3><ul>
-<li>heal()&#160;:&#160;<a class="el" href="classEnemy.html#ade701e25a4fd889e7663e7ebe18975e2">Enemy</a>, <a class="el" href="classPlayer.html#aa7eae982673d2d8027ac5f45e6b5b4f7">Player</a></li>
+<li>heal()&#160;:&#160;<a class="el" href="classCombatSystem.html#a38e5e5ae2c1de24495801c0117df3519">CombatSystem</a></li>
+<li>hpDamage&#160;:&#160;<a class="el" href="structDamageResult.html#aa026206b8d59ba9fd34b9fd674adbe23">DamageResult</a></li>
 </ul>
 
 
 <h3><a id="index_i" name="index_i"></a>- i -</h3><ul>
-<li>increaseArmor()&#160;:&#160;<a class="el" href="classPlayer.html#ab908ab674d0fd43612a1308142079b2b">Player</a></li>
+<li>increaseArmor()&#160;:&#160;<a class="el" href="classEntity.html#a381d3e155a8111f43e8918d2a91bd1eb">Entity</a></li>
+<li>increaseHp()&#160;:&#160;<a class="el" href="classEntity.html#a6e360e6180829190e55801e906f56309">Entity</a></li>
 <li>intro()&#160;:&#160;<a class="el" href="classGame.html#aef4c95adfd14ba30d0aa6192ec823baa">Game</a></li>
 <li>IOText()&#160;:&#160;<a class="el" href="classIOText.html#aa54660309cf0f83dd4840cb01140dfc3">IOText</a></li>
 <li>isCardPresent()&#160;:&#160;<a class="el" href="classDeckPlayer.html#a16f106fc12e1015f1483de8db2f28a01">DeckPlayer</a></li>
+<li>isDead()&#160;:&#160;<a class="el" href="classCombatSystem.html#a4c99bb4a33ee52d6e6f1947362b02942">CombatSystem</a></li>
 <li>isLost()&#160;:&#160;<a class="el" href="classGame.html#a8f39b84cf10366da2dfd4bf780bc1c1b">Game</a></li>
 <li>isPlayerAlive()&#160;:&#160;<a class="el" href="classGame.html#aaf22d390c98b0fd98b7b90ac80beb08a">Game</a></li>
+<li>isValidHandIndex()&#160;:&#160;<a class="el" href="classDeckCombat.html#a1981c92cd7f58ae1e4c767aa38ddacb7">DeckCombat</a></li>
 <li>isValidName()&#160;:&#160;<a class="el" href="classGame.html#afd6c7e00e229a08913b8ee6becc75fe9">Game</a></li>
 </ul>
 
 
 <h3><a id="index_l" name="index_l"></a>- l -</h3><ul>
 <li>lossMessage()&#160;:&#160;<a class="el" href="classGame.html#a753e6f6be6efd418dabba7199aacfdfb">Game</a></li>
-<li>lowerArmor()&#160;:&#160;<a class="el" href="classPlayer.html#a41e98a105b0cd08dfded9d8b25a43fec">Player</a></li>
+<li>lowerArmor()&#160;:&#160;<a class="el" href="classEntity.html#a68fbf0c06c706519ca0ccc41ec089aa2">Entity</a></li>
+<li>lowerHp()&#160;:&#160;<a class="el" href="classEntity.html#ad3bc2393addc7e5a8dac80ee18b5fce8">Entity</a></li>
 </ul>
 
 
 <h3><a id="index_m" name="index_m"></a>- m -</h3><ul>
+<li>m_armor&#160;:&#160;<a class="el" href="classEntity.html#a6148bec78874622381bebc374d680240">Entity</a></li>
+<li>m_attack&#160;:&#160;<a class="el" href="classEntity.html#ae254bcecd0c47968a24d2a43b5d25977">Entity</a></li>
+<li>m_hp&#160;:&#160;<a class="el" href="classEntity.html#a9606227292d34f3c0acc12dacb414295">Entity</a></li>
+<li>m_moveIndex&#160;:&#160;<a class="el" href="classEnemy.html#adc6a3e3b9cdb64ecb893139ecfc563c2">Enemy</a></li>
+<li>m_moves&#160;:&#160;<a class="el" href="classEnemy.html#af8d859beb271ee715999f96a3d544d75">Enemy</a></li>
+<li>m_name&#160;:&#160;<a class="el" href="classEntity.html#a4b945ebe36bda22cc9cc7c6620f43d51">Entity</a></li>
 <li>makeSingleCard()&#160;:&#160;<a class="el" href="classCardFactory.html#ad84658f1bed6a00f1484022899369a82">CardFactory</a>, <a class="el" href="classICardFactory.html#afeea595a6787983bff6909b01fce49cd">ICardFactory</a></li>
+</ul>
+
+
+<h3><a id="index_n" name="index_n"></a>- n -</h3><ul>
+<li>name&#160;:&#160;<a class="el" href="structEnemyMove.html#a78138a5391362cddecfae2a9e1cf42d9">EnemyMove</a></li>
+<li>nextMove()&#160;:&#160;<a class="el" href="classEnemy.html#abda076b0b306caba2eb5f769c35e1d4c">Enemy</a></li>
 </ul>
 
 
@@ -191,7 +227,9 @@ $(document).ready(function(){initNavTree('functions.html',''); initResizable(); 
 <li>registerCards()&#160;:&#160;<a class="el" href="classCardFactory.html#a07e105674e7d1e5aadea529ae01d83d8">CardFactory</a></li>
 <li>registerDefinition()&#160;:&#160;<a class="el" href="classCardFactory.html#af37ec9e2f92ca8fbf756db18ba4599e4">CardFactory</a></li>
 <li>removeCard()&#160;:&#160;<a class="el" href="classDeckPlayer.html#ab39bc3a66e5ec2d58532987fe173a1e8">DeckPlayer</a></li>
-<li>resetArmor()&#160;:&#160;<a class="el" href="classPlayer.html#acfc95f55ed31673815c2b6b22e3b2499">Player</a></li>
+<li>requested&#160;:&#160;<a class="el" href="structDamageResult.html#ab65af5f2c6ea310d615b1f03ceab3b98">DamageResult</a></li>
+<li>resetArmor()&#160;:&#160;<a class="el" href="classCombatSystem.html#a8aa02431d41431c468080ea9589824f1">CombatSystem</a>, <a class="el" href="classEntity.html#aa8637a483cf260cc7933dfb66acd392f">Entity</a></li>
+<li>resolve()&#160;:&#160;<a class="el" href="classEffect.html#a39d26749b196992d83fd7d1763434c4b">Effect</a>, <a class="el" href="classGainArmorEffect.html#a6e2f9190a774f6ff6a64e49cdafa0fbe">GainArmorEffect</a></li>
 </ul>
 
 
@@ -202,8 +240,15 @@ $(document).ready(function(){initNavTree('functions.html',''); initResizable(); 
 
 
 <h3><a id="index_t" name="index_t"></a>- t -</h3><ul>
-<li>takeDamage()&#160;:&#160;<a class="el" href="classEnemy.html#a29465820c3774a2fd58176e20cc9ffcd">Enemy</a>, <a class="el" href="classPlayer.html#a1315f9a1d0b763ffdc37297cec1eee5c">Player</a></li>
+<li>takeFromHand()&#160;:&#160;<a class="el" href="classDeckCombat.html#a165d2658e0726a0ec565a70afda62dbd">DeckCombat</a></li>
+<li>target&#160;:&#160;<a class="el" href="structDamageInfo.html#a40983739a65344aa6616d25d773adc39">DamageInfo</a></li>
+<li>targetDied&#160;:&#160;<a class="el" href="structDamageResult.html#a2a58db8243963d4d648469459122af6f">DamageResult</a></li>
 <li>Text()&#160;:&#160;<a class="el" href="classText.html#ab3e26143fccc52699bcc5149cae852bc">Text</a></li>
+</ul>
+
+
+<h3><a id="index_w" name="index_w"></a>- w -</h3><ul>
+<li>WolfPack()&#160;:&#160;<a class="el" href="classWolfPack.html#a6b3f77c871d257a40b3750e73edac9e0">WolfPack</a></li>
 </ul>
 
 

@@ -1,9 +1,5 @@
 var searchData=
 [
-  ['random_0',['Random',['../namespaceRandom.html',1,'']]],
-  ['random_2eh_1',['Random.h',['../Random_8h.html',1,'']]],
-  ['registercards_2',['registerCards',['../classCardFactory.html#a07e105674e7d1e5aadea529ae01d83d8',1,'CardFactory']]],
-  ['registerdefinition_3',['registerDefinition',['../classCardFactory.html#af37ec9e2f92ca8fbf756db18ba4599e4',1,'CardFactory']]],
-  ['removecard_4',['removeCard',['../classDeckPlayer.html#ab39bc3a66e5ec2d58532987fe173a1e8',1,'DeckPlayer']]],
-  ['resetarmor_5',['resetArmor',['../classPlayer.html#acfc95f55ed31673815c2b6b22e3b2499',1,'Player']]]
+  ['operator_3c_3c_0',['operator&lt;&lt;',['../classDeckPlayer.html#a0719834c61b61216816ddab083467b1d',1,'DeckPlayer::operator&lt;&lt;()'],['../deckPlayer_8cpp.html#a0719834c61b61216816ddab083467b1d',1,'operator&lt;&lt;(std::ostream &amp;out, const DeckPlayer &amp;deck):&#160;deckPlayer.cpp']]],
+  ['opponent_1',['Opponent',['../combatTarget_8h.html#a31488d29805a596498c0234ae392d35da857ccf501e3d5cb92473fa1eb4d9fee5',1,'combatTarget.h']]]
 ];

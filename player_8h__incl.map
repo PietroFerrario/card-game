@@ -1,11 +1,12 @@
 <map id="entities/player.h" name="entities/player.h">
-<area shape="rect" id="node1" title=" " alt="" coords="310,5,437,31"/>
-<area shape="rect" id="node2" href="$deckEntry_8h.html" title=" " alt="" coords="23,152,155,177"/>
-<area shape="rect" id="node3" title=" " alt="" coords="60,225,119,251"/>
-<area shape="rect" id="node4" href="$deckPlayer_8h.html" title=" " alt="" coords="303,79,443,104"/>
-<area shape="rect" id="node7" title=" " alt="" coords="521,152,618,177"/>
-<area shape="rect" id="node9" title=" " alt="" coords="642,152,705,177"/>
-<area shape="rect" id="node5" title=" " alt="" coords="231,152,311,177"/>
-<area shape="rect" id="node6" title=" " alt="" coords="335,152,412,177"/>
-<area shape="rect" id="node8" title=" " alt="" coords="437,152,497,177"/>
+<area shape="rect" id="node1" title=" " alt="" coords="497,5,624,31"/>
+<area shape="rect" id="node2" href="$deckEntry_8h.html" title=" " alt="" coords="5,152,137,177"/>
+<area shape="rect" id="node3" title=" " alt="" coords="421,225,479,251"/>
+<area shape="rect" id="node4" href="$deckPlayer_8h.html" title=" " alt="" coords="313,79,453,104"/>
+<area shape="rect" id="node7" title=" " alt="" coords="591,152,688,177"/>
+<area shape="rect" id="node9" title=" " alt="" coords="504,152,567,177"/>
+<area shape="rect" id="node10" href="$entity_8h.html" title=" " alt="" coords="624,79,695,104"/>
+<area shape="rect" id="node5" title=" " alt="" coords="298,152,378,177"/>
+<area shape="rect" id="node6" title=" " alt="" coords="402,152,479,177"/>
+<area shape="rect" id="node8" title=" " alt="" coords="213,152,273,177"/>
 </map>

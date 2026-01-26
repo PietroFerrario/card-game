@@ -94,13 +94,14 @@ $(document).ready(function(){initNavTree('cardmatch_8h_source.html',''); initRes
 </div><!--header-->
 <div class="contents">
 <a href="cardmatch_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;<a class="code" href="enemy_8h.html">entities/enemies/enemy.h</a>&quot;</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="player_8h.html">entities/player.h</a>&quot;</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#ifndef CARDMATCH_H</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#define CARDMATCH_H</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#ifndef CARDMATCH_H</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#define CARDMATCH_H</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="deckCombat_8h.html">deck/deckCombat.h</a>&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="combatSystem_8h.html">combat/combatSystem.h</a>&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="deckCombat_8h.html">deck/deckCombat.h</a>&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="enemy_8h.html">entities/enemies/enemy.h</a>&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="player_8h.html">entities/player.h</a>&quot;</span></div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="cardFactory_8h.html">factories/cardFactory.h</a>&quot;</span></div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">class </span><a class="code hl_class" href="classPlayer.html">Player</a>;</div>
@@ -118,25 +119,32 @@ $(document).ready(function(){initNavTree('cardmatch_8h_source.html',''); initRes
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classCardMatch.html#a7932e3e85d254f12a6690530b0bed17a">gainArmor</a>(<span class="keywordtype">int</span> defense);</div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>  <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <a class="code hl_class" href="classPlayer.html">Player</a>&amp; m_player; </div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <a class="code hl_class" href="classEnemy.html">Enemy</a>&amp; m_enemy;   </div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <a class="code hl_class" href="classCardFactory.html">CardFactory</a> m_cardFactory; </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classCardMatch.html#a15dd37b9798f747a609d12e5dda4b21a">enemyTurn</a>();</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>  <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <a class="code hl_class" href="classPlayer.html">Player</a>&amp; m_player; </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <a class="code hl_class" href="classEnemy.html">Enemy</a>&amp; m_enemy;   </div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <a class="code hl_class" href="classDeckCombat.html">DeckCombat</a> m_deckCombat; </div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>};</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <a class="code hl_class" href="classCardFactory.html">CardFactory</a> m_cardFactory; </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <a class="code hl_class" href="classDeckCombat.html">DeckCombat</a> m_deckCombat; </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <a class="code hl_class" href="classCombatSystem.html">CombatSystem</a> m_combatSystem;</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>};</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="acardFactory_8h_html"><div class="ttname"><a href="cardFactory_8h.html">cardFactory.h</a></div></div>
 <div class="ttc" id="aclassCardFactory_html"><div class="ttname"><a href="classCardFactory.html">CardFactory</a></div><div class="ttdoc">Central factory for creating CardInstances from registered definitions.</div><div class="ttdef"><b>Definition:</b> cardFactory.h:24</div></div>
 <div class="ttc" id="aclassCardMatch_html"><div class="ttname"><a href="classCardMatch.html">CardMatch</a></div><div class="ttdoc">Orchestrates a single combat encounter between a player and an enemy.</div><div class="ttdef"><b>Definition:</b> cardmatch.h:29</div></div>
-<div class="ttc" id="aclassCardMatch_html_a0c0c130ca87f453cf1283fb41e8a6a42"><div class="ttname"><a href="classCardMatch.html#a0c0c130ca87f453cf1283fb41e8a6a42">CardMatch::playCard</a></div><div class="ttdeci">void playCard(int handIndex)</div><div class="ttdoc">Plays a card from the hand and resolves all its effects.</div><div class="ttdef"><b>Definition:</b> cardmatch.cpp:27</div></div>
-<div class="ttc" id="aclassCardMatch_html_a7932e3e85d254f12a6690530b0bed17a"><div class="ttname"><a href="classCardMatch.html#a7932e3e85d254f12a6690530b0bed17a">CardMatch::gainArmor</a></div><div class="ttdeci">void gainArmor(int defense)</div><div class="ttdoc">Grants armor to the player.</div><div class="ttdef"><b>Definition:</b> cardmatch.cpp:15</div></div>
-<div class="ttc" id="aclassCardMatch_html_abcb652a15f8f273427ce359fa03143ef"><div class="ttname"><a href="classCardMatch.html#abcb652a15f8f273427ce359fa03143ef">CardMatch::drawMultipleCards</a></div><div class="ttdeci">void drawMultipleCards(int amount)</div><div class="ttdoc">Draws multiple cards: moves cards from the combat deck into the player's hand.</div><div class="ttdef"><b>Definition:</b> cardmatch.cpp:17</div></div>
+<div class="ttc" id="aclassCardMatch_html_a0c0c130ca87f453cf1283fb41e8a6a42"><div class="ttname"><a href="classCardMatch.html#a0c0c130ca87f453cf1283fb41e8a6a42">CardMatch::playCard</a></div><div class="ttdeci">void playCard(int handIndex)</div><div class="ttdoc">Plays a card from the hand and resolves all its effects.</div><div class="ttdef"><b>Definition:</b> cardmatch.cpp:29</div></div>
+<div class="ttc" id="aclassCardMatch_html_a15dd37b9798f747a609d12e5dda4b21a"><div class="ttname"><a href="classCardMatch.html#a15dd37b9798f747a609d12e5dda4b21a">CardMatch::enemyTurn</a></div><div class="ttdeci">void enemyTurn()</div><div class="ttdef"><b>Definition:</b> cardmatch.cpp:55</div></div>
+<div class="ttc" id="aclassCardMatch_html_a7932e3e85d254f12a6690530b0bed17a"><div class="ttname"><a href="classCardMatch.html#a7932e3e85d254f12a6690530b0bed17a">CardMatch::gainArmor</a></div><div class="ttdeci">void gainArmor(int defense)</div><div class="ttdoc">Grants armor to the player.</div><div class="ttdef"><b>Definition:</b> cardmatch.cpp:17</div></div>
+<div class="ttc" id="aclassCardMatch_html_abcb652a15f8f273427ce359fa03143ef"><div class="ttname"><a href="classCardMatch.html#abcb652a15f8f273427ce359fa03143ef">CardMatch::drawMultipleCards</a></div><div class="ttdeci">void drawMultipleCards(int amount)</div><div class="ttdoc">Draws multiple cards: moves cards from the combat deck into the player's hand.</div><div class="ttdef"><b>Definition:</b> cardmatch.cpp:19</div></div>
+<div class="ttc" id="aclassCombatSystem_html"><div class="ttname"><a href="classCombatSystem.html">CombatSystem</a></div><div class="ttdef"><b>Definition:</b> combatSystem.h:9</div></div>
 <div class="ttc" id="aclassDeckCombat_html"><div class="ttname"><a href="classDeckCombat.html">DeckCombat</a></div><div class="ttdoc">Manages all card piles during a single combat.</div><div class="ttdef"><b>Definition:</b> deckCombat.h:29</div></div>
-<div class="ttc" id="aclassEnemy_html"><div class="ttname"><a href="classEnemy.html">Enemy</a></div><div class="ttdef"><b>Definition:</b> enemy.h:5</div></div>
-<div class="ttc" id="aclassPlayer_html"><div class="ttname"><a href="classPlayer.html">Player</a></div><div class="ttdef"><b>Definition:</b> player.h:12</div></div>
+<div class="ttc" id="aclassEnemy_html"><div class="ttname"><a href="classEnemy.html">Enemy</a></div><div class="ttdef"><b>Definition:</b> enemy.h:10</div></div>
+<div class="ttc" id="aclassPlayer_html"><div class="ttname"><a href="classPlayer.html">Player</a></div><div class="ttdef"><b>Definition:</b> player.h:14</div></div>
+<div class="ttc" id="acombatSystem_8h_html"><div class="ttname"><a href="combatSystem_8h.html">combatSystem.h</a></div></div>
 <div class="ttc" id="adeckCombat_8h_html"><div class="ttname"><a href="deckCombat_8h.html">deckCombat.h</a></div></div>
 <div class="ttc" id="aenemy_8h_html"><div class="ttname"><a href="enemy_8h.html">enemy.h</a></div></div>
 <div class="ttc" id="aplayer_8h_html"><div class="ttname"><a href="player_8h.html">player.h</a></div></div>

@@ -1,0 +1,8 @@
+<map id="WolfPack" name="WolfPack">
+<area shape="rect" id="node1" title=" " alt="" coords="176,588,283,665"/>
+<area shape="rect" id="node2" href="$classEnemy.html" title=" " alt="" coords="174,447,286,539"/>
+<area shape="rect" id="node3" href="$classEntity.html" title=" " alt="" coords="158,175,301,384"/>
+<area shape="rect" id="node4" title=" " alt="" coords="30,5,69,83"/>
+<area shape="rect" id="node5" title=" " alt="" coords="200,5,259,83"/>
+<area shape="rect" id="node6" title=" " alt="" coords="325,241,500,318"/>
+</map>

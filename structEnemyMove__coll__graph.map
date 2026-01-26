@@ -1,0 +1,7 @@
+<map id="EnemyMove" name="EnemyMove">
+<area shape="rect" id="node1" title=" " alt="" coords="169,315,272,392"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,160,156,252"/>
+<area shape="rect" id="node3" href="$structEffectParams.html" title=" " alt="" coords="181,167,287,245"/>
+<area shape="rect" id="node4" title=" " alt="" coords="215,5,253,83"/>
+<area shape="rect" id="node5" title=" " alt="" coords="323,167,382,245"/>
+</map>

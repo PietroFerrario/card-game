@@ -1,0 +1,11 @@
+<map id="entities/enemies/enemy.h" name="entities/enemies/enemy.h">
+<area shape="rect" id="node1" title=" " alt="" coords="259,5,449,31"/>
+<area shape="rect" id="node2" href="$enemyMove_8h.html" title=" " alt="" coords="202,79,317,104"/>
+<area shape="rect" id="node7" title=" " alt="" coords="323,152,385,177"/>
+<area shape="rect" id="node8" href="$entity_8h.html" title=" " alt="" coords="391,79,514,104"/>
+<area shape="rect" id="node3" href="$effect_8h.html" title=" " alt="" coords="79,152,197,177"/>
+<area shape="rect" id="node4" href="$effectParams_8h.html" title=" " alt="" coords="5,225,172,251"/>
+<area shape="rect" id="node5" title=" " alt="" coords="221,152,298,177"/>
+<area shape="rect" id="node6" title=" " alt="" coords="410,152,469,177"/>
+<area shape="rect" id="node9" title=" " alt="" coords="493,152,591,177"/>
+</map>

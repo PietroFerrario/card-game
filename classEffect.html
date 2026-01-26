@@ -104,7 +104,7 @@ $(document).ready(function(){initNavTree('classEffect.html',''); initResizable()
 <div class="dynheader">
 Inheritance diagram for Effect:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classEffect__inherit__graph.svg" width="140" height="228"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classEffect__inherit__graph.svg" width="166" height="243"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div class="dynheader">
@@ -116,9 +116,9 @@ Collaboration diagram for Effect:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ab8697868a6ab78d29497ec72113081b8"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEffect.html#ab8697868a6ab78d29497ec72113081b8">apply</a> (<a class="el" href="classCardMatch.html">CardMatch</a> &amp;card_match, <a class="el" href="classCardInstance.html">CardInstance</a> &amp;card)=0</td></tr>
-<tr class="memdesc:ab8697868a6ab78d29497ec72113081b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies the effect during card resolution.  <br /></td></tr>
-<tr class="separator:ab8697868a6ab78d29497ec72113081b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39d26749b196992d83fd7d1763434c4b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEffect.html#a39d26749b196992d83fd7d1763434c4b">resolve</a> (<a class="el" href="classCombatContext.html">CombatContext</a> &amp;combatContext, const <a class="el" href="structEffectParams.html">EffectParams</a> &amp;effectParams)=0</td></tr>
+<tr class="memdesc:a39d26749b196992d83fd7d1763434c4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies the effect during card resolution.  <br /></td></tr>
+<tr class="separator:a39d26749b196992d83fd7d1763434c4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3bb9ae12885350459f007163e2d7259c"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEffect.html#a3bb9ae12885350459f007163e2d7259c">~Effect</a> ()=default</td></tr>
 <tr class="memdesc:a3bb9ae12885350459f007163e2d7259c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Virtual destructor.  <br /></td></tr>
 <tr class="separator:a3bb9ae12885350459f007163e2d7259c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -127,7 +127,7 @@ Public Member Functions</h2></td></tr>
 <div class="textblock"><p>Abstract base class for all card effects. </p>
 <p>Effects define behavior that is executed when a card is played. They do not store any numeric values or state — all values are read from the <a class="el" href="classCardInstance.html" title="Represents a runtime instance of a card during combat.">CardInstance</a>.</p>
 <p>Effects request actions from <a class="el" href="classCardMatch.html" title="Orchestrates a single combat encounter between a player and an enemy.">CardMatch</a>, but never modify entity state directly.</p>
-<p>All derived effects must implement the <a class="el" href="classEffect.html#ab8697868a6ab78d29497ec72113081b8" title="Applies the effect during card resolution.">apply()</a> method. </p>
+<p>All derived effects must implement the apply() method. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a3bb9ae12885350459f007163e2d7259c" name="a3bb9ae12885350459f007163e2d7259c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3bb9ae12885350459f007163e2d7259c">&#9670;&#160;</a></span>~Effect()</h2>
@@ -157,8 +157,8 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="ab8697868a6ab78d29497ec72113081b8" name="ab8697868a6ab78d29497ec72113081b8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab8697868a6ab78d29497ec72113081b8">&#9670;&#160;</a></span>apply()</h2>
+<a id="a39d26749b196992d83fd7d1763434c4b" name="a39d26749b196992d83fd7d1763434c4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39d26749b196992d83fd7d1763434c4b">&#9670;&#160;</a></span>resolve()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -167,16 +167,16 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void Effect::apply </td>
+          <td class="memname">virtual void Effect::resolve </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classCardMatch.html">CardMatch</a> &amp;&#160;</td>
-          <td class="paramname"><em>card_match</em>, </td>
+          <td class="paramtype"><a class="el" href="classCombatContext.html">CombatContext</a> &amp;&#160;</td>
+          <td class="paramname"><em>combatContext</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classCardInstance.html">CardInstance</a> &amp;&#160;</td>
-          <td class="paramname"><em>card</em>&#160;</td>
+          <td class="paramtype">const <a class="el" href="structEffectParams.html">EffectParams</a> &amp;&#160;</td>
+          <td class="paramname"><em>effectParams</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -200,12 +200,12 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classGainArmorEffect.html#a9783c5ad4e856cdde8f5746ef51499a0">GainArmorEffect</a>.</p>
+<p>Implemented in <a class="el" href="classGainArmorEffect.html#a6e2f9190a774f6ff6a64e49cdafa0fbe">GainArmorEffect</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>cards/<a class="el" href="effect_8h_source.html">effect.h</a></li>
+<li>effects/<a class="el" href="effect_8h_source.html">effect.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

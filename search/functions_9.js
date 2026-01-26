@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['operator_3c_3c_0',['operator&lt;&lt;',['../deckPlayer_8cpp.html#a0719834c61b61216816ddab083467b1d',1,'deckPlayer.cpp']]]
+  ['nextmove_0',['nextMove',['../classEnemy.html#abda076b0b306caba2eb5f769c35e1d4c',1,'Enemy']]]
 ];

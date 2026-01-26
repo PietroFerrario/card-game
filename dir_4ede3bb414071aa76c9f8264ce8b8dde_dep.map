@@ -1,8 +1,5 @@
 <map id="cards" name="cards">
-<area shape="rect" id="node2" href="dir_05874676431c6e854ad1878c5b662663.html" title="effects" alt="" coords="80,27,147,52"/>
-<area shape="rect" id="node3" href="dir_18d58962dcdf46ba17fa85f38bb069c5.html" title="game_system" alt="" coords="5,100,120,125"/>
-<area shape="rect" id="edge1-headlabel" href="dir_000002_000006.html" title="1" alt="" coords="84,83,93,97"/>
-<area shape="rect" id="node4" href="dir_23ec12649285f9fabf3a6b7380226c28.html" title="util" alt="" coords="144,100,187,125"/>
-<area shape="rect" id="edge2-headlabel" href="dir_000002_000008.html" title="1" alt="" coords="148,73,158,88"/>
-<area shape="rect" id="clust1" href="dir_4ede3bb414071aa76c9f8264ce8b8dde.html" alt="" coords="69,16,240,63"/>
+<area shape="rect" id="node1" href="dir_4ede3bb414071aa76c9f8264ce8b8dde.html" title="cards" alt="" coords="10,5,67,31"/>
+<area shape="rect" id="node2" href="dir_63bb297c276a119495816091bcd678e9.html" title="effects" alt="" coords="5,79,72,104"/>
+<area shape="rect" id="edge1-headlabel" href="dir_000000_000003.html" title="2" alt="" coords="42,53,52,68"/>
 </map>

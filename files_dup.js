@@ -1,7 +1,9 @@
 var files_dup =
 [
     [ "cards", "dir_4ede3bb414071aa76c9f8264ce8b8dde.html", "dir_4ede3bb414071aa76c9f8264ce8b8dde" ],
+    [ "combat", "dir_e2d39b432b977da645a96dbcf8bd25b8.html", "dir_e2d39b432b977da645a96dbcf8bd25b8" ],
     [ "deck", "dir_70398d026f8dc8cc45517d8e684fbc42.html", "dir_70398d026f8dc8cc45517d8e684fbc42" ],
+    [ "effects", "dir_63bb297c276a119495816091bcd678e9.html", "dir_63bb297c276a119495816091bcd678e9" ],
     [ "entities", "dir_9404ca00d5cf333c309ae0ebf80749c4.html", "dir_9404ca00d5cf333c309ae0ebf80749c4" ],
     [ "factories", "dir_bec78ecbdc42a5401a3b082f36c4b809.html", "dir_bec78ecbdc42a5401a3b082f36c4b809" ],
     [ "game_system", "dir_18d58962dcdf46ba17fa85f38bb069c5.html", "dir_18d58962dcdf46ba17fa85f38bb069c5" ],

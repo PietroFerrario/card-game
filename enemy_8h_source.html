@@ -96,28 +96,31 @@ $(document).ready(function(){initNavTree('enemy_8h_source.html',''); initResizab
 <a href="enemy_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef ENEMY_H</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define ENEMY_H</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno"><a class="line" href="classEnemy.html">    4</a></span><span class="keyword">class </span><a class="code hl_class" href="classEnemy.html">Enemy</a></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>{</div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>    <a class="code hl_class" href="classEnemy.html">Enemy</a>(<span class="keywordtype">int</span> hp, <span class="keywordtype">int</span> attack);</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="enemyMove_8h.html">enemyMove.h</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="entity_8h.html">entities/entity.h</a>&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="classEnemy.html#abc4b83878be690920a59499a17d6019c">    9</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="classEnemy.html#abc4b83878be690920a59499a17d6019c">getHp</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_hp; }</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="classEnemy.html#a8206171e0f391e1860ebafb5a5450bf3">   10</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="classEnemy.html#a8206171e0f391e1860ebafb5a5450bf3">getAttack</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_attack; }</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classEnemy.html#a29465820c3774a2fd58176e20cc9ffcd">takeDamage</a>(<span class="keywordtype">int</span> amount);</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classEnemy.html#ade701e25a4fd889e7663e7ebe18975e2">heal</a>(<span class="keywordtype">int</span> amount);</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="keywordtype">int</span> m_hp{};</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keywordtype">int</span> m_attack{};</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="classEnemy.html">    9</a></span><span class="keyword">class </span><a class="code hl_class" href="classEnemy.html">Enemy</a> : <span class="keyword">public</span> <a class="code hl_class" href="classEntity.html">Entity</a></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>{</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>  <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="keyword">const</span> <a class="code hl_struct" href="structEnemyMove.html">EnemyMove</a>&amp; <a class="code hl_function" href="classEnemy.html#abda076b0b306caba2eb5f769c35e1d4c">nextMove</a>();</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>  <span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <a class="code hl_class" href="classEnemy.html">Enemy</a>(<span class="keywordtype">int</span> hp);</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="classEnemy.html#af8d859beb271ee715999f96a3d544d75">   16</a></span>    std::vector&lt;EnemyMove&gt; <a class="code hl_variable" href="classEnemy.html#af8d859beb271ee715999f96a3d544d75">m_moves</a>{};</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="classEnemy.html#adc6a3e3b9cdb64ecb893139ecfc563c2">   17</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="classEnemy.html#adc6a3e3b9cdb64ecb893139ecfc563c2">m_moveIndex</a>{0};</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>};</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#endif </span><span class="comment">// ENEMY_H</span></div>
-<div class="ttc" id="aclassEnemy_html"><div class="ttname"><a href="classEnemy.html">Enemy</a></div><div class="ttdef"><b>Definition:</b> enemy.h:5</div></div>
-<div class="ttc" id="aclassEnemy_html_a29465820c3774a2fd58176e20cc9ffcd"><div class="ttname"><a href="classEnemy.html#a29465820c3774a2fd58176e20cc9ffcd">Enemy::takeDamage</a></div><div class="ttdeci">void takeDamage(int amount)</div><div class="ttdef"><b>Definition:</b> enemy.cpp:5</div></div>
-<div class="ttc" id="aclassEnemy_html_a8206171e0f391e1860ebafb5a5450bf3"><div class="ttname"><a href="classEnemy.html#a8206171e0f391e1860ebafb5a5450bf3">Enemy::getAttack</a></div><div class="ttdeci">int getAttack() const</div><div class="ttdef"><b>Definition:</b> enemy.h:10</div></div>
-<div class="ttc" id="aclassEnemy_html_abc4b83878be690920a59499a17d6019c"><div class="ttname"><a href="classEnemy.html#abc4b83878be690920a59499a17d6019c">Enemy::getHp</a></div><div class="ttdeci">int getHp() const</div><div class="ttdef"><b>Definition:</b> enemy.h:9</div></div>
-<div class="ttc" id="aclassEnemy_html_ade701e25a4fd889e7663e7ebe18975e2"><div class="ttname"><a href="classEnemy.html#ade701e25a4fd889e7663e7ebe18975e2">Enemy::heal</a></div><div class="ttdeci">void heal(int amount)</div><div class="ttdef"><b>Definition:</b> enemy.cpp:6</div></div>
+<div class="ttc" id="aclassEnemy_html"><div class="ttname"><a href="classEnemy.html">Enemy</a></div><div class="ttdef"><b>Definition:</b> enemy.h:10</div></div>
+<div class="ttc" id="aclassEnemy_html_abda076b0b306caba2eb5f769c35e1d4c"><div class="ttname"><a href="classEnemy.html#abda076b0b306caba2eb5f769c35e1d4c">Enemy::nextMove</a></div><div class="ttdeci">const EnemyMove &amp; nextMove()</div><div class="ttdef"><b>Definition:</b> enemy.cpp:7</div></div>
+<div class="ttc" id="aclassEnemy_html_adc6a3e3b9cdb64ecb893139ecfc563c2"><div class="ttname"><a href="classEnemy.html#adc6a3e3b9cdb64ecb893139ecfc563c2">Enemy::m_moveIndex</a></div><div class="ttdeci">int m_moveIndex</div><div class="ttdef"><b>Definition:</b> enemy.h:17</div></div>
+<div class="ttc" id="aclassEnemy_html_af8d859beb271ee715999f96a3d544d75"><div class="ttname"><a href="classEnemy.html#af8d859beb271ee715999f96a3d544d75">Enemy::m_moves</a></div><div class="ttdeci">std::vector&lt; EnemyMove &gt; m_moves</div><div class="ttdef"><b>Definition:</b> enemy.h:16</div></div>
+<div class="ttc" id="aclassEntity_html"><div class="ttname"><a href="classEntity.html">Entity</a></div><div class="ttdef"><b>Definition:</b> entity.h:8</div></div>
+<div class="ttc" id="aenemyMove_8h_html"><div class="ttname"><a href="enemyMove_8h.html">enemyMove.h</a></div></div>
+<div class="ttc" id="aentity_8h_html"><div class="ttname"><a href="entity_8h.html">entity.h</a></div></div>
+<div class="ttc" id="astructEnemyMove_html"><div class="ttname"><a href="structEnemyMove.html">EnemyMove</a></div><div class="ttdef"><b>Definition:</b> enemyMove.h:11</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

@@ -1,5 +1,6 @@
-<map id="cards/effects/gainArmorEffect.h" name="cards/effects/gainArmorEffect.h">
-<area shape="rect" id="node1" title=" " alt="" coords="130,5,357,31"/>
-<area shape="rect" id="node2" href="$gainArmorEffect_8cpp.html" title=" " alt="" coords="5,79,247,104"/>
-<area shape="rect" id="node3" href="$cardFactory_8cpp.html" title=" " alt="" coords="271,79,453,104"/>
+<map id="effects/gainArmorEffect.h" name="effects/gainArmorEffect.h">
+<area shape="rect" id="node1" title=" " alt="" coords="249,5,436,31"/>
+<area shape="rect" id="node2" href="$gainArmorEffect_8cpp.html" title=" " alt="" coords="5,79,208,104"/>
+<area shape="rect" id="node3" href="$wolfPack_8cpp.html" title=" " alt="" coords="233,79,453,104"/>
+<area shape="rect" id="node4" href="$cardFactory_8cpp.html" title=" " alt="" coords="477,79,659,104"/>
 </map>

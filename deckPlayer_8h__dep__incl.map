@@ -3,9 +3,10 @@
 <area shape="rect" id="node2" href="$deckCombat_8cpp.html" title=" " alt="" coords="5,79,172,104"/>
 <area shape="rect" id="node3" href="$deckPlayer_8cpp.html" title=" " alt="" coords="197,79,351,104"/>
 <area shape="rect" id="node4" href="$player_8h.html" title=" " alt="" coords="376,79,503,104"/>
-<area shape="rect" id="node5" href="$player_8cpp.html" title=" " alt="" coords="165,152,308,177"/>
-<area shape="rect" id="node6" href="$cardmatch_8cpp.html" title=" " alt="" coords="332,152,547,177"/>
-<area shape="rect" id="node7" href="$game_8h.html" title=" " alt="" coords="571,152,737,177"/>
-<area shape="rect" id="node8" href="$game_8cpp.html" title=" " alt="" coords="484,225,667,251"/>
-<area shape="rect" id="node9" href="$main_8cpp.html" title=" " alt="" coords="691,225,774,251"/>
+<area shape="rect" id="node5" href="$player_8cpp.html" title=" " alt="" coords="49,152,192,177"/>
+<area shape="rect" id="node6" href="$cardmatch_8cpp.html" title=" " alt="" coords="216,152,431,177"/>
+<area shape="rect" id="node7" href="$cardmatch_8h.html" title=" " alt="" coords="455,152,653,177"/>
+<area shape="rect" id="node8" href="$game_8h.html" title=" " alt="" coords="677,152,844,177"/>
+<area shape="rect" id="node9" href="$game_8cpp.html" title=" " alt="" coords="591,225,773,251"/>
+<area shape="rect" id="node10" href="$main_8cpp.html" title=" " alt="" coords="798,225,881,251"/>
 </map>

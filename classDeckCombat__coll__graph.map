@@ -1,3 +1,3 @@
 <map id="DeckCombat" name="DeckCombat">
-<area shape="rect" id="node1" title="Manages all card piles during a single combat." alt="" coords="5,5,167,127"/>
+<area shape="rect" id="node1" title="Manages all card piles during a single combat." alt="" coords="5,5,167,200"/>
 </map>

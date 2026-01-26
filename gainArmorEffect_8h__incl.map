@@ -1,4 +1,6 @@
-<map id="cards/effects/gainArmorEffect.h" name="cards/effects/gainArmorEffect.h">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,232,31"/>
-<area shape="rect" id="node2" href="$effect_8h.html" title=" " alt="" coords="63,79,174,104"/>
+<map id="effects/gainArmorEffect.h" name="effects/gainArmorEffect.h">
+<area shape="rect" id="node1" title=" " alt="" coords="73,5,260,31"/>
+<area shape="rect" id="node2" href="$combatTarget_8h.html" title=" " alt="" coords="5,79,181,104"/>
+<area shape="rect" id="node3" href="$effect_8h.html" title=" " alt="" coords="206,79,277,104"/>
+<area shape="rect" id="node4" href="$effectParams_8h.html" title=" " alt="" coords="158,152,325,177"/>
 </map>

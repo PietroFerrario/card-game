@@ -1,8 +1,7 @@
 var classEnemy =
 [
-    [ "Enemy", "classEnemy.html#ad2b9ecf5f3201a7d2974e63cb04d65ec", null ],
-    [ "getAttack", "classEnemy.html#a8206171e0f391e1860ebafb5a5450bf3", null ],
-    [ "getHp", "classEnemy.html#abc4b83878be690920a59499a17d6019c", null ],
-    [ "heal", "classEnemy.html#ade701e25a4fd889e7663e7ebe18975e2", null ],
-    [ "takeDamage", "classEnemy.html#a29465820c3774a2fd58176e20cc9ffcd", null ]
+    [ "Enemy", "classEnemy.html#a414bfba434f60bb3eab9a82c3aa779bd", null ],
+    [ "nextMove", "classEnemy.html#abda076b0b306caba2eb5f769c35e1d4c", null ],
+    [ "m_moveIndex", "classEnemy.html#adc6a3e3b9cdb64ecb893139ecfc563c2", null ],
+    [ "m_moves", "classEnemy.html#af8d859beb271ee715999f96a3d544d75", null ]
 ];

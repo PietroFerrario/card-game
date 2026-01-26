@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['_7ecarddefinition_0',['~CardDefinition',['../classCardDefinition.html#a8a2c1323132ecc2abaf2d1c2b50b620e',1,'CardDefinition']]],
-  ['_7ecardfactory_1',['~CardFactory',['../classCardFactory.html#ad80116a303fb48c7d0af5871556c58a7',1,'CardFactory']]],
-  ['_7eeffect_2',['~Effect',['../classEffect.html#a3bb9ae12885350459f007163e2d7259c',1,'Effect']]],
-  ['_7eicardfactory_3',['~ICardFactory',['../classICardFactory.html#a25e5f79224a1b7e4ccbea1bf2c17346d',1,'ICardFactory']]]
+  ['self_0',['Self',['../combatTarget_8h.html#a31488d29805a596498c0234ae392d35daad6e7652b1bdfb38783486c2c3d5e806',1,'combatTarget.h']]],
+  ['setmainplayername_1',['setMainPlayerName',['../classGame.html#af2a5fb886755d0c28a6b674ff8d485e3',1,'Game']]],
+  ['setname_2',['setName',['../classPlayer.html#a1eac5a0dc76d8eb820a44c4b8a4715e3',1,'Player']]]
 ];

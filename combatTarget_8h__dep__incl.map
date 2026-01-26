@@ -1,0 +1,10 @@
+<map id="combat/combatTarget.h" name="combat/combatTarget.h">
+<area shape="rect" id="node1" title=" " alt="" coords="699,5,875,31"/>
+<area shape="rect" id="node2" href="$combatContext_8h.html" title=" " alt="" coords="358,79,545,104"/>
+<area shape="rect" id="node6" href="$gainArmorEffect_8h.html" title=" " alt="" coords="629,79,815,104"/>
+<area shape="rect" id="node7" href="$wolfPack_8cpp.html" title=" " alt="" coords="699,152,919,177"/>
+<area shape="rect" id="node8" href="$cardFactory_8cpp.html" title=" " alt="" coords="943,152,1125,177"/>
+<area shape="rect" id="node3" href="$combatContext_8cpp.html" title=" " alt="" coords="245,152,447,177"/>
+<area shape="rect" id="node4" href="$gainArmorEffect_8cpp.html" title=" " alt="" coords="471,152,674,177"/>
+<area shape="rect" id="node5" href="$cardmatch_8cpp.html" title=" " alt="" coords="5,152,220,177"/>
+</map>

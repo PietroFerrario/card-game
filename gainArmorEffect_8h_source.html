@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.6"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>CardGame: cards/effects/gainArmorEffect.h Source File</title>
+<title>CardGame: effects/gainArmorEffect.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -96,29 +96,35 @@ $(document).ready(function(){initNavTree('gainArmorEffect_8h_source.html',''); i
 <a href="gainArmorEffect_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef GAINBLOCKEFFECT_H</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define GAINBLOCKEFFECT_H</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="effect_8h.html">cards/effect.h</a>&quot;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="classGainArmorEffect.html">   12</a></span><span class="keyword">class </span><a class="code hl_class" href="classGainArmorEffect.html">GainArmorEffect</a> : <span class="keyword">public</span> <a class="code hl_class" href="classEffect.html">Effect</a></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>{</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>  <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classGainArmorEffect.html#a9783c5ad4e856cdde8f5746ef51499a0">apply</a>(<a class="code hl_class" href="classCardMatch.html">CardMatch</a>&amp; card_match, <a class="code hl_class" href="classCardInstance.html">CardInstance</a>&amp; card) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>  <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>};</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#endif </span><span class="comment">// GAINBLOCKEFFECT_H</span></div>
-<div class="ttc" id="aclassCardInstance_html"><div class="ttname"><a href="classCardInstance.html">CardInstance</a></div><div class="ttdoc">Represents a runtime instance of a card during combat.</div><div class="ttdef"><b>Definition:</b> cardInstance.h:19</div></div>
-<div class="ttc" id="aclassCardMatch_html"><div class="ttname"><a href="classCardMatch.html">CardMatch</a></div><div class="ttdoc">Orchestrates a single combat encounter between a player and an enemy.</div><div class="ttdef"><b>Definition:</b> cardmatch.h:29</div></div>
-<div class="ttc" id="aclassEffect_html"><div class="ttname"><a href="classEffect.html">Effect</a></div><div class="ttdoc">Abstract base class for all card effects.</div><div class="ttdef"><b>Definition:</b> effect.h:18</div></div>
-<div class="ttc" id="aclassGainArmorEffect_html"><div class="ttname"><a href="classGainArmorEffect.html">GainArmorEffect</a></div><div class="ttdoc">Effect that grants armor to the player based on the card's armor value.</div><div class="ttdef"><b>Definition:</b> gainArmorEffect.h:13</div></div>
-<div class="ttc" id="aclassGainArmorEffect_html_a9783c5ad4e856cdde8f5746ef51499a0"><div class="ttname"><a href="classGainArmorEffect.html#a9783c5ad4e856cdde8f5746ef51499a0">GainArmorEffect::apply</a></div><div class="ttdeci">void apply(CardMatch &amp;card_match, CardInstance &amp;card) override</div><div class="ttdoc">Applies the gain armor effect.</div><div class="ttdef"><b>Definition:</b> gainArmorEffect.cpp:7</div></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="combatTarget_8h.html">combat/combatTarget.h</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="effect_8h.html">effect.h</a>&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="classGainArmorEffect.html">   13</a></span><span class="keyword">class </span><a class="code hl_class" href="classGainArmorEffect.html">GainArmorEffect</a> : <span class="keyword">public</span> <a class="code hl_class" href="classEffect.html">Effect</a></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>{</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>  <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="classGainArmorEffect.html#a83f8d9698c4599523a0877ad0d41e03b">   16</a></span>    <a class="code hl_function" href="classGainArmorEffect.html#a83f8d9698c4599523a0877ad0d41e03b">GainArmorEffect</a>(<a class="code hl_enumeration" href="combatTarget_8h.html#a31488d29805a596498c0234ae392d35d">Target</a> target) : m_target{target} {}</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classGainArmorEffect.html#a6e2f9190a774f6ff6a64e49cdafa0fbe">resolve</a>(<a class="code hl_class" href="classCombatContext.html">CombatContext</a>&amp; combatContext, <span class="keyword">const</span> <a class="code hl_struct" href="structEffectParams.html">EffectParams</a>&amp; values) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>  <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <a class="code hl_enumeration" href="combatTarget_8h.html#a31488d29805a596498c0234ae392d35d">Target</a> m_target;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>};</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#endif </span><span class="comment">// GAINBLOCKEFFECT_H</span></div>
+<div class="ttc" id="aclassCombatContext_html"><div class="ttname"><a href="classCombatContext.html">CombatContext</a></div><div class="ttdef"><b>Definition:</b> combatContext.h:10</div></div>
+<div class="ttc" id="aclassEffect_html"><div class="ttname"><a href="classEffect.html">Effect</a></div><div class="ttdoc">Abstract base class for all card effects.</div><div class="ttdef"><b>Definition:</b> effect.h:19</div></div>
+<div class="ttc" id="aclassGainArmorEffect_html"><div class="ttname"><a href="classGainArmorEffect.html">GainArmorEffect</a></div><div class="ttdoc">Effect that grants armor to the player based on the card's armor value.</div><div class="ttdef"><b>Definition:</b> gainArmorEffect.h:14</div></div>
+<div class="ttc" id="aclassGainArmorEffect_html_a6e2f9190a774f6ff6a64e49cdafa0fbe"><div class="ttname"><a href="classGainArmorEffect.html#a6e2f9190a774f6ff6a64e49cdafa0fbe">GainArmorEffect::resolve</a></div><div class="ttdeci">void resolve(CombatContext &amp;combatContext, const EffectParams &amp;values) override</div><div class="ttdoc">Applies the gain armor effect.</div><div class="ttdef"><b>Definition:</b> gainArmorEffect.cpp:7</div></div>
+<div class="ttc" id="aclassGainArmorEffect_html_a83f8d9698c4599523a0877ad0d41e03b"><div class="ttname"><a href="classGainArmorEffect.html#a83f8d9698c4599523a0877ad0d41e03b">GainArmorEffect::GainArmorEffect</a></div><div class="ttdeci">GainArmorEffect(Target target)</div><div class="ttdef"><b>Definition:</b> gainArmorEffect.h:16</div></div>
+<div class="ttc" id="acombatTarget_8h_html"><div class="ttname"><a href="combatTarget_8h.html">combatTarget.h</a></div></div>
+<div class="ttc" id="acombatTarget_8h_html_a31488d29805a596498c0234ae392d35d"><div class="ttname"><a href="combatTarget_8h.html#a31488d29805a596498c0234ae392d35d">Target</a></div><div class="ttdeci">Target</div><div class="ttdef"><b>Definition:</b> combatTarget.h:5</div></div>
 <div class="ttc" id="aeffect_8h_html"><div class="ttname"><a href="effect_8h.html">effect.h</a></div></div>
+<div class="ttc" id="astructEffectParams_html"><div class="ttname"><a href="structEffectParams.html">EffectParams</a></div><div class="ttdef"><b>Definition:</b> effectParams.h:5</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_4ede3bb414071aa76c9f8264ce8b8dde.html">cards</a></li><li class="navelem"><a class="el" href="dir_05874676431c6e854ad1878c5b662663.html">effects</a></li><li class="navelem"><a class="el" href="gainArmorEffect_8h.html">gainArmorEffect.h</a></li>
+    <li class="navelem"><a class="el" href="dir_63bb297c276a119495816091bcd678e9.html">effects</a></li><li class="navelem"><a class="el" href="gainArmorEffect_8h.html">gainArmorEffect.h</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
   </ul>
 </div>
