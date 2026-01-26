@@ -4,6 +4,7 @@
 #include "combat/combatContext.h"
 #include "effects/effect.h"
 #include "entities/enemies/enemy.h"
+#include "entities/enemies/enemyMove.h"
 #include "entities/player.h"
 #include "util/debug.h"
 
@@ -38,6 +39,9 @@ void CardMatch::playCard(int handIndex)
 
     CombatContext currentContext{m_combatSystem, m_player, m_enemy};
 
+    // Possible to implement an extraction of EffectParams at the beginning. Then pass it to
+    // .resolve -> Less call to getEffectParams. Not necessary for now, possible future
+    // implementation.
     for (const auto& effectPtr : cardBeingPlayed->getCardDefinition().getEffectList())
     {
         effectPtr->resolve(currentContext, cardBeingPlayed->getEffectParams());
@@ -48,4 +52,16 @@ void CardMatch::playCard(int handIndex)
     m_deckCombat.discard(std::move(cardBeingPlayed));
 }
 
-void CardMatch::enemyTurn() {}
+void CardMatch::enemyTurn()
+{
+    DEBUG_LOG("Starting enemy action");
+    const EnemyMove& currentMove = m_enemy.nextMove();
+
+    CombatContext currentContext{m_combatSystem, m_enemy, m_player};
+
+    for (const auto& effectPtr : currentMove.effectList)
+    {
+        effectPtr->resolve(currentContext, currentMove.effectParams);
+    }
+    DEBUG_LOG("Applied all the effect from " << currentMove.name << "");
+}

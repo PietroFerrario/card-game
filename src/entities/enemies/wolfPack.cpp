@@ -2,12 +2,15 @@
 #include "combat/combatTarget.h"
 #include "effects/gainArmorEffect.h"
 
-WolfPack::WolfPack(int hp = 30) : Enemy{hp}
+WolfPack::WolfPack(int hp) : Enemy{hp}
 {
-    EnemyMove packTactics;
-    packTactics.effectList.emplace_back(std::make_unique<GainArmorEffect>(Target::Self));
-    packTactics.effectParams = {5, 5};
-    packTactics.name = "Pack Tactics";
+    m_name = "Pack of Wolves";
 
-    m_moves.push_back(packTactics);
+    m_moves.emplace_back();
+    EnemyMove& move = m_moves.back();
+
+    move.effectList.emplace_back(std::make_unique<GainArmorEffect>(Target::Self));
+    move.effectParams.damage = 5;
+    move.effectParams.armor = 5;
+    move.name = "Pack Tactics";
 }

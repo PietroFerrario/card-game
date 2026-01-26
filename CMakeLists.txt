@@ -23,6 +23,9 @@ target_sources(cardgame_core PRIVATE
     
     src/entities/player.cpp
 
+    src/entities/enemies/enemy.cpp
+    src/entities/enemies/wolfPack.cpp
+
     src/factories/cardFactory.cpp
 
     src/combat/combatContext.cpp

@@ -1,5 +1,5 @@
 #include "game_system/cardMatch.h"
-#include "entities/enemies/enemy.h"
+#include "entities/enemies/wolfPack.h"
 #include "entities/player.h"
 
 #include "cards/cardInstance.h"
@@ -16,11 +16,14 @@ int main()
     Player mainPlayer{initialCardList};
     mainPlayer.setName("Malliano");
     std::cout << "Player name: " << mainPlayer.getName() << "\n";
-    Enemy enemy{10};
+
+    std::cout << "Instantiating WolfPack Enemy from initial list of cards:\n";
+    WolfPack pack{};
+    std::cout << "Enemy name: " << pack.getName() << "\n";
     std::cout << "\n";
 
     std::cout << "Instantiating CardMatch from the Player and the Enemy:\n";
-    CardMatch cardMatch{mainPlayer, enemy};
+    CardMatch cardMatch{mainPlayer, pack};
     std::cout << "\n";
 
     std::cout << "Drawing 2 cards:\n";
@@ -39,6 +42,12 @@ int main()
 
     std::cout << "Trying to draw an extra card when the deck is empty:\n";
     cardMatch.drawMultipleCards(1);
+    std::cout << "\n";
+
+    std::cout << "Enemy turn, only gaining defense: \n";
+    cardMatch.enemyTurn();
+    std::cout << "The armor of " << pack.getName() << " is now: " << pack.getArmor() << ".\n"
+              << std::endl;
 
     return 0;
 }

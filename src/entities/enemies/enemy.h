@@ -9,14 +9,12 @@
 class Enemy : public Entity
 {
   public:
-    Enemy(int hp);
     const EnemyMove& nextMove();
 
   protected:
+    Enemy(int hp);
     std::vector<EnemyMove> m_moves{};
     int m_moveIndex{0};
-
-    void advanceMoves();
 };
 
 #endif // ENEMY_H

@@ -1,33 +1,16 @@
 #include "enemy.h"
+#include <cassert>
 #include <utility>
 
 Enemy::Enemy(int hp) : Entity{hp} {}
 
 const EnemyMove& Enemy::nextMove()
 {
-    if (m_moves.size() == 0)
-    {
-        std::unreachable();
-    }
-    if (m_moveIndex < 0 || m_moveIndex >= static_cast<int>(m_moves.size()))
-    {
-        m_moveIndex = 0;
-        return m_moves[m_moveIndex];
-    }
-    ++m_moveIndex;
-    return m_moves[m_moveIndex];
-}
+    assert(!(m_moves.empty()) && "Calling an EnemyMove on an enemy without valid EnemyMoves");
 
-void Enemy::advanceMoves()
-{
-    int numberOfMoves = static_cast<int>(m_moves.size());
-    if (numberOfMoves == 0)
-    {
-        return;
-    }
-    ++m_moveIndex;
-    if (m_moveIndex >= numberOfMoves)
-    {
-        m_moveIndex = 0;
-    }
+    const EnemyMove& move = m_moves[m_moveIndex];
+
+    m_moveIndex = (m_moveIndex + 1) % m_moves.size();
+
+    return move;
 }
