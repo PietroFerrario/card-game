@@ -34,8 +34,9 @@ void CardFactory::registerCards()
     std::vector<std::unique_ptr<Effect>> shieldWarriorEffects;
     shieldWarriorEffects.emplace_back(std::make_unique<GainArmorEffect>(Target::Self));
     registerDefinition("shieldWarrior",
-                       std::make_unique<CardDefinition>("shieldWarrior", "Shield Warrior", 2, 1,
-                                                        std::move(shieldWarriorEffects)));
+                       std::make_unique<CardDefinition>("shieldWarrior", "Shield Warrior",
+                                                        "Strong warrior with axe and round shield",
+                                                        2, 1, std::move(shieldWarriorEffects)));
 }
 
 std::unique_ptr<CardInstance> CardFactory::makeSingleCard(const std::string& cardId) const

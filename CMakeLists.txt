@@ -36,6 +36,7 @@ target_sources(cardgame_core PRIVATE
 
     src/ui/iotext.cpp
     src/ui/text.cpp
+    src/ui/cardRenderer.cpp
 )
 
 # Debug Macro
@@ -71,3 +72,6 @@ target_link_libraries(sandbox_creating_cards PRIVATE cardgame_core)
 
 add_executable(sandbox_card_match sandbox/cardMatchTest.cpp)
 target_link_libraries(sandbox_card_match PRIVATE cardgame_core)
+
+add_executable(sandbox_hand_print sandbox/handPrintTest.cpp)
+target_link_libraries(sandbox_hand_print PRIVATE cardgame_core)

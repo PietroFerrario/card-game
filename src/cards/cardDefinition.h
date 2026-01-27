@@ -35,15 +35,17 @@ class CardDefinition
      * @param effectList Ordered list of effects applied when the card is played.
      * @param baseCost Default cost to play the card (1).
      */
-    CardDefinition(std::string_view cardId, std::string_view cardName, int baseDamage = 0,
-                   int baseArmor = 0, std::vector<std::unique_ptr<Effect>> effectList = {},
-                   int baseCost = 1);
+    CardDefinition(std::string_view cardId, std::string_view cardName,
+                   std::string_view cardDescription, int baseDamage = 0, int baseArmor = 0,
+                   std::vector<std::unique_ptr<Effect>> effectList = {}, int baseCost = 1);
 
     /// @brief Returns the display name of the card.
     std::string_view getName() const { return m_cardName; }
 
     /// @brief Returns the internal ID of the card.
     std::string_view getID() const { return m_cardId; }
+
+    std::string_view getDescription() const { return m_cardDescription; }
 
     /// @brief Returns the base damage value defined for the card.
     int getBaseDamage() const { return m_baseDamage; }
@@ -66,6 +68,7 @@ class CardDefinition
   private:
     std::string m_cardId{};
     std::string m_cardName{};
+    std::string m_cardDescription{};
 
     int m_baseDamage{0};
     int m_baseArmor{0};
