@@ -79,3 +79,16 @@ void DeckCombat::discardFromHand(int handIndex)
         DEBUG_LOG("The index " << handIndex << " is out of bounds.");
     }
 }
+
+std::vector<const CardInstance*> DeckCombat::getHandView()
+{
+    std::vector<const CardInstance*> handView;
+    handView.reserve(m_handPile.size());
+
+    for (const std::unique_ptr<CardInstance>& currentCard : m_handPile)
+    {
+        handView.emplace_back(currentCard.get());
+    }
+
+    return handView;
+}

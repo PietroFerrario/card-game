@@ -64,6 +64,7 @@ class DeckCombat
     CardInstance& getCardInHand(int index) { return *m_handPile[index]; }
     /// @brief Returns a reference to the current hand pile.
     std::vector<std::unique_ptr<CardInstance>>& getHandPile() { return m_handPile; }
+    std::vector<const CardInstance*> getHandView();
 
   private:
     std::vector<std::unique_ptr<CardInstance>> m_cards;       ///< Draw pile (initial deck).
