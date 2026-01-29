@@ -37,6 +37,7 @@ target_sources(cardgame_core PRIVATE
     src/ui/iotext.cpp
     src/ui/text.cpp
     src/ui/cardRenderer.cpp
+    src/ui/handRenderer.cpp
 )
 
 # Debug Macro

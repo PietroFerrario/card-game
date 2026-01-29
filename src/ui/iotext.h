@@ -18,7 +18,7 @@ class IOText
     void getln(std::string& line);
     void promptln(std::string& line, std::string_view prompt);
 
-    void printCard(const std::vector<std::string>& cardToPrintGrid);
+    void printCards(const std::vector<std::string>& cardToPrintGrid);
 
   private:
     std::ostream& m_out;

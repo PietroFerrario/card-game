@@ -12,7 +12,7 @@ void IOText::promptln(std::string& line, std::string_view prompt)
     getln(line);
 }
 
-void IOText::printCard(const std::vector<std::string>& cardToPrintGrid)
+void IOText::printCards(const std::vector<std::string>& cardToPrintGrid)
 {
     for (const auto& line : cardToPrintGrid)
     {

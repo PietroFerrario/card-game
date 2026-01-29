@@ -37,6 +37,8 @@ class CardRenderer
 
     std::vector<std::string> renderCard(const CardInstance& cardToRender);
 
+    int getCardTemplateWidth() { return m_width; }
+
   private:
     void drawTemplate(std::vector<std::string>& grid);
     std::string fitText(Slot currentSlot, std::string_view text);
