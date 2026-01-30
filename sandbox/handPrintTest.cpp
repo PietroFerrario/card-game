@@ -15,11 +15,13 @@ int main()
 
     const CardFactory factory;
 
-    std::vector<DeckEntry> initialCardList{{"shieldWarrior", 9}};
+    std::vector<DeckEntry> initialCardList{{"shieldWarrior", 10}};
     DeckPlayer mainDeckPlayer{initialCardList};
 
     DeckCombat mainDeckCombat{mainDeckPlayer, factory};
 
+    mainDeckCombat.drawCard();
+    mainDeckCombat.drawCard();
     mainDeckCombat.drawCard();
     mainDeckCombat.drawCard();
     mainDeckCombat.drawCard();
@@ -33,7 +35,7 @@ int main()
     io.print("\n");
 
     io.print("Showing the full player hand: \n");
-    io.printCards(handRenderer.renderHand(mainDeckCombat.getHandView()));
+    io.printHand(handRenderer.renderHand(mainDeckCombat.getHandView()));
 
     return 0;
 }

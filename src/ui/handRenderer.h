@@ -8,10 +8,19 @@
 
 class CardInstance;
 
+struct RenderedHand
+{
+    std::optional<std::vector<std::string>> firstRow;
+    std::optional<std::vector<std::string>> secondRow;
+};
+
 class HandRenderer
 {
   public:
-    std::vector<std::string> renderHand(const std::vector<const CardInstance*>& handToRender);
+    RenderedHand renderHand(const std::vector<const CardInstance*>& handToRender);
+    std::vector<std::string>
+    renderMultipleCards(const std::vector<std::vector<std::string>>& parsedHand, size_t begin,
+                        size_t end, size_t indexBase);
 
   private:
     CardRenderer m_cardRenderer{};

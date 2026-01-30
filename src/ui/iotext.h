@@ -6,6 +6,8 @@
 #include <string_view>
 #include <vector>
 
+class RenderedHand;
+
 class IOText
 {
 
@@ -19,6 +21,7 @@ class IOText
     void promptln(std::string& line, std::string_view prompt);
 
     void printCards(const std::vector<std::string>& cardToPrintGrid);
+    void printHand(const RenderedHand& handToPrint);
 
   private:
     std::ostream& m_out;

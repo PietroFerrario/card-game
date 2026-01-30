@@ -4,29 +4,51 @@
 
 #include <cassert>
 
-std::vector<std::string>
-HandRenderer::renderHand(const std::vector<const CardInstance*>& handToRender)
+RenderedHand HandRenderer::renderHand(const std::vector<const CardInstance*>& handToRender)
 {
-    // Need to fix the empty return?
+    RenderedHand renderedHand;
     if (handToRender.empty())
     {
-        DEBUG_LOG("Passed an empty hand");
-        return std::vector<std::string>{};
+        DEBUG_LOG("You have an empty hand");
+        return renderedHand;
     }
     std::vector<std::vector<std::string>> parsedHand;
     parsedHand.reserve(handToRender.size());
     for (const auto& card : handToRender)
     {
-        // Check .emplace_back or .assign
         parsedHand.emplace_back(m_cardRenderer.renderCard(*card));
     }
 
+    if (parsedHand.size() > 7)
+    {
+        size_t const halfSize = (parsedHand.size() + 1) / 2;
+
+        renderedHand.firstRow = renderMultipleCards(parsedHand, 0, halfSize, 0);
+        renderedHand.secondRow =
+            renderMultipleCards(parsedHand, halfSize, parsedHand.size(), halfSize);
+    }
+    else
+    {
+        renderedHand.firstRow = renderMultipleCards(parsedHand, 0, parsedHand.size(), 0);
+    }
+
+    return renderedHand;
+}
+
+std::vector<std::string>
+HandRenderer::renderMultipleCards(const std::vector<std::vector<std::string>>& parsedHand,
+                                  size_t begin, size_t end, size_t indexBase)
+{
+    assert(begin < end);
+    assert(end <= parsedHand.size());
+
     std::vector<std::string> handToPrint(parsedHand.at(0).size() + 1);
 
-    for (size_t j{0}; j < parsedHand.size(); ++j)
+    for (size_t j{begin}; j < end; ++j)
     {
-        bool addGap = {j > 0};
+        bool addGap = {j > begin};
 
+        // rows
         for (size_t i{0}; i < parsedHand[j].size(); ++i)
         {
             if (addGap)
@@ -37,30 +59,30 @@ HandRenderer::renderHand(const std::vector<const CardInstance*>& handToRender)
         }
     }
 
+    const size_t count = end - begin;
+
     std::string indexLine;
-    int cardWidth = m_cardRenderer.getCardTemplateWidth();
-    int gapWidth = static_cast<int>(m_gap.length());
-    int stride{cardWidth + gapWidth};
-    indexLine.append(((stride) * static_cast<int>(parsedHand.size())) - gapWidth, ' ');
+    const int cardWidth = m_cardRenderer.getCardTemplateWidth();
+    const int gapWidth = static_cast<int>(m_gap.length());
+    const int stride{cardWidth + gapWidth};
 
-    for (size_t i{0}; i < parsedHand.size(); ++i)
+    indexLine.append(stride * static_cast<int>(count) - gapWidth, ' ');
+
+    for (size_t i{0}; i < count; ++i)
     {
-        std::string label;
-        if (i < 9)
-        {
-            label = {"( " + std::to_string(i + 1) + ")"};
-        }
-        else
-        {
-            label = {"(" + std::to_string(i + 1) + ")"};
-        }
-        int cardStart = stride * i;
-        int labelPos = cardStart + (cardWidth - m_cardLabelWidth) / 2;
+        const size_t displayNum = indexBase + i + 1;
+        std::string label = (displayNum < 10) ? "( " + std::to_string(displayNum) + ")"
+                                              : "(" + std::to_string(displayNum) + ")";
 
-        assert(label.size() == m_cardLabelWidth);
+        const int cardStart = stride * static_cast<int>(i);
+        const int labelPos = cardStart + (cardWidth - m_cardLabelWidth) / 2;
+
+        assert(label.size() == static_cast<size_t>(m_cardLabelWidth));
         assert(labelPos >= 0);
-        assert(labelPos + m_cardLabelWidth <= indexLine.size());
-        indexLine.replace(labelPos, m_cardLabelWidth, label);
+        assert(labelPos + m_cardLabelWidth <= static_cast<int>(indexLine.size()));
+
+        indexLine.replace(static_cast<size_t>(labelPos), static_cast<size_t>(m_cardLabelWidth),
+                          label);
     }
 
     handToPrint.back() = indexLine;
