@@ -15,11 +15,15 @@ int main()
 
     const CardFactory factory;
 
-    std::vector<DeckEntry> initialCardList{{"shieldWarrior", 10}};
+    std::vector<DeckEntry> initialCardList{{"shieldWarrior", 13}};
     DeckPlayer mainDeckPlayer{initialCardList};
 
     DeckCombat mainDeckCombat{mainDeckPlayer, factory};
 
+    mainDeckCombat.drawCard();
+    mainDeckCombat.drawCard();
+    mainDeckCombat.drawCard();
+    mainDeckCombat.drawCard();
     mainDeckCombat.drawCard();
     mainDeckCombat.drawCard();
     mainDeckCombat.drawCard();
