@@ -7,11 +7,24 @@
 class CardDefinition;
 class CardInstance;
 
+/**
+ * @brief Interface for card instance creation.
+ *
+ * ICardFactory defines the contract used by runtime systems (e.g., DeckCombat)
+ * to create CardInstances without depending on a concrete factory implementation.
+ */
 class ICardFactory
 {
-public:
-    virtual std::unique_ptr<CardInstance> makeSingleCard(const std::string &cardId) const = 0;
+  public:
+    /**
+     * @brief Creates a new CardInstance identified by the given card ID.
+     *
+     * @param cardId Identifier of the card to instantiate.
+     * @return Owned CardInstance.
+     */
+    virtual std::unique_ptr<CardInstance> makeSingleCard(const std::string& cardId) const = 0;
 
+    /// @brief Virtual destructor.
     virtual ~ICardFactory() = default;
 };
 

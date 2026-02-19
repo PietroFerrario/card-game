@@ -10,15 +10,14 @@ class CardDefinition;
 class CardInstance;
 
 /**
- * @brief Central factory for creating CardInstances from registered definitions.
+ * @brief Factory responsible for creating runtime CardInstances.
  *
- * CardFactory owns all immutable CardDefinitions used during combat.
- * It is responsible for:
- * - Registering cards at startup
- * - Storing definitions mapped by unique ID
- * - Creating new CardInstances from definitions
+ * CardFactory owns all immutable CardDefinitions registered at startup.
+ * It provides a centralized mechanism for instantiating CardInstances
+ * from these definitions during combat.
  *
- * CardFactory is only responsible for card data and instantiation; not for deck or match logic.
+ * CardFactory is responsible only for card data and instantiation.
+ * Deck construction and combat flow are handled elsewhere.
  */
 class CardFactory : public ICardFactory
 {

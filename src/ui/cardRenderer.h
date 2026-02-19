@@ -9,6 +9,9 @@
 
 class CardInstance;
 
+/**
+ * @brief Text alignment used when fitting content into a fixed-width slot.
+ */
 enum class SlotAlignment
 {
     Left,
@@ -16,6 +19,12 @@ enum class SlotAlignment
     Right
 };
 
+/**
+ * @brief Defines a rectangular text slot within a rendered card grid.
+ *
+ * A Slot identifies a row/column position and a fixed width. Text written to the slot
+ * is pre-formatted to maxWidth characters using the specified alignment.
+ */
 struct Slot
 {
     int rowIndex;
@@ -24,26 +33,81 @@ struct Slot
     SlotAlignment alignment;
 };
 
+/**
+ * @brief Two-line text layout produced by splitting a string to fit a slot width.
+ *
+ * The second line is present only when the input text does not fit on one line.
+ */
 struct NameLayout
 {
     std::string firstName;
     std::optional<std::string> secondName;
 };
 
+/**
+ * @brief Renders a CardInstance as a fixed-size ASCII grid.
+ *
+ * CardRenderer produces a vector of strings representing a bordered card template
+ * populated with the card's name, stats, and description. Layout is slot-based:
+ * text is fit to fixed-width slots and written into the grid.
+ *
+ * The output grid has a constant width and height defined by the renderer.
+ */
 class CardRenderer
 {
   public:
     CardRenderer() = default;
 
+    /**
+     * @brief Renders the given card into an ASCII grid.
+     *
+     * @param cardToRender Card instance to render.
+     * @return Vector of strings where each entry is one row of the card.
+     */
     std::vector<std::string> renderCard(const CardInstance& cardToRender);
 
+    /// @brief Returns the fixed width of the rendered card template.
     int getCardTemplateWidth() { return m_width; }
 
   private:
+    /// @brief Draws the static card template (borders, labels) into the grid.
     void drawTemplate(std::vector<std::string>& grid);
+
+    /**
+     * @brief Fits text into a slot width using the slot alignment.
+     *
+     * If the text exceeds the slot width, it is truncated. If it is shorter,
+     * it is padded with spaces according to the alignment.
+     *
+     * @param currentSlot Slot describing width and alignment.
+     * @param text Input text to format.
+     * @return String of currentSlot.maxWidth characters.
+     */
     std::string fitText(Slot currentSlot, std::string_view text);
+
+    /**
+     * @brief Writes pre-formatted text into the specified slot in the grid.
+     *
+     * @param grid Target grid to modify.
+     * @param slot Destination slot coordinates and width.
+     * @param formattedText Text already formatted to slot.maxWidth characters.
+     */
     void writeSlot(std::vector<std::string>& grid, Slot slot, std::string_view formattedText);
+
+    /**
+     * @brief Appends a word to a line, inserting a single space if needed.
+     */
     static void appendWord(std::string& line, std::string_view word);
+
+    /**
+     * @brief Splits input text into one or two lines that fit the given slot width.
+     *
+     * Words are kept intact when possible; overflow is placed on the second line.
+     *
+     * @param cardName Input text to split (e.g., card name or description).
+     * @param currentSlot Slot providing the maximum width.
+     * @return NameLayout containing the first line and optional second line.
+     */
     NameLayout drawLayout(std::string_view cardName, Slot currentSlot);
 
     const int m_width{24};

@@ -53,17 +53,50 @@ class DeckCombat
      */
     void discardFromHand(int handIndex);
 
+    /// @brief Returns the number of cards currently in the hand.
     int getHandSize() const { return m_handPile.size(); }
 
-    bool isValidHandIndex(int index) const;
+    // bool isValidHandIndex(int index) const;
 
+    /**
+     * @brief Moves an exhausted/played card into the discard pile.
+     *
+     * This takes ownership of the CardInstance. If the pointer is null, no action is taken.
+     *
+     * @param exhaustedCard Owned card to discard.
+     */
     void discard(std::unique_ptr<CardInstance> exhaustedCard);
 
+    /**
+     * @brief Removes a card from the hand and transfers ownership to the caller.
+     *
+     * This is how a card is played: the card is removed from the hand immediately
+     * and returned as a std::unique_ptr for effect resolution.
+     *
+     * @param index Zero-based hand index.
+     * @return Owned card if index is valid; nullptr otherwise.
+     */
     std::unique_ptr<CardInstance> takeFromHand(int index);
 
-    CardInstance& getCardInHand(int index) { return *m_handPile[index]; }
+    // /**
+    //  * @brief Returns a reference to a card currently in hand.
+    //  *
+    //  * @warning No bounds checking is performed. Prefer getHandView() for read-only UI
+    //  *          and takeFromHand() for safe ownership transfer.
+    //  *
+    //  * @param index Zero-based hand index.
+    //  * @return Reference to the card at the given index.
+    //  */
+    // CardInstance& getCardInHand(int index) { return *m_handPile[index]; }
+
     /// @brief Returns a reference to the current hand pile.
     std::vector<std::unique_ptr<CardInstance>>& getHandPile() { return m_handPile; }
+
+    /**
+     * @brief Returns a non-owning view of the current hand for UI rendering.
+     *
+     * @return Vector of raw pointers to cards currently in hand.
+     */
     std::vector<const CardInstance*> getHandView();
 
   private:

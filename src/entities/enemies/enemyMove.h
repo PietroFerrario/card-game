@@ -7,10 +7,24 @@
 #include <string>
 #include <vector>
 
+/**
+ * @brief Describes a single enemy action resolved during combat.
+ *
+ * EnemyMove groups an ordered list of effects with the numeric parameters
+ * used during resolution.
+ *
+ * EnemyMove does not execute itself; it is selected by Enemy and resolved externally by the
+ * CardMatch.
+ */
 struct EnemyMove
 {
+    /// @brief Ordered list of effects executed when this move is resolved.
     std::vector<std::unique_ptr<Effect>> effectList{};
+
+    /// @brief Numeric parameters supplied to effects during resolution.
     EffectParams effectParams;
+
+    /// @brief name of the move (used for logging/UI).
     std::string name;
 };
 
