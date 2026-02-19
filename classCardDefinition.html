@@ -104,21 +104,23 @@ $(document).ready(function(){initNavTree('classCardDefinition.html',''); initRes
 <div class="dynheader">
 Collaboration diagram for CardDefinition:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classCardDefinition__coll__graph.svg" width="166" height="191"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classCardDefinition__coll__graph.svg" width="166" height="206"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:abbb05e7b8b93331320577005c1ff9aa6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCardDefinition.html#abbb05e7b8b93331320577005c1ff9aa6">CardDefinition</a> (std::string_view cardId, std::string_view cardName, int baseDamage=0, int baseArmor=0, std::vector&lt; std::unique_ptr&lt; <a class="el" href="classEffect.html">Effect</a> &gt; &gt; effectList={}, int baseCost=1)</td></tr>
-<tr class="memdesc:abbb05e7b8b93331320577005c1ff9aa6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new <a class="el" href="classCardDefinition.html" title="Immutable static data representing a card type.">CardDefinition</a> with provided base values and effects.  <br /></td></tr>
-<tr class="separator:abbb05e7b8b93331320577005c1ff9aa6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49e238e740b6691fc8133930f7fc8768"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCardDefinition.html#a49e238e740b6691fc8133930f7fc8768">CardDefinition</a> (std::string_view cardId, std::string_view cardName, std::string_view cardDescription, int baseDamage=0, int baseArmor=0, std::vector&lt; std::unique_ptr&lt; <a class="el" href="classEffect.html">Effect</a> &gt; &gt; effectList={}, int baseCost=1)</td></tr>
+<tr class="memdesc:a49e238e740b6691fc8133930f7fc8768"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new <a class="el" href="classCardDefinition.html" title="Immutable static data representing a card type.">CardDefinition</a> with provided base values and effects.  <br /></td></tr>
+<tr class="separator:a49e238e740b6691fc8133930f7fc8768"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0de92c6f28b1a53fe9678a52693b5ed1"><td class="memItemLeft" align="right" valign="top">std::string_view&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCardDefinition.html#a0de92c6f28b1a53fe9678a52693b5ed1">getName</a> () const</td></tr>
 <tr class="memdesc:a0de92c6f28b1a53fe9678a52693b5ed1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the display name of the card.  <br /></td></tr>
 <tr class="separator:a0de92c6f28b1a53fe9678a52693b5ed1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afb5d62a40699159266839c41ba9ce8f2"><td class="memItemLeft" align="right" valign="top">std::string_view&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCardDefinition.html#afb5d62a40699159266839c41ba9ce8f2">getID</a> () const</td></tr>
 <tr class="memdesc:afb5d62a40699159266839c41ba9ce8f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the internal ID of the card.  <br /></td></tr>
 <tr class="separator:afb5d62a40699159266839c41ba9ce8f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad196ef1ac78ef989636e48fa3ca604d6"><td class="memItemLeft" align="right" valign="top">std::string_view&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCardDefinition.html#ad196ef1ac78ef989636e48fa3ca604d6">getDescription</a> () const</td></tr>
+<tr class="separator:ad196ef1ac78ef989636e48fa3ca604d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a45b570fb49f0638ad7e4ae6bf8f8ba40"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCardDefinition.html#a45b570fb49f0638ad7e4ae6bf8f8ba40">getBaseDamage</a> () const</td></tr>
 <tr class="memdesc:a45b570fb49f0638ad7e4ae6bf8f8ba40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the base damage value defined for the card.  <br /></td></tr>
 <tr class="separator:a45b570fb49f0638ad7e4ae6bf8f8ba40"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -145,8 +147,8 @@ Public Member Functions</h2></td></tr>
 <p>CardDefinitions are created once at startup and shared across all matches. They do not contain any runtime state or combat logic.</p>
 <p>Effects are owned by the definition and used to build CardInstances at runtime. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="abbb05e7b8b93331320577005c1ff9aa6" name="abbb05e7b8b93331320577005c1ff9aa6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abbb05e7b8b93331320577005c1ff9aa6">&#9670;&#160;</a></span>CardDefinition()</h2>
+<a id="a49e238e740b6691fc8133930f7fc8768" name="a49e238e740b6691fc8133930f7fc8768"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49e238e740b6691fc8133930f7fc8768">&#9670;&#160;</a></span>CardDefinition()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -162,6 +164,12 @@ Public Member Functions</h2></td></tr>
           <td></td>
           <td class="paramtype">std::string_view&#160;</td>
           <td class="paramname"><em>cardName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string_view&#160;</td>
+          <td class="paramname"><em>cardDescription</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -316,6 +324,31 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns the base damage value defined for the card. </p>
+
+</div>
+</div>
+<a id="ad196ef1ac78ef989636e48fa3ca604d6" name="ad196ef1ac78ef989636e48fa3ca604d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad196ef1ac78ef989636e48fa3ca604d6">&#9670;&#160;</a></span>getDescription()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string_view CardDefinition::getDescription </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>

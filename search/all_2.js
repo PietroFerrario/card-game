@@ -1,7 +1,7 @@
 var searchData=
 [
   ['cardcount_0',['cardCount',['../structDeckEntry.html#a84543f00f630aa87b49a323462db7943',1,'DeckEntry']]],
-  ['carddefinition_1',['CardDefinition',['../classCardDefinition.html',1,'CardDefinition'],['../classCardDefinition.html#abbb05e7b8b93331320577005c1ff9aa6',1,'CardDefinition::CardDefinition()']]],
+  ['carddefinition_1',['CardDefinition',['../classCardDefinition.html',1,'CardDefinition'],['../classCardDefinition.html#a49e238e740b6691fc8133930f7fc8768',1,'CardDefinition::CardDefinition()']]],
   ['carddefinition_2ecpp_2',['cardDefinition.cpp',['../cardDefinition_8cpp.html',1,'']]],
   ['carddefinition_2eh_3',['cardDefinition.h',['../cardDefinition_8h.html',1,'']]],
   ['cardfactory_4',['CardFactory',['../classCardFactory.html',1,'CardFactory'],['../classCardFactory.html#a55607cb22e595af44cef12010be53e94',1,'CardFactory::CardFactory()']]],
@@ -14,12 +14,17 @@ var searchData=
   ['cardmatch_11',['CardMatch',['../classCardMatch.html#a977765d9f0cd90e79608eddc8c0a03b5',1,'CardMatch::CardMatch()'],['../classCardMatch.html',1,'CardMatch']]],
   ['cardmatch_2ecpp_12',['cardmatch.cpp',['../cardmatch_8cpp.html',1,'']]],
   ['cardmatch_2eh_13',['cardmatch.h',['../cardmatch_8h.html',1,'']]],
-  ['combatcontext_14',['CombatContext',['../classCombatContext.html#aa0a7c5344b49416979ef6a7a47653ce2',1,'CombatContext::CombatContext()'],['../classCombatContext.html',1,'CombatContext']]],
-  ['combatcontext_2ecpp_15',['combatContext.cpp',['../combatContext_8cpp.html',1,'']]],
-  ['combatcontext_2eh_16',['combatContext.h',['../combatContext_8h.html',1,'']]],
-  ['combatevents_2eh_17',['combatEvents.h',['../combatEvents_8h.html',1,'']]],
-  ['combatsystem_18',['CombatSystem',['../classCombatSystem.html',1,'']]],
-  ['combatsystem_2ecpp_19',['combatSystem.cpp',['../combatSystem_8cpp.html',1,'']]],
-  ['combatsystem_2eh_20',['combatSystem.h',['../combatSystem_8h.html',1,'']]],
-  ['combattarget_2eh_21',['combatTarget.h',['../combatTarget_8h.html',1,'']]]
+  ['cardrenderer_14',['CardRenderer',['../classCardRenderer.html#a8b69b406b0743113d6369c2ef6ed9b59',1,'CardRenderer::CardRenderer()'],['../classCardRenderer.html',1,'CardRenderer']]],
+  ['cardrenderer_2ecpp_15',['cardRenderer.cpp',['../cardRenderer_8cpp.html',1,'']]],
+  ['cardrenderer_2eh_16',['cardRenderer.h',['../cardRenderer_8h.html',1,'']]],
+  ['center_17',['Center',['../cardRenderer_8h.html#a9325a1594f3260b7d8495b8a50a1cf26a4f1f6016fc9f3f2353c0cc7c67b292bd',1,'cardRenderer.h']]],
+  ['columnindex_18',['columnIndex',['../structSlot.html#a8c64d4eba45b4d07cf9f54e71681f57b',1,'Slot']]],
+  ['combatcontext_19',['CombatContext',['../classCombatContext.html#aa0a7c5344b49416979ef6a7a47653ce2',1,'CombatContext::CombatContext()'],['../classCombatContext.html',1,'CombatContext']]],
+  ['combatcontext_2ecpp_20',['combatContext.cpp',['../combatContext_8cpp.html',1,'']]],
+  ['combatcontext_2eh_21',['combatContext.h',['../combatContext_8h.html',1,'']]],
+  ['combatevents_2eh_22',['combatEvents.h',['../combatEvents_8h.html',1,'']]],
+  ['combatsystem_23',['CombatSystem',['../classCombatSystem.html',1,'']]],
+  ['combatsystem_2ecpp_24',['combatSystem.cpp',['../combatSystem_8cpp.html',1,'']]],
+  ['combatsystem_2eh_25',['combatSystem.h',['../combatSystem_8h.html',1,'']]],
+  ['combattarget_2eh_26',['combatTarget.h',['../combatTarget_8h.html',1,'']]]
 ];

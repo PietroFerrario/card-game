@@ -4,6 +4,7 @@ var annotated_dup =
     [ "CardFactory", "classCardFactory.html", "classCardFactory" ],
     [ "CardInstance", "classCardInstance.html", "classCardInstance" ],
     [ "CardMatch", "classCardMatch.html", "classCardMatch" ],
+    [ "CardRenderer", "classCardRenderer.html", "classCardRenderer" ],
     [ "CombatContext", "classCombatContext.html", "classCombatContext" ],
     [ "CombatSystem", "classCombatSystem.html", "classCombatSystem" ],
     [ "DamageInfo", "structDamageInfo.html", "structDamageInfo" ],
@@ -18,9 +19,13 @@ var annotated_dup =
     [ "Entity", "classEntity.html", "classEntity" ],
     [ "GainArmorEffect", "classGainArmorEffect.html", "classGainArmorEffect" ],
     [ "Game", "classGame.html", "classGame" ],
+    [ "HandRenderer", "classHandRenderer.html", "classHandRenderer" ],
     [ "ICardFactory", "classICardFactory.html", "classICardFactory" ],
     [ "IOText", "classIOText.html", "classIOText" ],
+    [ "NameLayout", "structNameLayout.html", "structNameLayout" ],
     [ "Player", "classPlayer.html", "classPlayer" ],
+    [ "RenderedHand", "structRenderedHand.html", "structRenderedHand" ],
+    [ "Slot", "structSlot.html", "structSlot" ],
     [ "Text", "classText.html", "classText" ],
     [ "WolfPack", "classWolfPack.html", "classWolfPack" ]
 ];

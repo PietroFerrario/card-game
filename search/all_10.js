@@ -1,10 +1,10 @@
 var searchData=
 [
-  ['takefromhand_0',['takeFromHand',['../classDeckCombat.html#a165d2658e0726a0ec565a70afda62dbd',1,'DeckCombat']]],
-  ['target_1',['target',['../structDamageInfo.html#a40983739a65344aa6616d25d773adc39',1,'DamageInfo']]],
-  ['target_2',['Target',['../combatTarget_8h.html#a31488d29805a596498c0234ae392d35d',1,'combatTarget.h']]],
-  ['targetdied_3',['targetDied',['../structDamageResult.html#a2a58db8243963d4d648469459122af6f',1,'DamageResult']]],
-  ['text_4',['Text',['../classText.html',1,'Text'],['../classText.html#ab3e26143fccc52699bcc5149cae852bc',1,'Text::Text()']]],
-  ['text_2ecpp_5',['text.cpp',['../text_8cpp.html',1,'']]],
-  ['text_2eh_6',['text.h',['../text_8h.html',1,'']]]
+  ['secondname_0',['secondName',['../structNameLayout.html#a921e436ed07271214bbb868ea8a0ad37',1,'NameLayout']]],
+  ['secondrow_1',['secondRow',['../structRenderedHand.html#a0b8c5e0e1eb3b06c17c7ff674b48dead',1,'RenderedHand']]],
+  ['self_2',['Self',['../combatTarget_8h.html#a31488d29805a596498c0234ae392d35daad6e7652b1bdfb38783486c2c3d5e806',1,'combatTarget.h']]],
+  ['setmainplayername_3',['setMainPlayerName',['../classGame.html#af2a5fb886755d0c28a6b674ff8d485e3',1,'Game']]],
+  ['setname_4',['setName',['../classPlayer.html#a1eac5a0dc76d8eb820a44c4b8a4715e3',1,'Player']]],
+  ['slot_5',['Slot',['../structSlot.html',1,'']]],
+  ['slotalignment_6',['SlotAlignment',['../cardRenderer_8h.html#a9325a1594f3260b7d8495b8a50a1cf26',1,'cardRenderer.h']]]
 ];

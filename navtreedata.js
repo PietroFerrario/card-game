@@ -59,7 +59,8 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"ICardFactory_8h.html"
+"ICardFactory_8h.html",
+"structDamageResult.html#af1e039e82158e0492c039d617d49be2c"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

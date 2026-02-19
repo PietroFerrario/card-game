@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['text_0',['Text',['../classText.html',1,'']]]
+  ['namelayout_0',['NameLayout',['../structNameLayout.html',1,'']]]
 ];

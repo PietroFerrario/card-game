@@ -1,11 +1,12 @@
 var searchData=
 [
-  ['random_0',['Random',['../namespaceRandom.html',1,'']]],
-  ['random_2eh_1',['Random.h',['../Random_8h.html',1,'']]],
-  ['registercards_2',['registerCards',['../classCardFactory.html#a07e105674e7d1e5aadea529ae01d83d8',1,'CardFactory']]],
-  ['registerdefinition_3',['registerDefinition',['../classCardFactory.html#af37ec9e2f92ca8fbf756db18ba4599e4',1,'CardFactory']]],
-  ['removecard_4',['removeCard',['../classDeckPlayer.html#ab39bc3a66e5ec2d58532987fe173a1e8',1,'DeckPlayer']]],
-  ['requested_5',['requested',['../structDamageResult.html#ab65af5f2c6ea310d615b1f03ceab3b98',1,'DamageResult']]],
-  ['resetarmor_6',['resetArmor',['../classCombatSystem.html#a8aa02431d41431c468080ea9589824f1',1,'CombatSystem::resetArmor()'],['../classEntity.html#aa8637a483cf260cc7933dfb66acd392f',1,'Entity::resetArmor()']]],
-  ['resolve_7',['resolve',['../classEffect.html#a39d26749b196992d83fd7d1763434c4b',1,'Effect::resolve()'],['../classGainArmorEffect.html#a6e2f9190a774f6ff6a64e49cdafa0fbe',1,'GainArmorEffect::resolve()']]]
+  ['playcard_0',['playCard',['../classCardMatch.html#a0c0c130ca87f453cf1283fb41e8a6a42',1,'CardMatch']]],
+  ['player_1',['Player',['../classPlayer.html',1,'Player'],['../classPlayer.html#affe0cc3cb714f6deb4e62f0c0d3f1fd8',1,'Player::Player()'],['../classPlayer.html#ae05f1d7e46d14b5fb6698a570d237b57',1,'Player::Player(const std::vector&lt; DeckEntry &gt; &amp;startingCardList, int hp=10)']]],
+  ['player_2ecpp_2',['player.cpp',['../player_8cpp.html',1,'']]],
+  ['player_2eh_3',['player.h',['../player_8h.html',1,'']]],
+  ['print_4',['print',['../classIOText.html#a843012173f69fb6b14c8120e583948e2',1,'IOText']]],
+  ['printcards_5',['printCards',['../classIOText.html#a4bc533762d543b973967ecfdfacc3535',1,'IOText']]],
+  ['printhand_6',['printHand',['../classIOText.html#ae2d43f28dd4078b2cae540c2e8347701',1,'IOText']]],
+  ['println_7',['println',['../classIOText.html#a4c0e0d789a06c7c1e3631a113d310351',1,'IOText']]],
+  ['promptln_8',['promptln',['../classIOText.html#a360ba43a724dac33bde99834b0e7a71b',1,'IOText']]]
 ];

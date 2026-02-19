@@ -3,6 +3,7 @@ var hierarchy =
     [ "CardDefinition", "classCardDefinition.html", null ],
     [ "CardInstance", "classCardInstance.html", null ],
     [ "CardMatch", "classCardMatch.html", null ],
+    [ "CardRenderer", "classCardRenderer.html", null ],
     [ "CombatContext", "classCombatContext.html", null ],
     [ "CombatSystem", "classCombatSystem.html", null ],
     [ "DamageInfo", "structDamageInfo.html", null ],
@@ -22,9 +23,13 @@ var hierarchy =
       [ "Player", "classPlayer.html", null ]
     ] ],
     [ "Game", "classGame.html", null ],
+    [ "HandRenderer", "classHandRenderer.html", null ],
     [ "ICardFactory", "classICardFactory.html", [
       [ "CardFactory", "classCardFactory.html", null ]
     ] ],
     [ "IOText", "classIOText.html", null ],
+    [ "NameLayout", "structNameLayout.html", null ],
+    [ "RenderedHand", "structRenderedHand.html", null ],
+    [ "Slot", "structSlot.html", null ],
     [ "Text", "classText.html", null ]
 ];

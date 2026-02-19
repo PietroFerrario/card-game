@@ -46,7 +46,7 @@ if (edges && edges.length) {
         </defs>
 
 <script type="text/javascript">
-var viewWidth = 606;
+var viewWidth = 871;
 var viewHeight = 82;
 var sectionId = 'dynsection-1';
 </script>
@@ -58,8 +58,8 @@ var sectionId = 'dynsection-1';
 <g id="node1" class="node">
 <title>Node1</title>
 <g id="a_node1"><a xlink:title=" ">
-<polygon fill="#999999" stroke="#666666" points="345.5,-74 228.5,-74 228.5,-55 345.5,-55 345.5,-74"/>
-<text text-anchor="middle" x="287" y="-62" font-family="Helvetica,sans-Serif" font-size="10.00">cards/cardInstance.h</text>
+<polygon fill="#999999" stroke="#666666" points="505.5,-74 388.5,-74 388.5,-55 505.5,-55 505.5,-74"/>
+<text text-anchor="middle" x="447" y="-62" font-family="Helvetica,sans-Serif" font-size="10.00">cards/cardInstance.h</text>
 </a>
 </g>
 </g>
@@ -75,8 +75,8 @@ var sectionId = 'dynsection-1';
 <!-- Node1&#45;&gt;Node2 -->
 <g id="edge1" class="edge">
 <title>Node1&#45;&gt;Node2</title>
-<path fill="none" stroke="#63b8ff" d="M241.25,-52.63C199.48,-42.7 138.55,-28.22 100.11,-19.08"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="240.63,-56.08 251.17,-54.98 242.25,-49.27 240.63,-56.08"/>
+<path fill="none" stroke="#63b8ff" d="M378.1,-53.97C306.18,-44.01 194.44,-28.55 125.43,-19"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="378.03,-57.49 388.41,-55.39 378.99,-50.55 378.03,-57.49"/>
 </g>
 <!-- Node3 -->
 <g id="node3" class="node">
@@ -90,8 +90,8 @@ var sectionId = 'dynsection-1';
 <!-- Node1&#45;&gt;Node3 -->
 <g id="edge2" class="edge">
 <title>Node1&#45;&gt;Node3</title>
-<path fill="none" stroke="#63b8ff" d="M265.88,-49.15C251.79,-39.57 233.71,-27.29 221.76,-19.17"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="264.23,-52.26 274.47,-54.98 268.16,-46.47 264.23,-52.26"/>
+<path fill="none" stroke="#63b8ff" d="M398.74,-52.75C354.14,-42.82 288.74,-28.26 247.54,-19.08"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="398.24,-56.23 408.76,-54.98 399.76,-49.39 398.24,-56.23"/>
 </g>
 <!-- Node4 -->
 <g id="node4" class="node">
@@ -105,8 +105,8 @@ var sectionId = 'dynsection-1';
 <!-- Node1&#45;&gt;Node4 -->
 <g id="edge3" class="edge">
 <title>Node1&#45;&gt;Node4</title>
-<path fill="none" stroke="#63b8ff" d="M308.39,-49.15C322.67,-39.57 340.97,-27.29 353.08,-19.17"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="306.05,-46.51 299.69,-54.98 309.95,-52.32 306.05,-46.51"/>
+<path fill="none" stroke="#63b8ff" d="M425.49,-49.42C410.79,-39.81 391.78,-27.37 379.25,-19.17"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="423.7,-52.44 433.99,-54.98 427.53,-46.58 423.7,-52.44"/>
 </g>
 <!-- Node5 -->
 <g id="node5" class="node">
@@ -120,8 +120,38 @@ var sectionId = 'dynsection-1';
 <!-- Node1&#45;&gt;Node5 -->
 <g id="edge4" class="edge">
 <title>Node1&#45;&gt;Node5</title>
-<path fill="none" stroke="#63b8ff" d="M335.79,-52.82C381.14,-42.88 447.83,-28.28 489.81,-19.08"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="334.9,-49.43 325.88,-54.98 336.4,-56.26 334.9,-49.43"/>
+<path fill="none" stroke="#63b8ff" d="M468.78,-49.42C483.66,-39.81 502.91,-27.37 515.59,-19.17"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="466.67,-46.62 460.17,-54.98 470.47,-52.5 466.67,-46.62"/>
+</g>
+<!-- Node6 -->
+<g id="node6" class="node">
+<title>Node6</title>
+<g id="a_node6"><a xlink:href="cardRenderer_8cpp.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="#666666" points="728.5,-19 615.5,-19 615.5,0 728.5,0 728.5,-19"/>
+<text text-anchor="middle" x="672" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">ui/cardRenderer.cpp</text>
+</a>
+</g>
+</g>
+<!-- Node1&#45;&gt;Node6 -->
+<g id="edge5" class="edge">
+<title>Node1&#45;&gt;Node6</title>
+<path fill="none" stroke="#63b8ff" d="M492.89,-52.69C535.05,-42.76 596.7,-28.24 635.57,-19.08"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="492.08,-49.28 483.15,-54.98 493.69,-56.1 492.08,-49.28"/>
+</g>
+<!-- Node7 -->
+<g id="node7" class="node">
+<title>Node7</title>
+<g id="a_node7"><a xlink:href="handRenderer_8cpp.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="#666666" points="863,-19 747,-19 747,0 863,0 863,-19"/>
+<text text-anchor="middle" x="805" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">ui/handRenderer.cpp</text>
+</a>
+</g>
+</g>
+<!-- Node1&#45;&gt;Node7 -->
+<g id="edge6" class="edge">
+<title>Node1&#45;&gt;Node7</title>
+<path fill="none" stroke="#63b8ff" d="M514.59,-53.49C581.8,-43.54 683.81,-28.44 747.33,-19.04"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="513.9,-50.06 504.52,-54.98 514.92,-56.98 513.9,-50.06"/>
 </g>
 </g>
 </svg>
