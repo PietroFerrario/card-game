@@ -97,6 +97,9 @@ $(document).ready(function(){initNavTree('structEnemyMove.html',''); initResizab
 </div><!--header-->
 <div class="contents">
 
+<p>Describes a single enemy action resolved during combat.  
+ <a href="structEnemyMove.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="enemyMove_8h_source.html">enemyMove.h</a>&gt;</code></p>
 <div class="dynheader">
 Collaboration diagram for EnemyMove:</div>
@@ -108,13 +111,20 @@ Collaboration diagram for EnemyMove:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a7220e6611fe15602bd774e1bea2193a4"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::unique_ptr&lt; <a class="el" href="classEffect.html">Effect</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structEnemyMove.html#a7220e6611fe15602bd774e1bea2193a4">effectList</a> {}</td></tr>
+<tr class="memdesc:a7220e6611fe15602bd774e1bea2193a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ordered list of effects executed when this move is resolved.  <br /></td></tr>
 <tr class="separator:a7220e6611fe15602bd774e1bea2193a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a45937745665d2220954a6021432428f7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structEffectParams.html">EffectParams</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structEnemyMove.html#a45937745665d2220954a6021432428f7">effectParams</a></td></tr>
+<tr class="memdesc:a45937745665d2220954a6021432428f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Numeric parameters supplied to effects during resolution.  <br /></td></tr>
 <tr class="separator:a45937745665d2220954a6021432428f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a78138a5391362cddecfae2a9e1cf42d9"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structEnemyMove.html#a78138a5391362cddecfae2a9e1cf42d9">name</a></td></tr>
+<tr class="memdesc:a78138a5391362cddecfae2a9e1cf42d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">name of the move (used for logging/UI).  <br /></td></tr>
 <tr class="separator:a78138a5391362cddecfae2a9e1cf42d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Data Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Describes a single enemy action resolved during combat. </p>
+<p><a class="el" href="structEnemyMove.html" title="Describes a single enemy action resolved during combat.">EnemyMove</a> groups an ordered list of effects with the numeric parameters used during resolution.</p>
+<p><a class="el" href="structEnemyMove.html" title="Describes a single enemy action resolved during combat.">EnemyMove</a> does not execute itself; it is selected by <a class="el" href="classEnemy.html" title="Base class for enemies with a predefined move sequence.">Enemy</a> and resolved externally by the <a class="el" href="classCardMatch.html" title="Orchestrates a single combat encounter between one player and one enemy.">CardMatch</a>. </p>
+</div><h2 class="groupheader">Member Data Documentation</h2>
 <a id="a7220e6611fe15602bd774e1bea2193a4" name="a7220e6611fe15602bd774e1bea2193a4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7220e6611fe15602bd774e1bea2193a4">&#9670;&#160;</a></span>effectList</h2>
 
@@ -126,6 +136,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Ordered list of effects executed when this move is resolved. </p>
 
 </div>
 </div>
@@ -141,6 +153,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Numeric parameters supplied to effects during resolution. </p>
+
 </div>
 </div>
 <a id="a78138a5391362cddecfae2a9e1cf42d9" name="a78138a5391362cddecfae2a9e1cf42d9"></a>
@@ -154,6 +168,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>name of the move (used for logging/UI). </p>
 
 </div>
 </div>

@@ -11,7 +11,7 @@
 <!-- Node1 -->
 <g id="node1" class="node">
 <title>Node1</title>
-<g id="a_node1"><a xlink:title=" ">
+<g id="a_node1"><a xlink:title="Base class for enemies with a predefined move sequence.">
 <polygon fill="#999999" stroke="#666666" points="126.29,-0.5 126.29,-68.5 210.29,-68.5 210.29,-0.5 126.29,-0.5"/>
 <text text-anchor="middle" x="168.29" y="-56.5" font-family="Helvetica,sans-Serif" font-size="10.00">Enemy</text>
 <polyline fill="none" stroke="#666666" points="126.29,-49.5 210.29,-49.5 "/>
@@ -25,7 +25,7 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="classEntity.html" target="_top" xlink:title=" ">
+<g id="a_node2"><a xlink:href="classEntity.html" target="_top" xlink:title="Base class representing a combat&#45;capable entity.">
 <polygon fill="white" stroke="#666666" points="114.79,-116.5 114.79,-272.5 221.79,-272.5 221.79,-116.5 114.79,-116.5"/>
 <text text-anchor="middle" x="168.29" y="-260.5" font-family="Helvetica,sans-Serif" font-size="10.00">Entity</text>
 <polyline fill="none" stroke="#666666" points="114.79,-253.5 221.79,-253.5 "/>

@@ -97,6 +97,9 @@ $(document).ready(function(){initNavTree('classHandRenderer.html',''); initResiz
 </div><!--header-->
 <div class="contents">
 
+<p>Renders a hand of cards as one or two rows of ASCII cards.  
+ <a href="classHandRenderer.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="handRenderer_8h_source.html">handRenderer.h</a>&gt;</code></p>
 <div class="dynheader">
 Collaboration diagram for HandRenderer:</div>
@@ -108,11 +111,16 @@ Collaboration diagram for HandRenderer:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ab24cf431b72885256042ecf6f644fa8e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structRenderedHand.html">RenderedHand</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHandRenderer.html#ab24cf431b72885256042ecf6f644fa8e">renderHand</a> (const std::vector&lt; const <a class="el" href="classCardInstance.html">CardInstance</a> * &gt; &amp;handToRender)</td></tr>
+<tr class="memdesc:ab24cf431b72885256042ecf6f644fa8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renders the given hand into one or two terminal rows.  <br /></td></tr>
 <tr class="separator:ab24cf431b72885256042ecf6f644fa8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a513ed622e8eb3c2a283332b104bdb02b"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHandRenderer.html#a513ed622e8eb3c2a283332b104bdb02b">renderMultipleCards</a> (const std::vector&lt; std::vector&lt; std::string &gt; &gt; &amp;parsedHand, size_t begin, size_t end, size_t indexBase)</td></tr>
+<tr class="memdesc:a513ed622e8eb3c2a283332b104bdb02b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renders a subrange of already-rendered cards into a single row.  <br /></td></tr>
 <tr class="separator:a513ed622e8eb3c2a283332b104bdb02b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Renders a hand of cards as one or two rows of ASCII cards. </p>
+<p><a class="el" href="classHandRenderer.html" title="Renders a hand of cards as one or two rows of ASCII cards.">HandRenderer</a> uses <a class="el" href="classCardRenderer.html" title="Renders a CardInstance as a fixed-size ASCII grid.">CardRenderer</a> to render individual cards, then horizontally concatenates them with a fixed gap. A selection index line is appended below each rendered row to support terminal input by card number. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ab24cf431b72885256042ecf6f644fa8e" name="ab24cf431b72885256042ecf6f644fa8e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab24cf431b72885256042ecf6f644fa8e">&#9670;&#160;</a></span>renderHand()</h2>
 
@@ -128,6 +136,16 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Renders the given hand into one or two terminal rows. </p>
+<p>If the hand is empty, returns a <a class="el" href="structRenderedHand.html" title="Rendered representation of a hand for terminal output.">RenderedHand</a> with no rows set. For large hands, the cards are split across two rows.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">handToRender</td><td>Non-owning pointers to cards currently in hand. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="structRenderedHand.html" title="Rendered representation of a hand for terminal output.">RenderedHand</a> containing one or two rendered rows. </dd></dl>
 
 </div>
 </div>
@@ -168,6 +186,19 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Renders a subrange of already-rendered cards into a single row. </p>
+<p>Concatenates the ASCII grids in the range [begin, end) and appends a centered selection index line using indexBase for numbering.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">parsedHand</td><td>Pre-rendered cards (each entry is a card grid). </td></tr>
+    <tr><td class="paramname">begin</td><td>First card index in parsedHand to render (inclusive). </td></tr>
+    <tr><td class="paramname">end</td><td>One-past-last card index in parsedHand to render (exclusive). </td></tr>
+    <tr><td class="paramname">indexBase</td><td>Offset used for display numbering (1-based labels are indexBase + i + 1). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A rendered row grid with an extra final line containing selection indices. </dd></dl>
 
 </div>
 </div>

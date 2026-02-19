@@ -20,7 +20,7 @@
 <!-- Node1 -->
 <g id="node2" class="node">
 <title>Node1</title>
-<g id="a_node2"><a xlink:href="classGainArmorEffect.html" target="_top" xlink:title="Effect that grants armor to the player based on the card&#39;s armor value.">
+<g id="a_node2"><a xlink:href="classGainArmorEffect.html" target="_top" xlink:title="Effect that grants armor to a combat target.">
 <polygon fill="white" stroke="#666666" points="177,-19 80,-19 80,0 177,0 177,-19"/>
 <text text-anchor="middle" x="128.5" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">GainArmorEffect</text>
 </a>

@@ -98,6 +98,9 @@ $(document).ready(function(){initNavTree('classEntity.html',''); initResizable()
 </div><!--header-->
 <div class="contents">
 
+<p>Base class representing a combat-capable entity.  
+ <a href="classEntity.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="entity_8h_source.html">entity.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Entity:</div>
@@ -119,20 +122,28 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab750e4f671cbdc63c737575989295240"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEntity.html#ab750e4f671cbdc63c737575989295240">Entity</a> (int hp, int attack=0, int armor=0)</td></tr>
 <tr class="separator:ab750e4f671cbdc63c737575989295240"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abd594e05bdb875b0e6c934fe3a4f44bb"><td class="memItemLeft" align="right" valign="top">std::string_view&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEntity.html#abd594e05bdb875b0e6c934fe3a4f44bb">getName</a> () const</td></tr>
+<tr class="memdesc:abd594e05bdb875b0e6c934fe3a4f44bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the display name of the entity.  <br /></td></tr>
 <tr class="separator:abd594e05bdb875b0e6c934fe3a4f44bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b31b7c0076c1ec866f8d46696b5846a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEntity.html#a7b31b7c0076c1ec866f8d46696b5846a">getArmor</a> () const</td></tr>
+<tr class="memdesc:a7b31b7c0076c1ec866f8d46696b5846a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current armor value.  <br /></td></tr>
 <tr class="separator:a7b31b7c0076c1ec866f8d46696b5846a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa8637a483cf260cc7933dfb66acd392f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEntity.html#aa8637a483cf260cc7933dfb66acd392f">resetArmor</a> ()</td></tr>
+<tr class="memdesc:aa8637a483cf260cc7933dfb66acd392f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets armor to zero.  <br /></td></tr>
 <tr class="separator:aa8637a483cf260cc7933dfb66acd392f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a381d3e155a8111f43e8918d2a91bd1eb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEntity.html#a381d3e155a8111f43e8918d2a91bd1eb">increaseArmor</a> (int amount)</td></tr>
+<tr class="memdesc:a381d3e155a8111f43e8918d2a91bd1eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Increases armor by the given amount.  <br /></td></tr>
 <tr class="separator:a381d3e155a8111f43e8918d2a91bd1eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a68fbf0c06c706519ca0ccc41ec089aa2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEntity.html#a68fbf0c06c706519ca0ccc41ec089aa2">lowerArmor</a> (int amount)</td></tr>
+<tr class="memdesc:a68fbf0c06c706519ca0ccc41ec089aa2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decreases armor by the given amount.  <br /></td></tr>
 <tr class="separator:a68fbf0c06c706519ca0ccc41ec089aa2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa6080cdbf25bece934c49e79634011ef"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEntity.html#aa6080cdbf25bece934c49e79634011ef">getHp</a> () const</td></tr>
+<tr class="memdesc:aa6080cdbf25bece934c49e79634011ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current HP value.  <br /></td></tr>
 <tr class="separator:aa6080cdbf25bece934c49e79634011ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad3bc2393addc7e5a8dac80ee18b5fce8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEntity.html#ad3bc2393addc7e5a8dac80ee18b5fce8">lowerHp</a> (int amount)</td></tr>
+<tr class="memdesc:ad3bc2393addc7e5a8dac80ee18b5fce8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decreases HP by the given amount.  <br /></td></tr>
 <tr class="separator:ad3bc2393addc7e5a8dac80ee18b5fce8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6e360e6180829190e55801e906f56309"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEntity.html#a6e360e6180829190e55801e906f56309">increaseHp</a> (int amount)</td></tr>
+<tr class="memdesc:a6e360e6180829190e55801e906f56309"><td class="mdescLeft">&#160;</td><td class="mdescRight">Increases HP by the given amount.  <br /></td></tr>
 <tr class="separator:a6e360e6180829190e55801e906f56309"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
@@ -146,7 +157,11 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:a4b945ebe36bda22cc9cc7c6620f43d51"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEntity.html#a4b945ebe36bda22cc9cc7c6620f43d51">m_name</a> {}</td></tr>
 <tr class="separator:a4b945ebe36bda22cc9cc7c6620f43d51"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Base class representing a combat-capable entity. </p>
+<p><a class="el" href="classEntity.html" title="Base class representing a combat-capable entity.">Entity</a> stores core combat state such as HP, armor, and attack value. It provides low-level mutation primitives but does not implement combat rules or gameplay logic.</p>
+<p>Higher-level systems (e.g., <a class="el" href="classCombatSystem.html" title="Central authority for combat rules and state mutation.">CombatSystem</a>) are responsible for enforcing rules and constraints when mutating entity state. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a980f368aa07ce358583982821533a54a" name="a980f368aa07ce358583982821533a54a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a980f368aa07ce358583982821533a54a">&#9670;&#160;</a></span>Entity() <span class="overload">[1/2]</span></h2>
 
@@ -238,6 +253,8 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Returns the current armor value. </p>
+
 </div>
 </div>
 <a id="aa6080cdbf25bece934c49e79634011ef" name="aa6080cdbf25bece934c49e79634011ef"></a>
@@ -263,6 +280,8 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Returns the current HP value. </p>
+
 </div>
 </div>
 <a id="abd594e05bdb875b0e6c934fe3a4f44bb" name="abd594e05bdb875b0e6c934fe3a4f44bb"></a>
@@ -287,6 +306,8 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Returns the display name of the entity. </p>
 
 </div>
 </div>
@@ -314,6 +335,8 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Increases armor by the given amount. </p>
+
 </div>
 </div>
 <a id="a6e360e6180829190e55801e906f56309" name="a6e360e6180829190e55801e906f56309"></a>
@@ -339,6 +362,8 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Increases HP by the given amount. </p>
 
 </div>
 </div>
@@ -366,6 +391,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Decreases armor by the given amount. </p>
+<p>Armor is clamped to zero if the reduction would make it negative. </p>
+
 </div>
 </div>
 <a id="ad3bc2393addc7e5a8dac80ee18b5fce8" name="ad3bc2393addc7e5a8dac80ee18b5fce8"></a>
@@ -392,6 +420,8 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Decreases HP by the given amount. </p>
+
 </div>
 </div>
 <a id="aa8637a483cf260cc7933dfb66acd392f" name="aa8637a483cf260cc7933dfb66acd392f"></a>
@@ -416,6 +446,8 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Resets armor to zero. </p>
 
 </div>
 </div>

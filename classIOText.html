@@ -97,6 +97,9 @@ $(document).ready(function(){initNavTree('classIOText.html',''); initResizable()
 </div><!--header-->
 <div class="contents">
 
+<p>Text-based input/output interface for terminal interaction.  
+ <a href="classIOText.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="iotext_8h_source.html">iotext.h</a>&gt;</code></p>
 <div class="dynheader">
 Collaboration diagram for IOText:</div>
@@ -108,21 +111,32 @@ Collaboration diagram for IOText:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aa54660309cf0f83dd4840cb01140dfc3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIOText.html#aa54660309cf0f83dd4840cb01140dfc3">IOText</a> (std::ostream &amp;out, std::istream &amp;in)</td></tr>
+<tr class="memdesc:aa54660309cf0f83dd4840cb01140dfc3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an <a class="el" href="classIOText.html" title="Text-based input/output interface for terminal interaction.">IOText</a> interface using the given streams.  <br /></td></tr>
 <tr class="separator:aa54660309cf0f83dd4840cb01140dfc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4c0e0d789a06c7c1e3631a113d310351"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIOText.html#a4c0e0d789a06c7c1e3631a113d310351">println</a> (std::string_view msg)</td></tr>
+<tr class="memdesc:a4c0e0d789a06c7c1e3631a113d310351"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints a line followed by a newline.  <br /></td></tr>
 <tr class="separator:a4c0e0d789a06c7c1e3631a113d310351"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a843012173f69fb6b14c8120e583948e2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIOText.html#a843012173f69fb6b14c8120e583948e2">print</a> (std::string_view msg) const</td></tr>
+<tr class="memdesc:a843012173f69fb6b14c8120e583948e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints a line (with newline).  <br /></td></tr>
 <tr class="separator:a843012173f69fb6b14c8120e583948e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a243be749bc0f604ef777dcc2191fce4e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIOText.html#a243be749bc0f604ef777dcc2191fce4e">getln</a> (std::string &amp;line)</td></tr>
+<tr class="memdesc:a243be749bc0f604ef777dcc2191fce4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads a line of input into the given string.  <br /></td></tr>
 <tr class="separator:a243be749bc0f604ef777dcc2191fce4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a360ba43a724dac33bde99834b0e7a71b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIOText.html#a360ba43a724dac33bde99834b0e7a71b">promptln</a> (std::string &amp;line, std::string_view prompt)</td></tr>
+<tr class="memdesc:a360ba43a724dac33bde99834b0e7a71b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints a prompt and reads a line of input.  <br /></td></tr>
 <tr class="separator:a360ba43a724dac33bde99834b0e7a71b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4bc533762d543b973967ecfdfacc3535"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIOText.html#a4bc533762d543b973967ecfdfacc3535">printCards</a> (const std::vector&lt; std::string &gt; &amp;cardToPrintGrid)</td></tr>
+<tr class="memdesc:a4bc533762d543b973967ecfdfacc3535"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints a rendered card grid to the output.  <br /></td></tr>
 <tr class="separator:a4bc533762d543b973967ecfdfacc3535"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae2d43f28dd4078b2cae540c2e8347701"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIOText.html#ae2d43f28dd4078b2cae540c2e8347701">printHand</a> (const <a class="el" href="structRenderedHand.html">RenderedHand</a> &amp;handToPrint)</td></tr>
+<tr class="memdesc:ae2d43f28dd4078b2cae540c2e8347701"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints a rendered hand to the output.  <br /></td></tr>
 <tr class="separator:ae2d43f28dd4078b2cae540c2e8347701"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Text-based input/output interface for terminal interaction. </p>
+<p><a class="el" href="classIOText.html" title="Text-based input/output interface for terminal interaction.">IOText</a> provides an abstraction over input and output streams used by the terminal UI. It is responsible only for printing text and rendered grids, and for reading user input.</p>
+<p><a class="el" href="classIOText.html" title="Text-based input/output interface for terminal interaction.">IOText</a> does not implement any game logic or rendering logic; </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aa54660309cf0f83dd4840cb01140dfc3" name="aa54660309cf0f83dd4840cb01140dfc3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa54660309cf0f83dd4840cb01140dfc3">&#9670;&#160;</a></span>IOText()</h2>
 
@@ -157,6 +171,15 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Constructs an <a class="el" href="classIOText.html" title="Text-based input/output interface for terminal interaction.">IOText</a> interface using the given streams. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">out</td><td>Output stream used for printing. </td></tr>
+    <tr><td class="paramname">in</td><td>Input stream used for reading user input. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -176,6 +199,8 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Reads a line of input into the given string. </p>
+
 </div>
 </div>
 <a id="a843012173f69fb6b14c8120e583948e2" name="a843012173f69fb6b14c8120e583948e2"></a>
@@ -193,6 +218,8 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Prints a line (with newline). </p>
 
 </div>
 </div>
@@ -212,6 +239,14 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Prints a rendered card grid to the output. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cardToPrintGrid</td><td>ASCII grid representing a single card or row of cards. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="ae2d43f28dd4078b2cae540c2e8347701" name="ae2d43f28dd4078b2cae540c2e8347701"></a>
@@ -230,6 +265,15 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Prints a rendered hand to the output. </p>
+<p>One or two rows are printed depending on the contents of <a class="el" href="structRenderedHand.html" title="Rendered representation of a hand for terminal output.">RenderedHand</a>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">handToPrint</td><td>Rendered hand structure to print. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="a4c0e0d789a06c7c1e3631a113d310351" name="a4c0e0d789a06c7c1e3631a113d310351"></a>
@@ -247,6 +291,8 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Prints a line followed by a newline. </p>
 
 </div>
 </div>
@@ -275,6 +321,15 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Prints a prompt and reads a line of input. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">line</td><td>Output string receiving the input. </td></tr>
+    <tr><td class="paramname">prompt</td><td>Prompt text printed before reading input. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

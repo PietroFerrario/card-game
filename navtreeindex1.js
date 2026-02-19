@@ -1,7 +1,5 @@
 var NAVTREEINDEX1 =
 {
-"structDamageResult.html#af1e039e82158e0492c039d617d49be2c":[1,0,8,0],
-"structDeckEntry.html":[1,0,10],
 "structDeckEntry.html#a84543f00f630aa87b49a323462db7943":[1,0,10,0],
 "structDeckEntry.html#aa4b18f402203fead4c07596f411ae248":[1,0,10,1],
 "structEffectParams.html":[1,0,13],

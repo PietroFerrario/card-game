@@ -11,7 +11,7 @@
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<g id="a_node1"><a xlink:href="structSlot.html" target="_top" xlink:title=" ">
+<g id="a_node1"><a xlink:href="structSlot.html" target="_top" xlink:title="Defines a rectangular text slot within a rendered card grid.">
 <polygon fill="white" stroke="#666666" points="35,-19 0,-19 0,0 35,0 35,-19"/>
 <text text-anchor="middle" x="17.5" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">Slot</text>
 </a>

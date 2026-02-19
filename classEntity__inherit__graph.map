@@ -1,6 +1,6 @@
 <map id="Entity" name="Entity">
-<area shape="rect" id="node1" title=" " alt="" coords="79,5,222,259"/>
-<area shape="rect" id="node2" href="$classEnemy.html" title=" " alt="" coords="5,321,136,428"/>
-<area shape="rect" id="node4" href="$classPlayer.html" title=" " alt="" coords="161,307,303,443"/>
+<area shape="rect" id="node1" title="Base class representing a combat&#45;capable entity." alt="" coords="79,5,222,259"/>
+<area shape="rect" id="node2" href="$classEnemy.html" title="Base class for enemies with a predefined move sequence." alt="" coords="5,321,136,428"/>
+<area shape="rect" id="node4" href="$classPlayer.html" title="Player&#45;controlled entity with a persistent deck." alt="" coords="161,307,303,443"/>
 <area shape="rect" id="node3" href="$classWolfPack.html" title=" " alt="" coords="17,491,124,568"/>
 </map>

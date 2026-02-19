@@ -8,6 +8,5 @@ var searchData=
   ['isdead_5',['isDead',['../classCombatSystem.html#a4c99bb4a33ee52d6e6f1947362b02942',1,'CombatSystem']]],
   ['islost_6',['isLost',['../classGame.html#a8f39b84cf10366da2dfd4bf780bc1c1b',1,'Game']]],
   ['isplayeralive_7',['isPlayerAlive',['../classGame.html#aaf22d390c98b0fd98b7b90ac80beb08a',1,'Game']]],
-  ['isvalidhandindex_8',['isValidHandIndex',['../classDeckCombat.html#a1981c92cd7f58ae1e4c767aa38ddacb7',1,'DeckCombat']]],
-  ['isvalidname_9',['isValidName',['../classGame.html#afd6c7e00e229a08913b8ee6becc75fe9',1,'Game']]]
+  ['isvalidname_8',['isValidName',['../classGame.html#afd6c7e00e229a08913b8ee6becc75fe9',1,'Game']]]
 ];

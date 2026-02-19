@@ -97,6 +97,9 @@ $(document).ready(function(){initNavTree('classText.html',''); initResizable(); 
 </div><!--header-->
 <div class="contents">
 
+<p>Lightweight text lookup service backed by a JSON file.  
+ <a href="classText.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="text_8h_source.html">text.h</a>&gt;</code></p>
 <div class="dynheader">
 Collaboration diagram for Text:</div>
@@ -108,11 +111,17 @@ Collaboration diagram for Text:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ab3e26143fccc52699bcc5149cae852bc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classText.html#ab3e26143fccc52699bcc5149cae852bc">Text</a> ()</td></tr>
+<tr class="memdesc:ab3e26143fccc52699bcc5149cae852bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads text data from the JSON source.  <br /></td></tr>
 <tr class="separator:ab3e26143fccc52699bcc5149cae852bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae5a6625830c7162ac0512fdf949911e3"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classText.html#ae5a6625830c7162ac0512fdf949911e3">getText</a> (const char *key) const</td></tr>
+<tr class="memdesc:ae5a6625830c7162ac0512fdf949911e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the text associated with the given key.  <br /></td></tr>
 <tr class="separator:ae5a6625830c7162ac0512fdf949911e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Lightweight text lookup service backed by a JSON file. </p>
+<p><a class="el" href="classText.html" title="Lightweight text lookup service backed by a JSON file.">Text</a> loads a JSON document at construction time and provides read-only access to string values by key. It is intended for externalized game text such as UI labels, messages, or descriptions.</p>
+<p>The underlying data is immutable after construction. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ab3e26143fccc52699bcc5149cae852bc" name="ab3e26143fccc52699bcc5149cae852bc"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab3e26143fccc52699bcc5149cae852bc">&#9670;&#160;</a></span>Text()</h2>
 
@@ -127,6 +136,9 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Loads text data from the JSON source. </p>
+<p>The JSON file is parsed during construction and stored internally. </p>
 
 </div>
 </div>
@@ -146,6 +158,21 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Returns the text associated with the given key. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>Null-terminated string key used to look up the text. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Reference to the stored string value.</dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">If</td><td>the key is not present in the underlying JSON data. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

@@ -104,7 +104,7 @@ $(document).ready(function(){initNavTree('classDeckCombat.html',''); initResizab
 <div class="dynheader">
 Collaboration diagram for DeckCombat:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classDeckCombat__coll__graph.svg" width="172" height="220"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classDeckCombat__coll__graph.svg" width="172" height="191"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <table class="memberdecls">
@@ -120,24 +120,24 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a3ed556035ec64030a32e8f995d26459a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Discards a card from the hand to the discard pile.  <br /></td></tr>
 <tr class="separator:a3ed556035ec64030a32e8f995d26459a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a82d175e425abcb3966af228018ac0aff"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDeckCombat.html#a82d175e425abcb3966af228018ac0aff">getHandSize</a> () const</td></tr>
+<tr class="memdesc:a82d175e425abcb3966af228018ac0aff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of cards currently in the hand.  <br /></td></tr>
 <tr class="separator:a82d175e425abcb3966af228018ac0aff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1981c92cd7f58ae1e4c767aa38ddacb7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDeckCombat.html#a1981c92cd7f58ae1e4c767aa38ddacb7">isValidHandIndex</a> (int index) const</td></tr>
-<tr class="separator:a1981c92cd7f58ae1e4c767aa38ddacb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8ae7602e1f0d244d654d5dc9ae7c4bfa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDeckCombat.html#a8ae7602e1f0d244d654d5dc9ae7c4bfa">discard</a> (std::unique_ptr&lt; <a class="el" href="classCardInstance.html">CardInstance</a> &gt; exhaustedCard)</td></tr>
+<tr class="memdesc:a8ae7602e1f0d244d654d5dc9ae7c4bfa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Moves an exhausted/played card into the discard pile.  <br /></td></tr>
 <tr class="separator:a8ae7602e1f0d244d654d5dc9ae7c4bfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a165d2658e0726a0ec565a70afda62dbd"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classCardInstance.html">CardInstance</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDeckCombat.html#a165d2658e0726a0ec565a70afda62dbd">takeFromHand</a> (int index)</td></tr>
+<tr class="memdesc:a165d2658e0726a0ec565a70afda62dbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes a card from the hand and transfers ownership to the caller.  <br /></td></tr>
 <tr class="separator:a165d2658e0726a0ec565a70afda62dbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac0534f47f7476d0e7c8e5d109e31f57b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classCardInstance.html">CardInstance</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDeckCombat.html#ac0534f47f7476d0e7c8e5d109e31f57b">getCardInHand</a> (int index)</td></tr>
-<tr class="separator:ac0534f47f7476d0e7c8e5d109e31f57b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2220e79c071491e02bb9f5fda4f242cd"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::unique_ptr&lt; <a class="el" href="classCardInstance.html">CardInstance</a> &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDeckCombat.html#a2220e79c071491e02bb9f5fda4f242cd">getHandPile</a> ()</td></tr>
 <tr class="memdesc:a2220e79c071491e02bb9f5fda4f242cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a reference to the current hand pile.  <br /></td></tr>
 <tr class="separator:a2220e79c071491e02bb9f5fda4f242cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad2b77abdf31a4352a7b861cb1472a711"><td class="memItemLeft" align="right" valign="top">std::vector&lt; const <a class="el" href="classCardInstance.html">CardInstance</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDeckCombat.html#ad2b77abdf31a4352a7b861cb1472a711">getHandView</a> ()</td></tr>
+<tr class="memdesc:ad2b77abdf31a4352a7b861cb1472a711"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a non-owning view of the current hand for UI rendering.  <br /></td></tr>
 <tr class="separator:ad2b77abdf31a4352a7b861cb1472a711"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Manages all card piles during a single combat. </p>
-<p><a class="el" href="classDeckCombat.html" title="Manages all card piles during a single combat.">DeckCombat</a> is the runtime deck system used during an encounter. It is initialized from the player's persistent <a class="el" href="classDeckPlayer.html" title="Represents the player&#39;s persistent deck outside of combat.">DeckPlayer</a> and builds a fresh set of CardInstances using the provided <a class="el" href="classICardFactory.html">ICardFactory</a>.</p>
+<p><a class="el" href="classDeckCombat.html" title="Manages all card piles during a single combat.">DeckCombat</a> is the runtime deck system used during an encounter. It is initialized from the player's persistent <a class="el" href="classDeckPlayer.html" title="Represents the player&#39;s persistent deck outside of combat.">DeckPlayer</a> and builds a fresh set of CardInstances using the provided <a class="el" href="classICardFactory.html" title="Interface for card instance creation.">ICardFactory</a>.</p>
 <p>It owns and manages:</p><ul>
 <li>Draw pile (main deck)</li>
 <li>Hand pile (cards in hand)</li>
@@ -200,6 +200,15 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Moves an exhausted/played card into the discard pile. </p>
+<p>This takes ownership of the <a class="el" href="classCardInstance.html" title="Represents a runtime instance of a card during combat.">CardInstance</a>. If the pointer is null, no action is taken.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">exhaustedCard</td><td>Owned card to discard. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="a3ed556035ec64030a32e8f995d26459a" name="a3ed556035ec64030a32e8f995d26459a"></a>
@@ -245,32 +254,6 @@ Public Member Functions</h2></td></tr>
 
 <p>Draws one card from the draw pile to the hand. </p>
 <p>If the draw pile is empty, no action is taken. </p>
-
-</div>
-</div>
-<a id="ac0534f47f7476d0e7c8e5d109e31f57b" name="ac0534f47f7476d0e7c8e5d109e31f57b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac0534f47f7476d0e7c8e5d109e31f57b">&#9670;&#160;</a></span>getCardInHand()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classCardInstance.html">CardInstance</a> &amp; DeckCombat::getCardInHand </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>index</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
 
 </div>
 </div>
@@ -324,6 +307,8 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Returns the number of cards currently in the hand. </p>
+
 </div>
 </div>
 <a id="ad2b77abdf31a4352a7b861cb1472a711" name="ad2b77abdf31a4352a7b861cb1472a711"></a>
@@ -341,23 +326,8 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-</div>
-</div>
-<a id="a1981c92cd7f58ae1e4c767aa38ddacb7" name="a1981c92cd7f58ae1e4c767aa38ddacb7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1981c92cd7f58ae1e4c767aa38ddacb7">&#9670;&#160;</a></span>isValidHandIndex()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool DeckCombat::isValidHandIndex </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>index</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
+<p>Returns a non-owning view of the current hand for UI rendering. </p>
+<dl class="section return"><dt>Returns</dt><dd>Vector of raw pointers to cards currently in hand. </dd></dl>
 
 </div>
 </div>
@@ -376,6 +346,16 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Removes a card from the hand and transfers ownership to the caller. </p>
+<p>This is how a card is played: the card is removed from the hand immediately and returned as a std::unique_ptr for effect resolution.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>Zero-based hand index. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Owned card if index is valid; nullptr otherwise. </dd></dl>
 
 </div>
 </div>

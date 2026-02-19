@@ -24,7 +24,7 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="classEntity.html" target="_top" xlink:title=" ">
+<g id="a_node2"><a xlink:href="classEntity.html" target="_top" xlink:title="Base class representing a combat&#45;capable entity.">
 <polygon fill="white" stroke="#666666" points="78.96,-116.5 78.96,-272.5 185.96,-272.5 185.96,-116.5 78.96,-116.5"/>
 <text text-anchor="middle" x="132.46" y="-260.5" font-family="Helvetica,sans-Serif" font-size="10.00">Entity</text>
 <polyline fill="none" stroke="#666666" points="78.96,-253.5 185.96,-253.5 "/>

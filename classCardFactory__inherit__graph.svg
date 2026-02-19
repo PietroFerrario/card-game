@@ -11,7 +11,7 @@
 <!-- Node1 -->
 <g id="node1" class="node">
 <title>Node1</title>
-<g id="a_node1"><a xlink:title="Central factory for creating CardInstances from registered definitions.">
+<g id="a_node1"><a xlink:title="Factory responsible for creating runtime CardInstances.">
 <polygon fill="#999999" stroke="#666666" points="0,-0.5 0,-101.5 120,-101.5 120,-0.5 0,-0.5"/>
 <text text-anchor="middle" x="60" y="-89.5" font-family="Helvetica,sans-Serif" font-size="10.00">CardFactory</text>
 <polyline fill="none" stroke="#666666" points="0,-82.5 120,-82.5 "/>
@@ -28,7 +28,7 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="classICardFactory.html" target="_top" xlink:title=" ">
+<g id="a_node2"><a xlink:href="classICardFactory.html" target="_top" xlink:title="Interface for card instance creation.">
 <polygon fill="white" stroke="#666666" points="2.5,-138.5 2.5,-206.5 117.5,-206.5 117.5,-138.5 2.5,-138.5"/>
 <text text-anchor="middle" x="60" y="-194.5" font-family="Helvetica,sans-Serif" font-size="10.00">ICardFactory</text>
 <polyline fill="none" stroke="#666666" points="2.5,-187.5 117.5,-187.5 "/>

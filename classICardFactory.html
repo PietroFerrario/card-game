@@ -97,6 +97,9 @@ $(document).ready(function(){initNavTree('classICardFactory.html',''); initResiz
 </div><!--header-->
 <div class="contents">
 
+<p>Interface for card instance creation.  
+ <a href="classICardFactory.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="ICardFactory_8h_source.html">ICardFactory.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for ICardFactory:</div>
@@ -114,11 +117,16 @@ Collaboration diagram for ICardFactory:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:afeea595a6787983bff6909b01fce49cd"><td class="memItemLeft" align="right" valign="top">virtual std::unique_ptr&lt; <a class="el" href="classCardInstance.html">CardInstance</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classICardFactory.html#afeea595a6787983bff6909b01fce49cd">makeSingleCard</a> (const std::string &amp;cardId) const =0</td></tr>
+<tr class="memdesc:afeea595a6787983bff6909b01fce49cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new <a class="el" href="classCardInstance.html" title="Represents a runtime instance of a card during combat.">CardInstance</a> identified by the given card ID.  <br /></td></tr>
 <tr class="separator:afeea595a6787983bff6909b01fce49cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a25e5f79224a1b7e4ccbea1bf2c17346d"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classICardFactory.html#a25e5f79224a1b7e4ccbea1bf2c17346d">~ICardFactory</a> ()=default</td></tr>
+<tr class="memdesc:a25e5f79224a1b7e4ccbea1bf2c17346d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Virtual destructor.  <br /></td></tr>
 <tr class="separator:a25e5f79224a1b7e4ccbea1bf2c17346d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Interface for card instance creation. </p>
+<p><a class="el" href="classICardFactory.html" title="Interface for card instance creation.">ICardFactory</a> defines the contract used by runtime systems (e.g., <a class="el" href="classDeckCombat.html" title="Manages all card piles during a single combat.">DeckCombat</a>) to create CardInstances without depending on a concrete factory implementation. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a25e5f79224a1b7e4ccbea1bf2c17346d" name="a25e5f79224a1b7e4ccbea1bf2c17346d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a25e5f79224a1b7e4ccbea1bf2c17346d">&#9670;&#160;</a></span>~ICardFactory()</h2>
 
@@ -141,6 +149,8 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Virtual destructor. </p>
 
 </div>
 </div>
@@ -168,6 +178,15 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Creates a new <a class="el" href="classCardInstance.html" title="Represents a runtime instance of a card during combat.">CardInstance</a> identified by the given card ID. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cardId</td><td>Identifier of the card to instantiate. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Owned <a class="el" href="classCardInstance.html" title="Represents a runtime instance of a card during combat.">CardInstance</a>. </dd></dl>
 
 <p>Implemented in <a class="el" href="classCardFactory.html#ad84658f1bed6a00f1484022899369a82">CardFactory</a>.</p>
 

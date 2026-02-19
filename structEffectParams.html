@@ -97,6 +97,9 @@ $(document).ready(function(){initNavTree('structEffectParams.html',''); initResi
 </div><!--header-->
 <div class="contents">
 
+<p>Numeric parameters used to resolve gameplay effects.  
+ <a href="structEffectParams.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="effectParams_8h_source.html">effectParams.h</a>&gt;</code></p>
 <div class="dynheader">
 Collaboration diagram for EffectParams:</div>
@@ -112,7 +115,11 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:af22dfed5bca4d831bb20c077d590493a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structEffectParams.html#af22dfed5bca4d831bb20c077d590493a">armor</a></td></tr>
 <tr class="separator:af22dfed5bca4d831bb20c077d590493a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Data Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Numeric parameters used to resolve gameplay effects. </p>
+<p><a class="el" href="structEffectParams.html" title="Numeric parameters used to resolve gameplay effects.">EffectParams</a> provides the numeric values consumed by <a class="el" href="classEffect.html" title="Abstract base class for all card effects.">Effect</a> implementations during resolution (e.g., damage, armor).</p>
+<p>The same parameter structure is used for both card effects and enemy moves, allowing <a class="el" href="classEffect.html" title="Abstract base class for all card effects.">Effect</a> behavior to remain stateless and reusable. </p>
+</div><h2 class="groupheader">Member Data Documentation</h2>
 <a id="af22dfed5bca4d831bb20c077d590493a" name="af22dfed5bca4d831bb20c077d590493a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af22dfed5bca4d831bb20c077d590493a">&#9670;&#160;</a></span>armor</h2>
 

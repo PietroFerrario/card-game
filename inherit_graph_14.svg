@@ -11,7 +11,7 @@
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<g id="a_node1"><a xlink:href="classEntity.html" target="_top" xlink:title=" ">
+<g id="a_node1"><a xlink:href="classEntity.html" target="_top" xlink:title="Base class representing a combat&#45;capable entity.">
 <polygon fill="white" stroke="#666666" points="45,-37 0,-37 0,-18 45,-18 45,-37"/>
 <text text-anchor="middle" x="22.5" y="-25" font-family="Helvetica,sans-Serif" font-size="10.00">Entity</text>
 </a>
@@ -20,7 +20,7 @@
 <!-- Node1 -->
 <g id="node2" class="node">
 <title>Node1</title>
-<g id="a_node2"><a xlink:href="classEnemy.html" target="_top" xlink:title=" ">
+<g id="a_node2"><a xlink:href="classEnemy.html" target="_top" xlink:title="Base class for enemies with a predefined move sequence.">
 <polygon fill="white" stroke="#666666" points="131,-56 81,-56 81,-37 131,-37 131,-56"/>
 <text text-anchor="middle" x="106" y="-44" font-family="Helvetica,sans-Serif" font-size="10.00">Enemy</text>
 </a>
@@ -35,7 +35,7 @@
 <!-- Node3 -->
 <g id="node4" class="node">
 <title>Node3</title>
-<g id="a_node4"><a xlink:href="classPlayer.html" target="_top" xlink:title=" ">
+<g id="a_node4"><a xlink:href="classPlayer.html" target="_top" xlink:title="Player&#45;controlled entity with a persistent deck.">
 <polygon fill="white" stroke="#666666" points="129.5,-19 82.5,-19 82.5,0 129.5,0 129.5,-19"/>
 <text text-anchor="middle" x="106" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">Player</text>
 </a>

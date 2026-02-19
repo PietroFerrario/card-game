@@ -97,6 +97,9 @@ $(document).ready(function(){initNavTree('classCardRenderer.html',''); initResiz
 </div><!--header-->
 <div class="contents">
 
+<p>Renders a <a class="el" href="classCardInstance.html" title="Represents a runtime instance of a card during combat.">CardInstance</a> as a fixed-size ASCII grid.  
+ <a href="classCardRenderer.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="cardRenderer_8h_source.html">cardRenderer.h</a>&gt;</code></p>
 <div class="dynheader">
 Collaboration diagram for CardRenderer:</div>
@@ -110,11 +113,17 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a8b69b406b0743113d6369c2ef6ed9b59"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCardRenderer.html#a8b69b406b0743113d6369c2ef6ed9b59">CardRenderer</a> ()=default</td></tr>
 <tr class="separator:a8b69b406b0743113d6369c2ef6ed9b59"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8115d706eddd177073d55eb111ec2e5a"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCardRenderer.html#a8115d706eddd177073d55eb111ec2e5a">renderCard</a> (const <a class="el" href="classCardInstance.html">CardInstance</a> &amp;cardToRender)</td></tr>
+<tr class="memdesc:a8115d706eddd177073d55eb111ec2e5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renders the given card into an ASCII grid.  <br /></td></tr>
 <tr class="separator:a8115d706eddd177073d55eb111ec2e5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4215ffb39f24899a5ab9d62db4c5b513"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCardRenderer.html#a4215ffb39f24899a5ab9d62db4c5b513">getCardTemplateWidth</a> ()</td></tr>
+<tr class="memdesc:a4215ffb39f24899a5ab9d62db4c5b513"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the fixed width of the rendered card template.  <br /></td></tr>
 <tr class="separator:a4215ffb39f24899a5ab9d62db4c5b513"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Renders a <a class="el" href="classCardInstance.html" title="Represents a runtime instance of a card during combat.">CardInstance</a> as a fixed-size ASCII grid. </p>
+<p><a class="el" href="classCardRenderer.html" title="Renders a CardInstance as a fixed-size ASCII grid.">CardRenderer</a> produces a vector of strings representing a bordered card template populated with the card's name, stats, and description. Layout is slot-based: text is fit to fixed-width slots and written into the grid.</p>
+<p>The output grid has a constant width and height defined by the renderer. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a8b69b406b0743113d6369c2ef6ed9b59" name="a8b69b406b0743113d6369c2ef6ed9b59"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8b69b406b0743113d6369c2ef6ed9b59">&#9670;&#160;</a></span>CardRenderer()</h2>
 
@@ -164,6 +173,8 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Returns the fixed width of the rendered card template. </p>
+
 </div>
 </div>
 <a id="a8115d706eddd177073d55eb111ec2e5a" name="a8115d706eddd177073d55eb111ec2e5a"></a>
@@ -181,6 +192,15 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Renders the given card into an ASCII grid. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cardToRender</td><td>Card instance to render. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Vector of strings where each entry is one row of the card. </dd></dl>
 
 </div>
 </div>

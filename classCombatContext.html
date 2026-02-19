@@ -97,6 +97,9 @@ $(document).ready(function(){initNavTree('classCombatContext.html',''); initResi
 </div><!--header-->
 <div class="contents">
 
+<p>Execution context for resolving combat effects.  
+ <a href="classCombatContext.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="combatContext_8h_source.html">combatContext.h</a>&gt;</code></p>
 <div class="dynheader">
 Collaboration diagram for CombatContext:</div>
@@ -108,11 +111,18 @@ Collaboration diagram for CombatContext:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aa0a7c5344b49416979ef6a7a47653ce2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCombatContext.html#aa0a7c5344b49416979ef6a7a47653ce2">CombatContext</a> (<a class="el" href="classCombatSystem.html">CombatSystem</a> &amp;combatSystem, <a class="el" href="classEntity.html">Entity</a> &amp;actor, <a class="el" href="classEntity.html">Entity</a> &amp;opponent)</td></tr>
+<tr class="memdesc:aa0a7c5344b49416979ef6a7a47653ce2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a context for effect resolution.  <br /></td></tr>
 <tr class="separator:aa0a7c5344b49416979ef6a7a47653ce2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5ed170813b89f1fb8b838f093115a5cd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCombatContext.html#a5ed170813b89f1fb8b838f093115a5cd">gainArmor</a> (<a class="el" href="combatTarget_8h.html#a31488d29805a596498c0234ae392d35d">Target</a> target, int amount)</td></tr>
+<tr class="memdesc:a5ed170813b89f1fb8b838f093115a5cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Grants armor to the selected logical target.  <br /></td></tr>
 <tr class="separator:a5ed170813b89f1fb8b838f093115a5cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Execution context for resolving combat effects. </p>
+<p><a class="el" href="classCombatContext.html" title="Execution context for resolving combat effects.">CombatContext</a> binds an actor/opponent relationship for the current action and provides a narrow set of combat operations that effects may invoke.</p>
+<p>Effects target using logical selectors (Target::Self / Target::Opponent). <a class="el" href="classCombatContext.html" title="Execution context for resolving combat effects.">CombatContext</a> resolves these selectors to <a class="el" href="classEntity.html" title="Base class representing a combat-capable entity.">Entity</a> references and forwards requests to <a class="el" href="classCombatSystem.html" title="Central authority for combat rules and state mutation.">CombatSystem</a>, which owns the combat rules.</p>
+<p><a class="el" href="classCombatContext.html" title="Execution context for resolving combat effects.">CombatContext</a> does not own any objects; it stores references that must outlive it. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aa0a7c5344b49416979ef6a7a47653ce2" name="aa0a7c5344b49416979ef6a7a47653ce2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa0a7c5344b49416979ef6a7a47653ce2">&#9670;&#160;</a></span>CombatContext()</h2>
 
@@ -153,6 +163,16 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Constructs a context for effect resolution. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">combatSystem</td><td>Combat rules engine used to apply mutations. </td></tr>
+    <tr><td class="paramname">actor</td><td><a class="el" href="classEntity.html" title="Base class representing a combat-capable entity.">Entity</a> performing the current action (Target::Self). </td></tr>
+    <tr><td class="paramname">opponent</td><td><a class="el" href="classEntity.html" title="Base class representing a combat-capable entity.">Entity</a> opposing the actor (Target::Opponent). </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -181,6 +201,16 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Grants armor to the selected logical target. </p>
+<p>Resolves the target (self/opponent) and forwards the operation to <a class="el" href="classCombatSystem.html" title="Central authority for combat rules and state mutation.">CombatSystem</a>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">target</td><td>Logical target selector. </td></tr>
+    <tr><td class="paramname">amount</td><td>Armor amount to add. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

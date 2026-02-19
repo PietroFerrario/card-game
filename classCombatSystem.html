@@ -97,6 +97,9 @@ $(document).ready(function(){initNavTree('classCombatSystem.html',''); initResiz
 </div><!--header-->
 <div class="contents">
 
+<p>Central authority for combat rules and state mutation.  
+ <a href="classCombatSystem.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="combatSystem_8h_source.html">combatSystem.h</a>&gt;</code></p>
 <div class="dynheader">
 Collaboration diagram for CombatSystem:</div>
@@ -108,17 +111,26 @@ Collaboration diagram for CombatSystem:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a4bc9281ac194aaf1c5c376383468ad59"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCombatSystem.html#a4bc9281ac194aaf1c5c376383468ad59">gainArmor</a> (<a class="el" href="classEntity.html">Entity</a> &amp;target, int amount)</td></tr>
+<tr class="memdesc:a4bc9281ac194aaf1c5c376383468ad59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Grants armor to the target entity.  <br /></td></tr>
 <tr class="separator:a4bc9281ac194aaf1c5c376383468ad59"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a475b8c70105815742e483ae8d51aaeaa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structDamageResult.html">DamageResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCombatSystem.html#a475b8c70105815742e483ae8d51aaeaa">dealDamage</a> (const <a class="el" href="structDamageInfo.html">DamageInfo</a> &amp;damageInfo)</td></tr>
+<tr class="memdesc:a475b8c70105815742e483ae8d51aaeaa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resolves damage against a target according to combat rules.  <br /></td></tr>
 <tr class="separator:a475b8c70105815742e483ae8d51aaeaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a38e5e5ae2c1de24495801c0117df3519"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCombatSystem.html#a38e5e5ae2c1de24495801c0117df3519">heal</a> (<a class="el" href="classEntity.html">Entity</a> &amp;target, int amount)</td></tr>
+<tr class="memdesc:a38e5e5ae2c1de24495801c0117df3519"><td class="mdescLeft">&#160;</td><td class="mdescRight">Heals the target entity by the specified amount.  <br /></td></tr>
 <tr class="separator:a38e5e5ae2c1de24495801c0117df3519"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8aa02431d41431c468080ea9589824f1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCombatSystem.html#a8aa02431d41431c468080ea9589824f1">resetArmor</a> (<a class="el" href="classEntity.html">Entity</a> &amp;target)</td></tr>
+<tr class="memdesc:a8aa02431d41431c468080ea9589824f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets the target entity's armor to zero.  <br /></td></tr>
 <tr class="separator:a8aa02431d41431c468080ea9589824f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4c99bb4a33ee52d6e6f1947362b02942"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCombatSystem.html#a4c99bb4a33ee52d6e6f1947362b02942">isDead</a> (const <a class="el" href="classEntity.html">Entity</a> &amp;target)</td></tr>
+<tr class="memdesc:a4c99bb4a33ee52d6e6f1947362b02942"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks whether the target entity is dead.  <br /></td></tr>
 <tr class="separator:a4c99bb4a33ee52d6e6f1947362b02942"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Central authority for combat rules and state mutation. </p>
+<p><a class="el" href="classCombatSystem.html" title="Central authority for combat rules and state mutation.">CombatSystem</a> implements all rule-driven combat operations such as damage, armor handling, healing, and death checks.</p>
+<p>Gameplay logic (effects, match orchestration) must not mutate <a class="el" href="classEntity.html" title="Base class representing a combat-capable entity.">Entity</a> state directly. All combat-related mutations should be performed through this class. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a475b8c70105815742e483ae8d51aaeaa" name="a475b8c70105815742e483ae8d51aaeaa"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a475b8c70105815742e483ae8d51aaeaa">&#9670;&#160;</a></span>dealDamage()</h2>
 
@@ -134,6 +146,16 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Resolves damage against a target according to combat rules. </p>
+<p>Applies armor interaction based on the specified damage resolution mode and returns a detailed result describing the outcome.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">damageInfo</td><td>Damage request (amount, target, resolution mode). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="structDamageResult.html">DamageResult</a> describing blocked damage, HP damage, and death state. </dd></dl>
 
 </div>
 </div>
@@ -163,6 +185,15 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Grants armor to the target entity. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">target</td><td><a class="el" href="classEntity.html" title="Base class representing a combat-capable entity.">Entity</a> receiving the armor. </td></tr>
+    <tr><td class="paramname">amount</td><td>Armor amount to add. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="a38e5e5ae2c1de24495801c0117df3519" name="a38e5e5ae2c1de24495801c0117df3519"></a>
@@ -191,6 +222,15 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Heals the target entity by the specified amount. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">target</td><td><a class="el" href="classEntity.html" title="Base class representing a combat-capable entity.">Entity</a> to heal. </td></tr>
+    <tr><td class="paramname">amount</td><td>HP amount to restore. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="a4c99bb4a33ee52d6e6f1947362b02942" name="a4c99bb4a33ee52d6e6f1947362b02942"></a>
@@ -209,6 +249,15 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Checks whether the target entity is dead. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">target</td><td><a class="el" href="classEntity.html" title="Base class representing a combat-capable entity.">Entity</a> to check. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the entity's HP is zero or below. </dd></dl>
+
 </div>
 </div>
 <a id="a8aa02431d41431c468080ea9589824f1" name="a8aa02431d41431c468080ea9589824f1"></a>
@@ -226,6 +275,14 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Resets the target entity's armor to zero. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">target</td><td><a class="el" href="classEntity.html" title="Base class representing a combat-capable entity.">Entity</a> whose armor is reset. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

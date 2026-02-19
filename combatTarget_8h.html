@@ -109,6 +109,7 @@ Enumerations</h2></td></tr>
 <tr class="memitem:a31488d29805a596498c0234ae392d35d"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="combatTarget_8h.html#a31488d29805a596498c0234ae392d35d">Target</a> { <a class="el" href="combatTarget_8h.html#a31488d29805a596498c0234ae392d35daad6e7652b1bdfb38783486c2c3d5e806">Self</a>
 , <a class="el" href="combatTarget_8h.html#a31488d29805a596498c0234ae392d35da857ccf501e3d5cb92473fa1eb4d9fee5">Opponent</a>
  }</td></tr>
+<tr class="memdesc:a31488d29805a596498c0234ae392d35d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logical target selector used during effect resolution.  <a href="combatTarget_8h.html#a31488d29805a596498c0234ae392d35d">More...</a><br /></td></tr>
 <tr class="separator:a31488d29805a596498c0234ae392d35d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
@@ -131,6 +132,13 @@ Enumerations</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Logical target selector used during effect resolution. </p>
+<p>Target represents an abstract combat target relative to the current action:</p><ul>
+<li>Self refers to the entity performing the action.</li>
+<li>Opponent refers to the opposing entity.</li>
+</ul>
+<p>Logical targets are resolved to concrete entities by <a class="el" href="classCombatContext.html" title="Execution context for resolving combat effects.">CombatContext</a>. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a31488d29805a596498c0234ae392d35daad6e7652b1bdfb38783486c2c3d5e806" name="a31488d29805a596498c0234ae392d35daad6e7652b1bdfb38783486c2c3d5e806"></a>Self&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a31488d29805a596498c0234ae392d35da857ccf501e3d5cb92473fa1eb4d9fee5" name="a31488d29805a596498c0234ae392d35da857ccf501e3d5cb92473fa1eb4d9fee5"></a>Opponent&#160;</td><td class="fielddoc"></td></tr>

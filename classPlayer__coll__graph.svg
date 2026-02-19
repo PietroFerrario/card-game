@@ -11,7 +11,7 @@
 <!-- Node1 -->
 <g id="node1" class="node">
 <title>Node1</title>
-<g id="a_node1"><a xlink:title=" ">
+<g id="a_node1"><a xlink:title="Player&#45;controlled entity with a persistent deck.">
 <polygon fill="#999999" stroke="#666666" points="0,-0.5 0,-101.5 107,-101.5 107,-0.5 0,-0.5"/>
 <text text-anchor="middle" x="53.5" y="-89.5" font-family="Helvetica,sans-Serif" font-size="10.00">Player</text>
 <polyline fill="none" stroke="#666666" points="0,-82.5 107,-82.5 "/>
@@ -28,7 +28,7 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="classEntity.html" target="_top" xlink:title=" ">
+<g id="a_node2"><a xlink:href="classEntity.html" target="_top" xlink:title="Base class representing a combat&#45;capable entity.">
 <polygon fill="white" stroke="#666666" points="0,-139.5 0,-295.5 107,-295.5 107,-139.5 0,-139.5"/>
 <text text-anchor="middle" x="53.5" y="-283.5" font-family="Helvetica,sans-Serif" font-size="10.00">Entity</text>
 <polyline fill="none" stroke="#666666" points="0,-276.5 107,-276.5 "/>

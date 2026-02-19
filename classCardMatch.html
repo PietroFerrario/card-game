@@ -97,7 +97,7 @@ $(document).ready(function(){initNavTree('classCardMatch.html',''); initResizabl
 </div><!--header-->
 <div class="contents">
 
-<p>Orchestrates a single combat encounter between a player and an enemy.  
+<p>Orchestrates a single combat encounter between one player and one enemy.  
  <a href="classCardMatch.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="cardmatch_8h_source.html">cardmatch.h</a>&gt;</code></p>
@@ -111,29 +111,31 @@ Collaboration diagram for CardMatch:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a977765d9f0cd90e79608eddc8c0a03b5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCardMatch.html#a977765d9f0cd90e79608eddc8c0a03b5">CardMatch</a> (<a class="el" href="classPlayer.html">Player</a> &amp;player, <a class="el" href="classEnemy.html">Enemy</a> &amp;enemy)</td></tr>
-<tr class="memdesc:a977765d9f0cd90e79608eddc8c0a03b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new Card Match object.  <br /></td></tr>
+<tr class="memdesc:a977765d9f0cd90e79608eddc8c0a03b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a match for the given player and enemy.  <br /></td></tr>
 <tr class="separator:a977765d9f0cd90e79608eddc8c0a03b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abcb652a15f8f273427ce359fa03143ef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCardMatch.html#abcb652a15f8f273427ce359fa03143ef">drawMultipleCards</a> (int amount)</td></tr>
-<tr class="memdesc:abcb652a15f8f273427ce359fa03143ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws multiple cards: moves cards from the combat deck into the player's hand.  <br /></td></tr>
+<tr class="memdesc:abcb652a15f8f273427ce359fa03143ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws multiple cards into the player's hand.  <br /></td></tr>
 <tr class="separator:abcb652a15f8f273427ce359fa03143ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0c0c130ca87f453cf1283fb41e8a6a42"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCardMatch.html#a0c0c130ca87f453cf1283fb41e8a6a42">playCard</a> (int handIndex)</td></tr>
-<tr class="memdesc:a0c0c130ca87f453cf1283fb41e8a6a42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Plays a card from the hand and resolves all its effects.  <br /></td></tr>
+<tr class="memdesc:a0c0c130ca87f453cf1283fb41e8a6a42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Plays a card from the hand and resolves all of its effects.  <br /></td></tr>
 <tr class="separator:a0c0c130ca87f453cf1283fb41e8a6a42"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7932e3e85d254f12a6690530b0bed17a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCardMatch.html#a7932e3e85d254f12a6690530b0bed17a">gainArmor</a> (int defense)</td></tr>
-<tr class="memdesc:a7932e3e85d254f12a6690530b0bed17a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Grants armor to the player.  <br /></td></tr>
+<tr class="memdesc:a7932e3e85d254f12a6690530b0bed17a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Legacy helper that directly increases the player's armor.  <br /></td></tr>
 <tr class="separator:a7932e3e85d254f12a6690530b0bed17a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a15dd37b9798f747a609d12e5dda4b21a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCardMatch.html#a15dd37b9798f747a609d12e5dda4b21a">enemyTurn</a> ()</td></tr>
+<tr class="memdesc:a15dd37b9798f747a609d12e5dda4b21a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Executes the enemy's next move and resolves its effects.  <br /></td></tr>
 <tr class="separator:a15dd37b9798f747a609d12e5dda4b21a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Orchestrates a single combat encounter between a player and an enemy. </p>
-<p><a class="el" href="classCardMatch.html" title="Orchestrates a single combat encounter between a player and an enemy.">CardMatch</a> coordinates the combat flow at a high level:</p><ul>
-<li>drawing cards into the player's hand,</li>
-<li>playing a card from the hand,</li>
-<li>resolving the card's effects,</li>
-<li>updating player/enemy combat state (e.g., armor).</li>
+<div class="textblock"><p>Orchestrates a single combat encounter between one player and one enemy. </p>
+<p><a class="el" href="classCardMatch.html" title="Orchestrates a single combat encounter between one player and one enemy.">CardMatch</a> coordinates encounter-level flow:</p><ul>
+<li>builds a combat deck from the player's persistent deck (<a class="el" href="classDeckCombat.html" title="Manages all card piles during a single combat.">DeckCombat</a> + <a class="el" href="classCardFactory.html" title="Factory responsible for creating runtime CardInstances.">CardFactory</a>)</li>
+<li>draws cards into the player's hand</li>
+<li>resolves a played card by executing its ordered <a class="el" href="classEffect.html" title="Abstract base class for all card effects.">Effect</a> list</li>
+<li>runs the enemy turn by resolving the next <a class="el" href="structEnemyMove.html" title="Describes a single enemy action resolved during combat.">EnemyMove</a></li>
 </ul>
-<p><a class="el" href="classCardMatch.html" title="Orchestrates a single combat encounter between a player and an enemy.">CardMatch</a> does not own the <a class="el" href="classPlayer.html">Player</a> or <a class="el" href="classEnemy.html">Enemy</a> instances; it stores references to objects managed elsewhere. </p>
+<p><a class="el" href="classCardMatch.html" title="Orchestrates a single combat encounter between one player and one enemy.">CardMatch</a> owns the runtime combat deck (<a class="el" href="classDeckCombat.html" title="Manages all card piles during a single combat.">DeckCombat</a>) and the rules engine (<a class="el" href="classCombatSystem.html" title="Central authority for combat rules and state mutation.">CombatSystem</a>). <a class="el" href="classPlayer.html" title="Player-controlled entity with a persistent deck.">Player</a> and <a class="el" href="classEnemy.html" title="Base class for enemies with a predefined move sequence.">Enemy</a> objects are referenced and must outlive the <a class="el" href="classCardMatch.html" title="Orchestrates a single combat encounter between one player and one enemy.">CardMatch</a>.</p>
+<p><a class="el" href="classEffect.html" title="Abstract base class for all card effects.">Effect</a> resolution is performed using <a class="el" href="classCombatContext.html" title="Execution context for resolving combat effects.">CombatContext</a>, which routes effect requests to <a class="el" href="classCombatSystem.html" title="Central authority for combat rules and state mutation.">CombatSystem</a>. See combat_effect_pipeline for the full resolution flow. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a977765d9f0cd90e79608eddc8c0a03b5" name="a977765d9f0cd90e79608eddc8c0a03b5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a977765d9f0cd90e79608eddc8c0a03b5">&#9670;&#160;</a></span>CardMatch()</h2>
@@ -161,11 +163,12 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Construct a new Card Match object. </p>
+<p>Constructs a match for the given player and enemy. </p>
+<p>Builds a fresh <a class="el" href="classDeckCombat.html" title="Manages all card piles during a single combat.">DeckCombat</a> from the player's persistent deck.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">player</td><td><a class="el" href="classPlayer.html">Player</a> partecipating in the encounter (must outlive the <a class="el" href="classCardMatch.html" title="Orchestrates a single combat encounter between a player and an enemy.">CardMatch</a>). </td></tr>
-    <tr><td class="paramname">enemy</td><td><a class="el" href="classEnemy.html">Enemy</a> partecipating in the encounter (must outlive the <a class="el" href="classCardMatch.html" title="Orchestrates a single combat encounter between a player and an enemy.">CardMatch</a>). </td></tr>
+    <tr><td class="paramname">player</td><td><a class="el" href="classPlayer.html" title="Player-controlled entity with a persistent deck.">Player</a> participating in the encounter (must outlive the <a class="el" href="classCardMatch.html" title="Orchestrates a single combat encounter between one player and one enemy.">CardMatch</a>). </td></tr>
+    <tr><td class="paramname">enemy</td><td><a class="el" href="classEnemy.html" title="Base class for enemies with a predefined move sequence.">Enemy</a> participating in the encounter (must outlive the <a class="el" href="classCardMatch.html" title="Orchestrates a single combat encounter between one player and one enemy.">CardMatch</a>). </td></tr>
   </table>
   </dd>
 </dl>
@@ -189,11 +192,11 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Draws multiple cards: moves cards from the combat deck into the player's hand. </p>
-<p>Drawing behaviour (empty deck handling) delegated to <a class="el" href="classDeckCombat.html" title="Manages all card piles during a single combat.">DeckCombat</a>.</p>
+<p>Draws multiple cards into the player's hand. </p>
+<p>Delegates empty-deck behavior to <a class="el" href="classDeckCombat.html" title="Manages all card piles during a single combat.">DeckCombat</a>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">amount</td><td>Number of cards to draw. Non-positive: no action. </td></tr>
+    <tr><td class="paramname">amount</td><td>Number of cards to draw. If amount &lt;= 0, no action is taken. </td></tr>
   </table>
   </dd>
 </dl>
@@ -215,6 +218,9 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Executes the enemy's next move and resolves its effects. </p>
+<p>The enemy provides an <a class="el" href="structEnemyMove.html" title="Describes a single enemy action resolved during combat.">EnemyMove</a> via <a class="el" href="classEnemy.html#abda076b0b306caba2eb5f769c35e1d4c" title="Returns the next move in the enemy&#39;s move sequence.">Enemy::nextMove()</a>. Effects are resolved in order using a <a class="el" href="classCombatContext.html" title="Execution context for resolving combat effects.">CombatContext</a> where the enemy is the actor and the player is the opponent. </p>
+
 </div>
 </div>
 <a id="a7932e3e85d254f12a6690530b0bed17a" name="a7932e3e85d254f12a6690530b0bed17a"></a>
@@ -233,14 +239,8 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Grants armor to the player. </p>
-<p>Typically triggered b an effect defined in a <a class="el" href="classCardDefinition.html" title="Immutable static data representing a card type.">CardDefinition</a>. The amount of armor granted is specified by the Card's armor value.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">defense</td><td>Defense amount of armor to add. </td></tr>
-  </table>
-  </dd>
-</dl>
+<p>Legacy helper that directly increases the player's armor. </p>
+<dl class="section warning"><dt>Warning</dt><dd>This bypasses <a class="el" href="classCombatSystem.html" title="Central authority for combat rules and state mutation.">CombatSystem</a> and exists only for older code paths. Current effects should grant armor via CombatContext/CombatSystem. </dd></dl>
 
 </div>
 </div>
@@ -260,11 +260,12 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Plays a card from the hand and resolves all its effects. </p>
-<p>If empty hand or invalid index: no action. (logs in debug, temporary). Effects are applied in the order defined by the card's <a class="el" href="classCardDefinition.html" title="Immutable static data representing a card type.">CardDefinition</a>.</p>
+<p>Plays a card from the hand and resolves all of its effects. </p>
+<p>The selected card is removed from the hand immediately via <a class="el" href="classDeckCombat.html#a165d2658e0726a0ec565a70afda62dbd" title="Removes a card from the hand and transfers ownership to the caller.">DeckCombat::takeFromHand()</a> Effects are then resolved in the order defined by the card's <a class="el" href="classCardDefinition.html" title="Immutable static data representing a card type.">CardDefinition</a>. After resolution, the card is moved to the discard pile.</p>
+<p>If the hand index is invalid, no action is taken.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">handIndex</td><td>Index of the card in the handPile. </td></tr>
+    <tr><td class="paramname">handIndex</td><td>Zero-based index of the card in the hand. </td></tr>
   </table>
   </dd>
 </dl>

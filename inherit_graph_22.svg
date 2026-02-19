@@ -11,7 +11,7 @@
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<g id="a_node1"><a xlink:href="classText.html" target="_top" xlink:title=" ">
+<g id="a_node1"><a xlink:href="classText.html" target="_top" xlink:title="Lightweight text lookup service backed by a JSON file.">
 <polygon fill="white" stroke="#666666" points="37,-19 0,-19 0,0 37,0 37,-19"/>
 <text text-anchor="middle" x="18.5" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">Text</text>
 </a>
