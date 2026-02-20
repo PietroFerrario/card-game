@@ -25,6 +25,17 @@
 var NAVTREE =
 [
   [ "CardGame", "index.html", [
+    [ "Internal Architecture Documentation", "index.html", "index" ],
+    [ "Combat Effect Resolution Pipeline", "combat_effect_pipeline.html", [
+      [ "Overview", "combat_effect_pipeline.html#overview", null ],
+      [ "Player card resolution", "combat_effect_pipeline.html#flow", null ],
+      [ "Effect data model", "combat_effect_pipeline.html#data", null ],
+      [ "Targeting model", "combat_effect_pipeline.html#targeting", null ],
+      [ "Authority and mutation", "combat_effect_pipeline.html#authority", null ],
+      [ "Ordering and visibility", "combat_effect_pipeline.html#ordering", null ],
+      [ "Ownership and lifetimes", "combat_effect_pipeline.html#ownership", null ],
+      [ "Extension points", "combat_effect_pipeline.html#extension", null ]
+    ] ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.html", [
@@ -60,7 +71,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "ICardFactory_8h.html",
-"structDeckEntry.html#a84543f00f630aa87b49a323462db7943"
+"player_8cpp.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

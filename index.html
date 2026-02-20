@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.6"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>CardGame: Main Page</title>
+<title>CardGame: Internal Architecture Documentation</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -89,10 +89,30 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 </div>
 </div>
 
-<div class="header">
-  <div class="headertitle"><div class="title">CardGame Documentation</div></div>
+<div><div class="header">
+  <div class="headertitle"><div class="title">Internal Architecture Documentation </div></div>
 </div><!--header-->
 <div class="contents">
+<div class="textblock"><p>This documentation describes the internal structure and system design of the deckbuilding game prototype.</p>
+<p>The focus is on gameplay systems, ownership boundaries, and extensibility. Presentation details (terminal UI) are considered temporary and are intentionally decoupled from core logic.</p>
+<p>This documentation complements the repository README, which provides an overview of the game concept, scope, and long-term direction.</p>
+<h1><a class="anchor" id="architecture"></a>
+Architecture Overview</h1>
+<p>The codebase is organized around a small number of core gameplay systems:</p>
+<ul>
+<li>Combat orchestration (<a class="el" href="classCardMatch.html" title="Orchestrates a single combat encounter between one player and one enemy.">CardMatch</a>)</li>
+<li>Runtime deck and hand management (<a class="el" href="classDeckCombat.html" title="Manages all card piles during a single combat.">DeckCombat</a>)</li>
+<li>Immutable card definitions vs runtime card instances</li>
+<li>Effect-driven gameplay logic shared by cards and enemies</li>
+<li>Centralized combat rules and state mutation</li>
+</ul>
+<h1><a class="anchor" id="system_docs"></a>
+System Documentation</h1>
+<p>The following pages describe key cross-system behaviors:</p>
+<ul>
+<li><a class="el" href="combat_effect_pipeline.html">Combat Effect Resolution Pipeline</a> </li>
+</ul>
+</div></div><!-- PageDoc -->
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

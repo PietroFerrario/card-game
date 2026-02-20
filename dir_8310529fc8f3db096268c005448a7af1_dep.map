@@ -1,0 +1,19 @@
+<map id="game_system" name="game_system">
+<area shape="rect" id="node1" href="dir_8310529fc8f3db096268c005448a7af1.html" title="game_system" alt="" coords="295,5,409,31"/>
+<area shape="rect" id="node2" href="dir_191f852b87741474e2df76292b1f55c1.html" title="effects" alt="" coords="5,79,72,104"/>
+<area shape="rect" id="edge1-headlabel" href="dir_000009_000005.html" title="1" alt="" coords="87,78,97,93"/>
+<area shape="rect" id="node3" href="dir_61f20e49ac5d6763f7282e8c799f7538.html" title="combat" alt="" coords="97,79,167,104"/>
+<area shape="rect" id="edge2-headlabel" href="dir_000009_000001.html" title="2" alt="" coords="183,74,192,88"/>
+<area shape="rect" id="node4" href="dir_80b2bdf578a5290e4aa877db1f8440ce.html" title="deck" alt="" coords="192,79,245,104"/>
+<area shape="rect" id="edge3-headlabel" href="dir_000009_000002.html" title="1" alt="" coords="256,70,265,85"/>
+<area shape="rect" id="node5" href="dir_9c074b8a3ff180fe0f5e8e7bda80dc8f.html" title="factories" alt="" coords="270,79,349,104"/>
+<area shape="rect" id="edge4-headlabel" href="dir_000009_000008.html" title="1" alt="" coords="328,60,338,75"/>
+<area shape="rect" id="node6" href="dir_b7878ad5ecbf2506f4125b9d34c97e45.html" title="util" alt="" coords="373,79,416,104"/>
+<area shape="rect" id="edge5-headlabel" href="dir_000009_000011.html" title="1" alt="" coords="381,51,390,66"/>
+<area shape="rect" id="node7" href="dir_cf1e9a2fdbb5faae65a2519434ce6869.html" title="cards" alt="" coords="441,79,498,104"/>
+<area shape="rect" id="edge6-headlabel" href="dir_000009_000000.html" title="1" alt="" coords="434,55,444,69"/>
+<area shape="rect" id="node8" href="dir_d691984d1d74be3b164cee16192654be.html" title="entities" alt="" coords="522,79,593,104"/>
+<area shape="rect" id="edge7-headlabel" href="dir_000009_000007.html" title="6" alt="" coords="505,57,514,72"/>
+<area shape="rect" id="node9" href="dir_da5c6b39c0a2f54e57df6799511cd3ab.html" title="ui" alt="" coords="617,79,655,104"/>
+<area shape="rect" id="edge8-headlabel" href="dir_000009_000010.html" title="2" alt="" coords="597,62,606,76"/>
+</map>
