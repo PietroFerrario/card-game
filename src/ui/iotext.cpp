@@ -13,6 +13,40 @@ void IOText::promptln(std::string& line, std::string_view prompt)
     getln(line);
 }
 
+int IOText::promptInt(std::string_view prompt, int validLimit)
+{
+    int userInput{};
+
+    while (true)
+    {
+        print(prompt);
+        m_in >> userInput;
+
+        if (m_in.fail())
+        {
+            m_in.clear();
+            m_in.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+            continue;
+        }
+
+        m_in.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        if (m_in.gcount() > 1)
+        {
+            continue;
+        }
+
+        if (userInput <= 0 || userInput > validLimit)
+        {
+            print("Invalid selection. Try again.\n");
+            continue;
+        }
+
+        break;
+    }
+
+    return userInput;
+}
+
 void IOText::printCards(const std::vector<std::string>& cardToPrintGrid)
 {
     for (const auto& line : cardToPrintGrid)

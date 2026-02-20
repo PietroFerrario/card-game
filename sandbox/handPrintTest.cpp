@@ -34,10 +34,6 @@ int main()
     mainDeckCombat.drawCard();
     mainDeckCombat.drawCard();
 
-    io.print("Showing a single card: \n");
-    io.printCards(cardRenderer.renderCard(mainDeckCombat.getCardInHand(0)));
-    io.print("\n");
-
     io.print("Showing the full player hand: \n");
     io.printHand(handRenderer.renderHand(mainDeckCombat.getHandView()));
 

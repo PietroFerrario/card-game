@@ -36,6 +36,8 @@ class IOText
     /// @brief Reads a line of input into the given string.
     void getln(std::string& line);
 
+    int promptInt(std::string_view prompt, int validLimit);
+
     /**
      * @brief Prints a prompt and reads a line of input.
      *

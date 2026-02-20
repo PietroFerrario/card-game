@@ -6,6 +6,9 @@
 #include "deck/deckCombat.h"
 #include "deck/deckEntry.h"
 #include "deck/deckPlayer.h"
+#include "ui/handRenderer.h"
+#include "ui/iotext.h"
+#include "ui/terminaMatchView.h"
 
 int main()
 {
@@ -22,8 +25,11 @@ int main()
     std::cout << "Enemy name: " << pack.getName() << "\n";
     std::cout << "\n";
 
+    IOText io{std::cout, std::cin};
+    TerminalMatchView terminalMatchView{io};
+
     std::cout << "Instantiating CardMatch from the Player and the Enemy:\n";
-    CardMatch cardMatch{mainPlayer, pack};
+    CardMatch cardMatch{terminalMatchView, mainPlayer, pack};
     std::cout << "\n";
 
     std::cout << "Drawing 2 cards:\n";

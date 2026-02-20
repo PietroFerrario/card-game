@@ -1,6 +1,7 @@
 #include "cardMatch.h"
 #include "cards/CardInstance.h"
 #include "cards/cardDefinition.h"
+#include "cassert"
 #include "combat/combatContext.h"
 #include "effects/effect.h"
 #include "entities/enemies/enemy.h"
@@ -8,8 +9,8 @@
 #include "entities/player.h"
 #include "util/debug.h"
 
-CardMatch::CardMatch(Player& player, Enemy& enemy)
-    : m_player{player}, m_enemy{enemy}, m_cardFactory{},
+CardMatch::CardMatch(IMatchView& matchView, Player& player, Enemy& enemy)
+    : m_matchView{matchView}, m_player{player}, m_enemy{enemy}, m_cardFactory{},
       m_deckCombat{m_player.getDeckPlayer(), m_cardFactory}
 {
 }
@@ -50,6 +51,65 @@ void CardMatch::playCard(int handIndex)
                                                   << ".");
 
     m_deckCombat.discard(std::move(cardBeingPlayed));
+}
+
+void CardMatch::spendAction(TurnData& turnData)
+{
+    assert(turnData.playerRemainingActions > 0 && "Trying to spend an action with 0 remaining");
+    --turnData.playerRemainingActions;
+}
+
+void CardMatch::reduceAction(TurnData& turnData, int amount)
+{
+    if (amount <= 0)
+        return;
+
+    turnData.playerRemainingActions = std::max(0, turnData.playerRemainingActions - amount);
+}
+
+void CardMatch::turnLoop()
+{
+    DEBUG_LOG("Starting turn loop");
+    while (m_matchData.matchState == MatchState::Running)
+    {
+        DEBUG_LOG("Match state: Running. Turn continues");
+        TurnData turnData;
+        playerTurn(turnData);
+        enemyTurn();
+        // damagePhase();
+        // resetPhase();
+    }
+}
+
+bool CardMatch::canPlayerAct(TurnData& currentTurnData)
+{
+    DEBUG_LOG("Checking is the player can act in this turn");
+    return currentTurnData.playerRemainingActions > 0 &&
+           static_cast<int>(m_deckCombat.getHandSize());
+}
+
+void CardMatch::playerTurn(TurnData& currentTurnData)
+{
+    DEBUG_LOG("Starting player turn: Drawing 2 cards");
+    drawMultipleCards(2);
+
+    while (canPlayerAct(currentTurnData))
+    {
+        DEBUG_LOG("Player can act: Start of valid action loop");
+        m_matchView.showMatchState(m_matchData);
+        m_matchView.showTurnState(currentTurnData);
+        m_matchView.showCurrentHand(m_deckCombat.getHandView());
+
+        DEBUG_LOG("Asking which card to play (Inside playerTurn)");
+        int cardToPlayIndex{
+            m_matchView.askCardToPlay(static_cast<int>(m_deckCombat.getHandSize()))};
+        playCard(cardToPlayIndex);
+
+        DEBUG_LOG("Spending one action");
+        spendAction(currentTurnData);
+
+        DEBUG_LOG("End available action loop");
+    }
 }
 
 void CardMatch::enemyTurn()

@@ -3,11 +3,14 @@
 #ifndef CARDMATCH_H
 #define CARDMATCH_H
 
+#include "matchData.h"
+
 #include "combat/combatSystem.h"
 #include "deck/deckCombat.h"
 #include "entities/enemies/enemy.h"
 #include "entities/player.h"
 #include "factories/cardFactory.h"
+#include "ui/IMatchView.h"
 
 class Player;
 class Enemy;
@@ -39,7 +42,7 @@ class CardMatch
      * @param player Player participating in the encounter (must outlive the CardMatch).
      * @param enemy Enemy participating in the encounter (must outlive the CardMatch).
      */
-    CardMatch(Player& player, Enemy& enemy);
+    CardMatch(IMatchView& matchView, Player& player, Enemy& enemy);
 
     /**
      * @brief Draws multiple cards into the player's hand.
@@ -71,6 +74,15 @@ class CardMatch
      */
     void gainArmor(int defense);
 
+    void spendAction(TurnData& turnData);
+    void reduceAction(TurnData& turnData, int amount);
+
+    void turnLoop();
+
+    void playerTurn(TurnData& currentTurnData);
+
+    bool canPlayerAct(TurnData& currentTurnData);
+
     /**
      * @brief Executes the enemy's next move and resolves its effects.
      *
@@ -80,6 +92,8 @@ class CardMatch
     void enemyTurn();
 
   private:
+    IMatchView& m_matchView;
+
     Player& m_player; ///< Non-owning reference to the player in the encounter.
     Enemy& m_enemy;   ///< Non-owning reference to the enemy in the encounter.
 
@@ -88,6 +102,8 @@ class CardMatch
     DeckCombat m_deckCombat; ///< Manage draw/discard/piles during combat.
 
     CombatSystem m_combatSystem; ///< Applies combat rules and state mutation.
+
+    MatchData m_matchData;
 };
 
 #endif
