@@ -24,3 +24,5 @@ void TerminalMatchView::showMatchState(MatchData& matchData)
 {
     m_io.println(std::format("Current turn: {}", matchData.turnNumber));
 }
+
+void TerminalMatchView::showMessage() {}

@@ -108,7 +108,7 @@ void CardMatch::playerTurn(TurnData& currentTurnData)
         DEBUG_LOG("Spending one action");
         spendAction(currentTurnData);
 
-        DEBUG_LOG("End available action loop");
+        DEBUG_LOG("End action action loop");
     }
 }
 
