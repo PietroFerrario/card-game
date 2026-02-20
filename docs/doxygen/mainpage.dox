@@ -1,0 +1,28 @@
+/**
+ * @mainpage Internal Architecture Documentation
+ *
+ * This documentation describes the internal structure and system design of the
+ * deckbuilding game prototype.
+ *
+ * The focus is on gameplay systems, ownership boundaries, and extensibility.
+ * Presentation details (terminal UI) are considered temporary and are intentionally
+ * decoupled from core logic.
+ *
+ * This documentation complements the repository README, which provides an overview
+ * of the game concept, scope, and long-term direction.
+ *
+ * @section architecture Architecture Overview
+ * The codebase is organized around a small number of core gameplay systems:
+ *
+ * - Combat orchestration (CardMatch)
+ * - Runtime deck and hand management (DeckCombat)
+ * - Immutable card definitions vs runtime card instances
+ * - Effect-driven gameplay logic shared by cards and enemies
+ * - Centralized combat rules and state mutation
+ *
+ * @section system_docs System Documentation
+ * The following pages describe key cross-system behaviors:
+ *
+ * - @ref combat_effect_pipeline "Combat Effect Resolution Pipeline"
+ *
+ */

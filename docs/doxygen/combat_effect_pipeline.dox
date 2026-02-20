@@ -1,0 +1,80 @@
+/**
+ * @page combat_effect_pipeline Combat Effect Resolution Pipeline
+ *
+ * This page documents how gameplay effects are resolved during combat, and how
+ * responsibilities are split across the core combat components.
+ *
+ * The intent is to make effect execution predictable, reusable (cards and enemies),
+ * and safe with respect to ownership and lifetimes.
+ *
+ * @section overview Overview
+ * Combat actions (playing a card or executing an enemy move) resolve as an ordered
+ * sequence of polymorphic Effect objects. Effects do not mutate entities directly.
+ * Instead, they request operations via CombatContext, which forwards to CombatSystem
+ * as the single authority for combat rules and state mutation.
+ *
+ * @section flow Player card resolution
+ * When a player plays a card, the following occurs:
+ * 1. CardMatch requests the selected card from DeckCombat via takeFromHand(index).
+ *    Ownership transfers out of the hand immediately; the hand shrinks at this point.
+ * 2. CardMatch constructs a CombatContext with:
+ *    - actor  = Player
+ *    - opponent = Enemy
+ *    - CombatSystem reference
+ * 3. CardMatch iterates the card's effects in definition order:
+ *    CardDefinition::getEffectList() yields the ordered Effect list.
+ * 4. For each Effect, CardMatch calls:
+ *    Effect::resolve(context, params)
+ *    where params are provided by the CardInstance (EffectParams).
+ * 5. After all effects have resolved, CardMatch discards the exhausted card by
+ *    transferring ownership to DeckCombat::discard(...).
+ *
+ * @section flow Enemy move resolution
+ * Enemy turns use the same effect resolution mechanism:
+ * 1. CardMatch retrieves the next EnemyMove from the Enemy (Enemy::nextMove()).
+ * 2. CardMatch constructs a CombatContext with:
+ *    - actor  = Enemy
+ *    - opponent = Player
+ *    - CombatSystem reference
+ * 3. CardMatch resolves each Effect in the EnemyMove's effectList in order, passing
+ *    EnemyMove::effectParams as the numeric input.
+ *
+ * @section data Effect data model
+ * Effects are intentionally split into:
+ * - Behavior: implemented by polymorphic Effect subclasses (e.g., GainArmorEffect)
+ * - Values: provided as EffectParams (e.g., damage, armor)
+ *
+ * This separation enables the same Effect classes to be reused for both cards and
+ * enemy moves, while keeping effects stateless and definition-driven.
+ *
+ * @section targeting Targeting model
+ * The combat model is currently 1v1. Effects store a logical Target
+ * (Target::Self or Target::Opponent). CombatContext resolves these targets to concrete
+ * Entity references based on the current actor/opponent relationship for the action
+ * being resolved.
+ *
+ * @section authority Authority and mutation
+ * Responsibilities are intentionally layered:
+ * - Effect: requests gameplay actions (no direct mutation)
+ * - CombatContext: resolves targets and provides allowed verbs (routing/permission layer)
+ * - CombatSystem: applies combat rules and performs state mutation (authority layer)
+ * - Entity: owns raw state (HP, armor) and provides mutation primitives
+ *
+ * The authoritative rule is: Entity state changes occur through CombatSystem operations.
+ *
+ * @section ordering Ordering and visibility
+ * Effects resolve synchronously and in order. State changes produced by earlier effects
+ * are visible to later effects within the same resolution sequence.
+ *
+ * @section ownership Ownership and lifetimes
+ * - DeckCombat owns runtime CardInstances in draw/hand/discard piles via std::unique_ptr.
+ * - takeFromHand(index) transfers ownership and erases from the hand immediately.
+ * - discard(...) transfers ownership into the discard pile.
+ * - CardDefinitions own their Effect lists; Effects are reused across plays and must be stateless.
+ * - EnemyMoves own their Effect lists and provide EffectParams for execution.
+ *
+ * @section extension Extension points
+ * - New gameplay behaviors are added by implementing new Effect subclasses.
+ * - New combat operations are added as verbs on CombatContext that forward to CombatSystem.
+ * - New combat rules (e.g., armor interaction modes, status effects) belong in CombatSystem.
+ */
