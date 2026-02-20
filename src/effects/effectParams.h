@@ -12,8 +12,8 @@
  */
 struct EffectParams
 {
-    int damage;
-    int armor;
+    int damage{0};
+    int armor{0};
 };
 
 #endif // EFFECTPARAMS_H

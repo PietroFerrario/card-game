@@ -32,6 +32,9 @@ class Entity
     /// @brief Increases armor by the given amount.
     void increaseArmor(int amount) { m_armor += amount; }
 
+    /// @brief Increases attack by the given amount.
+    void increaseAttack(int amount) { m_attack += amount; }
+
     /**
      * @brief Decreases armor by the given amount.
      *

@@ -26,6 +26,14 @@ class CombatSystem
     void gainArmor(Entity& target, int amount);
 
     /**
+     * @brief Grants attack to the target entity.
+     *
+     * @param target Entity receiving the armor.
+     * @param amount Attack amount to add.
+     */
+    void gainAttack(Entity& target, int amount);
+
+    /**
      * @brief Resolves damage against a target according to combat rules.
      *
      * Applies armor interaction based on the specified damage resolution mode

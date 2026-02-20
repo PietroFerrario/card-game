@@ -31,3 +31,8 @@ void CombatContext::gainArmor(Target target, int amount)
 {
     m_combatSystem.gainArmor(resolveTarget(target), amount);
 }
+
+void CombatContext::gainAttack(Target target, int amount)
+{
+    m_combatSystem.gainAttack(resolveTarget(target), amount);
+}

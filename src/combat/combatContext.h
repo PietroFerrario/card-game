@@ -43,6 +43,16 @@ class CombatContext
      */
     void gainArmor(Target target, int amount);
 
+    /**
+     * @brief Grants attack to the selected logical target.
+     *
+     * Resolves the target (self/opponent) and forwards the operation to CombatSystem.
+     *
+     * @param target Logical target selector.
+     * @param amount Attack amount to add.
+     */
+    void gainAttack(Target target, int amount);
+
   private:
     CombatSystem& m_combatSystem;
     Entity& m_actor;
