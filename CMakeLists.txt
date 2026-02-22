@@ -17,6 +17,7 @@ target_sources(cardgame_core PRIVATE
     src/cards/cardDefinition.cpp
     
     src/effects/gainArmorEffect.cpp
+    src/effects/gainAttackEffect.cpp
 
     src/deck/deckCombat.cpp
     src/deck/deckPlayer.cpp

@@ -12,7 +12,7 @@
  */
 struct EffectParams
 {
-    int damage{0};
+    int attack{0};
     int armor{0};
 };
 

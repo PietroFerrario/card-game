@@ -6,6 +6,6 @@
 
 void GainAttackEffect::resolve(CombatContext& combatContext, const EffectParams& values)
 {
-    combatContext.gainAttack(m_target, values.armor);
-    DEBUG_LOG("Applied effect GainArmor");
+    combatContext.gainAttack(m_target, values.attack);
+    DEBUG_LOG("Applied effect GainAttack");
 }

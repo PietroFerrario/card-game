@@ -14,6 +14,9 @@ class TerminalMatchView : public IMatchView
     void showMessage() override;
     void showTurnState(TurnData& turnData) override;
     void showMatchState(MatchData& matchData) override;
+    void showRecurringMatchStatus(MatchData& matchData, TurnData& turnData, const Entity& player,
+                                  const Entity& enemy) override;
+    void showDivisor();
     int askCardToPlay(int limit) override;
 
   private:

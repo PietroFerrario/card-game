@@ -26,6 +26,9 @@ class Entity
     /// @brief Returns the current armor value.
     int getArmor() const { return m_armor; }
 
+    /// @brief Returns the current attack value.
+    int getAttack() const { return m_attack; }
+
     /// @brief Resets armor to zero.
     void resetArmor() { m_armor = 0; }
 

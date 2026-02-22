@@ -96,8 +96,7 @@ void CardMatch::playerTurn(TurnData& currentTurnData)
     while (canPlayerAct(currentTurnData))
     {
         DEBUG_LOG("Player can act: Start of valid action loop");
-        m_matchView.showMatchState(m_matchData);
-        m_matchView.showTurnState(currentTurnData);
+        m_matchView.showRecurringMatchStatus(m_matchData, currentTurnData, m_player, m_enemy);
         m_matchView.showCurrentHand(m_deckCombat.getHandView());
 
         DEBUG_LOG("Asking which card to play (Inside playerTurn)");
@@ -107,6 +106,7 @@ void CardMatch::playerTurn(TurnData& currentTurnData)
 
         DEBUG_LOG("Spending one action");
         spendAction(currentTurnData);
+        ++currentTurnData.cardsPlayed;
 
         DEBUG_LOG("End action action loop");
     }
