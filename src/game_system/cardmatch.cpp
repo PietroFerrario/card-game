@@ -39,7 +39,9 @@ void CardMatch::playCard(int handIndex)
     DEBUG_LOG("Playing card: " << cardBeingPlayed->getCardDefinition().getID()
                                << " from hand index: " << handIndex);
 
-    CombatContext currentContext{m_combatSystem, m_player, m_enemy};
+    std::vector<std::string> effectMessage;
+
+    CombatContext currentContext{m_combatSystem, m_player, m_enemy, &effectMessage};
 
     // Possible to implement an extraction of EffectParams at the beginning. Then pass it to
     // .resolve -> Less call to getEffectParams. Not necessary for now, possible future
@@ -50,6 +52,13 @@ void CardMatch::playCard(int handIndex)
     }
     DEBUG_LOG("Applied all the effect from card " << cardBeingPlayed->getCardDefinition().getID()
                                                   << ".");
+
+    m_matchView.showPlayedCardName(cardBeingPlayed->getCardDefinition().getName());
+
+    if (!effectMessage.empty())
+    {
+        m_matchView.showEffectMessage(effectMessage);
+    }
 
     m_deckCombat.discard(std::move(cardBeingPlayed));
 }
@@ -77,7 +86,7 @@ void CardMatch::turnLoop()
         TurnData turnData;
         playerTurn(turnData);
         enemyTurn();
-        // damagePhase();
+        damagePhase();
         // resetPhase();
     }
 }
@@ -96,7 +105,7 @@ void CardMatch::playerTurn(TurnData& currentTurnData)
 
     while (canPlayerAct(currentTurnData))
     {
-        DEBUG_LOG("Player can act: Start of valid action loop");
+        DEBUG_LOG("Player can act: Starting valid action loop");
         m_matchView.showRecurringMatchStatus(m_matchData, currentTurnData, m_player, m_enemy);
         m_matchView.showCurrentHand(m_deckCombat.getHandView());
 
@@ -109,7 +118,7 @@ void CardMatch::playerTurn(TurnData& currentTurnData)
         spendAction(currentTurnData);
         ++currentTurnData.cardsPlayed;
 
-        DEBUG_LOG("End action action loop");
+        DEBUG_LOG("Ending action loop");
     }
 }
 
@@ -129,12 +138,13 @@ void CardMatch::enemyTurn()
 
 void CardMatch::damagePhase()
 {
-
     CombatContext playerDamageContext{m_combatSystem, m_player, m_enemy};
     Target playerTarget{Target::Opponent};
     DamageResult playerResult{playerDamageContext.dealDamage(playerTarget, m_player.getAttack())};
+    m_matchView.showDamageResult(playerResult);
 
     CombatContext enemyDamageContext{m_combatSystem, m_enemy, m_player};
     Target enemyTarget{Target::Opponent};
-    DamageResult enemyResult{playerDamageContext.dealDamage(enemyTarget, m_enemy.getAttack())};
+    DamageResult enemyResult{enemyDamageContext.dealDamage(enemyTarget, m_enemy.getAttack())};
+    m_matchView.showDamageResult(enemyResult);
 }

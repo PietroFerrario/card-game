@@ -21,7 +21,7 @@ void CombatSystem::heal(Entity& target, int amount) { target.increaseHp(amount);
 DamageResult CombatSystem::dealDamage(Entity& target, int amount, bool ignoreArmor)
 {
     DEBUG_LOG("Starting dealDamage combat system");
-    DamageResult result{0, 0, 0, false};
+    DamageResult result{target, 0, 0, 0, false};
 
     const int clampAmount = std::max(0, amount);
     result.requested = clampAmount;

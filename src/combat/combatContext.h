@@ -2,9 +2,12 @@
 #define COMBATCONTEXT_H
 
 #include "combatTarget.h"
+#include <string>
+#include <vector>
 
 class CombatSystem;
 class Entity;
+struct DamageResult;
 
 /**
  * @brief Execution context for resolving combat effects.
@@ -28,10 +31,8 @@ class CombatContext
      * @param actor Entity performing the current action (Target::Self).
      * @param opponent Entity opposing the actor (Target::Opponent).
      */
-    CombatContext(CombatSystem& combatSystem, Entity& actor, Entity& opponent)
-        : m_combatSystem{combatSystem}, m_actor{actor}, m_opponent{opponent}
-    {
-    }
+    CombatContext(CombatSystem& combatSystem, Entity& actor, Entity& opponent,
+                  std::vector<std::string>* effectMessage = nullptr);
 
     /**
      * @brief Grants armor to the selected logical target.
@@ -59,6 +60,7 @@ class CombatContext
     CombatSystem& m_combatSystem;
     Entity& m_actor;
     Entity& m_opponent;
+    std::vector<std::string>* m_effectMessage;
 
     /**
      * @brief Resolves a logical Target to the corresponding Entity in this context.
@@ -67,6 +69,9 @@ class CombatContext
      * @return Reference to the resolved Entity (actor or opponent).
      */
     Entity& resolveTarget(Target target);
+    const Entity& resolveTarget(Target target) const;
+
+    std::string messageTarget(Target target) const;
 };
 
 #endif // COMBATCONTEXT_H

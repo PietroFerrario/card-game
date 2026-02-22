@@ -1,3 +1,4 @@
+#include "combat/combatEvents.h"
 #include "entities\entity.h"
 #include "game_system/matchData.h"
 #include "terminaMatchView.h"
@@ -15,13 +16,14 @@ int TerminalMatchView::askCardToPlay(int limit)
     return selectedCardIndex;
 }
 
+void TerminalMatchView::showCardEffects() {}
+
 void TerminalMatchView::showTurnState(TurnData& turnData)
 {
     m_io.println(std::format("Remaining actions: {} \t Card played this turn: {}",
                              turnData.playerRemainingActions, turnData.cardsPlayed));
 }
 
-// Implement showPlayerStats -> Current def and attack =)
 void TerminalMatchView::showRecurringMatchStatus(MatchData& matchData, TurnData& turnData,
                                                  const Entity& player, const Entity& enemy)
 {
@@ -53,6 +55,40 @@ void TerminalMatchView::showDivisor()
 void TerminalMatchView::showMatchState(MatchData& matchData)
 {
     m_io.println(std::format("Current turn: {}", matchData.turnNumber));
+}
+
+void TerminalMatchView::showDamageResult(DamageResult result)
+{
+    showDivisor();
+    m_io.println(std::format(
+        "{:^28} | {:^28} | {:^28}",
+        std::format("{} is attacked for:  {}", result.target.getName(), result.requested),
+        std::format("Blocked: {}", result.blocked),
+        std::format("Sustained:  {}", result.hpDamage)));
+    showDivisor();
+}
+
+void TerminalMatchView::showPlayedCardName(std::string_view name)
+{
+    showDivisor();
+    m_io.println(std::format("Played card: {}", name));
+}
+
+void TerminalMatchView::showEffectMessage(const std::vector<std::string>& message)
+{
+    std::string formattedMessage;
+
+    for (size_t i{0}; i < message.size(); ++i)
+    {
+        formattedMessage.append(std::format("{:^15}", message.at(i)));
+        if (i + 1 < message.size())
+        {
+            formattedMessage.append(" | ");
+        }
+    }
+    m_io.println(formattedMessage);
+
+    showDivisor();
 }
 
 void TerminalMatchView::showMessage() {}

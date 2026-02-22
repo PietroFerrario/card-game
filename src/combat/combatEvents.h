@@ -20,6 +20,7 @@ struct DamageInfo
 
 struct DamageResult
 {
+    Entity& target;
     int requested;
     int blocked;
     int hpDamage;
