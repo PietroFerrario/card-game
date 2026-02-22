@@ -42,7 +42,7 @@ class CombatSystem
      * @param damageInfo Damage request (amount, target, resolution mode).
      * @return DamageResult describing blocked damage, HP damage, and death state.
      */
-    DamageResult dealDamage(const DamageInfo& damageInfo);
+    DamageResult dealDamage(Entity& target, int amount, bool ignoreArmor);
 
     /**
      * @brief Heals the target entity by the specified amount.

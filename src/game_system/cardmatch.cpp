@@ -3,6 +3,7 @@
 #include "cards/cardDefinition.h"
 #include "cassert"
 #include "combat/combatContext.h"
+#include "combat/combatTarget.h"
 #include "effects/effect.h"
 #include "entities/enemies/enemy.h"
 #include "entities/enemies/enemyMove.h"
@@ -124,4 +125,16 @@ void CardMatch::enemyTurn()
         effectPtr->resolve(currentContext, currentMove.effectParams);
     }
     DEBUG_LOG("Applied all the effect from " << currentMove.name << "");
+}
+
+void CardMatch::damagePhase()
+{
+
+    CombatContext playerDamageContext{m_combatSystem, m_player, m_enemy};
+    Target playerTarget{Target::Opponent};
+    DamageResult playerResult{playerDamageContext.dealDamage(playerTarget, m_player.getAttack())};
+
+    CombatContext enemyDamageContext{m_combatSystem, m_enemy, m_player};
+    Target enemyTarget{Target::Opponent};
+    DamageResult enemyResult{playerDamageContext.dealDamage(enemyTarget, m_enemy.getAttack())};
 }

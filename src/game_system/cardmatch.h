@@ -91,6 +91,8 @@ class CardMatch
      */
     void enemyTurn();
 
+    void CardMatch::damagePhase();
+
   private:
     IMatchView& m_matchView;
 

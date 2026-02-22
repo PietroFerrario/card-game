@@ -1,4 +1,5 @@
 #include "combatContext.h"
+#include "combat/combatEvents.h"
 #include "combatSystem.h"
 #include "util/debug.h"
 
@@ -35,4 +36,9 @@ void CombatContext::gainArmor(Target target, int amount)
 void CombatContext::gainAttack(Target target, int amount)
 {
     m_combatSystem.gainAttack(resolveTarget(target), amount);
+}
+
+DamageResult CombatContext::dealDamage(Target target, int amount, bool ignoreArmor = false)
+{
+    return m_combatSystem.dealDamage(resolveTarget(target), amount, ignoreArmor);
 }

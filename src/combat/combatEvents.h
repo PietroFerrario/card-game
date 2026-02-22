@@ -5,16 +5,17 @@ class Entity;
 
 enum class DamageResolution
 {
-    Attack,
+    HitArmorFirst,
     IgnoreArmor,
 };
 
 struct DamageInfo
 {
-    Entity* attacker;
-    Entity* target;
+    // Entity* attacker;
+    Entity& target;
     int amount;
-    DamageResolution damageResolution = DamageResolution::Attack;
+    // DamageResolution damageResolution = DamageResolution::HitArmorFirst;
+    bool ignoreArmor{false};
 };
 
 struct DamageResult

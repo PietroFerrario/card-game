@@ -53,6 +53,8 @@ class CombatContext
      */
     void gainAttack(Target target, int amount);
 
+    DamageResult dealDamage(Target target, int amount, bool ignoreArmor = false);
+
   private:
     CombatSystem& m_combatSystem;
     Entity& m_actor;
