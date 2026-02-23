@@ -80,7 +80,7 @@ void DeckCombat::discardFromHand(int handIndex)
     }
 }
 
-std::vector<const CardInstance*> DeckCombat::getHandView()
+std::vector<const CardInstance*> DeckCombat::getHandView() const
 {
     std::vector<const CardInstance*> handView;
     handView.reserve(m_handPile.size());

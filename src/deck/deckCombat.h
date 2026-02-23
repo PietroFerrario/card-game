@@ -97,7 +97,7 @@ class DeckCombat
      *
      * @return Vector of raw pointers to cards currently in hand.
      */
-    std::vector<const CardInstance*> getHandView();
+    std::vector<const CardInstance*> getHandView() const;
 
   private:
     std::vector<std::unique_ptr<CardInstance>> m_cards;       ///< Draw pile (initial deck).

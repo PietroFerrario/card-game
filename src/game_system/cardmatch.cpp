@@ -87,7 +87,7 @@ void CardMatch::turnLoop()
         playerTurn(turnData);
         enemyTurn();
         damagePhase();
-        // resetPhase();
+        resetPhase();
     }
 }
 
@@ -101,6 +101,7 @@ bool CardMatch::canPlayerAct(TurnData& currentTurnData)
 void CardMatch::playerTurn(TurnData& currentTurnData)
 {
     DEBUG_LOG("Starting player turn: Drawing 2 cards");
+    m_matchView.showPlayerTurnStart(m_matchData);
     drawMultipleCards(2);
 
     while (canPlayerAct(currentTurnData))
@@ -147,4 +148,10 @@ void CardMatch::damagePhase()
     Target enemyTarget{Target::Opponent};
     DamageResult enemyResult{enemyDamageContext.dealDamage(enemyTarget, m_enemy.getAttack())};
     m_matchView.showDamageResult(enemyResult);
+}
+
+void CardMatch::resetPhase()
+{
+    m_combatSystem.endTurnReset(m_player, m_enemy);
+    m_matchView.showEndOfTurn();
 }

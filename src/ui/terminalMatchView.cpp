@@ -5,9 +5,23 @@
 
 TerminalMatchView::TerminalMatchView(IOText& io) : m_io{io} {}
 
-void TerminalMatchView::showCurrentHand(const std::vector<const CardInstance*>& handToRender)
+void TerminalMatchView::showCurrentHand(const std::vector<const CardInstance*>& handToRender) const
 {
     m_io.printHand(m_handRenderer.renderHand(handToRender));
+}
+
+void TerminalMatchView::showPlayerTurnStart(const MatchData& matchData) const
+{
+    showFancyDivisor();
+    m_io.println(std::format("Start of turn: {}", matchData.turnNumber));
+    showFancyDivisor();
+}
+
+void TerminalMatchView::showEndOfTurn(const MatchData& matchData) const
+{
+    showFancyDivisor();
+    m_io.println(std::format("End of turn: {}", matchData.turnNumber));
+    showFancyDivisor();
 }
 
 int TerminalMatchView::askCardToPlay(int limit)
@@ -16,22 +30,21 @@ int TerminalMatchView::askCardToPlay(int limit)
     return selectedCardIndex;
 }
 
-void TerminalMatchView::showCardEffects() {}
-
-void TerminalMatchView::showTurnState(TurnData& turnData)
+void TerminalMatchView::showTurnState(const TurnData& turnData) const
 {
     m_io.println(std::format("Remaining actions: {} \t Card played this turn: {}",
                              turnData.playerRemainingActions, turnData.cardsPlayed));
 }
 
-void TerminalMatchView::showRecurringMatchStatus(MatchData& matchData, TurnData& turnData,
-                                                 const Entity& player, const Entity& enemy)
+void TerminalMatchView::showRecurringMatchStatus(const MatchData& matchData,
+                                                 const TurnData& turnData, const Entity& player,
+                                                 const Entity& enemy) const
 {
     showDivisor();
     m_io.println(std::format("{:^28} | {:^28} | {:^28}",
                              std::format("Current turn: {}", matchData.turnNumber),
                              std::format("Remaining actions: {}", turnData.playerRemainingActions),
-                             std::format("Card played this turn: {}", turnData.cardsPlayed)));
+                             std::format("Cards played this turn: {}", turnData.cardsPlayed)));
 
     showDivisor();
     m_io.println(std::format("{:^28} | {:^28} | {:^28}",
@@ -46,18 +59,24 @@ void TerminalMatchView::showRecurringMatchStatus(MatchData& matchData, TurnData&
     showDivisor();
 }
 
-void TerminalMatchView::showDivisor()
+void TerminalMatchView::showDivisor() const
 {
     std::string str((28 * 3 + 2 * 3), '-');
     m_io.println(str);
 }
 
-void TerminalMatchView::showMatchState(MatchData& matchData)
+void TerminalMatchView::showFancyDivisor() const
+{
+    std::string str((28 * 3 + 2 * 3), '~');
+    m_io.println(str);
+}
+
+void TerminalMatchView::showMatchState(const MatchData& matchData) const
 {
     m_io.println(std::format("Current turn: {}", matchData.turnNumber));
 }
 
-void TerminalMatchView::showDamageResult(DamageResult result)
+void TerminalMatchView::showDamageResult(const DamageResult result) const
 {
     showDivisor();
     m_io.println(std::format(
@@ -68,13 +87,13 @@ void TerminalMatchView::showDamageResult(DamageResult result)
     showDivisor();
 }
 
-void TerminalMatchView::showPlayedCardName(std::string_view name)
+void TerminalMatchView::showPlayedCardName(std::string_view name) const
 {
     showDivisor();
-    m_io.println(std::format("Played card: {}", name));
+    m_io.println(std::format("{:^90}", std::format("Played card: {}", name)));
 }
 
-void TerminalMatchView::showEffectMessage(const std::vector<std::string>& message)
+void TerminalMatchView::showEffectMessage(const std::vector<std::string>& message) const
 {
     std::string formattedMessage;
 
@@ -86,7 +105,7 @@ void TerminalMatchView::showEffectMessage(const std::vector<std::string>& messag
             formattedMessage.append(" | ");
         }
     }
-    m_io.println(formattedMessage);
+    m_io.println(std::format("{:^90}", formattedMessage));
 
     showDivisor();
 }

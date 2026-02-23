@@ -14,17 +14,20 @@ struct DamageResult;
 class IMatchView
 {
   public:
-    virtual void showCurrentHand(const std::vector<const CardInstance*>& handToRender) = 0;
+    virtual void showCurrentHand(const std::vector<const CardInstance*>& handToRender) const = 0;
     virtual void showMessage() = 0;
-    virtual void showTurnState(TurnData& turnData) = 0;
-    virtual void showMatchState(MatchData& matchData) = 0;
+    virtual void showTurnState(const TurnData& turnData) const = 0;
+    virtual void showMatchState(const MatchData& matchData) const = 0;
     virtual int askCardToPlay(int limit) = 0;
-    virtual void showRecurringMatchStatus(MatchData& matchData, TurnData& turnData,
-                                          const Entity& player, const Entity& enemy) = 0;
-    virtual void showDivisor() = 0;
-    virtual void showDamageResult(DamageResult result) = 0;
-    virtual void showEffectMessage(const std::vector<std::string>& message) = 0;
-    virtual void showPlayedCardName(std::string_view name) = 0;
+    virtual void showRecurringMatchStatus(const MatchData& matchData, const TurnData& turnData,
+                                          const Entity& player, const Entity& enemy) const = 0;
+    virtual void showDivisor() const = 0;
+    virtual void showDamageResult(const DamageResult result) const = 0;
+    virtual void showEffectMessage(const std::vector<std::string>& message) const = 0;
+    virtual void showPlayedCardName(std::string_view name) const = 0;
+    virtual void showPlayerTurnStart(const MatchData& matchData) const = 0;
+    virtual void showFancyDivisor() const = 0;
+    virtual void showEndOfTurn(const MatchData& matchData) const = 0;
 
   private:
 };

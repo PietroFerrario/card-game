@@ -64,14 +64,14 @@ class CardRenderer
      * @param cardToRender Card instance to render.
      * @return Vector of strings where each entry is one row of the card.
      */
-    std::vector<std::string> renderCard(const CardInstance& cardToRender);
+    std::vector<std::string> renderCard(const CardInstance& cardToRender) const;
 
     /// @brief Returns the fixed width of the rendered card template.
-    int getCardTemplateWidth() { return m_width; }
+    int getCardTemplateWidth() const { return m_width; }
 
   private:
     /// @brief Draws the static card template (borders, labels) into the grid.
-    void drawTemplate(std::vector<std::string>& grid);
+    void drawTemplate(std::vector<std::string>& grid) const;
 
     /**
      * @brief Fits text into a slot width using the slot alignment.
@@ -83,7 +83,7 @@ class CardRenderer
      * @param text Input text to format.
      * @return String of currentSlot.maxWidth characters.
      */
-    std::string fitText(Slot currentSlot, std::string_view text);
+    std::string fitText(Slot currentSlot, std::string_view text) const;
 
     /**
      * @brief Writes pre-formatted text into the specified slot in the grid.
@@ -92,7 +92,7 @@ class CardRenderer
      * @param slot Destination slot coordinates and width.
      * @param formattedText Text already formatted to slot.maxWidth characters.
      */
-    void writeSlot(std::vector<std::string>& grid, Slot slot, std::string_view formattedText);
+    void writeSlot(std::vector<std::string>& grid, Slot slot, std::string_view formattedText) const;
 
     /**
      * @brief Appends a word to a line, inserting a single space if needed.
@@ -108,7 +108,7 @@ class CardRenderer
      * @param currentSlot Slot providing the maximum width.
      * @return NameLayout containing the first line and optional second line.
      */
-    NameLayout drawLayout(std::string_view cardName, Slot currentSlot);
+    NameLayout drawLayout(std::string_view cardName, Slot currentSlot) const;
 
     const int m_width{24};
     const int m_height{12};

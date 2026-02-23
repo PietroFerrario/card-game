@@ -39,7 +39,7 @@ class HandRenderer
      * @param handToRender Non-owning pointers to cards currently in hand.
      * @return RenderedHand containing one or two rendered rows.
      */
-    RenderedHand renderHand(const std::vector<const CardInstance*>& handToRender);
+    RenderedHand renderHand(const std::vector<const CardInstance*>& handToRender) const;
 
     /**
      * @brief Renders a subrange of already-rendered cards into a single row.
@@ -55,7 +55,7 @@ class HandRenderer
      */
     std::vector<std::string>
     renderMultipleCards(const std::vector<std::vector<std::string>>& parsedHand, size_t begin,
-                        size_t end, size_t indexBase);
+                        size_t end, size_t indexBase) const;
 
   private:
     CardRenderer m_cardRenderer{}; ///< Renders individual cards.

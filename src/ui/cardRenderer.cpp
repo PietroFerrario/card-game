@@ -5,7 +5,7 @@
 #include <cassert>
 #include <iostream>
 
-std::vector<std::string> CardRenderer::renderCard(const CardInstance& cardToRender)
+std::vector<std::string> CardRenderer::renderCard(const CardInstance& cardToRender) const
 {
     std::vector<std::string> grid(m_height, std::string(m_width, ' '));
 
@@ -39,7 +39,7 @@ std::vector<std::string> CardRenderer::renderCard(const CardInstance& cardToRend
     return grid;
 }
 
-void CardRenderer::drawTemplate(std::vector<std::string>& grid)
+void CardRenderer::drawTemplate(std::vector<std::string>& grid) const
 {
 
     // Top/bottom border
@@ -66,7 +66,7 @@ void CardRenderer::appendWord(std::string& line, std::string_view word)
     line.append(word);
 }
 
-NameLayout CardRenderer::drawLayout(std::string_view cardName, Slot currentSlot)
+NameLayout CardRenderer::drawLayout(std::string_view cardName, Slot currentSlot) const
 {
     NameLayout newName;
 
@@ -136,7 +136,7 @@ NameLayout CardRenderer::drawLayout(std::string_view cardName, Slot currentSlot)
     return newName;
 }
 
-std::string CardRenderer::fitText(Slot slot, std::string_view text)
+std::string CardRenderer::fitText(Slot slot, std::string_view text) const
 {
     int textLength = static_cast<int>(text.length());
     std::string s{text};
@@ -175,7 +175,7 @@ std::string CardRenderer::fitText(Slot slot, std::string_view text)
 }
 
 void CardRenderer::writeSlot(std::vector<std::string>& grid, Slot slot,
-                             std::string_view formattedText)
+                             std::string_view formattedText) const
 {
     assert((formattedText.length() == slot.maxWidth) && "Passed a text of wrong format");
     assert((slot.rowIndex >= 0 && slot.rowIndex < m_height) && "Invalid row index");

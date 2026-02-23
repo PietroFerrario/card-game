@@ -10,18 +10,20 @@ class TerminalMatchView : public IMatchView
   public:
     TerminalMatchView(IOText& io);
 
-    void showCurrentHand(const std::vector<const CardInstance*>& handToRender) override;
-    void showCardEffects();
+    void showCurrentHand(const std::vector<const CardInstance*>& handToRender) const override;
     void showMessage() override;
-    void showTurnState(TurnData& turnData) override;
-    void showMatchState(MatchData& matchData) override;
-    void showRecurringMatchStatus(MatchData& matchData, TurnData& turnData, const Entity& player,
-                                  const Entity& enemy) override;
-    void showDivisor() override;
+    void showTurnState(const TurnData& turnData) const override;
+    void showMatchState(const MatchData& matchData) const override;
+    void showRecurringMatchStatus(const MatchData& matchData, const TurnData& turnData,
+                                  const Entity& player, const Entity& enemy) const override;
+    void showDivisor() const override;
     int askCardToPlay(int limit) override;
-    void showDamageResult(DamageResult result) override;
-    void showEffectMessage(const std::vector<std::string>& message) override;
-    void showPlayedCardName(std::string_view name) override;
+    void showDamageResult(const DamageResult result) const override;
+    void showEffectMessage(const std::vector<std::string>& message) const override;
+    void showPlayedCardName(std::string_view name) const override;
+    void showPlayerTurnStart(const MatchData& matchData) const override;
+    void showFancyDivisor() const override;
+    void showEndOfTurn(const MatchData& matchData) const override;
 
   private:
     IOText& m_io;

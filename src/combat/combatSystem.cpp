@@ -14,6 +14,16 @@ void CombatSystem::gainAttack(Entity& target, int amount)
     DEBUG_LOG("Increasing Attack of " << target.getName() << ": +" << amount);
 }
 
+void CombatSystem::endTurnReset(Entity& player, Entity& enemy)
+{
+    player.resetArmor();
+    player.resetAttack();
+    enemy.resetArmor();
+    enemy.resetAttack();
+
+    DEBUG_LOG("Resetting Armor and Attack of " << player.getName() << " and " << enemy.getName());
+}
+
 void CombatSystem::resetArmor(Entity& target) { target.resetArmor(); }
 
 void CombatSystem::heal(Entity& target, int amount) { target.increaseHp(amount); }

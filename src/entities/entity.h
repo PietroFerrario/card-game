@@ -32,6 +32,9 @@ class Entity
     /// @brief Resets armor to zero.
     void resetArmor() { m_armor = 0; }
 
+    /// @brief Resets attack to zero.
+    void resetAttack() { m_attack = 0; }
+
     /// @brief Increases armor by the given amount.
     void increaseArmor(int amount) { m_armor += amount; }
 

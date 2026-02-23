@@ -4,7 +4,7 @@
 
 #include <cassert>
 
-RenderedHand HandRenderer::renderHand(const std::vector<const CardInstance*>& handToRender)
+RenderedHand HandRenderer::renderHand(const std::vector<const CardInstance*>& handToRender) const
 {
     RenderedHand renderedHand;
     if (handToRender.empty())
@@ -37,7 +37,7 @@ RenderedHand HandRenderer::renderHand(const std::vector<const CardInstance*>& ha
 
 std::vector<std::string>
 HandRenderer::renderMultipleCards(const std::vector<std::vector<std::string>>& parsedHand,
-                                  size_t begin, size_t end, size_t indexBase)
+                                  size_t begin, size_t end, size_t indexBase) const
 {
     assert(begin < end);
     assert(end <= parsedHand.size());
