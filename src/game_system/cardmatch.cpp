@@ -49,7 +49,7 @@ void CardMatch::playCard(int handIndex, CombatContext& currentContext)
     // implementation.
     for (const auto& effectPtr : cardBeingPlayed->getCardDefinition().getEffectList())
     {
-        effectPtr->resolve(currentContext, cardBeingPlayed->getEffectParams());
+        effectPtr->resolve(currentContext, cardBeingPlayed->getCardParams());
     }
     DEBUG_LOG("Applied all the effect from card " << cardBeingPlayed->getCardDefinition().getID()
                                                   << ".");

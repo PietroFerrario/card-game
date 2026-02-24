@@ -1,6 +1,7 @@
 #include "cardFactory.h"
 #include "cards/cardDefinition.h"
 #include "cards/cardInstance.h"
+#include "cards/cardParams.h"
 #include "combat/combatTarget.h"
 #include "effects/drawCardsEffect.h"
 #include "effects/effect.h"
@@ -40,9 +41,11 @@ void CardFactory::registerCards()
     shieldWarriorEffects.emplace_back(std::make_unique<DrawCardsEffect>());
     shieldWarriorEffects.emplace_back(std::make_unique<GainActionsEffect>());
     registerDefinition("shieldWarrior",
-                       std::make_unique<CardDefinition>("shieldWarrior", "Shield Warrior",
-                                                        "Strong warrior with axe and round shield",
-                                                        2, 1, std::move(shieldWarriorEffects)));
+                       std::make_unique<CardDefinition>(
+                           "shieldWarrior", "Shield Warrior",
+                           "Strong warrior with axe and round shield",
+                           CardParams{.damage = 2, .armor = 1, .actions = 1, .drawing = 1},
+                           std::move(shieldWarriorEffects)));
 }
 
 std::unique_ptr<CardInstance> CardFactory::makeSingleCard(const std::string& cardId) const

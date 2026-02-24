@@ -2,11 +2,11 @@
 #include "cardDefinition.h"
 
 CardInstance::CardInstance(const CardDefinition& definition)
-    : m_definition{&definition}, m_damage{m_definition->getBaseDamage()},
-      m_armor{m_definition->getBaseArmor()}, m_cost{m_definition->getBaseCost()}
+    : m_definition{&definition}, m_cardParams{m_definition->getCardParams()},
+      m_cost{m_definition->getBaseCost()}
 {
 }
 
 const CardDefinition& CardInstance::getCardDefinition() const { return *m_definition; }
 
-CardParams CardInstance::getEffectParams() const { return CardParams{m_damage, m_armor}; }
+const CardParams& CardInstance::getCardParams() const { return m_cardParams; }

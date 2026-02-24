@@ -12,7 +12,7 @@
  */
 struct CardParams
 {
-    int attack{0};
+    int damage{0};
     int armor{0};
     int actions{0};
     int drawing{0};
