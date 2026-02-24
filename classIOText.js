@@ -6,5 +6,6 @@ var classIOText =
     [ "printCards", "classIOText.html#a4bc533762d543b973967ecfdfacc3535", null ],
     [ "printHand", "classIOText.html#ae2d43f28dd4078b2cae540c2e8347701", null ],
     [ "println", "classIOText.html#a4c0e0d789a06c7c1e3631a113d310351", null ],
+    [ "promptInt", "classIOText.html#a90150bc64b1354a6b4ac52f766cac984", null ],
     [ "promptln", "classIOText.html#a360ba43a724dac33bde99834b0e7a71b", null ]
 ];

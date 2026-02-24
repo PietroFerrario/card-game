@@ -1,4 +1,7 @@
 <map id="Effect" name="Effect">
-<area shape="rect" id="node1" title="Abstract base class for all card effects." alt="" coords="35,5,130,97"/>
-<area shape="rect" id="node2" href="$classGainArmorEffect.html" title="Effect that grants armor to a combat target." alt="" coords="5,145,160,237"/>
+<area shape="rect" id="node1" title="Abstract base class for all card effects." alt="" coords="309,5,403,97"/>
+<area shape="rect" id="node2" href="$classDrawCardsEffect.html" title="Effect that draws cards into the actor&#39;s hand." alt="" coords="5,145,160,237"/>
+<area shape="rect" id="node3" href="$classGainActionsEffect.html" title="Effect that grants additional actions for the current turn." alt="" coords="184,145,347,237"/>
+<area shape="rect" id="node4" href="$classGainArmorEffect.html" title="Effect that grants armor to a combat target." alt="" coords="371,145,525,237"/>
+<area shape="rect" id="node5" href="$classGainAttackEffect.html" title="Effect that grants attack to a combat target." alt="" coords="550,145,706,237"/>
 </map>

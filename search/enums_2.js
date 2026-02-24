@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['target_0',['Target',['../combatTarget_8h.html#a31488d29805a596498c0234ae392d35d',1,'combatTarget.h']]]
+  ['slotalignment_0',['SlotAlignment',['../cardRenderer_8h.html#a9325a1594f3260b7d8495b8a50a1cf26',1,'cardRenderer.h']]]
 ];

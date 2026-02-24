@@ -1,5 +1,7 @@
 <map id="DamageResult" name="DamageResult">
-<area shape="rect" id="node1" title=" " alt="" coords="21,175,140,252"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,5,44,83"/>
-<area shape="rect" id="node3" title=" " alt="" coords="113,5,163,83"/>
+<area shape="rect" id="node1" title=" " alt="" coords="148,491,266,568"/>
+<area shape="rect" id="node2" href="$classEntity.html" title="Base class representing a combat&#45;capable entity." alt="" coords="135,175,279,428"/>
+<area shape="rect" id="node3" title=" " alt="" coords="32,5,70,83"/>
+<area shape="rect" id="node4" title=" " alt="" coords="178,5,236,83"/>
+<area shape="rect" id="node5" title=" " alt="" coords="303,263,354,340"/>
 </map>

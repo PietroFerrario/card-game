@@ -112,12 +112,12 @@ Collaboration diagram for CardRenderer:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a8b69b406b0743113d6369c2ef6ed9b59"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCardRenderer.html#a8b69b406b0743113d6369c2ef6ed9b59">CardRenderer</a> ()=default</td></tr>
 <tr class="separator:a8b69b406b0743113d6369c2ef6ed9b59"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8115d706eddd177073d55eb111ec2e5a"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCardRenderer.html#a8115d706eddd177073d55eb111ec2e5a">renderCard</a> (const <a class="el" href="classCardInstance.html">CardInstance</a> &amp;cardToRender)</td></tr>
-<tr class="memdesc:a8115d706eddd177073d55eb111ec2e5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renders the given card into an ASCII grid.  <br /></td></tr>
-<tr class="separator:a8115d706eddd177073d55eb111ec2e5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4215ffb39f24899a5ab9d62db4c5b513"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCardRenderer.html#a4215ffb39f24899a5ab9d62db4c5b513">getCardTemplateWidth</a> ()</td></tr>
-<tr class="memdesc:a4215ffb39f24899a5ab9d62db4c5b513"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the fixed width of the rendered card template.  <br /></td></tr>
-<tr class="separator:a4215ffb39f24899a5ab9d62db4c5b513"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30825fe2e171bb152e0a73526efa2254"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCardRenderer.html#a30825fe2e171bb152e0a73526efa2254">renderCard</a> (const <a class="el" href="classCardInstance.html">CardInstance</a> &amp;cardToRender) const</td></tr>
+<tr class="memdesc:a30825fe2e171bb152e0a73526efa2254"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renders the given card into an ASCII grid.  <br /></td></tr>
+<tr class="separator:a30825fe2e171bb152e0a73526efa2254"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abffe3283c309eb6673b07f1fd1c19618"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCardRenderer.html#abffe3283c309eb6673b07f1fd1c19618">getCardTemplateWidth</a> () const</td></tr>
+<tr class="memdesc:abffe3283c309eb6673b07f1fd1c19618"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the fixed width of the rendered card template.  <br /></td></tr>
+<tr class="separator:abffe3283c309eb6673b07f1fd1c19618"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Renders a <a class="el" href="classCardInstance.html" title="Represents a runtime instance of a card during combat.">CardInstance</a> as a fixed-size ASCII grid. </p>
@@ -150,8 +150,8 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a4215ffb39f24899a5ab9d62db4c5b513" name="a4215ffb39f24899a5ab9d62db4c5b513"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4215ffb39f24899a5ab9d62db4c5b513">&#9670;&#160;</a></span>getCardTemplateWidth()</h2>
+<a id="abffe3283c309eb6673b07f1fd1c19618" name="abffe3283c309eb6673b07f1fd1c19618"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abffe3283c309eb6673b07f1fd1c19618">&#9670;&#160;</a></span>getCardTemplateWidth()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -163,7 +163,7 @@ Public Member Functions</h2></td></tr>
           <td class="memname">int CardRenderer::getCardTemplateWidth </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -177,8 +177,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a8115d706eddd177073d55eb111ec2e5a" name="a8115d706eddd177073d55eb111ec2e5a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8115d706eddd177073d55eb111ec2e5a">&#9670;&#160;</a></span>renderCard()</h2>
+<a id="a30825fe2e171bb152e0a73526efa2254" name="a30825fe2e171bb152e0a73526efa2254"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30825fe2e171bb152e0a73526efa2254">&#9670;&#160;</a></span>renderCard()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -188,7 +188,7 @@ Public Member Functions</h2></td></tr>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classCardInstance.html">CardInstance</a> &amp;&#160;</td>
           <td class="paramname"><em>cardToRender</em></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">

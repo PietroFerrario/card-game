@@ -5,5 +5,8 @@ var searchData=
   ['deckcombat_2eh_2',['deckCombat.h',['../deckCombat_8h.html',1,'']]],
   ['deckentry_2eh_3',['deckEntry.h',['../deckEntry_8h.html',1,'']]],
   ['deckplayer_2ecpp_4',['deckPlayer.cpp',['../deckPlayer_8cpp.html',1,'']]],
-  ['deckplayer_2eh_5',['deckPlayer.h',['../deckPlayer_8h.html',1,'']]]
+  ['deckplayer_2eh_5',['deckPlayer.h',['../deckPlayer_8h.html',1,'']]],
+  ['drawcardseffect_2ecpp_6',['drawCardsEffect.cpp',['../drawCardsEffect_8cpp.html',1,'']]],
+  ['drawcardseffect_2eh_7',['drawCardsEffect.h',['../drawCardsEffect_8h.html',1,'']]],
+  ['drawdata_2eh_8',['drawData.h',['../drawData_8h.html',1,'']]]
 ];

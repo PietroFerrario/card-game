@@ -1,0 +1,4 @@
+<map id="DrawCardsEffect" name="DrawCardsEffect">
+<area shape="rect" id="node1" title="Effect that draws cards into the actor&#39;s hand." alt="" coords="5,145,160,237"/>
+<area shape="rect" id="node2" href="$classEffect.html" title="Abstract base class for all card effects." alt="" coords="35,5,130,97"/>
+</map>

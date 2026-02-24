@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['wolfpack_0',['WolfPack',['../classWolfPack.html#a6b3f77c871d257a40b3750e73edac9e0',1,'WolfPack']]]
+  ['updatematchstate_0',['updateMatchState',['../classCardMatch.html#a148700f4c258918677f111e45aaac259',1,'CardMatch']]]
 ];

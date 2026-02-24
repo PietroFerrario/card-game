@@ -104,27 +104,47 @@ $(document).ready(function(){initNavTree('classCardMatch.html',''); initResizabl
 <div class="dynheader">
 Collaboration diagram for CardMatch:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classCardMatch__coll__graph.svg" width="180" height="147"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classCardMatch__coll__graph.svg" width="235" height="294"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a977765d9f0cd90e79608eddc8c0a03b5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCardMatch.html#a977765d9f0cd90e79608eddc8c0a03b5">CardMatch</a> (<a class="el" href="classPlayer.html">Player</a> &amp;player, <a class="el" href="classEnemy.html">Enemy</a> &amp;enemy)</td></tr>
-<tr class="memdesc:a977765d9f0cd90e79608eddc8c0a03b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a match for the given player and enemy.  <br /></td></tr>
-<tr class="separator:a977765d9f0cd90e79608eddc8c0a03b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abcb652a15f8f273427ce359fa03143ef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCardMatch.html#abcb652a15f8f273427ce359fa03143ef">drawMultipleCards</a> (int amount)</td></tr>
-<tr class="memdesc:abcb652a15f8f273427ce359fa03143ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws multiple cards into the player's hand.  <br /></td></tr>
-<tr class="separator:abcb652a15f8f273427ce359fa03143ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0c0c130ca87f453cf1283fb41e8a6a42"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCardMatch.html#a0c0c130ca87f453cf1283fb41e8a6a42">playCard</a> (int handIndex)</td></tr>
-<tr class="memdesc:a0c0c130ca87f453cf1283fb41e8a6a42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Plays a card from the hand and resolves all of its effects.  <br /></td></tr>
-<tr class="separator:a0c0c130ca87f453cf1283fb41e8a6a42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21db012a6db3246fa3ae2c5257dfaba5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCardMatch.html#a21db012a6db3246fa3ae2c5257dfaba5">CardMatch</a> (<a class="el" href="classIMatchView.html">IMatchView</a> &amp;matchView, <a class="el" href="classPlayer.html">Player</a> &amp;player, <a class="el" href="classEnemy.html">Enemy</a> &amp;enemy)</td></tr>
+<tr class="memdesc:a21db012a6db3246fa3ae2c5257dfaba5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a match for the given player and enemy.  <br /></td></tr>
+<tr class="separator:a21db012a6db3246fa3ae2c5257dfaba5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a794ebcf30069240092e0e025ed2a44e6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCardMatch.html#a794ebcf30069240092e0e025ed2a44e6">drawMultipleCardsNoEffect</a> (int amount)</td></tr>
+<tr class="memdesc:a794ebcf30069240092e0e025ed2a44e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws multiple cards into the player's hand.  <br /></td></tr>
+<tr class="separator:a794ebcf30069240092e0e025ed2a44e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9338fbeb594e31a227a9eb60cc64b129"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCardMatch.html#a9338fbeb594e31a227a9eb60cc64b129">writeDrawnCardMessage</a> (std::string &amp;drawMessage, const <a class="el" href="structDrawData.html">DrawData</a> &amp;drawData)</td></tr>
+<tr class="separator:a9338fbeb594e31a227a9eb60cc64b129"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9fb3abf619b27035c8dc965cdd99b5f2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCardMatch.html#a9fb3abf619b27035c8dc965cdd99b5f2">playCard</a> (int handIndex, <a class="el" href="classCombatContext.html">CombatContext</a> &amp;currentContext)</td></tr>
+<tr class="memdesc:a9fb3abf619b27035c8dc965cdd99b5f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Plays a card from the hand and resolves all of its effects.  <br /></td></tr>
+<tr class="separator:a9fb3abf619b27035c8dc965cdd99b5f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7932e3e85d254f12a6690530b0bed17a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCardMatch.html#a7932e3e85d254f12a6690530b0bed17a">gainArmor</a> (int defense)</td></tr>
 <tr class="memdesc:a7932e3e85d254f12a6690530b0bed17a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Legacy helper that directly increases the player's armor.  <br /></td></tr>
 <tr class="separator:a7932e3e85d254f12a6690530b0bed17a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a15dd37b9798f747a609d12e5dda4b21a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCardMatch.html#a15dd37b9798f747a609d12e5dda4b21a">enemyTurn</a> ()</td></tr>
-<tr class="memdesc:a15dd37b9798f747a609d12e5dda4b21a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Executes the enemy's next move and resolves its effects.  <br /></td></tr>
-<tr class="separator:a15dd37b9798f747a609d12e5dda4b21a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3083972312286e3bcef3e392283a164f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCardMatch.html#a3083972312286e3bcef3e392283a164f">spendAction</a> (<a class="el" href="structTurnData.html">TurnData</a> &amp;turnData)</td></tr>
+<tr class="separator:a3083972312286e3bcef3e392283a164f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4372c5f649673e07e21041799cd378b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCardMatch.html#aa4372c5f649673e07e21041799cd378b">reduceAction</a> (<a class="el" href="structTurnData.html">TurnData</a> &amp;turnData, int amount)</td></tr>
+<tr class="separator:aa4372c5f649673e07e21041799cd378b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a148700f4c258918677f111e45aaac259"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCardMatch.html#a148700f4c258918677f111e45aaac259">updateMatchState</a> ()</td></tr>
+<tr class="separator:a148700f4c258918677f111e45aaac259"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36f8367bcecc0cb3758be85c8449f1ed"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCardMatch.html#a36f8367bcecc0cb3758be85c8449f1ed">turnLoop</a> ()</td></tr>
+<tr class="separator:a36f8367bcecc0cb3758be85c8449f1ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff5357b8ec6abb8aea1c4a958bf2aba2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCardMatch.html#aff5357b8ec6abb8aea1c4a958bf2aba2">playerTurnSetup</a> (const <a class="el" href="structTurnData.html">TurnData</a> &amp;currentTurnData)</td></tr>
+<tr class="separator:aff5357b8ec6abb8aea1c4a958bf2aba2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0fe3c4d864e3df138b1a27cae500aa38"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCardMatch.html#a0fe3c4d864e3df138b1a27cae500aa38">playerTurn</a> (<a class="el" href="structTurnData.html">TurnData</a> &amp;currentTurnData)</td></tr>
+<tr class="separator:a0fe3c4d864e3df138b1a27cae500aa38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a850d0dace4c39f6a5c1f56afca49729d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCardMatch.html#a850d0dace4c39f6a5c1f56afca49729d">canPlayerAct</a> (<a class="el" href="structTurnData.html">TurnData</a> &amp;currentTurnData)</td></tr>
+<tr class="separator:a850d0dace4c39f6a5c1f56afca49729d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4dc7bcd44d01a6ea26af2785cf0a907a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCardMatch.html#a4dc7bcd44d01a6ea26af2785cf0a907a">enemyTurn</a> (<a class="el" href="structTurnData.html">TurnData</a> &amp;currentTurnData)</td></tr>
+<tr class="memdesc:a4dc7bcd44d01a6ea26af2785cf0a907a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Executes the enemy's next move and resolves its effects.  <br /></td></tr>
+<tr class="separator:a4dc7bcd44d01a6ea26af2785cf0a907a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2109b05136a5092a2cfda5770e9d2873"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCardMatch.html#a2109b05136a5092a2cfda5770e9d2873">damagePhase</a> ()</td></tr>
+<tr class="separator:a2109b05136a5092a2cfda5770e9d2873"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98418bbead1b18f90482b015604a46f4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCardMatch.html#a98418bbead1b18f90482b015604a46f4">resetPhase</a> ()</td></tr>
+<tr class="separator:a98418bbead1b18f90482b015604a46f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Orchestrates a single combat encounter between one player and one enemy. </p>
@@ -137,8 +157,8 @@ Public Member Functions</h2></td></tr>
 <p><a class="el" href="classCardMatch.html" title="Orchestrates a single combat encounter between one player and one enemy.">CardMatch</a> owns the runtime combat deck (<a class="el" href="classDeckCombat.html" title="Manages all card piles during a single combat.">DeckCombat</a>) and the rules engine (<a class="el" href="classCombatSystem.html" title="Central authority for combat rules and state mutation.">CombatSystem</a>). <a class="el" href="classPlayer.html" title="Player-controlled entity with a persistent deck.">Player</a> and <a class="el" href="classEnemy.html" title="Base class for enemies with a predefined move sequence.">Enemy</a> objects are referenced and must outlive the <a class="el" href="classCardMatch.html" title="Orchestrates a single combat encounter between one player and one enemy.">CardMatch</a>.</p>
 <p><a class="el" href="classEffect.html" title="Abstract base class for all card effects.">Effect</a> resolution is performed using <a class="el" href="classCombatContext.html" title="Execution context for resolving combat effects.">CombatContext</a>, which routes effect requests to <a class="el" href="classCombatSystem.html" title="Central authority for combat rules and state mutation.">CombatSystem</a>. See <a class="el" href="combat_effect_pipeline.html">Combat Effect Resolution Pipeline</a> for the full resolution flow. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a977765d9f0cd90e79608eddc8c0a03b5" name="a977765d9f0cd90e79608eddc8c0a03b5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a977765d9f0cd90e79608eddc8c0a03b5">&#9670;&#160;</a></span>CardMatch()</h2>
+<a id="a21db012a6db3246fa3ae2c5257dfaba5" name="a21db012a6db3246fa3ae2c5257dfaba5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21db012a6db3246fa3ae2c5257dfaba5">&#9670;&#160;</a></span>CardMatch()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -146,6 +166,12 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">CardMatch::CardMatch </td>
           <td>(</td>
+          <td class="paramtype"><a class="el" href="classIMatchView.html">IMatchView</a> &amp;&#160;</td>
+          <td class="paramname"><em>matchView</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype"><a class="el" href="classPlayer.html">Player</a> &amp;&#160;</td>
           <td class="paramname"><em>player</em>, </td>
         </tr>
@@ -176,14 +202,49 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="abcb652a15f8f273427ce359fa03143ef" name="abcb652a15f8f273427ce359fa03143ef"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abcb652a15f8f273427ce359fa03143ef">&#9670;&#160;</a></span>drawMultipleCards()</h2>
+<a id="a850d0dace4c39f6a5c1f56afca49729d" name="a850d0dace4c39f6a5c1f56afca49729d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a850d0dace4c39f6a5c1f56afca49729d">&#9670;&#160;</a></span>canPlayerAct()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void CardMatch::drawMultipleCards </td>
+          <td class="memname">bool CardMatch::canPlayerAct </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structTurnData.html">TurnData</a> &amp;&#160;</td>
+          <td class="paramname"><em>currentTurnData</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2109b05136a5092a2cfda5770e9d2873" name="a2109b05136a5092a2cfda5770e9d2873"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2109b05136a5092a2cfda5770e9d2873">&#9670;&#160;</a></span>damagePhase()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CardMatch::damagePhase </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a794ebcf30069240092e0e025ed2a44e6" name="a794ebcf30069240092e0e025ed2a44e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a794ebcf30069240092e0e025ed2a44e6">&#9670;&#160;</a></span>drawMultipleCardsNoEffect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CardMatch::drawMultipleCardsNoEffect </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>amount</em></td><td>)</td>
@@ -203,8 +264,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a15dd37b9798f747a609d12e5dda4b21a" name="a15dd37b9798f747a609d12e5dda4b21a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a15dd37b9798f747a609d12e5dda4b21a">&#9670;&#160;</a></span>enemyTurn()</h2>
+<a id="a4dc7bcd44d01a6ea26af2785cf0a907a" name="a4dc7bcd44d01a6ea26af2785cf0a907a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4dc7bcd44d01a6ea26af2785cf0a907a">&#9670;&#160;</a></span>enemyTurn()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -212,7 +273,8 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">void CardMatch::enemyTurn </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype"><a class="el" href="structTurnData.html">TurnData</a> &amp;&#160;</td>
+          <td class="paramname"><em>currentTurnData</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -244,8 +306,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a0c0c130ca87f453cf1283fb41e8a6a42" name="a0c0c130ca87f453cf1283fb41e8a6a42"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0c0c130ca87f453cf1283fb41e8a6a42">&#9670;&#160;</a></span>playCard()</h2>
+<a id="a9fb3abf619b27035c8dc965cdd99b5f2" name="a9fb3abf619b27035c8dc965cdd99b5f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9fb3abf619b27035c8dc965cdd99b5f2">&#9670;&#160;</a></span>playCard()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -254,8 +316,18 @@ Public Member Functions</h2></td></tr>
           <td class="memname">void CardMatch::playCard </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>handIndex</em></td><td>)</td>
+          <td class="paramname"><em>handIndex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="classCombatContext.html">CombatContext</a> &amp;&#160;</td>
+          <td class="paramname"><em>currentContext</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -269,6 +341,167 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a0fe3c4d864e3df138b1a27cae500aa38" name="a0fe3c4d864e3df138b1a27cae500aa38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0fe3c4d864e3df138b1a27cae500aa38">&#9670;&#160;</a></span>playerTurn()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CardMatch::playerTurn </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structTurnData.html">TurnData</a> &amp;&#160;</td>
+          <td class="paramname"><em>currentTurnData</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aff5357b8ec6abb8aea1c4a958bf2aba2" name="aff5357b8ec6abb8aea1c4a958bf2aba2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff5357b8ec6abb8aea1c4a958bf2aba2">&#9670;&#160;</a></span>playerTurnSetup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CardMatch::playerTurnSetup </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structTurnData.html">TurnData</a> &amp;&#160;</td>
+          <td class="paramname"><em>currentTurnData</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa4372c5f649673e07e21041799cd378b" name="aa4372c5f649673e07e21041799cd378b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4372c5f649673e07e21041799cd378b">&#9670;&#160;</a></span>reduceAction()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CardMatch::reduceAction </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structTurnData.html">TurnData</a> &amp;&#160;</td>
+          <td class="paramname"><em>turnData</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>amount</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a98418bbead1b18f90482b015604a46f4" name="a98418bbead1b18f90482b015604a46f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98418bbead1b18f90482b015604a46f4">&#9670;&#160;</a></span>resetPhase()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CardMatch::resetPhase </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3083972312286e3bcef3e392283a164f" name="a3083972312286e3bcef3e392283a164f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3083972312286e3bcef3e392283a164f">&#9670;&#160;</a></span>spendAction()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CardMatch::spendAction </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structTurnData.html">TurnData</a> &amp;&#160;</td>
+          <td class="paramname"><em>turnData</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a36f8367bcecc0cb3758be85c8449f1ed" name="a36f8367bcecc0cb3758be85c8449f1ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36f8367bcecc0cb3758be85c8449f1ed">&#9670;&#160;</a></span>turnLoop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CardMatch::turnLoop </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a148700f4c258918677f111e45aaac259" name="a148700f4c258918677f111e45aaac259"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a148700f4c258918677f111e45aaac259">&#9670;&#160;</a></span>updateMatchState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CardMatch::updateMatchState </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9338fbeb594e31a227a9eb60cc64b129" name="a9338fbeb594e31a227a9eb60cc64b129"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9338fbeb594e31a227a9eb60cc64b129">&#9670;&#160;</a></span>writeDrawnCardMessage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CardMatch::writeDrawnCardMessage </td>
+          <td>(</td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>drawMessage</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structDrawData.html">DrawData</a> &amp;&#160;</td>
+          <td class="paramname"><em>drawData</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>

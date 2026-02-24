@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['attack_0',['Attack',['../combatEvents_8h.html#aa3e8b75bcdc6b38eaa84b6d51e71cc42adcfafcb4323b102c7e204555d313ba0a',1,'combatEvents.h']]]
+  ['aborted_0',['Aborted',['../matchData_8h.html#aca6448151e924d2cb062632532d9081fa721c28f4c74928cc9e0bb3fef345e408',1,'matchData.h']]]
 ];

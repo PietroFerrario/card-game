@@ -1,5 +1,5 @@
 var classHandRenderer =
 [
-    [ "renderHand", "classHandRenderer.html#ab24cf431b72885256042ecf6f644fa8e", null ],
-    [ "renderMultipleCards", "classHandRenderer.html#a513ed622e8eb3c2a283332b104bdb02b", null ]
+    [ "renderHand", "classHandRenderer.html#a6a9f7fda93e84c81dc8a455d33d1bd97", null ],
+    [ "renderMultipleCards", "classHandRenderer.html#a239d05159fe5dc5a3a2a36a772b3ecd4", null ]
 ];

@@ -96,8 +96,8 @@ $(document).ready(function(){initNavTree('enemyMove_8h_source.html',''); initRes
 <a href="enemyMove_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef ENEMYMOVE_H</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define ENEMYMOVE_H</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="effect_8h.html">effects/effect.h</a>&quot;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="effectParams_8h.html">effects/effectParams.h</a>&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="cardParams_8h.html">cards/cardParams.h</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="effect_8h.html">effects/effect.h</a>&quot;</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
@@ -106,19 +106,19 @@ $(document).ready(function(){initNavTree('enemyMove_8h_source.html',''); initRes
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>{</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="structEnemyMove.html#a7220e6611fe15602bd774e1bea2193a4">   22</a></span>    std::vector&lt;std::unique_ptr&lt;Effect&gt;&gt; <a class="code hl_variable" href="structEnemyMove.html#a7220e6611fe15602bd774e1bea2193a4">effectList</a>{};</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="structEnemyMove.html#a45937745665d2220954a6021432428f7">   25</a></span>    <a class="code hl_struct" href="structEffectParams.html">EffectParams</a> <a class="code hl_variable" href="structEnemyMove.html#a45937745665d2220954a6021432428f7">effectParams</a>;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="structEnemyMove.html#af250491f5a3ea3d39b27735641b9f01c">   25</a></span>    <a class="code hl_struct" href="structCardParams.html">CardParams</a> <a class="code hl_variable" href="structEnemyMove.html#af250491f5a3ea3d39b27735641b9f01c">effectParams</a>;</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="structEnemyMove.html#a78138a5391362cddecfae2a9e1cf42d9">   28</a></span>    std::string <a class="code hl_variable" href="structEnemyMove.html#a78138a5391362cddecfae2a9e1cf42d9">name</a>;</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>};</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#endif </span><span class="comment">// ENEMYMOVE_H</span></div>
-<div class="ttc" id="aeffectParams_8h_html"><div class="ttname"><a href="effectParams_8h.html">effectParams.h</a></div></div>
+<div class="ttc" id="acardParams_8h_html"><div class="ttname"><a href="cardParams_8h.html">cardParams.h</a></div></div>
 <div class="ttc" id="aeffect_8h_html"><div class="ttname"><a href="effect_8h.html">effect.h</a></div></div>
-<div class="ttc" id="astructEffectParams_html"><div class="ttname"><a href="structEffectParams.html">EffectParams</a></div><div class="ttdoc">Numeric parameters used to resolve gameplay effects.</div><div class="ttdef"><b>Definition:</b> effectParams.h:14</div></div>
+<div class="ttc" id="astructCardParams_html"><div class="ttname"><a href="structCardParams.html">CardParams</a></div><div class="ttdoc">Numeric parameters used to resolve gameplay effects.</div><div class="ttdef"><b>Definition:</b> cardParams.h:14</div></div>
 <div class="ttc" id="astructEnemyMove_html"><div class="ttname"><a href="structEnemyMove.html">EnemyMove</a></div><div class="ttdoc">Describes a single enemy action resolved during combat.</div><div class="ttdef"><b>Definition:</b> enemyMove.h:20</div></div>
-<div class="ttc" id="astructEnemyMove_html_a45937745665d2220954a6021432428f7"><div class="ttname"><a href="structEnemyMove.html#a45937745665d2220954a6021432428f7">EnemyMove::effectParams</a></div><div class="ttdeci">EffectParams effectParams</div><div class="ttdoc">Numeric parameters supplied to effects during resolution.</div><div class="ttdef"><b>Definition:</b> enemyMove.h:25</div></div>
 <div class="ttc" id="astructEnemyMove_html_a7220e6611fe15602bd774e1bea2193a4"><div class="ttname"><a href="structEnemyMove.html#a7220e6611fe15602bd774e1bea2193a4">EnemyMove::effectList</a></div><div class="ttdeci">std::vector&lt; std::unique_ptr&lt; Effect &gt; &gt; effectList</div><div class="ttdoc">Ordered list of effects executed when this move is resolved.</div><div class="ttdef"><b>Definition:</b> enemyMove.h:22</div></div>
 <div class="ttc" id="astructEnemyMove_html_a78138a5391362cddecfae2a9e1cf42d9"><div class="ttname"><a href="structEnemyMove.html#a78138a5391362cddecfae2a9e1cf42d9">EnemyMove::name</a></div><div class="ttdeci">std::string name</div><div class="ttdoc">name of the move (used for logging/UI).</div><div class="ttdef"><b>Definition:</b> enemyMove.h:28</div></div>
+<div class="ttc" id="astructEnemyMove_html_af250491f5a3ea3d39b27735641b9f01c"><div class="ttname"><a href="structEnemyMove.html#af250491f5a3ea3d39b27735641b9f01c">EnemyMove::effectParams</a></div><div class="ttdeci">CardParams effectParams</div><div class="ttdoc">Numeric parameters supplied to effects during resolution.</div><div class="ttdef"><b>Definition:</b> enemyMove.h:25</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

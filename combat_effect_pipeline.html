@@ -109,7 +109,7 @@ Player card resolution</h1>
 </ul>
 </li>
 <li><a class="el" href="classCardMatch.html" title="Orchestrates a single combat encounter between one player and one enemy.">CardMatch</a> iterates the card's effects in definition order: <a class="el" href="classCardDefinition.html#a88cb791e738bdbf86a46536f250c2ff3" title="Returns a const reference to the list of effects.">CardDefinition::getEffectList()</a> yields the ordered <a class="el" href="classEffect.html" title="Abstract base class for all card effects.">Effect</a> list.</li>
-<li>For each <a class="el" href="classEffect.html" title="Abstract base class for all card effects.">Effect</a>, <a class="el" href="classCardMatch.html" title="Orchestrates a single combat encounter between one player and one enemy.">CardMatch</a> calls: Effect::resolve(context, params) where params are provided by the <a class="el" href="classCardInstance.html" title="Represents a runtime instance of a card during combat.">CardInstance</a> (<a class="el" href="structEffectParams.html" title="Numeric parameters used to resolve gameplay effects.">EffectParams</a>).</li>
+<li>For each <a class="el" href="classEffect.html" title="Abstract base class for all card effects.">Effect</a>, <a class="el" href="classCardMatch.html" title="Orchestrates a single combat encounter between one player and one enemy.">CardMatch</a> calls: Effect::resolve(context, params) where params are provided by the <a class="el" href="classCardInstance.html" title="Represents a runtime instance of a card during combat.">CardInstance</a> (<a class="el" href="structCardParams.html" title="Numeric parameters used to resolve gameplay effects.">CardParams</a>).</li>
 <li>After all effects have resolved, <a class="el" href="classCardMatch.html" title="Orchestrates a single combat encounter between one player and one enemy.">CardMatch</a> discards the exhausted card by transferring ownership to DeckCombat::discard(...).</li>
 </ol>
 <h1><a class="anchor" id="flow"></a>
@@ -122,13 +122,13 @@ Player card resolution</h1>
 <li><a class="el" href="classCombatSystem.html" title="Central authority for combat rules and state mutation.">CombatSystem</a> reference</li>
 </ul>
 </li>
-<li><a class="el" href="classCardMatch.html" title="Orchestrates a single combat encounter between one player and one enemy.">CardMatch</a> resolves each <a class="el" href="classEffect.html" title="Abstract base class for all card effects.">Effect</a> in the <a class="el" href="structEnemyMove.html" title="Describes a single enemy action resolved during combat.">EnemyMove</a>'s effectList in order, passing <a class="el" href="structEnemyMove.html#a45937745665d2220954a6021432428f7" title="Numeric parameters supplied to effects during resolution.">EnemyMove::effectParams</a> as the numeric input.</li>
+<li><a class="el" href="classCardMatch.html" title="Orchestrates a single combat encounter between one player and one enemy.">CardMatch</a> resolves each <a class="el" href="classEffect.html" title="Abstract base class for all card effects.">Effect</a> in the <a class="el" href="structEnemyMove.html" title="Describes a single enemy action resolved during combat.">EnemyMove</a>'s effectList in order, passing <a class="el" href="structEnemyMove.html#af250491f5a3ea3d39b27735641b9f01c" title="Numeric parameters supplied to effects during resolution.">EnemyMove::effectParams</a> as the numeric input.</li>
 </ol>
 <h1><a class="anchor" id="data"></a>
 Effect data model</h1>
 <p>Effects are intentionally split into:</p><ul>
 <li>Behavior: implemented by polymorphic <a class="el" href="classEffect.html" title="Abstract base class for all card effects.">Effect</a> subclasses (e.g., <a class="el" href="classGainArmorEffect.html" title="Effect that grants armor to a combat target.">GainArmorEffect</a>)</li>
-<li>Values: provided as <a class="el" href="structEffectParams.html" title="Numeric parameters used to resolve gameplay effects.">EffectParams</a> (e.g., damage, armor)</li>
+<li>Values: provided as <a class="el" href="structCardParams.html" title="Numeric parameters used to resolve gameplay effects.">CardParams</a> (e.g., damage, armor)</li>
 </ul>
 <p>This separation enables the same <a class="el" href="classEffect.html" title="Abstract base class for all card effects.">Effect</a> classes to be reused for both cards and enemy moves, while keeping effects stateless and definition-driven.</p>
 <h1><a class="anchor" id="targeting"></a>
@@ -153,7 +153,7 @@ Ownership and lifetimes</h1>
 <li>takeFromHand(index) transfers ownership and erases from the hand immediately.</li>
 <li>discard(...) transfers ownership into the discard pile.</li>
 <li>CardDefinitions own their <a class="el" href="classEffect.html" title="Abstract base class for all card effects.">Effect</a> lists; Effects are reused across plays and must be stateless.</li>
-<li>EnemyMoves own their <a class="el" href="classEffect.html" title="Abstract base class for all card effects.">Effect</a> lists and provide <a class="el" href="structEffectParams.html" title="Numeric parameters used to resolve gameplay effects.">EffectParams</a> for execution.</li>
+<li>EnemyMoves own their <a class="el" href="classEffect.html" title="Abstract base class for all card effects.">Effect</a> lists and provide <a class="el" href="structCardParams.html" title="Numeric parameters used to resolve gameplay effects.">CardParams</a> for execution.</li>
 </ul>
 <h1><a class="anchor" id="extension"></a>
 Extension points</h1>

@@ -1,0 +1,12 @@
+var matchData_8h =
+[
+    [ "MatchData", "structMatchData.html", "structMatchData" ],
+    [ "TurnData", "structTurnData.html", "structTurnData" ],
+    [ "MatchState", "matchData_8h.html#aca6448151e924d2cb062632532d9081f", [
+      [ "Running", "matchData_8h.html#aca6448151e924d2cb062632532d9081fa5bda814c4aedb126839228f1a3d92f09", null ],
+      [ "PlayerWon", "matchData_8h.html#aca6448151e924d2cb062632532d9081faa85b95017d0792ca611434d181515722", null ],
+      [ "EnemyWon", "matchData_8h.html#aca6448151e924d2cb062632532d9081fa7e15f771603988c99256bedae0748a7d", null ],
+      [ "MutualDestruction", "matchData_8h.html#aca6448151e924d2cb062632532d9081fa730599a6977490a4d8aebfcc347f9cc1", null ],
+      [ "Aborted", "matchData_8h.html#aca6448151e924d2cb062632532d9081fa721c28f4c74928cc9e0bb3fef345e408", null ]
+    ] ]
+];

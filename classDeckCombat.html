@@ -104,7 +104,7 @@ $(document).ready(function(){initNavTree('classDeckCombat.html',''); initResizab
 <div class="dynheader">
 Collaboration diagram for DeckCombat:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classDeckCombat__coll__graph.svg" width="172" height="191"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classDeckCombat__coll__graph.svg" width="180" height="235"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <table class="memberdecls">
@@ -113,9 +113,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a8ee7cea4e28b669e3b609c77726185eb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDeckCombat.html#a8ee7cea4e28b669e3b609c77726185eb">DeckCombat</a> (const <a class="el" href="classDeckPlayer.html">DeckPlayer</a> &amp;deck_player, const <a class="el" href="classICardFactory.html">ICardFactory</a> &amp;factory)</td></tr>
 <tr class="memdesc:a8ee7cea4e28b669e3b609c77726185eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the combat deck from a player's persistent deck.  <br /></td></tr>
 <tr class="separator:a8ee7cea4e28b669e3b609c77726185eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adc186615536f9422731321b3c1988285"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDeckCombat.html#adc186615536f9422731321b3c1988285">drawCard</a> ()</td></tr>
-<tr class="memdesc:adc186615536f9422731321b3c1988285"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws one card from the draw pile to the hand.  <br /></td></tr>
-<tr class="separator:adc186615536f9422731321b3c1988285"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afbb76f85ad92498b8658bd48fdfcfca4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structDrawResult.html">DrawResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDeckCombat.html#afbb76f85ad92498b8658bd48fdfcfca4">drawCard</a> ()</td></tr>
+<tr class="memdesc:afbb76f85ad92498b8658bd48fdfcfca4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws one card from the draw pile to the hand.  <br /></td></tr>
+<tr class="separator:afbb76f85ad92498b8658bd48fdfcfca4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8afce5f59b3c45388dc98c3f04b64a1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structDrawData.html">DrawData</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDeckCombat.html#ad8afce5f59b3c45388dc98c3f04b64a1">drawMultipleCards</a> (int amount)</td></tr>
+<tr class="separator:ad8afce5f59b3c45388dc98c3f04b64a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ed556035ec64030a32e8f995d26459a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDeckCombat.html#a3ed556035ec64030a32e8f995d26459a">discardFromHand</a> (int handIndex)</td></tr>
 <tr class="memdesc:a3ed556035ec64030a32e8f995d26459a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Discards a card from the hand to the discard pile.  <br /></td></tr>
 <tr class="separator:a3ed556035ec64030a32e8f995d26459a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -131,9 +133,13 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a2220e79c071491e02bb9f5fda4f242cd"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::unique_ptr&lt; <a class="el" href="classCardInstance.html">CardInstance</a> &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDeckCombat.html#a2220e79c071491e02bb9f5fda4f242cd">getHandPile</a> ()</td></tr>
 <tr class="memdesc:a2220e79c071491e02bb9f5fda4f242cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a reference to the current hand pile.  <br /></td></tr>
 <tr class="separator:a2220e79c071491e02bb9f5fda4f242cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad2b77abdf31a4352a7b861cb1472a711"><td class="memItemLeft" align="right" valign="top">std::vector&lt; const <a class="el" href="classCardInstance.html">CardInstance</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDeckCombat.html#ad2b77abdf31a4352a7b861cb1472a711">getHandView</a> ()</td></tr>
-<tr class="memdesc:ad2b77abdf31a4352a7b861cb1472a711"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a non-owning view of the current hand for UI rendering.  <br /></td></tr>
-<tr class="separator:ad2b77abdf31a4352a7b861cb1472a711"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab89e8ec4aba760489aaff5e7fce430a3"><td class="memItemLeft" align="right" valign="top">std::vector&lt; const <a class="el" href="classCardInstance.html">CardInstance</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDeckCombat.html#ab89e8ec4aba760489aaff5e7fce430a3">getHandView</a> () const</td></tr>
+<tr class="memdesc:ab89e8ec4aba760489aaff5e7fce430a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a non-owning view of the current hand for UI rendering.  <br /></td></tr>
+<tr class="separator:ab89e8ec4aba760489aaff5e7fce430a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71f9af3f6d67d357fba57d07391e1e8e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDeckCombat.html#a71f9af3f6d67d357fba57d07391e1e8e">shuffle</a> ()</td></tr>
+<tr class="separator:a71f9af3f6d67d357fba57d07391e1e8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80d4aa5a357654c59f7ce3d4731befcb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDeckCombat.html#a80d4aa5a357654c59f7ce3d4731befcb">regenerateDeck</a> ()</td></tr>
+<tr class="separator:a80d4aa5a357654c59f7ce3d4731befcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Manages all card piles during a single combat. </p>
@@ -237,14 +243,14 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="adc186615536f9422731321b3c1988285" name="adc186615536f9422731321b3c1988285"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adc186615536f9422731321b3c1988285">&#9670;&#160;</a></span>drawCard()</h2>
+<a id="afbb76f85ad92498b8658bd48fdfcfca4" name="afbb76f85ad92498b8658bd48fdfcfca4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afbb76f85ad92498b8658bd48fdfcfca4">&#9670;&#160;</a></span>drawCard()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void DeckCombat::drawCard </td>
+          <td class="memname"><a class="el" href="structDrawResult.html">DrawResult</a> DeckCombat::drawCard </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -254,6 +260,24 @@ Public Member Functions</h2></td></tr>
 
 <p>Draws one card from the draw pile to the hand. </p>
 <p>If the draw pile is empty, no action is taken. </p>
+
+</div>
+</div>
+<a id="ad8afce5f59b3c45388dc98c3f04b64a1" name="ad8afce5f59b3c45388dc98c3f04b64a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8afce5f59b3c45388dc98c3f04b64a1">&#9670;&#160;</a></span>drawMultipleCards()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structDrawData.html">DrawData</a> DeckCombat::drawMultipleCards </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>amount</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -311,8 +335,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ad2b77abdf31a4352a7b861cb1472a711" name="ad2b77abdf31a4352a7b861cb1472a711"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad2b77abdf31a4352a7b861cb1472a711">&#9670;&#160;</a></span>getHandView()</h2>
+<a id="ab89e8ec4aba760489aaff5e7fce430a3" name="ab89e8ec4aba760489aaff5e7fce430a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab89e8ec4aba760489aaff5e7fce430a3">&#9670;&#160;</a></span>getHandView()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -321,13 +345,47 @@ Public Member Functions</h2></td></tr>
           <td class="memname">std::vector&lt; const <a class="el" href="classCardInstance.html">CardInstance</a> * &gt; DeckCombat::getHandView </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Returns a non-owning view of the current hand for UI rendering. </p>
 <dl class="section return"><dt>Returns</dt><dd>Vector of raw pointers to cards currently in hand. </dd></dl>
+
+</div>
+</div>
+<a id="a80d4aa5a357654c59f7ce3d4731befcb" name="a80d4aa5a357654c59f7ce3d4731befcb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80d4aa5a357654c59f7ce3d4731befcb">&#9670;&#160;</a></span>regenerateDeck()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DeckCombat::regenerateDeck </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a71f9af3f6d67d357fba57d07391e1e8e" name="a71f9af3f6d67d357fba57d07391e1e8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71f9af3f6d67d357fba57d07391e1e8e">&#9670;&#160;</a></span>shuffle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DeckCombat::shuffle </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>

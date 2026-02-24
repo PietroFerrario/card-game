@@ -96,14 +96,14 @@ $(document).ready(function(){initNavTree('effect_8h_source.html',''); initResiza
 <a href="effect_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef EFFECT_H</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define EFFECT_H</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="effectParams_8h.html">effects/effectParams.h</a>&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="cardParams_8h.html">cards/cardParams.h</a>&quot;</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">class </span><a class="code hl_class" href="classCombatContext.html">CombatContext</a>;</div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="classEffect.html">   18</a></span><span class="keyword">class </span><a class="code hl_class" href="classEffect.html">Effect</a></div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>{</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>  <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="classEffect.html#a39d26749b196992d83fd7d1763434c4b">   27</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classEffect.html#a39d26749b196992d83fd7d1763434c4b">resolve</a>(<a class="code hl_class" href="classCombatContext.html">CombatContext</a>&amp; combatContext, <span class="keyword">const</span> <a class="code hl_struct" href="structEffectParams.html">EffectParams</a>&amp; effectParams) = 0;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="classEffect.html#a5a3f7f0fafe482f0c11239eba109d967">   27</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classEffect.html#a5a3f7f0fafe482f0c11239eba109d967">resolve</a>(<a class="code hl_class" href="classCombatContext.html">CombatContext</a>&amp; combatContext, <span class="keyword">const</span> <a class="code hl_struct" href="structCardParams.html">CardParams</a>&amp; effectParams) = 0;</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="classEffect.html#a3bb9ae12885350459f007163e2d7259c">   30</a></span>    <span class="keyword">virtual</span> <a class="code hl_function" href="classEffect.html#a3bb9ae12885350459f007163e2d7259c">~Effect</a>() = <span class="keywordflow">default</span>;</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
@@ -111,12 +111,12 @@ $(document).ready(function(){initNavTree('effect_8h_source.html',''); initResiza
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>};</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">#endif </span><span class="comment">// EFFECT_H</span></div>
-<div class="ttc" id="aclassCombatContext_html"><div class="ttname"><a href="classCombatContext.html">CombatContext</a></div><div class="ttdoc">Execution context for resolving combat effects.</div><div class="ttdef"><b>Definition:</b> combatContext.h:22</div></div>
+<div class="ttc" id="acardParams_8h_html"><div class="ttname"><a href="cardParams_8h.html">cardParams.h</a></div></div>
+<div class="ttc" id="aclassCombatContext_html"><div class="ttname"><a href="classCombatContext.html">CombatContext</a></div><div class="ttdoc">Execution context for resolving combat effects.</div><div class="ttdef"><b>Definition:</b> combatContext.h:30</div></div>
 <div class="ttc" id="aclassEffect_html"><div class="ttname"><a href="classEffect.html">Effect</a></div><div class="ttdoc">Abstract base class for all card effects.</div><div class="ttdef"><b>Definition:</b> effect.h:19</div></div>
-<div class="ttc" id="aclassEffect_html_a39d26749b196992d83fd7d1763434c4b"><div class="ttname"><a href="classEffect.html#a39d26749b196992d83fd7d1763434c4b">Effect::resolve</a></div><div class="ttdeci">virtual void resolve(CombatContext &amp;combatContext, const EffectParams &amp;effectParams)=0</div><div class="ttdoc">Applies the effect during card resolution.</div></div>
 <div class="ttc" id="aclassEffect_html_a3bb9ae12885350459f007163e2d7259c"><div class="ttname"><a href="classEffect.html#a3bb9ae12885350459f007163e2d7259c">Effect::~Effect</a></div><div class="ttdeci">virtual ~Effect()=default</div><div class="ttdoc">Virtual destructor.</div></div>
-<div class="ttc" id="aeffectParams_8h_html"><div class="ttname"><a href="effectParams_8h.html">effectParams.h</a></div></div>
-<div class="ttc" id="astructEffectParams_html"><div class="ttname"><a href="structEffectParams.html">EffectParams</a></div><div class="ttdoc">Numeric parameters used to resolve gameplay effects.</div><div class="ttdef"><b>Definition:</b> effectParams.h:14</div></div>
+<div class="ttc" id="aclassEffect_html_a5a3f7f0fafe482f0c11239eba109d967"><div class="ttname"><a href="classEffect.html#a5a3f7f0fafe482f0c11239eba109d967">Effect::resolve</a></div><div class="ttdeci">virtual void resolve(CombatContext &amp;combatContext, const CardParams &amp;effectParams)=0</div><div class="ttdoc">Applies the effect during card resolution.</div></div>
+<div class="ttc" id="astructCardParams_html"><div class="ttname"><a href="structCardParams.html">CardParams</a></div><div class="ttdoc">Numeric parameters used to resolve gameplay effects.</div><div class="ttdef"><b>Definition:</b> cardParams.h:14</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

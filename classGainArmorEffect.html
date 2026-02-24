@@ -119,20 +119,20 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a83f8d9698c4599523a0877ad0d41e03b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGainArmorEffect.html#a83f8d9698c4599523a0877ad0d41e03b">GainArmorEffect</a> (<a class="el" href="combatTarget_8h.html#a31488d29805a596498c0234ae392d35d">Target</a> target)</td></tr>
 <tr class="memdesc:a83f8d9698c4599523a0877ad0d41e03b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the effect with a fixed logical target.  <br /></td></tr>
 <tr class="separator:a83f8d9698c4599523a0877ad0d41e03b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6e2f9190a774f6ff6a64e49cdafa0fbe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGainArmorEffect.html#a6e2f9190a774f6ff6a64e49cdafa0fbe">resolve</a> (<a class="el" href="classCombatContext.html">CombatContext</a> &amp;combatContext, const <a class="el" href="structEffectParams.html">EffectParams</a> &amp;values) override</td></tr>
-<tr class="memdesc:a6e2f9190a774f6ff6a64e49cdafa0fbe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Grants armor using <a class="el" href="structEffectParams.html#af22dfed5bca4d831bb20c077d590493a">EffectParams::armor</a>.  <br /></td></tr>
-<tr class="separator:a6e2f9190a774f6ff6a64e49cdafa0fbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2bf1d5580656739dcf350fc69621edec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGainArmorEffect.html#a2bf1d5580656739dcf350fc69621edec">resolve</a> (<a class="el" href="classCombatContext.html">CombatContext</a> &amp;combatContext, const <a class="el" href="structCardParams.html">CardParams</a> &amp;values) override</td></tr>
+<tr class="memdesc:a2bf1d5580656739dcf350fc69621edec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Grants armor using <a class="el" href="structCardParams.html#a44a39bf6cfc972b96f90bbf9bb934357">CardParams::armor</a>.  <br /></td></tr>
+<tr class="separator:a2bf1d5580656739dcf350fc69621edec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classEffect"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classEffect')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classEffect.html">Effect</a></td></tr>
-<tr class="memitem:a39d26749b196992d83fd7d1763434c4b inherit pub_methods_classEffect"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEffect.html#a39d26749b196992d83fd7d1763434c4b">resolve</a> (<a class="el" href="classCombatContext.html">CombatContext</a> &amp;combatContext, const <a class="el" href="structEffectParams.html">EffectParams</a> &amp;effectParams)=0</td></tr>
-<tr class="memdesc:a39d26749b196992d83fd7d1763434c4b inherit pub_methods_classEffect"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies the effect during card resolution.  <br /></td></tr>
-<tr class="separator:a39d26749b196992d83fd7d1763434c4b inherit pub_methods_classEffect"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a3f7f0fafe482f0c11239eba109d967 inherit pub_methods_classEffect"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEffect.html#a5a3f7f0fafe482f0c11239eba109d967">resolve</a> (<a class="el" href="classCombatContext.html">CombatContext</a> &amp;combatContext, const <a class="el" href="structCardParams.html">CardParams</a> &amp;effectParams)=0</td></tr>
+<tr class="memdesc:a5a3f7f0fafe482f0c11239eba109d967 inherit pub_methods_classEffect"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies the effect during card resolution.  <br /></td></tr>
+<tr class="separator:a5a3f7f0fafe482f0c11239eba109d967 inherit pub_methods_classEffect"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3bb9ae12885350459f007163e2d7259c inherit pub_methods_classEffect"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEffect.html#a3bb9ae12885350459f007163e2d7259c">~Effect</a> ()=default</td></tr>
 <tr class="memdesc:a3bb9ae12885350459f007163e2d7259c inherit pub_methods_classEffect"><td class="mdescLeft">&#160;</td><td class="mdescRight">Virtual destructor.  <br /></td></tr>
 <tr class="separator:a3bb9ae12885350459f007163e2d7259c inherit pub_methods_classEffect"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classEffect.html" title="Abstract base class for all card effects.">Effect</a> that grants armor to a combat target. </p>
-<p><a class="el" href="classGainArmorEffect.html" title="Effect that grants armor to a combat target.">GainArmorEffect</a> reads the armor value from <a class="el" href="structEffectParams.html" title="Numeric parameters used to resolve gameplay effects.">EffectParams</a> and grants it to either the actor or the opponent, depending on the configured Target.</p>
+<p><a class="el" href="classGainArmorEffect.html" title="Effect that grants armor to a combat target.">GainArmorEffect</a> reads the armor value from <a class="el" href="structCardParams.html" title="Numeric parameters used to resolve gameplay effects.">CardParams</a> and grants it to either the actor or the opponent, depending on the configured Target.</p>
 <p>The effect does not modify entity state directly; it requests the operation through <a class="el" href="classCombatContext.html" title="Execution context for resolving combat effects.">CombatContext</a>. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a83f8d9698c4599523a0877ad0d41e03b" name="a83f8d9698c4599523a0877ad0d41e03b"></a>
@@ -170,8 +170,8 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a6e2f9190a774f6ff6a64e49cdafa0fbe" name="a6e2f9190a774f6ff6a64e49cdafa0fbe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6e2f9190a774f6ff6a64e49cdafa0fbe">&#9670;&#160;</a></span>resolve()</h2>
+<a id="a2bf1d5580656739dcf350fc69621edec" name="a2bf1d5580656739dcf350fc69621edec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2bf1d5580656739dcf350fc69621edec">&#9670;&#160;</a></span>resolve()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -188,7 +188,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="structEffectParams.html">EffectParams</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="structCardParams.html">CardParams</a> &amp;&#160;</td>
           <td class="paramname"><em>values</em>&#160;</td>
         </tr>
         <tr>
@@ -204,7 +204,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Grants armor using <a class="el" href="structEffectParams.html#af22dfed5bca4d831bb20c077d590493a">EffectParams::armor</a>. </p>
+<p>Grants armor using <a class="el" href="structCardParams.html#a44a39bf6cfc972b96f90bbf9bb934357">CardParams::armor</a>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">combatContext</td><td>Current combat execution context. </td></tr>
@@ -213,7 +213,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implements <a class="el" href="classEffect.html#a39d26749b196992d83fd7d1763434c4b">Effect</a>.</p>
+<p>Implements <a class="el" href="classEffect.html#a5a3f7f0fafe482f0c11239eba109d967">Effect</a>.</p>
 
 </div>
 </div>

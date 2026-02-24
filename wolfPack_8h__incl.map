@@ -1,12 +1,12 @@
 <map id="entities/enemies/wolfPack.h" name="entities/enemies/wolfPack.h">
-<area shape="rect" id="node1" title=" " alt="" coords="251,5,457,31"/>
-<area shape="rect" id="node2" href="$enemy_8h.html" title=" " alt="" coords="315,79,393,104"/>
-<area shape="rect" id="node3" href="$enemyMove_8h.html" title=" " alt="" coords="202,152,317,177"/>
-<area shape="rect" id="node8" title=" " alt="" coords="323,225,385,251"/>
-<area shape="rect" id="node9" href="$entity_8h.html" title=" " alt="" coords="391,152,514,177"/>
-<area shape="rect" id="node4" href="$effect_8h.html" title=" " alt="" coords="79,225,197,251"/>
-<area shape="rect" id="node5" href="$effectParams_8h.html" title=" " alt="" coords="5,299,172,324"/>
-<area shape="rect" id="node6" title=" " alt="" coords="221,225,298,251"/>
-<area shape="rect" id="node7" title=" " alt="" coords="410,225,469,251"/>
-<area shape="rect" id="node10" title=" " alt="" coords="493,225,591,251"/>
+<area shape="rect" id="node1" title=" " alt="" coords="243,5,448,31"/>
+<area shape="rect" id="node2" href="$enemy_8h.html" title=" " alt="" coords="307,79,384,104"/>
+<area shape="rect" id="node3" href="$enemyMove_8h.html" title=" " alt="" coords="193,152,308,177"/>
+<area shape="rect" id="node8" title=" " alt="" coords="314,225,377,251"/>
+<area shape="rect" id="node9" href="$entity_8h.html" title=" " alt="" coords="383,152,505,177"/>
+<area shape="rect" id="node4" href="$cardParams_8h.html" title=" " alt="" coords="5,299,155,324"/>
+<area shape="rect" id="node5" href="$effect_8h.html" title=" " alt="" coords="70,225,189,251"/>
+<area shape="rect" id="node6" title=" " alt="" coords="212,225,289,251"/>
+<area shape="rect" id="node7" title=" " alt="" coords="401,225,460,251"/>
+<area shape="rect" id="node10" title=" " alt="" coords="485,225,582,251"/>
 </map>

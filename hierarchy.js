@@ -3,6 +3,7 @@ var hierarchy =
     [ "CardDefinition", "classCardDefinition.html", null ],
     [ "CardInstance", "classCardInstance.html", null ],
     [ "CardMatch", "classCardMatch.html", null ],
+    [ "CardParams", "structCardParams.html", null ],
     [ "CardRenderer", "classCardRenderer.html", null ],
     [ "CombatContext", "classCombatContext.html", null ],
     [ "CombatSystem", "classCombatSystem.html", null ],
@@ -11,10 +12,15 @@ var hierarchy =
     [ "DeckCombat", "classDeckCombat.html", null ],
     [ "DeckEntry", "structDeckEntry.html", null ],
     [ "DeckPlayer", "classDeckPlayer.html", null ],
+    [ "DrawData", "structDrawData.html", null ],
+    [ "DrawResult", "structDrawResult.html", null ],
     [ "Effect", "classEffect.html", [
-      [ "GainArmorEffect", "classGainArmorEffect.html", null ]
+      [ "DrawCardsEffect", "classDrawCardsEffect.html", null ],
+      [ "GainActionsEffect", "classGainActionsEffect.html", null ],
+      [ "GainArmorEffect", "classGainArmorEffect.html", null ],
+      [ "GainAttackEffect", "classGainAttackEffect.html", null ]
     ] ],
-    [ "EffectParams", "structEffectParams.html", null ],
+    [ "CombatContext::EffectMessageScope", "classCombatContext_1_1EffectMessageScope.html", null ],
     [ "EnemyMove", "structEnemyMove.html", null ],
     [ "Entity", "classEntity.html", [
       [ "Enemy", "classEnemy.html", [
@@ -27,9 +33,14 @@ var hierarchy =
     [ "ICardFactory", "classICardFactory.html", [
       [ "CardFactory", "classCardFactory.html", null ]
     ] ],
+    [ "IMatchView", "classIMatchView.html", [
+      [ "TerminalMatchView", "classTerminalMatchView.html", null ]
+    ] ],
     [ "IOText", "classIOText.html", null ],
+    [ "MatchData", "structMatchData.html", null ],
     [ "NameLayout", "structNameLayout.html", null ],
     [ "RenderedHand", "structRenderedHand.html", null ],
     [ "Slot", "structSlot.html", null ],
-    [ "Text", "classText.html", null ]
+    [ "Text", "classText.html", null ],
+    [ "TurnData", "structTurnData.html", null ]
 ];

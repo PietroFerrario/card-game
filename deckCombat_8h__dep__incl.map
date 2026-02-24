@@ -1,5 +1,7 @@
 <map id="deck/deckCombat.h" name="deck/deckCombat.h">
-<area shape="rect" id="node1" title=" " alt="" coords="116,5,267,31"/>
-<area shape="rect" id="node2" href="$deckCombat_8cpp.html" title=" " alt="" coords="5,79,172,104"/>
-<area shape="rect" id="node3" href="$cardmatch_8h.html" title=" " alt="" coords="196,79,395,104"/>
+<area shape="rect" id="node1" title=" " alt="" coords="343,5,494,31"/>
+<area shape="rect" id="node2" href="$combatContext_8cpp.html" title=" " alt="" coords="5,79,208,104"/>
+<area shape="rect" id="node3" href="$deckCombat_8cpp.html" title=" " alt="" coords="233,79,399,104"/>
+<area shape="rect" id="node4" href="$cardmatch_8h.html" title=" " alt="" coords="423,79,622,104"/>
+<area shape="rect" id="node5" href="$terminalMatchView_8cpp.html" title=" " alt="" coords="646,79,837,104"/>
 </map>

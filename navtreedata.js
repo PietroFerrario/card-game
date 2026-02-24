@@ -49,7 +49,7 @@ var NAVTREE =
       [ "Class Index", "classes.html", null ],
       [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
       [ "Class Members", "functions.html", [
-        [ "All", "functions.html", null ],
+        [ "All", "functions.html", "functions_dup" ],
         [ "Functions", "functions_func.html", null ],
         [ "Variables", "functions_vars.html", null ],
         [ "Related Functions", "functions_rela.html", null ]
@@ -71,7 +71,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "ICardFactory_8h.html",
-"player_8cpp.html"
+"combatTarget_8h.html#a31488d29805a596498c0234ae392d35daad6e7652b1bdfb38783486c2c3d5e806"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

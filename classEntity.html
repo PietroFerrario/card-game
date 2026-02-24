@@ -105,13 +105,13 @@ $(document).ready(function(){initNavTree('classEntity.html',''); initResizable()
 <div class="dynheader">
 Inheritance diagram for Entity:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classEntity__inherit__graph.svg" width="310" height="574"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classEntity__inherit__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <div class="dynheader">
 Collaboration diagram for Entity:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classEntity__coll__graph.svg" width="195" height="390"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classEntity__coll__graph.svg" width="196" height="434"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <table class="memberdecls">
@@ -127,12 +127,21 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a7b31b7c0076c1ec866f8d46696b5846a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEntity.html#a7b31b7c0076c1ec866f8d46696b5846a">getArmor</a> () const</td></tr>
 <tr class="memdesc:a7b31b7c0076c1ec866f8d46696b5846a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current armor value.  <br /></td></tr>
 <tr class="separator:a7b31b7c0076c1ec866f8d46696b5846a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8416c806b5088894fd1673bc698a0287"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEntity.html#a8416c806b5088894fd1673bc698a0287">getAttack</a> () const</td></tr>
+<tr class="memdesc:a8416c806b5088894fd1673bc698a0287"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current attack value.  <br /></td></tr>
+<tr class="separator:a8416c806b5088894fd1673bc698a0287"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa8637a483cf260cc7933dfb66acd392f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEntity.html#aa8637a483cf260cc7933dfb66acd392f">resetArmor</a> ()</td></tr>
 <tr class="memdesc:aa8637a483cf260cc7933dfb66acd392f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets armor to zero.  <br /></td></tr>
 <tr class="separator:aa8637a483cf260cc7933dfb66acd392f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6b3a95e57c975316fa3a8fecbae0094"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEntity.html#ac6b3a95e57c975316fa3a8fecbae0094">resetAttack</a> ()</td></tr>
+<tr class="memdesc:ac6b3a95e57c975316fa3a8fecbae0094"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets attack to zero.  <br /></td></tr>
+<tr class="separator:ac6b3a95e57c975316fa3a8fecbae0094"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a381d3e155a8111f43e8918d2a91bd1eb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEntity.html#a381d3e155a8111f43e8918d2a91bd1eb">increaseArmor</a> (int amount)</td></tr>
 <tr class="memdesc:a381d3e155a8111f43e8918d2a91bd1eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Increases armor by the given amount.  <br /></td></tr>
 <tr class="separator:a381d3e155a8111f43e8918d2a91bd1eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41a517e9044eb27c578f6de1baf24463"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEntity.html#a41a517e9044eb27c578f6de1baf24463">increaseAttack</a> (int amount)</td></tr>
+<tr class="memdesc:a41a517e9044eb27c578f6de1baf24463"><td class="mdescLeft">&#160;</td><td class="mdescRight">Increases attack by the given amount.  <br /></td></tr>
+<tr class="separator:a41a517e9044eb27c578f6de1baf24463"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a68fbf0c06c706519ca0ccc41ec089aa2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEntity.html#a68fbf0c06c706519ca0ccc41ec089aa2">lowerArmor</a> (int amount)</td></tr>
 <tr class="memdesc:a68fbf0c06c706519ca0ccc41ec089aa2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decreases armor by the given amount.  <br /></td></tr>
 <tr class="separator:a68fbf0c06c706519ca0ccc41ec089aa2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -257,6 +266,33 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a8416c806b5088894fd1673bc698a0287" name="a8416c806b5088894fd1673bc698a0287"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8416c806b5088894fd1673bc698a0287">&#9670;&#160;</a></span>getAttack()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Entity::getAttack </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the current attack value. </p>
+
+</div>
+</div>
 <a id="aa6080cdbf25bece934c49e79634011ef" name="aa6080cdbf25bece934c49e79634011ef"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa6080cdbf25bece934c49e79634011ef">&#9670;&#160;</a></span>getHp()</h2>
 
@@ -336,6 +372,34 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Increases armor by the given amount. </p>
+
+</div>
+</div>
+<a id="a41a517e9044eb27c578f6de1baf24463" name="a41a517e9044eb27c578f6de1baf24463"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41a517e9044eb27c578f6de1baf24463">&#9670;&#160;</a></span>increaseAttack()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Entity::increaseAttack </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>amount</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Increases attack by the given amount. </p>
 
 </div>
 </div>
@@ -448,6 +512,33 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Resets armor to zero. </p>
+
+</div>
+</div>
+<a id="ac6b3a95e57c975316fa3a8fecbae0094" name="ac6b3a95e57c975316fa3a8fecbae0094"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6b3a95e57c975316fa3a8fecbae0094">&#9670;&#160;</a></span>resetAttack()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Entity::resetAttack </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Resets attack to zero. </p>
 
 </div>
 </div>
