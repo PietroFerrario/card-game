@@ -8,6 +8,7 @@
 #include <vector>
 
 class CardInstance;
+struct CardParams;
 
 /**
  * @brief Text alignment used when fitting content into a fixed-width slot.
@@ -100,6 +101,11 @@ class CardRenderer
     static void appendWord(std::string& line, std::string_view word);
 
     /**
+     * @brief Appends a word to a line, inserting a separator if needed.
+     */
+    static void appendSeparator(std::string& line, std::string_view word);
+
+    /**
      * @brief Splits input text into one or two lines that fit the given slot width.
      *
      * Words are kept intact when possible; overflow is placed on the second line.
@@ -109,6 +115,8 @@ class CardRenderer
      * @return NameLayout containing the first line and optional second line.
      */
     NameLayout drawLayout(std::string_view cardName, Slot currentSlot) const;
+
+    std::string drawEffects(const CardParams& cardParams) const;
 
     const int m_width{24};
     const int m_height{12};
@@ -129,8 +137,8 @@ class CardRenderer
     Slot m_damageValueSlot{5, 8, 2, SlotAlignment::Right};
     Slot m_armorValueSlot{5, m_width - 4, 2, SlotAlignment::Right};
     Slot m_effectsSumSlot{7, 3, 18, SlotAlignment::Center};
-    Slot m_firstDescrSlot{8, 2, m_width - 4, SlotAlignment::Left};
-    Slot m_secondDescrSlot{9, 2, m_width - 4, SlotAlignment::Left};
+    Slot m_firstDescrSlot{9, 2, m_width - 4, SlotAlignment::Left};
+    Slot m_secondDescrSlot{10, 2, m_width - 4, SlotAlignment::Left};
 };
 
 #endif // CARDRENDERER_H

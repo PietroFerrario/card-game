@@ -1,6 +1,7 @@
 #include "cardRenderer.h"
 #include "cards/cardDefinition.h"
 #include "cards/cardInstance.h"
+#include "cards/cardParams.h"
 
 #include <cassert>
 #include <iostream>
@@ -24,6 +25,9 @@ std::vector<std::string> CardRenderer::renderCard(const CardInstance& cardToRend
               fitText(m_damageValueSlot, std::to_string(cardToRender.getDamage())));
     writeSlot(grid, m_armorValueSlot,
               fitText(m_armorValueSlot, std::to_string(cardToRender.getArmor())));
+
+    writeSlot(grid, m_effectsSumSlot,
+              fitText(m_effectsSumSlot, drawEffects(cardToRender.getCardParams())));
 
     NameLayout descriptionLayout{
         drawLayout(cardToRender.getCardDefinition().getDescription(), m_firstDescrSlot)};
@@ -63,6 +67,15 @@ void CardRenderer::appendWord(std::string& line, std::string_view word)
         return;
     if (!line.empty())
         line.push_back(' ');
+    line.append(word);
+}
+
+void CardRenderer::appendSeparator(std::string& line, std::string_view word)
+{
+    if (word.empty())
+        return;
+    if (!line.empty())
+        line.append(" | ");
     line.append(word);
 }
 
@@ -183,4 +196,21 @@ void CardRenderer::writeSlot(std::vector<std::string>& grid, Slot slot,
     assert(slot.columnIndex + slot.maxWidth <= m_width && "Slot too large");
 
     grid.at(slot.rowIndex).replace(slot.columnIndex, slot.maxWidth, formattedText);
+}
+
+std::string CardRenderer::drawEffects(const CardParams& cardParams) const
+{
+
+    std::string effectString{""};
+
+    if (cardParams.drawing > 0)
+    {
+        appendSeparator(effectString, std::format("Draw: +{}", cardParams.drawing));
+    }
+    if (cardParams.actions > 0)
+    {
+        appendSeparator(effectString, std::format("Act: +{}", cardParams.actions));
+    }
+
+    return effectString;
 }

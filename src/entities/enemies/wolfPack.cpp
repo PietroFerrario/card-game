@@ -12,7 +12,7 @@ WolfPack::WolfPack(int hp) : Enemy{hp}
 
     move.effectList.emplace_back(std::make_unique<GainArmorEffect>(Target::Self));
     move.effectList.emplace_back(std::make_unique<GainAttackEffect>(Target::Self));
-    move.effectParams.attack = 5;
+    move.effectParams.damage = 5;
     move.effectParams.armor = 5;
     move.name = "Pack Tactics";
 }

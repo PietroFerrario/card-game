@@ -6,6 +6,6 @@
 
 void GainAttackEffect::resolve(CombatContext& combatContext, const CardParams& values)
 {
-    combatContext.gainAttack(m_target, values.attack);
+    combatContext.gainAttack(m_target, values.damage);
     DEBUG_LOG("Applied effect GainAttack");
 }
