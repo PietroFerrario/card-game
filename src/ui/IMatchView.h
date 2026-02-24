@@ -10,6 +10,7 @@ class Entity;
 struct TurnData;
 struct MatchData;
 struct DamageResult;
+struct DrawData;
 
 class IMatchView
 {
@@ -32,6 +33,7 @@ class IMatchView
     virtual void showEndOfTurn(const MatchData& matchData) const = 0;
     virtual void showEndOfMatch(const MatchData& matchData) const = 0;
     virtual void showStartOfMatch(std::string_view enemyName) const = 0;
+    virtual void showDrawCards(const DrawData& drawData) const = 0;
 
   private:
 };

@@ -4,8 +4,11 @@
 #include "deckEntry.h"
 #include "deckPlayer.h"
 #include "factories/ICardFactory.h"
+#include "util/Random.h"
 
 #include "util/debug.h"
+
+#include <algorithm>
 
 DeckCombat::DeckCombat(const DeckPlayer& deck_player, const ICardFactory& factory)
     : m_factory{factory}
@@ -19,24 +22,59 @@ void DeckCombat::populateDeck(const std::vector<DeckEntry>& cardList)
     {
         for (int i{0}; i < deckEntry.cardCount; ++i)
         {
-            m_cards.emplace_back(m_factory.makeSingleCard(deckEntry.cardId));
+            m_drawPile.emplace_back(m_factory.makeSingleCard(deckEntry.cardId));
         }
     }
 }
 
-void DeckCombat::drawCard()
+DrawData DeckCombat::drawMultipleCards(int amount)
 {
-    if (!m_cards.empty())
+    DrawData currentDrawData;
+    DEBUG_LOG("Requesting to draw " << amount << " cards from the deck: ...");
+    for (int i{0}; i < amount; i++)
     {
-        m_handPile.emplace_back(std::move(m_cards.back()));
-        m_cards.pop_back();
+        DrawResult drawResult{drawCard()};
+
+        if (drawResult.cardDrawn)
+        {
+            currentDrawData.drawnCardsNames.push_back(
+                drawResult.cardDrawn->getCardDefinition().getName());
+        }
+        else
+        {
+            break;
+        }
+        currentDrawData.reshuffled = currentDrawData.reshuffled || drawResult.reshuffled;
+    }
+
+    return currentDrawData;
+}
+
+DrawResult DeckCombat::drawCard()
+{
+    DrawResult drawResult;
+
+    if (m_drawPile.empty())
+    {
+        DEBUG_LOG("The deck is empty: no more cards to drawn. Regenerating deck from discard pile");
+        regenerateDeck();
+        drawResult.reshuffled = true;
+    }
+    if (!m_drawPile.empty())
+    {
+        m_handPile.emplace_back(std::move(m_drawPile.back()));
+        m_drawPile.pop_back();
         DEBUG_LOG("Drawn " << m_handPile.back()->getCardDefinition().getID()
                            << " from the deck, placed in the handPile.");
+        drawResult.cardDrawn = m_handPile.back().get();
     }
     else
     {
-        DEBUG_LOG("The deck is empty: no more cards to drawn.");
+
+        DEBUG_LOG("The deck and the discard pile are empty: no more cards to drawn");
     }
+
+    return drawResult;
 }
 
 std::unique_ptr<CardInstance> DeckCombat::takeFromHand(int index)
@@ -67,16 +105,16 @@ void DeckCombat::discard(std::unique_ptr<CardInstance> Card)
 
 void DeckCombat::discardFromHand(int handIndex)
 {
-    if (m_handPile.size() > handIndex)
+    if (handIndex < 0 || handIndex >= getHandSize())
+    {
+        DEBUG_LOG("The index " << handIndex << " is out of bounds.");
+    }
+    else
     {
         m_discardPile.emplace_back(std::move(m_handPile.at(handIndex)));
         m_handPile.erase(m_handPile.begin() + handIndex);
         DEBUG_LOG("Discarded " << m_discardPile.back()->getCardDefinition().getID()
                                << " from the handPile, and placed in the discardPile.");
-    }
-    else
-    {
-        DEBUG_LOG("The index " << handIndex << " is out of bounds.");
     }
 }
 
@@ -91,4 +129,16 @@ std::vector<const CardInstance*> DeckCombat::getHandView() const
     }
 
     return handView;
+}
+
+void DeckCombat::shuffle() { std::shuffle(m_drawPile.begin(), m_drawPile.end(), Random::mt); }
+
+void DeckCombat::regenerateDeck()
+{
+    if (m_drawPile.empty() && !m_discardPile.empty())
+    {
+        m_drawPile = std::move(m_discardPile);
+        m_discardPile.clear();
+        shuffle();
+    }
 }

@@ -115,19 +115,24 @@ DamageResult CombatContext::dealDamage(Target target, int amount, bool ignoreArm
     return m_combatSystem.dealDamage(resolveTarget(target), amount, ignoreArmor);
 }
 
-void CombatContext::drawCards(int amount)
+void CombatContext::drawMultipleCardFromEffect(int amount)
 {
-    // DEBUG_LOG("Requesting to draw " << amount << " cards from the deck: ...");
-    for (int i{0}; i < amount; i++)
-    {
-        m_deckCombat.drawCard();
-    }
-    // DEBUG_LOG("Drawing cards completed.");
+    std::string drawMessage;
+    m_drawData = m_deckCombat.drawMultipleCards(amount);
+
+    DEBUG_LOG("Drawing cards completed.");
 
     if (m_effectMessage)
     {
         m_effectMessage->emplace_back(std::format("Drawing: {}", amount));
     }
+}
+
+std::optional<DrawData> CombatContext::getDrawData()
+{
+    std::optional<DrawData> result{std::move(m_drawData)};
+    m_drawData.reset();
+    return result;
 }
 
 void CombatContext::gainActions(int amount)

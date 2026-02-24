@@ -17,16 +17,16 @@ CardMatch::CardMatch(IMatchView& matchView, Player& player, Enemy& enemy)
 {
 }
 
+// legacy: To be removed
 void CardMatch::gainArmor(int defense) { m_player.increaseArmor(defense); }
 
-void CardMatch::drawMultipleCards(int amount)
+void CardMatch::drawMultipleCardsNoEffect(int amount)
 {
-    DEBUG_LOG("Requesting to draw " << amount << " cards from the deck: ...");
-    for (int i{0}; i < amount; i++)
-    {
-        m_deckCombat.drawCard();
-    }
+
+    DrawData drawData{m_deckCombat.drawMultipleCards(amount)};
+
     DEBUG_LOG("Drawing cards completed.");
+    m_matchView.showDrawCards(drawData);
 }
 
 void CardMatch::playCard(int handIndex, CombatContext& currentContext)
@@ -59,6 +59,11 @@ void CardMatch::playCard(int handIndex, CombatContext& currentContext)
     if (!effectMessage.empty())
     {
         m_matchView.showEffectMessage(effectMessage);
+    }
+
+    if (auto drawData{currentContext.getDrawData()})
+    {
+        m_matchView.showDrawCards(drawData.value());
     }
 
     m_deckCombat.discard(std::move(cardBeingPlayed));
@@ -111,6 +116,7 @@ void CardMatch::turnLoop()
     {
         DEBUG_LOG("Match state: Running. Turn continues");
         TurnData turnData;
+        playerTurnSetup(turnData);
         enemyTurn(turnData);
         playerTurn(turnData);
         damagePhase();
@@ -132,8 +138,8 @@ bool CardMatch::canPlayerAct(TurnData& currentTurnData)
 
 void CardMatch::playerTurnSetup(const TurnData& currentTurnData)
 {
-    drawMultipleCards(currentTurnData.initialCardsToDraw);
     m_matchView.showPlayerTurnStart(m_matchData);
+    drawMultipleCardsNoEffect(currentTurnData.initialCardsToDraw);
 }
 
 void CardMatch::playerTurn(TurnData& currentTurnData)
@@ -141,8 +147,6 @@ void CardMatch::playerTurn(TurnData& currentTurnData)
     DEBUG_LOG("Starting player turn: Drawing 2 cards");
 
     CombatContext currentContext{m_combatSystem, m_player, m_enemy, m_deckCombat, currentTurnData};
-
-    playerTurnSetup(currentTurnData);
 
     while (canPlayerAct(currentTurnData))
     {

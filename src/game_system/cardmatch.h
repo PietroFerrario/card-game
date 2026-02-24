@@ -3,13 +3,13 @@
 #ifndef CARDMATCH_H
 #define CARDMATCH_H
 
-#include "matchData.h"
-
 #include "combat/combatSystem.h"
 #include "deck/deckCombat.h"
+#include "deck/drawData.h"
 #include "entities/enemies/enemy.h"
 #include "entities/player.h"
 #include "factories/cardFactory.h"
+#include "matchData.h"
 #include "ui/IMatchView.h"
 
 class Player;
@@ -52,7 +52,9 @@ class CardMatch
      *
      * @param amount Number of cards to draw. If amount <= 0, no action is taken.
      */
-    void drawMultipleCards(int amount);
+    void drawMultipleCardsNoEffect(int amount);
+
+    void writeDrawnCardMessage(std::string& drawMessage, const DrawData& drawData);
 
     /**
      * @brief Plays a card from the hand and resolves all of its effects.

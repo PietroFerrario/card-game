@@ -28,6 +28,7 @@ class TerminalMatchView : public IMatchView
     void showEndOfTurn(const MatchData& matchData) const override;
     void showEndOfMatch(const MatchData& matchData) const override;
     void showStartOfMatch(std::string_view enemyName) const override;
+    void showDrawCards(const DrawData& drawData) const override;
 
   private:
     IOText& m_io;

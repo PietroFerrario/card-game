@@ -2,6 +2,9 @@
 #define COMBATCONTEXT_H
 
 #include "combatTarget.h"
+#include "deck/drawData.h"
+
+#include <optional>
 #include <string>
 #include <vector>
 
@@ -61,7 +64,9 @@ class CombatContext
 
     DamageResult dealDamage(Target target, int amount, bool ignoreArmor = false);
 
-    void drawCards(int amount);
+    void drawMultipleCardFromEffect(int amount);
+
+    std::optional<DrawData> getDrawData();
 
     void gainActions(int amount);
 
@@ -87,6 +92,7 @@ class CombatContext
 
     DeckCombat& m_deckCombat;
     TurnData& m_turnData;
+    std::optional<DrawData> m_drawData;
 
     std::vector<std::string>* m_effectMessage;
 

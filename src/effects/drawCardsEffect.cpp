@@ -6,6 +6,6 @@
 
 void DrawCardsEffect::resolve(CombatContext& combatContext, const CardParams& values)
 {
-    combatContext.drawCards(values.drawing);
+    combatContext.drawMultipleCardFromEffect(values.drawing);
     DEBUG_LOG("Applied effect DrawCards");
 }

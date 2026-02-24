@@ -1,14 +1,23 @@
 #ifndef DECKCOMBAT_H
 #define DECKCOMBAT_H
 
+#include "drawData.h"
+
 #include <memory>
 #include <string>
+#include <string_view>
 #include <vector>
 
 class DeckPlayer;
 class DeckEntry;
 class CardInstance;
 class ICardFactory;
+
+struct DrawResult
+{
+    bool reshuffled{false};
+    const CardInstance* cardDrawn{nullptr};
+};
 
 /**
  * @brief Manages all card piles during a single combat.
@@ -43,7 +52,9 @@ class DeckCombat
      *
      * If the draw pile is empty, no action is taken.
      */
-    void drawCard();
+    DrawResult drawCard();
+
+    DrawData drawMultipleCards(int amount);
 
     /**
      * @brief Discards a card from the hand to the discard pile.
@@ -99,8 +110,12 @@ class DeckCombat
      */
     std::vector<const CardInstance*> getHandView() const;
 
+    void shuffle();
+
+    void regenerateDeck();
+
   private:
-    std::vector<std::unique_ptr<CardInstance>> m_cards;       ///< Draw pile (initial deck).
+    std::vector<std::unique_ptr<CardInstance>> m_drawPile;    ///< Draw pile (initial deck).
     std::vector<std::unique_ptr<CardInstance>> m_handPile;    ///< Cards in hand.
     std::vector<std::unique_ptr<CardInstance>> m_discardPile; ///< Used/discarded cards.
 

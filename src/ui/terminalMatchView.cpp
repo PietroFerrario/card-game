@@ -1,4 +1,5 @@
 #include "combat/combatEvents.h"
+#include "deck/deckCombat.h"
 #include "entities\entity.h"
 #include "game_system/matchData.h"
 #include "terminaMatchView.h"
@@ -167,6 +168,33 @@ void TerminalMatchView::showEffectMessage(const std::vector<std::string>& messag
         }
     }
     m_io.println(std::format("{:^90}", formattedMessage));
+
+    showDivisor();
+}
+
+void TerminalMatchView::showDrawCards(const DrawData& drawData) const
+{
+    showDivisor();
+
+    std::string drawMessage;
+    if (drawData.reshuffled)
+    {
+        drawMessage.append("Deck regenerated. ");
+    }
+    if (drawData.drawnCardsNames.empty())
+    {
+        drawMessage.append("No more cards to draw: empty deck and discard pile");
+        return;
+    }
+    drawMessage.append("Drawn: ");
+    for (size_t i{0}; i < drawData.drawnCardsNames.size(); ++i)
+    {
+        drawMessage.append(drawData.drawnCardsNames.at(i));
+        if (i < drawData.drawnCardsNames.size() - 1)
+            drawMessage.append(", ");
+    }
+
+    m_io.println(drawMessage);
 
     showDivisor();
 }
