@@ -3,6 +3,7 @@
 #include "cards/cardDefinition.h"
 #include "cassert"
 #include "combat/combatContext.h"
+#include "combat/combatEvents.h"
 #include "combat/combatTarget.h"
 #include "effects/effect.h"
 #include "entities/enemies/enemy.h"
@@ -28,7 +29,7 @@ void CardMatch::drawMultipleCards(int amount)
     DEBUG_LOG("Drawing cards completed.");
 }
 
-void CardMatch::playCard(int handIndex)
+void CardMatch::playCard(int handIndex, CombatContext& currentContext)
 {
 
     std::unique_ptr<CardInstance> cardBeingPlayed = m_deckCombat.takeFromHand(handIndex);
@@ -41,9 +42,9 @@ void CardMatch::playCard(int handIndex)
 
     std::vector<std::string> effectMessage;
 
-    CombatContext currentContext{m_combatSystem, m_player, m_enemy, &effectMessage};
+    CombatContext::EffectMessageScope logScope(currentContext, effectMessage);
 
-    // Possible to implement an extraction of EffectParams at the beginning. Then pass it to
+    // Possible to implement an extraction of CardParams at the beginning. Then pass it to
     // .resolve -> Less call to getEffectParams. Not necessary for now, possible future
     // implementation.
     for (const auto& effectPtr : cardBeingPlayed->getCardDefinition().getEffectList())
@@ -77,16 +78,47 @@ void CardMatch::reduceAction(TurnData& turnData, int amount)
     turnData.playerRemainingActions = std::max(0, turnData.playerRemainingActions - amount);
 }
 
+bool CardMatch::updateMatchState()
+{
+    bool playerDead = m_combatSystem.isDead(m_player);
+    bool enemyDead = m_combatSystem.isDead(m_enemy);
+
+    if (playerDead && !enemyDead)
+    {
+        m_matchData.matchState = MatchState::EnemyWon;
+        return true;
+    }
+    else if (enemyDead && !playerDead)
+    {
+        m_matchData.matchState = MatchState::PlayerWon;
+        return true;
+    }
+    else if (enemyDead && playerDead)
+    {
+        m_matchData.matchState = MatchState::MutualDestruction;
+        return true;
+    }
+    return false;
+}
+
+// Implement returning the MatchState -> In order for the main to manage it
 void CardMatch::turnLoop()
 {
+    m_matchView.showStartOfMatch(m_enemy.getName());
+
     DEBUG_LOG("Starting turn loop");
     while (m_matchData.matchState == MatchState::Running)
     {
         DEBUG_LOG("Match state: Running. Turn continues");
         TurnData turnData;
+        enemyTurn(turnData);
         playerTurn(turnData);
-        enemyTurn();
         damagePhase();
+        if (updateMatchState())
+        {
+            m_matchView.showEndOfMatch(m_matchData);
+            break;
+        }
         resetPhase();
     }
 }
@@ -95,25 +127,34 @@ bool CardMatch::canPlayerAct(TurnData& currentTurnData)
 {
     DEBUG_LOG("Checking is the player can act in this turn");
     return currentTurnData.playerRemainingActions > 0 &&
-           static_cast<int>(m_deckCombat.getHandSize());
+           static_cast<int>(m_deckCombat.getHandSize()) > 0;
+}
+
+void CardMatch::playerTurnSetup(const TurnData& currentTurnData)
+{
+    drawMultipleCards(currentTurnData.initialCardsToDraw);
+    m_matchView.showPlayerTurnStart(m_matchData);
 }
 
 void CardMatch::playerTurn(TurnData& currentTurnData)
 {
     DEBUG_LOG("Starting player turn: Drawing 2 cards");
-    m_matchView.showPlayerTurnStart(m_matchData);
-    drawMultipleCards(2);
+
+    CombatContext currentContext{m_combatSystem, m_player, m_enemy, m_deckCombat, currentTurnData};
+
+    playerTurnSetup(currentTurnData);
 
     while (canPlayerAct(currentTurnData))
     {
         DEBUG_LOG("Player can act: Starting valid action loop");
+
         m_matchView.showRecurringMatchStatus(m_matchData, currentTurnData, m_player, m_enemy);
         m_matchView.showCurrentHand(m_deckCombat.getHandView());
 
         DEBUG_LOG("Asking which card to play (Inside playerTurn)");
         int cardToPlayIndex{
             m_matchView.askCardToPlay(static_cast<int>(m_deckCombat.getHandSize()))};
-        playCard(cardToPlayIndex);
+        playCard(cardToPlayIndex, currentContext);
 
         DEBUG_LOG("Spending one action");
         spendAction(currentTurnData);
@@ -123,35 +164,43 @@ void CardMatch::playerTurn(TurnData& currentTurnData)
     }
 }
 
-void CardMatch::enemyTurn()
+void CardMatch::enemyTurn(TurnData& currentTurnData)
 {
     DEBUG_LOG("Starting enemy action");
     const EnemyMove& currentMove = m_enemy.nextMove();
 
-    CombatContext currentContext{m_combatSystem, m_enemy, m_player};
+    std::vector<std::string> effectMessage;
+
+    CombatContext currentContext{m_combatSystem, m_enemy, m_player, m_deckCombat, currentTurnData};
+
+    CombatContext::EffectMessageScope logScope(currentContext, effectMessage);
 
     for (const auto& effectPtr : currentMove.effectList)
     {
         effectPtr->resolve(currentContext, currentMove.effectParams);
     }
     DEBUG_LOG("Applied all the effect from " << currentMove.name << "");
+
+    m_matchView.showEnemyMove(m_enemy.getName(), currentMove.name);
+
+    if (!effectMessage.empty())
+    {
+        m_matchView.showEffectMessage(effectMessage);
+    }
 }
 
 void CardMatch::damagePhase()
 {
-    CombatContext playerDamageContext{m_combatSystem, m_player, m_enemy};
-    Target playerTarget{Target::Opponent};
-    DamageResult playerResult{playerDamageContext.dealDamage(playerTarget, m_player.getAttack())};
-    m_matchView.showDamageResult(playerResult);
-
-    CombatContext enemyDamageContext{m_combatSystem, m_enemy, m_player};
-    Target enemyTarget{Target::Opponent};
-    DamageResult enemyResult{enemyDamageContext.dealDamage(enemyTarget, m_enemy.getAttack())};
+    DamageResult enemyResult{m_combatSystem.dealDamage(m_player, m_enemy.getAttack())};
     m_matchView.showDamageResult(enemyResult);
+
+    DamageResult playerResult{m_combatSystem.dealDamage(m_enemy, m_player.getAttack())};
+    m_matchView.showDamageResult(playerResult);
 }
 
 void CardMatch::resetPhase()
 {
     m_combatSystem.endTurnReset(m_player, m_enemy);
-    m_matchView.showEndOfTurn();
+    m_matchView.showEndOfTurn(m_matchData);
+    ++m_matchData.turnNumber;
 }

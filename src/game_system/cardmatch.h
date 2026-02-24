@@ -14,6 +14,7 @@
 
 class Player;
 class Enemy;
+struct CombatResult;
 
 /**
  * @brief Orchestrates a single combat encounter between one player and one enemy.
@@ -64,7 +65,7 @@ class CardMatch
      *
      * @param handIndex Zero-based index of the card in the hand.
      */
-    void playCard(int handIndex);
+    void playCard(int handIndex, CombatContext& currentContext);
 
     /**
      * @brief Legacy helper that directly increases the player's armor.
@@ -77,7 +78,11 @@ class CardMatch
     void spendAction(TurnData& turnData);
     void reduceAction(TurnData& turnData, int amount);
 
+    bool updateMatchState();
+
     void turnLoop();
+
+    void playerTurnSetup(const TurnData& currentTurnData);
 
     void playerTurn(TurnData& currentTurnData);
 
@@ -89,9 +94,11 @@ class CardMatch
      * The enemy provides an EnemyMove via Enemy::nextMove(). Effects are resolved in order
      * using a CombatContext where the enemy is the actor and the player is the opponent.
      */
-    void enemyTurn();
+    void enemyTurn(TurnData& currentTurnData);
 
     void damagePhase();
+
+    void resetPhase();
 
   private:
     IMatchView& m_matchView;

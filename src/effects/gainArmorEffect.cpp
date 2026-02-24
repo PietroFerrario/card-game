@@ -4,7 +4,7 @@
 #include "combat/combatContext.h"
 #include "util/debug.h"
 
-void GainArmorEffect::resolve(CombatContext& combatContext, const EffectParams& values)
+void GainArmorEffect::resolve(CombatContext& combatContext, const CardParams& values)
 {
     combatContext.gainArmor(m_target, values.armor);
     DEBUG_LOG("Applied effect GainArmor");

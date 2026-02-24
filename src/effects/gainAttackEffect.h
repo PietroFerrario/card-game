@@ -7,7 +7,7 @@
 /**
  * @brief Effect that grants attack to a combat target.
  *
- * GainAttackEffect reads the armor value from EffectParams and grants it to either
+ * GainAttackEffect reads the armor value from CardParams and grants it to either
  * the actor or the opponent, depending on the configured Target.
  *
  * The effect does not modify entity state directly; it requests the operation through
@@ -24,12 +24,12 @@ class GainAttackEffect : public Effect
     GainAttackEffect(Target target) : m_target{target} {}
 
     /**
-     * @brief Grants attack using EffectParams::attack.
+     * @brief Grants attack using CardParams::attack.
      *
      * @param combatContext Current combat execution context.
      * @param values Numeric parameters used during resolution.
      */
-    void resolve(CombatContext& combatContext, const EffectParams& values) override;
+    void resolve(CombatContext& combatContext, const CardParams& values) override;
 
   private:
     Target m_target;

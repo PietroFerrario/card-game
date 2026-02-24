@@ -21,9 +21,13 @@ class TerminalMatchView : public IMatchView
     void showDamageResult(const DamageResult result) const override;
     void showEffectMessage(const std::vector<std::string>& message) const override;
     void showPlayedCardName(std::string_view name) const override;
+    void showEnemyMove(std::string_view enemyName, std::string_view moveName) const override;
     void showPlayerTurnStart(const MatchData& matchData) const override;
     void showFancyDivisor() const override;
+    void showMatchDivisor() const override;
     void showEndOfTurn(const MatchData& matchData) const override;
+    void showEndOfMatch(const MatchData& matchData) const override;
+    void showStartOfMatch(std::string_view enemyName) const override;
 
   private:
     IOText& m_io;

@@ -2,7 +2,9 @@
 #include "cards/cardDefinition.h"
 #include "cards/cardInstance.h"
 #include "combat/combatTarget.h"
+#include "effects/drawCardsEffect.h"
 #include "effects/effect.h"
+#include "effects/gainActionsEffect.h"
 #include "effects/gainArmorEffect.h"
 #include "effects/gainAttackEffect.h"
 #include "util/debug.h"
@@ -35,6 +37,8 @@ void CardFactory::registerCards()
     std::vector<std::unique_ptr<Effect>> shieldWarriorEffects;
     shieldWarriorEffects.emplace_back(std::make_unique<GainArmorEffect>(Target::Self));
     shieldWarriorEffects.emplace_back(std::make_unique<GainAttackEffect>(Target::Self));
+    shieldWarriorEffects.emplace_back(std::make_unique<DrawCardsEffect>());
+    shieldWarriorEffects.emplace_back(std::make_unique<GainActionsEffect>());
     registerDefinition("shieldWarrior",
                        std::make_unique<CardDefinition>("shieldWarrior", "Shield Warrior",
                                                         "Strong warrior with axe and round shield",

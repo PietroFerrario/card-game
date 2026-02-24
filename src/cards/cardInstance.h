@@ -1,7 +1,7 @@
 #ifndef CARDINSTANCE_H
 #define CARDINSTANCE_H
 
-#include "effects/effectParams.h"
+#include "cards/cardParams.h"
 
 #include <string_view>
 
@@ -41,7 +41,7 @@ class CardInstance
      */
     const CardDefinition& getCardDefinition() const;
 
-    EffectParams getEffectParams() const;
+    CardParams getEffectParams() const;
 
   private:
     const CardDefinition* m_definition; ///< Non-owning pointer to shared static definition.

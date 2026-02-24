@@ -1,19 +1,21 @@
-#ifndef EFFECTPARAMS_H
-#define EFFECTPARAMS_H
+#ifndef CARDPARAMS_H
+#define CARDPARAMS_H
 
 /**
  * @brief Numeric parameters used to resolve gameplay effects.
  *
- * EffectParams provides the numeric values consumed by Effect implementations
+ * CardParams provides the numeric values consumed by Effect implementations
  * during resolution (e.g., damage, armor).
  *
  * The same parameter structure is used for both card effects and enemy moves,
  * allowing Effect behavior to remain stateless and reusable.
  */
-struct EffectParams
+struct CardParams
 {
     int attack{0};
     int armor{0};
+    int actions{0};
+    int drawing{0};
 };
 
-#endif // EFFECTPARAMS_H
+#endif // CARDPARAMS_H

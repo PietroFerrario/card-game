@@ -25,7 +25,7 @@
  *    CardDefinition::getEffectList() yields the ordered Effect list.
  * 4. For each Effect, CardMatch calls:
  *    Effect::resolve(context, params)
- *    where params are provided by the CardInstance (EffectParams).
+ *    where params are provided by the CardInstance (CardParams).
  * 5. After all effects have resolved, CardMatch discards the exhausted card by
  *    transferring ownership to DeckCombat::discard(...).
  *
@@ -42,7 +42,7 @@
  * @section data Effect data model
  * Effects are intentionally split into:
  * - Behavior: implemented by polymorphic Effect subclasses (e.g., GainArmorEffect)
- * - Values: provided as EffectParams (e.g., damage, armor)
+ * - Values: provided as CardParams (e.g., damage, armor)
  *
  * This separation enables the same Effect classes to be reused for both cards and
  * enemy moves, while keeping effects stateless and definition-driven.
@@ -71,7 +71,7 @@
  * - takeFromHand(index) transfers ownership and erases from the hand immediately.
  * - discard(...) transfers ownership into the discard pile.
  * - CardDefinitions own their Effect lists; Effects are reused across plays and must be stateless.
- * - EnemyMoves own their Effect lists and provide EffectParams for execution.
+ * - EnemyMoves own their Effect lists and provide CardParams for execution.
  *
  * @section extension Extension points
  * - New gameplay behaviors are added by implementing new Effect subclasses.

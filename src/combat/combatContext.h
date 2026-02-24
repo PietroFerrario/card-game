@@ -7,6 +7,8 @@
 
 class CombatSystem;
 class Entity;
+class DeckCombat;
+struct TurnData;
 struct DamageResult;
 
 /**
@@ -32,7 +34,10 @@ class CombatContext
      * @param opponent Entity opposing the actor (Target::Opponent).
      */
     CombatContext(CombatSystem& combatSystem, Entity& actor, Entity& opponent,
-                  std::vector<std::string>* effectMessage = nullptr);
+                  DeckCombat& deckCombat, TurnData& turnData);
+
+    void setEffectMessage(std::vector<std::string>* effectMessage);
+    void resetEffectMessage();
 
     /**
      * @brief Grants armor to the selected logical target.
@@ -56,10 +61,33 @@ class CombatContext
 
     DamageResult dealDamage(Target target, int amount, bool ignoreArmor = false);
 
+    void drawCards(int amount);
+
+    void gainActions(int amount);
+
+    class EffectMessageScope
+    {
+      public:
+        EffectMessageScope(CombatContext& combatContext, std::vector<std::string>& effectMessage);
+        ~EffectMessageScope();
+
+        EffectMessageScope(const EffectMessageScope&) = delete;
+        EffectMessageScope& operator=(const EffectMessageScope&) = delete;
+        EffectMessageScope(EffectMessageScope&&) = delete;
+        EffectMessageScope& operator=(EffectMessageScope&&) = delete;
+
+      private:
+        CombatContext& m_combatContext;
+    };
+
   private:
     CombatSystem& m_combatSystem;
     Entity& m_actor;
     Entity& m_opponent;
+
+    DeckCombat& m_deckCombat;
+    TurnData& m_turnData;
+
     std::vector<std::string>* m_effectMessage;
 
     /**

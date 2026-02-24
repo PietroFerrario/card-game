@@ -4,7 +4,7 @@
 #include "combat/combatContext.h"
 #include "util/debug.h"
 
-void GainAttackEffect::resolve(CombatContext& combatContext, const EffectParams& values)
+void GainAttackEffect::resolve(CombatContext& combatContext, const CardParams& values)
 {
     combatContext.gainAttack(m_target, values.attack);
     DEBUG_LOG("Applied effect GainAttack");

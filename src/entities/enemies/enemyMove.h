@@ -1,8 +1,8 @@
 #ifndef ENEMYMOVE_H
 #define ENEMYMOVE_H
 
+#include "cards/cardParams.h"
 #include "effects/effect.h"
-#include "effects/effectParams.h"
 #include <memory>
 #include <string>
 #include <vector>
@@ -22,7 +22,7 @@ struct EnemyMove
     std::vector<std::unique_ptr<Effect>> effectList{};
 
     /// @brief Numeric parameters supplied to effects during resolution.
-    EffectParams effectParams;
+    CardParams effectParams;
 
     /// @brief name of the move (used for logging/UI).
     std::string name;
