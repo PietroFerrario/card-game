@@ -30,6 +30,8 @@ target_sources(cardgame_core PRIVATE
     src/entities/enemies/wolfPack.cpp
 
     src/factories/cardFactory.cpp
+    src/factories/effectFactory.cpp
+    src/factories/cardsLoader.cpp
 
     src/combat/combatContext.cpp
     src/combat/combatSystem.cpp
@@ -74,9 +76,6 @@ target_link_libraries(sandbox_test PRIVATE cardgame_core)
 
 add_executable(sandbox_creating_cards sandbox/creatingCardsTest.cpp)
 target_link_libraries(sandbox_creating_cards PRIVATE cardgame_core)
-
-add_executable(sandbox_card_match sandbox/cardMatchTest.cpp)
-target_link_libraries(sandbox_card_match PRIVATE cardgame_core)
 
 add_executable(sandbox_hand_print sandbox/handPrintTest.cpp)
 target_link_libraries(sandbox_hand_print PRIVATE cardgame_core)

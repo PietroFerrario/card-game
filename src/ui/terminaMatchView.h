@@ -16,15 +16,14 @@ class TerminalMatchView : public IMatchView
     void showMatchState(const MatchData& matchData) const override;
     void showRecurringMatchStatus(const MatchData& matchData, const TurnData& turnData,
                                   const Entity& player, const Entity& enemy) const override;
-    void showDivisor() const override;
+
     int askCardToPlay(int limit) override;
     void showDamageResult(const DamageResult result) const override;
     void showEffectMessage(const std::vector<std::string>& message) const override;
     void showPlayedCardName(std::string_view name) const override;
     void showEnemyMove(std::string_view enemyName, std::string_view moveName) const override;
     void showPlayerTurnStart(const MatchData& matchData) const override;
-    void showFancyDivisor() const override;
-    void showMatchDivisor() const override;
+
     void showEndOfTurn(const MatchData& matchData) const override;
     void showEndOfMatch(const MatchData& matchData) const override;
     void showStartOfMatch(std::string_view enemyName) const override;
@@ -33,6 +32,10 @@ class TerminalMatchView : public IMatchView
   private:
     IOText& m_io;
     HandRenderer m_handRenderer;
+
+    void showDivisor() const;
+    void showFancyDivisor() const;
+    void showMatchDivisor() const;
 };
 
 #endif // TERMINALMATCHVIEW_H

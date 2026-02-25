@@ -121,7 +121,7 @@ class CardRenderer
     const int m_width{24};
     const int m_height{12};
 
-    const int m_nameWidth{10};
+    const int m_nameWidth{16};
     const int m_nameColumn{m_width / 2 - m_nameWidth / 2};
 
     const char m_padding{' '};

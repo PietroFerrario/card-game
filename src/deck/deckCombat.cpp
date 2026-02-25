@@ -14,6 +14,7 @@ DeckCombat::DeckCombat(const DeckPlayer& deck_player, const ICardFactory& factor
     : m_factory{factory}
 {
     populateDeck(deck_player.getCardList());
+    shuffle();
 }
 
 void DeckCombat::populateDeck(const std::vector<DeckEntry>& cardList)

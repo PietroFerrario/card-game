@@ -2,6 +2,7 @@
 #define CARDFACTORY_H
 
 #include "ICardFactory.h"
+#include "cardsLoader.h"
 
 #include <string_view>
 #include <unordered_map>
@@ -61,6 +62,7 @@ class CardFactory : public ICardFactory
   private:
     /// @brief Map of all registered card definitions, keyed by ID.
     std::unordered_map<std::string, std::unique_ptr<CardDefinition>> m_cardMap;
+    CardsLoader m_cardsLoader;
 };
 
 #endif // CARDFACTORY_H

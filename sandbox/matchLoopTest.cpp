@@ -13,7 +13,10 @@
 int main()
 {
 
-    std::vector<DeckEntry> initialCardList{{"shieldWarrior", 10}};
+    std::vector<DeckEntry> initialCardList{
+        {"ShieldWarrior", 2}, {"Farmer", 2}, {"InexGuard", 2},     {"InexArcher", 2},
+        {"Provisions", 1},    {"Horses", 1}, {"Quartermaster", 1}, {"Constable", 1},
+    };
 
     Player mainPlayer{initialCardList};
     mainPlayer.setName("Malliano");

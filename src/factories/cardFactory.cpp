@@ -35,21 +35,35 @@ void CardFactory::registerDefinition(std::string_view cardId,
 
 void CardFactory::registerCards()
 {
-    std::vector<std::unique_ptr<Effect>> shieldWarriorEffects;
-    shieldWarriorEffects.emplace_back(std::make_unique<GainArmorEffect>(Target::Self));
-    shieldWarriorEffects.emplace_back(std::make_unique<GainAttackEffect>(Target::Self));
-    shieldWarriorEffects.emplace_back(std::make_unique<DrawCardsEffect>());
-    shieldWarriorEffects.emplace_back(std::make_unique<GainActionsEffect>());
-    registerDefinition("shieldWarrior",
-                       std::make_unique<CardDefinition>(
-                           "shieldWarrior", "Shield Warrior",
-                           "Strong warrior with axe and round shield",
-                           CardParams{.damage = 2, .armor = 1, .actions = 1, .drawing = 1},
-                           std::move(shieldWarriorEffects)));
+    // NOTE: Cards are loaded into a temporary vector and then moved into the factory map.
+    // This is intentional for now. Can be refactored later to a streaming "push" load
+    // if memory or load-time ever become a problem.
+
+    std::vector<std::unique_ptr<CardDefinition>> cardsDefinitionList{
+        m_cardsLoader.parseCardsList()};
+
+    for (auto& cardDefinition : cardsDefinitionList)
+    {
+        auto ID{cardDefinition->getID()};
+        registerDefinition(ID, std::move(cardDefinition));
+    }
+
+    // std::vector<std::unique_ptr<Effect>> shieldWarriorEffects;
+    // shieldWarriorEffects.emplace_back(std::make_unique<GainArmorEffect>(Target::Self));
+    // shieldWarriorEffects.emplace_back(std::make_unique<GainAttackEffect>(Target::Self));
+    // shieldWarriorEffects.emplace_back(std::make_unique<DrawCardsEffect>());
+    // shieldWarriorEffects.emplace_back(std::make_unique<GainActionsEffect>());
+    // registerDefinition("shieldWarrior",
+    //                    std::make_unique<CardDefinition>(
+    //                        "shieldWarrior", "Shield Warrior",
+    //                        "Strong warrior with axe and round shield",
+    //                        CardParams{.damage = 2, .armor = 1, .actions = 1, .drawing = 1},
+    //                        std::move(shieldWarriorEffects)));
 }
 
 std::unique_ptr<CardInstance> CardFactory::makeSingleCard(const std::string& cardId) const
 {
+    DEBUG_LOG("Card instance being created: " << m_cardMap.at(cardId));
     std::unique_ptr<CardInstance> card{std::make_unique<CardInstance>(*m_cardMap.at(cardId))};
     DEBUG_LOG("CardInstance of " << cardId << " has been created.");
     return card;

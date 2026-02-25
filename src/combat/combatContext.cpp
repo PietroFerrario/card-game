@@ -143,3 +143,7 @@ void CombatContext::gainActions(int amount)
         m_effectMessage->emplace_back(std::format("Actions: +{}", amount));
     }
 }
+
+// FOR THE FUTURE: Effect summaries are currently collected as strings for simplicity.
+// A refactor may replace this with structured effect events
+// (similar to DrawData) to improve aggregation and rendering flexibility.
