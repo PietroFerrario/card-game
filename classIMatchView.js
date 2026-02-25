@@ -1,16 +1,14 @@
 var classIMatchView =
 [
+    [ "~IMatchView", "classIMatchView.html#a92709e88cb66c2183495cb7f13561cb3", null ],
     [ "askCardToPlay", "classIMatchView.html#a918c5f3bac81467d73df6ea592860605", null ],
     [ "showCurrentHand", "classIMatchView.html#a8fcbea1a0897f02610a3bc18eaf53103", null ],
     [ "showDamageResult", "classIMatchView.html#a6e0aa47afdd738335dfd672fbd288625", null ],
-    [ "showDivisor", "classIMatchView.html#a6afe19510216f21c0878b9e0cac3287f", null ],
     [ "showDrawCards", "classIMatchView.html#a52f21ef098150a30bc0cf45053c46f08", null ],
     [ "showEffectMessage", "classIMatchView.html#a83c4d0a786609d6dfe51c2e5ec87378e", null ],
     [ "showEndOfMatch", "classIMatchView.html#abd221fd2a052422d2d85e3ab0948dbf4", null ],
     [ "showEndOfTurn", "classIMatchView.html#a2659c310642558975904abb3173abbe3", null ],
     [ "showEnemyMove", "classIMatchView.html#aa0bf805385f3c9b05c937873c42c4ab5", null ],
-    [ "showFancyDivisor", "classIMatchView.html#aed477cfdd40c8bc85ecdde4582e3b9cc", null ],
-    [ "showMatchDivisor", "classIMatchView.html#a36b80da92ba7d392a01fadfa5ee685b9", null ],
     [ "showMatchState", "classIMatchView.html#a8bb112c2d5c0d14bbe58392a5b1451ad", null ],
     [ "showMessage", "classIMatchView.html#abe0cb97f00ff5bbdbe19354ed64d03a8", null ],
     [ "showPlayedCardName", "classIMatchView.html#a0400a9a547132cf866e57091525b0061", null ],

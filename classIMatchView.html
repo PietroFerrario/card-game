@@ -107,12 +107,14 @@ Inheritance diagram for IMatchView:</div>
 <div class="dynheader">
 Collaboration diagram for IMatchView:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classIMatchView__coll__graph.svg" width="235" height="338"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classIMatchView__coll__graph.svg" width="235" height="308"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a92709e88cb66c2183495cb7f13561cb3"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIMatchView.html#a92709e88cb66c2183495cb7f13561cb3">~IMatchView</a> ()=default</td></tr>
+<tr class="separator:a92709e88cb66c2183495cb7f13561cb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8fcbea1a0897f02610a3bc18eaf53103"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIMatchView.html#a8fcbea1a0897f02610a3bc18eaf53103">showCurrentHand</a> (const std::vector&lt; const <a class="el" href="classCardInstance.html">CardInstance</a> * &gt; &amp;handToRender) const =0</td></tr>
 <tr class="separator:a8fcbea1a0897f02610a3bc18eaf53103"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abe0cb97f00ff5bbdbe19354ed64d03a8"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIMatchView.html#abe0cb97f00ff5bbdbe19354ed64d03a8">showMessage</a> ()=0</td></tr>
@@ -125,8 +127,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a918c5f3bac81467d73df6ea592860605"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a497fbd61e34e7043f3d7548e60a584f2"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIMatchView.html#a497fbd61e34e7043f3d7548e60a584f2">showRecurringMatchStatus</a> (const <a class="el" href="structMatchData.html">MatchData</a> &amp;matchData, const <a class="el" href="structTurnData.html">TurnData</a> &amp;turnData, const <a class="el" href="classEntity.html">Entity</a> &amp;player, const <a class="el" href="classEntity.html">Entity</a> &amp;enemy) const =0</td></tr>
 <tr class="separator:a497fbd61e34e7043f3d7548e60a584f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6afe19510216f21c0878b9e0cac3287f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIMatchView.html#a6afe19510216f21c0878b9e0cac3287f">showDivisor</a> () const =0</td></tr>
-<tr class="separator:a6afe19510216f21c0878b9e0cac3287f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6e0aa47afdd738335dfd672fbd288625"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIMatchView.html#a6e0aa47afdd738335dfd672fbd288625">showDamageResult</a> (const <a class="el" href="structDamageResult.html">DamageResult</a> result) const =0</td></tr>
 <tr class="separator:a6e0aa47afdd738335dfd672fbd288625"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a83c4d0a786609d6dfe51c2e5ec87378e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIMatchView.html#a83c4d0a786609d6dfe51c2e5ec87378e">showEffectMessage</a> (const std::vector&lt; std::string &gt; &amp;message) const =0</td></tr>
@@ -137,10 +137,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aa0bf805385f3c9b05c937873c42c4ab5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8216bc72f85dac5050f20b6d12bf90bb"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIMatchView.html#a8216bc72f85dac5050f20b6d12bf90bb">showPlayerTurnStart</a> (const <a class="el" href="structMatchData.html">MatchData</a> &amp;matchData) const =0</td></tr>
 <tr class="separator:a8216bc72f85dac5050f20b6d12bf90bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aed477cfdd40c8bc85ecdde4582e3b9cc"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIMatchView.html#aed477cfdd40c8bc85ecdde4582e3b9cc">showFancyDivisor</a> () const =0</td></tr>
-<tr class="separator:aed477cfdd40c8bc85ecdde4582e3b9cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a36b80da92ba7d392a01fadfa5ee685b9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIMatchView.html#a36b80da92ba7d392a01fadfa5ee685b9">showMatchDivisor</a> () const =0</td></tr>
-<tr class="separator:a36b80da92ba7d392a01fadfa5ee685b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2659c310642558975904abb3173abbe3"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIMatchView.html#a2659c310642558975904abb3173abbe3">showEndOfTurn</a> (const <a class="el" href="structMatchData.html">MatchData</a> &amp;matchData) const =0</td></tr>
 <tr class="separator:a2659c310642558975904abb3173abbe3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abd221fd2a052422d2d85e3ab0948dbf4"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIMatchView.html#abd221fd2a052422d2d85e3ab0948dbf4">showEndOfMatch</a> (const <a class="el" href="structMatchData.html">MatchData</a> &amp;matchData) const =0</td></tr>
@@ -150,6 +146,32 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a52f21ef098150a30bc0cf45053c46f08"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIMatchView.html#a52f21ef098150a30bc0cf45053c46f08">showDrawCards</a> (const <a class="el" href="structDrawData.html">DrawData</a> &amp;drawData) const =0</td></tr>
 <tr class="separator:a52f21ef098150a30bc0cf45053c46f08"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a92709e88cb66c2183495cb7f13561cb3" name="a92709e88cb66c2183495cb7f13561cb3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92709e88cb66c2183495cb7f13561cb3">&#9670;&#160;</a></span>~IMatchView()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual IMatchView::~IMatchView </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a918c5f3bac81467d73df6ea592860605" name="a918c5f3bac81467d73df6ea592860605"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a918c5f3bac81467d73df6ea592860605">&#9670;&#160;</a></span>askCardToPlay()</h2>
@@ -232,33 +254,6 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Implemented in <a class="el" href="classTerminalMatchView.html#afa4a10ea65557bbd8b31c3cc66f47f0e">TerminalMatchView</a>.</p>
-
-</div>
-</div>
-<a id="a6afe19510216f21c0878b9e0cac3287f" name="a6afe19510216f21c0878b9e0cac3287f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6afe19510216f21c0878b9e0cac3287f">&#9670;&#160;</a></span>showDivisor()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void IMatchView::showDivisor </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Implemented in <a class="el" href="classTerminalMatchView.html#ac0e3e97d8a8b5477036ef337b6a98a68">TerminalMatchView</a>.</p>
 
 </div>
 </div>
@@ -409,60 +404,6 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Implemented in <a class="el" href="classTerminalMatchView.html#a2190c4c7e40d783371e8dba63a9bc66d">TerminalMatchView</a>.</p>
-
-</div>
-</div>
-<a id="aed477cfdd40c8bc85ecdde4582e3b9cc" name="aed477cfdd40c8bc85ecdde4582e3b9cc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aed477cfdd40c8bc85ecdde4582e3b9cc">&#9670;&#160;</a></span>showFancyDivisor()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void IMatchView::showFancyDivisor </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Implemented in <a class="el" href="classTerminalMatchView.html#a60f412a27429c8aa0ab4029abd89397b">TerminalMatchView</a>.</p>
-
-</div>
-</div>
-<a id="a36b80da92ba7d392a01fadfa5ee685b9" name="a36b80da92ba7d392a01fadfa5ee685b9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a36b80da92ba7d392a01fadfa5ee685b9">&#9670;&#160;</a></span>showMatchDivisor()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void IMatchView::showMatchDivisor </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Implemented in <a class="el" href="classTerminalMatchView.html#af979a87e89a1fa6eead3600f846b2502">TerminalMatchView</a>.</p>
 
 </div>
 </div>

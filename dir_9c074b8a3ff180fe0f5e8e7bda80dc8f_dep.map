@@ -1,11 +1,11 @@
 <map id="factories" name="factories">
 <area shape="rect" id="node1" href="dir_9c074b8a3ff180fe0f5e8e7bda80dc8f.html" title="factories" alt="" coords="133,5,211,31"/>
 <area shape="rect" id="node2" href="dir_191f852b87741474e2df76292b1f55c1.html" title="effects" alt="" coords="5,79,72,104"/>
-<area shape="rect" id="edge1-headlabel" href="dir_000008_000005.html" title="5" alt="" coords="76,70,85,85"/>
+<area shape="rect" id="edge1-headlabel" href="dir_000008_000005.html" title="10" alt="" coords="72,70,89,85"/>
 <area shape="rect" id="node3" href="dir_61f20e49ac5d6763f7282e8c799f7538.html" title="combat" alt="" coords="97,79,167,104"/>
-<area shape="rect" id="edge2-headlabel" href="dir_000008_000001.html" title="1" alt="" coords="150,60,159,74"/>
+<area shape="rect" id="edge2-headlabel" href="dir_000008_000001.html" title="2" alt="" coords="150,60,159,74"/>
 <area shape="rect" id="node4" href="dir_b7878ad5ecbf2506f4125b9d34c97e45.html" title="util" alt="" coords="192,79,235,104"/>
-<area shape="rect" id="edge3-headlabel" href="dir_000008_000011.html" title="1" alt="" coords="200,51,209,66"/>
+<area shape="rect" id="edge3-headlabel" href="dir_000008_000011.html" title="2" alt="" coords="200,51,209,66"/>
 <area shape="rect" id="node5" href="dir_cf1e9a2fdbb5faae65a2519434ce6869.html" title="cards" alt="" coords="259,79,317,104"/>
-<area shape="rect" id="edge4-headlabel" href="dir_000008_000000.html" title="3" alt="" coords="253,54,263,69"/>
+<area shape="rect" id="edge4-headlabel" href="dir_000008_000000.html" title="5" alt="" coords="253,54,263,69"/>
 </map>

@@ -5,6 +5,7 @@ var hierarchy =
     [ "CardMatch", "classCardMatch.html", null ],
     [ "CardParams", "structCardParams.html", null ],
     [ "CardRenderer", "classCardRenderer.html", null ],
+    [ "CardsLoader", "classCardsLoader.html", null ],
     [ "CombatContext", "classCombatContext.html", null ],
     [ "CombatSystem", "classCombatSystem.html", null ],
     [ "DamageInfo", "structDamageInfo.html", null ],
@@ -20,6 +21,7 @@ var hierarchy =
       [ "GainArmorEffect", "classGainArmorEffect.html", null ],
       [ "GainAttackEffect", "classGainAttackEffect.html", null ]
     ] ],
+    [ "EffectFactory", "classEffectFactory.html", null ],
     [ "CombatContext::EffectMessageScope", "classCombatContext_1_1EffectMessageScope.html", null ],
     [ "EnemyMove", "structEnemyMove.html", null ],
     [ "Entity", "classEntity.html", [

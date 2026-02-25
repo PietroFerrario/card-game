@@ -1,8 +1,15 @@
 <map id="factories/cardFactory.h" name="factories/cardFactory.h">
-<area shape="rect" id="node1" title=" " alt="" coords="135,5,303,31"/>
-<area shape="rect" id="node2" href="$ICardFactory_8h.html" title=" " alt="" coords="33,79,146,104"/>
-<area shape="rect" id="node5" title=" " alt="" coords="170,79,267,104"/>
-<area shape="rect" id="node6" title=" " alt="" coords="291,79,415,104"/>
-<area shape="rect" id="node3" title=" " alt="" coords="5,152,83,177"/>
-<area shape="rect" id="node4" title=" " alt="" coords="107,152,165,177"/>
+<area shape="rect" id="node1" title=" " alt="" coords="273,5,441,31"/>
+<area shape="rect" id="node2" href="$ICardFactory_8h.html" title=" " alt="" coords="46,79,159,104"/>
+<area shape="rect" id="node5" href="$cardsLoader_8h.html" title=" " alt="" coords="253,79,365,104"/>
+<area shape="rect" id="node11" title=" " alt="" coords="578,225,702,251"/>
+<area shape="rect" id="node13" title=" " alt="" coords="443,79,541,104"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,225,83,251"/>
+<area shape="rect" id="node4" title=" " alt="" coords="7,152,65,177"/>
+<area shape="rect" id="node6" href="$effectFactory_8h.html" title=" " alt="" coords="251,152,367,177"/>
+<area shape="rect" id="node10" title=" " alt="" coords="107,225,253,251"/>
+<area shape="rect" id="node7" href="$effect_8h.html" title=" " alt="" coords="365,225,483,251"/>
+<area shape="rect" id="node9" title=" " alt="" coords="507,225,554,251"/>
+<area shape="rect" id="node12" title=" " alt="" coords="278,225,341,251"/>
+<area shape="rect" id="node8" href="$cardParams_8h.html" title=" " alt="" coords="349,299,499,324"/>
 </map>

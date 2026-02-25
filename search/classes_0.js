@@ -6,6 +6,7 @@ var searchData=
   ['cardmatch_3',['CardMatch',['../classCardMatch.html',1,'']]],
   ['cardparams_4',['CardParams',['../structCardParams.html',1,'']]],
   ['cardrenderer_5',['CardRenderer',['../classCardRenderer.html',1,'']]],
-  ['combatcontext_6',['CombatContext',['../classCombatContext.html',1,'']]],
-  ['combatsystem_7',['CombatSystem',['../classCombatSystem.html',1,'']]]
+  ['cardsloader_6',['CardsLoader',['../classCardsLoader.html',1,'']]],
+  ['combatcontext_7',['CombatContext',['../classCombatContext.html',1,'']]],
+  ['combatsystem_8',['CombatSystem',['../classCombatSystem.html',1,'']]]
 ];
