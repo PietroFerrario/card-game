@@ -1,9 +1,12 @@
 #include "combatContext.h"
+#include "cards/cardDefinition.h"
+#include "cards/cardInstance.h"
 #include "combat/combatEvents.h"
 #include "combatSystem.h"
 #include "deck/deckCombat.h"
 #include "entities/entity.h"
 #include "game_system/matchData.h"
+#include "util/Random.h"
 #include "util/debug.h"
 
 #include <utility>
@@ -159,6 +162,22 @@ void CombatContext::limitCardToPlay(int amount)
     if (m_effectMessage)
     {
         m_effectMessage->emplace_back(std::format("Max cards to play: {}", limit.value()));
+    }
+}
+
+void CombatContext::takeCardHostage()
+{
+    int handSize = m_deckCombat.getHandSize();
+    if (handSize > 0)
+    {
+        std::unique_ptr<CardInstance> cardTakenHostage =
+            m_deckCombat.takeFromHand(Random::get(0, handSize - 1));
+
+        if (m_effectMessage && cardTakenHostage)
+        {
+            m_effectMessage->emplace_back(std::format(
+                "Card taken hostage: {}", cardTakenHostage->getCardDefinition().getName()));
+        }
     }
 }
 

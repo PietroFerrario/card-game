@@ -9,7 +9,8 @@ TerminalMatchView::TerminalMatchView(IOText& io) : m_io{io} {}
 void TerminalMatchView::showStartOfMatch(std::string_view enemyName) const
 {
     showMatchDivisor();
-    m_io.println(std::format("{:^90}", std::format("Match against {} started!", enemyName)));
+    m_io.println(
+        std::format("{:^{}}", std::format("Match against {} started!", enemyName), m_mainWidth));
     showMatchDivisor();
 }
 
@@ -39,24 +40,27 @@ void TerminalMatchView::showEndOfMatch(const MatchData& matchData) const
     {
     case MatchState::PlayerWon:
     {
-        m_io.println(std::format("{:^90}", "YOU HAVE DEFEATED YOUR ENEMY!!!"));
+        m_io.println(std::format("{:^{}}", "YOU HAVE DEFEATED YOUR ENEMY!!!", m_mainWidth));
         break;
     }
     case MatchState::EnemyWon:
     {
-        m_io.println(std::format("{:^90}", "THE ENEMY HAS PREVAILED... YOUR RUN ENDS HERE..."));
+        m_io.println(
+            std::format("{:^{}}", "THE ENEMY HAS PREVAILED... YOUR RUN ENDS HERE...", m_mainWidth));
         break;
     }
     case MatchState::MutualDestruction:
     {
-        m_io.println(std::format("{:^90}", "YOU HAVE VANQUISHED YOUR ENEMY!"));
-        m_io.println(std::format("{:^90}", " Your vision is blurry, your hands are stiff."));
+        m_io.println(std::format("{:^{}}", "YOU HAVE VANQUISHED YOUR ENEMY!", m_mainWidth));
+        m_io.println(
+            std::format("{:^{}}", " Your vision is blurry, your hands are stiff.", m_mainWidth));
         m_io.println(std::format(
-            "{:^90}",
-            "You look down and your glove comes back scarlet from touching your side..."));
+            "{:^{}}", "You look down and your glove comes back scarlet from touching your side...",
+            m_mainWidth));
         m_io.println(std::format(
-            "{:^90}",
-            "You have won, but was it worth the price? Only the gods will know the answer."));
+            "{:^{}}",
+            "You have won, but was it worth the price? Only the gods will know the answer.",
+            m_mainWidth));
         break;
     }
     }
@@ -80,33 +84,34 @@ void TerminalMatchView::showRecurringMatchStatus(const MatchData& matchData,
                                                  const Entity& enemy) const
 {
     showDivisor();
-    m_io.println(std::format("{:^28} | {:^28} | {:^28}",
-                             std::format("Current turn: {}", matchData.turnNumber),
-                             std::format("Remaining actions: {}", turnData.playerRemainingActions),
-                             std::format("Cards played this turn: {}", turnData.cardsPlayed)));
+    m_io.println(std::format(
+        "{:^{}} | {:^{}} | {:^{}}", std::format("Current turn: {}", matchData.turnNumber),
+        m_singleBoxWidth, std::format("Remaining actions: {}", turnData.playerRemainingActions),
+        m_singleBoxWidth, std::format("Cards played this turn: {}", turnData.cardsPlayed),
+        m_singleBoxWidth));
 
     showDivisor();
-    m_io.println(std::format("{:^28} | {:^28} | {:^28}",
-                             std::format("Player HP: {}", player.getHp()),
-                             std::format("Player Attack: {}", player.getAttack()),
-                             std::format("Player Armor: {}", player.getArmor())));
+    m_io.println(std::format("{:^{}} | {:^{}} | {:^{}}",
+                             std::format("Player HP: {}", player.getHp()), m_singleBoxWidth,
+                             std::format("Player Attack: {}", player.getAttack()), m_singleBoxWidth,
+                             std::format("Player Armor: {}", player.getArmor()), m_singleBoxWidth));
     showDivisor();
-    m_io.println(std::format("{:^28} | {:^28} | {:^28}",
-                             std::format("Enemy HP:  {}", enemy.getHp()),
-                             std::format("Enemy Attack:  {}", enemy.getAttack()),
-                             std::format("Enemy Armor:  {}", enemy.getArmor())));
+    m_io.println(std::format("{:^{}} | {:^{}} | {:^{}}",
+                             std::format("Enemy HP:  {}", enemy.getHp()), m_singleBoxWidth,
+                             std::format("Enemy Attack:  {}", enemy.getAttack()), m_singleBoxWidth,
+                             std::format("Enemy Armor:  {}", enemy.getArmor()), m_singleBoxWidth));
     showDivisor();
 }
 
 void TerminalMatchView::showDivisor() const
 {
-    std::string str((28 * 3 + 2 * 3), '-');
+    std::string str((m_mainWidth), '-');
     m_io.println(str);
 }
 
 void TerminalMatchView::showFancyDivisor() const
 {
-    std::string str((28 * 3 + 2 * 3), '~');
+    std::string str((m_mainWidth), '~');
     m_io.println(str);
 }
 
@@ -123,7 +128,7 @@ void TerminalMatchView::showFancyDivisor() const
 
 void TerminalMatchView::showMatchDivisor() const
 {
-    std::string str((28 * 3 + 2 * 3), '=');
+    std::string str((m_mainWidth), '=');
     m_io.println(str);
 }
 
@@ -136,7 +141,7 @@ void TerminalMatchView::showDamageResult(const DamageResult result) const
 {
     showDivisor();
     m_io.println(std::format(
-        "{:>40} | {:^24} | {:^24}",
+        "{:>48} | {:^36} | {:^36}",
         std::format("{} is attacked for: {}   ", result.target.getName(), result.requested),
         std::format("Blocked: {}", result.blocked),
         std::format("Sustained:  {}", result.hpDamage)));
@@ -146,13 +151,16 @@ void TerminalMatchView::showDamageResult(const DamageResult result) const
 void TerminalMatchView::showPlayedCardName(std::string_view name) const
 {
     showDivisor();
-    m_io.println(std::format("{:^90}", std::format("Played card: {}", name)));
+    m_io.println(std::format("{:^{}}", std::format("Played card: {}", name), m_mainWidth));
 }
 
-void TerminalMatchView::showEnemyMove(std::string_view enemyName, std::string_view moveName) const
+void TerminalMatchView::showEnemyMove(std::string_view enemyName, std::string_view moveName,
+                                      std::string_view moveDescr) const
 {
     showDivisor();
-    m_io.println(std::format("{:^90}", std::format("{} used: {} move", enemyName, moveName)));
+    m_io.println(
+        std::format("{:^{}}", std::format("{} used: {} move", enemyName, moveName), m_mainWidth));
+    m_io.println(std::format("{:^{}}", moveDescr, m_mainWidth));
 }
 
 void TerminalMatchView::showEffectMessage(const std::vector<std::string>& message) const
@@ -161,13 +169,13 @@ void TerminalMatchView::showEffectMessage(const std::vector<std::string>& messag
 
     for (size_t i{0}; i < message.size(); ++i)
     {
-        formattedMessage.append(std::format("{:^15}", message.at(i)));
+        formattedMessage.append(std::format("{:^{}}", message.at(i), m_singleEffectMessage));
         if (i + 1 < message.size())
         {
             formattedMessage.append(" | ");
         }
     }
-    m_io.println(std::format("{:^90}", formattedMessage));
+    m_io.println(std::format("{:^{}}", formattedMessage, m_mainWidth));
 
     showDivisor();
 }

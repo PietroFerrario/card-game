@@ -73,6 +73,7 @@ class CombatContext
     // Enemy effects
 
     void limitCardToPlay(int amount);
+    void takeCardHostage();
 
     class EffectMessageScope
     {

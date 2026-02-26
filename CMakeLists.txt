@@ -22,6 +22,7 @@ target_sources(cardgame_core PRIVATE
     src/effects/drawCardsEffect.cpp
 
     src/effects/limitCardToPlayEffect.cpp
+    src/effects/hostageCardEffect.cpp
 
     src/deck/deckCombat.cpp
     src/deck/deckPlayer.cpp

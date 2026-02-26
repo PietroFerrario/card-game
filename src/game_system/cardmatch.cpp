@@ -192,7 +192,7 @@ void CardMatch::enemyTurn(TurnData& currentTurnData)
     }
     DEBUG_LOG("Applied all the effect from " << currentMove.name << "");
 
-    m_matchView.showEnemyMove(m_enemy.getName(), currentMove.name);
+    m_matchView.showEnemyMove(m_enemy.getName(), currentMove.name, currentMove.description);
 
     if (!effectMessage.empty())
     {

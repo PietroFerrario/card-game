@@ -26,7 +26,8 @@ class IMatchView
     virtual void showDamageResult(const DamageResult result) const = 0;
     virtual void showEffectMessage(const std::vector<std::string>& message) const = 0;
     virtual void showPlayedCardName(std::string_view name) const = 0;
-    virtual void showEnemyMove(std::string_view enemyName, std::string_view moveName) const = 0;
+    virtual void showEnemyMove(std::string_view enemyName, std::string_view moveName,
+                               std::string_view moveDescr) const = 0;
     virtual void showPlayerTurnStart(const MatchData& matchData) const = 0;
 
     virtual void showEndOfTurn(const MatchData& matchData) const = 0;

@@ -26,6 +26,8 @@ struct EnemyMove
 
     /// @brief name of the move (used for logging/UI).
     std::string name;
+
+    std::string description;
 };
 
 #endif // ENEMYMOVE_H
