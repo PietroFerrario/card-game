@@ -70,6 +70,10 @@ class CombatContext
 
     void gainActions(int amount);
 
+    // Enemy effects
+
+    void limitCardToPlay(int amount);
+
     class EffectMessageScope
     {
       public:

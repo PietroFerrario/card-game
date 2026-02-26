@@ -1,6 +1,8 @@
 #ifndef CARDPARAMS_H
 #define CARDPARAMS_H
 
+#include <optional>
+
 /**
  * @brief Numeric parameters used to resolve gameplay effects.
  *
@@ -12,10 +14,14 @@
  */
 struct CardParams
 {
+    // Common one
     int damage{0};
     int armor{0};
     int actions{0};
     int drawing{0};
+
+    // Enemy-based
+    std::optional<int> cardsLimit;
 };
 
 #endif // CARDPARAMS_H

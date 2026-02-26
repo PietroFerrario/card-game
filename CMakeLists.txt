@@ -21,6 +21,8 @@ target_sources(cardgame_core PRIVATE
     src/effects/gainActionsEffect.cpp
     src/effects/drawCardsEffect.cpp
 
+    src/effects/limitCardToPlayEffect.cpp
+
     src/deck/deckCombat.cpp
     src/deck/deckPlayer.cpp
     
@@ -28,6 +30,7 @@ target_sources(cardgame_core PRIVATE
 
     src/entities/enemies/enemy.cpp
     src/entities/enemies/wolfPack.cpp
+    src/entities/enemies/bandits.cpp
 
     src/factories/cardFactory.cpp
     src/factories/effectFactory.cpp

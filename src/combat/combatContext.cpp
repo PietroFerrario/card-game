@@ -144,6 +144,24 @@ void CombatContext::gainActions(int amount)
     }
 }
 
+void CombatContext::limitCardToPlay(int amount)
+{
+    auto& limit = m_turnData.cardsToPlayLimit;
+
+    if (limit.has_value())
+    {
+        limit.value() = std::min(limit.value(), amount);
+    }
+    else
+    {
+        limit = amount;
+    }
+    if (m_effectMessage)
+    {
+        m_effectMessage->emplace_back(std::format("Max cards to play: {}", limit.value()));
+    }
+}
+
 // FOR THE FUTURE: Effect summaries are currently collected as strings for simplicity.
 // A refactor may replace this with structured effect events
 // (similar to DrawData) to improve aggregation and rendering flexibility.

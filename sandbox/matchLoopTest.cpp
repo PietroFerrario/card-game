@@ -1,4 +1,4 @@
-#include "entities/enemies/wolfPack.h"
+#include "entities/enemies/bandits.h"
 #include "entities/player.h"
 #include "game_system/cardMatch.h"
 
@@ -21,12 +21,12 @@ int main()
     Player mainPlayer{initialCardList};
     mainPlayer.setName("Malliano");
 
-    WolfPack pack{};
+    Bandits bandits{};
 
     IOText io{std::cout, std::cin};
     TerminalMatchView terminalMatchView{io};
 
-    CardMatch cardMatch{terminalMatchView, mainPlayer, pack};
+    CardMatch cardMatch{terminalMatchView, mainPlayer, bandits};
 
     cardMatch.turnLoop();
 }

@@ -132,8 +132,15 @@ void CardMatch::turnLoop()
 bool CardMatch::canPlayerAct(TurnData& currentTurnData)
 {
     DEBUG_LOG("Checking is the player can act in this turn");
-    return currentTurnData.playerRemainingActions > 0 &&
-           static_cast<int>(m_deckCombat.getHandSize()) > 0;
+
+    const bool hasAction = currentTurnData.playerRemainingActions > 0;
+    const bool hasCards = m_deckCombat.getHandSize() > 0;
+
+    const bool isUnderCardsLimit =
+        !currentTurnData.cardsToPlayLimit.has_value() ||
+        currentTurnData.cardsPlayed < currentTurnData.cardsToPlayLimit.value();
+
+    return hasAction && hasCards && isUnderCardsLimit;
 }
 
 void CardMatch::playerTurnSetup(const TurnData& currentTurnData)
