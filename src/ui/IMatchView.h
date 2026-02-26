@@ -11,6 +11,7 @@ struct TurnData;
 struct MatchData;
 struct DamageResult;
 struct DrawData;
+struct PlayCardDecision;
 
 class IMatchView
 {
@@ -20,7 +21,8 @@ class IMatchView
     virtual void showMessage() = 0;
     virtual void showTurnState(const TurnData& turnData) const = 0;
     virtual void showMatchState(const MatchData& matchData) const = 0;
-    virtual int askCardToPlay(int limit) = 0;
+    virtual PlayCardDecision askPlayerAction(int limit) = 0;
+    virtual void showPassingTurn() = 0;
     virtual void showRecurringMatchStatus(const MatchData& matchData, const TurnData& turnData,
                                           const Entity& player, const Entity& enemy) const = 0;
     virtual void showDamageResult(const DamageResult result) const = 0;

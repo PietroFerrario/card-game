@@ -35,7 +35,7 @@ int IOText::promptInt(std::string_view prompt, int validLimit)
             continue;
         }
 
-        if (userInput <= 0 || userInput > validLimit)
+        if (userInput < 0 || userInput > validLimit)
         {
             print("Invalid selection. Try again.\n");
             continue;

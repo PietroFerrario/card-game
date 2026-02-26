@@ -7,7 +7,8 @@
             "generator": "MinGW Makefiles",
             "binaryDir": "${sourceDir}/build/debug",
             "cacheVariables": {
-                "CMAKE_BUILD_TYPE": "Debug"
+                "CMAKE_BUILD_TYPE": "Debug",
+                "CMAKE_CXX_COMPILER": "C:/msys64/ucrt64/bin/g++.exe"
             }
         },
         {
@@ -16,7 +17,8 @@
             "generator": "MinGW Makefiles",
             "binaryDir": "${sourceDir}/build/release",
             "cacheVariables": {
-                "CMAKE_BUILD_TYPE": "Release"
+                "CMAKE_BUILD_TYPE": "Release",
+                "CMAKE_CXX_COMPILER": "C:/msys64/ucrt64/bin/g++.exe"
             }
         }
     ],

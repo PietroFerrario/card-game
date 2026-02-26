@@ -17,7 +17,8 @@ class TerminalMatchView : public IMatchView
     void showRecurringMatchStatus(const MatchData& matchData, const TurnData& turnData,
                                   const Entity& player, const Entity& enemy) const override;
 
-    int askCardToPlay(int limit) override;
+    PlayCardDecision askPlayerAction(int limit) override;
+    void showPassingTurn() override;
     void showDamageResult(const DamageResult result) const override;
     void showEffectMessage(const std::vector<std::string>& message) const override;
     void showPlayedCardName(std::string_view name) const override;

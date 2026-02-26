@@ -162,14 +162,24 @@ void CardMatch::playerTurn(TurnData& currentTurnData)
         m_matchView.showRecurringMatchStatus(m_matchData, currentTurnData, m_player, m_enemy);
         m_matchView.showCurrentHand(m_deckCombat.getHandView());
 
-        DEBUG_LOG("Asking which card to play (Inside playerTurn)");
-        int cardToPlayIndex{
-            m_matchView.askCardToPlay(static_cast<int>(m_deckCombat.getHandSize()))};
-        playCard(cardToPlayIndex, currentContext);
+        DEBUG_LOG("Asking the player how to act: Play a card or Pass");
+        PlayCardDecision decision{
+            m_matchView.askPlayerAction(static_cast<int>(m_deckCombat.getHandSize()))};
 
-        DEBUG_LOG("Spending one action");
-        spendAction(currentTurnData);
-        ++currentTurnData.cardsPlayed;
+        if (decision.playerChoice == PlayerChoice::PlayCard)
+        {
+            playCard(decision.selectedCard.value(), currentContext);
+            DEBUG_LOG("Spending one action");
+            // Add validation to the spending of action only the the card was actually played.
+            spendAction(currentTurnData);
+            ++currentTurnData.cardsPlayed;
+        }
+        else if (decision.playerChoice == PlayerChoice::PassTurn)
+        {
+            DEBUG_LOG("Passing: no action spent");
+            m_matchView.showPassingTurn();
+            break;
+        }
 
         DEBUG_LOG("Ending action loop");
     }

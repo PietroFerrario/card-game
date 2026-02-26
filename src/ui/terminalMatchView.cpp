@@ -1,8 +1,8 @@
+#include "terminalMatchView.h"
 #include "combat/combatEvents.h"
 #include "deck/deckCombat.h"
 #include "entities\entity.h"
 #include "game_system/matchData.h"
-#include "terminaMatchView.h"
 
 TerminalMatchView::TerminalMatchView(IOText& io) : m_io{io} {}
 
@@ -67,10 +67,27 @@ void TerminalMatchView::showEndOfMatch(const MatchData& matchData) const
     showMatchDivisor();
 }
 
-int TerminalMatchView::askCardToPlay(int limit)
+PlayCardDecision TerminalMatchView::askPlayerAction(int limit)
 {
-    int selectedCardIndex{m_io.promptInt("Select a card to play:", limit) - 1};
-    return selectedCardIndex;
+    PlayCardDecision decision;
+    int selectedCardIndex{m_io.promptInt("Select a card to play or press (0) to pass:", limit) - 1};
+    if (selectedCardIndex < 0)
+    {
+        decision.playerChoice = PlayerChoice::PassTurn;
+    }
+    else
+    {
+        decision.playerChoice = PlayerChoice::PlayCard;
+        decision.selectedCard = selectedCardIndex;
+    }
+    return decision;
+}
+
+void TerminalMatchView::showPassingTurn()
+{
+    showDivisor();
+    m_io.println("You decided to Pass. Your turn ends");
+    showDivisor();
 }
 
 void TerminalMatchView::showTurnState(const TurnData& turnData) const

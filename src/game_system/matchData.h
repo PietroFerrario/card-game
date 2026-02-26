@@ -29,4 +29,16 @@ struct TurnData
     std::optional<int> cardsToPlayLimit;
 };
 
+enum class PlayerChoice
+{
+    PlayCard,
+    PassTurn,
+};
+
+struct PlayCardDecision
+{
+    PlayerChoice playerChoice{PlayerChoice::PassTurn};
+    std::optional<int> selectedCard;
+};
+
 #endif // MATCHDATA_H

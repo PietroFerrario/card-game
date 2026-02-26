@@ -1,0 +1,156 @@
+{
+    "cardList": [
+        {
+            "id": "ShieldWarrior",
+            "name": "Shield Warrior",
+            "descr": "Strong warrior with axe and round shield",
+            "damage": 1,
+            "armor": 2,
+            "actions": 0,
+            "drawing": 0,
+            "effectList": [
+                {
+                    "effect": "gainAttack",
+                    "target": "self"
+                },
+                {
+                    "effect": "gainArmor",
+                    "target": "self"
+                }
+            ]
+        },
+        {
+            "id": "Farmer",
+            "name": "Common Farmer",
+            "descr": "Farmer, in search of a better life",
+            "damage": 1,
+            "armor": 0,
+            "actions": 0,
+            "drawing": 0,
+            "effectList": [
+                {
+                    "effect": "gainAttack",
+                    "target": "self"
+                },
+                {
+                    "effect": "gainArmor",
+                    "target": "self"
+                }
+            ]
+        },
+        {
+            "id": "InexGuard",
+            "name": "Inexperienced Guard",
+            "descr": "A young guard, early in his career",
+            "damage": 2,
+            "armor": 0,
+            "actions": 0,
+            "drawing": 0,
+            "effectList": [
+                {
+                    "effect": "gainAttack",
+                    "target": "self"
+                },
+                {
+                    "effect": "gainArmor",
+                    "target": "self"
+                }
+            ]
+        },
+        {
+            "id": "InexArcher",
+            "name": "Inexperienced Archer",
+            "descr": "A young archer, early in his career",
+            "damage": 2,
+            "armor": 0,
+            "actions": 0,
+            "drawing": 0,
+            "effectList": [
+                {
+                    "effect": "gainAttack",
+                    "target": "self"
+                },
+                {
+                    "effect": "gainArmor",
+                    "target": "self"
+                }
+            ]
+        },
+        {
+            "id": "Provisions",
+            "name": "Travelling Provisions",
+            "descr": "Hard and stale, they fill your stomach still",
+            "damage": 0,
+            "armor": 0,
+            "actions": 0,
+            "drawing": 1,
+            "effectList": [
+                {
+                    "effect": "drawCards",
+                    "target": null
+                }
+            ]
+        },
+        {
+            "id": "Horses",
+            "name": "Draft Horses",
+            "descr": "Strong enough to pull the cart",
+            "damage": 0,
+            "armor": 0,
+            "actions": 2,
+            "drawing": 0,
+            "effectList": [
+                {
+                    "effect": "gainActions",
+                    "target": null
+                }
+            ]
+        },
+        {
+            "id": "Quartermaster",
+            "name": "The Quartermaster",
+            "descr": "He gets things done around here",
+            "damage": 5,
+            "armor": 0,
+            "actions": 1,
+            "drawing": 0,
+            "effectList": [
+                {
+                    "effect": "gainAttack",
+                    "target": "self"
+                },
+                {
+                    "effect": "gainArmor",
+                    "target": "self"
+                },
+                {
+                    "effect": "gainActions",
+                    "target": null
+                }
+            ]
+        },
+        {
+            "id": "Constable",
+            "name": "The Constable",
+            "descr": "The right-hand mand of the Quartermaster",
+            "damage": 2,
+            "armor": 2,
+            "actions": 0,
+            "drawing": 1,
+            "effectList": [
+                {
+                    "effect": "gainAttack",
+                    "target": "self"
+                },
+                {
+                    "effect": "gainArmor",
+                    "target": "self"
+                },
+                {
+                    "effect": "drawCards",
+                    "target": null
+                }
+            ]
+        }
+    ]
+}

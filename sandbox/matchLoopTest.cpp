@@ -8,7 +8,7 @@
 #include "deck/deckPlayer.h"
 #include "ui/handRenderer.h"
 #include "ui/iotext.h"
-#include "ui/terminaMatchView.h"
+#include "ui/terminalMatchView.h"
 
 int main()
 {
