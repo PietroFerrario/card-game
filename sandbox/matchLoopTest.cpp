@@ -10,11 +10,17 @@
 #include "ui/handRenderer.h"
 #include "ui/iotext.h"
 #include "ui/terminalMatchView.h"
+#include <fstream>
 #include <iostream>
 #include <string>
 
 int main()
 {
+#ifndef CARDGAME_DEBUG
+    {
+        std::ofstream("cardgame_log.txt", std::ios::out | std::ios::trunc); // wipe once
+    }
+#endif
 
     // std::vector<DeckEntry> initialCardList{
     //     {"ShieldWarrior", 2}, {"Farmer", 2}, {"InexGuard", 2},     {"InexArcher", 2},

@@ -129,7 +129,7 @@ void TerminalMatchView::showRecurringMatchStatus(const MatchData& matchData,
     // m_io.println(std::format("{:^{}} | {:^{}} | {:^{}}",
     //                          std::format("Enemy HP:  {}", enemy.getHp()), m_singleBoxWidth,
     //                          std::format("Enemy Attack:  {}", enemy.getAttack()),
-    //                          m_singleBoxWidth, std::format("mEnemy Armor:  {}",
+    //                          m_singleBoxWidth, std::format("Enemy Armor:  {}",
     //                          enemy.getArmor()), m_singleBoxWidth));
 
     m_io.println(std::format(
@@ -140,7 +140,7 @@ void TerminalMatchView::showRecurringMatchStatus(const MatchData& matchData,
               std::format("{:^{}}", std::format("Enemy Attack:  {}", enemy.getAttack()),
                           m_singleBoxWidth)),
         color(AnsiColor::Red,
-              std::format("{:^{}}", std::format("mEnemy Armor:  {}", enemy.getArmor()),
+              std::format("{:^{}}", std::format("Enemy Armor:  {}", enemy.getArmor()),
                           m_singleBoxWidth))));
     showDivisor();
 }

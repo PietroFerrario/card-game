@@ -1,6 +1,7 @@
 #ifndef DEBUG_H
 #define DEBUG_H
 
+#include <filesystem>
 #include <fstream>
 #include <iostream>
 
@@ -19,10 +20,11 @@
 #define DEBUG_LOG(msg)                                                                             \
     do                                                                                             \
     {                                                                                              \
-        static std::ofstream logFile("cardgame_log.txt", std::ios::trunc);                         \
+        static std::ofstream logFile("cardgame_log.txt", std::ios::out | std::ios::app);           \
         if (logFile.is_open())                                                                     \
         {                                                                                          \
-            logFile << "[LOG] " << __FILE__ << ":" << __LINE__ << " " << msg << std::endl;         \
+            logFile << "[LOG] " << std::filesystem::path(__FILE__).filename().string() << ":"      \
+                    << __LINE__ << " " << msg << std::endl;                                        \
         }                                                                                          \
     } while (0)
 

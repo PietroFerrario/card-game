@@ -42,9 +42,9 @@
             "id": "InexGuard",
             "name": "Inexperienced Guard",
             "descr": "A young guard, early in his career",
-            "damage": 2,
-            "armor": 0,
-            "actions": 0,
+            "damage": 1,
+            "armor": 2,
+            "actions": 1,
             "drawing": 0,
             "effectList": [
                 {
@@ -54,6 +54,10 @@
                 {
                     "effect": "gainArmor",
                     "target": "self"
+                },
+                {
+                    "effect": "gainActions",
+                    "target": null
                 }
             ]
         },
@@ -64,7 +68,7 @@
             "damage": 2,
             "armor": 0,
             "actions": 0,
-            "drawing": 0,
+            "drawing": 1,
             "effectList": [
                 {
                     "effect": "gainAttack",
@@ -73,6 +77,10 @@
                 {
                     "effect": "gainArmor",
                     "target": "self"
+                },
+                {
+                    "effect": "drawCards",
+                    "target": null
                 }
             ]
         },
@@ -82,11 +90,15 @@
             "descr": "Hard and stale, they fill your stomach still",
             "damage": 0,
             "armor": 0,
-            "actions": 0,
+            "actions": 1,
             "drawing": 1,
             "effectList": [
                 {
                     "effect": "drawCards",
+                    "target": null
+                },
+                {
+                    "effect": "gainActions",
                     "target": null
                 }
             ]
@@ -98,10 +110,14 @@
             "damage": 0,
             "armor": 0,
             "actions": 2,
-            "drawing": 0,
+            "drawing": 1,
             "effectList": [
                 {
                     "effect": "gainActions",
+                    "target": null
+                },
+                {
+                    "effect": "drawCards",
                     "target": null
                 }
             ]
@@ -112,7 +128,7 @@
             "descr": "He gets things done around here",
             "damage": 5,
             "armor": 0,
-            "actions": 1,
+            "actions": 2,
             "drawing": 0,
             "effectList": [
                 {
@@ -136,7 +152,7 @@
             "damage": 2,
             "armor": 2,
             "actions": 0,
-            "drawing": 1,
+            "drawing": 2,
             "effectList": [
                 {
                     "effect": "gainAttack",

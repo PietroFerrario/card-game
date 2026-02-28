@@ -50,3 +50,6 @@ install_manifest.txt
 
 # Docs
 docs/html/
+
+# Distro
+distr/

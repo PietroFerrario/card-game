@@ -13,8 +13,8 @@ Bandits::Bandits(int hp) : Enemy{hp}
     EnemyMove& ambush = m_moves.back();
     ambush.effectList.emplace_back(std::make_unique<GainArmorEffect>(Target::Self));
     ambush.effectList.emplace_back(std::make_unique<LimitCardToPlayEffect>());
-    ambush.effectParams.armor = 4;
-    ambush.effectParams.cardsLimit = 2;
+    ambush.effectParams.armor = 6;
+    ambush.effectParams.cardsLimit = 4;
     ambush.name = "Ambush!!!";
     ambush.description = "They caught you by surprise!";
 
