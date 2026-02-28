@@ -3,8 +3,6 @@
 
 #include "cardsLoader.h"
 #include <fstream>
-#include <memory>
-#include <vector>
 
 using json = nlohmann::json;
 

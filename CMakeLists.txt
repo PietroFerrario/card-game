@@ -26,6 +26,7 @@ target_sources(cardgame_core PRIVATE
 
     src/deck/deckCombat.cpp
     src/deck/deckPlayer.cpp
+    src/deck/deckLoader.cpp
     
     src/entities/player.cpp
 

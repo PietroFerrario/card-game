@@ -22,7 +22,7 @@ struct TurnData
 {
     int playerRemainingActions{2};
     int cardsPlayed{0};
-    int initialCardsToDraw{2};
+    int initialCardsToDraw{5};
 
     // enemy based
 

@@ -64,6 +64,8 @@ class DeckCombat
      */
     void discardFromHand(int handIndex);
 
+    void discardWholeHand();
+
     /// @brief Returns the number of cards currently in the hand.
     int getHandSize() const { return m_handPile.size(); }
 

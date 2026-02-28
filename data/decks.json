@@ -1,0 +1,34 @@
+{
+    "basicDeck": [
+        {
+            "id": "Farmer",
+            "amount": 2
+        },
+        {
+            "id": "InexGuard",
+            "amount": 2
+        },
+        {
+            "id": "InexArcher",
+            "amount": 2
+        },
+        {
+            "id": "Provisions",
+            "amount": 1
+        },
+        {
+            "id": "Horses",
+            "amount": 1
+        },
+        {
+            "id": "Quartermaster",
+            "amount": 1
+        },
+        {
+            "id": "Constable",
+            "amount": 1
+        }
+    ],
+    "basicDeck2": [],
+    "basicDeck3": []
+}

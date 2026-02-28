@@ -22,14 +22,14 @@ void TerminalMatchView::showCurrentHand(const std::vector<const CardInstance*>& 
 void TerminalMatchView::showPlayerTurnStart(const MatchData& matchData) const
 {
     showFancyDivisor();
-    m_io.println(std::format("Start of turn: {}", matchData.turnNumber));
+    m_io.println(color(AnsiColor::Yellow, std::format("Start of turn: {}", matchData.turnNumber)));
     showFancyDivisor();
 }
 
 void TerminalMatchView::showEndOfTurn(const MatchData& matchData) const
 {
     showFancyDivisor();
-    m_io.println(std::format("End of turn: {}", matchData.turnNumber));
+    m_io.println(color(AnsiColor::Yellow, std::format("End of turn: {}", matchData.turnNumber)));
     showFancyDivisor();
 }
 
@@ -107,16 +107,41 @@ void TerminalMatchView::showRecurringMatchStatus(const MatchData& matchData,
         m_singleBoxWidth, std::format("Cards played this turn: {}", turnData.cardsPlayed),
         m_singleBoxWidth));
 
+    // showDivisor();
+    // m_io.println(std::format("{:^{}} | {:^{}} | {:^{}}",
+    //                          std::format("Player HP: {}", player.getHp()), m_singleBoxWidth,
+    //                          std::format("Player Attack: {}", player.getAttack()),
+    //                          m_singleBoxWidth, std::format("Player Armor: {}",
+    //                          player.getArmor()), m_singleBoxWidth));
+
     showDivisor();
-    m_io.println(std::format("{:^{}} | {:^{}} | {:^{}}",
-                             std::format("Player HP: {}", player.getHp()), m_singleBoxWidth,
-                             std::format("Player Attack: {}", player.getAttack()), m_singleBoxWidth,
-                             std::format("Player Armor: {}", player.getArmor()), m_singleBoxWidth));
+    m_io.println(std::format(
+        "{} | {} | {}",
+        color(AnsiColor::Green, std::format("{:^{}}", std::format("Player HP: {}", player.getHp()),
+                                            m_singleBoxWidth)),
+        color(AnsiColor::Green,
+              std::format("{:^{}}", std::format("Player Attack: {}", player.getAttack()),
+                          m_singleBoxWidth)),
+        color(AnsiColor::Green,
+              std::format("{:^{}}", std::format("Player Armor: {}", player.getArmor()),
+                          m_singleBoxWidth))));
     showDivisor();
-    m_io.println(std::format("{:^{}} | {:^{}} | {:^{}}",
-                             std::format("Enemy HP:  {}", enemy.getHp()), m_singleBoxWidth,
-                             std::format("Enemy Attack:  {}", enemy.getAttack()), m_singleBoxWidth,
-                             std::format("Enemy Armor:  {}", enemy.getArmor()), m_singleBoxWidth));
+    // m_io.println(std::format("{:^{}} | {:^{}} | {:^{}}",
+    //                          std::format("Enemy HP:  {}", enemy.getHp()), m_singleBoxWidth,
+    //                          std::format("Enemy Attack:  {}", enemy.getAttack()),
+    //                          m_singleBoxWidth, std::format("mEnemy Armor:  {}",
+    //                          enemy.getArmor()), m_singleBoxWidth));
+
+    m_io.println(std::format(
+        "{} | {} | {}",
+        color(AnsiColor::Red,
+              std::format("{:^{}}", std::format("Enemy HP:  {}", enemy.getHp()), m_singleBoxWidth)),
+        color(AnsiColor::Red,
+              std::format("{:^{}}", std::format("Enemy Attack:  {}", enemy.getAttack()),
+                          m_singleBoxWidth)),
+        color(AnsiColor::Red,
+              std::format("{:^{}}", std::format("mEnemy Armor:  {}", enemy.getArmor()),
+                          m_singleBoxWidth))));
     showDivisor();
 }
 
@@ -129,7 +154,7 @@ void TerminalMatchView::showDivisor() const
 void TerminalMatchView::showFancyDivisor() const
 {
     std::string str((m_mainWidth), '~');
-    m_io.println(str);
+    m_io.println(color(AnsiColor::Yellow, str));
 }
 
 // void TerminalMatchView::showMatchDivisor() const
@@ -176,7 +201,8 @@ void TerminalMatchView::showEnemyMove(std::string_view enemyName, std::string_vi
 {
     showDivisor();
     m_io.println(
-        std::format("{:^{}}", std::format("{} used: {} move", enemyName, moveName), m_mainWidth));
+        color(AnsiColor::Red,
+              std::format("{:^{}}", std::format("{} used: {}", enemyName, moveName), m_mainWidth)));
     m_io.println(std::format("{:^{}}", moveDescr, m_mainWidth));
 }
 
@@ -225,3 +251,31 @@ void TerminalMatchView::showDrawCards(const DrawData& drawData) const
 }
 
 void TerminalMatchView::showMessage() {}
+
+constexpr const char* TerminalMatchView::colorCode(AnsiColor color)
+{
+    switch (color)
+    {
+    case AnsiColor::Red:
+    {
+        return "\033[31m";
+    }
+    case AnsiColor::Green:
+    {
+        return "\033[32m";
+    }
+    case AnsiColor::Yellow:
+    {
+        return "\033[33m";
+    }
+    default:
+        return "";
+    }
+}
+
+std::string TerminalMatchView::color(AnsiColor color, const std::string& text)
+{
+    if (color == AnsiColor::None)
+        return text;
+    return std::string(colorCode(color)) + text + "\033[0m";
+}

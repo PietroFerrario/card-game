@@ -119,6 +119,14 @@ void DeckCombat::discardFromHand(int handIndex)
     }
 }
 
+void DeckCombat::discardWholeHand()
+{
+    m_discardPile.insert(m_discardPile.end(), std::make_move_iterator(m_handPile.begin()),
+                         std::make_move_iterator(m_handPile.end()));
+    m_handPile.clear();
+    DEBUG_LOG("Discarding the whole hand");
+}
+
 std::vector<const CardInstance*> DeckCombat::getHandView() const
 {
     std::vector<const CardInstance*> handView;

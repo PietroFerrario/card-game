@@ -5,6 +5,14 @@
 #include "handRenderer.h"
 #include "iotext.h"
 
+enum class AnsiColor
+{
+    None,
+    Green,
+    Red,
+    Yellow
+};
+
 class TerminalMatchView : public IMatchView
 {
   public:
@@ -43,6 +51,9 @@ class TerminalMatchView : public IMatchView
     void showDivisor() const;
     void showFancyDivisor() const;
     void showMatchDivisor() const;
+
+    static std::string color(AnsiColor color, const std::string& text);
+    static constexpr const char* colorCode(AnsiColor color);
 };
 
 #endif // TERMINALMATCHVIEW_H

@@ -2,7 +2,9 @@
 #define CARDSLOADER_H
 
 #include "effectFactory.h"
+#include <memory>
 #include <nlohmann/json.hpp>
+#include <vector>
 
 class CardsLoader
 {

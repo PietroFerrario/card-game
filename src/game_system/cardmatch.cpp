@@ -222,6 +222,7 @@ void CardMatch::damagePhase()
 void CardMatch::resetPhase()
 {
     m_combatSystem.endTurnReset(m_player, m_enemy);
+    m_deckCombat.discardWholeHand();
     m_matchView.showEndOfTurn(m_matchData);
     ++m_matchData.turnNumber;
 }
