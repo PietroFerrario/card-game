@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['wolfpack_0',['WolfPack',['../classWolfPack.html',1,'']]]
+  ['slot_0',['Slot',['../structSlot.html',1,'']]]
 ];

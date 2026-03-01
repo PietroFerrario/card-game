@@ -1,11 +1,12 @@
 <map id="entities/enemies/enemy.h" name="entities/enemies/enemy.h">
 <area shape="rect" id="node1" title=" " alt="" coords="250,5,441,31"/>
 <area shape="rect" id="node2" href="$enemyMove_8h.html" title=" " alt="" coords="193,79,308,104"/>
-<area shape="rect" id="node7" title=" " alt="" coords="314,152,377,177"/>
-<area shape="rect" id="node8" href="$entity_8h.html" title=" " alt="" coords="383,79,505,104"/>
+<area shape="rect" id="node8" title=" " alt="" coords="314,152,377,177"/>
+<area shape="rect" id="node9" href="$entity_8h.html" title=" " alt="" coords="383,79,505,104"/>
 <area shape="rect" id="node3" href="$cardParams_8h.html" title=" " alt="" coords="5,225,155,251"/>
-<area shape="rect" id="node4" href="$effect_8h.html" title=" " alt="" coords="70,152,189,177"/>
-<area shape="rect" id="node5" title=" " alt="" coords="212,152,289,177"/>
-<area shape="rect" id="node6" title=" " alt="" coords="401,152,460,177"/>
-<area shape="rect" id="node9" title=" " alt="" coords="485,152,582,177"/>
+<area shape="rect" id="node5" href="$effect_8h.html" title=" " alt="" coords="70,152,189,177"/>
+<area shape="rect" id="node6" title=" " alt="" coords="212,152,289,177"/>
+<area shape="rect" id="node7" title=" " alt="" coords="401,152,460,177"/>
+<area shape="rect" id="node4" title=" " alt="" coords="43,299,117,324"/>
+<area shape="rect" id="node10" title=" " alt="" coords="485,152,582,177"/>
 </map>

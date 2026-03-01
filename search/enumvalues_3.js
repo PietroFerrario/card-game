@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['hitarmorfirst_0',['HitArmorFirst',['../combatEvents_8h.html#aa3e8b75bcdc6b38eaa84b6d51e71cc42a3016aeee342f6a10ad6ce98c043e0c16',1,'combatEvents.h']]]
+  ['green_0',['Green',['../terminalMatchView_8h.html#a0ddcb705da66533c6a200cf585344b5aad382816a3cbeed082c9e216e7392eed1',1,'terminalMatchView.h']]]
 ];

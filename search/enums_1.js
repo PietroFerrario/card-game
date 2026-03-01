@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['matchstate_0',['MatchState',['../matchData_8h.html#aca6448151e924d2cb062632532d9081f',1,'matchData.h']]]
+  ['damageresolution_0',['DamageResolution',['../combatEvents_8h.html#aa3e8b75bcdc6b38eaa84b6d51e71cc42',1,'combatEvents.h']]]
 ];

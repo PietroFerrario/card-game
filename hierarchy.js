@@ -12,6 +12,7 @@ var hierarchy =
     [ "DamageResult", "structDamageResult.html", null ],
     [ "DeckCombat", "classDeckCombat.html", null ],
     [ "DeckEntry", "structDeckEntry.html", null ],
+    [ "DeckLoader", "classDeckLoader.html", null ],
     [ "DeckPlayer", "classDeckPlayer.html", null ],
     [ "DrawData", "structDrawData.html", null ],
     [ "DrawResult", "structDrawResult.html", null ],
@@ -19,13 +20,16 @@ var hierarchy =
       [ "DrawCardsEffect", "classDrawCardsEffect.html", null ],
       [ "GainActionsEffect", "classGainActionsEffect.html", null ],
       [ "GainArmorEffect", "classGainArmorEffect.html", null ],
-      [ "GainAttackEffect", "classGainAttackEffect.html", null ]
+      [ "GainAttackEffect", "classGainAttackEffect.html", null ],
+      [ "HostageCardEffect", "classHostageCardEffect.html", null ],
+      [ "LimitCardToPlayEffect", "classLimitCardToPlayEffect.html", null ]
     ] ],
     [ "EffectFactory", "classEffectFactory.html", null ],
     [ "CombatContext::EffectMessageScope", "classCombatContext_1_1EffectMessageScope.html", null ],
     [ "EnemyMove", "structEnemyMove.html", null ],
     [ "Entity", "classEntity.html", [
       [ "Enemy", "classEnemy.html", [
+        [ "Bandits", "classBandits.html", null ],
         [ "WolfPack", "classWolfPack.html", null ]
       ] ],
       [ "Player", "classPlayer.html", null ]
@@ -41,6 +45,7 @@ var hierarchy =
     [ "IOText", "classIOText.html", null ],
     [ "MatchData", "structMatchData.html", null ],
     [ "NameLayout", "structNameLayout.html", null ],
+    [ "PlayCardDecision", "structPlayCardDecision.html", null ],
     [ "RenderedHand", "structRenderedHand.html", null ],
     [ "Slot", "structSlot.html", null ],
     [ "Text", "classText.html", null ],

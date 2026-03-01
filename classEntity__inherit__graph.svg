@@ -46,7 +46,7 @@ if (edges && edges.length) {
         </defs>
 
 <script type="text/javascript">
-var viewWidth = 232;
+var viewWidth = 266;
 var viewHeight = 463;
 var sectionId = 'dynsection-0';
 </script>
@@ -58,27 +58,27 @@ var sectionId = 'dynsection-0';
 <g id="node1" class="node">
 <title>Node1</title>
 <g id="a_node1"><a xlink:title="Base class representing a combat&#45;capable entity.">
-<polygon fill="#999999" stroke="#666666" points="55,-232.5 55,-454.5 163,-454.5 163,-232.5 55,-232.5"/>
-<text text-anchor="middle" x="109" y="-442.5" font-family="Helvetica,sans-Serif" font-size="10.00">Entity</text>
-<polyline fill="none" stroke="#666666" points="55,-435.5 163,-435.5 "/>
-<text text-anchor="start" x="63" y="-423.5" font-family="Helvetica,sans-Serif" font-size="10.00"># m_hp</text>
-<text text-anchor="start" x="63" y="-412.5" font-family="Helvetica,sans-Serif" font-size="10.00"># m_armor</text>
-<text text-anchor="start" x="63" y="-401.5" font-family="Helvetica,sans-Serif" font-size="10.00"># m_attack</text>
-<text text-anchor="start" x="63" y="-390.5" font-family="Helvetica,sans-Serif" font-size="10.00"># m_name</text>
-<polyline fill="none" stroke="#666666" points="55,-383.5 163,-383.5 "/>
-<text text-anchor="start" x="63" y="-371.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ Entity()</text>
-<text text-anchor="start" x="63" y="-360.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ Entity()</text>
-<text text-anchor="start" x="63" y="-349.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getName()</text>
-<text text-anchor="start" x="63" y="-338.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getArmor()</text>
-<text text-anchor="start" x="63" y="-327.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getAttack()</text>
-<text text-anchor="start" x="63" y="-316.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ resetArmor()</text>
-<text text-anchor="start" x="63" y="-305.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ resetAttack()</text>
-<text text-anchor="start" x="63" y="-294.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ increaseArmor()</text>
-<text text-anchor="start" x="63" y="-283.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ increaseAttack()</text>
-<text text-anchor="start" x="63" y="-272.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ lowerArmor()</text>
-<text text-anchor="start" x="63" y="-261.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getHp()</text>
-<text text-anchor="start" x="63" y="-250.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ lowerHp()</text>
-<text text-anchor="start" x="63" y="-239.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ increaseHp()</text>
+<polygon fill="#999999" stroke="#666666" points="89,-232.5 89,-454.5 197,-454.5 197,-232.5 89,-232.5"/>
+<text text-anchor="middle" x="143" y="-442.5" font-family="Helvetica,sans-Serif" font-size="10.00">Entity</text>
+<polyline fill="none" stroke="#666666" points="89,-435.5 197,-435.5 "/>
+<text text-anchor="start" x="97" y="-423.5" font-family="Helvetica,sans-Serif" font-size="10.00"># m_hp</text>
+<text text-anchor="start" x="97" y="-412.5" font-family="Helvetica,sans-Serif" font-size="10.00"># m_armor</text>
+<text text-anchor="start" x="97" y="-401.5" font-family="Helvetica,sans-Serif" font-size="10.00"># m_attack</text>
+<text text-anchor="start" x="97" y="-390.5" font-family="Helvetica,sans-Serif" font-size="10.00"># m_name</text>
+<polyline fill="none" stroke="#666666" points="89,-383.5 197,-383.5 "/>
+<text text-anchor="start" x="97" y="-371.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ Entity()</text>
+<text text-anchor="start" x="97" y="-360.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ Entity()</text>
+<text text-anchor="start" x="97" y="-349.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getName()</text>
+<text text-anchor="start" x="97" y="-338.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getArmor()</text>
+<text text-anchor="start" x="97" y="-327.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getAttack()</text>
+<text text-anchor="start" x="97" y="-316.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ resetArmor()</text>
+<text text-anchor="start" x="97" y="-305.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ resetAttack()</text>
+<text text-anchor="start" x="97" y="-294.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ increaseArmor()</text>
+<text text-anchor="start" x="97" y="-283.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ increaseAttack()</text>
+<text text-anchor="start" x="97" y="-272.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ lowerArmor()</text>
+<text text-anchor="start" x="97" y="-261.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getHp()</text>
+<text text-anchor="start" x="97" y="-250.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ lowerHp()</text>
+<text text-anchor="start" x="97" y="-239.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ increaseHp()</text>
 </a>
 </g>
 </g>
@@ -86,64 +86,83 @@ var sectionId = 'dynsection-0';
 <g id="node2" class="node">
 <title>Node2</title>
 <g id="a_node2"><a xlink:href="classEnemy.html" target="_top" xlink:title="Base class for enemies with a predefined move sequence.">
-<polygon fill="white" stroke="#666666" points="0,-105.5 0,-184.5 98,-184.5 98,-105.5 0,-105.5"/>
-<text text-anchor="middle" x="49" y="-172.5" font-family="Helvetica,sans-Serif" font-size="10.00">Enemy</text>
-<polyline fill="none" stroke="#666666" points="0,-165.5 98,-165.5 "/>
-<text text-anchor="start" x="8" y="-153.5" font-family="Helvetica,sans-Serif" font-size="10.00"># m_moves</text>
-<text text-anchor="start" x="8" y="-142.5" font-family="Helvetica,sans-Serif" font-size="10.00"># m_moveIndex</text>
-<polyline fill="none" stroke="#666666" points="0,-135.5 98,-135.5 "/>
-<text text-anchor="start" x="8" y="-123.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ nextMove()</text>
-<text text-anchor="start" x="8" y="-112.5" font-family="Helvetica,sans-Serif" font-size="10.00"># Enemy()</text>
+<polygon fill="white" stroke="#666666" points="34,-105.5 34,-184.5 132,-184.5 132,-105.5 34,-105.5"/>
+<text text-anchor="middle" x="83" y="-172.5" font-family="Helvetica,sans-Serif" font-size="10.00">Enemy</text>
+<polyline fill="none" stroke="#666666" points="34,-165.5 132,-165.5 "/>
+<text text-anchor="start" x="42" y="-153.5" font-family="Helvetica,sans-Serif" font-size="10.00"># m_moves</text>
+<text text-anchor="start" x="42" y="-142.5" font-family="Helvetica,sans-Serif" font-size="10.00"># m_moveIndex</text>
+<polyline fill="none" stroke="#666666" points="34,-135.5 132,-135.5 "/>
+<text text-anchor="start" x="42" y="-123.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ nextMove()</text>
+<text text-anchor="start" x="42" y="-112.5" font-family="Helvetica,sans-Serif" font-size="10.00"># Enemy()</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node2 -->
 <g id="edge1" class="edge">
 <title>Node1&#45;&gt;Node2</title>
-<path fill="none" stroke="#63b8ff" d="M72.47,-222.87C68.27,-209.11 64.25,-195.95 60.76,-184.52"/>
-<polygon fill="none" stroke="#63b8ff" points="69.14,-223.93 75.4,-232.47 75.83,-221.89 69.14,-223.93"/>
+<path fill="none" stroke="#63b8ff" d="M106.47,-222.87C102.27,-209.11 98.25,-195.95 94.76,-184.52"/>
+<polygon fill="none" stroke="#63b8ff" points="103.14,-223.93 109.4,-232.47 109.83,-221.89 103.14,-223.93"/>
 </g>
-<!-- Node4 -->
-<g id="node4" class="node">
-<title>Node4</title>
-<g id="a_node4"><a xlink:href="classPlayer.html" target="_top" xlink:title="Player&#45;controlled entity with a persistent deck.">
-<polygon fill="white" stroke="#666666" points="116.5,-94.5 116.5,-195.5 223.5,-195.5 223.5,-94.5 116.5,-94.5"/>
-<text text-anchor="middle" x="170" y="-183.5" font-family="Helvetica,sans-Serif" font-size="10.00">Player</text>
-<polyline fill="none" stroke="#666666" points="116.5,-176.5 223.5,-176.5 "/>
-<text text-anchor="middle" x="170" y="-164.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
-<polyline fill="none" stroke="#666666" points="116.5,-157.5 223.5,-157.5 "/>
-<text text-anchor="start" x="124.5" y="-145.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ Player()</text>
-<text text-anchor="start" x="124.5" y="-134.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ Player()</text>
-<text text-anchor="start" x="124.5" y="-123.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ setName()</text>
-<text text-anchor="start" x="124.5" y="-112.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getName()</text>
-<text text-anchor="start" x="124.5" y="-101.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getDeckPlayer()</text>
+<!-- Node5 -->
+<g id="node5" class="node">
+<title>Node5</title>
+<g id="a_node5"><a xlink:href="classPlayer.html" target="_top" xlink:title="Player&#45;controlled entity with a persistent deck.">
+<polygon fill="white" stroke="#666666" points="150.5,-94.5 150.5,-195.5 257.5,-195.5 257.5,-94.5 150.5,-94.5"/>
+<text text-anchor="middle" x="204" y="-183.5" font-family="Helvetica,sans-Serif" font-size="10.00">Player</text>
+<polyline fill="none" stroke="#666666" points="150.5,-176.5 257.5,-176.5 "/>
+<text text-anchor="middle" x="204" y="-164.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
+<polyline fill="none" stroke="#666666" points="150.5,-157.5 257.5,-157.5 "/>
+<text text-anchor="start" x="158.5" y="-145.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ Player()</text>
+<text text-anchor="start" x="158.5" y="-134.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ Player()</text>
+<text text-anchor="start" x="158.5" y="-123.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ setName()</text>
+<text text-anchor="start" x="158.5" y="-112.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getName()</text>
+<text text-anchor="start" x="158.5" y="-101.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getDeckPlayer()</text>
 </a>
 </g>
 </g>
-<!-- Node1&#45;&gt;Node4 -->
-<g id="edge3" class="edge">
-<title>Node1&#45;&gt;Node4</title>
-<path fill="none" stroke="#63b8ff" d="M146.21,-222.64C149.11,-213.28 151.93,-204.2 154.55,-195.76"/>
-<polygon fill="none" stroke="#63b8ff" points="142.78,-221.89 143.16,-232.47 149.46,-223.96 142.78,-221.89"/>
+<!-- Node1&#45;&gt;Node5 -->
+<g id="edge4" class="edge">
+<title>Node1&#45;&gt;Node5</title>
+<path fill="none" stroke="#63b8ff" d="M180.21,-222.64C183.11,-213.28 185.93,-204.2 188.55,-195.76"/>
+<polygon fill="none" stroke="#63b8ff" points="176.78,-221.89 177.16,-232.47 183.46,-223.96 176.78,-221.89"/>
 </g>
 <!-- Node3 -->
 <g id="node3" class="node">
 <title>Node3</title>
-<g id="a_node3"><a xlink:href="classWolfPack.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="#666666" points="9,-0.5 9,-57.5 89,-57.5 89,-0.5 9,-0.5"/>
-<text text-anchor="middle" x="49" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">WolfPack</text>
-<polyline fill="none" stroke="#666666" points="9,-38.5 89,-38.5 "/>
-<text text-anchor="middle" x="49" y="-26.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
-<polyline fill="none" stroke="#666666" points="9,-19.5 89,-19.5 "/>
-<text text-anchor="start" x="17" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ WolfPack()</text>
+<g id="a_node3"><a xlink:href="classBandits.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="#666666" points="0,-0.5 0,-57.5 72,-57.5 72,-0.5 0,-0.5"/>
+<text text-anchor="middle" x="36" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">Bandits</text>
+<polyline fill="none" stroke="#666666" points="0,-38.5 72,-38.5 "/>
+<text text-anchor="middle" x="36" y="-26.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
+<polyline fill="none" stroke="#666666" points="0,-19.5 72,-19.5 "/>
+<text text-anchor="start" x="8" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ Bandits()</text>
 </a>
 </g>
 </g>
 <!-- Node2&#45;&gt;Node3 -->
 <g id="edge2" class="edge">
 <title>Node2&#45;&gt;Node3</title>
-<path fill="none" stroke="#63b8ff" d="M49,-95.29C49,-82.46 49,-69.05 49,-57.75"/>
-<polygon fill="none" stroke="#63b8ff" points="45.5,-95.4 49,-105.4 52.5,-95.4 45.5,-95.4"/>
+<path fill="none" stroke="#63b8ff" d="M63.23,-96.05C57.85,-82.99 52.19,-69.28 47.44,-57.75"/>
+<polygon fill="none" stroke="#63b8ff" points="60.04,-97.49 67.09,-105.4 66.51,-94.83 60.04,-97.49"/>
+</g>
+<!-- Node4 -->
+<g id="node4" class="node">
+<title>Node4</title>
+<g id="a_node4"><a xlink:href="classWolfPack.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="#666666" points="90,-0.5 90,-57.5 170,-57.5 170,-0.5 90,-0.5"/>
+<text text-anchor="middle" x="130" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">WolfPack</text>
+<polyline fill="none" stroke="#666666" points="90,-38.5 170,-38.5 "/>
+<text text-anchor="middle" x="130" y="-26.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
+<polyline fill="none" stroke="#666666" points="90,-19.5 170,-19.5 "/>
+<text text-anchor="start" x="98" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ WolfPack()</text>
+</a>
+</g>
+</g>
+<!-- Node2&#45;&gt;Node4 -->
+<g id="edge3" class="edge">
+<title>Node2&#45;&gt;Node4</title>
+<path fill="none" stroke="#63b8ff" d="M102.77,-96.05C108.15,-82.99 113.81,-69.28 118.56,-57.75"/>
+<polygon fill="none" stroke="#63b8ff" points="99.49,-94.83 98.91,-105.4 105.96,-97.49 99.49,-94.83"/>
 </g>
 </g>
 </svg>

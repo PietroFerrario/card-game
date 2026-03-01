@@ -1,7 +1,8 @@
 <map id="EnemyMove" name="EnemyMove">
-<area shape="rect" id="node1" title="Describes a single enemy action resolved during combat." alt="" coords="164,344,267,421"/>
+<area shape="rect" id="node1" title="Describes a single enemy action resolved during combat." alt="" coords="164,359,267,436"/>
 <area shape="rect" id="node2" title=" " alt="" coords="5,189,156,281"/>
 <area shape="rect" id="node3" href="$structCardParams.html" title="Numeric parameters used to resolve gameplay effects." alt="" coords="180,197,280,274"/>
-<area shape="rect" id="node4" title=" " alt="" coords="211,5,249,83"/>
-<area shape="rect" id="node5" title=" " alt="" coords="318,197,377,274"/>
+<area shape="rect" id="node4" title=" " alt="" coords="157,5,196,83"/>
+<area shape="rect" id="node5" title=" " alt="" coords="221,5,343,83"/>
+<area shape="rect" id="node6" title=" " alt="" coords="318,197,377,274"/>
 </map>

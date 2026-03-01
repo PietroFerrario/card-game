@@ -1,4 +1,5 @@
 <map id="CardParams" name="CardParams">
-<area shape="rect" id="node1" title="Numeric parameters used to resolve gameplay effects." alt="" coords="5,189,105,267"/>
-<area shape="rect" id="node2" title=" " alt="" coords="36,5,75,83"/>
+<area shape="rect" id="node1" title="Numeric parameters used to resolve gameplay effects." alt="" coords="27,189,127,267"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,5,44,83"/>
+<area shape="rect" id="node3" title=" " alt="" coords="69,5,191,83"/>
 </map>

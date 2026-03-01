@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['namelayout_0',['NameLayout',['../structNameLayout.html',1,'']]]
+  ['limitcardtoplayeffect_0',['LimitCardToPlayEffect',['../classLimitCardToPlayEffect.html',1,'']]]
 ];

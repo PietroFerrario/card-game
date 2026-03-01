@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['ignorearmor_0',['IgnoreArmor',['../combatEvents_8h.html#aa3e8b75bcdc6b38eaa84b6d51e71cc42a19de1e287c89572d310f574329bbc2d7',1,'combatEvents.h']]]
+  ['hitarmorfirst_0',['HitArmorFirst',['../combatEvents_8h.html#aa3e8b75bcdc6b38eaa84b6d51e71cc42a3016aeee342f6a10ad6ce98c043e0c16',1,'combatEvents.h']]]
 ];

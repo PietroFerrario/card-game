@@ -1,15 +1,16 @@
 <map id="factories/cardFactory.h" name="factories/cardFactory.h">
-<area shape="rect" id="node1" title=" " alt="" coords="273,5,441,31"/>
-<area shape="rect" id="node2" href="$ICardFactory_8h.html" title=" " alt="" coords="46,79,159,104"/>
+<area shape="rect" id="node1" title=" " alt="" coords="299,5,467,31"/>
+<area shape="rect" id="node2" href="$ICardFactory_8h.html" title=" " alt="" coords="45,79,158,104"/>
 <area shape="rect" id="node5" href="$cardsLoader_8h.html" title=" " alt="" coords="253,79,365,104"/>
-<area shape="rect" id="node11" title=" " alt="" coords="578,225,702,251"/>
-<area shape="rect" id="node13" title=" " alt="" coords="443,79,541,104"/>
-<area shape="rect" id="node3" title=" " alt="" coords="5,225,83,251"/>
-<area shape="rect" id="node4" title=" " alt="" coords="7,152,65,177"/>
+<area shape="rect" id="node12" title=" " alt="" coords="635,225,759,251"/>
+<area shape="rect" id="node14" title=" " alt="" coords="494,79,591,104"/>
+<area shape="rect" id="node3" title=" " alt="" coords="61,225,139,251"/>
+<area shape="rect" id="node4" title=" " alt="" coords="5,152,64,177"/>
 <area shape="rect" id="node6" href="$effectFactory_8h.html" title=" " alt="" coords="251,152,367,177"/>
-<area shape="rect" id="node10" title=" " alt="" coords="107,225,253,251"/>
-<area shape="rect" id="node7" href="$effect_8h.html" title=" " alt="" coords="365,225,483,251"/>
-<area shape="rect" id="node9" title=" " alt="" coords="507,225,554,251"/>
-<area shape="rect" id="node12" title=" " alt="" coords="278,225,341,251"/>
-<area shape="rect" id="node8" href="$cardParams_8h.html" title=" " alt="" coords="349,299,499,324"/>
+<area shape="rect" id="node11" title=" " alt="" coords="464,225,611,251"/>
+<area shape="rect" id="node13" title=" " alt="" coords="163,225,226,251"/>
+<area shape="rect" id="node7" href="$effect_8h.html" title=" " alt="" coords="250,225,369,251"/>
+<area shape="rect" id="node10" title=" " alt="" coords="393,225,439,251"/>
+<area shape="rect" id="node8" href="$cardParams_8h.html" title=" " alt="" coords="235,299,384,324"/>
+<area shape="rect" id="node9" title=" " alt="" coords="272,372,347,397"/>
 </map>

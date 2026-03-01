@@ -1,0 +1,13 @@
+<map id="entities/enemies/bandits.h" name="entities/enemies/bandits.h">
+<area shape="rect" id="node1" title=" " alt="" coords="248,5,443,31"/>
+<area shape="rect" id="node2" href="$enemy_8h.html" title=" " alt="" coords="307,79,384,104"/>
+<area shape="rect" id="node3" href="$enemyMove_8h.html" title=" " alt="" coords="193,152,308,177"/>
+<area shape="rect" id="node9" title=" " alt="" coords="314,225,377,251"/>
+<area shape="rect" id="node10" href="$entity_8h.html" title=" " alt="" coords="383,152,505,177"/>
+<area shape="rect" id="node4" href="$cardParams_8h.html" title=" " alt="" coords="5,299,155,324"/>
+<area shape="rect" id="node6" href="$effect_8h.html" title=" " alt="" coords="70,225,189,251"/>
+<area shape="rect" id="node7" title=" " alt="" coords="212,225,289,251"/>
+<area shape="rect" id="node8" title=" " alt="" coords="401,225,460,251"/>
+<area shape="rect" id="node5" title=" " alt="" coords="43,372,117,397"/>
+<area shape="rect" id="node11" title=" " alt="" coords="485,225,582,251"/>
+</map>

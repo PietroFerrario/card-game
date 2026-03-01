@@ -107,7 +107,7 @@ Inheritance diagram for IMatchView:</div>
 <div class="dynheader">
 Collaboration diagram for IMatchView:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classIMatchView__coll__graph.svg" width="235" height="308"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classIMatchView__coll__graph.svg" width="235" height="323"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <table class="memberdecls">
@@ -123,8 +123,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a470f8320abded463d81b93e9764eef02"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8bb112c2d5c0d14bbe58392a5b1451ad"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIMatchView.html#a8bb112c2d5c0d14bbe58392a5b1451ad">showMatchState</a> (const <a class="el" href="structMatchData.html">MatchData</a> &amp;matchData) const =0</td></tr>
 <tr class="separator:a8bb112c2d5c0d14bbe58392a5b1451ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a918c5f3bac81467d73df6ea592860605"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIMatchView.html#a918c5f3bac81467d73df6ea592860605">askCardToPlay</a> (int limit)=0</td></tr>
-<tr class="separator:a918c5f3bac81467d73df6ea592860605"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18b8748ca81c218d200fff963c860166"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structPlayCardDecision.html">PlayCardDecision</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIMatchView.html#a18b8748ca81c218d200fff963c860166">askPlayerAction</a> (int limit)=0</td></tr>
+<tr class="separator:a18b8748ca81c218d200fff963c860166"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abda279cb82511dbff43660757db4b073"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIMatchView.html#abda279cb82511dbff43660757db4b073">showPassingTurn</a> ()=0</td></tr>
+<tr class="separator:abda279cb82511dbff43660757db4b073"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a497fbd61e34e7043f3d7548e60a584f2"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIMatchView.html#a497fbd61e34e7043f3d7548e60a584f2">showRecurringMatchStatus</a> (const <a class="el" href="structMatchData.html">MatchData</a> &amp;matchData, const <a class="el" href="structTurnData.html">TurnData</a> &amp;turnData, const <a class="el" href="classEntity.html">Entity</a> &amp;player, const <a class="el" href="classEntity.html">Entity</a> &amp;enemy) const =0</td></tr>
 <tr class="separator:a497fbd61e34e7043f3d7548e60a584f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6e0aa47afdd738335dfd672fbd288625"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIMatchView.html#a6e0aa47afdd738335dfd672fbd288625">showDamageResult</a> (const <a class="el" href="structDamageResult.html">DamageResult</a> result) const =0</td></tr>
@@ -133,8 +135,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a83c4d0a786609d6dfe51c2e5ec87378e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0400a9a547132cf866e57091525b0061"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIMatchView.html#a0400a9a547132cf866e57091525b0061">showPlayedCardName</a> (std::string_view name) const =0</td></tr>
 <tr class="separator:a0400a9a547132cf866e57091525b0061"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa0bf805385f3c9b05c937873c42c4ab5"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIMatchView.html#aa0bf805385f3c9b05c937873c42c4ab5">showEnemyMove</a> (std::string_view enemyName, std::string_view moveName) const =0</td></tr>
-<tr class="separator:aa0bf805385f3c9b05c937873c42c4ab5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae50f07a51d924df5104bec658ed29d5f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIMatchView.html#ae50f07a51d924df5104bec658ed29d5f">showEnemyMove</a> (std::string_view enemyName, std::string_view moveName, std::string_view moveDescr) const =0</td></tr>
+<tr class="separator:ae50f07a51d924df5104bec658ed29d5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8216bc72f85dac5050f20b6d12bf90bb"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIMatchView.html#a8216bc72f85dac5050f20b6d12bf90bb">showPlayerTurnStart</a> (const <a class="el" href="structMatchData.html">MatchData</a> &amp;matchData) const =0</td></tr>
 <tr class="separator:a8216bc72f85dac5050f20b6d12bf90bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2659c310642558975904abb3173abbe3"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIMatchView.html#a2659c310642558975904abb3173abbe3">showEndOfTurn</a> (const <a class="el" href="structMatchData.html">MatchData</a> &amp;matchData) const =0</td></tr>
@@ -173,8 +175,8 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a918c5f3bac81467d73df6ea592860605" name="a918c5f3bac81467d73df6ea592860605"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a918c5f3bac81467d73df6ea592860605">&#9670;&#160;</a></span>askCardToPlay()</h2>
+<a id="a18b8748ca81c218d200fff963c860166" name="a18b8748ca81c218d200fff963c860166"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18b8748ca81c218d200fff963c860166">&#9670;&#160;</a></span>askPlayerAction()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -183,7 +185,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual int IMatchView::askCardToPlay </td>
+          <td class="memname">virtual <a class="el" href="structPlayCardDecision.html">PlayCardDecision</a> IMatchView::askPlayerAction </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>limit</em></td><td>)</td>
@@ -197,7 +199,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classTerminalMatchView.html#ad4d93f5e41b752920ab12c92112367ec">TerminalMatchView</a>.</p>
+<p>Implemented in <a class="el" href="classTerminalMatchView.html#a143c525caac8b83a13df77d96c30e456">TerminalMatchView</a>.</p>
 
 </div>
 </div>
@@ -369,8 +371,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="aa0bf805385f3c9b05c937873c42c4ab5" name="aa0bf805385f3c9b05c937873c42c4ab5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa0bf805385f3c9b05c937873c42c4ab5">&#9670;&#160;</a></span>showEnemyMove()</h2>
+<a id="ae50f07a51d924df5104bec658ed29d5f" name="ae50f07a51d924df5104bec658ed29d5f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae50f07a51d924df5104bec658ed29d5f">&#9670;&#160;</a></span>showEnemyMove()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -388,7 +390,13 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">std::string_view&#160;</td>
-          <td class="paramname"><em>moveName</em>&#160;</td>
+          <td class="paramname"><em>moveName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string_view&#160;</td>
+          <td class="paramname"><em>moveDescr</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -403,7 +411,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classTerminalMatchView.html#a2190c4c7e40d783371e8dba63a9bc66d">TerminalMatchView</a>.</p>
+<p>Implemented in <a class="el" href="classTerminalMatchView.html#a3f7e66e0f812f555e8fa7319085bb10c">TerminalMatchView</a>.</p>
 
 </div>
 </div>
@@ -459,6 +467,33 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Implemented in <a class="el" href="classTerminalMatchView.html#ad64db04ce837a9bd3cfa6180a1e73997">TerminalMatchView</a>.</p>
+
+</div>
+</div>
+<a id="abda279cb82511dbff43660757db4b073" name="abda279cb82511dbff43660757db4b073"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abda279cb82511dbff43660757db4b073">&#9670;&#160;</a></span>showPassingTurn()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void IMatchView::showPassingTurn </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="classTerminalMatchView.html#aeba440d55bbb1083c313a2b02fb07291">TerminalMatchView</a>.</p>
 
 </div>
 </div>

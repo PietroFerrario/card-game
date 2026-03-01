@@ -1,10 +1,11 @@
 <map id="factories/effectFactory.h" name="factories/effectFactory.h">
 <area shape="rect" id="node1" title=" " alt="" coords="253,5,430,31"/>
 <area shape="rect" id="node2" href="$effect_8h.html" title=" " alt="" coords="21,79,139,104"/>
-<area shape="rect" id="node4" title=" " alt="" coords="163,79,210,104"/>
-<area shape="rect" id="node5" title=" " alt="" coords="235,79,312,104"/>
-<area shape="rect" id="node6" title=" " alt="" coords="336,79,483,104"/>
-<area shape="rect" id="node7" title=" " alt="" coords="507,79,631,104"/>
-<area shape="rect" id="node8" title=" " alt="" coords="655,79,718,104"/>
+<area shape="rect" id="node5" title=" " alt="" coords="163,79,210,104"/>
+<area shape="rect" id="node6" title=" " alt="" coords="235,79,312,104"/>
+<area shape="rect" id="node7" title=" " alt="" coords="336,79,483,104"/>
+<area shape="rect" id="node8" title=" " alt="" coords="507,79,631,104"/>
+<area shape="rect" id="node9" title=" " alt="" coords="655,79,718,104"/>
 <area shape="rect" id="node3" href="$cardParams_8h.html" title=" " alt="" coords="5,152,155,177"/>
+<area shape="rect" id="node4" title=" " alt="" coords="43,225,117,251"/>
 </map>

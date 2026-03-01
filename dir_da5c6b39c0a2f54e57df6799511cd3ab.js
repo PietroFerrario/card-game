@@ -8,7 +8,7 @@ var dir_da5c6b39c0a2f54e57df6799511cd3ab =
     [ "iotext.cpp", "iotext_8cpp.html", null ],
     [ "iotext.h", "iotext_8h.html", "iotext_8h" ],
     [ "terminalMatchView.cpp", "terminalMatchView_8cpp.html", null ],
-    [ "terminaMatchView.h", "terminaMatchView_8h.html", "terminaMatchView_8h" ],
+    [ "terminalMatchView.h", "terminalMatchView_8h.html", "terminalMatchView_8h" ],
     [ "text.cpp", "text_8cpp.html", "text_8cpp" ],
     [ "text.h", "text_8h.html", "text_8h" ]
 ];

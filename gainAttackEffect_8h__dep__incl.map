@@ -1,7 +1,8 @@
 <map id="effects/gainAttackEffect.h" name="effects/gainAttackEffect.h">
-<area shape="rect" id="node1" title=" " alt="" coords="361,5,550,31"/>
+<area shape="rect" id="node1" title=" " alt="" coords="485,5,674,31"/>
 <area shape="rect" id="node2" href="$gainAttackEffect_8cpp.html" title=" " alt="" coords="5,79,209,104"/>
-<area shape="rect" id="node3" href="$wolfPack_8cpp.html" title=" " alt="" coords="233,79,453,104"/>
-<area shape="rect" id="node4" href="$cardFactory_8cpp.html" title=" " alt="" coords="477,79,660,104"/>
-<area shape="rect" id="node5" href="$effectFactory_8cpp.html" title=" " alt="" coords="685,79,877,104"/>
+<area shape="rect" id="node3" href="$bandits_8cpp.html" title=" " alt="" coords="234,79,445,104"/>
+<area shape="rect" id="node4" href="$wolfPack_8cpp.html" title=" " alt="" coords="469,79,689,104"/>
+<area shape="rect" id="node5" href="$cardFactory_8cpp.html" title=" " alt="" coords="713,79,896,104"/>
+<area shape="rect" id="node6" href="$effectFactory_8cpp.html" title=" " alt="" coords="921,79,1113,104"/>
 </map>

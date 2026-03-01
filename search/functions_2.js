@@ -1,14 +1,11 @@
 var searchData=
 [
-  ['damagephase_0',['damagePhase',['../classCardMatch.html#a2109b05136a5092a2cfda5770e9d2873',1,'CardMatch']]],
-  ['dealdamage_1',['dealDamage',['../classCombatContext.html#a8635c6dbb82ed48b4a5aaf7f61743816',1,'CombatContext::dealDamage()'],['../classCombatSystem.html#a054f2ddfbd59009df9a8f4393fb83fde',1,'CombatSystem::dealDamage()']]],
-  ['deckcombat_2',['DeckCombat',['../classDeckCombat.html#a8ee7cea4e28b669e3b609c77726185eb',1,'DeckCombat']]],
-  ['deckplayer_3',['DeckPlayer',['../classDeckPlayer.html#aa6360b15a643662ed205b67b28f98369',1,'DeckPlayer::DeckPlayer()'],['../classDeckPlayer.html#abfb9be69b9f8f63693acff53590c6b9e',1,'DeckPlayer::DeckPlayer(std::vector&lt; DeckEntry &gt; startingCardList, int maxCardNumbers=20)']]],
-  ['discard_4',['discard',['../classDeckCombat.html#a8ae7602e1f0d244d654d5dc9ae7c4bfa',1,'DeckCombat']]],
-  ['discardfromhand_5',['discardFromHand',['../classDeckCombat.html#a3ed556035ec64030a32e8f995d26459a',1,'DeckCombat']]],
-  ['drawcard_6',['drawCard',['../classDeckCombat.html#afbb76f85ad92498b8658bd48fdfcfca4',1,'DeckCombat']]],
-  ['drawcardseffect_7',['DrawCardsEffect',['../classDrawCardsEffect.html#a902a2856e4add15cbb7e14f640dbdbf6',1,'DrawCardsEffect']]],
-  ['drawmultiplecardfromeffect_8',['drawMultipleCardFromEffect',['../classCombatContext.html#aece756513614c3cf3335386b308f628f',1,'CombatContext']]],
-  ['drawmultiplecards_9',['drawMultipleCards',['../classDeckCombat.html#ad8afce5f59b3c45388dc98c3f04b64a1',1,'DeckCombat']]],
-  ['drawmultiplecardsnoeffect_10',['drawMultipleCardsNoEffect',['../classCardMatch.html#a794ebcf30069240092e0e025ed2a44e6',1,'CardMatch']]]
+  ['canplayeract_0',['canPlayerAct',['../classCardMatch.html#a850d0dace4c39f6a5c1f56afca49729d',1,'CardMatch']]],
+  ['carddefinition_1',['CardDefinition',['../classCardDefinition.html#acb4e53a56e9751b99c2ffa113f96ea93',1,'CardDefinition']]],
+  ['cardfactory_2',['CardFactory',['../classCardFactory.html#a55607cb22e595af44cef12010be53e94',1,'CardFactory']]],
+  ['cardinstance_3',['CardInstance',['../classCardInstance.html#a5e76c58d0a43a81eab1eedb65c525067',1,'CardInstance']]],
+  ['cardmatch_4',['CardMatch',['../classCardMatch.html#a21db012a6db3246fa3ae2c5257dfaba5',1,'CardMatch']]],
+  ['cardrenderer_5',['CardRenderer',['../classCardRenderer.html#a8b69b406b0743113d6369c2ef6ed9b59',1,'CardRenderer']]],
+  ['cardsloader_6',['CardsLoader',['../classCardsLoader.html#a9bdd5944b7eea82d929eeff3c6a029a3',1,'CardsLoader']]],
+  ['combatcontext_7',['CombatContext',['../classCombatContext.html#a69b2758896a775a6aed70f7d4bc002e3',1,'CombatContext']]]
 ];

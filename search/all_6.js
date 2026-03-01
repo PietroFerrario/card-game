@@ -38,7 +38,8 @@ var searchData=
   ['gethp_35',['getHp',['../classEntity.html#aa6080cdbf25bece934c49e79634011ef',1,'Entity']]],
   ['getid_36',['getID',['../classCardDefinition.html#afb5d62a40699159266839c41ba9ce8f2',1,'CardDefinition']]],
   ['getln_37',['getln',['../classIOText.html#a243be749bc0f604ef777dcc2191fce4e',1,'IOText']]],
-  ['getmainplayer_38',['getMainPlayer',['../classGame.html#a14e29e4ce2c89d65d6c49531be3de144',1,'Game::getMainPlayer()'],['../classGame.html#a2d5e49d80ed85b5e22dfa36ff05d9042',1,'Game::getMainPlayer() const']]],
-  ['getname_39',['getName',['../classCardDefinition.html#a0de92c6f28b1a53fe9678a52693b5ed1',1,'CardDefinition::getName()'],['../classEntity.html#abd594e05bdb875b0e6c934fe3a4f44bb',1,'Entity::getName()'],['../classPlayer.html#ae6c59cf02275c7ba78ae4cf4d1771412',1,'Player::getName()']]],
-  ['gettext_40',['getText',['../classText.html#ae5a6625830c7162ac0512fdf949911e3',1,'Text']]]
+  ['getmainplayer_38',['getMainPlayer',['../classGame.html#a2d5e49d80ed85b5e22dfa36ff05d9042',1,'Game::getMainPlayer() const'],['../classGame.html#a14e29e4ce2c89d65d6c49531be3de144',1,'Game::getMainPlayer()']]],
+  ['getname_39',['getName',['../classPlayer.html#ae6c59cf02275c7ba78ae4cf4d1771412',1,'Player::getName()'],['../classEntity.html#abd594e05bdb875b0e6c934fe3a4f44bb',1,'Entity::getName()'],['../classCardDefinition.html#a0de92c6f28b1a53fe9678a52693b5ed1',1,'CardDefinition::getName()']]],
+  ['gettext_40',['getText',['../classText.html#ae5a6625830c7162ac0512fdf949911e3',1,'Text']]],
+  ['green_41',['Green',['../terminalMatchView_8h.html#a0ddcb705da66533c6a200cf585344b5aad382816a3cbeed082c9e216e7392eed1',1,'terminalMatchView.h']]]
 ];

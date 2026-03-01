@@ -1,23 +1,5 @@
 var searchData=
 [
-  ['carddefinition_2ecpp_0',['cardDefinition.cpp',['../cardDefinition_8cpp.html',1,'']]],
-  ['carddefinition_2eh_1',['cardDefinition.h',['../cardDefinition_8h.html',1,'']]],
-  ['cardfactory_2ecpp_2',['cardFactory.cpp',['../cardFactory_8cpp.html',1,'']]],
-  ['cardfactory_2eh_3',['cardFactory.h',['../cardFactory_8h.html',1,'']]],
-  ['cardinstance_2ecpp_4',['cardInstance.cpp',['../cardInstance_8cpp.html',1,'']]],
-  ['cardinstance_2eh_5',['cardInstance.h',['../cardInstance_8h.html',1,'']]],
-  ['cardmatch_2ecpp_6',['cardmatch.cpp',['../cardmatch_8cpp.html',1,'']]],
-  ['cardmatch_2eh_7',['cardmatch.h',['../cardmatch_8h.html',1,'']]],
-  ['cardparams_2eh_8',['cardParams.h',['../cardParams_8h.html',1,'']]],
-  ['cardrenderer_2ecpp_9',['cardRenderer.cpp',['../cardRenderer_8cpp.html',1,'']]],
-  ['cardrenderer_2eh_10',['cardRenderer.h',['../cardRenderer_8h.html',1,'']]],
-  ['cardsloader_2ecpp_11',['cardsLoader.cpp',['../cardsLoader_8cpp.html',1,'']]],
-  ['cardsloader_2eh_12',['cardsLoader.h',['../cardsLoader_8h.html',1,'']]],
-  ['combat_5feffect_5fpipeline_2edox_13',['combat_effect_pipeline.dox',['../combat__effect__pipeline_8dox.html',1,'']]],
-  ['combatcontext_2ecpp_14',['combatContext.cpp',['../combatContext_8cpp.html',1,'']]],
-  ['combatcontext_2eh_15',['combatContext.h',['../combatContext_8h.html',1,'']]],
-  ['combatevents_2eh_16',['combatEvents.h',['../combatEvents_8h.html',1,'']]],
-  ['combatsystem_2ecpp_17',['combatSystem.cpp',['../combatSystem_8cpp.html',1,'']]],
-  ['combatsystem_2eh_18',['combatSystem.h',['../combatSystem_8h.html',1,'']]],
-  ['combattarget_2eh_19',['combatTarget.h',['../combatTarget_8h.html',1,'']]]
+  ['bandits_2ecpp_0',['bandits.cpp',['../bandits_8cpp.html',1,'']]],
+  ['bandits_2eh_1',['bandits.h',['../bandits_8h.html',1,'']]]
 ];

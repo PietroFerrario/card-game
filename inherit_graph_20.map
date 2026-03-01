@@ -1,3 +1,7 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classGame.html" title=" " alt="" coords="5,5,67,31"/>
+<area shape="rect" id="node1" href="$classEntity.html" title="Base class representing a combat&#45;capable entity." alt="" coords="5,55,65,80"/>
+<area shape="rect" id="node2" href="$classEnemy.html" title="Base class for enemies with a predefined move sequence." alt="" coords="113,29,180,55"/>
+<area shape="rect" id="node5" href="$classPlayer.html" title="Player&#45;controlled entity with a persistent deck." alt="" coords="115,79,178,104"/>
+<area shape="rect" id="node3" href="$classBandits.html" title=" " alt="" coords="233,5,304,31"/>
+<area shape="rect" id="node4" href="$classWolfPack.html" title=" " alt="" coords="228,55,309,80"/>
 </map>

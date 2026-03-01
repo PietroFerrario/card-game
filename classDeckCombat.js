@@ -3,6 +3,7 @@ var classDeckCombat =
     [ "DeckCombat", "classDeckCombat.html#a8ee7cea4e28b669e3b609c77726185eb", null ],
     [ "discard", "classDeckCombat.html#a8ae7602e1f0d244d654d5dc9ae7c4bfa", null ],
     [ "discardFromHand", "classDeckCombat.html#a3ed556035ec64030a32e8f995d26459a", null ],
+    [ "discardWholeHand", "classDeckCombat.html#a8aa20ecbd5eb07a32a150896f809d14e", null ],
     [ "drawCard", "classDeckCombat.html#afbb76f85ad92498b8658bd48fdfcfca4", null ],
     [ "drawMultipleCards", "classDeckCombat.html#ad8afce5f59b3c45388dc98c3f04b64a1", null ],
     [ "getHandPile", "classDeckCombat.html#a2220e79c071491e02bb9f5fda4f242cd", null ],

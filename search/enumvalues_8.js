@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['playerwon_0',['PlayerWon',['../matchData_8h.html#aca6448151e924d2cb062632532d9081faa85b95017d0792ca611434d181515722',1,'matchData.h']]]
+  ['none_0',['None',['../terminalMatchView_8h.html#a0ddcb705da66533c6a200cf585344b5aa6adf97f83acf6453d4a6a4b1070f3754',1,'terminalMatchView.h']]]
 ];

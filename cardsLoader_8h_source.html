@@ -97,26 +97,28 @@ $(document).ready(function(){initNavTree('cardsLoader_8h_source.html',''); initR
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define CARDSLOADER_H</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="effectFactory_8h.html">effectFactory.h</a>&quot;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;nlohmann/json.hpp&gt;</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="classCardsLoader.html">    7</a></span><span class="keyword">class </span><a class="code hl_class" href="classCardsLoader.html">CardsLoader</a></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>{</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>  <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    <a class="code hl_function" href="classCardsLoader.html#a9bdd5944b7eea82d929eeff3c6a029a3">CardsLoader</a>();</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    std::vector&lt;std::unique_ptr&lt;CardDefinition&gt;&gt; <a class="code hl_function" href="classCardsLoader.html#ad6c1ac61719372c5b3b15a00307b0f68">parseCardsList</a>();</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;nlohmann/json.hpp&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="classCardsLoader.html">    9</a></span><span class="keyword">class </span><a class="code hl_class" href="classCardsLoader.html">CardsLoader</a></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>{</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>  <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <a class="code hl_function" href="classCardsLoader.html#a9bdd5944b7eea82d929eeff3c6a029a3">CardsLoader</a>();</div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>  <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    nlohmann::json m_data{};</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <a class="code hl_class" href="classEffectFactory.html">EffectFactory</a> m_effectFactory;</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    std::unique_ptr&lt;CardDefinition&gt; loadCard(<span class="keyword">const</span> nlohmann::json&amp; card);</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>};</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#endif </span><span class="comment">// CARDSLOADER_H</span></div>
-<div class="ttc" id="aclassCardsLoader_html"><div class="ttname"><a href="classCardsLoader.html">CardsLoader</a></div><div class="ttdef"><b>Definition:</b> cardsLoader.h:8</div></div>
-<div class="ttc" id="aclassCardsLoader_html_a9bdd5944b7eea82d929eeff3c6a029a3"><div class="ttname"><a href="classCardsLoader.html#a9bdd5944b7eea82d929eeff3c6a029a3">CardsLoader::CardsLoader</a></div><div class="ttdeci">CardsLoader()</div><div class="ttdef"><b>Definition:</b> cardsLoader.cpp:11</div></div>
-<div class="ttc" id="aclassCardsLoader_html_ad6c1ac61719372c5b3b15a00307b0f68"><div class="ttname"><a href="classCardsLoader.html#ad6c1ac61719372c5b3b15a00307b0f68">CardsLoader::parseCardsList</a></div><div class="ttdeci">std::vector&lt; std::unique_ptr&lt; CardDefinition &gt; &gt; parseCardsList()</div><div class="ttdef"><b>Definition:</b> cardsLoader.cpp:17</div></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    std::vector&lt;std::unique_ptr&lt;CardDefinition&gt;&gt; <a class="code hl_function" href="classCardsLoader.html#ad6c1ac61719372c5b3b15a00307b0f68">parseCardsList</a>();</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>  <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    nlohmann::json m_data{};</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <a class="code hl_class" href="classEffectFactory.html">EffectFactory</a> m_effectFactory;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    std::unique_ptr&lt;CardDefinition&gt; loadCard(<span class="keyword">const</span> nlohmann::json&amp; card);</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>};</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#endif </span><span class="comment">// CARDSLOADER_H</span></div>
+<div class="ttc" id="aclassCardsLoader_html"><div class="ttname"><a href="classCardsLoader.html">CardsLoader</a></div><div class="ttdef"><b>Definition:</b> cardsLoader.h:10</div></div>
+<div class="ttc" id="aclassCardsLoader_html_a9bdd5944b7eea82d929eeff3c6a029a3"><div class="ttname"><a href="classCardsLoader.html#a9bdd5944b7eea82d929eeff3c6a029a3">CardsLoader::CardsLoader</a></div><div class="ttdeci">CardsLoader()</div><div class="ttdef"><b>Definition:</b> cardsLoader.cpp:9</div></div>
+<div class="ttc" id="aclassCardsLoader_html_ad6c1ac61719372c5b3b15a00307b0f68"><div class="ttname"><a href="classCardsLoader.html#ad6c1ac61719372c5b3b15a00307b0f68">CardsLoader::parseCardsList</a></div><div class="ttdeci">std::vector&lt; std::unique_ptr&lt; CardDefinition &gt; &gt; parseCardsList()</div><div class="ttdef"><b>Definition:</b> cardsLoader.cpp:15</div></div>
 <div class="ttc" id="aclassEffectFactory_html"><div class="ttname"><a href="classEffectFactory.html">EffectFactory</a></div><div class="ttdef"><b>Definition:</b> effectFactory.h:15</div></div>
 <div class="ttc" id="aeffectFactory_8h_html"><div class="ttname"><a href="effectFactory_8h.html">effectFactory.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->

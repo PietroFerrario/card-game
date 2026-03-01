@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['matchdata_0',['MatchData',['../structMatchData.html',1,'']]]
+  ['icardfactory_0',['ICardFactory',['../classICardFactory.html',1,'']]],
+  ['imatchview_1',['IMatchView',['../classIMatchView.html',1,'']]],
+  ['iotext_2',['IOText',['../classIOText.html',1,'']]]
 ];

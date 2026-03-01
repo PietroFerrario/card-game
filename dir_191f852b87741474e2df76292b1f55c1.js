@@ -8,5 +8,9 @@ var dir_191f852b87741474e2df76292b1f55c1 =
     [ "gainArmorEffect.cpp", "gainArmorEffect_8cpp.html", null ],
     [ "gainArmorEffect.h", "gainArmorEffect_8h.html", "gainArmorEffect_8h" ],
     [ "gainAttackEffect.cpp", "gainAttackEffect_8cpp.html", null ],
-    [ "gainAttackEffect.h", "gainAttackEffect_8h.html", "gainAttackEffect_8h" ]
+    [ "gainAttackEffect.h", "gainAttackEffect_8h.html", "gainAttackEffect_8h" ],
+    [ "hostageCardEffect.cpp", "hostageCardEffect_8cpp.html", null ],
+    [ "hostageCardEffect.h", "hostageCardEffect_8h.html", "hostageCardEffect_8h" ],
+    [ "limitCardToPlayEffect.cpp", "limitCardToPlayEffect_8cpp.html", null ],
+    [ "limitCardToPlayEffect.h", "limitCardToPlayEffect_8h.html", "limitCardToPlayEffect_8h" ]
 ];

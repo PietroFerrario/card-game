@@ -95,11 +95,13 @@ $(document).ready(function(){initNavTree('debug_8h.html',''); initResizable(); }
   <div class="headertitle"><div class="title">debug.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;iostream&gt;</code><br />
+<div class="textblock"><code>#include &lt;filesystem&gt;</code><br />
+<code>#include &lt;fstream&gt;</code><br />
+<code>#include &lt;iostream&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for debug.h:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="debug_8h__incl.svg" width="110" height="110"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="debug_8h__incl.svg" width="304" height="110"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -132,8 +134,14 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">    <span class="keywordflow">do</span>                 \</div>
-<div class="line">    {                  \</div>
+<b>Value:</b><div class="fragment"><div class="line">    <span class="keywordflow">do</span>                                                                                             \</div>
+<div class="line">    {                                                                                              \</div>
+<div class="line">        <span class="keyword">static</span> std::ofstream logFile(<span class="stringliteral">&quot;cardgame_log.txt&quot;</span>, std::ios::out | std::ios::app);           \</div>
+<div class="line">        if (logFile.is_open())                                                                     \</div>
+<div class="line">        {                                                                                          \</div>
+<div class="line">            logFile &lt;&lt; <span class="stringliteral">&quot;[LOG] &quot;</span> &lt;&lt; std::filesystem::path(__FILE__).filename().string() &lt;&lt; <span class="stringliteral">&quot;:&quot;</span>      \</div>
+<div class="line">                    &lt;&lt; __LINE__ &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; msg &lt;&lt; std::endl;                                        \</div>
+<div class="line">        }                                                                                          \</div>
 <div class="line">    } <span class="keywordflow">while</span> (0)</div>
 </div><!-- fragment -->
 </div>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['target_0',['Target',['../combatTarget_8h.html#a31488d29805a596498c0234ae392d35d',1,'combatTarget.h']]]
+  ['playerchoice_0',['PlayerChoice',['../matchData_8h.html#afa9329ff1030f4707cd8e4028eada06c',1,'matchData.h']]]
 ];
