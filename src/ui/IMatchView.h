@@ -37,6 +37,10 @@ class IMatchView
     virtual void showStartOfMatch(std::string_view enemyName) const = 0;
     virtual void showDrawCards(const DrawData& drawData) const = 0;
 
+    virtual void showRewardText(std::string_view enemyName) const = 0;
+    virtual RewardDecision askPlayerReward(int limit) = 0;
+    virtual void showReward(std::string_view cardSelected) const = 0;
+
   private:
 };
 

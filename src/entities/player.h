@@ -43,7 +43,16 @@ class Player : public Entity
      * encounters.
      *
      */
-    const DeckPlayer& getDeckPlayer() { return m_deckPlayer; }
+    const DeckPlayer& getDeckPlayer() const { return m_deckPlayer; }
+
+    /**
+     * @brief Returns the player's persistent deck.
+     *
+     * This deck is used as the source for constructing DeckCombat instances at the start of combat
+     * encounters.
+     *
+     */
+    DeckPlayer& getDeckPlayer() { return m_deckPlayer; }
 
   private:
     DeckPlayer m_deckPlayer;

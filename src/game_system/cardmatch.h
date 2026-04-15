@@ -82,7 +82,7 @@ class CardMatch
 
     bool updateMatchState();
 
-    void turnLoop();
+    MatchData turnLoop();
 
     void playerTurnSetup(const TurnData& currentTurnData);
 

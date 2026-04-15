@@ -29,6 +29,7 @@ struct TurnData
     std::optional<int> cardsToPlayLimit;
 };
 
+// Refactor for both playing card and refactor
 enum class PlayerChoice
 {
     PlayCard,
@@ -38,6 +39,18 @@ enum class PlayerChoice
 struct PlayCardDecision
 {
     PlayerChoice playerChoice{PlayerChoice::PassTurn};
+    std::optional<int> selectedCard;
+};
+
+enum class RewardChoice
+{
+    SelectReward,
+    SkipReward,
+};
+
+struct RewardDecision
+{
+    RewardChoice playerChoice{RewardChoice::SkipReward};
     std::optional<int> selectedCard;
 };
 

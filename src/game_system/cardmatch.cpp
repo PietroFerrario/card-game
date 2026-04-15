@@ -107,7 +107,7 @@ bool CardMatch::updateMatchState()
 }
 
 // Implement returning the MatchState -> In order for the main to manage it
-void CardMatch::turnLoop()
+MatchData CardMatch::turnLoop()
 {
     m_matchView.showStartOfMatch(m_enemy.getName());
 
@@ -122,8 +122,9 @@ void CardMatch::turnLoop()
         damagePhase();
         if (updateMatchState())
         {
+            // Refactor Match result to be shown in the Event Sequence, not in the CardMatch!
             m_matchView.showEndOfMatch(m_matchData);
-            break;
+            return m_matchData;
         }
         resetPhase();
     }

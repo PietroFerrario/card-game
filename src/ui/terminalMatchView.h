@@ -39,6 +39,10 @@ class TerminalMatchView : public IMatchView
     void showStartOfMatch(std::string_view enemyName) const override;
     void showDrawCards(const DrawData& drawData) const override;
 
+    void showRewardText(std::string_view enemyName) const override;
+    RewardDecision askPlayerReward(int limit) override;
+    void showReward(std::string_view cardSelected) const override;
+
   private:
     IOText& m_io;
     HandRenderer m_handRenderer;
