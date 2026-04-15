@@ -7,7 +7,8 @@
 
 Bandits::Bandits(int hp) : Enemy{hp}
 {
-    m_name = "Bandits";
+    m_name = "Ragged Bandits";
+    m_id = EnemyId::Bandits;
 
     m_moves.emplace_back();
     EnemyMove& ambush = m_moves.back();

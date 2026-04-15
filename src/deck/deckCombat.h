@@ -1,6 +1,7 @@
 #ifndef DECKCOMBAT_H
 #define DECKCOMBAT_H
 
+#include "cards/cardInstance.h"
 #include "drawData.h"
 
 #include <memory>
@@ -64,7 +65,19 @@ class DeckCombat
      */
     void discardFromHand(int handIndex);
 
-    void discardWholeHand();
+    /**
+     * @brief Discard the hand at the end of the turn. Moved into discard pile
+     */
+    void discardHandEndTurn();
+
+    /**
+     * @brief Exhaust all the played card this round
+     *
+     * Move all the cards from the turnPlayedPile of this round into the discardPile. To be
+     * reshuffled into the deckPile.
+     *
+     */
+    void movePlayedToDiscardEndTurn();
 
     /// @brief Returns the number of cards currently in the hand.
     int getHandSize() const { return m_handPile.size(); }
@@ -117,9 +130,10 @@ class DeckCombat
     void regenerateDeck();
 
   private:
-    std::vector<std::unique_ptr<CardInstance>> m_drawPile;    ///< Draw pile (initial deck).
-    std::vector<std::unique_ptr<CardInstance>> m_handPile;    ///< Cards in hand.
-    std::vector<std::unique_ptr<CardInstance>> m_discardPile; ///< Used/discarded cards.
+    std::vector<std::unique_ptr<CardInstance>> m_drawPile;       ///< Draw pile (initial deck).
+    std::vector<std::unique_ptr<CardInstance>> m_handPile;       ///< Cards in hand.
+    std::vector<std::unique_ptr<CardInstance>> m_discardPile;    ///< To be reshuffled cards.
+    std::vector<std::unique_ptr<CardInstance>> m_turnPlayedPile; ///< Played cards this turn.
 
     const ICardFactory& m_factory; ///< Reference to the card creation system.
 

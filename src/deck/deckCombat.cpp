@@ -1,6 +1,5 @@
 #include "deckCombat.h"
 #include "cards/cardDefinition.h"
-#include "cards/cardInstance.h"
 #include "deckEntry.h"
 #include "deckPlayer.h"
 #include "factories/ICardFactory.h"
@@ -57,9 +56,16 @@ DrawResult DeckCombat::drawCard()
 
     if (m_drawPile.empty())
     {
-        DEBUG_LOG("The deck is empty: no more cards to drawn. Regenerating deck from discard pile");
-        regenerateDeck();
-        drawResult.reshuffled = true;
+        if (!m_discardPile.empty())
+        {
+            DEBUG_LOG("The deck is empty. Regenerating deck from discard pile");
+            regenerateDeck();
+            drawResult.reshuffled = true;
+        }
+        else
+        {
+            DEBUG_LOG("The deck and the discard pile are empty: no more card to drawn");
+        }
     }
     if (!m_drawPile.empty())
     {
@@ -68,11 +74,6 @@ DrawResult DeckCombat::drawCard()
         DEBUG_LOG("Drawn " << m_handPile.back()->getCardDefinition().getID()
                            << " from the deck, placed in the handPile.");
         drawResult.cardDrawn = m_handPile.back().get();
-    }
-    else
-    {
-
-        DEBUG_LOG("The deck and the discard pile are empty: no more cards to drawn");
     }
 
     return drawResult;
@@ -100,8 +101,8 @@ void DeckCombat::discard(std::unique_ptr<CardInstance> Card)
     {
         return;
     }
-    DEBUG_LOG("Moved the exhausted card to the discard pile");
-    m_discardPile.emplace_back(std::move(Card));
+    DEBUG_LOG("Moved the used card to the played card pile");
+    m_turnPlayedPile.emplace_back(std::move(Card));
 }
 
 void DeckCombat::discardFromHand(int handIndex)
@@ -112,19 +113,33 @@ void DeckCombat::discardFromHand(int handIndex)
     }
     else
     {
-        m_discardPile.emplace_back(std::move(m_handPile.at(handIndex)));
+        m_turnPlayedPile.emplace_back(std::move(m_handPile.at(handIndex)));
         m_handPile.erase(m_handPile.begin() + handIndex);
-        DEBUG_LOG("Discarded " << m_discardPile.back()->getCardDefinition().getID()
+        DEBUG_LOG("Discarded " << m_turnPlayedPile.back()->getCardDefinition().getID()
                                << " from the handPile, and placed in the discardPile.");
     }
 }
 
-void DeckCombat::discardWholeHand()
+void DeckCombat::discardHandEndTurn()
 {
-    m_discardPile.insert(m_discardPile.end(), std::make_move_iterator(m_handPile.begin()),
-                         std::make_move_iterator(m_handPile.end()));
-    m_handPile.clear();
-    DEBUG_LOG("Discarding the whole hand");
+    if (!m_handPile.empty())
+    {
+        m_discardPile.insert(m_discardPile.end(), std::make_move_iterator(m_handPile.begin()),
+                             std::make_move_iterator(m_handPile.end()));
+        m_handPile.clear();
+        DEBUG_LOG("Discarding the whole hand");
+    }
+}
+
+void DeckCombat::movePlayedToDiscardEndTurn()
+{
+    if (!m_turnPlayedPile.empty())
+    {
+        m_discardPile.insert(m_discardPile.end(), std::make_move_iterator(m_turnPlayedPile.begin()),
+                             std::make_move_iterator(m_turnPlayedPile.end()));
+        m_turnPlayedPile.clear();
+        DEBUG_LOG("Exhausting the whole turnPlayedPile into discardPile (End of the Turn)");
+    }
 }
 
 std::vector<const CardInstance*> DeckCombat::getHandView() const
@@ -146,8 +161,8 @@ void DeckCombat::regenerateDeck()
 {
     if (m_drawPile.empty() && !m_discardPile.empty())
     {
-        m_drawPile = std::move(m_discardPile);
-        m_discardPile.clear();
+        std::swap(m_discardPile, m_drawPile);
         shuffle();
+        DEBUG_LOG("Regenerated deck and shuffled");
     }
 }

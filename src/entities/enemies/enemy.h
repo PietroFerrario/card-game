@@ -2,6 +2,7 @@
 #define ENEMY_H
 
 #include "enemyMove.h"
+#include "entities/enemies/enemyId.h"
 #include "entities/entity.h"
 
 #include <vector>
@@ -41,6 +42,7 @@ class Enemy : public Entity
     Enemy(int hp);
     std::vector<EnemyMove> m_moves{};
     int m_moveIndex{0};
+    EnemyId m_id;
 };
 
 #endif // ENEMY_H
