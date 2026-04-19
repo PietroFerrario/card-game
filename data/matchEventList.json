@@ -1,0 +1,32 @@
+{
+    "matchList": [
+        {
+            "enemyId": "Bandit",
+            "reward": [
+                {
+                    "cardId": "Farmer"
+                },
+                {
+                    "cardId": "Provvision"
+                },
+                {
+                    "cardId": "Horses"
+                }
+            ]
+        },
+        {
+            "enemyId": "Monster",
+            "reward": [
+                {
+                    "cardId": "InexGuard"
+                },
+                {
+                    "cardId": "Provvision"
+                },
+                {
+                    "cardId": "InexArcher"
+                }
+            ]
+        }
+    ]
+}

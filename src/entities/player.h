@@ -54,8 +54,13 @@ class Player : public Entity
      */
     DeckPlayer& getDeckPlayer() { return m_deckPlayer; }
 
+    void increaseMoney(int amount);
+    void decreaseMoney(int amount);
+
   private:
     DeckPlayer m_deckPlayer;
+    int m_money;
+    int m_peopleInTheCaravan;
 };
 
 #endif

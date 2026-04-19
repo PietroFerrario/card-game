@@ -44,7 +44,7 @@ target_sources(cardgame_core PRIVATE
 
     src/game_events/matchEvent.cpp
 
-    src/game_system/evenSequence.cpp
+    src/game_system/eventSequence.cpp
     src/game_system/cardMatch.cpp
     src/game_system/game.cpp
 

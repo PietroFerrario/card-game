@@ -4,7 +4,8 @@
 enum class EnemyId
 {
     PackOfWolves,
-    Bandits
+    Bandits,
+    Monster
 };
 
 #endif // ENEMYID_H
