@@ -8,7 +8,17 @@ enum class RewardEffectType
 {
     AddCard,
     AddMoney,
-    UpgradeCard
+    UpgradeCard,
+    RegisterQuest
+};
+
+enum class UpgradeCardParam
+{
+    None,
+    Attack,
+    Armor,
+    Action,
+    Drawing,
 };
 
 struct RewardEffectData
@@ -17,7 +27,7 @@ struct RewardEffectData
     int amount{0};
     std::string cardId;
     std::string targetCardId;
-    CardParams cardParams;
+    UpgradeCardParam upgradeCardParam{UpgradeCardParam::None};
 };
 
 #endif // REWARDEFFECTDATA_H

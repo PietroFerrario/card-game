@@ -1,0 +1,32 @@
+{
+    "rewardsList": [
+        {
+            "id": "banditFirst",
+            "rewardType": "equip",
+            "description": "Blablabla",
+            "effect": {
+                "effectType": "upgradeCard",
+                "amount": 1,
+                "cardId": "farmer",
+                "upgradeCardParams": [
+                    "attack",
+                    "armor"
+                ]
+            }
+        }
+    ]
+}
+        {
+    "id": "banditFirst",
+    "type": "economic",
+    "description": "BleBleBle",
+    "effect": "gainMoney"
+},
+{
+    "id": "banditFirst",
+    "type": "gainCard",
+    "description": "BluBluBlu",
+    "effect": "gainCard",
+}
+]
+}

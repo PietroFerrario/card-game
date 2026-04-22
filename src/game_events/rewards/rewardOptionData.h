@@ -16,6 +16,7 @@ enum class RewardOptionType
 
 struct RewardOptionData
 {
+    std::string rewardId;
     RewardOptionType rewardOptionType;
     std::string description;
     RewardEffectData rewardEffectData;
