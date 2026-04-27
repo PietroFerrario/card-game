@@ -13,20 +13,18 @@
                     "armor"
                 ]
             }
+        },
+        {
+            "id": "banditFirst",
+            "type": "economic",
+            "description": "BleBleBle",
+            "effect": "gainMoney"
+        },
+        {
+            "id": "banditFirst",
+            "type": "gainCard",
+            "description": "BluBluBlu",
+            "effect": "gainCard"
         }
     ]
-}
-        {
-    "id": "banditFirst",
-    "type": "economic",
-    "description": "BleBleBle",
-    "effect": "gainMoney"
-},
-{
-    "id": "banditFirst",
-    "type": "gainCard",
-    "description": "BluBluBlu",
-    "effect": "gainCard",
-}
-]
 }

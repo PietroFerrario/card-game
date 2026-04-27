@@ -3,18 +3,29 @@
 
 #include "factories/rewardEffectFactory.h"
 #include "rewardEffect.h"
-#include "rewardOptionData.h"
 
+#include <memory>
 #include <string>
+
+enum class RewardOptionType
+{
+    Equip,
+    Quest,
+    Economic,
+    GainCard
+};
 
 class RewardOption
 {
   public:
+    RewardOption(std::string_view rewardOptionId, RewardOptionType rewardOptionType,
+                 std::string_view description, std::unique_ptr<RewardEffect> = nullptr);
+
   private:
     std::string m_rewardOptionId;
     RewardOptionType m_rewardOptionType;
     std::string m_description;
-    RewardEffectFactory m_rewardEffectFactory;
+    std::unique_ptr<RewardEffect> m_rewardEffect;
 };
 
 #endif // REWARDOPTION_H

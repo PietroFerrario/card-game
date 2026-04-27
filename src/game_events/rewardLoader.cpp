@@ -19,18 +19,14 @@ std::vector<RewardOption> RewardLoader::parseRewardsList()
 
     for (const auto& rewardData : rewardList)
     {
-        RewardOptionData rewardOptionData{std::move(loadRewardData(rewardData))};
-
-        // Construct the RewardOption now with the factory!
-    }
-}
-
-RewardOptionData RewardLoader::loadRewardData(const json& rewardData)
-{
-    return {rewardData.at("id").get_ref<const std::string&>(),
+        rewardOptionList.emplace_back(
+            rewardData.at("id").get_ref<const std::string&>(),
             m_rewardOptionTypeMap.at(rewardData.at("rewardType").get_ref<const std::string&>()),
             rewardData.at("description").get_ref<const std::string&>(),
-            loadRewardEffectData(rewardData.at("effect"))};
+            m_rewardEffectFactory.makeRewardEffect(loadRewardEffectData(rewardData.at("effect"))));
+    }
+
+    return rewardOptionList;
 }
 
 RewardEffectData RewardLoader::loadRewardEffectData(const json& effectData)

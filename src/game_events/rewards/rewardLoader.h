@@ -2,8 +2,8 @@
 #define REWARDLOADER_H
 
 #include "rewardEffectData.h"
+#include "rewardEffectFactory.h"
 #include "rewardOption.h"
-#include "rewardOptionData.h"
 
 #include <nlohmann/json.hpp>
 #include <unordered_map>
@@ -13,14 +13,14 @@ class RewardLoader
 {
   public:
     RewardLoader();
-    std::vector<RewardOption> RewardLoader::parseRewardsList();
+    std::vector<RewardOption> parseRewardsList();
 
   private:
     nlohmann::json m_data{};
+    RewardEffectFactory m_rewardEffectFactory;
 
-    RewardOptionData loadRewardData(const json& reward);
-    RewardEffectData loadRewardEffectData(const json& effectData);
-    std::vector<UpgradeCardParam> loadUpgradeCardParams(const json& cardParams) {}
+    RewardEffectData loadRewardEffectData(const nlohmann::json& effectData);
+    std::vector<UpgradeCardParam> loadUpgradeCardParams(const nlohmann::json& cardParams);
 
     inline static const std::unordered_map<std::string_view, RewardOptionType>
         m_rewardOptionTypeMap{{"equip", RewardOptionType::Equip},
@@ -30,15 +30,15 @@ class RewardLoader
 
     inline static const std::unordered_map<std::string_view, RewardEffectType>
         m_rewardEffectTypeMap{
-            {"addCard", RewardEffectType::AddCard},
-            {"addMoney", RewardEffectType::AddMoney},
+            {"gainCard", RewardEffectType::GainCard},
+            {"gainMoney", RewardEffectType::GainMoney},
             {"upgradeCard", RewardEffectType::UpgradeCard},
+            {"cardChoice", RewardEffectType::ChooseCards},
             {"registerQuest", RewardEffectType::RegisterQuest},
         };
 
     inline static const std::unordered_map<std::string_view, UpgradeCardParam>
-        m_upgradeCardParamMap{{"", UpgradeCardParam::None},
-                              {"attack", UpgradeCardParam::Attack},
+        m_upgradeCardParamMap{{"attack", UpgradeCardParam::Attack},
                               {"armor", UpgradeCardParam::Armor},
                               {"action", UpgradeCardParam::Action},
                               {"drawing", UpgradeCardParam::Drawing}};

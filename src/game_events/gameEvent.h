@@ -1,6 +1,8 @@
 #ifndef GAMEEVENT_H
 #define GAMEEVENT_H
 
+#include "rewards/rewardPhase.h"
+
 class GameEvent
 {
   public:
@@ -8,6 +10,7 @@ class GameEvent
     virtual void resolve() = 0;
 
   private:
+    RewardPhase m_rewardPhase;
 };
 
 #endif // GAMEEVENT_H
