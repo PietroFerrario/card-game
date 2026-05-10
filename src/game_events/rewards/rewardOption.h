@@ -2,7 +2,7 @@
 #define REWARDOPTION_H
 
 #include "factories/rewardEffectFactory.h"
-#include "rewardEffect.h"
+#include "reward_effects/rewardEffect.h"
 
 #include <memory>
 #include <string>

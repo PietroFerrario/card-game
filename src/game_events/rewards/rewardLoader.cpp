@@ -11,11 +11,11 @@ RewardLoader::RewardLoader()
     m_data = json::parse(f);
 }
 
-std::vector<RewardOption> RewardLoader::parseRewardsList()
+std::vector<RewardOption> RewardLoader::parseRewardsList(std::string_view rewardListName)
 {
     std::vector<RewardOption> rewardOptionList;
 
-    const json& rewardList = m_data.at("rewardsList");
+    const json& rewardList = m_data.at(rewardListName);
 
     for (const auto& rewardData : rewardList)
     {

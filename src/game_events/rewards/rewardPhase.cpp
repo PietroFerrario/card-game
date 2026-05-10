@@ -1,6 +1,6 @@
 #include "rewardPhase.h"
 
-explicit RewardPhase::RewardPhase(std::vector<RewardOption> rewardOptionList)
-    : m_rewardOptionList(std::move(rewardOptionList))
+RewardPhase::RewardPhase(IRewardView& rewardView, std::vector<RewardOption>& rewardOptionList)
+    : m_RewardView{rewardView}, m_rewardOptionList(rewardOptionList)
 {
 }

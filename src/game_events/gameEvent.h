@@ -10,7 +10,6 @@ class GameEvent
     virtual void resolve() = 0;
 
   private:
-    RewardPhase m_rewardPhase;
 };
 
 #endif // GAMEEVENT_H

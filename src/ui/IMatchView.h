@@ -1,6 +1,8 @@
 #ifndef IMATCHVIEW_H
 #define IMATCHVIEW_H
 
+#include "game_system/matchData.h"
+
 #include <string>
 #include <string_view>
 #include <vector>

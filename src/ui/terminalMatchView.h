@@ -2,8 +2,13 @@
 #define TERMINALMATCHVIEW_H
 
 #include "IMatchView.h"
+#include "game_system/matchData.h"
 #include "handRenderer.h"
 #include "iotext.h"
+
+#include <string>
+#include <string_view>
+#include <vector>
 
 enum class AnsiColor
 {
@@ -38,10 +43,6 @@ class TerminalMatchView : public IMatchView
     void showEndOfMatch(const MatchData& matchData) const override;
     void showStartOfMatch(std::string_view enemyName) const override;
     void showDrawCards(const DrawData& drawData) const override;
-
-    // void showRewardText(std::string_view enemyName) const override;
-    // RewardDecision askPlayerReward(int limit) override;
-    // void showReward(std::string_view cardSelected) const override;
 
   private:
     IOText& m_io;

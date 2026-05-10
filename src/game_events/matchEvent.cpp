@@ -1,11 +1,13 @@
 #include "matchEvent.h"
 #include "cards/cardDefinition.h"
+#include "game_events/rewards/rewardPhase.h"
 #include "game_system/cardmatch.h"
 #include "util/debug.h"
 
-MatchEvent::MatchEvent(IMatchView& matchView, Player& player, EnemyId enemyId,
-                       const std::vector<DeckEntry> rewardCardList)
-    : m_matchView{matchView}, m_enemyId{enemyId}, m_player{player}
+MatchEvent::MatchEvent(IMatchView& matchView, IRewardView& rewardView, Player& player,
+                       EnemyId enemyId, std::vector<RewardOption> rewardOptionList)
+    : m_matchView{matchView}, m_rewardView{rewardView}, m_enemyId{enemyId}, m_player{player},
+      m_rewardOptionList{std::move(rewardOptionList)}
 {
 }
 
@@ -20,7 +22,7 @@ void MatchEvent::resolve()
 
         if (matchResult.matchState == MatchState::PlayerWon)
         {
-            rewardPhase();
+            RewardPhase{m_rewardView, m_rewardOptionList};
         }
         else if (matchResult.matchState == MatchState::EnemyWon)
         {

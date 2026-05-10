@@ -4,8 +4,8 @@
 #include <nlohmann/json.hpp>
 #include <unordered_map>
 
-#include "rewardEffect.h"
-#include "rewardEffectData.h"
+#include "game_events/rewards/reward_effects/rewardEffect.h"
+#include "game_events/rewards/reward_effects/rewardEffectData.h"
 
 class RewardEffectFactory
 {

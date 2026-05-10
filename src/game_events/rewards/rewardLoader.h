@@ -13,7 +13,7 @@ class RewardLoader
 {
   public:
     RewardLoader();
-    std::vector<RewardOption> parseRewardsList();
+    std::vector<RewardOption> parseRewardsList(std::string_view rewardListName);
 
   private:
     nlohmann::json m_data{};
