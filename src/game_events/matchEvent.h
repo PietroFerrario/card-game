@@ -13,8 +13,7 @@
 class MatchEvent : public GameEvent
 {
   public:
-    MatchEvent(IMatchView& matchView, Player& player, EnemyId enemyId,
-               const std::vector<DeckEntry> rewardCardList);
+    MatchEvent(IMatchView& matchView, Player& player, EnemyId enemyId);
 
     void resolve() override;
 

@@ -5,7 +5,7 @@
 
 MatchEvent::MatchEvent(IMatchView& matchView, Player& player, EnemyId enemyId,
                        const std::vector<DeckEntry> rewardCardList)
-    : m_matchView{matchView}, m_enemyId{enemyId}, m_player{player}, m_rewardCardList{rewardCardList}
+    : m_matchView{matchView}, m_enemyId{enemyId}, m_player{player}
 {
 }
 
