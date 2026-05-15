@@ -51,7 +51,7 @@ enum class RewardChoice
 struct RewardDecision
 {
     RewardChoice playerChoice{RewardChoice::SkipReward};
-    std::optional<int> selectedCard;
+    std::optional<int> selectedOption;
 };
 
 #endif // MATCHDATA_H

@@ -4,6 +4,7 @@
 #include "cardRenderer.h"
 
 #include <memory>
+#include <optional>
 #include <vector>
 
 class CardInstance;

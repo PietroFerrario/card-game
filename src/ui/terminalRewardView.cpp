@@ -6,9 +6,9 @@ void TerminalRewardView::showDivisor() const
     m_io.println(str);
 }
 
-void TerminalRewardView::showDivisor() const
+void TerminalRewardView::showRewardPhaseDivisor() const
 {
-    std::string str((m_mainWidth), '-');
+    std::string str((m_mainWidth), '=');
     m_io.println(str);
 }
 
@@ -18,39 +18,69 @@ void TerminalRewardView::showFancyDivisor() const
     m_io.println(color(AnsiColor::Yellow, str));
 }
 
+void TerminalRewardView::showRewardOptions(
+    const std::vector<RewardOption>& rewardListToRender) const
+{
+    m_io.printRewardsList(m_rewardsRenderer.renderRewards(rewardListToRender));
+}
+
 void TerminalRewardView::showRewardText(std::string_view enemyName) const
 {
-    showMatchDivisor();
+    showRewardPhaseDivisor();
     m_io.println(
-        std::format("{:^{}}", std::format("Reward for defeating {}!", enemyName), m_mainWidth));
-    m_io.println(std::format(
-        "{:^{}}", std::format("You can select one of the fellowing cards to add to your deck:"),
-        m_mainWidth));
-    showMatchDivisor();
+        std::format("{:^{}}", std::format("Rewards for defeating {}!", enemyName), m_mainWidth));
+    m_io.println(std::format("{:^{}}", std::format("Only one can be claimed."), m_mainWidth));
+    showRewardPhaseDivisor();
 }
 
 RewardDecision TerminalRewardView::askPlayerReward(int limit)
 {
     RewardDecision decision;
-    int selectedCardIndex{
-        m_io.promptInt("Select a card as a reward or press (0) for skipping the reward:", limit) -
-        1};
-    if (selectedCardIndex < 0)
+    int selectedOptionIndex{
+        m_io.promptInt("Select a reward or press (0) for skipping the reward:", limit) - 1};
+    if (selectedOptionIndex < 0)
     {
         decision.playerChoice = RewardChoice::SkipReward;
     }
     else
     {
         decision.playerChoice = RewardChoice::SelectReward;
-        decision.selectedCard = selectedCardIndex;
+        decision.selectedOption = selectedOptionIndex;
     }
     return decision;
 }
 
-void TerminalRewardView::showReward(std::string_view cardSelected) const
+void TerminalRewardView::showSelectedReward(std::string_view rewardNameSelected) const
 {
     showFancyDivisor();
-    m_io.println(
-        std::format("You selected {} as a reward. He's joining your ranks!", cardSelected));
+    m_io.println(std::format("You selected {} as a reward.", rewardNameSelected));
     showFancyDivisor();
+}
+
+std::string TerminalRewardView::color(AnsiColor color, const std::string& text)
+{
+    if (color == AnsiColor::None)
+        return text;
+    return std::string(colorCode(color)) + text + "\033[0m";
+}
+
+constexpr const char* TerminalRewardView::colorCode(AnsiColor color)
+{
+    switch (color)
+    {
+    case AnsiColor::Red:
+    {
+        return "\033[31m";
+    }
+    case AnsiColor::Green:
+    {
+        return "\033[32m";
+    }
+    case AnsiColor::Yellow:
+    {
+        return "\033[33m";
+    }
+    default:
+        return "";
+    }
 }

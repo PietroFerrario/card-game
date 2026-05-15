@@ -4,15 +4,26 @@
             "id": "banditFirst",
             "rewardType": "equip",
             "description": "Blablabla",
-            "effect": {
-                "effectType": "upgradeCard",
-                "amount": 1,
-                "cardId": "farmer",
-                "upgradeCardParams": [
-                    "attack",
-                    "armor"
-                ]
-            }
+            "effectList": [
+                {
+                    "effectType": "upgradeCard",
+                    "amount": 1,
+                    "cardId": "farmer",
+                    "upgradeCardParams": [
+                        "attack",
+                        "armor"
+                    ]
+                },
+                {
+                    "effectType": "upgradeCard",
+                    "amount": 1,
+                    "cardId": "warrior",
+                    "upgradeCardParams": [
+                        "attack",
+                        "armor"
+                    ]
+                }
+            ]
         },
         {
             "id": "banditFirst",

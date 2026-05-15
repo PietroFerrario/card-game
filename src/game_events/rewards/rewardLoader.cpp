@@ -23,10 +23,23 @@ std::vector<RewardOption> RewardLoader::parseRewardsList(std::string_view reward
             rewardData.at("id").get_ref<const std::string&>(),
             m_rewardOptionTypeMap.at(rewardData.at("rewardType").get_ref<const std::string&>()),
             rewardData.at("description").get_ref<const std::string&>(),
-            m_rewardEffectFactory.makeRewardEffect(loadRewardEffectData(rewardData.at("effect"))));
+            makeRewardEffectList(rewardData));
     }
 
     return rewardOptionList;
+}
+
+std::vector<std::unique_ptr<RewardEffect>>
+RewardLoader::makeRewardEffectList(const json& rewardData)
+{
+    std::vector<std::unique_ptr<RewardEffect>> effectList;
+    for (const auto& effect : rewardData.at("effectList"))
+    {
+        effectList.emplace_back(
+            m_rewardEffectFactory.makeRewardEffect(loadRewardEffectData(effect)));
+    }
+
+    return effectList;
 }
 
 RewardEffectData RewardLoader::loadRewardEffectData(const json& effectData)

@@ -20,6 +20,7 @@ class RewardLoader
     RewardEffectFactory m_rewardEffectFactory;
 
     RewardEffectData loadRewardEffectData(const nlohmann::json& effectData);
+    std::vector<std::unique_ptr<RewardEffect>> makeRewardEffectList(const json& effectData);
     std::vector<UpgradeCardParam> loadUpgradeCardParams(const nlohmann::json& cardParams);
 
     inline static const std::unordered_map<std::string_view, RewardOptionType>

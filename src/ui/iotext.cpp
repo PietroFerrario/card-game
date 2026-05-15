@@ -1,5 +1,6 @@
 #include "iotext.h"
 #include "handRenderer.h"
+#include "rewardsRenderer.h"
 
 void IOText::println(std::string_view msg) { m_out << msg << "\n"; }
 
@@ -69,6 +70,26 @@ void IOText::printHand(const RenderedHand& handToPrint)
     {
         print("\n");
         for (const auto& line : *handToPrint.secondRow)
+        {
+            println(line);
+        }
+    }
+}
+
+void IOText::printRewardsList(const RenderedRewards& optionsToPrint)
+{
+    if (optionsToPrint.firstRow.has_value())
+    {
+        for (const auto& line : *optionsToPrint.firstRow)
+        {
+            println(line);
+        }
+    }
+
+    if (optionsToPrint.secondRow.has_value())
+    {
+        print("\n");
+        for (const auto& line : *optionsToPrint.secondRow)
         {
             println(line);
         }

@@ -2,6 +2,7 @@
 #include "cards/cardDefinition.h"
 #include "game_events/rewards/rewardPhase.h"
 #include "game_system/cardmatch.h"
+#include "rewards/rewardPhase.h"
 #include "util/debug.h"
 
 MatchEvent::MatchEvent(IMatchView& matchView, IRewardView& rewardView, Player& player,
@@ -22,7 +23,8 @@ void MatchEvent::resolve()
 
         if (matchResult.matchState == MatchState::PlayerWon)
         {
-            RewardPhase{m_rewardView, m_rewardOptionList};
+            RewardPhase rewardPhase{m_rewardView, m_player, m_rewardOptionList};
+            rewardPhase.execute();
         }
         else if (matchResult.matchState == MatchState::EnemyWon)
         {

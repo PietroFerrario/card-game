@@ -20,11 +20,10 @@ class MatchEvent : public GameEvent
 
     void resolve() override;
 
-    void rewardPhase();
-
   private:
     IMatchView& m_matchView;
     IRewardView& m_rewardView;
+
     EnemyId m_enemyId;
     std::string m_enemyName{};
     Player& m_player;

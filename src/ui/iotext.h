@@ -7,6 +7,7 @@
 #include <vector>
 
 class RenderedHand;
+class RenderedRewards;
 
 /**
  * @brief Text-based input/output interface for terminal interaction.
@@ -61,6 +62,8 @@ class IOText
      * @param handToPrint Rendered hand structure to print.
      */
     void printHand(const RenderedHand& handToPrint);
+
+    void printRewardsList(const RenderedRewards& optionsToPrint);
 
   private:
     std::ostream& m_out; ///< Output stream used for printing.
