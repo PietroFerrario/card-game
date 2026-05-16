@@ -23,7 +23,7 @@ void MatchEvent::resolve()
 
         if (matchResult.matchState == MatchState::PlayerWon)
         {
-            RewardPhase rewardPhase{m_rewardView, m_player, m_rewardOptionList};
+            RewardPhase rewardPhase{m_rewardView, m_player, m_enemyName, m_rewardOptionList};
             rewardPhase.execute();
         }
         else if (matchResult.matchState == MatchState::EnemyWon)

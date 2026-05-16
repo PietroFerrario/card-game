@@ -10,7 +10,7 @@
 class RewardEffectFactory
 {
   public:
-    RewardEffectFactory();
+    RewardEffectFactory() = default;
 
     std::unique_ptr<RewardEffect> makeRewardEffect(const RewardEffectData& rewardEffectData);
 

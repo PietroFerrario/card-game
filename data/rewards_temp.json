@@ -1,0 +1,51 @@
+{
+    "rewardLists": [
+        {
+            "rewardListId": "banditFirst",
+            "rewards": [
+                {
+                    "rewardType": "economic",
+                    "description": "Getting some money!",
+                    "effectList": [
+                        {
+                            "effectType": "gainMoney",
+                            "amount": 2,
+                            "cardId": "",
+                            "upgradeCardParams": []
+                        },
+                        {
+                            "effectType": "gainMoney",
+                            "amount": 2,
+                            "cardId": "",
+                            "upgradeCardParams": []
+                        }
+                    ]
+                },
+                {
+                    "rewardType": "economic",
+                    "description": "Getting some money!",
+                    "effectList": [
+                        {
+                            "effectType": "gainMoney",
+                            "amount": 5,
+                            "cardId": "",
+                            "upgradeCardParams": []
+                        }
+                    ]
+                },
+                {
+                    "rewardType": "economic",
+                    "description": "Getting some money!",
+                    "effectList": [
+                        {
+                            "effectType": "gainMoney",
+                            "amount": 7,
+                            "cardId": "",
+                            "upgradeCardParams": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

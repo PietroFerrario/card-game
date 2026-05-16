@@ -11,19 +11,26 @@ RewardLoader::RewardLoader()
     m_data = json::parse(f);
 }
 
-std::vector<RewardOption> RewardLoader::parseRewardsList(std::string_view rewardListName)
+std::vector<RewardOption> RewardLoader::parseRewardsList(std::string_view rewardListId)
 {
     std::vector<RewardOption> rewardOptionList;
 
-    const json& rewardList = m_data.at(rewardListName);
+    const json& rewardLists = m_data.at("rewardLists");
 
-    for (const auto& rewardData : rewardList)
+    for (const auto& rewardList : rewardLists)
     {
-        rewardOptionList.emplace_back(
-            rewardData.at("id").get_ref<const std::string&>(),
-            m_rewardOptionTypeMap.at(rewardData.at("rewardType").get_ref<const std::string&>()),
-            rewardData.at("description").get_ref<const std::string&>(),
-            makeRewardEffectList(rewardData));
+        if (rewardList.at("rewardListId").get_ref<const std::string&>() == rewardListId)
+        {
+            for (const auto& rewardData : rewardList.at("rewards"))
+            {
+                rewardOptionList.emplace_back(
+                    rewardListId,
+                    m_rewardOptionTypeMap.at(
+                        rewardData.at("rewardType").get_ref<const std::string&>()),
+                    rewardData.at("description").get_ref<const std::string&>(),
+                    makeRewardEffectList(rewardData));
+            }
+        }
     }
 
     return rewardOptionList;
@@ -47,7 +54,6 @@ RewardEffectData RewardLoader::loadRewardEffectData(const json& effectData)
     return {m_rewardEffectTypeMap.at(effectData.at("effectType").get_ref<const std::string&>()),
             effectData.at("amount").get<int>(),
             effectData.at("cardId").get_ref<const std::string&>(),
-            effectData.at("targetCardId").get_ref<const std::string&>(),
             loadUpgradeCardParams(effectData.at("upgradeCardParams"))};
 }
 

@@ -1,0 +1,8 @@
+{
+    "matchList": [
+        {
+            "enemyId": "bandits",
+            "rewardListId": "banditFirst"
+        }
+    ]
+}

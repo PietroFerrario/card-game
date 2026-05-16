@@ -2,7 +2,7 @@
 #define REWARDOPTIONRENDERER_H
 
 #include "cardRenderer.h"
-#include "rewards/rewardOption.h"
+#include "game_events/rewards/rewardOption.h"
 
 #include <string>
 

@@ -1,9 +1,9 @@
 #ifndef REWARDLOADER_H
 #define REWARDLOADER_H
 
-#include "rewardEffectData.h"
-#include "rewardEffectFactory.h"
+#include "factories/rewardEffectFactory.h"
 #include "rewardOption.h"
+#include "reward_effects/rewardEffectData.h"
 
 #include <nlohmann/json.hpp>
 #include <unordered_map>
@@ -20,7 +20,8 @@ class RewardLoader
     RewardEffectFactory m_rewardEffectFactory;
 
     RewardEffectData loadRewardEffectData(const nlohmann::json& effectData);
-    std::vector<std::unique_ptr<RewardEffect>> makeRewardEffectList(const json& effectData);
+    std::vector<std::unique_ptr<RewardEffect>>
+    makeRewardEffectList(const nlohmann::json& effectData);
     std::vector<UpgradeCardParam> loadUpgradeCardParams(const nlohmann::json& cardParams);
 
     inline static const std::unordered_map<std::string_view, RewardOptionType>

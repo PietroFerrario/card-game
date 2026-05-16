@@ -22,13 +22,7 @@ std::vector<MatchEventData> MatchEventLoader::loadMatches()
     {
         MatchEventData match;
         match.enemyId = m_enemyIdMap.at(entry.at("enemyId").get_ref<const std::string&>());
-        std::vector<DeckEntry> reward;
-        for (const auto& singleReward : entry.at("reward"))
-        {
-            DeckEntry card{singleReward.at("cardId").get<std::string>(), 1};
-            reward.emplace_back(card);
-        }
-        match.rewardCardsList = reward;
+        match.rewardListId = matchList.at("rewardListId").get_ref<const std::string&>();
 
         matchEventDataList.emplace_back(match);
     }

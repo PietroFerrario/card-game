@@ -9,6 +9,7 @@
                     "effectType": "upgradeCard",
                     "amount": 1,
                     "cardId": "farmer",
+                    "targetCardId": "",
                     "upgradeCardParams": [
                         "attack",
                         "armor"
@@ -18,6 +19,7 @@
                     "effectType": "upgradeCard",
                     "amount": 1,
                     "cardId": "warrior",
+                    "targetCardId": "",
                     "upgradeCardParams": [
                         "attack",
                         "armor"

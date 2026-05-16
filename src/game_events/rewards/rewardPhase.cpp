@@ -2,15 +2,17 @@
 
 #include "util/debug.h"
 
-RewardPhase::RewardPhase(IRewardView& rewardView, Player& player,
+RewardPhase::RewardPhase(IRewardView& rewardView, Player& player, std::string_view enemyName,
                          std::vector<RewardOption>& rewardOptionList)
-    : m_rewardView{rewardView}, m_player{player}, m_rewardOptionList{rewardOptionList}
+    : m_rewardView{rewardView}, m_player{player}, m_enemyName{enemyName},
+      m_rewardOptionList{rewardOptionList}
 {
 }
 
 void RewardPhase::execute()
 {
     DEBUG_LOG("Entering reward Phase");
+    m_rewardView.showRewardText(m_enemyName);
     showRewardOptions();
 
     RewardDecision decision{

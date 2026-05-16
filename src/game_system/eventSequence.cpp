@@ -2,12 +2,15 @@
 #include "entities/enemies/enemyId.h"
 #include "game_events/matchEvent.h"
 
-EventSequence::EventSequence(Player& player) : m_player{player} {}
+EventSequence::EventSequence(IMatchView& matchView, IRewardView& rewardView, Player& player)
+    : m_matchView{matchView}, m_rewardView{rewardView}, m_player{player}
+{
+}
 
 void EventSequence::resolveEventSequence()
 {
-    for (auto& event : m_eventList)
+    for (auto& eventPtr : m_eventList)
     {
-        event.resolve();
+        eventPtr->resolve();
     }
 }

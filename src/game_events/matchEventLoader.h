@@ -2,7 +2,7 @@
 #define MATCHEVENTLOADER_H
 
 #include "deck/deckEntry.h"
-#include "enemies/enemyId.h"
+#include "entities/enemies/enemyId.h"
 #include "game_events/matchEventData.h"
 
 #include <nlohmann/json.hpp>
