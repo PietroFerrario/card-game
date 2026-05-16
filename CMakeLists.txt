@@ -101,3 +101,6 @@ target_link_libraries(sandbox_hand_print PRIVATE cardgame_core)
 
 add_executable(sandbox_turn_loop sandbox/matchLoopTest.cpp)
 target_link_libraries(sandbox_turn_loop PRIVATE cardgame_core)
+
+add_executable(sandbox_event_sequence sandbox/eventSequenceTest.cpp)
+target_link_libraries(sandbox_event_sequence PRIVATE cardgame_core)

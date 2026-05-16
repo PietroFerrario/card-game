@@ -1,5 +1,6 @@
 #include "deckLoader.h"
 
+#include <cassert>
 #include <fstream>
 
 using json = nlohmann::json;
@@ -7,6 +8,7 @@ using json = nlohmann::json;
 DeckLoader::DeckLoader()
 {
     std::ifstream f("data/decks.json");
+    assert(f.is_open() && "Failed to open decks json");
     m_data = json::parse(f);
 }
 

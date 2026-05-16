@@ -1,13 +1,15 @@
 #include "matchEventLoader.h"
 #include "gameEvent.h"
 
+#include <cassert>
 #include <fstream>
 
 using json = nlohmann::json;
 
 MatchEventLoader::MatchEventLoader()
 {
-    std::ifstream f("data/matches.json");
+    std::ifstream f("data/matchList.json");
+    assert(f.is_open() && "Failed to open matches json");
     m_data = json::parse(f);
 }
 

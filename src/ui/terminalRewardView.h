@@ -15,8 +15,11 @@ Need to merge the view at a certain point and refactor them unifying and avoidin
 class TerminalRewardView : public IRewardView
 {
   public:
+    TerminalRewardView(IOText& io);
+
     void showRewardText(std::string_view enemyName) const override;
     RewardDecision askPlayerReward(int limit) override;
+    void showSkippingReward() const override;
     void showSelectedReward(std::string_view rewardNameSelected) const override;
 
     void showRewardOptions(const std::vector<RewardOption>& rewardListToRender) const override;

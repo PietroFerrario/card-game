@@ -64,8 +64,8 @@ class RewardOptionRenderer
     std::vector<std::string> drawDescriptionLayout(std::string_view rewardOptionDescription,
                                                    Slot currentSlot) const;
 
-    const int m_width{24};
-    const int m_height{14};
+    const int m_width{45};
+    const int m_height{8};
 
     const int m_nameWidth{16};
     const int m_nameColumn{m_width / 2 - m_nameWidth / 2};
@@ -81,10 +81,10 @@ class RewardOptionRenderer
 
     Slot m_effectsSumSlot{7, 3, 18, SlotAlignment::Center};
 
-    std::vector<Slot> m_descriptionSlots{{9, 2, m_width - 4, SlotAlignment::Left},
-                                         {10, 2, m_width - 4, SlotAlignment::Left},
-                                         {11, 2, m_width - 4, SlotAlignment::Left},
-                                         {12, 2, m_width - 4, SlotAlignment::Left}};
+    std::vector<Slot> m_descriptionSlots{{5, 2, m_width - 4, SlotAlignment::Left},
+                                         {6, 2, m_width - 4, SlotAlignment::Left},
+                                         {7, 2, m_width - 4, SlotAlignment::Left},
+                                         {8, 2, m_width - 4, SlotAlignment::Left}};
 };
 
 #endif // REWARDOPTIONRENDERER_H

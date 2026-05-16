@@ -27,7 +27,7 @@ class RewardsRenderer
   private:
     RewardOptionRenderer m_rewardOptionRenderer{};
 
-    std::string m_gap{"       "};
+    std::string m_gap{"          "};
     const int m_optionLabelWidth{4};
 };
 

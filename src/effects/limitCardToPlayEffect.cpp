@@ -1,5 +1,4 @@
 #include "limitCardToPlayEffect.h"
-#include "cards/cardDefinition.h"
 #include "cards/cardInstance.h"
 #include "combat/combatContext.h"
 #include "util/debug.h"

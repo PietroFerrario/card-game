@@ -2,6 +2,7 @@
 #include "cards/cardParams.h"
 
 #include "cardsLoader.h"
+#include <cassert>
 #include <fstream>
 
 using json = nlohmann::json;
@@ -9,6 +10,7 @@ using json = nlohmann::json;
 CardsLoader::CardsLoader()
 {
     std::ifstream f("data/cards.json");
+    assert(f.is_open() && "Failed to open cards json");
     m_data = json::parse(f);
 }
 

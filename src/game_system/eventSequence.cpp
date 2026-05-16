@@ -6,6 +6,7 @@
 EventSequence::EventSequence(IMatchView& matchView, IRewardView& rewardView, Player& player)
     : m_matchView{matchView}, m_rewardView{rewardView}, m_player{player}
 {
+    loadMatchEvents();
 }
 
 void EventSequence::loadMatchEvents()

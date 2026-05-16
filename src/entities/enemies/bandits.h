@@ -6,7 +6,7 @@
 class Bandits : public Enemy
 {
   public:
-    Bandits(int hp = 30);
+    Bandits(int hp = 1);
 
   private:
 };

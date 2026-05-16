@@ -8,7 +8,8 @@ using json = nlohmann::json;
 
 RewardLoader::RewardLoader()
 {
-    std::ifstream f("data/rewards.json");
+    std::ifstream f("data/rewards_temp.json");
+    assert(f.is_open() && "Failed to open rewards json");
     m_data = json::parse(f);
 }
 
@@ -33,7 +34,7 @@ std::vector<RewardOption> RewardLoader::loadRewardList(std::string_view rewardLi
             }
             break;
         }
-        }
+    }
 
     assert(!(rewardOptionList.empty()) && "RewardOptionList is empty, problem in loading it");
     return rewardOptionList;

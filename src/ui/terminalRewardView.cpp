@@ -1,5 +1,7 @@
 #include "terminalRewardView.h"
 
+TerminalRewardView::TerminalRewardView(IOText& io) : m_io{io} {}
+
 void TerminalRewardView::showDivisor() const
 {
     std::string str((m_mainWidth), '-');
@@ -48,6 +50,12 @@ RewardDecision TerminalRewardView::askPlayerReward(int limit)
         decision.selectedOption = selectedOptionIndex;
     }
     return decision;
+}
+
+void TerminalRewardView::showSkippingReward() const
+{
+    showFancyDivisor();
+    m_io.print("You skipped the reward!");
 }
 
 void TerminalRewardView::showSelectedReward(std::string_view rewardNameSelected) const
