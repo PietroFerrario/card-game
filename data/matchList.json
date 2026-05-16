@@ -3,6 +3,10 @@
         {
             "enemyId": "bandits",
             "rewardListId": "banditFirst"
+        },
+        {
+            "enemyId": "bandits",
+            "rewardListId": "banditSecond"
         }
     ]
 }

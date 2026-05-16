@@ -10,7 +10,6 @@ class GameEvent
     virtual void resolve() = 0;
 
   private:
-    void resolveReward();
 };
 
 #endif // GAMEEVENT_H

@@ -22,7 +22,7 @@ std::vector<MatchEventData> MatchEventLoader::loadMatches()
     {
         MatchEventData match;
         match.enemyId = m_enemyIdMap.at(entry.at("enemyId").get_ref<const std::string&>());
-        match.rewardListId = matchList.at("rewardListId").get_ref<const std::string&>();
+        match.rewardListId = entry.at("rewardListId").get_ref<const std::string&>();
 
         matchEventDataList.emplace_back(match);
     }

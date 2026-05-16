@@ -22,3 +22,24 @@ RewardEffectFactory::makeGainMoneyRewardEffect(const RewardEffectData& rewardEff
 {
     return std::make_unique<GainMoneyRewardEffect>(rewardEffectData.amount);
 }
+
+std::unique_ptr<RewardEffect>
+RewardEffectFactory::makeGainCardRewardEffect(const RewardEffectData& rewardEffectData)
+{
+    return nullptr;
+}
+std::unique_ptr<RewardEffect>
+RewardEffectFactory::makeUpgradeCardRewardEffect(const RewardEffectData& rewardEffectData)
+{
+    return nullptr;
+}
+std::unique_ptr<RewardEffect>
+RewardEffectFactory::makeChooseCardRewardEffect(const RewardEffectData& rewardEffectData)
+{
+    return nullptr;
+}
+std::unique_ptr<RewardEffect>
+RewardEffectFactory::makeRegisterQuestRewardEffect(const RewardEffectData& rewardEffectData)
+{
+    return nullptr;
+}

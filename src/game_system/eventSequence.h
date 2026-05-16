@@ -15,9 +15,14 @@ class EventSequence
 {
   public:
     EventSequence(IMatchView& IMatchView, IRewardView& rewardView, Player& player);
+
+    void loadMatchEvents();
+
     void resolveEventSequence();
 
   private:
+    void makeMatchEvents(const std::vector<MatchEventData>& list);
+
     IMatchView& m_matchView;
     IRewardView& m_rewardView;
 

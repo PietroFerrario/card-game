@@ -38,11 +38,18 @@ target_sources(cardgame_core PRIVATE
     src/factories/effectFactory.cpp
     src/factories/cardsLoader.cpp
     src/factories/enemyFactory.cpp
+    src/factories/rewardEffectFactory.cpp
 
     src/combat/combatContext.cpp
     src/combat/combatSystem.cpp
 
     src/game_events/matchEvent.cpp
+    src/game_events/matchEventLoader.cpp
+
+    src/game_events/rewards/rewardLoader.cpp
+    src/game_events/rewards/rewardOption.cpp
+    src/game_events/rewards/rewardPhase.cpp
+
 
     src/game_system/eventSequence.cpp
     src/game_system/cardMatch.cpp
@@ -53,6 +60,9 @@ target_sources(cardgame_core PRIVATE
     src/ui/cardRenderer.cpp
     src/ui/handRenderer.cpp
     src/ui/terminalMatchView.cpp
+    src/ui/terminalRewardView.cpp
+    src/ui/rewardOptionRenderer.cpp
+    src/ui/rewardsRenderer.cpp
 )
 
 # Debug Macro

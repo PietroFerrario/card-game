@@ -1,5 +1,5 @@
 #include "rewardsRenderer.h"
-#include "rewards/rewardOption.h"
+#include "game_events/rewards/rewardOption.h"
 #include "util/debug.h"
 
 #include <cassert>

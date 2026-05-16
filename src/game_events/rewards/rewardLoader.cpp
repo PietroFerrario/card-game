@@ -1,5 +1,6 @@
 #include "rewardLoader.h"
 
+#include <cassert>
 #include <fstream>
 #include <string>
 
@@ -11,7 +12,7 @@ RewardLoader::RewardLoader()
     m_data = json::parse(f);
 }
 
-std::vector<RewardOption> RewardLoader::parseRewardsList(std::string_view rewardListId)
+std::vector<RewardOption> RewardLoader::loadRewardList(std::string_view rewardListId)
 {
     std::vector<RewardOption> rewardOptionList;
 
@@ -24,15 +25,17 @@ std::vector<RewardOption> RewardLoader::parseRewardsList(std::string_view reward
             for (const auto& rewardData : rewardList.at("rewards"))
             {
                 rewardOptionList.emplace_back(
-                    rewardListId,
+                    rewardListId, rewardData.at("rewardName").get_ref<const std::string&>(),
                     m_rewardOptionTypeMap.at(
                         rewardData.at("rewardType").get_ref<const std::string&>()),
                     rewardData.at("description").get_ref<const std::string&>(),
                     makeRewardEffectList(rewardData));
             }
+            break;
         }
-    }
+        }
 
+    assert(!(rewardOptionList.empty()) && "RewardOptionList is empty, problem in loading it");
     return rewardOptionList;
 }
 

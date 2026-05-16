@@ -20,8 +20,8 @@ enum class RewardOptionType
 class RewardOption
 {
   public:
-    RewardOption(std::string_view rewardOptionId, RewardOptionType rewardOptionType,
-                 std::string_view description,
+    RewardOption(std::string_view rewardOptionId, std::string_view rewardOptionName,
+                 RewardOptionType rewardOptionType, std::string_view description,
                  std::vector<std::unique_ptr<RewardEffect>> rewardEffectList = {});
 
     std::string_view getName() const { return m_rewardOptionName; }

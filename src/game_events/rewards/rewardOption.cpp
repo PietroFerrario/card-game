@@ -1,10 +1,11 @@
 #include "rewardOption.h"
 
-RewardOption::RewardOption(std::string_view rewardOptionId, RewardOptionType rewardOptionType,
-                           std::string_view description,
+RewardOption::RewardOption(std::string_view rewardOptionId, std::string_view rewardOptionName,
+                           RewardOptionType rewardOptionType, std::string_view description,
                            std::vector<std::unique_ptr<RewardEffect>> rewardEffectList)
-    : m_rewardOptionId{rewardOptionId}, m_rewardOptionType{rewardOptionType},
-      m_rewardOptionDescription{description}, m_rewardEffectList{std::move(rewardEffectList)}
+    : m_rewardOptionId{rewardOptionId}, m_rewardOptionName{rewardOptionName},
+      m_rewardOptionType{rewardOptionType}, m_rewardOptionDescription{description},
+      m_rewardEffectList{std::move(rewardEffectList)}
 {
 }
 

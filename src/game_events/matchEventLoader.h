@@ -20,7 +20,7 @@ class MatchEventLoader
   private:
     nlohmann::json m_data{};
     inline static const std::unordered_map<std::string, EnemyId> m_enemyIdMap{
-        {"Bandits", EnemyId::Bandits}, {"Monster", EnemyId::Monster}};
+        {"bandits", EnemyId::Bandits}, {"monster", EnemyId::Monster}};
 };
 
 #endif // MATCHEVENTLOADER_H
