@@ -61,10 +61,14 @@ void CardFactory::registerCards()
     //                        std::move(shieldWarriorEffects)));
 }
 
-std::unique_ptr<CardInstance> CardFactory::makeSingleCard(const std::string& cardId) const
+std::unique_ptr<CardInstance> CardFactory::makeSingleCard(const DeckEntry& deckEntry) const
 {
-    DEBUG_LOG("Card instance being created: " << m_cardMap.at(cardId));
-    std::unique_ptr<CardInstance> card{std::make_unique<CardInstance>(*m_cardMap.at(cardId))};
-    DEBUG_LOG("CardInstance of " << cardId << " has been created.");
+    DEBUG_LOG("Card instance being created: " << m_cardMap.at(deckEntry.cardId));
+    std::unique_ptr<CardInstance> card{
+        std::make_unique<CardInstance>(*m_cardMap.at(deckEntry.cardId))};
+    DEBUG_LOG("CardInstance of " << deckEntry.cardId << " has been created.");
+
+    card->applyModifiers(deckEntry.permanentModifiers);
+
     return card;
 }

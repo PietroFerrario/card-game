@@ -20,10 +20,7 @@ void DeckCombat::populateDeck(const std::vector<DeckEntry>& cardList)
 {
     for (const auto& deckEntry : cardList)
     {
-        for (int i{0}; i < deckEntry.cardCount; ++i)
-        {
-            m_drawPile.emplace_back(m_factory.makeSingleCard(deckEntry.cardId));
-        }
+        m_drawPile.emplace_back(m_factory.makeSingleCard(deckEntry));
     }
 }
 

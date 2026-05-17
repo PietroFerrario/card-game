@@ -128,6 +128,7 @@ MatchData CardMatch::turnLoop()
         }
         resetPhase();
     }
+    return m_matchData;
 }
 
 bool CardMatch::canPlayerAct(TurnData& currentTurnData)

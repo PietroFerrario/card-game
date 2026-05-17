@@ -30,9 +30,21 @@ class CardInstance
     CardInstance(const CardDefinition& definition);
 
     /// @brief Returns the card's current damage value.
-    int getDamage() const { return m_cardParams.damage; }
+    int getDamage() const { return m_baseCardParams.damage; }
     /// @brief Returns the card's current armor value.
-    int getArmor() const { return m_cardParams.armor; }
+    int getArmor() const { return m_baseCardParams.armor; }
+
+    void increaseArmor(int amount);
+    void increaseDamage(int amount);
+    void increaseActions(int amount);
+    void increaseDrawing(int amount);
+
+    void decreaseArmor(int amount);
+    void decreaseDamage(int amount);
+    void decreaseActions(int amount);
+    void decreaseDrawing(int amount);
+
+    void applyModifiers(const CardParams& cardParams);
 
     /**
      * @brief Returns the immutable definition this instance was created from.
@@ -46,7 +58,8 @@ class CardInstance
   private:
     const CardDefinition* m_definition; ///< Non-owning pointer to shared static definition.
 
-    CardParams m_cardParams{}; ///< Runtime card parameters values (modifiable during combat)
+    CardParams m_baseCardParams{}; ///< Runtime card parameters values (static during combat).
+    CardParams m_temporaryModifiersParams{};
 
     int m_cost{}; ///< Runtime cost (modifiable during combat).
 };

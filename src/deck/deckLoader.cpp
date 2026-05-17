@@ -22,8 +22,11 @@ std::vector<DeckEntry> DeckLoader::loadDeck(std::string_view deckName)
     {
         if (entry.at("amount").get<int>() > 0)
         {
-            initialCardsList.emplace_back(DeckEntry{entry.at("id").get_ref<const std::string&>(),
-                                                    entry.at("amount").get<int>()});
+            for (int i{0}; i < entry.at("amount").get<int>(); ++i)
+            {
+                initialCardsList.emplace_back(
+                    DeckEntry{entry.at("id").get_ref<const std::string&>()});
+            }
         }
     }
 

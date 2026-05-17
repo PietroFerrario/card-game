@@ -3,6 +3,7 @@
 
 #include "ICardFactory.h"
 #include "cardsLoader.h"
+#include "deck/deckEntry.h"
 
 #include <string_view>
 #include <unordered_map>
@@ -27,6 +28,28 @@ class CardFactory : public ICardFactory
     CardFactory();
 
     /**
+     * @brief Creates a new CardInstance based on the registered definition.
+     *
+     * Looks up the card ID and returns a runtime copy (CardInstance).
+     * Throws if the ID is not registered.
+     *
+     * @param cardId ID of the card to create.
+     * @return A unique_ptr to the new CardInstance.
+     */
+    std::unique_ptr<CardInstance> makeSingleCard(const DeckEntry& deckEntry) const override;
+
+    /// @brief Destructor.
+    ~CardFactory();
+
+  private:
+    /**
+     * @brief Populates the factory with all static card definitions.
+     *
+     * Called during construction.
+     */
+    void registerCards();
+
+    /**
      * @brief Registers a new card definition.
      *
      * Adds the CardDefinition to the internal map, keyed by its unique ID.
@@ -38,28 +61,6 @@ class CardFactory : public ICardFactory
     void registerDefinition(std::string_view cardId,
                             std::unique_ptr<CardDefinition> uniqueCardDefinition);
 
-    /**
-     * @brief Populates the factory with all static card definitions.
-     *
-     * Called during construction.
-     */
-    void registerCards();
-
-    /**
-     * @brief Creates a new CardInstance based on the registered definition.
-     *
-     * Looks up the card ID and returns a runtime copy (CardInstance).
-     * Throws if the ID is not registered.
-     *
-     * @param cardId ID of the card to create.
-     * @return A unique_ptr to the new CardInstance.
-     */
-    std::unique_ptr<CardInstance> makeSingleCard(const std::string& cardId) const override;
-
-    /// @brief Destructor.
-    ~CardFactory();
-
-  private:
     /// @brief Map of all registered card definitions, keyed by ID.
     std::unordered_map<std::string, std::unique_ptr<CardDefinition>> m_cardMap;
     CardsLoader m_cardsLoader;

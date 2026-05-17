@@ -17,6 +17,6 @@ void Player::decreaseMoney(int amount)
 {
     if (amount > 0)
     {
-        std::max(0, m_money - amount);
+        m_money = std::min(0, m_money - amount);
     }
 };

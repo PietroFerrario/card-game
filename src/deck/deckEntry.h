@@ -1,6 +1,8 @@
 #ifndef DECKENTRY_H
 #define DECKENTRY_H
 
+#include "cards/cardParams.h"
+
 #include <string>
 
 /**
@@ -8,14 +10,14 @@
  *
  * Each entry stores:
  * - The card's ID (matches a CardDefinition ID)
- * - The number of copies the player owns
+ * - The Run-Based modifiers stored in a CardParams
  *
  * Used for saving, loading, and modifying the player's deck outside of combat.
  */
 struct DeckEntry
 {
-    std::string cardId; ///< Identifier matching a CardDefinition.
-    int cardCount;      ///< Number of copies owned.
+    std::string cardId;            ///< Identifier matching a CardDefinition.
+    CardParams permanentModifiers; ///< Run-Based modifiers
 };
 
 #endif // DECKENTRY_H

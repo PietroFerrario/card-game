@@ -1,6 +1,8 @@
 #ifndef ICARDFACTORY_H
 #define ICARDFACTORY_H
 
+#include "deck/deckEntry.h"
+
 #include <memory>
 #include <string>
 
@@ -22,7 +24,7 @@ class ICardFactory
      * @param cardId Identifier of the card to instantiate.
      * @return Owned CardInstance.
      */
-    virtual std::unique_ptr<CardInstance> makeSingleCard(const std::string& cardId) const = 0;
+    virtual std::unique_ptr<CardInstance> makeSingleCard(const DeckEntry& deckEntry) const = 0;
 
     /// @brief Virtual destructor.
     virtual ~ICardFactory() = default;

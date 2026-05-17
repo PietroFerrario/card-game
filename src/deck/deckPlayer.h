@@ -54,15 +54,16 @@ class DeckPlayer
      * @return true if added, false if deck is full.
      */
     bool addCard(std::string_view cardId);
-    /**
-     * @brief Removes one copy of a card, if above minimum size.
-     *
-     * If the last copy is removed, the entry is erased entirely.
-     *
-     * @param cardId ID of the card to remove.
-     * @return true if removed, false otherwise.
-     */
-    bool removeCard(std::string_view cardId);
+
+    // /**
+    //  * @brief Removes one copy of a card, if above minimum size.
+    //  *
+    //  * If the last copy is removed, the entry is erased entirely.
+    //  *
+    //  * @param cardId ID of the card to remove.
+    //  * @return true if removed, false otherwise.
+    //  */
+    // bool removeCard(std::string_view cardId);
 
     /// @brief Returns the full list of card entries.
     const std::vector<DeckEntry>& getCardList() const { return m_cardsList; }
