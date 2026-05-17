@@ -6,5 +6,9 @@ var dir_9c074b8a3ff180fe0f5e8e7bda80dc8f =
     [ "cardsLoader.h", "cardsLoader_8h.html", "cardsLoader_8h" ],
     [ "effectFactory.cpp", "effectFactory_8cpp.html", null ],
     [ "effectFactory.h", "effectFactory_8h.html", "effectFactory_8h" ],
-    [ "ICardFactory.h", "ICardFactory_8h.html", "ICardFactory_8h" ]
+    [ "enemyFactory.cpp", "enemyFactory_8cpp.html", null ],
+    [ "enemyFactory.h", "enemyFactory_8h.html", "enemyFactory_8h" ],
+    [ "ICardFactory.h", "ICardFactory_8h.html", "ICardFactory_8h" ],
+    [ "rewardEffectFactory.cpp", "rewardEffectFactory_8cpp.html", null ],
+    [ "rewardEffectFactory.h", "rewardEffectFactory_8h.html", "rewardEffectFactory_8h" ]
 ];

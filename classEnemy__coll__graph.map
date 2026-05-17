@@ -1,7 +1,8 @@
 <map id="Enemy" name="Enemy">
-<area shape="rect" id="node1" title="Base class for enemies with a predefined move sequence." alt="" coords="178,491,290,583"/>
-<area shape="rect" id="node2" href="$classEntity.html" title="Base class representing a combat&#45;capable entity." alt="" coords="162,175,306,428"/>
-<area shape="rect" id="node3" title=" " alt="" coords="35,5,73,83"/>
-<area shape="rect" id="node4" title=" " alt="" coords="205,5,263,83"/>
-<area shape="rect" id="node5" title=" " alt="" coords="331,263,505,340"/>
+<area shape="rect" id="node1" title="Base class for enemies with a predefined move sequence." alt="" coords="322,491,434,583"/>
+<area shape="rect" id="node2" href="$classEntity.html" title="Base class representing a combat&#45;capable entity." alt="" coords="168,175,312,428"/>
+<area shape="rect" id="node3" title=" " alt="" coords="41,5,80,83"/>
+<area shape="rect" id="node4" title=" " alt="" coords="211,5,270,83"/>
+<area shape="rect" id="node5" title=" " alt="" coords="337,263,512,340"/>
+<area shape="rect" id="node6" title=" " alt="" coords="536,263,614,340"/>
 </map>

@@ -34,7 +34,11 @@ var hierarchy =
       ] ],
       [ "Player", "classPlayer.html", null ]
     ] ],
+    [ "EventSequence", "classEventSequence.html", null ],
     [ "Game", "classGame.html", null ],
+    [ "GameEvent", "classGameEvent.html", [
+      [ "MatchEvent", "classMatchEvent.html", null ]
+    ] ],
     [ "HandRenderer", "classHandRenderer.html", null ],
     [ "ICardFactory", "classICardFactory.html", [
       [ "CardFactory", "classCardFactory.html", null ]
@@ -43,10 +47,27 @@ var hierarchy =
       [ "TerminalMatchView", "classTerminalMatchView.html", null ]
     ] ],
     [ "IOText", "classIOText.html", null ],
+    [ "IRewardView", "classIRewardView.html", [
+      [ "TerminalRewardView", "classTerminalRewardView.html", null ]
+    ] ],
     [ "MatchData", "structMatchData.html", null ],
+    [ "MatchEventData", "structMatchEventData.html", null ],
+    [ "MatchEventLoader", "classMatchEventLoader.html", null ],
     [ "NameLayout", "structNameLayout.html", null ],
     [ "PlayCardDecision", "structPlayCardDecision.html", null ],
     [ "RenderedHand", "structRenderedHand.html", null ],
+    [ "RenderedRewards", "structRenderedRewards.html", null ],
+    [ "RewardDecision", "structRewardDecision.html", null ],
+    [ "RewardEffect", "classRewardEffect.html", [
+      [ "GainMoneyRewardEffect", "classGainMoneyRewardEffect.html", null ]
+    ] ],
+    [ "RewardEffectData", "structRewardEffectData.html", null ],
+    [ "RewardEffectFactory", "classRewardEffectFactory.html", null ],
+    [ "RewardLoader", "classRewardLoader.html", null ],
+    [ "RewardOption", "classRewardOption.html", null ],
+    [ "RewardOptionRenderer", "classRewardOptionRenderer.html", null ],
+    [ "RewardPhase", "classRewardPhase.html", null ],
+    [ "RewardsRenderer", "classRewardsRenderer.html", null ],
     [ "Slot", "structSlot.html", null ],
     [ "Text", "classText.html", null ],
     [ "TurnData", "structTurnData.html", null ]

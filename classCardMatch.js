@@ -12,7 +12,7 @@ var classCardMatch =
     [ "reduceAction", "classCardMatch.html#aa4372c5f649673e07e21041799cd378b", null ],
     [ "resetPhase", "classCardMatch.html#a98418bbead1b18f90482b015604a46f4", null ],
     [ "spendAction", "classCardMatch.html#a3083972312286e3bcef3e392283a164f", null ],
-    [ "turnLoop", "classCardMatch.html#a36f8367bcecc0cb3758be85c8449f1ed", null ],
+    [ "turnLoop", "classCardMatch.html#ab4b1964674b1134441368c71e71d6268", null ],
     [ "updateMatchState", "classCardMatch.html#a148700f4c258918677f111e45aaac259", null ],
     [ "writeDrawnCardMessage", "classCardMatch.html#a9338fbeb594e31a227a9eb60cc64b129", null ]
 ];

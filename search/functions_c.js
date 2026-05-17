@@ -9,6 +9,7 @@ var searchData=
   ['printcards_6',['printCards',['../classIOText.html#a4bc533762d543b973967ecfdfacc3535',1,'IOText']]],
   ['printhand_7',['printHand',['../classIOText.html#ae2d43f28dd4078b2cae540c2e8347701',1,'IOText']]],
   ['println_8',['println',['../classIOText.html#a4c0e0d789a06c7c1e3631a113d310351',1,'IOText']]],
-  ['promptint_9',['promptInt',['../classIOText.html#a90150bc64b1354a6b4ac52f766cac984',1,'IOText']]],
-  ['promptln_10',['promptln',['../classIOText.html#a360ba43a724dac33bde99834b0e7a71b',1,'IOText']]]
+  ['printrewardslist_9',['printRewardsList',['../classIOText.html#a63c08a4fa026d3eed99f15e6867dc1e2',1,'IOText']]],
+  ['promptint_10',['promptInt',['../classIOText.html#a90150bc64b1354a6b4ac52f766cac984',1,'IOText']]],
+  ['promptln_11',['promptln',['../classIOText.html#a360ba43a724dac33bde99834b0e7a71b',1,'IOText']]]
 ];

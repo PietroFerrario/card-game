@@ -1,4 +1,20 @@
 var searchData=
 [
-  ['updatematchstate_0',['updateMatchState',['../classCardMatch.html#a148700f4c258918677f111e45aaac259',1,'CardMatch']]]
+  ['takecardhostage_0',['takeCardHostage',['../classCombatContext.html#aaf0326f9e66b1242422eddb64ea1fbc1',1,'CombatContext']]],
+  ['takefromhand_1',['takeFromHand',['../classDeckCombat.html#a165d2658e0726a0ec565a70afda62dbd',1,'DeckCombat']]],
+  ['target_2',['Target',['../combatTarget_8h.html#a31488d29805a596498c0234ae392d35d',1,'combatTarget.h']]],
+  ['target_3',['target',['../structDamageResult.html#a756f3fc6ac37b0136c9383670a02fb8e',1,'DamageResult::target()'],['../structDamageInfo.html#a292f6825646b5387ea25cafe4217450b',1,'DamageInfo::target()']]],
+  ['targetdied_4',['targetDied',['../structDamageResult.html#a2a58db8243963d4d648469459122af6f',1,'DamageResult']]],
+  ['terminalmatchview_5',['TerminalMatchView',['../classTerminalMatchView.html#ad1aef937055928a875cd3af8c88538a9',1,'TerminalMatchView::TerminalMatchView()'],['../classTerminalMatchView.html',1,'TerminalMatchView']]],
+  ['terminalmatchview_2ecpp_6',['terminalMatchView.cpp',['../terminalMatchView_8cpp.html',1,'']]],
+  ['terminalmatchview_2eh_7',['terminalMatchView.h',['../terminalMatchView_8h.html',1,'']]],
+  ['terminalrewardview_8',['TerminalRewardView',['../classTerminalRewardView.html',1,'TerminalRewardView'],['../classTerminalRewardView.html#ac5850a0a1887e22203c8aafdfb19149d',1,'TerminalRewardView::TerminalRewardView()']]],
+  ['terminalrewardview_2ecpp_9',['terminalRewardView.cpp',['../terminalRewardView_8cpp.html',1,'']]],
+  ['terminalrewardview_2eh_10',['terminalRewardView.h',['../terminalRewardView_8h.html',1,'']]],
+  ['text_11',['Text',['../classText.html',1,'Text'],['../classText.html#ab3e26143fccc52699bcc5149cae852bc',1,'Text::Text()']]],
+  ['text_2ecpp_12',['text.cpp',['../text_8cpp.html',1,'']]],
+  ['text_2eh_13',['text.h',['../text_8h.html',1,'']]],
+  ['turndata_14',['TurnData',['../structTurnData.html',1,'']]],
+  ['turnloop_15',['turnLoop',['../classCardMatch.html#ab4b1964674b1134441368c71e71d6268',1,'CardMatch']]],
+  ['turnnumber_16',['turnNumber',['../structMatchData.html#a13b998050dea6c6b37616d389d47b233',1,'MatchData']]]
 ];

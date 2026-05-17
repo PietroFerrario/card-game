@@ -1,7 +1,8 @@
 <map id="deck/deckLoader.cpp" name="deck/deckLoader.cpp">
-<area shape="rect" id="node1" title=" " alt="" coords="252,5,411,31"/>
+<area shape="rect" id="node1" title=" " alt="" coords="308,5,467,31"/>
 <area shape="rect" id="node2" href="$deckLoader_8h.html" title=" " alt="" coords="220,79,328,104"/>
-<area shape="rect" id="node8" title=" " alt="" coords="352,79,425,104"/>
+<area shape="rect" id="node8" title=" " alt="" coords="353,79,422,104"/>
+<area shape="rect" id="node9" title=" " alt="" coords="447,79,520,104"/>
 <area shape="rect" id="node3" href="$deckEntry_8h.html" title=" " alt="" coords="5,152,103,177"/>
 <area shape="rect" id="node5" title=" " alt="" coords="127,152,274,177"/>
 <area shape="rect" id="node6" title=" " alt="" coords="299,152,396,177"/>

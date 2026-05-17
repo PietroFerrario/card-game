@@ -50,7 +50,7 @@ var NAVTREE =
       [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
       [ "Class Members", "functions.html", [
         [ "All", "functions.html", "functions_dup" ],
-        [ "Functions", "functions_func.html", null ],
+        [ "Functions", "functions_func.html", "functions_func" ],
         [ "Variables", "functions_vars.html", null ],
         [ "Related Functions", "functions_rela.html", null ]
       ] ]
@@ -71,7 +71,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "ICardFactory_8h.html",
-"classTerminalMatchView.html#aec0bdf1b089d8a38b90243ce7339e17e"
+"classLimitCardToPlayEffect.html#a90681881bf428726a23a47360cf2fef6",
+"matchData_8h.html#aca6448151e924d2cb062632532d9081faa85b95017d0792ca611434d181515722"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

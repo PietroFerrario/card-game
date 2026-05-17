@@ -7,6 +7,7 @@ var files_dup =
     [ "effects", "dir_191f852b87741474e2df76292b1f55c1.html", "dir_191f852b87741474e2df76292b1f55c1" ],
     [ "entities", "dir_d691984d1d74be3b164cee16192654be.html", "dir_d691984d1d74be3b164cee16192654be" ],
     [ "factories", "dir_9c074b8a3ff180fe0f5e8e7bda80dc8f.html", "dir_9c074b8a3ff180fe0f5e8e7bda80dc8f" ],
+    [ "game_events", "dir_4c7c0ba1685f006597d852d4565a6fbc.html", "dir_4c7c0ba1685f006597d852d4565a6fbc" ],
     [ "game_system", "dir_8310529fc8f3db096268c005448a7af1.html", "dir_8310529fc8f3db096268c005448a7af1" ],
     [ "ui", "dir_da5c6b39c0a2f54e57df6799511cd3ab.html", "dir_da5c6b39c0a2f54e57df6799511cd3ab" ],
     [ "util", "dir_b7878ad5ecbf2506f4125b9d34c97e45.html", "dir_b7878ad5ecbf2506f4125b9d34c97e45" ],

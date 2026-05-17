@@ -1,6 +1,6 @@
 <map id="Player" name="Player">
-<area shape="rect" id="node1" title="Player&#45;controlled entity with a persistent deck." alt="" coords="6,477,149,613"/>
-<area shape="rect" id="node2" href="$classEntity.html" title="Base class representing a combat&#45;capable entity." alt="" coords="5,175,149,428"/>
-<area shape="rect" id="node3" title=" " alt="" coords="6,5,45,83"/>
-<area shape="rect" id="node4" title=" " alt="" coords="101,5,160,83"/>
+<area shape="rect" id="node1" title="Player&#45;controlled entity with a persistent deck." alt="" coords="5,477,156,657"/>
+<area shape="rect" id="node2" href="$classEntity.html" title="Base class representing a combat&#45;capable entity." alt="" coords="9,175,153,428"/>
+<area shape="rect" id="node3" title=" " alt="" coords="9,5,48,83"/>
+<area shape="rect" id="node4" title=" " alt="" coords="105,5,163,83"/>
 </map>

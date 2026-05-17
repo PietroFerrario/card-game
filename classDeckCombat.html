@@ -104,7 +104,7 @@ $(document).ready(function(){initNavTree('classDeckCombat.html',''); initResizab
 <div class="dynheader">
 Collaboration diagram for DeckCombat:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classDeckCombat__coll__graph.svg" width="180" height="250"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classDeckCombat__coll__graph.svg" width="254" height="264"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <table class="memberdecls">
@@ -121,8 +121,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3ed556035ec64030a32e8f995d26459a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDeckCombat.html#a3ed556035ec64030a32e8f995d26459a">discardFromHand</a> (int handIndex)</td></tr>
 <tr class="memdesc:a3ed556035ec64030a32e8f995d26459a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Discards a card from the hand to the discard pile.  <br /></td></tr>
 <tr class="separator:a3ed556035ec64030a32e8f995d26459a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8aa20ecbd5eb07a32a150896f809d14e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDeckCombat.html#a8aa20ecbd5eb07a32a150896f809d14e">discardWholeHand</a> ()</td></tr>
-<tr class="separator:a8aa20ecbd5eb07a32a150896f809d14e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f5325759c9f6c14a4c71f8e0e52276a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDeckCombat.html#a7f5325759c9f6c14a4c71f8e0e52276a">discardHandEndTurn</a> ()</td></tr>
+<tr class="memdesc:a7f5325759c9f6c14a4c71f8e0e52276a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Discard the hand at the end of the turn.  <br /></td></tr>
+<tr class="separator:a7f5325759c9f6c14a4c71f8e0e52276a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adefeaa620e1a58e7b814f13ab7b0e723"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDeckCombat.html#adefeaa620e1a58e7b814f13ab7b0e723">movePlayedToDiscardEndTurn</a> ()</td></tr>
+<tr class="memdesc:adefeaa620e1a58e7b814f13ab7b0e723"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exhaust all the played card this round.  <br /></td></tr>
+<tr class="separator:adefeaa620e1a58e7b814f13ab7b0e723"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a82d175e425abcb3966af228018ac0aff"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDeckCombat.html#a82d175e425abcb3966af228018ac0aff">getHandSize</a> () const</td></tr>
 <tr class="memdesc:a82d175e425abcb3966af228018ac0aff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of cards currently in the hand.  <br /></td></tr>
 <tr class="separator:a82d175e425abcb3966af228018ac0aff"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -245,20 +249,23 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a8aa20ecbd5eb07a32a150896f809d14e" name="a8aa20ecbd5eb07a32a150896f809d14e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8aa20ecbd5eb07a32a150896f809d14e">&#9670;&#160;</a></span>discardWholeHand()</h2>
+<a id="a7f5325759c9f6c14a4c71f8e0e52276a" name="a7f5325759c9f6c14a4c71f8e0e52276a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f5325759c9f6c14a4c71f8e0e52276a">&#9670;&#160;</a></span>discardHandEndTurn()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void DeckCombat::discardWholeHand </td>
+          <td class="memname">void DeckCombat::discardHandEndTurn </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Discard the hand at the end of the turn. </p>
+<p>Moved into discard pile </p>
 
 </div>
 </div>
@@ -371,6 +378,26 @@ Public Member Functions</h2></td></tr>
 
 <p>Returns a non-owning view of the current hand for UI rendering. </p>
 <dl class="section return"><dt>Returns</dt><dd>Vector of raw pointers to cards currently in hand. </dd></dl>
+
+</div>
+</div>
+<a id="adefeaa620e1a58e7b814f13ab7b0e723" name="adefeaa620e1a58e7b814f13ab7b0e723"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adefeaa620e1a58e7b814f13ab7b0e723">&#9670;&#160;</a></span>movePlayedToDiscardEndTurn()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DeckCombat::movePlayedToDiscardEndTurn </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Exhaust all the played card this round. </p>
+<p>Move all the cards from the turnPlayedPile of this round into the discardPile. To be reshuffled into the deckPile. </p>
 
 </div>
 </div>

@@ -8,9 +8,18 @@ var searchData=
   ['rendercard_5',['renderCard',['../classCardRenderer.html#a30825fe2e171bb152e0a73526efa2254',1,'CardRenderer']]],
   ['renderhand_6',['renderHand',['../classHandRenderer.html#a6a9f7fda93e84c81dc8a455d33d1bd97',1,'HandRenderer']]],
   ['rendermultiplecards_7',['renderMultipleCards',['../classHandRenderer.html#a239d05159fe5dc5a3a2a36a772b3ecd4',1,'HandRenderer']]],
-  ['resetarmor_8',['resetArmor',['../classCombatSystem.html#a8aa02431d41431c468080ea9589824f1',1,'CombatSystem::resetArmor()'],['../classEntity.html#aa8637a483cf260cc7933dfb66acd392f',1,'Entity::resetArmor()']]],
-  ['resetattack_9',['resetAttack',['../classEntity.html#ac6b3a95e57c975316fa3a8fecbae0094',1,'Entity']]],
-  ['reseteffectmessage_10',['resetEffectMessage',['../classCombatContext.html#a63b28d36c0f8400183bfd4fa099aef89',1,'CombatContext']]],
-  ['resetphase_11',['resetPhase',['../classCardMatch.html#a98418bbead1b18f90482b015604a46f4',1,'CardMatch']]],
-  ['resolve_12',['resolve',['../classDrawCardsEffect.html#a340b4902e90c1196bdb6fe460f97a307',1,'DrawCardsEffect::resolve()'],['../classEffect.html#a5a3f7f0fafe482f0c11239eba109d967',1,'Effect::resolve()'],['../classGainActionsEffect.html#a4396482c9f183e8dd4f0df5ef5da8b1b',1,'GainActionsEffect::resolve()'],['../classGainArmorEffect.html#a2bf1d5580656739dcf350fc69621edec',1,'GainArmorEffect::resolve()'],['../classGainAttackEffect.html#a07e3d1a9b1412aa7bcee3f7d59e34593',1,'GainAttackEffect::resolve()'],['../classHostageCardEffect.html#a2410f32356ed9023e8b2a22fe8b67a98',1,'HostageCardEffect::resolve()'],['../classLimitCardToPlayEffect.html#a3bbdd66b19f92cb9f2069a5dc05bbf21',1,'LimitCardToPlayEffect::resolve()']]]
+  ['rendermultiplerewards_8',['renderMultipleRewards',['../classRewardsRenderer.html#a0a9d4be6fe9a061403151ce7a0a542b6',1,'RewardsRenderer']]],
+  ['renderrewardoption_9',['renderRewardOption',['../classRewardOptionRenderer.html#a4bdaccf84f6b1df96cd663b6a0c3c871',1,'RewardOptionRenderer']]],
+  ['renderrewards_10',['renderRewards',['../classRewardsRenderer.html#a6330255980a9264fb0edd23d72e6289f',1,'RewardsRenderer']]],
+  ['resetarmor_11',['resetArmor',['../classCombatSystem.html#a8aa02431d41431c468080ea9589824f1',1,'CombatSystem::resetArmor()'],['../classEntity.html#aa8637a483cf260cc7933dfb66acd392f',1,'Entity::resetArmor()']]],
+  ['resetattack_12',['resetAttack',['../classEntity.html#ac6b3a95e57c975316fa3a8fecbae0094',1,'Entity']]],
+  ['reseteffectmessage_13',['resetEffectMessage',['../classCombatContext.html#a63b28d36c0f8400183bfd4fa099aef89',1,'CombatContext']]],
+  ['resetphase_14',['resetPhase',['../classCardMatch.html#a98418bbead1b18f90482b015604a46f4',1,'CardMatch']]],
+  ['resolve_15',['resolve',['../classDrawCardsEffect.html#a340b4902e90c1196bdb6fe460f97a307',1,'DrawCardsEffect::resolve()'],['../classRewardEffect.html#afd11e11f039617b942d4898d257d468d',1,'RewardEffect::resolve()'],['../classGainMoneyRewardEffect.html#a08bc710dc50e0701b62218e497c039d0',1,'GainMoneyRewardEffect::resolve()'],['../classMatchEvent.html#a713a0a560eff982acc82826f3de92bd9',1,'MatchEvent::resolve()'],['../classGameEvent.html#a0ee538202343dd0f487be86a285c5fb1',1,'GameEvent::resolve()'],['../classLimitCardToPlayEffect.html#a3bbdd66b19f92cb9f2069a5dc05bbf21',1,'LimitCardToPlayEffect::resolve()'],['../classHostageCardEffect.html#a2410f32356ed9023e8b2a22fe8b67a98',1,'HostageCardEffect::resolve()'],['../classGainAttackEffect.html#a07e3d1a9b1412aa7bcee3f7d59e34593',1,'GainAttackEffect::resolve()'],['../classGainArmorEffect.html#a2bf1d5580656739dcf350fc69621edec',1,'GainArmorEffect::resolve()'],['../classGainActionsEffect.html#a4396482c9f183e8dd4f0df5ef5da8b1b',1,'GainActionsEffect::resolve()'],['../classEffect.html#a5a3f7f0fafe482f0c11239eba109d967',1,'Effect::resolve()']]],
+  ['resolveeventsequence_16',['resolveEventSequence',['../classEventSequence.html#af0218ae1ef828c4a9bdc96a5080db436',1,'EventSequence']]],
+  ['rewardeffectfactory_17',['RewardEffectFactory',['../classRewardEffectFactory.html#af698ec68eb965a82ca2d0693bb172dc4',1,'RewardEffectFactory']]],
+  ['rewardloader_18',['RewardLoader',['../classRewardLoader.html#a8278f0eb8d576200a111a64547ee1d44',1,'RewardLoader']]],
+  ['rewardoption_19',['RewardOption',['../classRewardOption.html#ad6e87e19ba2eb4b5afa882f093fac397',1,'RewardOption']]],
+  ['rewardoptionrenderer_20',['RewardOptionRenderer',['../classRewardOptionRenderer.html#a1bb036cebcd9fa1a849ef48bef70af4b',1,'RewardOptionRenderer']]],
+  ['rewardphase_21',['RewardPhase',['../classRewardPhase.html#adbca4a137f5fca22bb5854b5745b0b47',1,'RewardPhase']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['random_0',['Random',['../namespaceRandom.html',1,'']]]
+  ['enemyfactory_0',['EnemyFactory',['../namespaceEnemyFactory.html',1,'']]]
 ];

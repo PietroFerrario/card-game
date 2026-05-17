@@ -104,7 +104,7 @@ $(document).ready(function(){initNavTree('classPlayer.html',''); initResizable()
 <div class="dynheader">
 Inheritance diagram for Player:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classPlayer__inherit__graph.svg" width="155" height="492"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classPlayer__inherit__graph.svg" width="162" height="536"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div class="dynheader">
@@ -127,9 +127,16 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ae6c59cf02275c7ba78ae4cf4d1771412"><td class="memItemLeft" align="right" valign="top">std::string_view&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlayer.html#ae6c59cf02275c7ba78ae4cf4d1771412">getName</a> () const</td></tr>
 <tr class="memdesc:ae6c59cf02275c7ba78ae4cf4d1771412"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the display name of the player.  <br /></td></tr>
 <tr class="separator:ae6c59cf02275c7ba78ae4cf4d1771412"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abf35cade0f12a30ac3926ca8c47b524c"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classDeckPlayer.html">DeckPlayer</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlayer.html#abf35cade0f12a30ac3926ca8c47b524c">getDeckPlayer</a> ()</td></tr>
-<tr class="memdesc:abf35cade0f12a30ac3926ca8c47b524c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the player's persistent deck.  <br /></td></tr>
-<tr class="separator:abf35cade0f12a30ac3926ca8c47b524c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada0fec373ced2193a98edfd21e70915e"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classDeckPlayer.html">DeckPlayer</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlayer.html#ada0fec373ced2193a98edfd21e70915e">getDeckPlayer</a> () const</td></tr>
+<tr class="memdesc:ada0fec373ced2193a98edfd21e70915e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the player's persistent deck.  <br /></td></tr>
+<tr class="separator:ada0fec373ced2193a98edfd21e70915e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1bb1719c28d85fbc8b682e5f441463a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classDeckPlayer.html">DeckPlayer</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlayer.html#ae1bb1719c28d85fbc8b682e5f441463a">getDeckPlayer</a> ()</td></tr>
+<tr class="memdesc:ae1bb1719c28d85fbc8b682e5f441463a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the player's persistent deck.  <br /></td></tr>
+<tr class="separator:ae1bb1719c28d85fbc8b682e5f441463a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c54077cb4325a3a6b29651c719db23a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlayer.html#a6c54077cb4325a3a6b29651c719db23a">increaseMoney</a> (int amount)</td></tr>
+<tr class="separator:a6c54077cb4325a3a6b29651c719db23a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a527828a9499e786d1d594457e0485184"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlayer.html#a527828a9499e786d1d594457e0485184">decreaseMoney</a> (int amount)</td></tr>
+<tr class="separator:a527828a9499e786d1d594457e0485184"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classEntity"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classEntity')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classEntity.html">Entity</a></td></tr>
 <tr class="memitem:a980f368aa07ce358583982821533a54a inherit pub_methods_classEntity"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEntity.html#a980f368aa07ce358583982821533a54a">Entity</a> ()</td></tr>
 <tr class="separator:a980f368aa07ce358583982821533a54a inherit pub_methods_classEntity"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -249,8 +256,54 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="abf35cade0f12a30ac3926ca8c47b524c" name="abf35cade0f12a30ac3926ca8c47b524c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abf35cade0f12a30ac3926ca8c47b524c">&#9670;&#160;</a></span>getDeckPlayer()</h2>
+<a id="a527828a9499e786d1d594457e0485184" name="a527828a9499e786d1d594457e0485184"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a527828a9499e786d1d594457e0485184">&#9670;&#160;</a></span>decreaseMoney()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Player::decreaseMoney </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>amount</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae1bb1719c28d85fbc8b682e5f441463a" name="ae1bb1719c28d85fbc8b682e5f441463a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1bb1719c28d85fbc8b682e5f441463a">&#9670;&#160;</a></span>getDeckPlayer() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classDeckPlayer.html">DeckPlayer</a> &amp; Player::getDeckPlayer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the player's persistent deck. </p>
+<p>This deck is used as the source for constructing <a class="el" href="classDeckCombat.html" title="Manages all card piles during a single combat.">DeckCombat</a> instances at the start of combat encounters. </p>
+
+</div>
+</div>
+<a id="ada0fec373ced2193a98edfd21e70915e" name="ada0fec373ced2193a98edfd21e70915e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada0fec373ced2193a98edfd21e70915e">&#9670;&#160;</a></span>getDeckPlayer() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -262,7 +315,7 @@ Additional Inherited Members</h2></td></tr>
           <td class="memname">const <a class="el" href="classDeckPlayer.html">DeckPlayer</a> &amp; Player::getDeckPlayer </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -301,6 +354,24 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns the display name of the player. </p>
+
+</div>
+</div>
+<a id="a6c54077cb4325a3a6b29651c719db23a" name="a6c54077cb4325a3a6b29651c719db23a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c54077cb4325a3a6b29651c719db23a">&#9670;&#160;</a></span>increaseMoney()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Player::increaseMoney </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>amount</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>

@@ -1,6 +1,8 @@
 <map id="ui/IMatchView.h" name="ui/IMatchView.h">
-<area shape="rect" id="node1" title=" " alt="" coords="75,5,200,31"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,79,64,104"/>
-<area shape="rect" id="node3" title=" " alt="" coords="89,79,186,104"/>
-<area shape="rect" id="node4" title=" " alt="" coords="210,79,273,104"/>
+<area shape="rect" id="node1" title=" " alt="" coords="249,5,375,31"/>
+<area shape="rect" id="node2" href="$matchData_8h.html" title=" " alt="" coords="5,79,208,104"/>
+<area shape="rect" id="node4" title=" " alt="" coords="232,79,291,104"/>
+<area shape="rect" id="node5" title=" " alt="" coords="315,79,413,104"/>
+<area shape="rect" id="node6" title=" " alt="" coords="437,79,499,104"/>
+<area shape="rect" id="node3" title=" " alt="" coords="69,152,144,177"/>
 </map>

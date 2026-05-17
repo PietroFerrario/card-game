@@ -1,5 +1,8 @@
 var namespaces_dup =
 [
+    [ "EnemyFactory", "namespaceEnemyFactory.html", [
+      [ "makeEnemy", "namespaceEnemyFactory.html#ac5300ff74b77bcbad6ceb3b741d7cdd0", null ]
+    ] ],
     [ "Random", "namespaceRandom.html", [
       [ "generate", "namespaceRandom.html#a00531c42906741611a38c489e8723280", null ],
       [ "get", "namespaceRandom.html#a47378d26d412b6b6238c03a27f33a04f", null ],

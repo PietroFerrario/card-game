@@ -1,5 +1,5 @@
 <map id="Bandits" name="Bandits">
-<area shape="rect" id="node1" title=" " alt="" coords="29,505,125,583"/>
-<area shape="rect" id="node2" href="$classEnemy.html" title="Base class for enemies with a predefined move sequence." alt="" coords="12,351,143,457"/>
+<area shape="rect" id="node1" title=" " alt="" coords="29,520,125,597"/>
+<area shape="rect" id="node2" href="$classEnemy.html" title="Base class for enemies with a predefined move sequence." alt="" coords="12,351,143,472"/>
 <area shape="rect" id="node3" href="$classEntity.html" title="Base class representing a combat&#45;capable entity." alt="" coords="5,5,149,303"/>
 </map>

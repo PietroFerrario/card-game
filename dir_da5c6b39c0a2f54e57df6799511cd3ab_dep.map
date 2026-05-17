@@ -1,15 +1,17 @@
 <map id="ui" name="ui">
-<area shape="rect" id="node1" href="dir_da5c6b39c0a2f54e57df6799511cd3ab.html" title="ui" alt="" coords="267,5,305,31"/>
-<area shape="rect" id="node2" href="dir_61f20e49ac5d6763f7282e8c799f7538.html" title="combat" alt="" coords="5,79,76,104"/>
-<area shape="rect" id="edge1-headlabel" href="dir_000010_000001.html" title="1" alt="" coords="91,75,101,90"/>
-<area shape="rect" id="node3" href="dir_80b2bdf578a5290e4aa877db1f8440ce.html" title="deck" alt="" coords="101,79,154,104"/>
-<area shape="rect" id="edge2-headlabel" href="dir_000010_000002.html" title="1" alt="" coords="169,71,178,86"/>
-<area shape="rect" id="node4" href="dir_8310529fc8f3db096268c005448a7af1.html" title="game_system" alt="" coords="178,79,293,104"/>
-<area shape="rect" id="edge3-headlabel" href="dir_000010_000009.html" title="1" alt="" coords="256,61,266,76"/>
-<area shape="rect" id="node5" href="dir_b7878ad5ecbf2506f4125b9d34c97e45.html" title="util" alt="" coords="317,79,359,104"/>
-<area shape="rect" id="edge4-headlabel" href="dir_000010_000011.html" title="1" alt="" coords="321,52,330,66"/>
-<area shape="rect" id="node6" href="dir_cf1e9a2fdbb5faae65a2519434ce6869.html" title="cards" alt="" coords="384,79,441,104"/>
-<area shape="rect" id="edge5-headlabel" href="dir_000010_000000.html" title="4" alt="" coords="376,55,385,70"/>
-<area shape="rect" id="node7" href="dir_d691984d1d74be3b164cee16192654be.html" title="entities" alt="" coords="465,79,536,104"/>
-<area shape="rect" id="edge6-headlabel" href="dir_000010_000007.html" title="1" alt="" coords="447,58,456,72"/>
+<area shape="rect" id="node1" href="dir_da5c6b39c0a2f54e57df6799511cd3ab.html" title="ui" alt="" coords="351,5,389,31"/>
+<area shape="rect" id="node2" href="dir_4c7c0ba1685f006597d852d4565a6fbc.html" title="game_events" alt="" coords="5,79,116,104"/>
+<area shape="rect" id="edge1-headlabel" href="dir_000013_000009.html" title="2" alt="" coords="126,75,135,90"/>
+<area shape="rect" id="node3" href="dir_61f20e49ac5d6763f7282e8c799f7538.html" title="combat" alt="" coords="140,79,211,104"/>
+<area shape="rect" id="edge2-headlabel" href="dir_000013_000001.html" title="1" alt="" coords="222,73,231,88"/>
+<area shape="rect" id="node4" href="dir_80b2bdf578a5290e4aa877db1f8440ce.html" title="deck" alt="" coords="235,79,289,104"/>
+<area shape="rect" id="edge3-headlabel" href="dir_000013_000002.html" title="1" alt="" coords="295,68,304,83"/>
+<area shape="rect" id="node5" href="dir_8310529fc8f3db096268c005448a7af1.html" title="game_system" alt="" coords="313,79,427,104"/>
+<area shape="rect" id="edge4-headlabel" href="dir_000013_000010.html" title="5" alt="" coords="374,53,383,68"/>
+<area shape="rect" id="node6" href="dir_b7878ad5ecbf2506f4125b9d34c97e45.html" title="util" alt="" coords="451,79,494,104"/>
+<area shape="rect" id="edge5-headlabel" href="dir_000013_000014.html" title="2" alt="" coords="441,54,450,69"/>
+<area shape="rect" id="node7" href="dir_cf1e9a2fdbb5faae65a2519434ce6869.html" title="cards" alt="" coords="519,79,576,104"/>
+<area shape="rect" id="edge6-headlabel" href="dir_000013_000000.html" title="4" alt="" coords="500,57,510,71"/>
+<area shape="rect" id="node8" href="dir_d691984d1d74be3b164cee16192654be.html" title="entities" alt="" coords="600,79,671,104"/>
+<area shape="rect" id="edge7-headlabel" href="dir_000013_000007.html" title="1" alt="" coords="580,60,589,75"/>
 </map>

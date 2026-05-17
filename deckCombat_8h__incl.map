@@ -1,8 +1,11 @@
 <map id="deck/deckCombat.h" name="deck/deckCombat.h">
-<area shape="rect" id="node1" title=" " alt="" coords="117,5,268,31"/>
-<area shape="rect" id="node2" href="$drawData_8h.html" title=" " alt="" coords="57,79,155,104"/>
-<area shape="rect" id="node3" title=" " alt="" coords="5,152,103,177"/>
-<area shape="rect" id="node4" title=" " alt="" coords="144,152,207,177"/>
-<area shape="rect" id="node5" title=" " alt="" coords="230,79,307,104"/>
-<area shape="rect" id="node6" title=" " alt="" coords="331,79,390,104"/>
+<area shape="rect" id="node1" title=" " alt="" coords="266,5,417,31"/>
+<area shape="rect" id="node2" href="$cardInstance_8h.html" title=" " alt="" coords="18,79,174,104"/>
+<area shape="rect" id="node5" title=" " alt="" coords="179,152,277,177"/>
+<area shape="rect" id="node6" href="$drawData_8h.html" title=" " alt="" coords="250,79,347,104"/>
+<area shape="rect" id="node7" title=" " alt="" coords="327,152,390,177"/>
+<area shape="rect" id="node8" title=" " alt="" coords="423,79,500,104"/>
+<area shape="rect" id="node9" title=" " alt="" coords="524,79,583,104"/>
+<area shape="rect" id="node3" href="$cardParams_8h.html" title=" " alt="" coords="5,152,155,177"/>
+<area shape="rect" id="node4" title=" " alt="" coords="43,225,117,251"/>
 </map>

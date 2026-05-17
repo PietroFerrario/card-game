@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['left_0',['Left',['../cardRenderer_8h.html#a9325a1594f3260b7d8495b8a50a1cf26a945d5e233cf7d6240f6b783b36a374ff',1,'cardRenderer.h']]]
+  ['hitarmorfirst_0',['HitArmorFirst',['../combatEvents_8h.html#aa3e8b75bcdc6b38eaa84b6d51e71cc42a3016aeee342f6a10ad6ce98c043e0c16',1,'combatEvents.h']]]
 ];

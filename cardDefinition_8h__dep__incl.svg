@@ -46,7 +46,7 @@ if (edges && edges.length) {
         </defs>
 
 <script type="text/javascript">
-var viewWidth = 2290;
+var viewWidth = 1409;
 var viewHeight = 82;
 var sectionId = 'dynsection-1';
 </script>
@@ -58,8 +58,8 @@ var sectionId = 'dynsection-1';
 <g id="node1" class="node">
 <title>Node1</title>
 <g id="a_node1"><a xlink:title=" ">
-<polygon fill="#999999" stroke="#666666" points="1180.5,-74 1057.5,-74 1057.5,-55 1180.5,-55 1180.5,-74"/>
-<text text-anchor="middle" x="1119" y="-62" font-family="Helvetica,sans-Serif" font-size="10.00">cards/cardDefinition.h</text>
+<polygon fill="#999999" stroke="#666666" points="741.5,-74 618.5,-74 618.5,-55 741.5,-55 741.5,-74"/>
+<text text-anchor="middle" x="680" y="-62" font-family="Helvetica,sans-Serif" font-size="10.00">cards/cardDefinition.h</text>
 </a>
 </g>
 </g>
@@ -75,8 +75,8 @@ var sectionId = 'dynsection-1';
 <!-- Node1&#45;&gt;Node2 -->
 <g id="edge1" class="edge">
 <title>Node1&#45;&gt;Node2</title>
-<path fill="none" stroke="#63b8ff" d="M1046.94,-61.84C885.11,-57.75 480.55,-45.54 143,-19 140.09,-18.77 137.12,-18.52 134.11,-18.25"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="1047.17,-65.34 1057.25,-62.1 1047.34,-58.35 1047.17,-65.34"/>
+<path fill="none" stroke="#63b8ff" d="M608.36,-58.22C505.36,-50.48 309.47,-35.2 143,-19 140.09,-18.72 137.12,-18.42 134.13,-18.11"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="608.1,-61.71 618.34,-58.97 608.63,-54.73 608.1,-61.71"/>
 </g>
 <!-- Node3 -->
 <g id="node3" class="node">
@@ -90,8 +90,8 @@ var sectionId = 'dynsection-1';
 <!-- Node1&#45;&gt;Node3 -->
 <g id="edge2" class="edge">
 <title>Node1&#45;&gt;Node3</title>
-<path fill="none" stroke="#63b8ff" d="M1047.45,-61.17C903.6,-56.15 569.13,-42.8 289,-19 286.08,-18.75 283.09,-18.48 280.07,-18.19"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="1047.36,-64.67 1057.48,-61.51 1047.6,-57.67 1047.36,-64.67"/>
+<path fill="none" stroke="#63b8ff" d="M608.12,-55.38C529.68,-46.5 400.4,-31.82 289,-19 286.08,-18.66 283.1,-18.32 280.09,-17.97"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="608.04,-58.89 618.37,-56.54 608.83,-51.93 608.04,-58.89"/>
 </g>
 <!-- Node4 -->
 <g id="node4" class="node">
@@ -105,8 +105,8 @@ var sectionId = 'dynsection-1';
 <!-- Node1&#45;&gt;Node4 -->
 <g id="edge3" class="edge">
 <title>Node1&#45;&gt;Node4</title>
-<path fill="none" stroke="#63b8ff" d="M1046.79,-59.4C925.34,-52.33 672.51,-36.87 459,-19 456.19,-18.76 453.33,-18.52 450.44,-18.26"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="1046.89,-62.91 1057.07,-59.99 1047.29,-55.92 1046.89,-62.91"/>
+<path fill="none" stroke="#63b8ff" d="M620.81,-53.25C563.35,-43.3 477.14,-28.36 423.3,-19.04"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="620.39,-56.73 630.84,-54.98 621.58,-49.83 620.39,-56.73"/>
 </g>
 <!-- Node5 -->
 <g id="node5" class="node">
@@ -120,158 +120,83 @@ var sectionId = 'dynsection-1';
 <!-- Node1&#45;&gt;Node5 -->
 <g id="edge4" class="edge">
 <title>Node1&#45;&gt;Node5</title>
-<path fill="none" stroke="#63b8ff" d="M1047.12,-58.02C947.36,-50.25 761.32,-35.17 603,-19 599.99,-18.69 596.92,-18.37 593.82,-18.03"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="1047.14,-61.53 1057.38,-58.82 1047.68,-54.55 1047.14,-61.53"/>
+<path fill="none" stroke="#63b8ff" d="M646.41,-51.55C618.74,-41.71 580.16,-27.98 555.38,-19.17"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="645.47,-54.93 656.06,-54.98 647.81,-48.34 645.47,-54.93"/>
 </g>
 <!-- Node6 -->
 <g id="node6" class="node">
 <title>Node6</title>
-<g id="a_node6"><a xlink:href="drawCardsEffect_8cpp.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="#666666" points="764,-19 612,-19 612,0 764,0 764,-19"/>
-<text text-anchor="middle" x="688" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">effects/drawCardsEffect.cpp</text>
+<g id="a_node6"><a xlink:href="cardFactory_8cpp.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="#666666" points="748.5,-19 611.5,-19 611.5,0 748.5,0 748.5,-19"/>
+<text text-anchor="middle" x="680" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">factories/cardFactory.cpp</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node6 -->
 <g id="edge5" class="edge">
 <title>Node1&#45;&gt;Node6</title>
-<path fill="none" stroke="#63b8ff" d="M1047.18,-54.67C966.55,-44.75 836.64,-28.78 757.13,-19"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="1046.9,-58.16 1057.25,-55.91 1047.75,-51.21 1046.9,-58.16"/>
+<path fill="none" stroke="#63b8ff" d="M680,-44.66C680,-35.93 680,-25.99 680,-19.09"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="676.5,-44.75 680,-54.75 683.5,-44.75 676.5,-44.75"/>
 </g>
 <!-- Node7 -->
 <g id="node7" class="node">
 <title>Node7</title>
-<g id="a_node7"><a xlink:href="gainActionsEffect_8cpp.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="#666666" points="940,-19 782,-19 782,0 940,0 940,-19"/>
-<text text-anchor="middle" x="861" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">effects/gainActionsEffect.cpp</text>
+<g id="a_node7"><a xlink:href="cardsLoader_8cpp.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="#666666" points="907.5,-19 766.5,-19 766.5,0 907.5,0 907.5,-19"/>
+<text text-anchor="middle" x="837" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">factories/cardsLoader.cpp</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node7 -->
 <g id="edge6" class="edge">
 <title>Node1&#45;&gt;Node7</title>
-<path fill="none" stroke="#63b8ff" d="M1067.6,-52.94C1019.24,-43.01 947.72,-28.31 902.78,-19.08"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="1067.05,-56.4 1077.55,-54.98 1068.46,-49.54 1067.05,-56.4"/>
+<path fill="none" stroke="#63b8ff" d="M715.05,-51.67C744.32,-41.79 785.37,-27.93 811.58,-19.08"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="713.58,-48.47 705.22,-54.98 715.82,-55.1 713.58,-48.47"/>
 </g>
 <!-- Node8 -->
 <g id="node8" class="node">
 <title>Node8</title>
-<g id="a_node8"><a xlink:href="gainArmorEffect_8cpp.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="#666666" points="1110,-19 958,-19 958,0 1110,0 1110,-19"/>
-<text text-anchor="middle" x="1034" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">effects/gainArmorEffect.cpp</text>
+<g id="a_node8"><a xlink:href="matchEvent_8cpp.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="#666666" points="1090,-19 926,-19 926,0 1090,0 1090,-19"/>
+<text text-anchor="middle" x="1008" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">game_events/matchEvent.cpp</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node8 -->
 <g id="edge7" class="edge">
 <title>Node1&#45;&gt;Node8</title>
-<path fill="none" stroke="#63b8ff" d="M1096.43,-49.42C1081,-39.81 1061.05,-27.37 1047.91,-19.17"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="1095.01,-52.66 1105.34,-54.98 1098.71,-46.72 1095.01,-52.66"/>
+<path fill="none" stroke="#63b8ff" d="M742.68,-53.37C804.27,-43.42 897.21,-28.4 955.16,-19.04"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="742.01,-49.93 732.7,-54.98 743.13,-56.84 742.01,-49.93"/>
 </g>
 <!-- Node9 -->
 <g id="node9" class="node">
 <title>Node9</title>
-<g id="a_node9"><a xlink:href="gainAttackEffect_8cpp.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="#666666" points="1281.5,-19 1128.5,-19 1128.5,0 1281.5,0 1281.5,-19"/>
-<text text-anchor="middle" x="1205" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">effects/gainAttackEffect.cpp</text>
+<g id="a_node9"><a xlink:href="cardmatch_8cpp.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="#666666" points="1269.5,-19 1108.5,-19 1108.5,0 1269.5,0 1269.5,-19"/>
+<text text-anchor="middle" x="1189" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">game_system/cardmatch.cpp</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node9 -->
 <g id="edge8" class="edge">
 <title>Node1&#45;&gt;Node9</title>
-<path fill="none" stroke="#63b8ff" d="M1141.4,-49.7C1157.07,-40.04 1177.51,-27.44 1190.93,-19.17"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="1139.49,-46.76 1132.82,-54.98 1143.17,-52.72 1139.49,-46.76"/>
+<path fill="none" stroke="#63b8ff" d="M751.63,-56.04C845.56,-46.26 1009.91,-29.15 1108.18,-18.92"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="751.23,-52.56 741.65,-57.08 751.96,-59.53 751.23,-52.56"/>
 </g>
 <!-- Node10 -->
 <g id="node10" class="node">
 <title>Node10</title>
-<g id="a_node10"><a xlink:href="hostageCardEffect_8cpp.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="#666666" points="1462,-19 1300,-19 1300,0 1462,0 1462,-19"/>
-<text text-anchor="middle" x="1381" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">effects/hostageCardEffect.cpp</text>
+<g id="a_node10"><a xlink:href="cardRenderer_8cpp.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="#666666" points="1400.5,-19 1287.5,-19 1287.5,0 1400.5,0 1400.5,-19"/>
+<text text-anchor="middle" x="1344" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">ui/cardRenderer.cpp</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node10 -->
 <g id="edge9" class="edge">
 <title>Node1&#45;&gt;Node10</title>
-<path fill="none" stroke="#63b8ff" d="M1171.2,-52.94C1220.31,-43.01 1292.93,-28.31 1338.58,-19.08"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="1170.2,-49.57 1161.09,-54.98 1171.59,-56.43 1170.2,-49.57"/>
-</g>
-<!-- Node11 -->
-<g id="node11" class="node">
-<title>Node11</title>
-<g id="a_node11"><a xlink:href="limitCardToPlayEffect_8cpp.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="#666666" points="1657.5,-19 1480.5,-19 1480.5,0 1657.5,0 1657.5,-19"/>
-<text text-anchor="middle" x="1569" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">effects/limitCardToPlayEffect.cpp</text>
-</a>
-</g>
-</g>
-<!-- Node1&#45;&gt;Node11 -->
-<g id="edge10" class="edge">
-<title>Node1&#45;&gt;Node11</title>
-<path fill="none" stroke="#63b8ff" d="M1190.57,-55.07C1274.38,-45.2 1412.43,-28.94 1496.6,-19.03"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="1190.15,-51.6 1180.63,-56.24 1190.97,-58.55 1190.15,-51.6"/>
-</g>
-<!-- Node12 -->
-<g id="node12" class="node">
-<title>Node12</title>
-<g id="a_node12"><a xlink:href="cardFactory_8cpp.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="#666666" points="1812.5,-19 1675.5,-19 1675.5,0 1812.5,0 1812.5,-19"/>
-<text text-anchor="middle" x="1744" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">factories/cardFactory.cpp</text>
-</a>
-</g>
-</g>
-<!-- Node1&#45;&gt;Node12 -->
-<g id="edge11" class="edge">
-<title>Node1&#45;&gt;Node12</title>
-<path fill="none" stroke="#63b8ff" d="M1190.83,-58.33C1295.6,-50.64 1496.42,-35.34 1667,-19 1669.68,-18.74 1672.41,-18.48 1675.16,-18.2"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="1190.41,-54.85 1180.69,-59.08 1190.92,-61.84 1190.41,-54.85"/>
-</g>
-<!-- Node13 -->
-<g id="node13" class="node">
-<title>Node13</title>
-<g id="a_node13"><a xlink:href="cardsLoader_8cpp.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="#666666" points="1971.5,-19 1830.5,-19 1830.5,0 1971.5,0 1971.5,-19"/>
-<text text-anchor="middle" x="1901" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">factories/cardsLoader.cpp</text>
-</a>
-</g>
-</g>
-<!-- Node1&#45;&gt;Node13 -->
-<g id="edge12" class="edge">
-<title>Node1&#45;&gt;Node13</title>
-<path fill="none" stroke="#63b8ff" d="M1190.67,-60.01C1317.91,-53.57 1591.55,-38.68 1822,-19 1824.75,-18.77 1827.55,-18.52 1830.38,-18.25"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="1190.47,-56.51 1180.66,-60.51 1190.82,-63.5 1190.47,-56.51"/>
-</g>
-<!-- Node14 -->
-<g id="node14" class="node">
-<title>Node14</title>
-<g id="a_node14"><a xlink:href="cardmatch_8cpp.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="#666666" points="2150.5,-19 1989.5,-19 1989.5,0 2150.5,0 2150.5,-19"/>
-<text text-anchor="middle" x="2070" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">game_system/cardmatch.cpp</text>
-</a>
-</g>
-</g>
-<!-- Node1&#45;&gt;Node14 -->
-<g id="edge13" class="edge">
-<title>Node1&#45;&gt;Node14</title>
-<path fill="none" stroke="#63b8ff" d="M1191.04,-60.84C1339.12,-55.15 1688.38,-40.52 1981,-19 1983.79,-18.8 1986.62,-18.58 1989.48,-18.35"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="1190.59,-57.36 1180.73,-61.24 1190.85,-64.35 1190.59,-57.36"/>
-</g>
-<!-- Node15 -->
-<g id="node15" class="node">
-<title>Node15</title>
-<g id="a_node15"><a xlink:href="cardRenderer_8cpp.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="#666666" points="2281.5,-19 2168.5,-19 2168.5,0 2281.5,0 2281.5,-19"/>
-<text text-anchor="middle" x="2225" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">ui/cardRenderer.cpp</text>
-</a>
-</g>
-</g>
-<!-- Node1&#45;&gt;Node15 -->
-<g id="edge14" class="edge">
-<title>Node1&#45;&gt;Node15</title>
-<path fill="none" stroke="#63b8ff" d="M1190.75,-62.59C1359.87,-59.97 1796.62,-50.47 2160,-19 2162.72,-18.76 2165.5,-18.5 2168.31,-18.21"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="1190.67,-59.09 1180.72,-62.74 1190.77,-66.09 1190.67,-59.09"/>
+<path fill="none" stroke="#63b8ff" d="M751.97,-59.46C864.55,-52.84 1089.12,-38.45 1279,-19 1281.72,-18.72 1284.5,-18.42 1287.3,-18.1"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="751.53,-55.98 741.75,-60.05 751.94,-62.96 751.53,-55.98"/>
 </g>
 </g>
 </svg>

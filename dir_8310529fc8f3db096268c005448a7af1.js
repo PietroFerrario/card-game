@@ -2,6 +2,8 @@ var dir_8310529fc8f3db096268c005448a7af1 =
 [
     [ "cardmatch.cpp", "cardmatch_8cpp.html", null ],
     [ "cardmatch.h", "cardmatch_8h.html", "cardmatch_8h" ],
+    [ "eventSequence.cpp", "eventSequence_8cpp.html", null ],
+    [ "eventSequence.h", "eventSequence_8h.html", "eventSequence_8h" ],
     [ "game.cpp", "game_8cpp.html", null ],
     [ "game.h", "game_8h.html", "game_8h" ],
     [ "matchData.h", "matchData_8h.html", "matchData_8h" ]
