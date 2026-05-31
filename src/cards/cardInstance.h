@@ -58,8 +58,8 @@ class CardInstance
   private:
     const CardDefinition* m_definition; ///< Non-owning pointer to shared static definition.
 
-    CardParams m_baseCardParams{}; ///< Runtime card parameters values (static during combat).
-    CardParams m_temporaryModifiersParams{};
+    CardParams m_baseCardParams{}; ///< Base card parameters values (static during combat).
+    CardParams m_temporaryModifiersParams{}; ///< Modifiers applied during combat.
 
     int m_cost{}; ///< Runtime cost (modifiable during combat).
 };
