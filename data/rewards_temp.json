@@ -6,7 +6,7 @@
                 {
                     "rewardType": "economic",
                     "rewardName": "Gold Chest",
-                    "description": "Getting some money!",
+                    "description": "Gain 2 gold coins!",
                     "effectList": [
                         {
                             "effectType": "gainMoney",
@@ -23,14 +23,14 @@
                     ]
                 },
                 {
-                    "rewardType": "economic",
-                    "rewardName": "Gold Pouch",
-                    "description": "Getting some money!",
+                    "rewardType": "upgradeDeck",
+                    "rewardName": "Wanderer Farmer",
+                    "description": "You gain a farmer",
                     "effectList": [
                         {
-                            "effectType": "gainMoney",
-                            "amount": 5,
-                            "cardId": "",
+                            "effectType": "gainCard",
+                            "amount": 0,
+                            "cardId": "Farmer",
                             "upgradeCardParams": []
                         }
                     ]
@@ -38,7 +38,7 @@
                 {
                     "rewardType": "economic",
                     "rewardName": "Gold Sack",
-                    "description": "Getting some money!",
+                    "description": "Gain 7 gold coins",
                     "effectList": [
                         {
                             "effectType": "gainMoney",

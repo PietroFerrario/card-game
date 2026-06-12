@@ -62,8 +62,13 @@ void TerminalRewardView::showSelectedReward(std::string_view rewardNameSelected)
 {
     showFancyDivisor();
     m_io.println(std::format("You selected {} as a reward.", rewardNameSelected));
-    showFancyDivisor();
 }
+
+void TerminalRewardView::showSelectedRewardDescription(std::string_view rewardDescription) const
+{
+    m_io.println(std::format("{}", rewardDescription));
+    showFancyDivisor();
+};
 
 std::string TerminalRewardView::color(AnsiColor color, const std::string& text)
 {

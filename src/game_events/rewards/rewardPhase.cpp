@@ -37,6 +37,7 @@ void RewardPhase::resolveOptionEffects(int optionsIndex)
 {
     RewardOption& selectedReward{m_rewardOptionList.at(optionsIndex)};
     m_rewardView.showSelectedReward(selectedReward.getName());
+    m_rewardView.showSelectedRewardDescription(selectedReward.getDescription());
 
     for (const auto& rewardEffectPtr : selectedReward.getRewardEffectList())
     {

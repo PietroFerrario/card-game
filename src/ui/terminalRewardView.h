@@ -21,6 +21,7 @@ class TerminalRewardView : public IRewardView
     RewardDecision askPlayerReward(int limit) override;
     void showSkippingReward() const override;
     void showSelectedReward(std::string_view rewardNameSelected) const override;
+    void showSelectedRewardDescription(std::string_view rewardDescription) const override;
 
     void showRewardOptions(const std::vector<RewardOption>& rewardListToRender) const override;
 

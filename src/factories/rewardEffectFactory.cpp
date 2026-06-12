@@ -1,7 +1,9 @@
 #include "rewardEffectFactory.h"
+#include "game_events/rewards/reward_effects/gainCardRewardEffect.h"
 #include "game_events/rewards/reward_effects/gainMoneyRewardEffect.h"
 
 #include <cassert>
+#include <string_view>
 
 std::unique_ptr<RewardEffect>
 RewardEffectFactory::makeRewardEffect(const RewardEffectData& rewardEffectData)
@@ -26,8 +28,9 @@ RewardEffectFactory::makeGainMoneyRewardEffect(const RewardEffectData& rewardEff
 std::unique_ptr<RewardEffect>
 RewardEffectFactory::makeGainCardRewardEffect(const RewardEffectData& rewardEffectData)
 {
-    return nullptr;
+    return std::make_unique<GainCardRewardEffect>(rewardEffectData.cardId);
 }
+
 std::unique_ptr<RewardEffect>
 RewardEffectFactory::makeUpgradeCardRewardEffect(const RewardEffectData& rewardEffectData)
 {

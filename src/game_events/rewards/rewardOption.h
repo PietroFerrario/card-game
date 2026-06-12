@@ -14,7 +14,7 @@ enum class RewardOptionType
     Equip,
     Quest,
     Economic,
-    GainCard
+    UpgradeDeck
 };
 
 class RewardOption

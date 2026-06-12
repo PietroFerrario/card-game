@@ -21,6 +21,10 @@ std::vector<RewardOption> RewardLoader::loadRewardList(std::string_view rewardLi
 
     for (const auto& rewardList : rewardLists)
     {
+        std::cout << "Checking rewardListId: ["
+                  << rewardList.at("rewardListId").get_ref<const std::string&>() << "] vs ["
+                  << rewardListId << "]\n";
+
         if (rewardList.at("rewardListId").get_ref<const std::string&>() == rewardListId)
         {
             for (const auto& rewardData : rewardList.at("rewards"))

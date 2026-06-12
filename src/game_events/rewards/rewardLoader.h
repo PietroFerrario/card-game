@@ -27,7 +27,7 @@ class RewardLoader
     inline static const std::unordered_map<std::string_view, RewardOptionType>
         m_rewardOptionTypeMap{{"equip", RewardOptionType::Equip},
                               {"economic", RewardOptionType::Economic},
-                              {"gainCard", RewardOptionType::GainCard},
+                              {"upgradeDeck", RewardOptionType::UpgradeDeck},
                               {"quest", RewardOptionType::Quest}};
 
     inline static const std::unordered_map<std::string_view, RewardEffectType>

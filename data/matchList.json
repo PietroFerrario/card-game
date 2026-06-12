@@ -6,7 +6,7 @@
         },
         {
             "enemyId": "bandits",
-            "rewardListId": "banditSecond"
+            "rewardListId": "banditFirst"
         }
     ]
 }
