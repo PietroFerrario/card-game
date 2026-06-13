@@ -5,7 +5,7 @@ var dir_80b2bdf578a5290e4aa877db1f8440ce =
     [ "deckEntry.h", "deckEntry_8h.html", "deckEntry_8h" ],
     [ "deckLoader.cpp", "deckLoader_8cpp.html", "deckLoader_8cpp" ],
     [ "deckLoader.h", "deckLoader_8h.html", "deckLoader_8h" ],
-    [ "deckPlayer.cpp", "deckPlayer_8cpp.html", "deckPlayer_8cpp" ],
+    [ "deckPlayer.cpp", "deckPlayer_8cpp.html", null ],
     [ "deckPlayer.h", "deckPlayer_8h.html", "deckPlayer_8h" ],
     [ "drawData.h", "drawData_8h.html", "drawData_8h" ]
 ];

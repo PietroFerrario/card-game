@@ -104,7 +104,7 @@ $(document).ready(function(){initNavTree('classICardFactory.html',''); initResiz
 <div class="dynheader">
 Inheritance diagram for ICardFactory:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classICardFactory__inherit__graph.svg" width="171" height="287"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classICardFactory__inherit__graph.svg" width="164" height="258"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div class="dynheader">
@@ -116,9 +116,9 @@ Collaboration diagram for ICardFactory:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:afeea595a6787983bff6909b01fce49cd"><td class="memItemLeft" align="right" valign="top">virtual std::unique_ptr&lt; <a class="el" href="classCardInstance.html">CardInstance</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classICardFactory.html#afeea595a6787983bff6909b01fce49cd">makeSingleCard</a> (const std::string &amp;cardId) const =0</td></tr>
-<tr class="memdesc:afeea595a6787983bff6909b01fce49cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new <a class="el" href="classCardInstance.html" title="Represents a runtime instance of a card during combat.">CardInstance</a> identified by the given card ID.  <br /></td></tr>
-<tr class="separator:afeea595a6787983bff6909b01fce49cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeea7b050f61d1541389d6a943fe5a26e"><td class="memItemLeft" align="right" valign="top">virtual std::unique_ptr&lt; <a class="el" href="classCardInstance.html">CardInstance</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classICardFactory.html#aeea7b050f61d1541389d6a943fe5a26e">makeSingleCard</a> (const <a class="el" href="structDeckEntry.html">DeckEntry</a> &amp;deckEntry) const =0</td></tr>
+<tr class="memdesc:aeea7b050f61d1541389d6a943fe5a26e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new <a class="el" href="classCardInstance.html" title="Represents a runtime instance of a card during combat.">CardInstance</a> identified by the given card ID.  <br /></td></tr>
+<tr class="separator:aeea7b050f61d1541389d6a943fe5a26e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a25e5f79224a1b7e4ccbea1bf2c17346d"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classICardFactory.html#a25e5f79224a1b7e4ccbea1bf2c17346d">~ICardFactory</a> ()=default</td></tr>
 <tr class="memdesc:a25e5f79224a1b7e4ccbea1bf2c17346d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Virtual destructor.  <br /></td></tr>
 <tr class="separator:a25e5f79224a1b7e4ccbea1bf2c17346d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -155,8 +155,8 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="afeea595a6787983bff6909b01fce49cd" name="afeea595a6787983bff6909b01fce49cd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afeea595a6787983bff6909b01fce49cd">&#9670;&#160;</a></span>makeSingleCard()</h2>
+<a id="aeea7b050f61d1541389d6a943fe5a26e" name="aeea7b050f61d1541389d6a943fe5a26e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeea7b050f61d1541389d6a943fe5a26e">&#9670;&#160;</a></span>makeSingleCard()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -167,8 +167,8 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">virtual std::unique_ptr&lt; <a class="el" href="classCardInstance.html">CardInstance</a> &gt; ICardFactory::makeSingleCard </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>cardId</em></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="structDeckEntry.html">DeckEntry</a> &amp;&#160;</td>
+          <td class="paramname"><em>deckEntry</em></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -188,7 +188,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Owned <a class="el" href="classCardInstance.html" title="Represents a runtime instance of a card during combat.">CardInstance</a>. </dd></dl>
 
-<p>Implemented in <a class="el" href="classCardFactory.html#ad84658f1bed6a00f1484022899369a82">CardFactory</a>.</p>
+<p>Implemented in <a class="el" href="classCardFactory.html#a6ba168d7bdd5fb0081776cd29a24de59">CardFactory</a>.</p>
 
 </div>
 </div>

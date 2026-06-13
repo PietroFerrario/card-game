@@ -1,0 +1,17 @@
+<map id="game_events/rewards/reward_effects/gainCardRewardEffect.h" name="game_events/rewards/reward_effects/gainCardRewardEffect.h">
+<area shape="rect" id="node1" title=" " alt="" coords="291,5,525,60"/>
+<area shape="rect" id="node2" href="$deckPlayer_8h.html" title=" " alt="" coords="335,255,475,280"/>
+<area shape="rect" id="node6" title=" " alt="" coords="208,401,267,427"/>
+<area shape="rect" id="node12" href="$rewardEffect_8h.html" title=" " alt="" coords="350,108,466,133"/>
+<area shape="rect" id="node3" href="$deckEntry_8h.html" title=" " alt="" coords="695,328,793,353"/>
+<area shape="rect" id="node7" title=" " alt="" coords="489,328,569,353"/>
+<area shape="rect" id="node8" title=" " alt="" coords="593,328,671,353"/>
+<area shape="rect" id="node9" title=" " alt="" coords="145,328,242,353"/>
+<area shape="rect" id="node10" title=" " alt="" coords="405,328,465,353"/>
+<area shape="rect" id="node11" title=" " alt="" coords="266,328,329,353"/>
+<area shape="rect" id="node4" href="$cardParams_8h.html" title=" " alt="" coords="743,401,892,427"/>
+<area shape="rect" id="node5" title=" " alt="" coords="780,475,855,500"/>
+<area shape="rect" id="node13" href="$player_8h.html" title=" " alt="" coords="234,181,361,207"/>
+<area shape="rect" id="node15" href="$rewardEffectData_8h.html" title=" " alt="" coords="817,328,964,353"/>
+<area shape="rect" id="node14" href="$entity_8h.html" title=" " alt="" coords="138,255,209,280"/>
+</map>

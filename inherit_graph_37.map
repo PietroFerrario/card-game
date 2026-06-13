@@ -1,4 +1,5 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classRewardEffect.html" title=" " alt="" coords="5,5,113,31"/>
-<area shape="rect" id="node2" href="$classGainMoneyRewardEffect.html" title=" " alt="" coords="161,5,344,31"/>
+<area shape="rect" id="node1" href="$classRewardEffect.html" title=" " alt="" coords="5,31,113,56"/>
+<area shape="rect" id="node2" href="$classGainCardRewardEffect.html" title=" " alt="" coords="169,5,337,31"/>
+<area shape="rect" id="node3" href="$classGainMoneyRewardEffect.html" title=" " alt="" coords="161,55,344,80"/>
 </map>

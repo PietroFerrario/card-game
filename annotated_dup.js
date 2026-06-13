@@ -28,6 +28,7 @@ var annotated_dup =
     [ "GainActionsEffect", "classGainActionsEffect.html", "classGainActionsEffect" ],
     [ "GainArmorEffect", "classGainArmorEffect.html", "classGainArmorEffect" ],
     [ "GainAttackEffect", "classGainAttackEffect.html", "classGainAttackEffect" ],
+    [ "GainCardRewardEffect", "classGainCardRewardEffect.html", "classGainCardRewardEffect" ],
     [ "GainMoneyRewardEffect", "classGainMoneyRewardEffect.html", "classGainMoneyRewardEffect" ],
     [ "Game", "classGame.html", "classGame" ],
     [ "GameEvent", "classGameEvent.html", "classGameEvent" ],

@@ -105,7 +105,7 @@ $(document).ready(function(){initNavTree('classDeckPlayer.html',''); initResizab
 <div class="dynheader">
 Collaboration diagram for DeckPlayer:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classDeckPlayer__coll__graph.svg" width="210" height="176"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classDeckPlayer__coll__graph.svg" width="210" height="162"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <table class="memberdecls">
@@ -126,9 +126,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab7fbfcfc52e0ecb093631c7fa070d8f1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDeckPlayer.html#ab7fbfcfc52e0ecb093631c7fa070d8f1">addCard</a> (std::string_view cardId)</td></tr>
 <tr class="memdesc:ab7fbfcfc52e0ecb093631c7fa070d8f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a card to the deck, if below max size.  <br /></td></tr>
 <tr class="separator:ab7fbfcfc52e0ecb093631c7fa070d8f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab39bc3a66e5ec2d58532987fe173a1e8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDeckPlayer.html#ab39bc3a66e5ec2d58532987fe173a1e8">removeCard</a> (std::string_view cardId)</td></tr>
-<tr class="memdesc:ab39bc3a66e5ec2d58532987fe173a1e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes one copy of a card, if above minimum size.  <br /></td></tr>
-<tr class="separator:ab39bc3a66e5ec2d58532987fe173a1e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a85848e76f0fef7bc1ccdf959020abe9e"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="structDeckEntry.html">DeckEntry</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDeckPlayer.html#a85848e76f0fef7bc1ccdf959020abe9e">getCardList</a> () const</td></tr>
 <tr class="memdesc:a85848e76f0fef7bc1ccdf959020abe9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the full list of card entries.  <br /></td></tr>
 <tr class="separator:a85848e76f0fef7bc1ccdf959020abe9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -307,34 +304,6 @@ Friends</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if at least one copy exists, false otherwise. </dd></dl>
-
-</div>
-</div>
-<a id="ab39bc3a66e5ec2d58532987fe173a1e8" name="ab39bc3a66e5ec2d58532987fe173a1e8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab39bc3a66e5ec2d58532987fe173a1e8">&#9670;&#160;</a></span>removeCard()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool DeckPlayer::removeCard </td>
-          <td>(</td>
-          <td class="paramtype">std::string_view&#160;</td>
-          <td class="paramname"><em>cardId</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Removes one copy of a card, if above minimum size. </p>
-<p>If the last copy is removed, the entry is erased entirely.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">cardId</td><td>ID of the card to remove. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>true if removed, false otherwise. </dd></dl>
 
 </div>
 </div>

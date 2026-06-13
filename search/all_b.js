@@ -13,7 +13,7 @@ var searchData=
   ['makeeffectlist_10',['makeEffectList',['../classEffectFactory.html#aec9b8cce15cf005e58715743387a6373',1,'EffectFactory']]],
   ['makeenemy_11',['makeEnemy',['../namespaceEnemyFactory.html#ac5300ff74b77bcbad6ceb3b741d7cdd0',1,'EnemyFactory']]],
   ['makerewardeffect_12',['makeRewardEffect',['../classRewardEffectFactory.html#a74f03d72553a94b48f31f0c516eb5325',1,'RewardEffectFactory']]],
-  ['makesinglecard_13',['makeSingleCard',['../classCardFactory.html#ad84658f1bed6a00f1484022899369a82',1,'CardFactory::makeSingleCard()'],['../classICardFactory.html#afeea595a6787983bff6909b01fce49cd',1,'ICardFactory::makeSingleCard()']]],
+  ['makesinglecard_13',['makeSingleCard',['../classCardFactory.html#a6ba168d7bdd5fb0081776cd29a24de59',1,'CardFactory::makeSingleCard()'],['../classICardFactory.html#aeea7b050f61d1541389d6a943fe5a26e',1,'ICardFactory::makeSingleCard()']]],
   ['matchdata_14',['MatchData',['../structMatchData.html',1,'']]],
   ['matchdata_2eh_15',['matchData.h',['../matchData_8h.html',1,'']]],
   ['matchevent_16',['MatchEvent',['../classMatchEvent.html',1,'MatchEvent'],['../classMatchEvent.html#a14397fa532350186d17bb6a3bda67381',1,'MatchEvent::MatchEvent()']]],

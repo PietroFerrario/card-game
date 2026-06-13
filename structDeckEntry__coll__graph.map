@@ -1,5 +1,7 @@
 <map id="DeckEntry" name="DeckEntry">
-<area shape="rect" id="node1" title="Represents a single card entry in the player&#39;s persistent deck." alt="" coords="33,145,122,223"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,5,64,83"/>
-<area shape="rect" id="node3" title=" " alt="" coords="102,5,141,83"/>
+<area shape="rect" id="node1" title="Represents a single card entry in the player&#39;s persistent deck." alt="" coords="33,329,122,407"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,189,64,267"/>
+<area shape="rect" id="node3" href="$structCardParams.html" title="Numeric parameters used to resolve gameplay effects." alt="" coords="89,189,189,267"/>
+<area shape="rect" id="node4" title=" " alt="" coords="67,5,106,83"/>
+<area shape="rect" id="node5" title=" " alt="" coords="131,5,253,83"/>
 </map>

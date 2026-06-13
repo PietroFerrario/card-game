@@ -1,5 +1,5 @@
 <map id="DrawResult" name="DrawResult">
-<area shape="rect" id="node1" title=" " alt="" coords="47,204,145,281"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,35,56,112"/>
-<area shape="rect" id="node3" href="$classCardInstance.html" title="Represents a runtime instance of a card during combat." alt="" coords="81,5,242,141"/>
+<area shape="rect" id="node1" title=" " alt="" coords="47,336,145,413"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,101,56,178"/>
+<area shape="rect" id="node3" href="$classCardInstance.html" title="Represents a runtime instance of a card during combat." alt="" coords="81,5,242,273"/>
 </map>

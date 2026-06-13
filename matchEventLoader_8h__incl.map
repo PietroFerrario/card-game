@@ -1,11 +1,13 @@
 <map id="game_events/matchEventLoader.h" name="game_events/matchEventLoader.h">
-<area shape="rect" id="node1" title=" " alt="" coords="421,5,668,31"/>
-<area shape="rect" id="node2" href="$deckEntry_8h.html" title=" " alt="" coords="5,79,137,104"/>
-<area shape="rect" id="node4" href="$enemyId_8h.html" title=" " alt="" coords="255,152,459,177"/>
-<area shape="rect" id="node5" href="$matchEventData_8h.html" title=" " alt="" coords="162,79,397,104"/>
-<area shape="rect" id="node6" title=" " alt="" coords="471,79,618,104"/>
-<area shape="rect" id="node7" title=" " alt="" coords="643,79,740,104"/>
-<area shape="rect" id="node8" title=" " alt="" coords="764,79,888,104"/>
-<area shape="rect" id="node9" title=" " alt="" coords="912,79,975,104"/>
-<area shape="rect" id="node3" title=" " alt="" coords="146,152,205,177"/>
+<area shape="rect" id="node1" title=" " alt="" coords="430,5,677,31"/>
+<area shape="rect" id="node2" href="$deckEntry_8h.html" title=" " alt="" coords="14,79,146,104"/>
+<area shape="rect" id="node6" href="$enemyId_8h.html" title=" " alt="" coords="321,152,525,177"/>
+<area shape="rect" id="node7" href="$matchEventData_8h.html" title=" " alt="" coords="171,79,405,104"/>
+<area shape="rect" id="node8" title=" " alt="" coords="480,79,627,104"/>
+<area shape="rect" id="node9" title=" " alt="" coords="651,79,749,104"/>
+<area shape="rect" id="node10" title=" " alt="" coords="773,79,897,104"/>
+<area shape="rect" id="node11" title=" " alt="" coords="921,79,983,104"/>
+<area shape="rect" id="node3" href="$cardParams_8h.html" title=" " alt="" coords="5,152,155,177"/>
+<area shape="rect" id="node5" title=" " alt="" coords="217,152,276,177"/>
+<area shape="rect" id="node4" title=" " alt="" coords="43,225,117,251"/>
 </map>
