@@ -2,6 +2,7 @@
 #define EVENTSEQUENCE_H
 
 #include "entities/player.h"
+#include "factories/ICardFactory.h"
 #include "game_events/gameEvent.h"
 #include "game_events/matchEventLoader.h"
 #include "game_events/rewards/rewardLoader.h"
@@ -14,7 +15,8 @@
 class EventSequence
 {
   public:
-    EventSequence(IMatchView& IMatchView, IRewardView& rewardView, Player& player);
+    EventSequence(IMatchView& IMatchView, IRewardView& rewardView, ICardFactory& cardFactory,
+                  Player& player);
 
     void resolveEventSequence();
 
@@ -27,6 +29,7 @@ class EventSequence
 
     Player& m_player;
 
+    ICardFactory& m_cardFactory;
     MatchEventLoader m_matchEventLoader;
     RewardLoader m_rewardLoader;
     std::vector<std::unique_ptr<GameEvent>> m_eventList;

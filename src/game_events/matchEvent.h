@@ -12,17 +12,20 @@
 #include <memory>
 #include <vector>
 
+class ICardFactory;
+
 class MatchEvent : public GameEvent
 {
   public:
-    MatchEvent(IMatchView& matchView, IRewardView& rewardView, Player& player, EnemyId enemyId,
-               std::vector<RewardOption> rewardOptionList);
+    MatchEvent(IMatchView& matchView, IRewardView& rewardView, const ICardFactory& cardFactory,
+               Player& player, EnemyId enemyId, std::vector<RewardOption> rewardOptionList);
 
     void resolve() override;
 
   private:
     IMatchView& m_matchView;
     IRewardView& m_rewardView;
+    const ICardFactory& m_cardFactory;
 
     EnemyId m_enemyId;
     std::string m_enemyName{};

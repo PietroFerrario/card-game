@@ -2,6 +2,10 @@
 
 #include <cassert>
 
+RewardOptionRenderer::RewardOptionRenderer(ICardFactory& cardFactory) : m_cardFactory{cardFactory}
+{
+}
+
 std::vector<std::string>
 RewardOptionRenderer::renderRewardOption(const RewardOption& optionToRender) const
 {
@@ -16,6 +20,15 @@ RewardOptionRenderer::renderRewardOption(const RewardOption& optionToRender) con
     if (nameLayout.secondName.has_value())
     {
         writeSlot(grid, m_secondNameSlot, fitText(m_secondNameSlot, *nameLayout.secondName));
+    }
+
+    if (optionToRender.getRewardOptionType() == RewardOptionType::UpgradeDeck)
+    {
+
+        const DeckEntry cardId{optionToRender.getRewardCardId()};
+        const auto cardInstance{m_cardFactory.makeSingleCard(cardId)};
+
+        writeCardInRewardOptionSlot(grid, m_cardSlot, *cardInstance);
     }
 
     std::vector<std::string> descriptionLayout{
@@ -248,4 +261,20 @@ void RewardOptionRenderer::writeSlot(std::vector<std::string>& grid, Slot slot,
     assert(slot.columnIndex + slot.maxWidth <= m_width && "Slot too large");
 
     grid.at(slot.rowIndex).replace(slot.columnIndex, slot.maxWidth, formattedText);
+}
+
+void RewardOptionRenderer::writeCardInRewardOptionSlot(std::vector<std::string>& grid, Slot slot,
+                                                       const CardInstance& cardToRender) const
+{
+
+    assert((slot.rowIndex >= 0 && slot.rowIndex < m_height) && "Invalid row index");
+    assert((slot.columnIndex >= 0 && slot.columnIndex < m_width) && "Invalid column index");
+    assert(slot.columnIndex + slot.maxWidth <= m_width && "Slot too large");
+
+    std::vector<std::string> renderedCard{m_cardRenderer.renderCard(cardToRender)};
+
+    for (size_t i = 0; i < renderedCard.size(); i++)
+    {
+        grid.at(slot.rowIndex + i).replace(slot.columnIndex, slot.maxWidth, renderedCard.at(i));
+    }
 }

@@ -1,6 +1,9 @@
 #include "terminalRewardView.h"
 
-TerminalRewardView::TerminalRewardView(IOText& io) : m_io{io} {}
+TerminalRewardView::TerminalRewardView(IOText& io, ICardFactory& cardFactory)
+    : m_io{io}, m_cardFactory{cardFactory}, m_rewardsRenderer{m_cardFactory}
+{
+}
 
 void TerminalRewardView::showDivisor() const
 {

@@ -1,4 +1,5 @@
 #include "rewardLoader.h"
+#include "util/debug.h"
 
 #include <cassert>
 #include <fstream>
@@ -21,20 +22,30 @@ std::vector<RewardOption> RewardLoader::loadRewardList(std::string_view rewardLi
 
     for (const auto& rewardList : rewardLists)
     {
-        std::cout << "Checking rewardListId: ["
+        DEBUG_LOG("Checking rewardListId: ["
                   << rewardList.at("rewardListId").get_ref<const std::string&>() << "] vs ["
-                  << rewardListId << "]\n";
+                  << rewardListId << "]");
 
         if (rewardList.at("rewardListId").get_ref<const std::string&>() == rewardListId)
         {
             for (const auto& rewardData : rewardList.at("rewards"))
             {
-                rewardOptionList.emplace_back(
+                RewardOption rewardOption{
                     rewardListId, rewardData.at("rewardName").get_ref<const std::string&>(),
                     m_rewardOptionTypeMap.at(
                         rewardData.at("rewardType").get_ref<const std::string&>()),
                     rewardData.at("description").get_ref<const std::string&>(),
-                    makeRewardEffectList(rewardData));
+                    makeRewardEffectList(rewardData)};
+
+                if (rewardOption.getRewardOptionType() == RewardOptionType::UpgradeDeck)
+                {
+                    rewardOption.setCardIdOptional(rewardData.at("effectList")
+                                                       .at(0)
+                                                       .at("cardId")
+                                                       .get_ref<const std::string&>());
+                }
+
+                rewardOptionList.emplace_back(std::move(rewardOption));
             }
             break;
         }

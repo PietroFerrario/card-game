@@ -2,6 +2,8 @@
 #define REWARDOPTIONRENDERER_H
 
 #include "cardRenderer.h"
+#include "cards/cardInstance.h"
+#include "factories/ICardFactory.h"
 #include "game_events/rewards/rewardOption.h"
 
 #include <string>
@@ -9,7 +11,7 @@
 class RewardOptionRenderer
 {
   public:
-    RewardOptionRenderer() = default;
+    RewardOptionRenderer(ICardFactory& cardFactory);
 
     std::vector<std::string> renderRewardOption(const RewardOption& optionToRender) const;
 
@@ -17,6 +19,9 @@ class RewardOptionRenderer
     int getRewardOptionTemplateWidth() const { return m_width; }
 
   private:
+    CardRenderer m_cardRenderer;
+    ICardFactory& m_cardFactory;
+
     /// @brief Draws the static reward option template (borders, labels) into the grid.
     void drawTemplate(std::vector<std::string>& grid) const;
 
@@ -41,6 +46,8 @@ class RewardOptionRenderer
      */
     void writeSlot(std::vector<std::string>& grid, Slot slot, std::string_view formattedText) const;
 
+    void writeCardInRewardOptionSlot(std::vector<std::string>& grid, Slot slot,
+                                     const CardInstance& cardToRender) const;
     /**
      * @brief Appends a word to a line, inserting a single space if needed.
      */
@@ -64,11 +71,14 @@ class RewardOptionRenderer
     std::vector<std::string> drawDescriptionLayout(std::string_view rewardOptionDescription,
                                                    Slot currentSlot) const;
 
-    const int m_width{45};
-    const int m_height{8};
+    const int m_width{44};
+    const int m_height{23};
 
     const int m_nameWidth{16};
     const int m_nameColumn{m_width / 2 - m_nameWidth / 2};
+
+    const int m_cardWidth{m_cardRenderer.getCardTemplateWidth()};
+    const int m_cardColumn{m_width / 2 - m_cardWidth / 2};
 
     const char m_padding{' '};
     const char m_verticalBorder{'|'};
@@ -79,7 +89,9 @@ class RewardOptionRenderer
     Slot m_firstNameSlot{1, m_nameColumn, m_nameWidth, SlotAlignment::Center};
     Slot m_secondNameSlot{2, m_nameColumn, m_nameWidth, SlotAlignment::Center};
 
-    Slot m_effectsSumSlot{7, 3, 18, SlotAlignment::Center};
+    Slot m_cardSlot{9, m_cardColumn, m_cardWidth, SlotAlignment::Center};
+
+    // Slot m_effectsSumSlot{7, 3, 18, SlotAlignment::Center};
 
     std::vector<Slot> m_descriptionSlots{{5, 2, m_width - 4, SlotAlignment::Left},
                                          {6, 2, m_width - 4, SlotAlignment::Left},

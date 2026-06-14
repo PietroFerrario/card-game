@@ -13,3 +13,9 @@ const std::vector<std::unique_ptr<RewardEffect>>& RewardOption::getRewardEffectL
 {
     return m_rewardEffectList;
 }
+
+const std::string RewardOption::getRewardCardId() const
+{
+    assert(m_cardId.has_value() && "getRewardCardId called on a rewardOption with no CardId");
+    return m_cardId.value();
+}

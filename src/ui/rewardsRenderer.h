@@ -1,6 +1,7 @@
 #ifndef REWARDSRENDERER_H
 #define REWARDSRENDERER_H
 
+#include "factories/cardFactory.h"
 #include "rewardOptionRenderer.h"
 
 #include <memory>
@@ -18,6 +19,8 @@ struct RenderedRewards
 class RewardsRenderer
 {
   public:
+    RewardsRenderer(ICardFactory& cardFactory);
+
     RenderedRewards renderRewards(const std::vector<RewardOption>& optionsToRender) const;
 
     std::vector<std::string>
@@ -25,7 +28,9 @@ class RewardsRenderer
                           size_t begin, size_t end, size_t indexBase) const;
 
   private:
-    RewardOptionRenderer m_rewardOptionRenderer{};
+    ICardFactory& m_cardFactory;
+
+    RewardOptionRenderer m_rewardOptionRenderer{m_cardFactory};
 
     std::string m_gap{"          "};
     const int m_optionLabelWidth{4};

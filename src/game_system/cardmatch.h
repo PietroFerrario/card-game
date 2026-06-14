@@ -8,7 +8,7 @@
 #include "deck/drawData.h"
 #include "entities/enemies/enemy.h"
 #include "entities/player.h"
-#include "factories/cardFactory.h"
+#include "factories/ICardFactory.h"
 #include "matchData.h"
 #include "ui/IMatchView.h"
 
@@ -43,7 +43,7 @@ class CardMatch
      * @param player Player participating in the encounter (must outlive the CardMatch).
      * @param enemy Enemy participating in the encounter (must outlive the CardMatch).
      */
-    CardMatch(IMatchView& matchView, Player& player, Enemy& enemy);
+    CardMatch(IMatchView& matchView, const ICardFactory& cardFactory, Player& player, Enemy& enemy);
 
     /**
      * @brief Draws multiple cards into the player's hand.
@@ -108,7 +108,7 @@ class CardMatch
     Player& m_player; ///< Non-owning reference to the player in the encounter.
     Enemy& m_enemy;   ///< Non-owning reference to the enemy in the encounter.
 
-    CardFactory m_cardFactory; ///< Populate the CombatDeck with CardInstances.
+    const ICardFactory& m_cardFactory; ///< Populate the CombatDeck with CardInstances.
 
     DeckCombat m_deckCombat; ///< Manage draw/discard/piles during combat.
 

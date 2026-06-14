@@ -11,8 +11,9 @@
 #include "entities/player.h"
 #include "util/debug.h"
 
-CardMatch::CardMatch(IMatchView& matchView, Player& player, Enemy& enemy)
-    : m_matchView{matchView}, m_player{player}, m_enemy{enemy}, m_cardFactory{},
+CardMatch::CardMatch(IMatchView& matchView, const ICardFactory& cardFactory, Player& player,
+                     Enemy& enemy)
+    : m_matchView{matchView}, m_cardFactory{cardFactory}, m_player{player}, m_enemy{enemy},
       m_deckCombat{m_player.getDeckPlayer(), m_cardFactory}
 {
 }

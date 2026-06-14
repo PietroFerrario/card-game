@@ -6,6 +6,7 @@ Need to merge the view at a certain point and refactor them unifying and avoidin
 */
 
 #include "IRewardView.h"
+#include "factories/ICardFactory.h"
 #include "game_system/matchData.h"
 #include "handRenderer.h"
 #include "iotext.h"
@@ -15,7 +16,7 @@ Need to merge the view at a certain point and refactor them unifying and avoidin
 class TerminalRewardView : public IRewardView
 {
   public:
-    TerminalRewardView(IOText& io);
+    TerminalRewardView(IOText& io, ICardFactory& cardFactory);
 
     void showRewardText(std::string_view enemyName) const override;
     RewardDecision askPlayerReward(int limit) override;
@@ -26,6 +27,7 @@ class TerminalRewardView : public IRewardView
     void showRewardOptions(const std::vector<RewardOption>& rewardListToRender) const override;
 
   private:
+    ICardFactory& m_cardFactory;
     IOText& m_io;
     HandRenderer m_handRenderer;
     RewardsRenderer m_rewardsRenderer;

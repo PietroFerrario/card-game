@@ -4,6 +4,8 @@
 
 #include <cassert>
 
+RewardsRenderer::RewardsRenderer(ICardFactory& cardFactory) : m_cardFactory{cardFactory} {}
+
 RenderedRewards
 RewardsRenderer::renderRewards(const std::vector<RewardOption>& optionsToRender) const
 {

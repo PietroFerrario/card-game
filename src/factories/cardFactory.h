@@ -38,17 +38,17 @@ class CardFactory : public ICardFactory
      */
     std::unique_ptr<CardInstance> makeSingleCard(const DeckEntry& deckEntry) const override;
 
-    /// @brief Destructor.
-    ~CardFactory();
-
-  private:
     /**
      * @brief Populates the factory with all static card definitions.
      *
      * Called during construction.
      */
-    void registerCards();
+    void registerCards() override;
 
+    /// @brief Destructor.
+    ~CardFactory();
+
+  private:
     /**
      * @brief Registers a new card definition.
      *

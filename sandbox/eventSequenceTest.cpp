@@ -1,6 +1,7 @@
 #include "game_system/eventSequence.h"
 #include "deck/deckLoader.h"
 #include "entities/player.h"
+#include "factories/cardFactory.h"
 #include "ui/iotext.h"
 #include "ui/terminalMatchView.h"
 #include "ui/terminalRewardView.h"
@@ -18,9 +19,11 @@ int main()
     }
 #endif
 
+    CardFactory cardFactory;
+
     IOText io{std::cout, std::cin};
     TerminalMatchView terminalMatchView{io};
-    TerminalRewardView terminalRewardView{io};
+    TerminalRewardView terminalRewardView{io, cardFactory};
 
     DeckLoader deckLoader;
 
@@ -49,7 +52,7 @@ int main()
     Player mainPlayer{deckLoader.loadDeck(deckName)};
     mainPlayer.setName("Malliano");
 
-    EventSequence eventSequence{terminalMatchView, terminalRewardView, mainPlayer};
+    EventSequence eventSequence{terminalMatchView, terminalRewardView, cardFactory, mainPlayer};
     eventSequence.resolveEventSequence();
 
     return 0;

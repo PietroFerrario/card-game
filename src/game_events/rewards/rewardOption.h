@@ -5,6 +5,7 @@
 #include "reward_effects/rewardEffect.h"
 
 #include <memory>
+#include <optional>
 #include <string>
 #include <string_view>
 #include <vector>
@@ -14,7 +15,8 @@ enum class RewardOptionType
     Equip,
     Quest,
     Economic,
-    UpgradeDeck
+    UpgradeDeck,
+    RandomCard
 };
 
 class RewardOption
@@ -27,6 +29,9 @@ class RewardOption
     std::string_view getName() const { return m_rewardOptionName; }
     std::string_view getDescription() const { return m_rewardOptionDescription; }
     const std::vector<std::unique_ptr<RewardEffect>>& getRewardEffectList() const;
+    const RewardOptionType getRewardOptionType() const { return m_rewardOptionType; }
+    void setCardIdOptional(std::string cardId) { m_cardId.emplace(cardId); }
+    const std::string getRewardCardId() const;
 
   private:
     std::string m_rewardOptionId;
@@ -34,6 +39,8 @@ class RewardOption
     RewardOptionType m_rewardOptionType;
     std::string m_rewardOptionDescription;
     std::vector<std::unique_ptr<RewardEffect>> m_rewardEffectList{};
+
+    std::optional<std::string> m_cardId;
 };
 
 #endif // REWARDOPTION_H
