@@ -56,6 +56,7 @@ var NAVTREEINDEX0 =
 "classCardDefinition.html#ad196ef1ac78ef989636e48fa3ca604d6":[3,0,1,6],
 "classCardDefinition.html#afb5d62a40699159266839c41ba9ce8f2":[3,0,1,8],
 "classCardFactory.html":[3,0,2],
+"classCardFactory.html#a0a39e5a8574a1941d88f0591cda44aa6":[3,0,2,3],
 "classCardFactory.html#a55607cb22e595af44cef12010be53e94":[3,0,2,0],
 "classCardFactory.html#a6ba168d7bdd5fb0081776cd29a24de59":[3,0,2,2],
 "classCardFactory.html#ad80116a303fb48c7d0af5871556c58a7":[3,0,2,1],
@@ -78,8 +79,8 @@ var NAVTREEINDEX0 =
 "classCardMatch.html#a0fe3c4d864e3df138b1a27cae500aa38":[3,0,4,7],
 "classCardMatch.html#a148700f4c258918677f111e45aaac259":[3,0,4,13],
 "classCardMatch.html#a2109b05136a5092a2cfda5770e9d2873":[3,0,4,2],
-"classCardMatch.html#a21db012a6db3246fa3ae2c5257dfaba5":[3,0,4,0],
 "classCardMatch.html#a3083972312286e3bcef3e392283a164f":[3,0,4,11],
+"classCardMatch.html#a3bfce4f479d7f45087d34f3625142061":[3,0,4,0],
 "classCardMatch.html#a4dc7bcd44d01a6ea26af2785cf0a907a":[3,0,4,4],
 "classCardMatch.html#a7932e3e85d254f12a6690530b0bed17a":[3,0,4,5],
 "classCardMatch.html#a794ebcf30069240092e0e025ed2a44e6":[3,0,4,3],
@@ -183,7 +184,7 @@ var NAVTREEINDEX0 =
 "classEntity.html#ad3bc2393addc7e5a8dac80ee18b5fce8":[3,0,23,10],
 "classEntity.html#ae254bcecd0c47968a24d2a43b5d25977":[3,0,23,14],
 "classEventSequence.html":[3,0,24],
-"classEventSequence.html#a264a5fb319bc12d27a0cf1d0128fa28d":[3,0,24,0],
+"classEventSequence.html#a94b2c6be6ef704b4dd4c572159580685":[3,0,24,0],
 "classEventSequence.html#af0218ae1ef828c4a9bdc96a5080db436":[3,0,24,1],
 "classGainActionsEffect.html":[3,0,25],
 "classGainActionsEffect.html#a4396482c9f183e8dd4f0df5ef5da8b1b":[3,0,25,1],
@@ -220,6 +221,7 @@ var NAVTREEINDEX0 =
 "classHostageCardEffect.html#a2410f32356ed9023e8b2a22fe8b67a98":[3,0,33,1],
 "classHostageCardEffect.html#a4c9957157ae0fd172f00514b87300b41":[3,0,33,0],
 "classICardFactory.html":[3,0,34],
+"classICardFactory.html#a15ca1c66492ca27dec2f96cb505edd0c":[3,0,34,2],
 "classICardFactory.html#a25e5f79224a1b7e4ccbea1bf2c17346d":[3,0,34,0],
 "classICardFactory.html#aeea7b050f61d1541389d6a943fe5a26e":[3,0,34,1],
 "classIMatchView.html":[3,0,35],
@@ -247,7 +249,5 @@ var NAVTREEINDEX0 =
 "classIOText.html#a4c0e0d789a06c7c1e3631a113d310351":[3,0,36,5],
 "classIOText.html#a63c08a4fa026d3eed99f15e6867dc1e2":[3,0,36,6],
 "classIOText.html#a843012173f69fb6b14c8120e583948e2":[3,0,36,2],
-"classIOText.html#a90150bc64b1354a6b4ac52f766cac984":[3,0,36,7],
-"classIOText.html#aa54660309cf0f83dd4840cb01140dfc3":[3,0,36,0],
-"classIOText.html#ae2d43f28dd4078b2cae540c2e8347701":[3,0,36,4]
+"classIOText.html#a90150bc64b1354a6b4ac52f766cac984":[3,0,36,7]
 };

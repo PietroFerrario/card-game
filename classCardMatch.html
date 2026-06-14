@@ -110,9 +110,9 @@ Collaboration diagram for CardMatch:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a21db012a6db3246fa3ae2c5257dfaba5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCardMatch.html#a21db012a6db3246fa3ae2c5257dfaba5">CardMatch</a> (<a class="el" href="classIMatchView.html">IMatchView</a> &amp;matchView, <a class="el" href="classPlayer.html">Player</a> &amp;player, <a class="el" href="classEnemy.html">Enemy</a> &amp;enemy)</td></tr>
-<tr class="memdesc:a21db012a6db3246fa3ae2c5257dfaba5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a match for the given player and enemy.  <br /></td></tr>
-<tr class="separator:a21db012a6db3246fa3ae2c5257dfaba5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3bfce4f479d7f45087d34f3625142061"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCardMatch.html#a3bfce4f479d7f45087d34f3625142061">CardMatch</a> (<a class="el" href="classIMatchView.html">IMatchView</a> &amp;matchView, const <a class="el" href="classICardFactory.html">ICardFactory</a> &amp;cardFactory, <a class="el" href="classPlayer.html">Player</a> &amp;player, <a class="el" href="classEnemy.html">Enemy</a> &amp;enemy)</td></tr>
+<tr class="memdesc:a3bfce4f479d7f45087d34f3625142061"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a match for the given player and enemy.  <br /></td></tr>
+<tr class="separator:a3bfce4f479d7f45087d34f3625142061"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a794ebcf30069240092e0e025ed2a44e6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCardMatch.html#a794ebcf30069240092e0e025ed2a44e6">drawMultipleCardsNoEffect</a> (int amount)</td></tr>
 <tr class="memdesc:a794ebcf30069240092e0e025ed2a44e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws multiple cards into the player's hand.  <br /></td></tr>
 <tr class="separator:a794ebcf30069240092e0e025ed2a44e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -157,8 +157,8 @@ Public Member Functions</h2></td></tr>
 <p><a class="el" href="classCardMatch.html" title="Orchestrates a single combat encounter between one player and one enemy.">CardMatch</a> owns the runtime combat deck (<a class="el" href="classDeckCombat.html" title="Manages all card piles during a single combat.">DeckCombat</a>) and the rules engine (<a class="el" href="classCombatSystem.html" title="Central authority for combat rules and state mutation.">CombatSystem</a>). <a class="el" href="classPlayer.html" title="Player-controlled entity with a persistent deck.">Player</a> and <a class="el" href="classEnemy.html" title="Base class for enemies with a predefined move sequence.">Enemy</a> objects are referenced and must outlive the <a class="el" href="classCardMatch.html" title="Orchestrates a single combat encounter between one player and one enemy.">CardMatch</a>.</p>
 <p><a class="el" href="classEffect.html" title="Abstract base class for all card effects.">Effect</a> resolution is performed using <a class="el" href="classCombatContext.html" title="Execution context for resolving combat effects.">CombatContext</a>, which routes effect requests to <a class="el" href="classCombatSystem.html" title="Central authority for combat rules and state mutation.">CombatSystem</a>. See <a class="el" href="combat_effect_pipeline.html">Combat Effect Resolution Pipeline</a> for the full resolution flow. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a21db012a6db3246fa3ae2c5257dfaba5" name="a21db012a6db3246fa3ae2c5257dfaba5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a21db012a6db3246fa3ae2c5257dfaba5">&#9670;&#160;</a></span>CardMatch()</h2>
+<a id="a3bfce4f479d7f45087d34f3625142061" name="a3bfce4f479d7f45087d34f3625142061"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3bfce4f479d7f45087d34f3625142061">&#9670;&#160;</a></span>CardMatch()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -168,6 +168,12 @@ Public Member Functions</h2></td></tr>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classIMatchView.html">IMatchView</a> &amp;&#160;</td>
           <td class="paramname"><em>matchView</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classICardFactory.html">ICardFactory</a> &amp;&#160;</td>
+          <td class="paramname"><em>cardFactory</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>

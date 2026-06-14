@@ -104,13 +104,13 @@ $(document).ready(function(){initNavTree('classICardFactory.html',''); initResiz
 <div class="dynheader">
 Inheritance diagram for ICardFactory:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classICardFactory__inherit__graph.svg" width="164" height="258"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classICardFactory__inherit__graph.svg" width="164" height="287"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div class="dynheader">
 Collaboration diagram for ICardFactory:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classICardFactory__coll__graph.svg" width="164" height="103"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classICardFactory__coll__graph.svg" width="164" height="118"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <table class="memberdecls">
@@ -119,6 +119,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aeea7b050f61d1541389d6a943fe5a26e"><td class="memItemLeft" align="right" valign="top">virtual std::unique_ptr&lt; <a class="el" href="classCardInstance.html">CardInstance</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classICardFactory.html#aeea7b050f61d1541389d6a943fe5a26e">makeSingleCard</a> (const <a class="el" href="structDeckEntry.html">DeckEntry</a> &amp;deckEntry) const =0</td></tr>
 <tr class="memdesc:aeea7b050f61d1541389d6a943fe5a26e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new <a class="el" href="classCardInstance.html" title="Represents a runtime instance of a card during combat.">CardInstance</a> identified by the given card ID.  <br /></td></tr>
 <tr class="separator:aeea7b050f61d1541389d6a943fe5a26e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15ca1c66492ca27dec2f96cb505edd0c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classICardFactory.html#a15ca1c66492ca27dec2f96cb505edd0c">registerCards</a> ()=0</td></tr>
+<tr class="separator:a15ca1c66492ca27dec2f96cb505edd0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a25e5f79224a1b7e4ccbea1bf2c17346d"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classICardFactory.html#a25e5f79224a1b7e4ccbea1bf2c17346d">~ICardFactory</a> ()=default</td></tr>
 <tr class="memdesc:a25e5f79224a1b7e4ccbea1bf2c17346d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Virtual destructor.  <br /></td></tr>
 <tr class="separator:a25e5f79224a1b7e4ccbea1bf2c17346d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -189,6 +191,33 @@ Public Member Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>Owned <a class="el" href="classCardInstance.html" title="Represents a runtime instance of a card during combat.">CardInstance</a>. </dd></dl>
 
 <p>Implemented in <a class="el" href="classCardFactory.html#a6ba168d7bdd5fb0081776cd29a24de59">CardFactory</a>.</p>
+
+</div>
+</div>
+<a id="a15ca1c66492ca27dec2f96cb505edd0c" name="a15ca1c66492ca27dec2f96cb505edd0c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15ca1c66492ca27dec2f96cb505edd0c">&#9670;&#160;</a></span>registerCards()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void ICardFactory::registerCards </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="classCardFactory.html#a0a39e5a8574a1941d88f0591cda44aa6">CardFactory</a>.</p>
 
 </div>
 </div>

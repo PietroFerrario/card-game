@@ -8,7 +8,7 @@ var searchData=
   ['terminalmatchview_5',['TerminalMatchView',['../classTerminalMatchView.html#ad1aef937055928a875cd3af8c88538a9',1,'TerminalMatchView::TerminalMatchView()'],['../classTerminalMatchView.html',1,'TerminalMatchView']]],
   ['terminalmatchview_2ecpp_6',['terminalMatchView.cpp',['../terminalMatchView_8cpp.html',1,'']]],
   ['terminalmatchview_2eh_7',['terminalMatchView.h',['../terminalMatchView_8h.html',1,'']]],
-  ['terminalrewardview_8',['TerminalRewardView',['../classTerminalRewardView.html',1,'TerminalRewardView'],['../classTerminalRewardView.html#ac5850a0a1887e22203c8aafdfb19149d',1,'TerminalRewardView::TerminalRewardView()']]],
+  ['terminalrewardview_8',['TerminalRewardView',['../classTerminalRewardView.html',1,'TerminalRewardView'],['../classTerminalRewardView.html#a005bd34ecfa9b6d85fa415b2bf5ead52',1,'TerminalRewardView::TerminalRewardView()']]],
   ['terminalrewardview_2ecpp_9',['terminalRewardView.cpp',['../terminalRewardView_8cpp.html',1,'']]],
   ['terminalrewardview_2eh_10',['terminalRewardView.h',['../terminalRewardView_8h.html',1,'']]],
   ['text_11',['Text',['../classText.html',1,'Text'],['../classText.html#ab3e26143fccc52699bcc5149cae852bc',1,'Text::Text()']]],

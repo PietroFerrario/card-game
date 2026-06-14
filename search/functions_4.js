@@ -6,6 +6,6 @@ var searchData=
   ['enemy_3',['Enemy',['../classEnemy.html#a414bfba434f60bb3eab9a82c3aa779bd',1,'Enemy']]],
   ['enemyturn_4',['enemyTurn',['../classCardMatch.html#a4dc7bcd44d01a6ea26af2785cf0a907a',1,'CardMatch']]],
   ['entity_5',['Entity',['../classEntity.html#a980f368aa07ce358583982821533a54a',1,'Entity::Entity()'],['../classEntity.html#ab750e4f671cbdc63c737575989295240',1,'Entity::Entity(int hp, int attack=0, int armor=0)']]],
-  ['eventsequence_6',['EventSequence',['../classEventSequence.html#a264a5fb319bc12d27a0cf1d0128fa28d',1,'EventSequence']]],
+  ['eventsequence_6',['EventSequence',['../classEventSequence.html#a94b2c6be6ef704b4dd4c572159580685',1,'EventSequence']]],
   ['execute_7',['execute',['../classRewardPhase.html#a64cc6ab79f367fd3da846b6be76f38fa',1,'RewardPhase']]]
 ];

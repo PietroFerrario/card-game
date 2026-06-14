@@ -113,11 +113,11 @@ $(document).ready(function(){initNavTree('cardFactory_8h_source.html',''); initR
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    std::unique_ptr&lt;CardInstance&gt; <a class="code hl_function" href="classCardFactory.html#a6ba168d7bdd5fb0081776cd29a24de59">makeSingleCard</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structDeckEntry.html">DeckEntry</a>&amp; deckEntry) <span class="keyword">const override</span>;</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <a class="code hl_function" href="classCardFactory.html#ad80116a303fb48c7d0af5871556c58a7">~CardFactory</a>();</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>  <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keywordtype">void</span> registerCards();</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classCardFactory.html#a0a39e5a8574a1941d88f0591cda44aa6">registerCards</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <a class="code hl_function" href="classCardFactory.html#ad80116a303fb48c7d0af5871556c58a7">~CardFactory</a>();</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>  <span class="keyword">private</span>:</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keywordtype">void</span> registerDefinition(std::string_view cardId,</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>                            std::unique_ptr&lt;CardDefinition&gt; uniqueCardDefinition);</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
@@ -130,6 +130,7 @@ $(document).ready(function(){initNavTree('cardFactory_8h_source.html',''); initR
 <div class="ttc" id="acardsLoader_8h_html"><div class="ttname"><a href="cardsLoader_8h.html">cardsLoader.h</a></div></div>
 <div class="ttc" id="aclassCardDefinition_html"><div class="ttname"><a href="classCardDefinition.html">CardDefinition</a></div><div class="ttdoc">Immutable static data representing a card type.</div><div class="ttdef"><b>Definition:</b> cardDefinition.h:27</div></div>
 <div class="ttc" id="aclassCardFactory_html"><div class="ttname"><a href="classCardFactory.html">CardFactory</a></div><div class="ttdoc">Factory responsible for creating runtime CardInstances.</div><div class="ttdef"><b>Definition:</b> cardFactory.h:25</div></div>
+<div class="ttc" id="aclassCardFactory_html_a0a39e5a8574a1941d88f0591cda44aa6"><div class="ttname"><a href="classCardFactory.html#a0a39e5a8574a1941d88f0591cda44aa6">CardFactory::registerCards</a></div><div class="ttdeci">void registerCards() override</div><div class="ttdoc">Populates the factory with all static card definitions.</div><div class="ttdef"><b>Definition:</b> cardFactory.cpp:36</div></div>
 <div class="ttc" id="aclassCardFactory_html_a55607cb22e595af44cef12010be53e94"><div class="ttname"><a href="classCardFactory.html#a55607cb22e595af44cef12010be53e94">CardFactory::CardFactory</a></div><div class="ttdeci">CardFactory()</div><div class="ttdoc">Constructs and registers all cards at startup.</div><div class="ttdef"><b>Definition:</b> cardFactory.cpp:18</div></div>
 <div class="ttc" id="aclassCardFactory_html_a6ba168d7bdd5fb0081776cd29a24de59"><div class="ttname"><a href="classCardFactory.html#a6ba168d7bdd5fb0081776cd29a24de59">CardFactory::makeSingleCard</a></div><div class="ttdeci">std::unique_ptr&lt; CardInstance &gt; makeSingleCard(const DeckEntry &amp;deckEntry) const override</div><div class="ttdoc">Creates a new CardInstance based on the registered definition.</div><div class="ttdef"><b>Definition:</b> cardFactory.cpp:64</div></div>
 <div class="ttc" id="aclassCardFactory_html_ad80116a303fb48c7d0af5871556c58a7"><div class="ttname"><a href="classCardFactory.html#ad80116a303fb48c7d0af5871556c58a7">CardFactory::~CardFactory</a></div><div class="ttdeci">~CardFactory()</div><div class="ttdoc">Destructor.</div><div class="ttdef"><b>Definition:</b> cardFactory.cpp:20</div></div>

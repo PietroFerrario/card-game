@@ -71,8 +71,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "ICardFactory_8h.html",
-"classIRewardView.html",
-"limitCardToPlayEffect_8h_source.html"
+"classIOText.html#aa54660309cf0f83dd4840cb01140dfc3",
+"index.html#system_docs"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -1,6 +1,6 @@
 var classCardMatch =
 [
-    [ "CardMatch", "classCardMatch.html#a21db012a6db3246fa3ae2c5257dfaba5", null ],
+    [ "CardMatch", "classCardMatch.html#a3bfce4f479d7f45087d34f3625142061", null ],
     [ "canPlayerAct", "classCardMatch.html#a850d0dace4c39f6a5c1f56afca49729d", null ],
     [ "damagePhase", "classCardMatch.html#a2109b05136a5092a2cfda5770e9d2873", null ],
     [ "drawMultipleCardsNoEffect", "classCardMatch.html#a794ebcf30069240092e0e025ed2a44e6", null ],
