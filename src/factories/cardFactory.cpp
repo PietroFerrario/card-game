@@ -19,6 +19,16 @@ CardFactory::CardFactory() { registerCards(); }
 
 CardFactory::~CardFactory() {}
 
+const std::vector<std::string> CardFactory::getRegisteredCardsId() const
+{
+    std::vector<std::string> cardList;
+
+    for (const auto& card : m_cardMap)
+    {
+        cardList.push_back(card.first);
+    }
+}
+
 void CardFactory::registerDefinition(std::string_view cardId,
                                      std::unique_ptr<CardDefinition> uniqueCardDefinition)
 {

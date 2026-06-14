@@ -100,3 +100,19 @@ constexpr const char* TerminalRewardView::colorCode(AnsiColor color)
         return "";
     }
 }
+
+int TerminalRewardView::askPlayerSelectRewardCard(int limit)
+{
+    int playerCardChoice;
+    int selectedCardIndex{m_io.promptInt("Select a card to add to your deck", limit) - 1};
+
+    playerCardChoice = selectedCardIndex;
+
+    return playerCardChoice;
+}
+
+void TerminalRewardView::showRandomCardSelection(
+    const std::vector<const CardInstance*>& handToRender) const
+{
+    m_io.printHand(m_handRenderer.renderHand(handToRender));
+}

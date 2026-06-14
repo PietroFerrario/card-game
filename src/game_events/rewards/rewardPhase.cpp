@@ -2,10 +2,10 @@
 
 #include "util/debug.h"
 
-RewardPhase::RewardPhase(IRewardView& rewardView, Player& player, std::string_view enemyName,
-                         std::vector<RewardOption>& rewardOptionList)
-    : m_rewardView{rewardView}, m_player{player}, m_enemyName{enemyName},
-      m_rewardOptionList{rewardOptionList}
+RewardPhase::RewardPhase(IRewardView& rewardView, Player& player, ICardFactory& cardFactory,
+                         std::string_view enemyName, std::vector<RewardOption>& rewardOptionList)
+    : m_rewardView{rewardView}, m_player{player}, m_cardFactory{cardFactory},
+      m_enemyName{enemyName}, m_rewardOptionList{rewardOptionList}
 {
 }
 
@@ -41,8 +41,35 @@ void RewardPhase::resolveOptionEffects(int optionsIndex)
 
     for (const auto& rewardEffectPtr : selectedReward.getRewardEffectList())
     {
+        if (selectedReward.getRewardOptionType() == RewardOptionType::RandomCards)
+        {
+            // Restructure rewolve with a RewardContext!
+            showRandomCardSelection(generateRandomCards()) m_rewardView.askPlayerSelectRewardCard()
+        }
+
         rewardEffectPtr->resolve(m_player);
     }
+}
+
+void RewardPhase::askPlayerCardChoice() {}
+
+std::vector<std::unique_ptr<CardInstance>> RewardPhase::generateRandomCards(int amount)
+{
+    const std::vector<std::string> registeredCardsList{m_cardFactory.getRegisteredCardsId()};
+    std::vector<DeckEntry> randomDeckEntries;
+
+    for (int i{0}; i < amount; i++)
+    {
+        randomDeckEntries.emplace_back(registeredCardsList.at(Random::get(0, amount - 1)));
+    }
+
+    std::vector<std::unique_ptr<CardInstance>> randomCardsToDisplay;
+    for (const auto& deckEntry : randomDeckEntries)
+    {
+        randomCardsToDisplay.emplace_back(m_cardFactory.makeSingleCard(deckEntry));
+    }
+
+    return randomCardsToDisplay;
 }
 
 void RewardPhase::showRewardOptions()

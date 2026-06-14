@@ -16,7 +16,7 @@ enum class RewardOptionType
     Quest,
     Economic,
     UpgradeDeck,
-    RandomCard
+    RandomCards
 };
 
 class RewardOption

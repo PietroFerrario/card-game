@@ -23,6 +23,10 @@ class IRewardView
     virtual void showRewardOptions(const std::vector<RewardOption>& rewardListToRender) const = 0;
     virtual void showSkippingReward() const = 0;
 
+    virtual int askPlayerSelectRewardCard(int limit) = 0;
+    virtual void
+    showRandomCardSelection(const std::vector<const CardInstance*>& handToRender) const = 0;
+
   private:
 };
 

@@ -27,6 +27,8 @@ class ICardFactory
     virtual std::unique_ptr<CardInstance> makeSingleCard(const DeckEntry& deckEntry) const = 0;
 
     virtual void registerCards() = 0;
+
+    virtual const std::vector<std::string> getRegisteredCardsId() const = 0;
     /// @brief Virtual destructor.
     virtual ~ICardFactory() = default;
 };

@@ -26,6 +26,10 @@ class TerminalRewardView : public IRewardView
 
     void showRewardOptions(const std::vector<RewardOption>& rewardListToRender) const override;
 
+    int askPlayerSelectRewardCard(int limit) override;
+    void
+    showRandomCardSelection(const std::vector<const CardInstance*>& handToRender) const override;
+
   private:
     ICardFactory& m_cardFactory;
     IOText& m_io;

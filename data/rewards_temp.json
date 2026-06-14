@@ -36,13 +36,13 @@
                     ]
                 },
                 {
-                    "rewardType": "economic",
-                    "rewardName": "Gold Sack",
-                    "description": "Gain 7 gold coins",
+                    "rewardType": "randomCards",
+                    "rewardName": "Random Card",
+                    "description": "You can choose one from a number of random cards.",
                     "effectList": [
                         {
-                            "effectType": "gainMoney",
-                            "amount": 7,
+                            "effectType": "cardChoice",
+                            "amount": 3,
                             "cardId": "",
                             "upgradeCardParams": []
                         }
