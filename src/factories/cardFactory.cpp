@@ -27,6 +27,8 @@ const std::vector<std::string> CardFactory::getRegisteredCardsId() const
     {
         cardList.push_back(card.first);
     }
+
+    return cardList;
 }
 
 void CardFactory::registerDefinition(std::string_view cardId,

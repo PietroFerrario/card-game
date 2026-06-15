@@ -1,4 +1,5 @@
 #include "rewardEffectFactory.h"
+#include "game_events/rewards/reward_effects/chooseRandomCardRewardEffect.h"
 #include "game_events/rewards/reward_effects/gainCardRewardEffect.h"
 #include "game_events/rewards/reward_effects/gainMoneyRewardEffect.h"
 
@@ -39,7 +40,7 @@ RewardEffectFactory::makeUpgradeCardRewardEffect(const RewardEffectData& rewardE
 std::unique_ptr<RewardEffect>
 RewardEffectFactory::makeChooseCardRewardEffect(const RewardEffectData& rewardEffectData)
 {
-    return nullptr;
+    return std::make_unique<ChooseRandomCardRewardEffect>(rewardEffectData.amount);
 }
 std::unique_ptr<RewardEffect>
 RewardEffectFactory::makeRegisterQuestRewardEffect(const RewardEffectData& rewardEffectData)

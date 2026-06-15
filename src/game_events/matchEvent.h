@@ -17,7 +17,7 @@ class ICardFactory;
 class MatchEvent : public GameEvent
 {
   public:
-    MatchEvent(IMatchView& matchView, IRewardView& rewardView, const ICardFactory& cardFactory,
+    MatchEvent(IMatchView& matchView, IRewardView& rewardView, ICardFactory& cardFactory,
                Player& player, EnemyId enemyId, std::vector<RewardOption> rewardOptionList);
 
     void resolve() override;
@@ -25,7 +25,7 @@ class MatchEvent : public GameEvent
   private:
     IMatchView& m_matchView;
     IRewardView& m_rewardView;
-    const ICardFactory& m_cardFactory;
+    ICardFactory& m_cardFactory;
 
     EnemyId m_enemyId;
     std::string m_enemyName{};

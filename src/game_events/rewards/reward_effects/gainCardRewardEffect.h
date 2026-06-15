@@ -2,6 +2,7 @@
 #define GAINCARDREWARDEFFECT_H
 
 #include "deck/deckPlayer.h"
+#include "game_events/rewards/rewardContext.h"
 #include "rewardEffect.h"
 
 #include <string>
@@ -12,7 +13,10 @@ class GainCardRewardEffect : public RewardEffect
   public:
     GainCardRewardEffect(std::string_view cardId) : m_cardId{cardId} {}
 
-    void resolve(Player& player) override { player.getDeckPlayer().addCard(m_cardId); };
+    void resolve(RewardContext& rewardContext) override
+    {
+        rewardContext.player.getDeckPlayer().addCard(m_cardId);
+    };
 
   private:
     std::string m_cardId;

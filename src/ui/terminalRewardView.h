@@ -6,12 +6,15 @@ Need to merge the view at a certain point and refactor them unifying and avoidin
 */
 
 #include "IRewardView.h"
+#include "cards/cardInstance.h"
 #include "factories/ICardFactory.h"
 #include "game_system/matchData.h"
 #include "handRenderer.h"
 #include "iotext.h"
 #include "rewardsRenderer.h"
 #include "terminalMatchView.h" //For ansi color needs to be fixed and refactored
+
+#include <vector>
 
 class TerminalRewardView : public IRewardView
 {

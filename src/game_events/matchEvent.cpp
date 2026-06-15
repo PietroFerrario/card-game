@@ -5,9 +5,8 @@
 #include "rewards/rewardPhase.h"
 #include "util/debug.h"
 
-MatchEvent::MatchEvent(IMatchView& matchView, IRewardView& rewardView,
-                       const ICardFactory& cardFactory, Player& player, EnemyId enemyId,
-                       std::vector<RewardOption> rewardOptionList)
+MatchEvent::MatchEvent(IMatchView& matchView, IRewardView& rewardView, ICardFactory& cardFactory,
+                       Player& player, EnemyId enemyId, std::vector<RewardOption> rewardOptionList)
     : m_matchView{matchView}, m_rewardView{rewardView}, m_cardFactory{cardFactory},
       m_enemyId{enemyId}, m_player{player}, m_rewardOptionList{std::move(rewardOptionList)}
 {
@@ -24,7 +23,8 @@ void MatchEvent::resolve()
 
         if (matchResult.matchState == MatchState::PlayerWon)
         {
-            RewardPhase rewardPhase{m_rewardView, m_player, m_enemyName, m_rewardOptionList};
+            RewardPhase rewardPhase{m_rewardView, m_player, m_cardFactory, m_enemyName,
+                                    m_rewardOptionList};
             rewardPhase.execute();
         }
         else if (matchResult.matchState == MatchState::EnemyWon)

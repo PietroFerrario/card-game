@@ -5,6 +5,7 @@
 #include "deck/deckEntry.h"
 #include "entities/player.h"
 #include "factories/ICardFactory.h"
+#include "rewardContext.h"
 #include "rewardOption.h"
 #include "ui/IRewardView.h"
 #include "util/Random.h"
@@ -34,6 +35,7 @@ class RewardPhase
     std::string_view m_enemyName;
     std::vector<RewardOption>& m_rewardOptionList;
     IRewardView& m_rewardView;
+    RewardContext m_rewardContext;
 };
 
 #endif // REWARDPHASE_H

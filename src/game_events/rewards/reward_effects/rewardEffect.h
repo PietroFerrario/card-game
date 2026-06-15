@@ -1,13 +1,13 @@
 #ifndef REWARDEFFECT_H
 #define REWARDEFFECT_H
 
-#include "entities/player.h"
+#include "game_events/rewards/rewardContext.h"
 #include "rewardEffectData.h"
 
 class RewardEffect
 {
   public:
-    virtual void resolve(Player& player) = 0;
+    virtual void resolve(RewardContext& rewardContext) = 0;
 
     virtual ~RewardEffect() = default;
 

@@ -108,6 +108,7 @@ int TerminalRewardView::askPlayerSelectRewardCard(int limit)
 
     playerCardChoice = selectedCardIndex;
 
+    showFancyDivisor();
     return playerCardChoice;
 }
 

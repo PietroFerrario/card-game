@@ -1,6 +1,7 @@
 #ifndef IREWARDVIEW_H
 #define IREWARDVIEW_H
 
+#include "cards/cardInstance.h"
 #include "game_system/matchData.h"
 #include "iotext.h"
 
