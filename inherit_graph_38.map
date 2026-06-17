@@ -1,3 +1,6 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$structRewardEffectData.html" title=" " alt="" coords="5,5,144,31"/>
+<area shape="rect" id="node1" href="$classRewardEffect.html" title=" " alt="" coords="5,55,113,80"/>
+<area shape="rect" id="node2" href="$classChooseRandomCardRewardEffect.html" title=" " alt="" coords="161,5,401,31"/>
+<area shape="rect" id="node3" href="$classGainCardRewardEffect.html" title=" " alt="" coords="197,55,365,80"/>
+<area shape="rect" id="node4" href="$classGainMoneyRewardEffect.html" title=" " alt="" coords="190,104,373,129"/>
 </map>

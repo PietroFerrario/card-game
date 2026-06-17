@@ -1,4 +1,4 @@
 <map id="CardFactory" name="CardFactory">
-<area shape="rect" id="node1" title="Factory responsible for creating runtime CardInstances." alt="" coords="5,160,159,281"/>
-<area shape="rect" id="node2" href="$classICardFactory.html" title="Interface for card instance creation." alt="" coords="5,5,159,112"/>
+<area shape="rect" id="node1" title="Factory responsible for creating runtime CardInstances." alt="" coords="5,175,192,311"/>
+<area shape="rect" id="node2" href="$classICardFactory.html" title="Interface for card instance creation." alt="" coords="5,5,192,127"/>
 </map>

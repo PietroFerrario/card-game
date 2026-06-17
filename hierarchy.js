@@ -57,8 +57,10 @@ var hierarchy =
     [ "PlayCardDecision", "structPlayCardDecision.html", null ],
     [ "RenderedHand", "structRenderedHand.html", null ],
     [ "RenderedRewards", "structRenderedRewards.html", null ],
+    [ "RewardContext", "structRewardContext.html", null ],
     [ "RewardDecision", "structRewardDecision.html", null ],
     [ "RewardEffect", "classRewardEffect.html", [
+      [ "ChooseRandomCardRewardEffect", "classChooseRandomCardRewardEffect.html", null ],
       [ "GainCardRewardEffect", "classGainCardRewardEffect.html", null ],
       [ "GainMoneyRewardEffect", "classGainMoneyRewardEffect.html", null ]
     ] ],

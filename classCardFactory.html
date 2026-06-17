@@ -104,13 +104,13 @@ $(document).ready(function(){initNavTree('classCardFactory.html',''); initResiza
 <div class="dynheader">
 Inheritance diagram for CardFactory:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classCardFactory__inherit__graph.svg" width="164" height="287"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classCardFactory__inherit__graph.svg" width="198" height="316"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div class="dynheader">
 Collaboration diagram for CardFactory:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classCardFactory__coll__graph.svg" width="164" height="287"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classCardFactory__coll__graph.svg" width="198" height="316"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <table class="memberdecls">
@@ -125,6 +125,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a0a39e5a8574a1941d88f0591cda44aa6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCardFactory.html#a0a39e5a8574a1941d88f0591cda44aa6">registerCards</a> () override</td></tr>
 <tr class="memdesc:a0a39e5a8574a1941d88f0591cda44aa6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Populates the factory with all static card definitions.  <br /></td></tr>
 <tr class="separator:a0a39e5a8574a1941d88f0591cda44aa6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28d87d84c194445212c092588f482d68"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCardFactory.html#a28d87d84c194445212c092588f482d68">getRegisteredCardsId</a> () const override</td></tr>
+<tr class="separator:a28d87d84c194445212c092588f482d68"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad80116a303fb48c7d0af5871556c58a7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCardFactory.html#ad80116a303fb48c7d0af5871556c58a7">~CardFactory</a> ()</td></tr>
 <tr class="memdesc:ad80116a303fb48c7d0af5871556c58a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <br /></td></tr>
 <tr class="separator:ad80116a303fb48c7d0af5871556c58a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -134,6 +136,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aeea7b050f61d1541389d6a943fe5a26e inherit pub_methods_classICardFactory"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a15ca1c66492ca27dec2f96cb505edd0c inherit pub_methods_classICardFactory"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classICardFactory.html#a15ca1c66492ca27dec2f96cb505edd0c">registerCards</a> ()=0</td></tr>
 <tr class="separator:a15ca1c66492ca27dec2f96cb505edd0c inherit pub_methods_classICardFactory"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afec35300720414817950ec0d7d45e471 inherit pub_methods_classICardFactory"><td class="memItemLeft" align="right" valign="top">virtual const std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classICardFactory.html#afec35300720414817950ec0d7d45e471">getRegisteredCardsId</a> () const =0</td></tr>
+<tr class="separator:afec35300720414817950ec0d7d45e471 inherit pub_methods_classICardFactory"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a25e5f79224a1b7e4ccbea1bf2c17346d inherit pub_methods_classICardFactory"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classICardFactory.html#a25e5f79224a1b7e4ccbea1bf2c17346d">~ICardFactory</a> ()=default</td></tr>
 <tr class="memdesc:a25e5f79224a1b7e4ccbea1bf2c17346d inherit pub_methods_classICardFactory"><td class="mdescLeft">&#160;</td><td class="mdescRight">Virtual destructor.  <br /></td></tr>
 <tr class="separator:a25e5f79224a1b7e4ccbea1bf2c17346d inherit pub_methods_classICardFactory"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -183,6 +187,33 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a28d87d84c194445212c092588f482d68" name="a28d87d84c194445212c092588f482d68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28d87d84c194445212c092588f482d68">&#9670;&#160;</a></span>getRegisteredCardsId()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::vector&lt; std::string &gt; CardFactory::getRegisteredCardsId </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="classICardFactory.html#afec35300720414817950ec0d7d45e471">ICardFactory</a>.</p>
+
+</div>
+</div>
 <a id="a6ba168d7bdd5fb0081776cd29a24de59" name="a6ba168d7bdd5fb0081776cd29a24de59"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6ba168d7bdd5fb0081776cd29a24de59">&#9670;&#160;</a></span>makeSingleCard()</h2>
 

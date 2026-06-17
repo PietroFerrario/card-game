@@ -2,6 +2,8 @@ var classIRewardView =
 [
     [ "~IRewardView", "classIRewardView.html#a17a534c64c8e1032e6f44ba0a48d78b6", null ],
     [ "askPlayerReward", "classIRewardView.html#a5bce6b599990a532e3c34c9dbe1ba3dd", null ],
+    [ "askPlayerSelectRewardCard", "classIRewardView.html#abc72a968e0eb13ecdbd0680295d05582", null ],
+    [ "showRandomCardSelection", "classIRewardView.html#a1ab98a6d19784f183c35a5327eae59cb", null ],
     [ "showRewardOptions", "classIRewardView.html#a69ed992b188a060284399c6550cd45c0", null ],
     [ "showRewardText", "classIRewardView.html#ae820a4b8b7ee035e76d2ad43ecb79e15", null ],
     [ "showSelectedReward", "classIRewardView.html#a48515cb9124a80129c69771a7dce3e1f", null ],

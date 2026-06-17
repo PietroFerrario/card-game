@@ -101,13 +101,13 @@ $(document).ready(function(){initNavTree('classTerminalRewardView.html',''); ini
 <div class="dynheader">
 Inheritance diagram for TerminalRewardView:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classTerminalRewardView__inherit__graph.svg" width="271" height="390"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classTerminalRewardView__inherit__graph.svg" width="271" height="448"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div class="dynheader">
 Collaboration diagram for TerminalRewardView:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classTerminalRewardView__coll__graph.svg" width="271" height="390"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classTerminalRewardView__coll__graph.svg" width="271" height="448"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <table class="memberdecls">
@@ -127,6 +127,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a82a2b2e34cd6781d9a37d928451e78d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6a6837ec51a9c30eceb8aff11f978520"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTerminalRewardView.html#a6a6837ec51a9c30eceb8aff11f978520">showRewardOptions</a> (const std::vector&lt; <a class="el" href="classRewardOption.html">RewardOption</a> &gt; &amp;rewardListToRender) const override</td></tr>
 <tr class="separator:a6a6837ec51a9c30eceb8aff11f978520"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1f18ad0946e34ea7f60f1b3eb2abaeb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTerminalRewardView.html#ad1f18ad0946e34ea7f60f1b3eb2abaeb">askPlayerSelectRewardCard</a> (int limit) override</td></tr>
+<tr class="separator:ad1f18ad0946e34ea7f60f1b3eb2abaeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2db7ca78816acd701e6c84d9f109ee6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTerminalRewardView.html#ad2db7ca78816acd701e6c84d9f109ee6">showRandomCardSelection</a> (const std::vector&lt; const <a class="el" href="classCardInstance.html">CardInstance</a> * &gt; &amp;handToRender) const override</td></tr>
+<tr class="separator:ad2db7ca78816acd701e6c84d9f109ee6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classIRewardView"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classIRewardView')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classIRewardView.html">IRewardView</a></td></tr>
 <tr class="memitem:a17a534c64c8e1032e6f44ba0a48d78b6 inherit pub_methods_classIRewardView"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIRewardView.html#a17a534c64c8e1032e6f44ba0a48d78b6">~IRewardView</a> ()=default</td></tr>
 <tr class="separator:a17a534c64c8e1032e6f44ba0a48d78b6 inherit pub_methods_classIRewardView"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -142,6 +146,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a69ed992b188a060284399c6550cd45c0 inherit pub_methods_classIRewardView"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a20c015294a6a70d0716ea01bf4e4a3e1 inherit pub_methods_classIRewardView"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIRewardView.html#a20c015294a6a70d0716ea01bf4e4a3e1">showSkippingReward</a> () const =0</td></tr>
 <tr class="separator:a20c015294a6a70d0716ea01bf4e4a3e1 inherit pub_methods_classIRewardView"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc72a968e0eb13ecdbd0680295d05582 inherit pub_methods_classIRewardView"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIRewardView.html#abc72a968e0eb13ecdbd0680295d05582">askPlayerSelectRewardCard</a> (int limit)=0</td></tr>
+<tr class="separator:abc72a968e0eb13ecdbd0680295d05582 inherit pub_methods_classIRewardView"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ab98a6d19784f183c35a5327eae59cb inherit pub_methods_classIRewardView"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIRewardView.html#a1ab98a6d19784f183c35a5327eae59cb">showRandomCardSelection</a> (const std::vector&lt; const <a class="el" href="classCardInstance.html">CardInstance</a> * &gt; &amp;handToRender) const =0</td></tr>
+<tr class="separator:a1ab98a6d19784f183c35a5327eae59cb inherit pub_methods_classIRewardView"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a005bd34ecfa9b6d85fa415b2bf5ead52" name="a005bd34ecfa9b6d85fa415b2bf5ead52"></a>
@@ -198,6 +206,62 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Implements <a class="el" href="classIRewardView.html#a5bce6b599990a532e3c34c9dbe1ba3dd">IRewardView</a>.</p>
+
+</div>
+</div>
+<a id="ad1f18ad0946e34ea7f60f1b3eb2abaeb" name="ad1f18ad0946e34ea7f60f1b3eb2abaeb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1f18ad0946e34ea7f60f1b3eb2abaeb">&#9670;&#160;</a></span>askPlayerSelectRewardCard()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int TerminalRewardView::askPlayerSelectRewardCard </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>limit</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="classIRewardView.html#abc72a968e0eb13ecdbd0680295d05582">IRewardView</a>.</p>
+
+</div>
+</div>
+<a id="ad2db7ca78816acd701e6c84d9f109ee6" name="ad2db7ca78816acd701e6c84d9f109ee6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2db7ca78816acd701e6c84d9f109ee6">&#9670;&#160;</a></span>showRandomCardSelection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TerminalRewardView::showRandomCardSelection </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; const <a class="el" href="classCardInstance.html">CardInstance</a> * &gt; &amp;&#160;</td>
+          <td class="paramname"><em>handToRender</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="classIRewardView.html#a1ab98a6d19784f183c35a5327eae59cb">IRewardView</a>.</p>
 
 </div>
 </div>

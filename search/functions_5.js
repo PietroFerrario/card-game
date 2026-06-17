@@ -34,9 +34,10 @@ var searchData=
   ['getln_31',['getln',['../classIOText.html#a243be749bc0f604ef777dcc2191fce4e',1,'IOText']]],
   ['getmainplayer_32',['getMainPlayer',['../classGame.html#a2d5e49d80ed85b5e22dfa36ff05d9042',1,'Game::getMainPlayer() const'],['../classGame.html#a14e29e4ce2c89d65d6c49531be3de144',1,'Game::getMainPlayer()']]],
   ['getname_33',['getName',['../classEntity.html#abd594e05bdb875b0e6c934fe3a4f44bb',1,'Entity::getName()'],['../classPlayer.html#ae6c59cf02275c7ba78ae4cf4d1771412',1,'Player::getName()'],['../classRewardOption.html#ace844e5eaf8953158eb7f4039e5211eb',1,'RewardOption::getName()'],['../classCardDefinition.html#a0de92c6f28b1a53fe9678a52693b5ed1',1,'CardDefinition::getName()']]],
-  ['getrewardcardid_34',['getRewardCardId',['../classRewardOption.html#aa57570cc32410351a2118e57c6070032',1,'RewardOption']]],
-  ['getrewardeffectlist_35',['getRewardEffectList',['../classRewardOption.html#a95476896151b8a8a3b76229844adfa78',1,'RewardOption']]],
-  ['getrewardoptiontemplatewidth_36',['getRewardOptionTemplateWidth',['../classRewardOptionRenderer.html#af49eb816be493f7e17994760d4251088',1,'RewardOptionRenderer']]],
-  ['getrewardoptiontype_37',['getRewardOptionType',['../classRewardOption.html#ae9d4e8302f76e83e980ad6befae29176',1,'RewardOption']]],
-  ['gettext_38',['getText',['../classText.html#ae5a6625830c7162ac0512fdf949911e3',1,'Text']]]
+  ['getregisteredcardsid_34',['getRegisteredCardsId',['../classCardFactory.html#a28d87d84c194445212c092588f482d68',1,'CardFactory::getRegisteredCardsId()'],['../classICardFactory.html#afec35300720414817950ec0d7d45e471',1,'ICardFactory::getRegisteredCardsId()']]],
+  ['getrewardcardid_35',['getRewardCardId',['../classRewardOption.html#aa57570cc32410351a2118e57c6070032',1,'RewardOption']]],
+  ['getrewardeffectlist_36',['getRewardEffectList',['../classRewardOption.html#a95476896151b8a8a3b76229844adfa78',1,'RewardOption']]],
+  ['getrewardoptiontemplatewidth_37',['getRewardOptionTemplateWidth',['../classRewardOptionRenderer.html#af49eb816be493f7e17994760d4251088',1,'RewardOptionRenderer']]],
+  ['getrewardoptiontype_38',['getRewardOptionType',['../classRewardOption.html#ae9d4e8302f76e83e980ad6befae29176',1,'RewardOption']]],
+  ['gettext_39',['getText',['../classText.html#ae5a6625830c7162ac0512fdf949911e3',1,'Text']]]
 ];

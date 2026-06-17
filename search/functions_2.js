@@ -7,5 +7,6 @@ var searchData=
   ['cardmatch_4',['CardMatch',['../classCardMatch.html#a3bfce4f479d7f45087d34f3625142061',1,'CardMatch']]],
   ['cardrenderer_5',['CardRenderer',['../classCardRenderer.html#a8b69b406b0743113d6369c2ef6ed9b59',1,'CardRenderer']]],
   ['cardsloader_6',['CardsLoader',['../classCardsLoader.html#a9bdd5944b7eea82d929eeff3c6a029a3',1,'CardsLoader']]],
-  ['combatcontext_7',['CombatContext',['../classCombatContext.html#a69b2758896a775a6aed70f7d4bc002e3',1,'CombatContext']]]
+  ['chooserandomcardrewardeffect_7',['ChooseRandomCardRewardEffect',['../classChooseRandomCardRewardEffect.html#a249a1f89f717168cf27c8cab4be3fa33',1,'ChooseRandomCardRewardEffect']]],
+  ['combatcontext_8',['CombatContext',['../classCombatContext.html#a69b2758896a775a6aed70f7d4bc002e3',1,'CombatContext']]]
 ];

@@ -2,6 +2,8 @@ var classTerminalRewardView =
 [
     [ "TerminalRewardView", "classTerminalRewardView.html#a005bd34ecfa9b6d85fa415b2bf5ead52", null ],
     [ "askPlayerReward", "classTerminalRewardView.html#ad913993734fe31bf30893e5f40921573", null ],
+    [ "askPlayerSelectRewardCard", "classTerminalRewardView.html#ad1f18ad0946e34ea7f60f1b3eb2abaeb", null ],
+    [ "showRandomCardSelection", "classTerminalRewardView.html#ad2db7ca78816acd701e6c84d9f109ee6", null ],
     [ "showRewardOptions", "classTerminalRewardView.html#a6a6837ec51a9c30eceb8aff11f978520", null ],
     [ "showRewardText", "classTerminalRewardView.html#a9902aa44ad35523aaa34426f9fd2d789", null ],
     [ "showSelectedReward", "classTerminalRewardView.html#a2d6fc9ac8386b5ab74b74932460c329b", null ],

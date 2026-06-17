@@ -96,41 +96,58 @@ $(document).ready(function(){initNavTree('rewardPhase_8h_source.html',''); initR
 <a href="rewardPhase_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef REWARDPHASE_H</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define REWARDPHASE_H</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="player_8h.html">entities/player.h</a>&quot;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="rewardOption_8h.html">rewardOption.h</a>&quot;</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="IRewardView_8h.html">ui/IRewardView.h</a>&quot;</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;string_view&gt;</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="classRewardPhase.html">   11</a></span><span class="keyword">class </span><a class="code hl_class" href="classRewardPhase.html">RewardPhase</a></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>{</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>  <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keyword">explicit</span> <a class="code hl_class" href="classRewardPhase.html">RewardPhase</a>(<a class="code hl_class" href="classIRewardView.html">IRewardView</a>&amp; rewardView, <a class="code hl_class" href="classPlayer.html">Player</a>&amp; player, std::string_view enemyName,</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>                         std::vector&lt;RewardOption&gt;&amp; rewardOptionList);</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classRewardPhase.html#a64cc6ab79f367fd3da846b6be76f38fa">execute</a>();</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>  <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keywordtype">void</span> getPlayerDecision();</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keywordtype">void</span> showRewardOptions();</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keywordtype">void</span> resolveReward();</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keywordtype">void</span> resolveOptionEffects(<span class="keywordtype">int</span> optionsIndex);</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <a class="code hl_class" href="classPlayer.html">Player</a>&amp; m_player;</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    std::string_view m_enemyName;</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    std::vector&lt;RewardOption&gt;&amp; m_rewardOptionList;</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <a class="code hl_class" href="classIRewardView.html">IRewardView</a>&amp; m_rewardView;</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>};</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#endif </span><span class="comment">// REWARDPHASE_H</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="cardInstance_8h.html">cards/cardInstance.h</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="deckEntry_8h.html">deck/deckEntry.h</a>&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="player_8h.html">entities/player.h</a>&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="ICardFactory_8h.html">factories/ICardFactory.h</a>&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="rewardContext_8h.html">rewardContext.h</a>&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="rewardOption_8h.html">rewardOption.h</a>&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="IRewardView_8h.html">ui/IRewardView.h</a>&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="Random_8h.html">util/Random.h</a>&quot;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;string_view&gt;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="classRewardPhase.html">   16</a></span><span class="keyword">class </span><a class="code hl_class" href="classRewardPhase.html">RewardPhase</a></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>{</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>  <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keyword">explicit</span> <a class="code hl_class" href="classRewardPhase.html">RewardPhase</a>(<a class="code hl_class" href="classIRewardView.html">IRewardView</a>&amp; rewardView, <a class="code hl_class" href="classPlayer.html">Player</a>&amp; player, <a class="code hl_class" href="classICardFactory.html">ICardFactory</a>&amp; cardFactory,</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>                         std::string_view enemyName, std::vector&lt;RewardOption&gt;&amp; rewardOptionList);</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classRewardPhase.html#a64cc6ab79f367fd3da846b6be76f38fa">execute</a>();</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>  <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keywordtype">void</span> getPlayerDecision();</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keywordtype">void</span> showRewardOptions();</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keywordtype">void</span> resolveReward();</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keywordtype">void</span> resolveOptionEffects(<span class="keywordtype">int</span> optionsIndex);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keywordtype">void</span> askPlayerCardChoice();</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    std::vector&lt;std::unique_ptr&lt;CardInstance&gt;&gt; generateRandomCards(<span class="keywordtype">int</span> amount);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <a class="code hl_class" href="classPlayer.html">Player</a>&amp; m_player;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <a class="code hl_class" href="classICardFactory.html">ICardFactory</a>&amp; m_cardFactory;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    std::string_view m_enemyName;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    std::vector&lt;RewardOption&gt;&amp; m_rewardOptionList;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <a class="code hl_class" href="classIRewardView.html">IRewardView</a>&amp; m_rewardView;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <a class="code hl_struct" href="structRewardContext.html">RewardContext</a> m_rewardContext;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>};</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="preprocessor">#endif </span><span class="comment">// REWARDPHASE_H</span></div>
+<div class="ttc" id="aICardFactory_8h_html"><div class="ttname"><a href="ICardFactory_8h.html">ICardFactory.h</a></div></div>
 <div class="ttc" id="aIRewardView_8h_html"><div class="ttname"><a href="IRewardView_8h.html">IRewardView.h</a></div></div>
-<div class="ttc" id="aclassIRewardView_html"><div class="ttname"><a href="classIRewardView.html">IRewardView</a></div><div class="ttdef"><b>Definition:</b> IRewardView.h:14</div></div>
+<div class="ttc" id="aRandom_8h_html"><div class="ttname"><a href="Random_8h.html">Random.h</a></div></div>
+<div class="ttc" id="acardInstance_8h_html"><div class="ttname"><a href="cardInstance_8h.html">cardInstance.h</a></div></div>
+<div class="ttc" id="aclassICardFactory_html"><div class="ttname"><a href="classICardFactory.html">ICardFactory</a></div><div class="ttdoc">Interface for card instance creation.</div><div class="ttdef"><b>Definition:</b> ICardFactory.h:20</div></div>
+<div class="ttc" id="aclassIRewardView_html"><div class="ttname"><a href="classIRewardView.html">IRewardView</a></div><div class="ttdef"><b>Definition:</b> IRewardView.h:15</div></div>
 <div class="ttc" id="aclassPlayer_html"><div class="ttname"><a href="classPlayer.html">Player</a></div><div class="ttdoc">Player-controlled entity with a persistent deck.</div><div class="ttdef"><b>Definition:</b> player.h:23</div></div>
-<div class="ttc" id="aclassRewardPhase_html"><div class="ttname"><a href="classRewardPhase.html">RewardPhase</a></div><div class="ttdef"><b>Definition:</b> rewardPhase.h:12</div></div>
-<div class="ttc" id="aclassRewardPhase_html_a64cc6ab79f367fd3da846b6be76f38fa"><div class="ttname"><a href="classRewardPhase.html#a64cc6ab79f367fd3da846b6be76f38fa">RewardPhase::execute</a></div><div class="ttdeci">void execute()</div><div class="ttdef"><b>Definition:</b> rewardPhase.cpp:12</div></div>
+<div class="ttc" id="aclassRewardPhase_html"><div class="ttname"><a href="classRewardPhase.html">RewardPhase</a></div><div class="ttdef"><b>Definition:</b> rewardPhase.h:17</div></div>
+<div class="ttc" id="aclassRewardPhase_html_a64cc6ab79f367fd3da846b6be76f38fa"><div class="ttname"><a href="classRewardPhase.html#a64cc6ab79f367fd3da846b6be76f38fa">RewardPhase::execute</a></div><div class="ttdeci">void execute()</div><div class="ttdef"><b>Definition:</b> rewardPhase.cpp:13</div></div>
+<div class="ttc" id="adeckEntry_8h_html"><div class="ttname"><a href="deckEntry_8h.html">deckEntry.h</a></div></div>
 <div class="ttc" id="aplayer_8h_html"><div class="ttname"><a href="player_8h.html">player.h</a></div></div>
+<div class="ttc" id="arewardContext_8h_html"><div class="ttname"><a href="rewardContext_8h.html">rewardContext.h</a></div></div>
 <div class="ttc" id="arewardOption_8h_html"><div class="ttname"><a href="rewardOption_8h.html">rewardOption.h</a></div></div>
+<div class="ttc" id="astructRewardContext_html"><div class="ttname"><a href="structRewardContext.html">RewardContext</a></div><div class="ttdef"><b>Definition:</b> rewardContext.h:9</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

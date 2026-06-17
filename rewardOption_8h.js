@@ -6,6 +6,6 @@ var rewardOption_8h =
       [ "Quest", "rewardOption_8h.html#a7a28eaee9e404f2c4e01941ce530d324a07bf513a88c3df282a30cb374f8a933d", null ],
       [ "Economic", "rewardOption_8h.html#a7a28eaee9e404f2c4e01941ce530d324a53b04187314d13956f5288866dd93f41", null ],
       [ "UpgradeDeck", "rewardOption_8h.html#a7a28eaee9e404f2c4e01941ce530d324aebfddf834867393139f6f277b961dcc4", null ],
-      [ "RandomCard", "rewardOption_8h.html#a7a28eaee9e404f2c4e01941ce530d324a9f40fd0103a79a38a7d67516be79ad7a", null ]
+      [ "RandomCards", "rewardOption_8h.html#a7a28eaee9e404f2c4e01941ce530d324a1b1801991a9202f102ae618aff7f253c", null ]
     ] ]
 ];
