@@ -1,5 +1,6 @@
 #include "chooseRandomCardRewardEffect.h"
 #include "cards/cardDefinition.h"
+#include "factories/cardFactory.h"
 #include "util/Random.h"
 #include "util/debug.h"
 ChooseRandomCardRewardEffect::ChooseRandomCardRewardEffect(int amount) : m_amount{amount} {}

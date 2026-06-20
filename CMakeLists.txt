@@ -52,6 +52,7 @@ target_sources(cardgame_core PRIVATE
     src/game_events/rewards/rewardPhase.cpp
 
     src/game_events/rewards/reward_effects/chooseRandomCardRewardEffect.cpp
+    src/game_events/rewards/reward_effects/upgradeCardRewardEffect.cpp
 
     src/game_system/eventSequence.cpp
     src/game_system/cardMatch.cpp

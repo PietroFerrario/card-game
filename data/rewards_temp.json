@@ -47,6 +47,21 @@
                             "upgradeCardParams": []
                         }
                     ]
+                },
+                {
+                    "rewardType": "equip",
+                    "rewardName": "Rusty sword",
+                    "description": "You can give this sword to a card of your choice",
+                    "effectList": [
+                        {
+                            "effectType": "upgradeCard",
+                            "amount": 1,
+                            "cardId": "",
+                            "upgradeCardParams": [
+                                "attack"
+                            ]
+                        }
+                    ]
                 }
             ]
         }

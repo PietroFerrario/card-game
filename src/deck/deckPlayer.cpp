@@ -33,6 +33,11 @@ bool DeckPlayer::addCard(std::string_view cardId)
         return false;
 }
 
+void upgradeCard(DeckEntry& cardToUpgrade, int amount, CardParams cardParam)
+{
+    cardToUpgrade.permanentModifiers = +cardParam;
+}
+
 // bool DeckPlayer::removeCard(std::string_view cardId)
 // {
 //     if (getCurrentCardNumber() > m_minCardNumber)
