@@ -38,11 +38,26 @@ void TerminalRewardView::showRewardText(std::string_view enemyName) const
     showRewardPhaseDivisor();
 }
 
+void TerminalRewardView::showStoryEventTitle(std::string_view storyEventName) const
+{
+    showFancyDivisor();
+    m_io.println(
+        std::format("{:^{}}", std::format("Story Event: {}!", storyEventName), m_mainWidth));
+
+    showFancyDivisor();
+}
+
+void TerminalRewardView::showStoryEventDescription(std::string_view storyEventDescription) const
+{
+
+    m_io.println(
+        std::format("{:^{}}", std::format("Story Event: {}!", storyEventDescription), m_mainWidth));
+}
+
 RewardDecision TerminalRewardView::askPlayerReward(int limit)
 {
     RewardDecision decision;
-    int selectedOptionIndex{
-        m_io.promptInt("Select a reward or press (0) for skipping the reward:", limit) - 1};
+    int selectedOptionIndex{m_io.promptInt("Select your choice:", limit) - 1};
     if (selectedOptionIndex < 0)
     {
         decision.playerChoice = RewardChoice::SkipReward;
@@ -105,6 +120,18 @@ int TerminalRewardView::askPlayerSelectRewardCard(int limit)
 {
     int playerCardChoice;
     int selectedCardIndex{m_io.promptInt("Select a card to add to your deck", limit) - 1};
+
+    playerCardChoice = selectedCardIndex;
+
+    showFancyDivisor();
+    return playerCardChoice;
+}
+
+int TerminalRewardView::askPlayerSelectUpgradeCard(int limit)
+{
+    int playerCardChoice;
+    int selectedCardIndex{m_io.promptInt("Select a card from your current deck to upgrade", limit) -
+                          1};
 
     playerCardChoice = selectedCardIndex;
 

@@ -5,6 +5,7 @@
 #include "deck/deckPlayer.h"
 #include "game_events/rewards/rewardContext.h"
 #include "rewardEffect.h"
+#include "rewardEffectData.h"
 
 #include <memory>
 #include <vector>
@@ -12,7 +13,7 @@
 class UpgradeCardRewardEffect : public RewardEffect
 {
   public:
-    UpgradeCardRewardEffect(int amount);
+    UpgradeCardRewardEffect(int amount, std::vector<UpgradeCardParam> upgradeCardParam);
     void resolve(RewardContext& rewardContext) override;
 
   private:

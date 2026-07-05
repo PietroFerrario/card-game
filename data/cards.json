@@ -43,8 +43,8 @@
             "name": "Inexperienced Guard",
             "descr": "A young guard, early in his career",
             "damage": 1,
-            "armor": 2,
-            "actions": 1,
+            "armor": 1,
+            "actions": 0,
             "drawing": 0,
             "effectList": [
                 {
@@ -54,10 +54,6 @@
                 {
                     "effect": "gainArmor",
                     "target": "self"
-                },
-                {
-                    "effect": "gainActions",
-                    "target": null
                 }
             ]
         },
@@ -68,7 +64,7 @@
             "damage": 2,
             "armor": 0,
             "actions": 0,
-            "drawing": 1,
+            "drawing": 0,
             "effectList": [
                 {
                     "effect": "gainAttack",
@@ -77,10 +73,6 @@
                 {
                     "effect": "gainArmor",
                     "target": "self"
-                },
-                {
-                    "effect": "drawCards",
-                    "target": null
                 }
             ]
         },
@@ -128,7 +120,7 @@
             "descr": "He gets things done around here",
             "damage": 5,
             "armor": 0,
-            "actions": 2,
+            "actions": 0,
             "drawing": 0,
             "effectList": [
                 {
@@ -149,10 +141,10 @@
             "id": "Constable",
             "name": "The Constable",
             "descr": "The right-hand mand of the Quartermaster",
-            "damage": 2,
-            "armor": 2,
+            "damage": 1,
+            "armor": 1,
             "actions": 0,
-            "drawing": 2,
+            "drawing": 0,
             "effectList": [
                 {
                     "effect": "gainAttack",
@@ -167,6 +159,16 @@
                     "target": null
                 }
             ]
+        },
+        {
+            "id": "FamishedFarmer",
+            "name": "Famished Farmer",
+            "descr": "Too weak to be of any use",
+            "damage": 0,
+            "armor": 0,
+            "actions": 0,
+            "drawing": 0,
+            "effectList": []
         }
     ]
 }

@@ -17,7 +17,7 @@ class RewardPhase
 {
   public:
     explicit RewardPhase(IRewardView& rewardView, Player& player, ICardFactory& cardFactory,
-                         std::string_view enemyName, std::vector<RewardOption>& rewardOptionList);
+                         std::vector<RewardOption>& rewardOptionList);
 
     void execute();
 

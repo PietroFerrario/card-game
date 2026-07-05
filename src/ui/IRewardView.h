@@ -25,8 +25,12 @@ class IRewardView
     virtual void showSkippingReward() const = 0;
 
     virtual int askPlayerSelectRewardCard(int limit) = 0;
+    virtual int askPlayerSelectUpgradeCard(int limit) = 0;
     virtual void
     showRandomCardSelection(const std::vector<const CardInstance*>& handToRender) const = 0;
+
+    virtual void showStoryEventTitle(std::string_view enemyName) const = 0;
+    virtual void showStoryEventDescription(std::string_view storyEventDescription) const = 0;
 
   private:
 };

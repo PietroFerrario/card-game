@@ -6,7 +6,7 @@
                 {
                     "rewardType": "economic",
                     "rewardName": "Gold Chest",
-                    "description": "Gain 2 gold coins!",
+                    "description": "Gain 2 gold coins and upgrade a card!",
                     "effectList": [
                         {
                             "effectType": "gainMoney",
@@ -51,15 +51,40 @@
                 {
                     "rewardType": "equip",
                     "rewardName": "Rusty sword",
-                    "description": "You can give this sword to a card of your choice",
+                    "description": "You can give this sword to a card of your choice, its attack and defense will be increased by 1",
                     "effectList": [
                         {
                             "effectType": "upgradeCard",
                             "amount": 1,
                             "cardId": "",
                             "upgradeCardParams": [
-                                "attack"
+                                "attack",
+                                "armor"
                             ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "rewardListId": "runawayFarmers",
+            "rewards": [
+                {
+                    "rewardType": "economic",
+                    "rewardName": "Do nothing",
+                    "description": "You stare at the farmers, hard eyes set on your face. You're not here to make charity, and it shows on your face. After few moments the farmer go back to his family and they stare at you while the caravan starts to move again.",
+                    "effectList": []
+                },
+                {
+                    "rewardType": "upgradeDeck",
+                    "rewardName": "Welcome them to the caravan.",
+                    "description": "The farmer and his family join the caravan. They will be dead weight, but in another life the roles could be inverted. Maybe something good will come from this. You gain the card Famished Farmer.",
+                    "effectList": [
+                        {
+                            "effectType": "gainCard",
+                            "amount": 0,
+                            "cardId": "FamishedFarmer",
+                            "upgradeCardParams": []
                         }
                     ]
                 }

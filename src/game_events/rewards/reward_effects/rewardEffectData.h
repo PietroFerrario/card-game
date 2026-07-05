@@ -3,6 +3,7 @@
 
 #include "cards/cardParams.h"
 #include <string>
+#include <vector>
 
 enum class RewardEffectType
 {

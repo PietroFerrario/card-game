@@ -21,8 +21,9 @@ class EventSequence
     void resolveEventSequence();
 
   private:
-    void loadMatchEvents();
+    void loadEvents();
     void makeMatchEvents(const std::vector<MatchEventData>& list);
+    void makeEvents(const std::vector<EventData>& list);
 
     IMatchView& m_matchView;
     IRewardView& m_rewardView;

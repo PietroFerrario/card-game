@@ -3,8 +3,9 @@
 
 #include "deck/deckEntry.h"
 #include "entities/enemies/enemyId.h"
+#include "game_events/eventData.h"
 #include "game_events/matchEventData.h"
-
+#include "game_events/storyEventData.h"
 #include <nlohmann/json.hpp>
 #include <string_view>
 #include <unordered_map>
@@ -15,7 +16,7 @@ class MatchEventLoader
   public:
     MatchEventLoader();
 
-    std::vector<MatchEventData> loadMatches();
+    std::vector<EventData> loadEvents();
 
   private:
     nlohmann::json m_data{};

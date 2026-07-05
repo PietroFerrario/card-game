@@ -33,10 +33,34 @@ bool DeckPlayer::addCard(std::string_view cardId)
         return false;
 }
 
-void upgradeCard(DeckEntry& cardToUpgrade, int amount, CardParams cardParam)
+void DeckPlayer::upgradeCard(DeckEntry& cardToUpgrade, int amount,
+                             std::vector<UpgradeCardParam> upgradeCardParam)
 {
-    cardToUpgrade.permanentModifiers = +cardParam;
+    for (auto& up : upgradeCardParam)
+    {
+        cardToUpgrade.permanentModifiers += convertUpgradeCardParam(amount, up);
+    }
 }
+
+CardParams DeckPlayer::convertUpgradeCardParam(int amount, UpgradeCardParam upgradeCardParam)
+{
+
+    switch (upgradeCardParam)
+    {
+    case UpgradeCardParam::Attack:
+        return {.damage = amount};
+    case UpgradeCardParam::Armor:
+        return {.armor = amount};
+    case UpgradeCardParam::Action:
+        return {.actions = amount};
+    case UpgradeCardParam::Drawing:
+        return {.drawing = amount};
+    default:
+        return {};
+    }
+}
+
+DeckEntry& DeckPlayer::getCardEntry(int cardIndex) { return m_cardsList.at(cardIndex); }
 
 // bool DeckPlayer::removeCard(std::string_view cardId)
 // {

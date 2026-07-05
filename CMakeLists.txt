@@ -47,6 +47,9 @@ target_sources(cardgame_core PRIVATE
     src/game_events/matchEvent.cpp
     src/game_events/matchEventLoader.cpp
 
+    src/game_events/storyEvent.cpp
+
+
     src/game_events/rewards/rewardLoader.cpp
     src/game_events/rewards/rewardOption.cpp
     src/game_events/rewards/rewardPhase.cpp

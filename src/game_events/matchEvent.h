@@ -9,9 +9,8 @@
 #include "ui/IMatchView.h"
 #include "ui/IRewardView.h"
 
-#include <memory>
+#include <string>
 #include <vector>
-
 class ICardFactory;
 
 class MatchEvent : public GameEvent

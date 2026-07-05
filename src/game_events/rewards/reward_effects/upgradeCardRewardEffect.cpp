@@ -3,7 +3,11 @@
 #include "factories/cardFactory.h"
 #include "util/debug.h"
 
-UpgradeCardRewardEffect::UpgradeCardRewardEffect(int amount) : m_amount{amount} {}
+UpgradeCardRewardEffect::UpgradeCardRewardEffect(int amount,
+                                                 std::vector<UpgradeCardParam> upgradeCardParam)
+    : m_amount{amount}, m_upgradeCardParam{std::move(upgradeCardParam)}
+{
+}
 
 void UpgradeCardRewardEffect::resolve(RewardContext& rewardContext)
 {
@@ -20,7 +24,21 @@ void UpgradeCardRewardEffect::resolve(RewardContext& rewardContext)
 
     rewardContext.rewardView.showRandomCardSelection(refDeckToRender);
 
-    int selectedCard(rewardContext.rewardView.askPlayerSelectRewardCard(m_amount));
+    int selectedCard(rewardContext.rewardView.askPlayerSelectUpgradeCard(m_amount));
+
+    rewardContext.player.getDeckPlayer().upgradeCard(
+        rewardContext.player.getDeckPlayer().getCardEntry(selectedCard), m_amount,
+        m_upgradeCardParam);
+
+    DEBUG_LOG("Checking the effect of the upgrade. Enable or disable it with comments");
+    // for debugging to check that it take effect
+    // std::vector<std::unique_ptr<CardInstance>> updatedDeck(
+    //     generateDeckCardsForReward(rewardContext.cardFactory, rewardContext.player));
+    // std::vector<const CardInstance*> refUpdatedDeck;
+    // refUpdatedDeck.reserve(updatedDeck.size());
+    // for (const std::unique_ptr<CardInstance>& card : updatedDeck)
+    //     refUpdatedDeck.emplace_back(card.get());
+    // rewardContext.rewardView.showRandomCardSelection(refUpdatedDeck);
 }
 
 const std::vector<std::unique_ptr<CardInstance>>
@@ -28,7 +46,7 @@ UpgradeCardRewardEffect::generateDeckCardsForReward(ICardFactory& cardFactory, P
 {
     DEBUG_LOG("Entering generateDeckCardsForReward method");
 
-    const std::vector<DeckEntry> playerDeckCardEntries{player.getDeckPlayer().getCardList()};
+    const std::vector<DeckEntry>& playerDeckCardEntries{player.getDeckPlayer().getCardList()};
 
     std::vector<std::unique_ptr<CardInstance>> deckCardsToDisplay;
 

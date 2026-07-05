@@ -2,21 +2,25 @@
 #include "entities/enemies/enemyId.h"
 #include "game_events/matchEvent.h"
 #include "game_events/matchEventData.h"
+#include "game_events/storyEvent.h"
+#include "game_events/storyEventData.h"
+
+#include <variant>
 
 EventSequence::EventSequence(IMatchView& matchView, IRewardView& rewardView,
                              ICardFactory& cardFactory, Player& player)
     : m_matchView{matchView}, m_rewardView{rewardView}, m_cardFactory{cardFactory}, m_player{player}
 {
     m_cardFactory.registerCards();
-    loadMatchEvents();
+    loadEvents();
 }
 
-void EventSequence::loadMatchEvents()
+void EventSequence::loadEvents()
 {
 
-    std::vector<MatchEventData> matchEventDataList{m_matchEventLoader.loadMatches()};
+    std::vector<EventData> eventDataList{m_matchEventLoader.loadEvents()};
 
-    makeMatchEvents(matchEventDataList);
+    makeEvents(eventDataList);
 }
 
 void EventSequence::makeMatchEvents(const std::vector<MatchEventData>& list)
@@ -29,6 +33,32 @@ void EventSequence::makeMatchEvents(const std::vector<MatchEventData>& list)
         m_eventList.emplace_back(
             std::make_unique<MatchEvent>(m_matchView, m_rewardView, m_cardFactory, m_player,
                                          matchEventData.enemyId, std::move(matchEvenRewardList)));
+    }
+}
+
+void EventSequence::makeEvents(const std::vector<EventData>& list)
+{
+    for (const auto& eventData : list)
+    {
+        if (const auto* matchData = std::get_if<MatchEventData>(&eventData))
+        {
+            std::vector<RewardOption> eventRewardList{
+                m_rewardLoader.loadRewardList(matchData->rewardListId)};
+
+            m_eventList.emplace_back(
+                std::make_unique<MatchEvent>(m_matchView, m_rewardView, m_cardFactory, m_player,
+                                             matchData->enemyId, std::move(eventRewardList)));
+        }
+
+        else if (const auto* storyData = std::get_if<StoryEventData>(&eventData))
+        {
+            std::vector<RewardOption> eventRewardList{
+                m_rewardLoader.loadRewardList(storyData->rewardListId)};
+
+            m_eventList.emplace_back(std::make_unique<StoryEvent>(
+                m_rewardView, m_cardFactory, storyData->storyId, storyData->title,
+                storyData->storyDescription, m_player, std::move(eventRewardList)));
+        }
     }
 }
 

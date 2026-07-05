@@ -1,0 +1,21 @@
+{
+    "eventList": [
+        {
+            "type": "match",
+            "enemyId": "bandits",
+            "rewardListId": "banditFirst"
+        },
+        {
+            "type": "story",
+            "storyTitle": "Runaway Farmers",
+            "storyDescription": "From the side of the street a farmer approach the head of the caravan. He explains that he and his family are on the run from the war, while pointing back to three emaciated people, a woman and two kids. He's asking to join you.",
+            "storyId": "runawayFarmers",
+            "rewardListId": "runawayFarmers"
+        },
+        {
+            "type": "match",
+            "enemyId": "bandits",
+            "rewardListId": "banditFirst"
+        }
+    ]
+}

@@ -1,6 +1,7 @@
 #ifndef DECKPLAYER_H
 #define DECKPLAYER_H
 
+#include "cards/cardParams.h"
 #include "deckEntry.h"
 #include "game_events/rewards/reward_effects/rewardEffectData.h"
 
@@ -69,7 +70,10 @@ class DeckPlayer
     /// @brief Returns the full list of card entries.
     const std::vector<DeckEntry>& getCardList() const { return m_cardsList; }
 
-    void upgradeCard(DeckEntry& cardToUpgrade);
+    void upgradeCard(DeckEntry& cardToUpgrade, int amount,
+                     std::vector<UpgradeCardParam> upgradeCardParam);
+    CardParams convertUpgradeCardParam(int amount, UpgradeCardParam upgradeCardParam);
+    DeckEntry& getCardEntry(int cardIndex);
 
   private:
     int m_maxCardNumber{};                ///< Maximum allowed total cards.

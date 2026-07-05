@@ -1,6 +1,7 @@
 #ifndef REWARDLOADER_H
 #define REWARDLOADER_H
 
+#include "cards/cardParams.h"
 #include "factories/rewardEffectFactory.h"
 #include "rewardOption.h"
 #include "reward_effects/rewardEffectData.h"

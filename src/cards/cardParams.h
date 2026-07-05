@@ -22,6 +22,15 @@ struct CardParams
 
     // Enemy-based
     std::optional<int> cardsLimit;
+
+    CardParams& operator+=(const CardParams& other)
+    {
+        damage += other.damage;
+        armor += other.armor;
+        actions += other.actions;
+        drawing += other.drawing;
+        return *this;
+    }
 };
 
 #endif // CARDPARAMS_H
