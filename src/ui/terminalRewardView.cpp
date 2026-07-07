@@ -1,4 +1,5 @@
 #include "terminalRewardView.h"
+#include "textWrap.h"
 
 TerminalRewardView::TerminalRewardView(IOText& io, ICardFactory& cardFactory)
     : m_io{io}, m_cardFactory{cardFactory}, m_rewardsRenderer{m_cardFactory}
@@ -49,9 +50,10 @@ void TerminalRewardView::showStoryEventTitle(std::string_view storyEventName) co
 
 void TerminalRewardView::showStoryEventDescription(std::string_view storyEventDescription) const
 {
-
-    m_io.println(
-        std::format("{:^{}}", std::format("Story Event: {}!", storyEventDescription), m_mainWidth));
+    for (const auto& line : wrapText(storyEventDescription, m_mainWidth))
+    {
+        m_io.println(line);
+    }
 }
 
 RewardDecision TerminalRewardView::askPlayerReward(int limit)

@@ -146,6 +146,8 @@ NameLayout RewardOptionRenderer::drawLayout(std::string_view rewardOptionName,
     return newName;
 }
 
+// Legacy code here -> Implemented as a stand alone function in the ui. Need to be called here as
+// well.
 std::vector<std::string>
 RewardOptionRenderer::drawDescriptionLayout(std::string_view rewardOptionDescription,
                                             Slot currentSlot) const

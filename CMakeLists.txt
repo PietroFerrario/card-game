@@ -69,6 +69,8 @@ target_sources(cardgame_core PRIVATE
     src/ui/terminalRewardView.cpp
     src/ui/rewardOptionRenderer.cpp
     src/ui/rewardsRenderer.cpp
+    src/ui/textWrap.cpp
+    
 )
 
 # Debug Macro
