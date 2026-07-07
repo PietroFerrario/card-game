@@ -1,5 +1,11 @@
 var searchData=
 [
-  ['wolfpack_2ecpp_0',['wolfPack.cpp',['../wolfPack_8cpp.html',1,'']]],
-  ['wolfpack_2eh_1',['wolfPack.h',['../wolfPack_8h.html',1,'']]]
+  ['terminalmatchview_2ecpp_0',['terminalMatchView.cpp',['../terminalMatchView_8cpp.html',1,'']]],
+  ['terminalmatchview_2eh_1',['terminalMatchView.h',['../terminalMatchView_8h.html',1,'']]],
+  ['terminalrewardview_2ecpp_2',['terminalRewardView.cpp',['../terminalRewardView_8cpp.html',1,'']]],
+  ['terminalrewardview_2eh_3',['terminalRewardView.h',['../terminalRewardView_8h.html',1,'']]],
+  ['text_2ecpp_4',['text.cpp',['../text_8cpp.html',1,'']]],
+  ['text_2eh_5',['text.h',['../text_8h.html',1,'']]],
+  ['textwrap_2ecpp_6',['textWrap.cpp',['../textWrap_8cpp.html',1,'']]],
+  ['textwrap_2eh_7',['textWrap.h',['../textWrap_8h.html',1,'']]]
 ];

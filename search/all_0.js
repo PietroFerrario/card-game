@@ -11,7 +11,8 @@ var searchData=
   ['armor_8',['armor',['../structCardParams.html#a44a39bf6cfc972b96f90bbf9bb934357',1,'CardParams']]],
   ['armor_9',['Armor',['../rewardEffectData_8h.html#a00f2d31c3c944bd3e47fca6a5688cad9ac77a8030f463c2c14aebd6452fc9f0a8',1,'rewardEffectData.h']]],
   ['askplayeraction_10',['askPlayerAction',['../classIMatchView.html#a18b8748ca81c218d200fff963c860166',1,'IMatchView::askPlayerAction()'],['../classTerminalMatchView.html#a143c525caac8b83a13df77d96c30e456',1,'TerminalMatchView::askPlayerAction()']]],
-  ['askplayerreward_11',['askPlayerReward',['../classIRewardView.html#a5bce6b599990a532e3c34c9dbe1ba3dd',1,'IRewardView::askPlayerReward()'],['../classTerminalRewardView.html#ad913993734fe31bf30893e5f40921573',1,'TerminalRewardView::askPlayerReward(int limit) override']]],
+  ['askplayerreward_11',['askPlayerReward',['../classTerminalRewardView.html#ad913993734fe31bf30893e5f40921573',1,'TerminalRewardView::askPlayerReward()'],['../classIRewardView.html#a5bce6b599990a532e3c34c9dbe1ba3dd',1,'IRewardView::askPlayerReward()']]],
   ['askplayerselectrewardcard_12',['askPlayerSelectRewardCard',['../classTerminalRewardView.html#ad1f18ad0946e34ea7f60f1b3eb2abaeb',1,'TerminalRewardView::askPlayerSelectRewardCard()'],['../classIRewardView.html#abc72a968e0eb13ecdbd0680295d05582',1,'IRewardView::askPlayerSelectRewardCard()']]],
-  ['attack_13',['Attack',['../rewardEffectData_8h.html#a00f2d31c3c944bd3e47fca6a5688cad9adcfafcb4323b102c7e204555d313ba0a',1,'rewardEffectData.h']]]
+  ['askplayerselectupgradecard_13',['askPlayerSelectUpgradeCard',['../classTerminalRewardView.html#a339dfdfcb53f7f14cce94cbc8b0dc860',1,'TerminalRewardView::askPlayerSelectUpgradeCard()'],['../classIRewardView.html#a48446b6563bfa0f83c073fd0dd0f4303',1,'IRewardView::askPlayerSelectUpgradeCard()']]],
+  ['attack_14',['Attack',['../rewardEffectData_8h.html#a00f2d31c3c944bd3e47fca6a5688cad9adcfafcb4323b102c7e204555d313ba0a',1,'rewardEffectData.h']]]
 ];

@@ -1,11 +1,13 @@
 <map id="factories/cardsLoader.h" name="factories/cardsLoader.h">
-<area shape="rect" id="node1" title=" " alt="" coords="209,5,382,31"/>
-<area shape="rect" id="node2" href="$cardFactory_8h.html" title=" " alt="" coords="110,79,278,104"/>
-<area shape="rect" id="node9" href="$cardsLoader_8cpp.html" title=" " alt="" coords="303,79,491,104"/>
-<area shape="rect" id="node3" href="$cardFactory_8cpp.html" title=" " alt="" coords="5,152,188,177"/>
-<area shape="rect" id="node4" href="$rewardsRenderer_8h.html" title=" " alt="" coords="213,152,373,177"/>
-<area shape="rect" id="node5" href="$iotext_8cpp.html" title=" " alt="" coords="79,225,181,251"/>
-<area shape="rect" id="node6" href="$rewardsRenderer_8cpp.html" title=" " alt="" coords="205,225,380,251"/>
-<area shape="rect" id="node7" href="$terminalRewardView_8h.html" title=" " alt="" coords="404,225,589,251"/>
-<area shape="rect" id="node8" href="$terminalRewardView_8cpp.html" title=" " alt="" coords="397,299,597,324"/>
+<area shape="rect" id="node1" title=" " alt="" coords="462,5,635,31"/>
+<area shape="rect" id="node2" href="$cardFactory_8h.html" title=" " alt="" coords="363,79,531,104"/>
+<area shape="rect" id="node11" href="$cardsLoader_8cpp.html" title=" " alt="" coords="556,79,744,104"/>
+<area shape="rect" id="node3" href="$cardFactory_8cpp.html" title=" " alt="" coords="5,167,188,192"/>
+<area shape="rect" id="node4" href="$chooseRandomCardRewardEffect_8cpp.html" title=" " alt="" coords="213,152,439,207"/>
+<area shape="rect" id="node5" href="$upgradeCardRewardEffect_8cpp.html" title=" " alt="" coords="464,152,673,207"/>
+<area shape="rect" id="node6" href="$rewardsRenderer_8h.html" title=" " alt="" coords="698,167,858,192"/>
+<area shape="rect" id="node7" href="$iotext_8cpp.html" title=" " alt="" coords="564,255,667,280"/>
+<area shape="rect" id="node8" href="$rewardsRenderer_8cpp.html" title=" " alt="" coords="691,255,865,280"/>
+<area shape="rect" id="node9" href="$terminalRewardView_8h.html" title=" " alt="" coords="889,255,1075,280"/>
+<area shape="rect" id="node10" href="$terminalRewardView_8cpp.html" title=" " alt="" coords="882,328,1082,353"/>
 </map>

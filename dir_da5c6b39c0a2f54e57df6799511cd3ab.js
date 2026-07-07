@@ -17,5 +17,7 @@ var dir_da5c6b39c0a2f54e57df6799511cd3ab =
     [ "terminalRewardView.cpp", "terminalRewardView_8cpp.html", null ],
     [ "terminalRewardView.h", "terminalRewardView_8h.html", "terminalRewardView_8h" ],
     [ "text.cpp", "text_8cpp.html", "text_8cpp" ],
-    [ "text.h", "text_8h.html", "text_8h" ]
+    [ "text.h", "text_8h.html", "text_8h" ],
+    [ "textWrap.cpp", "textWrap_8cpp.html", "textWrap_8cpp" ],
+    [ "textWrap.h", "textWrap_8h.html", "textWrap_8h" ]
 ];

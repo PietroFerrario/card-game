@@ -60,9 +60,12 @@ var annotated_dup =
     [ "RewardPhase", "classRewardPhase.html", "classRewardPhase" ],
     [ "RewardsRenderer", "classRewardsRenderer.html", "classRewardsRenderer" ],
     [ "Slot", "structSlot.html", "structSlot" ],
+    [ "StoryEvent", "classStoryEvent.html", "classStoryEvent" ],
+    [ "StoryEventData", "structStoryEventData.html", "structStoryEventData" ],
     [ "TerminalMatchView", "classTerminalMatchView.html", "classTerminalMatchView" ],
     [ "TerminalRewardView", "classTerminalRewardView.html", "classTerminalRewardView" ],
     [ "Text", "classText.html", "classText" ],
     [ "TurnData", "structTurnData.html", "structTurnData" ],
+    [ "UpgradeCardRewardEffect", "classUpgradeCardRewardEffect.html", "classUpgradeCardRewardEffect" ],
     [ "WolfPack", "classWolfPack.html", "classWolfPack" ]
 ];

@@ -10,6 +10,7 @@ var searchData=
   ['enemyid_2eh_7',['enemyId.h',['../enemyId_8h.html',1,'']]],
   ['enemymove_2eh_8',['enemyMove.h',['../enemyMove_8h.html',1,'']]],
   ['entity_2eh_9',['entity.h',['../entity_8h.html',1,'']]],
-  ['eventsequence_2ecpp_10',['eventSequence.cpp',['../eventSequence_8cpp.html',1,'']]],
-  ['eventsequence_2eh_11',['eventSequence.h',['../eventSequence_8h.html',1,'']]]
+  ['eventdata_2eh_10',['eventData.h',['../eventData_8h.html',1,'']]],
+  ['eventsequence_2ecpp_11',['eventSequence.cpp',['../eventSequence_8cpp.html',1,'']]],
+  ['eventsequence_2eh_12',['eventSequence.h',['../eventSequence_8h.html',1,'']]]
 ];

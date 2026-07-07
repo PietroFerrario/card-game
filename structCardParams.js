@@ -1,5 +1,6 @@
 var structCardParams =
 [
+    [ "operator+=", "structCardParams.html#a177cd31f704cc3cede346bf7dead6138", null ],
     [ "actions", "structCardParams.html#ab568d92e7e1a7ecd2cbf1b2dbc935478", null ],
     [ "armor", "structCardParams.html#a44a39bf6cfc972b96f90bbf9bb934357", null ],
     [ "cardsLimit", "structCardParams.html#a09c4bf43944b872cb64dc2c7b88df75c", null ],

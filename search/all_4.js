@@ -10,7 +10,7 @@ var searchData=
   ['effectmessagescope_7',['EffectMessageScope',['../classCombatContext_1_1EffectMessageScope.html',1,'CombatContext::EffectMessageScope'],['../classCombatContext_1_1EffectMessageScope.html#a2b1f433dc8a693284bd39e41fbdeffbc',1,'CombatContext::EffectMessageScope::EffectMessageScope(EffectMessageScope &amp;&amp;)=delete'],['../classCombatContext_1_1EffectMessageScope.html#a7e7655d68428c8151e57f6fa1fb35f10',1,'CombatContext::EffectMessageScope::EffectMessageScope(const EffectMessageScope &amp;)=delete'],['../classCombatContext_1_1EffectMessageScope.html#aca2fd48fd30ac7295ca92610902f3422',1,'CombatContext::EffectMessageScope::EffectMessageScope(CombatContext &amp;combatContext, std::vector&lt; std::string &gt; &amp;effectMessage)']]],
   ['effectparams_8',['effectParams',['../structEnemyMove.html#af250491f5a3ea3d39b27735641b9f01c',1,'EnemyMove']]],
   ['endturnreset_9',['endTurnReset',['../classCombatSystem.html#a37f609b9b590aa2c629f71aafe7e8bb0',1,'CombatSystem']]],
-  ['enemy_10',['Enemy',['../classEnemy.html#a414bfba434f60bb3eab9a82c3aa779bd',1,'Enemy::Enemy()'],['../classEnemy.html',1,'Enemy']]],
+  ['enemy_10',['Enemy',['../classEnemy.html',1,'Enemy'],['../classEnemy.html#a414bfba434f60bb3eab9a82c3aa779bd',1,'Enemy::Enemy()']]],
   ['enemy_2ecpp_11',['enemy.cpp',['../enemy_8cpp.html',1,'']]],
   ['enemy_2eh_12',['enemy.h',['../enemy_8h.html',1,'']]],
   ['enemyfactory_13',['EnemyFactory',['../namespaceEnemyFactory.html',1,'']]],
@@ -26,8 +26,10 @@ var searchData=
   ['entity_23',['Entity',['../classEntity.html',1,'Entity'],['../classEntity.html#a980f368aa07ce358583982821533a54a',1,'Entity::Entity()'],['../classEntity.html#ab750e4f671cbdc63c737575989295240',1,'Entity::Entity(int hp, int attack=0, int armor=0)']]],
   ['entity_2eh_24',['entity.h',['../entity_8h.html',1,'']]],
   ['equip_25',['Equip',['../rewardOption_8h.html#a7a28eaee9e404f2c4e01941ce530d324ae21cb1601ae1eb900b5812547b58810f',1,'rewardOption.h']]],
-  ['eventsequence_26',['EventSequence',['../classEventSequence.html#a94b2c6be6ef704b4dd4c572159580685',1,'EventSequence::EventSequence()'],['../classEventSequence.html',1,'EventSequence']]],
-  ['eventsequence_2ecpp_27',['eventSequence.cpp',['../eventSequence_8cpp.html',1,'']]],
-  ['eventsequence_2eh_28',['eventSequence.h',['../eventSequence_8h.html',1,'']]],
-  ['execute_29',['execute',['../classRewardPhase.html#a64cc6ab79f367fd3da846b6be76f38fa',1,'RewardPhase']]]
+  ['eventdata_26',['EventData',['../eventData_8h.html#aaec7d2d6528e9c84a577b58ecd58858a',1,'eventData.h']]],
+  ['eventdata_2eh_27',['eventData.h',['../eventData_8h.html',1,'']]],
+  ['eventsequence_28',['EventSequence',['../classEventSequence.html#a94b2c6be6ef704b4dd4c572159580685',1,'EventSequence::EventSequence()'],['../classEventSequence.html',1,'EventSequence']]],
+  ['eventsequence_2ecpp_29',['eventSequence.cpp',['../eventSequence_8cpp.html',1,'']]],
+  ['eventsequence_2eh_30',['eventSequence.h',['../eventSequence_8h.html',1,'']]],
+  ['execute_31',['execute',['../classRewardPhase.html#a64cc6ab79f367fd3da846b6be76f38fa',1,'RewardPhase']]]
 ];

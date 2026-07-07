@@ -1,6 +1,7 @@
 <map id="game_events/rewards/reward_effects/rewardEffectData.h" name="game_events/rewards/reward_effects/rewardEffectData.h">
-<area shape="rect" id="node1" title=" " alt="" coords="40,5,248,60"/>
+<area shape="rect" id="node1" title=" " alt="" coords="104,5,312,60"/>
 <area shape="rect" id="node2" href="$cardParams_8h.html" title=" " alt="" coords="5,108,155,133"/>
 <area shape="rect" id="node4" title=" " alt="" coords="179,108,237,133"/>
+<area shape="rect" id="node5" title=" " alt="" coords="262,108,325,133"/>
 <area shape="rect" id="node3" title=" " alt="" coords="43,181,117,207"/>
 </map>

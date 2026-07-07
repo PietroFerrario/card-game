@@ -1,9 +1,9 @@
 <map id="RewardContext" name="RewardContext">
-<area shape="rect" id="node1" title=" " alt="" coords="213,735,335,812"/>
-<area shape="rect" id="node2" href="$classPlayer.html" title="Player&#45;controlled entity with a persistent deck." alt="" coords="5,485,156,665"/>
+<area shape="rect" id="node1" title=" " alt="" coords="213,779,335,856"/>
+<area shape="rect" id="node2" href="$classPlayer.html" title="Player&#45;controlled entity with a persistent deck." alt="" coords="5,507,156,687"/>
 <area shape="rect" id="node3" href="$classEntity.html" title="Base class representing a combat&#45;capable entity." alt="" coords="9,175,153,428"/>
 <area shape="rect" id="node4" title=" " alt="" coords="9,5,48,83"/>
 <area shape="rect" id="node5" title=" " alt="" coords="105,5,163,83"/>
-<area shape="rect" id="node6" href="$classICardFactory.html" title="Interface for card instance creation." alt="" coords="181,514,367,635"/>
-<area shape="rect" id="node7" href="$classIRewardView.html" title=" " alt="" coords="392,477,652,672"/>
+<area shape="rect" id="node6" href="$classICardFactory.html" title="Interface for card instance creation." alt="" coords="181,536,367,657"/>
+<area shape="rect" id="node7" href="$classIRewardView.html" title=" " alt="" coords="392,477,652,716"/>
 </map>

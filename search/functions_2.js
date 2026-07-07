@@ -8,5 +8,6 @@ var searchData=
   ['cardrenderer_5',['CardRenderer',['../classCardRenderer.html#a8b69b406b0743113d6369c2ef6ed9b59',1,'CardRenderer']]],
   ['cardsloader_6',['CardsLoader',['../classCardsLoader.html#a9bdd5944b7eea82d929eeff3c6a029a3',1,'CardsLoader']]],
   ['chooserandomcardrewardeffect_7',['ChooseRandomCardRewardEffect',['../classChooseRandomCardRewardEffect.html#a249a1f89f717168cf27c8cab4be3fa33',1,'ChooseRandomCardRewardEffect']]],
-  ['combatcontext_8',['CombatContext',['../classCombatContext.html#a69b2758896a775a6aed70f7d4bc002e3',1,'CombatContext']]]
+  ['combatcontext_8',['CombatContext',['../classCombatContext.html#a69b2758896a775a6aed70f7d4bc002e3',1,'CombatContext']]],
+  ['convertupgradecardparam_9',['convertUpgradeCardParam',['../classDeckPlayer.html#a90024af9550cab89d9f21991d68196c4',1,'DeckPlayer']]]
 ];

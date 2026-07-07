@@ -37,7 +37,8 @@ var hierarchy =
     [ "EventSequence", "classEventSequence.html", null ],
     [ "Game", "classGame.html", null ],
     [ "GameEvent", "classGameEvent.html", [
-      [ "MatchEvent", "classMatchEvent.html", null ]
+      [ "MatchEvent", "classMatchEvent.html", null ],
+      [ "StoryEvent", "classStoryEvent.html", null ]
     ] ],
     [ "HandRenderer", "classHandRenderer.html", null ],
     [ "ICardFactory", "classICardFactory.html", [
@@ -62,7 +63,8 @@ var hierarchy =
     [ "RewardEffect", "classRewardEffect.html", [
       [ "ChooseRandomCardRewardEffect", "classChooseRandomCardRewardEffect.html", null ],
       [ "GainCardRewardEffect", "classGainCardRewardEffect.html", null ],
-      [ "GainMoneyRewardEffect", "classGainMoneyRewardEffect.html", null ]
+      [ "GainMoneyRewardEffect", "classGainMoneyRewardEffect.html", null ],
+      [ "UpgradeCardRewardEffect", "classUpgradeCardRewardEffect.html", null ]
     ] ],
     [ "RewardEffectData", "structRewardEffectData.html", null ],
     [ "RewardEffectFactory", "classRewardEffectFactory.html", null ],
@@ -72,6 +74,7 @@ var hierarchy =
     [ "RewardPhase", "classRewardPhase.html", null ],
     [ "RewardsRenderer", "classRewardsRenderer.html", null ],
     [ "Slot", "structSlot.html", null ],
+    [ "StoryEventData", "structStoryEventData.html", null ],
     [ "Text", "classText.html", null ],
     [ "TurnData", "structTurnData.html", null ]
 ];

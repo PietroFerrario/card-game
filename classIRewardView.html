@@ -101,13 +101,13 @@ $(document).ready(function(){initNavTree('classIRewardView.html',''); initResiza
 <div class="dynheader">
 Inheritance diagram for IRewardView:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classIRewardView__inherit__graph.svg" width="271" height="448"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classIRewardView__inherit__graph.svg" width="271" height="536"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div class="dynheader">
 Collaboration diagram for IRewardView:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classIRewardView__coll__graph.svg" width="271" height="206"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classIRewardView__coll__graph.svg" width="271" height="250"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <table class="memberdecls">
@@ -129,8 +129,14 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a20c015294a6a70d0716ea01bf4e4a3e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abc72a968e0eb13ecdbd0680295d05582"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIRewardView.html#abc72a968e0eb13ecdbd0680295d05582">askPlayerSelectRewardCard</a> (int limit)=0</td></tr>
 <tr class="separator:abc72a968e0eb13ecdbd0680295d05582"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48446b6563bfa0f83c073fd0dd0f4303"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIRewardView.html#a48446b6563bfa0f83c073fd0dd0f4303">askPlayerSelectUpgradeCard</a> (int limit)=0</td></tr>
+<tr class="separator:a48446b6563bfa0f83c073fd0dd0f4303"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1ab98a6d19784f183c35a5327eae59cb"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIRewardView.html#a1ab98a6d19784f183c35a5327eae59cb">showRandomCardSelection</a> (const std::vector&lt; const <a class="el" href="classCardInstance.html">CardInstance</a> * &gt; &amp;handToRender) const =0</td></tr>
 <tr class="separator:a1ab98a6d19784f183c35a5327eae59cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2405e61618518867c5f22c7b1b8fea0"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIRewardView.html#ad2405e61618518867c5f22c7b1b8fea0">showStoryEventTitle</a> (std::string_view enemyName) const =0</td></tr>
+<tr class="separator:ad2405e61618518867c5f22c7b1b8fea0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e2ed2a35eca3cded3692ac04920043d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIRewardView.html#a6e2ed2a35eca3cded3692ac04920043d">showStoryEventDescription</a> (std::string_view storyEventDescription) const =0</td></tr>
+<tr class="separator:a6e2ed2a35eca3cded3692ac04920043d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a17a534c64c8e1032e6f44ba0a48d78b6" name="a17a534c64c8e1032e6f44ba0a48d78b6"></a>
@@ -212,6 +218,34 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Implemented in <a class="el" href="classTerminalRewardView.html#ad1f18ad0946e34ea7f60f1b3eb2abaeb">TerminalRewardView</a>.</p>
+
+</div>
+</div>
+<a id="a48446b6563bfa0f83c073fd0dd0f4303" name="a48446b6563bfa0f83c073fd0dd0f4303"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48446b6563bfa0f83c073fd0dd0f4303">&#9670;&#160;</a></span>askPlayerSelectUpgradeCard()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int IRewardView::askPlayerSelectUpgradeCard </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>limit</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="classTerminalRewardView.html#a339dfdfcb53f7f14cce94cbc8b0dc860">TerminalRewardView</a>.</p>
 
 </div>
 </div>
@@ -379,6 +413,62 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Implemented in <a class="el" href="classTerminalRewardView.html#a0a79983ef612955e6a1bd0bad95eff0f">TerminalRewardView</a>.</p>
+
+</div>
+</div>
+<a id="a6e2ed2a35eca3cded3692ac04920043d" name="a6e2ed2a35eca3cded3692ac04920043d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e2ed2a35eca3cded3692ac04920043d">&#9670;&#160;</a></span>showStoryEventDescription()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void IRewardView::showStoryEventDescription </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view&#160;</td>
+          <td class="paramname"><em>storyEventDescription</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="classTerminalRewardView.html#afe04a51860b829b737b03fc3051e78b8">TerminalRewardView</a>.</p>
+
+</div>
+</div>
+<a id="ad2405e61618518867c5f22c7b1b8fea0" name="ad2405e61618518867c5f22c7b1b8fea0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2405e61618518867c5f22c7b1b8fea0">&#9670;&#160;</a></span>showStoryEventTitle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void IRewardView::showStoryEventTitle </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view&#160;</td>
+          <td class="paramname"><em>enemyName</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="classTerminalRewardView.html#a0764e69d05855bd3e9c0805ddfd845c4">TerminalRewardView</a>.</p>
 
 </div>
 </div>

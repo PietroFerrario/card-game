@@ -1,5 +1,5 @@
 <map id="util/debug.h" name="util/debug.h">
-<area shape="rect" id="node1" title=" " alt="" coords="2052,5,2151,31"/>
+<area shape="rect" id="node1" title=" " alt="" coords="2285,5,2384,31"/>
 <area shape="rect" id="node2" href="$combatContext_8cpp.html" title=" " alt="" coords="5,93,208,119"/>
 <area shape="rect" id="node3" href="$combatSystem_8cpp.html" title=" " alt="" coords="232,93,432,119"/>
 <area shape="rect" id="node4" href="$deckCombat_8cpp.html" title=" " alt="" coords="455,93,622,119"/>
@@ -16,7 +16,9 @@
 <area shape="rect" id="node15" href="$rewardLoader_8cpp.html" title=" " alt="" coords="2910,86,3077,126"/>
 <area shape="rect" id="node16" href="$rewardPhase_8cpp.html" title=" " alt="" coords="3101,86,3267,126"/>
 <area shape="rect" id="node17" href="$chooseRandomCardRewardEffect_8cpp.html" title=" " alt="" coords="3292,79,3519,133"/>
-<area shape="rect" id="node18" href="$cardmatch_8cpp.html" title=" " alt="" coords="3543,93,3758,119"/>
-<area shape="rect" id="node19" href="$handRenderer_8cpp.html" title=" " alt="" coords="3783,93,3937,119"/>
-<area shape="rect" id="node20" href="$rewardsRenderer_8cpp.html" title=" " alt="" coords="3962,93,4137,119"/>
+<area shape="rect" id="node18" href="$upgradeCardRewardEffect_8cpp.html" title=" " alt="" coords="3543,79,3753,133"/>
+<area shape="rect" id="node19" href="$storyEvent_8cpp.html" title=" " alt="" coords="3777,93,3988,119"/>
+<area shape="rect" id="node20" href="$cardmatch_8cpp.html" title=" " alt="" coords="4013,93,4227,119"/>
+<area shape="rect" id="node21" href="$handRenderer_8cpp.html" title=" " alt="" coords="4252,93,4407,119"/>
+<area shape="rect" id="node22" href="$rewardsRenderer_8cpp.html" title=" " alt="" coords="4431,93,4606,119"/>
 </map>

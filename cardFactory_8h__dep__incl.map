@@ -1,9 +1,11 @@
 <map id="factories/cardFactory.h" name="factories/cardFactory.h">
-<area shape="rect" id="node1" title=" " alt="" coords="110,5,278,31"/>
-<area shape="rect" id="node2" href="$cardFactory_8cpp.html" title=" " alt="" coords="5,79,188,104"/>
-<area shape="rect" id="node3" href="$rewardsRenderer_8h.html" title=" " alt="" coords="213,79,373,104"/>
-<area shape="rect" id="node4" href="$iotext_8cpp.html" title=" " alt="" coords="79,152,181,177"/>
-<area shape="rect" id="node5" href="$rewardsRenderer_8cpp.html" title=" " alt="" coords="205,152,380,177"/>
-<area shape="rect" id="node6" href="$terminalRewardView_8h.html" title=" " alt="" coords="404,152,589,177"/>
-<area shape="rect" id="node7" href="$terminalRewardView_8cpp.html" title=" " alt="" coords="397,225,597,251"/>
+<area shape="rect" id="node1" title=" " alt="" coords="363,5,531,31"/>
+<area shape="rect" id="node2" href="$cardFactory_8cpp.html" title=" " alt="" coords="5,93,188,119"/>
+<area shape="rect" id="node3" href="$chooseRandomCardRewardEffect_8cpp.html" title=" " alt="" coords="213,79,439,133"/>
+<area shape="rect" id="node4" href="$upgradeCardRewardEffect_8cpp.html" title=" " alt="" coords="464,79,673,133"/>
+<area shape="rect" id="node5" href="$rewardsRenderer_8h.html" title=" " alt="" coords="698,93,858,119"/>
+<area shape="rect" id="node6" href="$iotext_8cpp.html" title=" " alt="" coords="564,181,667,207"/>
+<area shape="rect" id="node7" href="$rewardsRenderer_8cpp.html" title=" " alt="" coords="691,181,865,207"/>
+<area shape="rect" id="node8" href="$terminalRewardView_8h.html" title=" " alt="" coords="889,181,1075,207"/>
+<area shape="rect" id="node9" href="$terminalRewardView_8cpp.html" title=" " alt="" coords="882,255,1082,280"/>
 </map>

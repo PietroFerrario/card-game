@@ -1,9 +1,6 @@
 var searchData=
 [
-  ['terminalmatchview_2ecpp_0',['terminalMatchView.cpp',['../terminalMatchView_8cpp.html',1,'']]],
-  ['terminalmatchview_2eh_1',['terminalMatchView.h',['../terminalMatchView_8h.html',1,'']]],
-  ['terminalrewardview_2ecpp_2',['terminalRewardView.cpp',['../terminalRewardView_8cpp.html',1,'']]],
-  ['terminalrewardview_2eh_3',['terminalRewardView.h',['../terminalRewardView_8h.html',1,'']]],
-  ['text_2ecpp_4',['text.cpp',['../text_8cpp.html',1,'']]],
-  ['text_2eh_5',['text.h',['../text_8h.html',1,'']]]
+  ['storyevent_2ecpp_0',['storyEvent.cpp',['../storyEvent_8cpp.html',1,'']]],
+  ['storyevent_2eh_1',['storyEvent.h',['../storyEvent_8h.html',1,'']]],
+  ['storyeventdata_2eh_2',['storyEventData.h',['../storyEventData_8h.html',1,'']]]
 ];

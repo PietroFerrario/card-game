@@ -1,0 +1,8 @@
+<map id="game_events/storyEventData.h" name="game_events/storyEventData.h">
+<area shape="rect" id="node1" title=" " alt="" coords="397,5,623,31"/>
+<area shape="rect" id="node2" href="$eventData_8h.html" title=" " alt="" coords="278,79,473,104"/>
+<area shape="rect" id="node3" href="$matchEventLoader_8h.html" title=" " alt="" coords="264,152,511,177"/>
+<area shape="rect" id="node6" href="$eventSequence_8cpp.html" title=" " alt="" coords="361,299,606,324"/>
+<area shape="rect" id="node4" href="$matchEventLoader_8cpp.html" title=" " alt="" coords="5,225,268,251"/>
+<area shape="rect" id="node5" href="$eventSequence_8h.html" title=" " alt="" coords="292,225,523,251"/>
+</map>

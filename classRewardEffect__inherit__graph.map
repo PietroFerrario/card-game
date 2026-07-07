@@ -1,6 +1,7 @@
 <map id="RewardEffect" name="RewardEffect">
-<area shape="rect" id="node1" title=" " alt="" coords="319,5,463,97"/>
+<area shape="rect" id="node1" title=" " alt="" coords="431,5,575,97"/>
 <area shape="rect" id="node2" href="$classChooseRandomCardRewardEffect.html" title=" " alt="" coords="5,145,271,237"/>
 <area shape="rect" id="node3" href="$classGainCardRewardEffect.html" title=" " alt="" coords="295,145,488,237"/>
 <area shape="rect" id="node4" href="$classGainMoneyRewardEffect.html" title=" " alt="" coords="512,145,719,237"/>
+<area shape="rect" id="node5" href="$classUpgradeCardRewardEffect.html" title=" " alt="" coords="743,145,962,237"/>
 </map>

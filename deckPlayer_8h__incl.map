@@ -1,12 +1,13 @@
 <map id="deck/deckPlayer.h" name="deck/deckPlayer.h">
-<area shape="rect" id="node1" title=" " alt="" coords="318,5,458,31"/>
-<area shape="rect" id="node2" href="$deckEntry_8h.html" title=" " alt="" coords="73,79,170,104"/>
-<area shape="rect" id="node5" title=" " alt="" coords="179,152,237,177"/>
-<area shape="rect" id="node6" title=" " alt="" coords="245,79,325,104"/>
-<area shape="rect" id="node7" title=" " alt="" coords="349,79,427,104"/>
-<area shape="rect" id="node8" title=" " alt="" coords="451,79,549,104"/>
-<area shape="rect" id="node9" title=" " alt="" coords="573,79,633,104"/>
-<area shape="rect" id="node10" title=" " alt="" coords="657,79,719,104"/>
-<area shape="rect" id="node3" href="$cardParams_8h.html" title=" " alt="" coords="5,152,155,177"/>
-<area shape="rect" id="node4" title=" " alt="" coords="43,225,117,251"/>
+<area shape="rect" id="node1" title=" " alt="" coords="401,5,541,31"/>
+<area shape="rect" id="node2" href="$cardParams_8h.html" title=" " alt="" coords="5,181,155,207"/>
+<area shape="rect" id="node4" href="$deckEntry_8h.html" title=" " alt="" coords="53,93,150,119"/>
+<area shape="rect" id="node5" title=" " alt="" coords="179,181,237,207"/>
+<area shape="rect" id="node6" href="$rewardEffectData_8h.html" title=" " alt="" coords="225,79,433,133"/>
+<area shape="rect" id="node7" title=" " alt="" coords="369,181,431,207"/>
+<area shape="rect" id="node8" title=" " alt="" coords="508,93,588,119"/>
+<area shape="rect" id="node9" title=" " alt="" coords="612,93,689,119"/>
+<area shape="rect" id="node10" title=" " alt="" coords="714,93,811,119"/>
+<area shape="rect" id="node11" title=" " alt="" coords="835,93,895,119"/>
+<area shape="rect" id="node3" title=" " alt="" coords="43,255,117,280"/>
 </map>
