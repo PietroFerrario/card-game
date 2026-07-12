@@ -1,0 +1,334 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Game Data Editor</title>
+    <script src="https://cdn.jsdelivr.net/npm/@json-editor/json-editor@2.15.2/dist/jsoneditor.min.js"></script>
+    <style>
+        body {
+            font-family: system-ui, sans-serif;
+            margin: 0;
+        }
+
+        .bar {
+            position: sticky;
+            top: 0;
+            background: #fafafa;
+            border-bottom: 1px solid #ddd;
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            z-index: 10;
+        }
+
+        button {
+            font-size: 15px;
+            padding: 8px 16px;
+            cursor: pointer;
+        }
+
+        #status {
+            color: #555;
+            margin-left: 6px;
+        }
+
+        #kind {
+            font-weight: 600;
+            color: #2255aa;
+        }
+
+        #wrap {
+            padding: 20px;
+            max-width: 950px;
+        }
+
+        .je-indented-panel {
+            border: 1px solid #e3e3e3;
+            border-radius: 6px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bar">
+        <button id="load">📂 Load file</button>
+        <button id="save">💾 Save</button>
+        <span id="kind"></span>
+        <span id="status"></span>
+    </div>
+    <div id="wrap">
+        <div id="editor"></div>
+    </div>
+    <input id="file" type="file" accept=".json" style="display:none">
+
+    <script>
+        /* ---------- shared effect definition (single source, JS reference) ---------- */
+        const effect = {
+            type: "object", title: "Effect", additionalProperties: false,
+            required: ["effect", "target"],
+            properties: {
+                effect: {
+                    type: "string", title: "Effect",
+                    enum: ["gainArmor", "gainAttack", "gainActions", "drawCards", "limitCardToPlay", "takeHostage"]
+                },
+                target: { type: ["string", "null"], title: "Target", enum: ["self", "opponent", null] }
+            }
+        };
+
+        /* ---------- one schema per data file (self-contained) ---------- */
+        const schemas = {
+            cards: {
+                type: "object", title: "Cards", additionalProperties: false, required: ["cardList"],
+                properties: {
+                    $schema: { type: "string" },
+                    cardList: {
+                        type: "array", title: "Cards", items: {
+                            type: "object", title: "Card", headerTemplate: "{{self.name}}", additionalProperties: false,
+                            required: ["id", "name", "descr", "damage", "armor", "actions", "drawing", "effectList"],
+                            properties: {
+                                id: { type: "string", title: "ID" },
+                                name: { type: "string", title: "Name" },
+                                descr: { type: "string", title: "Description", format: "textarea" },
+                                damage: { type: "integer", title: "Damage", minimum: 0, maximum: 99, default: 0 },
+                                armor: { type: "integer", title: "Armor", minimum: 0, maximum: 99, default: 0 },
+                                actions: { type: "integer", title: "Actions", minimum: 0, maximum: 99, default: 0 },
+                                drawing: { type: "integer", title: "Drawing", minimum: 0, maximum: 99, default: 0 },
+                                effectList: { type: "array", title: "Effects", items: effect }
+                            }
+                        }
+                    }
+                }
+            },
+
+            enemies: {
+                type: "object", title: "Enemies", additionalProperties: false, required: ["enemyList"],
+                properties: {
+                    $schema: { type: "string" },
+                    enemyList: {
+                        type: "array", title: "Enemies", items: {
+                            type: "object", title: "Enemy", headerTemplate: "{{self.name}}", additionalProperties: false,
+                            required: ["id", "name", "hp", "movesList"],
+                            properties: {
+                                id: { type: "string", title: "ID" },
+                                name: { type: "string", title: "Name" },
+                                hp: { type: "integer", title: "HP", minimum: 1, maximum: 999, default: 1 },
+                                movesList: {
+                                    type: "array", title: "Moves", items: {
+                                        type: "object", title: "Move", headerTemplate: "{{self.moveName}}", additionalProperties: false,
+                                        required: ["moveName", "moveDescription", "damage", "armor", "effectList"],
+                                        properties: {
+                                            moveName: { type: "string", title: "Name" },
+                                            moveDescription: { type: "string", title: "Description", format: "textarea" },
+                                            damage: { type: "integer", title: "Damage", minimum: 0, maximum: 999, default: 0 },
+                                            armor: { type: "integer", title: "Armor", minimum: 0, maximum: 999, default: 0 },
+                                            effectList: { type: "array", title: "Effects", items: effect },
+                                            cardsLimit: { type: "integer", title: "Cards Limit", minimum: 0, default: 1 }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+
+            events: {
+                type: "object", title: "Events", additionalProperties: false, required: ["eventList"],
+                properties: {
+                    $schema: { type: "string" },
+                    eventList: {
+                        type: "array", title: "Events", items: {
+                            oneOf: [
+                                {
+                                    type: "object", title: "Match", additionalProperties: false,
+                                    required: ["type", "enemyId", "rewardListId"],
+                                    properties: {
+                                        type: { type: "string", enum: ["match"], default: "match", options: { hidden: true } },
+                                        enemyId: { type: "string", title: "Enemy ID" },
+                                        rewardListId: { type: "string", title: "Reward List ID" }
+                                    }
+                                },
+                                {
+                                    type: "object", title: "Story", additionalProperties: false,
+                                    required: ["type", "storyId", "storyTitle", "storyDescription", "rewardListId"],
+                                    properties: {
+                                        type: { type: "string", enum: ["story"], default: "story", options: { hidden: true } },
+                                        storyId: { type: "string", title: "Story ID" },
+                                        storyTitle: { type: "string", title: "Title" },
+                                        storyDescription: { type: "string", title: "Description", format: "textarea" },
+                                        rewardListId: { type: "string", title: "Reward List ID" }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                }
+            },
+
+            rewards: {
+                type: "object", title: "Rewards", additionalProperties: false, required: ["rewardLists"],
+                properties: {
+                    $schema: { type: "string" },
+                    rewardLists: {
+                        type: "array", title: "Reward Lists", items: {
+                            type: "object", title: "Reward List", headerTemplate: "{{self.rewardListId}}", additionalProperties: false,
+                            required: ["rewardListId", "rewards"],
+                            properties: {
+                                rewardListId: { type: "string", title: "ID" },
+                                rewards: {
+                                    type: "array", title: "Rewards", items: {
+                                        type: "object", title: "Reward", headerTemplate: "{{self.rewardName}}", additionalProperties: false,
+                                        required: ["rewardType", "rewardName", "description", "effectList"],
+                                        properties: {
+                                            rewardType: {
+                                                type: "string", title: "Type",
+                                                enum: ["equip", "economic", "upgradeDeck", "quest", "randomCards"]
+                                            },
+                                            rewardName: { type: "string", title: "Name" },
+                                            description: { type: "string", title: "Description", format: "textarea" },
+                                            effectList: {
+                                                type: "array", title: "Effects", items: {
+                                                    type: "object", title: "Effect", additionalProperties: false,
+                                                    required: ["effectType", "amount", "cardId", "upgradeCardParams"],
+                                                    properties: {
+                                                        effectType: {
+                                                            type: "string", title: "Effect Type",
+                                                            enum: ["gainCard", "gainMoney", "upgradeCard", "cardChoice", "registerQuest"]
+                                                        },
+                                                        amount: { type: "integer", title: "Amount", minimum: 0, default: 0 },
+                                                        cardId: { type: "string", title: "Card ID" },
+                                                        upgradeCardParams: {
+                                                            type: "array", title: "Upgrade Params",
+                                                            items: { type: "string", enum: ["attack", "armor", "action", "drawing"] }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+
+            decks: {
+                type: "object", title: "Decks",
+                properties: { $schema: { type: "string" } },
+                additionalProperties: {
+                    type: "array", title: "Deck", items: {
+                        type: "object", title: "Entry", additionalProperties: false, required: ["id", "amount"],
+                        properties: {
+                            id: { type: "string", title: "Card ID" },
+                            amount: { type: "integer", title: "Amount", minimum: 0, maximum: 99, default: 1 }
+                        }
+                    }
+                }
+            },
+
+            text: {
+                type: "object", title: "Text", additionalProperties: false, required: ["intro", "outro"],
+                properties: {
+                    $schema: { type: "string" },
+                    intro: { type: "string", title: "Intro", format: "textarea" },
+                    outro: { type: "string", title: "Outro", format: "textarea" }
+                }
+            }
+        };
+
+        /* ---------- figure out which file was loaded ---------- */
+        function detect(data) {
+            if (data.cardList) return "cards";
+            if (data.enemyList) return "enemies";
+            if (data.eventList) return "events";
+            if (data.rewardLists) return "rewards";
+            if ("intro" in data || "outro" in data) return "text";
+            return "decks";                     // fallback: object of deckName -> array
+        }
+
+        /* ---------- build the form for the detected type ---------- */
+        let editor = null, handle = null, currentType = null;
+        const status = m => document.getElementById("status").textContent = m;
+
+        function build(typeKey, data) {
+            if (editor) editor.destroy();
+            editor = new JSONEditor(document.getElementById("editor"), {
+                schema: schemas[typeKey],
+                theme: "html",
+                disable_edit_json: true,
+                disable_properties: typeKey !== "decks",   // decks needs the "add deck" button
+                required_by_default: true,
+                array_controls_top: true
+            });
+            editor.on("ready", () => { if (data !== undefined) editor.setValue(data); });
+        }
+
+        /* ---------- load ---------- */
+        document.getElementById("load").onclick = async () => {
+            try {
+                if (window.showOpenFilePicker) {                       // Chrome / Edge: keep a writable handle
+                    [handle] = await window.showOpenFilePicker({
+                        types: [{ description: "JSON", accept: { "application/json": [".json"] } }]
+                    });
+                    const file = await handle.getFile();
+                    openText(await file.text(), file.name);
+                } else {                                               // Firefox / Safari: read-only picker
+                    handle = null;
+                    document.getElementById("file").click();
+                }
+            } catch (e) { /* user cancelled the picker */ }
+        };
+        document.getElementById("file").onchange = e => {
+            const f = e.target.files[0];
+            if (!f) return;
+            const r = new FileReader();
+            r.onload = () => openText(r.result, f.name);
+            r.readAsText(f);
+        };
+        function openText(text, name) {
+            let data;
+            try { data = JSON.parse(text); }
+            catch (err) { alert("That file isn't valid JSON:\n" + err.message); return; }
+            currentType = detect(data);
+            document.getElementById("kind").textContent = "Editing: " + currentType;
+            build(currentType, data);
+            status("Loaded " + name);
+        }
+
+        /* ---------- save ---------- */
+        document.getElementById("save").onclick = async () => {
+            if (!editor) { alert("Load a file first."); return; }
+            const errors = editor.validate();
+            if (errors.length) {
+                alert("Fix these before saving:\n\n" +
+                    errors.map(e => "• " + e.path.replace("root.", "") + " — " + e.message).join("\n"));
+                return;
+            }
+            const text = JSON.stringify(editor.getValue(), null, 4);
+            if (handle && handle.createWritable) {                   // write back to the same file
+                if (!(await ensureWrite(handle))) { alert("Write permission was denied."); return; }
+                const w = await handle.createWritable();
+                await w.write(text);
+                await w.close();
+                status("Saved back to the file ✓");
+            } else {                                                 // fallback: download a copy
+                const a = document.createElement("a");
+                a.href = URL.createObjectURL(new Blob([text], { type: "application/json" }));
+                a.download = currentType + ".json";
+                a.click();
+                status("Downloaded — replace your file with the download");
+            }
+        };
+        async function ensureWrite(h) {
+            const opts = { mode: "readwrite" };
+            if ((await h.queryPermission(opts)) === "granted") return true;
+            return (await h.requestPermission(opts)) === "granted";
+        }
+    </script>
+</body>
+
+</html>

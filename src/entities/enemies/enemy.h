@@ -23,6 +23,15 @@ class Enemy : public Entity
 {
   public:
     /**
+     * @brief Constructs an enemy with the given starting HP.
+     *
+     * @param name Enemy name.
+     *
+     * @param hp Initial hit points for the enemy.
+     */
+    Enemy(std::string_view name, int hp, std::vector<EnemyMove> moves);
+
+    /**
      * @brief Returns the next move in the enemy's move sequence.
      *
      * The move index is advanced after each call. The sequence is treated as cyclic.
@@ -33,16 +42,9 @@ class Enemy : public Entity
      */
     const EnemyMove& nextMove();
 
-  protected:
-    /**
-     * @brief Constructs an enemy with the given starting HP.
-     *
-     * @param hp Initial hit points for the enemy.
-     */
-    Enemy(int hp);
+  private:
     std::vector<EnemyMove> m_moves{};
     int m_moveIndex{0};
-    EnemyId m_id;
 };
 
 #endif // ENEMY_H

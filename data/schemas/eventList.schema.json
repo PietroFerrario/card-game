@@ -1,0 +1,81 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Event sequence (eventList.json)",
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+        "eventList"
+    ],
+    "properties": {
+        "$schema": {
+            "type": "string"
+        },
+        "eventList": {
+            "type": "array",
+            "items": {
+                "oneOf": [
+                    {
+                        "$ref": "#/definitions/matchEvent"
+                    },
+                    {
+                        "$ref": "#/definitions/storyEvent"
+                    }
+                ]
+            }
+        }
+    },
+    "definitions": {
+        "matchEvent": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+                "type",
+                "enemyId",
+                "rewardListId"
+            ],
+            "properties": {
+                "type": {
+                    "const": "match"
+                },
+                "enemyId": {
+                    "type": "string",
+                    "minLength": 1
+                },
+                "rewardListId": {
+                    "type": "string",
+                    "minLength": 1
+                }
+            }
+        },
+        "storyEvent": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+                "type",
+                "storyId",
+                "storyTitle",
+                "storyDescription",
+                "rewardListId"
+            ],
+            "properties": {
+                "type": {
+                    "const": "story"
+                },
+                "storyId": {
+                    "type": "string",
+                    "minLength": 1
+                },
+                "storyTitle": {
+                    "type": "string"
+                },
+                "storyDescription": {
+                    "type": "string"
+                },
+                "rewardListId": {
+                    "type": "string",
+                    "minLength": 1
+                }
+            }
+        }
+    }
+}

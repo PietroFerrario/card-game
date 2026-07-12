@@ -1,4 +1,5 @@
 {
+    "$schema": "./schemas/decks.schema.json",
     "basicDeck": [
         {
             "id": "Farmer",

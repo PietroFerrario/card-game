@@ -27,7 +27,7 @@ std::vector<EventData> MatchEventLoader::loadEvents()
         if (type == "match")
         {
             MatchEventData match;
-            match.enemyId = m_enemyIdMap.at(entry.at("enemyId").get_ref<const std::string&>());
+            match.enemyId = entry.at("enemyId").get_ref<const std::string&>();
             match.rewardListId = entry.at("rewardListId").get_ref<const std::string&>();
 
             eventDataList.emplace_back(std::move(match));

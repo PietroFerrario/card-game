@@ -1,0 +1,41 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Shared definitions for card-game data files",
+    "definitions": {
+        "effectName": {
+            "description": "Every effect the game knows how to parse (must match effectNameMap keys).",
+            "enum": [
+                "gainArmor",
+                "gainAttack",
+                "gainActions",
+                "drawCards",
+                "limitCardToPlay",
+                "takeHostage"
+            ]
+        },
+        "target": {
+            "description": "Logical target. null for effects that don't target (drawCards, gainActions).",
+            "enum": [
+                "self",
+                "opponent",
+                null
+            ]
+        },
+        "effect": {
+            "type": "object",
+            "required": [
+                "effect",
+                "target"
+            ],
+            "additionalProperties": false,
+            "properties": {
+                "effect": {
+                    "$ref": "#/definitions/effectName"
+                },
+                "target": {
+                    "$ref": "#/definitions/target"
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,113 @@
+{
+    "$schema": "./schemas/enemies.schema.json",
+    "enemyList": [
+        {
+            "id": "RaggedBandits",
+            "name": "Ragged Bandits",
+            "hp": 30,
+            "movesList": [
+                {
+                    "moveName": "Ambush!!!",
+                    "moveDescription": "They caught you by surprise!",
+                    "damage": 3,
+                    "armor": 0,
+                    "cardsLimit": 2,
+                    "effectList": [
+                        {
+                            "effect": "limitCardToPlay",
+                            "target": null
+                        },
+                        {
+                            "effect": "gainAttack",
+                            "target": "self"
+                        }
+                    ]
+                },
+                {
+                    "moveName": "Hostage",
+                    "moveDescription": "A hidden member of the gang came out from nowhere and now he's holding a knife to your comrade throat.",
+                    "damage": 0,
+                    "armor": 0,
+                    "effectList": [
+                        {
+                            "effect": "takeHostage",
+                            "target": null
+                        }
+                    ]
+                },
+                {
+                    "moveName": "Uncoordinated Attack",
+                    "moveDescription": "No tactics or discipline, the ragged band leaps at you!",
+                    "damage": 5,
+                    "armor": 2,
+                    "effectList": [
+                        {
+                            "effect": "gainAttack",
+                            "target": "self"
+                        },
+                        {
+                            "effect": "gainArmor",
+                            "target": "self"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "Norman military patrol",
+            "name": "Norman military patrol",
+            "hp": 45,
+            "movesList": [
+                {
+                    "moveName": "Mocking",
+                    "moveDescription": "A patrol of arrogant and foolish young Normans threatens you :O",
+                    "damage": 0,
+                    "armor": 5,
+                    "cardsLimit": 2,
+                    "effectList": [
+                        {
+                            "effect": "limitCardToPlay",
+                            "target": "self"
+                        }
+                    ]
+                },
+                {
+                    "moveName": "Damn Bullies #1",
+                    "moveDescription": "The group of fools attack you :/",
+                    "damage": 3,
+                    "armor": 0,
+                    "effectList": [
+                        {
+                            "effect": "gainAttack",
+                            "target": "self"
+                        }
+                    ]
+                },
+                {
+                    "moveName": "Damn Bullies #2",
+                    "moveDescription": "The group of fools continues to attack you -_-",
+                    "damage": 6,
+                    "armor": 0,
+                    "effectList": [
+                        {
+                            "effect": "gainAttack",
+                            "target": "self"
+                        }
+                    ]
+                },
+                {
+                    "moveName": "Damn Bullies #3",
+                    "moveDescription": "The group of fools continues to attack you...they need a lesson at this point >_<",
+                    "damage": 9,
+                    "armor": 0,
+                    "effectList": [
+                        {
+                            "effect": "gainArmor",
+                            "target": "self"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

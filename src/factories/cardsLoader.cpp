@@ -28,12 +28,33 @@ std::vector<std::unique_ptr<CardDefinition>> CardsLoader::parseCardsList()
 
 std::unique_ptr<CardDefinition> CardsLoader::loadCard(const json& card)
 {
-    return std::make_unique<CardDefinition>(card.at("id").get_ref<const std::string&>(),
-                                            card.at("name").get_ref<const std::string&>(),
-                                            card.at("descr").get_ref<const std::string&>(),
-                                            CardParams{.damage = card.at("damage").get<int>(),
-                                                       .armor = card.at("armor").get<int>(),
-                                                       .actions = card.at("actions").get<int>(),
-                                                       .drawing = card.at("drawing").get<int>()},
-                                            m_effectFactory.makeEffectList(card.at("effectList")));
+    return std::make_unique<CardDefinition>(
+        card.at("id").get_ref<const std::string&>(), card.at("name").get_ref<const std::string&>(),
+        card.at("descr").get_ref<const std::string&>(),
+        CardParams{.damage = card.at("damage").get<int>(),
+                   .armor = card.at("armor").get<int>(),
+                   .actions = card.at("actions").get<int>(),
+                   .drawing = card.at("drawing").get<int>()},
+        m_effectFactory.makeEffectList(makeEffectDataList(card.at("effectList"))));
+}
+
+std::vector<std::pair<EffectName, Target>>
+CardsLoader::makeEffectDataList(const json& jsonEffectList)
+{
+    std::vector<std::pair<EffectName, Target>> effectList;
+
+    for (const auto& jsonEffect : jsonEffectList)
+    {
+
+        EffectName effectName{
+            effect::effectNameMap.at(jsonEffect.at("effect").get_ref<const std::string&>())};
+
+        const auto& targetJson{jsonEffect.at("target")};
+        Target target{targetJson.is_null()
+                          ? Target::Self
+                          : target::targetMap.at(targetJson.get_ref<const std::string&>())};
+
+        effectList.emplace_back(std::pair<EffectName, Target>{effectName, target});
+    }
+    return effectList;
 }

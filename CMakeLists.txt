@@ -32,8 +32,8 @@ target_sources(cardgame_core PRIVATE
     src/entities/player.cpp
 
     src/entities/enemies/enemy.cpp
-    src/entities/enemies/wolfPack.cpp
-    src/entities/enemies/bandits.cpp
+    src/entities/enemies/enemyLoader.cpp
+
 
     src/factories/cardFactory.cpp
     src/factories/effectFactory.cpp
@@ -98,8 +98,6 @@ add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
 
 # Sandbox executables
 
-add_executable(sandbox_test sandbox/deckTest.cpp)
-target_link_libraries(sandbox_test PRIVATE cardgame_core)
 
 add_executable(sandbox_creating_cards sandbox/creatingCardsTest.cpp)
 target_link_libraries(sandbox_creating_cards PRIVATE cardgame_core)

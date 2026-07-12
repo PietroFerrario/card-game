@@ -24,7 +24,8 @@ void UpgradeCardRewardEffect::resolve(RewardContext& rewardContext)
 
     rewardContext.rewardView.showRandomCardSelection(refDeckToRender);
 
-    int selectedCard(rewardContext.rewardView.askPlayerSelectUpgradeCard(m_amount));
+    int selectedCard(
+        rewardContext.rewardView.askPlayerSelectUpgradeCard(static_cast<int>(deckToRender.size())));
 
     rewardContext.player.getDeckPlayer().upgradeCard(
         rewardContext.player.getDeckPlayer().getCardEntry(selectedCard), m_amount,

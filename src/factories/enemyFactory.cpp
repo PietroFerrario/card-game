@@ -1,17 +1,27 @@
 #include "enemyFactory.h"
-#include "entities/enemies/bandits.h"
+#include "cards/cardParams.h"
+#include "entities/enemies/enemyMove.h"
 
-std::unique_ptr<Enemy> EnemyFactory::makeEnemy(EnemyId id)
+#include <vector>
+
+EnemyFactory::EnemyFactory(std::unordered_map<std::string, EnemyData> enemyMap)
+    : m_enemyMap{std::move(enemyMap)}
 {
-    switch (id)
-    {
-    case (EnemyId::Bandits):
-    {
-        return std::make_unique<Bandits>();
-    }
+}
 
-    default:
-        return nullptr;
-        break;
+std::unique_ptr<Enemy> EnemyFactory::makeEnemy(std::string enemyId)
+{
+    EnemyData enemyData{m_enemyMap.at(enemyId)};
+    std::vector<EnemyMove> enemyMovesList;
+
+    for (auto& moveData : enemyData.moveList)
+    {
+        CardParams cardParams{moveData.damage, moveData.armor};
+        cardParams.cardsLimit = moveData.cardsLimit;
+
+        enemyMovesList.emplace_back(std::move(moveData.moveName),
+                                    std::move(moveData.moveDescription), cardParams,
+                                    m_effectFactory.makeEffectList(moveData.effectList));
     }
+    return {std::make_unique<Enemy>(enemyData.name, enemyData.hp, std::move(enemyMovesList))};
 }

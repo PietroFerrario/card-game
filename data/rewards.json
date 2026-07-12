@@ -1,43 +1,29 @@
 {
+    "$schema": "",
     "rewardsList": [
         {
             "id": "banditFirst",
-            "rewardType": "equip",
-            "description": "Blablabla",
-            "effectList": [
-                {
-                    "effectType": "upgradeCard",
-                    "amount": 1,
-                    "cardId": "farmer",
-                    "targetCardId": "",
-                    "upgradeCardParams": [
-                        "attack",
-                        "armor"
-                    ]
-                },
-                {
-                    "effectType": "upgradeCard",
-                    "amount": 1,
-                    "cardId": "warrior",
-                    "targetCardId": "",
-                    "upgradeCardParams": [
-                        "attack",
-                        "armor"
-                    ]
-                }
-            ]
+            "amount": 1
         },
         {
             "id": "banditFirst",
-            "type": "economic",
-            "description": "BleBleBle",
-            "effect": "gainMoney"
+            "amount": 1
         },
         {
             "id": "banditFirst",
-            "type": "gainCard",
-            "description": "BluBluBlu",
-            "effect": "gainCard"
+            "amount": 1
+        },
+        {
+            "id": "NormanPatrol1",
+            "amount": 1
+        },
+        {
+            "id": "NormanPatrol1",
+            "amount": 1
+        },
+        {
+            "id": "NormanPatrol1",
+            "amount": 1
         }
     ]
 }

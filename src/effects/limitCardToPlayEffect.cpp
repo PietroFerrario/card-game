@@ -8,6 +8,6 @@ void LimitCardToPlayEffect::resolve(CombatContext& combatContext, const CardPara
     if (values.cardsLimit.has_value())
     {
         combatContext.limitCardToPlay(values.cardsLimit.value());
-        DEBUG_LOG("Applied effect GainAction");
+        DEBUG_LOG("Applied effect LimitCardToPlay");
     }
 }

@@ -1,4 +1,5 @@
 {
+    "$schema": "./schemas/cards.schema.json",
     "cardList": [
         {
             "id": "ShieldWarrior",
@@ -102,7 +103,7 @@
             "damage": 0,
             "armor": 0,
             "actions": 2,
-            "drawing": 1,
+            "drawing": 0,
             "effectList": [
                 {
                     "effect": "gainActions",
@@ -120,7 +121,7 @@
             "descr": "He gets things done around here",
             "damage": 5,
             "armor": 0,
-            "actions": 0,
+            "actions": 1,
             "drawing": 0,
             "effectList": [
                 {
@@ -143,8 +144,8 @@
             "descr": "The right-hand mand of the Quartermaster",
             "damage": 1,
             "armor": 1,
-            "actions": 0,
-            "drawing": 0,
+            "actions": 1,
+            "drawing": 1,
             "effectList": [
                 {
                     "effect": "gainAttack",
@@ -155,8 +156,12 @@
                     "target": "self"
                 },
                 {
-                    "effect": "drawCards",
+                    "effect": "gainActions",
                     "target": null
+                },
+                {
+                    "effect": "drawCards",
+                    "target": "self"
                 }
             ]
         },

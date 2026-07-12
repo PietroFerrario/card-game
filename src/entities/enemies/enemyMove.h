@@ -18,16 +18,17 @@
  */
 struct EnemyMove
 {
-    /// @brief Ordered list of effects executed when this move is resolved.
-    std::vector<std::unique_ptr<Effect>> effectList{};
-
-    /// @brief Numeric parameters supplied to effects during resolution.
-    CardParams effectParams;
 
     /// @brief name of the move (used for logging/UI).
     std::string name;
 
     std::string description;
+
+    /// @brief Numeric parameters supplied to effects during resolution.
+    CardParams effectParams;
+
+    /// @brief Ordered list of effects executed when this move is resolved.
+    std::vector<std::unique_ptr<Effect>> effectList{};
 };
 
 #endif // ENEMYMOVE_H

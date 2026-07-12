@@ -1,0 +1,75 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Card definitions (cards.json)",
+    "type": "object",
+    "required": [
+        "cardList"
+    ],
+    "additionalProperties": false,
+    "properties": {
+        "$schema": {
+            "type": "string"
+        },
+        "cardList": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/card"
+            }
+        }
+    },
+    "definitions": {
+        "card": {
+            "type": "object",
+            "required": [
+                "id",
+                "name",
+                "descr",
+                "damage",
+                "armor",
+                "actions",
+                "drawing",
+                "effectList"
+            ],
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "minLength": 1
+                },
+                "name": {
+                    "type": "string",
+                    "minLength": 1
+                },
+                "descr": {
+                    "type": "string"
+                },
+                "damage": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 99
+                },
+                "armor": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 99
+                },
+                "actions": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 99
+                },
+                "drawing": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 99
+                },
+                "effectList": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "common.schema.json#/definitions/effect"
+                    }
+                }
+            }
+        }
+    }
+}

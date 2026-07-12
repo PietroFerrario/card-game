@@ -2,7 +2,10 @@
 #include <cassert>
 #include <utility>
 
-Enemy::Enemy(int hp) : Entity{hp} {}
+Enemy::Enemy(std::string_view name, int hp, std::vector<EnemyMove> moves)
+    : Entity{hp, name}, m_moves{std::move(moves)}
+{
+}
 
 const EnemyMove& Enemy::nextMove()
 {

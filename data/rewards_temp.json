@@ -1,4 +1,5 @@
 {
+    "$schema": "./schemas/rewards.schema.json",
     "rewardLists": [
         {
             "rewardListId": "banditFirst",
@@ -84,6 +85,39 @@
                             "effectType": "gainCard",
                             "amount": 0,
                             "cardId": "FamishedFarmer",
+                            "upgradeCardParams": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "rewardListId": "NormanPatrol1",
+            "rewards": [
+                {
+                    "rewardType": "equip",
+                    "rewardName": "No mercy",
+                    "description": "Kill them all, including the leader. You, the quartermaster, gain +1 damage.",
+                    "effectList": [
+                        {
+                            "effectType": "upgradeCard",
+                            "amount": 1,
+                            "cardId": "Quartermaster",
+                            "upgradeCardParams": [
+                                "attack"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "rewardType": "equip",
+                    "rewardName": "Perhaps...",
+                    "description": "A soldier begs for mercy and offers to join.",
+                    "effectList": [
+                        {
+                            "effectType": "gainCard",
+                            "amount": 1,
+                            "cardId": "InexGuard",
                             "upgradeCardParams": []
                         }
                     ]

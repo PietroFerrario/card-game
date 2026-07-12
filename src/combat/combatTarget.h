@@ -1,6 +1,9 @@
 #ifndef COMBATTARGET_H
 #define COMBATTARGET_H
 
+#include <string_view>
+#include <unordered_map>
+
 /**
  * @brief Logical target selector used during effect resolution.
  *
@@ -16,4 +19,9 @@ enum class Target
     Opponent
 };
 
+namespace target
+{
+inline const std::unordered_map<std::string_view, Target> targetMap{{"self", Target::Self},
+                                                                    {"opponent", Target::Opponent}};
+} // namespace target
 #endif // COMBATTARGET_H

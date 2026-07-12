@@ -7,7 +7,7 @@
 
 struct MatchEventData
 {
-    EnemyId enemyId;
+    std::string enemyId;
     std::string rewardListId;
 };
 

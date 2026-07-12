@@ -4,25 +4,30 @@
 #include "effects/gainActionsEffect.h"
 #include "effects/gainArmorEffect.h"
 #include "effects/gainAttackEffect.h"
+#include "effects/hostageCardEffect.h"
+#include "effects/limitCardToPlayEffect.h"
 #include "util/debug.h"
 #include <cassert>
 
 EffectFactory::EffectFactory()
 {
-    m_effectMap["gainArmor"] = makeGainArmorEffect;
-    m_effectMap["gainAttack"] = makeGainAttackEffect;
-    m_effectMap["drawCards"] = makeDrawCardsEffect;
-    m_effectMap["gainActions"] = makeGainActionsEffect;
+    m_effectMap[EffectName::gainArmor] = makeGainArmorEffect;
+    m_effectMap[EffectName::gainAttack] = makeGainAttackEffect;
+    m_effectMap[EffectName::drawCards] = makeDrawCardsEffect;
+    m_effectMap[EffectName::gainActions] = makeGainActionsEffect;
+
+    m_effectMap[EffectName::takeHostage] = makeTakeHostageEffect;
+    m_effectMap[EffectName::limitCardToPlay] = makeLimitCardToPlayEffect;
 }
 
 std::vector<std::unique_ptr<Effect>>
-EffectFactory::makeEffectList(const nlohmann::json& dataEffectList)
+EffectFactory::makeEffectList(const std::vector<std::pair<EffectName, Target>>& effectDataList)
 {
     std::vector<std::unique_ptr<Effect>> effectList;
 
-    for (const auto& dataEffect : dataEffectList)
+    for (const auto& dataEffect : effectDataList)
     {
-        auto mapIter = m_effectMap.find(dataEffect.at("effect").get_ref<const std::string&>());
+        auto mapIter = m_effectMap.find(dataEffect.first);
 
         if (mapIter == m_effectMap.end())
         {
@@ -30,45 +35,38 @@ EffectFactory::makeEffectList(const nlohmann::json& dataEffectList)
             std::terminate();
         }
 
-        effectList.emplace_back(std::move(mapIter->second(dataEffect)));
+        effectList.emplace_back(std::move(mapIter->second(dataEffect.second)));
     }
 
     return effectList;
 }
 
-std::unique_ptr<Effect> EffectFactory::makeGainArmorEffect(const nlohmann::json& effect)
+std::unique_ptr<Effect> EffectFactory::makeGainArmorEffect(Target target)
 {
-    return std::make_unique<GainArmorEffect>(
-        identifyTarget(effect.at("target").get_ref<const std::string&>()));
+    return std::make_unique<GainArmorEffect>(target);
 }
 
-std::unique_ptr<Effect> EffectFactory::makeGainAttackEffect(const nlohmann::json& effect)
+std::unique_ptr<Effect> EffectFactory::makeGainAttackEffect(Target target)
 {
-    return std::make_unique<GainAttackEffect>(
-        identifyTarget(effect.at("target").get_ref<const std::string&>()));
+    return std::make_unique<GainAttackEffect>(target);
 }
 
-std::unique_ptr<Effect> EffectFactory::makeGainActionsEffect(const nlohmann::json& effect)
+std::unique_ptr<Effect> EffectFactory::makeGainActionsEffect(Target target)
 {
     return std::make_unique<GainActionsEffect>();
 }
 
-std::unique_ptr<Effect> EffectFactory::makeDrawCardsEffect(const nlohmann::json& effect)
+std::unique_ptr<Effect> EffectFactory::makeDrawCardsEffect(Target target)
 {
     return std::make_unique<DrawCardsEffect>();
 }
 
-Target EffectFactory::identifyTarget(const std::string& targetSpecifier)
+std::unique_ptr<Effect> EffectFactory::makeLimitCardToPlayEffect(Target target)
 {
-    if (targetSpecifier == "self")
-    {
-        return Target::Self;
-    }
-    if (targetSpecifier == "opponent")
-    {
-        return Target::Opponent;
-    }
+    return std::make_unique<LimitCardToPlayEffect>();
+}
 
-    assert(false && "Unknown target specifier");
-    std::terminate();
+std::unique_ptr<Effect> EffectFactory::makeTakeHostageEffect(Target target)
+{
+    return std::make_unique<HostageCardEffect>();
 }

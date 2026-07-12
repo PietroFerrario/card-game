@@ -1,0 +1,117 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Reward lists (rewards_temp.json)",
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+        "rewardLists"
+    ],
+    "properties": {
+        "$schema": {
+            "type": "string"
+        },
+        "rewardLists": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/rewardList"
+            }
+        }
+    },
+    "definitions": {
+        "rewardList": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+                "rewardListId",
+                "rewards"
+            ],
+            "properties": {
+                "rewardListId": {
+                    "type": "string",
+                    "minLength": 1
+                },
+                "rewards": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/reward"
+                    }
+                }
+            }
+        },
+        "reward": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+                "rewardType",
+                "rewardName",
+                "description",
+                "effectList"
+            ],
+            "properties": {
+                "rewardType": {
+                    "description": "Reward category. Matches m_rewardOptionTypeMap.",
+                    "enum": [
+                        "equip",
+                        "economic",
+                        "upgradeDeck",
+                        "quest",
+                        "randomCards"
+                    ]
+                },
+                "rewardName": {
+                    "type": "string",
+                    "minLength": 1
+                },
+                "description": {
+                    "type": "string"
+                },
+                "effectList": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/rewardEffect"
+                    }
+                }
+            }
+        },
+        "rewardEffect": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+                "effectType",
+                "amount",
+                "cardId",
+                "upgradeCardParams"
+            ],
+            "properties": {
+                "effectType": {
+                    "description": "What the effect does. Matches m_rewardEffectTypeMap.",
+                    "enum": [
+                        "gainCard",
+                        "gainMoney",
+                        "upgradeCard",
+                        "cardChoice",
+                        "registerQuest"
+                    ]
+                },
+                "amount": {
+                    "type": "integer",
+                    "minimum": 0
+                },
+                "cardId": {
+                    "type": "string"
+                },
+                "upgradeCardParams": {
+                    "type": "array",
+                    "items": {
+                        "enum": [
+                            "attack",
+                            "armor",
+                            "action",
+                            "drawing"
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}

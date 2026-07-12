@@ -1,21 +1,22 @@
 {
+    "$schema": "./schemas/eventList.schema.json",
     "eventList": [
         {
             "type": "match",
-            "enemyId": "bandits",
+            "enemyId": "RaggedBandits",
             "rewardListId": "banditFirst"
         },
         {
             "type": "story",
+            "storyId": "runawayFarmers",
             "storyTitle": "Runaway Farmers",
             "storyDescription": "From the side of the street a farmer approach the head of the caravan. He explains that he and his family are on the run from the war, while pointing back to three emaciated people, a woman and two kids. He's asking to join you.",
-            "storyId": "runawayFarmers",
             "rewardListId": "runawayFarmers"
         },
         {
             "type": "match",
-            "enemyId": "bandits",
-            "rewardListId": "banditFirst"
+            "enemyId": "Norman military patrol",
+            "rewardListId": "NormanPatrol1"
         }
     ]
 }

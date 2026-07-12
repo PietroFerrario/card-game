@@ -9,7 +9,8 @@
 
 EventSequence::EventSequence(IMatchView& matchView, IRewardView& rewardView,
                              ICardFactory& cardFactory, Player& player)
-    : m_matchView{matchView}, m_rewardView{rewardView}, m_cardFactory{cardFactory}, m_player{player}
+    : m_matchView{matchView}, m_rewardView{rewardView}, m_cardFactory{cardFactory},
+      m_player{player}, m_enemyFactory{m_enemyLoader.loadEnemies()}
 {
     m_cardFactory.registerCards();
     loadEvents();
@@ -23,19 +24,6 @@ void EventSequence::loadEvents()
     makeEvents(eventDataList);
 }
 
-void EventSequence::makeMatchEvents(const std::vector<MatchEventData>& list)
-{
-    for (const auto& matchEventData : list)
-    {
-        std::vector<RewardOption> matchEvenRewardList{
-            m_rewardLoader.loadRewardList(matchEventData.rewardListId)};
-
-        m_eventList.emplace_back(
-            std::make_unique<MatchEvent>(m_matchView, m_rewardView, m_cardFactory, m_player,
-                                         matchEventData.enemyId, std::move(matchEvenRewardList)));
-    }
-}
-
 void EventSequence::makeEvents(const std::vector<EventData>& list)
 {
     for (const auto& eventData : list)
@@ -45,9 +33,9 @@ void EventSequence::makeEvents(const std::vector<EventData>& list)
             std::vector<RewardOption> eventRewardList{
                 m_rewardLoader.loadRewardList(matchData->rewardListId)};
 
-            m_eventList.emplace_back(
-                std::make_unique<MatchEvent>(m_matchView, m_rewardView, m_cardFactory, m_player,
-                                             matchData->enemyId, std::move(eventRewardList)));
+            m_eventList.emplace_back(std::make_unique<MatchEvent>(
+                m_matchView, m_rewardView, m_cardFactory, m_enemyFactory, m_player,
+                matchData->enemyId, std::move(eventRewardList)));
         }
 
         else if (const auto* storyData = std::get_if<StoryEventData>(&eventData))
