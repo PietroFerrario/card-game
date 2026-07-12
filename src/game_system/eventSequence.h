@@ -8,6 +8,7 @@
 #include "game_events/gameEvent.h"
 #include "game_events/matchEventLoader.h"
 #include "game_events/rewards/rewardLoader.h"
+#include "game_system/gameConfig.h"
 #include "ui/IMatchView.h"
 #include "ui/IRewardView.h"
 #include <memory>
@@ -16,8 +17,8 @@
 class EventSequence
 {
   public:
-    EventSequence(IMatchView& IMatchView, IRewardView& rewardView, ICardFactory& cardFactory,
-                  Player& player);
+    EventSequence(GameConfig& gameConfig, IMatchView& IMatchView, IRewardView& rewardView,
+                  ICardFactory& cardFactory, Player& player);
 
     void resolveEventSequence();
 
@@ -25,6 +26,8 @@ class EventSequence
     void loadEvents();
     void makeMatchEvents(const std::vector<MatchEventData>& list);
     void makeEvents(const std::vector<EventData>& list);
+
+    GameConfig& m_gameConfig;
 
     IMatchView& m_matchView;
     IRewardView& m_rewardView;

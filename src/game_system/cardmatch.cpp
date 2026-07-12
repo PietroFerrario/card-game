@@ -11,10 +11,10 @@
 #include "entities/player.h"
 #include "util/debug.h"
 
-CardMatch::CardMatch(IMatchView& matchView, const ICardFactory& cardFactory, Player& player,
-                     Enemy& enemy)
-    : m_matchView{matchView}, m_cardFactory{cardFactory}, m_player{player}, m_enemy{enemy},
-      m_deckCombat{m_player.getDeckPlayer(), m_cardFactory}
+CardMatch::CardMatch(GameConfig& cardConfig, IMatchView& matchView, const ICardFactory& cardFactory,
+                     Player& player, Enemy& enemy)
+    : m_gameConfig{cardConfig}, m_matchView{matchView}, m_cardFactory{cardFactory},
+      m_player{player}, m_enemy{enemy}, m_deckCombat{m_player.getDeckPlayer(), m_cardFactory}
 {
 }
 
@@ -116,7 +116,7 @@ MatchData CardMatch::turnLoop()
     while (m_matchData.matchState == MatchState::Running)
     {
         DEBUG_LOG("Match state: Running. Turn continues");
-        TurnData turnData;
+        TurnData turnData{m_gameConfig.actionsPerTurn, m_gameConfig.cardsDrawnPerTurn};
         playerTurnSetup(turnData);
         enemyTurn(turnData);
         playerTurn(turnData);
@@ -154,7 +154,7 @@ void CardMatch::playerTurnSetup(const TurnData& currentTurnData)
 
 void CardMatch::playerTurn(TurnData& currentTurnData)
 {
-    DEBUG_LOG("Starting player turn: Drawing 2 cards");
+    DEBUG_LOG("Starting player turn: Drawing" << m_gameConfig.cardsDrawnPerTurn << " cards");
 
     CombatContext currentContext{m_combatSystem, m_player, m_enemy, m_deckCombat, currentTurnData};
 

@@ -1,5 +1,6 @@
 #include "eventSequence.h"
 #include "entities/enemies/enemyId.h"
+#include "gameConfig.h"
 #include "game_events/matchEvent.h"
 #include "game_events/matchEventData.h"
 #include "game_events/storyEvent.h"
@@ -7,10 +8,10 @@
 
 #include <variant>
 
-EventSequence::EventSequence(IMatchView& matchView, IRewardView& rewardView,
+EventSequence::EventSequence(GameConfig& gameConfig, IMatchView& matchView, IRewardView& rewardView,
                              ICardFactory& cardFactory, Player& player)
-    : m_matchView{matchView}, m_rewardView{rewardView}, m_cardFactory{cardFactory},
-      m_player{player}, m_enemyFactory{m_enemyLoader.loadEnemies()}
+    : m_gameConfig{gameConfig}, m_matchView{matchView}, m_rewardView{rewardView},
+      m_cardFactory{cardFactory}, m_player{player}, m_enemyFactory{m_enemyLoader.loadEnemies()}
 {
     m_cardFactory.registerCards();
     loadEvents();
@@ -34,7 +35,7 @@ void EventSequence::makeEvents(const std::vector<EventData>& list)
                 m_rewardLoader.loadRewardList(matchData->rewardListId)};
 
             m_eventList.emplace_back(std::make_unique<MatchEvent>(
-                m_matchView, m_rewardView, m_cardFactory, m_enemyFactory, m_player,
+                m_gameConfig, m_matchView, m_rewardView, m_cardFactory, m_enemyFactory, m_player,
                 matchData->enemyId, std::move(eventRewardList)));
         }
 

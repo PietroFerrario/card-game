@@ -6,6 +6,7 @@
 #include "entities/player.h"
 #include "factories/enemyFactory.h"
 #include "gameEvent.h"
+#include "game_system/gameConfig.h"
 #include "ui/IMatchView.h"
 #include "ui/IRewardView.h"
 
@@ -16,13 +17,14 @@ class ICardFactory;
 class MatchEvent : public GameEvent
 {
   public:
-    MatchEvent(IMatchView& matchView, IRewardView& rewardView, ICardFactory& cardFactory,
-               EnemyFactory& enemyFactory, Player& player, std::string enemyId,
-               std::vector<RewardOption> rewardOptionList);
+    MatchEvent(GameConfig& gameConfig, IMatchView& matchView, IRewardView& rewardView,
+               ICardFactory& cardFactory, EnemyFactory& enemyFactory, Player& player,
+               std::string enemyId, std::vector<RewardOption> rewardOptionList);
 
     void resolve() override;
 
   private:
+    GameConfig& m_gameConfig;
     IMatchView& m_matchView;
     IRewardView& m_rewardView;
     ICardFactory& m_cardFactory;

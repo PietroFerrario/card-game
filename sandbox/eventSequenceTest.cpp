@@ -2,6 +2,8 @@
 #include "deck/deckLoader.h"
 #include "entities/player.h"
 #include "factories/cardFactory.h"
+#include "game_system/configLoader.h"
+#include "game_system/gameConfig.h"
 #include "ui/iotext.h"
 #include "ui/terminalMatchView.h"
 #include "ui/terminalRewardView.h"
@@ -9,6 +11,7 @@
 #include <fstream>
 #include <iostream>
 #include <string>
+#include <unordered_map>
 
 int main()
 {
@@ -19,6 +22,9 @@ int main()
     }
 #endif
 
+    ConfigLoader configLoader;
+    std::unordered_map<std::string, GameConfig> configMap{configLoader.loadConfigs()};
+
     CardFactory cardFactory;
 
     IOText io{std::cout, std::cin};
@@ -27,20 +33,42 @@ int main()
 
     DeckLoader deckLoader;
 
+    std::string configId;
+    std::string inputConfig;
+    std::cout << "Welcome to the demo of an event sqeuence!\n\nSelect the "
+                 "game configuration. Press (Enter) to continue with basic configuration.\nPress "
+                 "(1) to select config1, press (2) for config2: \n";
+    std::getline(std::cin, configId);
+
+    if (inputConfig == "1")
+    {
+        configId = "config1";
+    }
+    else if (inputConfig == "2")
+    {
+        configId = "config2";
+    }
+    else
+    {
+        configId = "config0";
+    }
+
+    GameConfig gameConfig{configMap.at(configId)};
+
+    std::cout << "Select the basic starting deck.\nPress (1) to select custom deck 1, "
+                 "press(2) for custom deck 2: \n";
+
     std::string deckName;
-    std::cout << "Welcome to the demo of a combat instance!\n Press (Enter) to continue: you will "
-                 "select the basic starting deck.\n Press (1) if you want to select custom deck 1, "
-                 "or (2) for custom deck 2";
-    std::string input;
+    std::string inputDeck;
     int deckSelected{};
 
-    std::getline(std::cin, input);
+    std::getline(std::cin, inputDeck);
 
-    if (input == "1")
+    if (inputDeck == "1")
     {
         deckName = "basicDeck2";
     }
-    else if (input == "2")
+    else if (inputDeck == "2")
     {
         deckName = "basicDeck3";
     }
@@ -49,11 +77,14 @@ int main()
         deckName = "basicDeck";
     }
 
-    Player mainPlayer{deckLoader.loadDeck(deckName)};
+    Player mainPlayer{deckLoader.loadDeck(deckName), gameConfig.playerHp};
     mainPlayer.setName("Malliano");
 
-    EventSequence eventSequence{terminalMatchView, terminalRewardView, cardFactory, mainPlayer};
+    EventSequence eventSequence{gameConfig, terminalMatchView, terminalRewardView, cardFactory,
+                                mainPlayer};
     eventSequence.resolveEventSequence();
 
+    std::cout << "Congratulations!!!\n You have completed the Demo for CardGame(Non abbiamo ancora "
+                 "il nome dio canaja)";
     return 0;
 }

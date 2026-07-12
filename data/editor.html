@@ -237,6 +237,25 @@
                     intro: { type: "string", title: "Intro", format: "textarea" },
                     outro: { type: "string", title: "Outro", format: "textarea" }
                 }
+            },
+
+            config: {
+                type: "object", title: "Config", additionalProperties: false, required: ["configList"],
+                properties: {
+                    $schema: { type: "string" },
+                    configList: {
+                        type: "array", title: "Config Presets", items: {
+                            type: "object", title: "Config", headerTemplate: "{{self.id}}", additionalProperties: false,
+                            required: ["id", "playerHp", "cardsDrawnPerTurn", "actionsPerTurn"],
+                            properties: {
+                                id: { type: "string", title: "ID" },
+                                playerHp: { type: "integer", title: "Player HP", minimum: 1, maximum: 999, default: 10 },
+                                cardsDrawnPerTurn: { type: "integer", title: "Cards Drawn / Turn", minimum: 0, maximum: 99, default: 5 },
+                                actionsPerTurn: { type: "integer", title: "Actions / Turn", minimum: 1, maximum: 99, default: 2 }
+                            }
+                        }
+                    }
+                }
             }
         };
 
@@ -246,6 +265,7 @@
             if (data.enemyList) return "enemies";
             if (data.eventList) return "events";
             if (data.rewardLists) return "rewards";
+            if (data.configList) return "config";
             if ("intro" in data || "outro" in data) return "text";
             return "decks";                     // fallback: object of deckName -> array
         }

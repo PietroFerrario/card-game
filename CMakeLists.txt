@@ -60,6 +60,7 @@ target_sources(cardgame_core PRIVATE
     src/game_system/eventSequence.cpp
     src/game_system/cardMatch.cpp
     src/game_system/game.cpp
+    src/game_system/configLoader.cpp
 
     src/ui/iotext.cpp
     src/ui/text.cpp

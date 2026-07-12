@@ -1,0 +1,53 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Game config presets (config.json)",
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+        "configList"
+    ],
+    "properties": {
+        "$schema": {
+            "type": "string"
+        },
+        "configList": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/config"
+            }
+        }
+    },
+    "definitions": {
+        "config": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+                "id",
+                "playerHp",
+                "cardsDrawnPerTurn",
+                "actionsPerTurn"
+            ],
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "minLength": 1
+                },
+                "playerHp": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 999
+                },
+                "cardsDrawnPerTurn": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 99
+                },
+                "actionsPerTurn": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 99
+                }
+            }
+        }
+    }
+}

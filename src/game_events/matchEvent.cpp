@@ -5,12 +5,12 @@
 #include "rewards/rewardPhase.h"
 #include "util/debug.h"
 
-MatchEvent::MatchEvent(IMatchView& matchView, IRewardView& rewardView, ICardFactory& cardFactory,
-                       EnemyFactory& enemyFactory, Player& player, std::string enemyId,
-                       std::vector<RewardOption> rewardOptionList)
-    : m_matchView{matchView}, m_rewardView{rewardView}, m_cardFactory{cardFactory},
-      m_enemyFactory{enemyFactory}, m_enemyId{enemyId}, m_player{player},
-      m_rewardOptionList{std::move(rewardOptionList)}
+MatchEvent::MatchEvent(GameConfig& gameConfig, IMatchView& matchView, IRewardView& rewardView,
+                       ICardFactory& cardFactory, EnemyFactory& enemyFactory, Player& player,
+                       std::string enemyId, std::vector<RewardOption> rewardOptionList)
+    : m_gameConfig{gameConfig}, m_matchView{matchView}, m_rewardView{rewardView},
+      m_cardFactory{cardFactory}, m_enemyFactory{enemyFactory}, m_enemyId{enemyId},
+      m_player{player}, m_rewardOptionList{std::move(rewardOptionList)}
 {
 }
 
@@ -20,7 +20,7 @@ void MatchEvent::resolve()
     if (enemy)
     {
 
-        CardMatch cardMatch{m_matchView, m_cardFactory, m_player, *enemy};
+        CardMatch cardMatch{m_gameConfig, m_matchView, m_cardFactory, m_player, *enemy};
         MatchData matchResult{cardMatch.turnLoop()};
 
         if (matchResult.matchState == MatchState::PlayerWon)

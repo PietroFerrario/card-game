@@ -20,9 +20,9 @@ struct MatchData
 
 struct TurnData
 {
-    int playerRemainingActions{2};
+    int playerRemainingActions;
+    int initialCardsToDraw;
     int cardsPlayed{0};
-    int initialCardsToDraw{5};
 
     // enemy based
 

@@ -9,6 +9,7 @@
 #include "entities/enemies/enemy.h"
 #include "entities/player.h"
 #include "factories/ICardFactory.h"
+#include "gameConfig.h"
 #include "matchData.h"
 #include "ui/IMatchView.h"
 
@@ -43,7 +44,8 @@ class CardMatch
      * @param player Player participating in the encounter (must outlive the CardMatch).
      * @param enemy Enemy participating in the encounter (must outlive the CardMatch).
      */
-    CardMatch(IMatchView& matchView, const ICardFactory& cardFactory, Player& player, Enemy& enemy);
+    CardMatch(GameConfig& gameConfig, IMatchView& matchView, const ICardFactory& cardFactory,
+              Player& player, Enemy& enemy);
 
     /**
      * @brief Draws multiple cards into the player's hand.
@@ -103,6 +105,8 @@ class CardMatch
     void resetPhase();
 
   private:
+    GameConfig& m_gameConfig;
+
     IMatchView& m_matchView;
 
     Player& m_player; ///< Non-owning reference to the player in the encounter.

@@ -1,0 +1,22 @@
+{
+    "configList": [
+        {
+            "id": "config0",
+            "playerHp": 50,
+            "cardsDrawnPerTurn": 4,
+            "actionsPerTurn": 2
+        },
+        {
+            "id": "config1",
+            "playerHp": 10,
+            "cardsDrawnPerTurn": 5,
+            "actionsPerTurn": 2
+        },
+        {
+            "id": "config2",
+            "playerHp": 20,
+            "cardsDrawnPerTurn": 3,
+            "actionsPerTurn": 1
+        }
+    ]
+}
