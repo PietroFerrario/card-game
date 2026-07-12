@@ -43,10 +43,14 @@ std::vector<EnemyMoveData> EnemyLoader::makeEnemyMovesDataList(const json& jsonM
             jsonMove.at("moveDescription").get_ref<const std::string&>(),
             jsonMove.at("damage").get<int>(), jsonMove.at("armor").get<int>(),
 
-            // cardsLimit check and adding
-            jsonMove.contains("cardsLimit")
-                ? std::optional<int>{jsonMove.at("cardsLimit").get<int>()}
-                : std::optional<int>{},
+            // amount check and adding
+            jsonMove.contains("amount") ? std::optional<int>{jsonMove.at("amount").get<int>()}
+                                        : std::optional<int>{},
+
+            // cardId check and adding
+            jsonMove.contains("cardId")
+                ? std::optional<std::string>{jsonMove.at("cardId").get_ref<const std::string&>()}
+                : std::optional<std::string>{},
 
             makeMoveEffectsDataList(jsonMove.at("effectList")));
     }

@@ -35,7 +35,11 @@ std::unique_ptr<CardDefinition> CardsLoader::loadCard(const json& card)
                    .armor = card.at("armor").get<int>(),
                    .actions = card.at("actions").get<int>(),
                    .drawing = card.at("drawing").get<int>()},
-        m_effectFactory.makeEffectList(makeEffectDataList(card.at("effectList"))));
+        m_effectFactory.makeEffectList(makeEffectDataList(card.at("effectList"))),
+        card.contains("cardDisposalMode")
+            ? card::cardDisposalModeMap.at(
+                  card.at("cardDisposalMode").get_ref<const std::string&>())
+            : CardDisposalMode::Discard);
 }
 
 std::vector<std::pair<EffectName, Target>>

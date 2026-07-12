@@ -72,7 +72,7 @@
             properties: {
                 effect: {
                     type: "string", title: "Effect",
-                    enum: ["gainArmor", "gainAttack", "gainActions", "drawCards", "limitCardToPlay", "takeHostage"]
+                    enum: ["gainArmor", "gainAttack", "gainActions", "drawCards", "limitCardToPlay", "takeHostage", "addClogCardToDeck"]
                 },
                 target: { type: ["string", "null"], title: "Target", enum: ["self", "opponent", null] }
             }
@@ -96,6 +96,7 @@
                                 armor: { type: "integer", title: "Armor", minimum: 0, maximum: 99, default: 0 },
                                 actions: { type: "integer", title: "Actions", minimum: 0, maximum: 99, default: 0 },
                                 drawing: { type: "integer", title: "Drawing", minimum: 0, maximum: 99, default: 0 },
+                                cardDisposalMode: { type: "string", title: "Disposal Mode", enum: ["discard", "destroy", "exhaustUntilEndOfMatch"], default: "discard" },
                                 effectList: { type: "array", title: "Effects", items: effect }
                             }
                         }
@@ -124,8 +125,9 @@
                                             moveDescription: { type: "string", title: "Description", format: "textarea" },
                                             damage: { type: "integer", title: "Damage", minimum: 0, maximum: 999, default: 0 },
                                             armor: { type: "integer", title: "Armor", minimum: 0, maximum: 999, default: 0 },
-                                            effectList: { type: "array", title: "Effects", items: effect },
-                                            cardsLimit: { type: "integer", title: "Cards Limit", minimum: 0, default: 1 }
+                                            amount: { type: "integer", title: "Amount", minimum: 0 },
+                                            cardId: { type: "string", title: "Card ID" },
+                                            effectList: { type: "array", title: "Effects", items: effect }
                                         }
                                     }
                                 }

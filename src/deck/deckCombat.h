@@ -2,6 +2,7 @@
 #define DECKCOMBAT_H
 
 #include "cards/cardInstance.h"
+#include "deck/deckEntry.h"
 #include "drawData.h"
 
 #include <memory>
@@ -10,7 +11,7 @@
 #include <vector>
 
 class DeckPlayer;
-class DeckEntry;
+
 class CardInstance;
 class ICardFactory;
 
@@ -128,6 +129,8 @@ class DeckCombat
     void shuffle();
 
     void regenerateDeck();
+
+    void addCardToCombatDeck(const DeckEntry& card);
 
   private:
     std::vector<std::unique_ptr<CardInstance>> m_drawPile;       ///< Draw pile (initial deck).

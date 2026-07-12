@@ -1,5 +1,6 @@
 #include "deckCombat.h"
 #include "cards/cardDefinition.h"
+#include "cards/cardDisposalMode.h"
 #include "deckEntry.h"
 #include "deckPlayer.h"
 #include "factories/ICardFactory.h"
@@ -92,14 +93,24 @@ std::unique_ptr<CardInstance> DeckCombat::takeFromHand(int index)
     }
 }
 
-void DeckCombat::discard(std::unique_ptr<CardInstance> Card)
+void DeckCombat::discard(std::unique_ptr<CardInstance> exhaustedCard)
 {
-    if (!Card)
+    if (!exhaustedCard)
     {
         return;
     }
-    DEBUG_LOG("Moved the used card to the played card pile");
-    m_turnPlayedPile.emplace_back(std::move(Card));
+    switch (exhaustedCard->getCardDefinition().getCardDisposalMode())
+    {
+    case CardDisposalMode::Discard:
+        m_turnPlayedPile.emplace_back(std::move(exhaustedCard));
+        DEBUG_LOG("Moved the used card to the played card pile");
+        break;
+    case CardDisposalMode::Destroy:
+        DEBUG_LOG("Letting the pointer decay -> Gets destroyed");
+        break;
+    case CardDisposalMode::ExhaustUntilEndOfMatch:
+        break;
+    }
 }
 
 void DeckCombat::discardFromHand(int handIndex)
@@ -162,4 +173,9 @@ void DeckCombat::regenerateDeck()
         shuffle();
         DEBUG_LOG("Regenerated deck and shuffled");
     }
+}
+
+void DeckCombat::addCardToCombatDeck(const DeckEntry& card)
+{
+    m_drawPile.emplace_back(m_factory.makeSingleCard(card));
 }

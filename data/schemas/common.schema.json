@@ -1,20 +1,21 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "title": "Shared definitions for card-game data files",
+    "title": "Shared definitions for card-game data",
     "definitions": {
         "effectName": {
-            "description": "Every effect the game knows how to parse (must match effectNameMap keys).",
+            "description": "Combat effect applied by a card or enemy move. Must match effectNameMap in effectName.h.",
             "enum": [
                 "gainArmor",
                 "gainAttack",
                 "gainActions",
                 "drawCards",
                 "limitCardToPlay",
-                "takeHostage"
+                "takeHostage",
+                "addClogCardToDeck"
             ]
         },
         "target": {
-            "description": "Logical target. null for effects that don't target (drawCards, gainActions).",
+            "description": "Who the effect hits. null = no target (drawCards / gainActions).",
             "enum": [
                 "self",
                 "opponent",
@@ -23,11 +24,11 @@
         },
         "effect": {
             "type": "object",
+            "additionalProperties": false,
             "required": [
                 "effect",
                 "target"
             ],
-            "additionalProperties": false,
             "properties": {
                 "effect": {
                     "$ref": "#/definitions/effectName"

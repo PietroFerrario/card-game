@@ -6,6 +6,7 @@
 
 #include <optional>
 #include <string>
+#include <string_view>
 #include <vector>
 
 class CombatSystem;
@@ -74,6 +75,7 @@ class CombatContext
 
     void limitCardToPlay(int amount);
     void takeCardHostage();
+    void addCardToDeck(std::string_view cardId, int amount);
 
     class EffectMessageScope
     {

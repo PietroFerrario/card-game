@@ -63,6 +63,15 @@
                     "minimum": 0,
                     "maximum": 99
                 },
+                "cardDisposalMode": {
+                    "type": "string",
+                    "enum": [
+                        "discard",
+                        "destroy",
+                        "exhaustUntilEndOfMatch"
+                    ],
+                    "description": "Optional. What happens to the card once played. Defaults to discard."
+                },
                 "effectList": {
                     "type": "array",
                     "items": {

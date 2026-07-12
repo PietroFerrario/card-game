@@ -2,6 +2,7 @@
 #define CARDPARAMS_H
 
 #include <optional>
+#include <string>
 
 /**
  * @brief Numeric parameters used to resolve gameplay effects.
@@ -21,7 +22,8 @@ struct CardParams
     int drawing{0};
 
     // Enemy-based
-    std::optional<int> cardsLimit;
+    std::optional<int> amount;
+    std::optional<std::string> cardId;
 
     CardParams& operator+=(const CardParams& other)
     {

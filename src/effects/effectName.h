@@ -11,7 +11,8 @@ enum class EffectName
     gainActions,
     drawCards,
     limitCardToPlay,
-    takeHostage
+    takeHostage,
+    addClogCardToDeck
 };
 
 namespace effect
@@ -22,6 +23,7 @@ inline const std::unordered_map<std::string_view, EffectName> effectNameMap{
     {"drawCards", EffectName::drawCards},
     {"gainActions", EffectName::gainActions},
     {"limitCardToPlay", EffectName::limitCardToPlay},
-    {"takeHostage", EffectName::takeHostage}};
+    {"takeHostage", EffectName::takeHostage},
+    {"addClogCardToDeck", EffectName::addClogCardToDeck}};
 } // namespace effect
 #endif // EFFECTNAME_H

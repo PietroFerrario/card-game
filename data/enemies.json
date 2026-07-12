@@ -11,7 +11,7 @@
                     "moveDescription": "They caught you by surprise!",
                     "damage": 3,
                     "armor": 0,
-                    "cardsLimit": 2,
+                    "amount": 2,
                     "effectList": [
                         {
                             "effect": "limitCardToPlay",
@@ -28,9 +28,15 @@
                     "moveDescription": "A hidden member of the gang came out from nowhere and now he's holding a knife to your comrade throat.",
                     "damage": 0,
                     "armor": 0,
+                    "amount": 5,
+                    "cardId": "BrokenGlass",
                     "effectList": [
                         {
                             "effect": "takeHostage",
+                            "target": null
+                        },
+                        {
+                            "effect": "addClogCardToDeck",
                             "target": null
                         }
                     ]
@@ -63,7 +69,8 @@
                     "moveDescription": "A patrol of arrogant and foolish young Normans threatens you :O",
                     "damage": 0,
                     "armor": 5,
-                    "cardsLimit": 2,
+                    "amount": 2,
+                    "cardId": "BrokenGlass",
                     "effectList": [
                         {
                             "effect": "limitCardToPlay",

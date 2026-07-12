@@ -1,6 +1,7 @@
 #ifndef CARDDEFINITION_H
 #define CARDDEFINITION_H
 
+#include "cardDisposalMode.h"
 #include "cardParams.h"
 
 #include <memory>
@@ -39,7 +40,9 @@ class CardDefinition
      */
     CardDefinition(std::string_view cardId, std::string_view cardName,
                    std::string_view cardDescription, const CardParams& cardParams = {},
-                   std::vector<std::unique_ptr<Effect>> effectList = {}, int baseCost = 1);
+                   std::vector<std::unique_ptr<Effect>> effectList = {},
+                   CardDisposalMode cardDisposalMode = {CardDisposalMode::Discard},
+                   int baseCost = 1);
 
     /// @brief Returns the display name of the card.
     std::string_view getName() const { return m_cardName; }
@@ -59,6 +62,8 @@ class CardDefinition
     /// @brief Returns the parameters of the card.
     const CardParams& getCardParams() const { return m_cardParams; }
 
+    const CardDisposalMode& getCardDisposalMode() const { return m_cardDisposalMode; }
+
     /**
      * @brief Returns a const reference to the list of effects.
      *
@@ -74,6 +79,8 @@ class CardDefinition
     std::string m_cardId{};
     std::string m_cardName{};
     std::string m_cardDescription{};
+
+    CardDisposalMode m_cardDisposalMode;
 
     CardParams m_cardParams{};
     int m_baseCost{1};

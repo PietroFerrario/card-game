@@ -15,7 +15,8 @@ struct EnemyMoveData
     std::string moveDescription;
     int damage{0};
     int armor{0};
-    std::optional<int> cardsLimit;
+    std::optional<int> amount;
+    std::optional<std::string> cardId;
     std::vector<std::pair<EffectName, Target>> effectList;
 };
 

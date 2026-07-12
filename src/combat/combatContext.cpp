@@ -181,6 +181,18 @@ void CombatContext::takeCardHostage()
     }
 }
 
+void CombatContext::addCardToDeck(std::string_view cardId, int amount)
+{
+    DeckEntry card{static_cast<std::string>(cardId), CardParams{}};
+
+    for (int i{0}; i < amount; i++)
+    {
+        m_deckCombat.addCardToCombatDeck(card);
+    }
+
+    m_deckCombat.shuffle();
+}
+
 // FOR THE FUTURE: Effect summaries are currently collected as strings for simplicity.
 // A refactor may replace this with structured effect events
 // (similar to DrawData) to improve aggregation and rendering flexibility.

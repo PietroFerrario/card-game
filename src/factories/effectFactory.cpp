@@ -1,5 +1,6 @@
 #include "effectFactory.h"
 #include "combat/combatTarget.h"
+#include "effects/addClogCardToDeckEffect.h"
 #include "effects/drawCardsEffect.h"
 #include "effects/gainActionsEffect.h"
 #include "effects/gainArmorEffect.h"
@@ -18,6 +19,7 @@ EffectFactory::EffectFactory()
 
     m_effectMap[EffectName::takeHostage] = makeTakeHostageEffect;
     m_effectMap[EffectName::limitCardToPlay] = makeLimitCardToPlayEffect;
+    m_effectMap[EffectName::addClogCardToDeck] = makeAddClogCardToDeck;
 }
 
 std::vector<std::unique_ptr<Effect>>
@@ -69,4 +71,9 @@ std::unique_ptr<Effect> EffectFactory::makeLimitCardToPlayEffect(Target target)
 std::unique_ptr<Effect> EffectFactory::makeTakeHostageEffect(Target target)
 {
     return std::make_unique<HostageCardEffect>();
+}
+
+std::unique_ptr<Effect> EffectFactory::makeAddClogCardToDeck(Target target)
+{
+    return std::make_unique<AddClogCardToDeckEffect>();
 }

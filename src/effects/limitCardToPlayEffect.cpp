@@ -5,9 +5,9 @@
 
 void LimitCardToPlayEffect::resolve(CombatContext& combatContext, const CardParams& values)
 {
-    if (values.cardsLimit.has_value())
+    if (values.amount.has_value())
     {
-        combatContext.limitCardToPlay(values.cardsLimit.value());
+        combatContext.limitCardToPlay(values.amount.value());
         DEBUG_LOG("Applied effect LimitCardToPlay");
     }
 }
