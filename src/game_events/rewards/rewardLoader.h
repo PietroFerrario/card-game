@@ -36,6 +36,7 @@ class RewardLoader
         m_rewardEffectTypeMap{
             {"gainCard", RewardEffectType::GainCard},
             {"gainMoney", RewardEffectType::GainMoney},
+            {"gainPopulation", RewardEffectType::GainPopulation},
             {"upgradeCard", RewardEffectType::UpgradeCard},
             {"cardChoice", RewardEffectType::ChooseCards},
             {"registerQuest", RewardEffectType::RegisterQuest},

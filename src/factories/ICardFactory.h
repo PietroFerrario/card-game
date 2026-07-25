@@ -29,7 +29,7 @@ class ICardFactory
 
     virtual void registerCards() = 0;
 
-    virtual const std::vector<std::string> getRegisteredCardsId() const = 0;
+    virtual std::vector<std::string> getRegisteredCardsId() const = 0;
     /// @brief Virtual destructor.
     virtual ~ICardFactory() = default;
 };

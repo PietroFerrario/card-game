@@ -4,7 +4,7 @@
         {
             "id": "RaggedBandits",
             "name": "Ragged Bandits",
-            "hp": 30,
+            "hp": 1,
             "movesList": [
                 {
                     "moveName": "Ambush!!!",
@@ -28,15 +28,11 @@
                     "moveDescription": "A hidden member of the gang came out from nowhere and now he's holding a knife to your comrade throat.",
                     "damage": 0,
                     "armor": 0,
-                    "amount": 5,
-                    "cardId": "BrokenGlass",
+                    "amount": 0,
+                    "cardId": "",
                     "effectList": [
                         {
                             "effect": "takeHostage",
-                            "target": null
-                        },
-                        {
-                            "effect": "addClogCardToDeck",
                             "target": null
                         }
                     ]
@@ -68,13 +64,13 @@
                     "moveName": "Mocking",
                     "moveDescription": "A patrol of arrogant and foolish young Normans threatens you :O",
                     "damage": 0,
-                    "armor": 5,
+                    "armor": 0,
                     "amount": 2,
                     "cardId": "BrokenGlass",
                     "effectList": [
                         {
-                            "effect": "limitCardToPlay",
-                            "target": "self"
+                            "effect": "addClogCardToDeck",
+                            "target": "opponent"
                         }
                     ]
                 },
@@ -93,7 +89,7 @@
                 {
                     "moveName": "Damn Bullies #2",
                     "moveDescription": "The group of fools continues to attack you -_-",
-                    "damage": 6,
+                    "damage": 5,
                     "armor": 0,
                     "effectList": [
                         {
@@ -105,11 +101,11 @@
                 {
                     "moveName": "Damn Bullies #3",
                     "moveDescription": "The group of fools continues to attack you...they need a lesson at this point >_<",
-                    "damage": 9,
+                    "damage": 7,
                     "armor": 0,
                     "effectList": [
                         {
-                            "effect": "gainArmor",
+                            "effect": "gainAttack",
                             "target": "self"
                         }
                     ]

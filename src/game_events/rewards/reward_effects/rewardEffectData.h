@@ -9,6 +9,7 @@ enum class RewardEffectType
 {
     GainCard,
     GainMoney,
+    GainPopulation,
     UpgradeCard,
     RegisterQuest,
     ChooseCards,

@@ -3,10 +3,12 @@
 
 #include "cardDisposalMode.h"
 #include "cardParams.h"
+#include "cardTag.h"
 
 #include <memory>
 #include <string>
 #include <string_view>
+#include <unordered_set>
 #include <vector>
 
 class Effect;
@@ -39,10 +41,10 @@ class CardDefinition
      * @param baseCost Default cost to play the card (1).
      */
     CardDefinition(std::string_view cardId, std::string_view cardName,
-                   std::string_view cardDescription, const CardParams& cardParams = {},
-                   std::vector<std::unique_ptr<Effect>> effectList = {},
+                   std::string_view cardDescription, std::unordered_set<CardTag> cardTagSet,
                    CardDisposalMode cardDisposalMode = {CardDisposalMode::Discard},
-                   int baseCost = 1);
+                   const CardParams& cardParams = {},
+                   std::vector<std::unique_ptr<Effect>> effectList = {}, int baseCost = 1);
 
     /// @brief Returns the display name of the card.
     std::string_view getName() const { return m_cardName; }
@@ -51,6 +53,8 @@ class CardDefinition
     std::string_view getID() const { return m_cardId; }
 
     std::string_view getDescription() const { return m_cardDescription; }
+
+    bool hasTag(CardTag cardTag) const;
 
     /// @brief Returns the base damage value defined for the card.
     int getBaseDamage() const { return m_cardParams.damage; }
@@ -79,6 +83,7 @@ class CardDefinition
     std::string m_cardId{};
     std::string m_cardName{};
     std::string m_cardDescription{};
+    std::unordered_set<CardTag> m_cardTagSet{};
 
     CardDisposalMode m_cardDisposalMode;
 

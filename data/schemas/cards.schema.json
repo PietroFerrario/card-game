@@ -24,6 +24,7 @@
                 "id",
                 "name",
                 "descr",
+                "tags",
                 "damage",
                 "armor",
                 "actions",
@@ -42,6 +43,14 @@
                 },
                 "descr": {
                     "type": "string"
+                },
+                "tags": {
+                    "type": "array",
+                    "description": "Descriptive labels for the card.",
+                    "items": {
+                        "$ref": "#/definitions/cardTag"
+                    },
+                    "uniqueItems": true
                 },
                 "damage": {
                     "type": "integer",
@@ -80,5 +89,17 @@
                 }
             }
         }
+    },
+    "cardTag": {
+        "type": "string",
+        "enum": [
+            "ranged",
+            "melee",
+            "wiht",
+            "beast",
+            "clog",
+            "common",
+            "unique"
+        ]
     }
 }

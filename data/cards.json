@@ -5,6 +5,10 @@
             "id": "ShieldWarrior",
             "name": "Shield Warrior",
             "descr": "Strong warrior with axe and round shield",
+            "tags": [
+                "common",
+                "melee"
+            ],
             "damage": 1,
             "armor": 2,
             "actions": 0,
@@ -24,6 +28,10 @@
             "id": "Farmer",
             "name": "Common Farmer",
             "descr": "Farmer, in search of a better life",
+            "tags": [
+                "common",
+                "melee"
+            ],
             "damage": 1,
             "armor": 0,
             "actions": 0,
@@ -43,6 +51,10 @@
             "id": "InexGuard",
             "name": "Inexperienced Guard",
             "descr": "A young guard, early in his career",
+            "tags": [
+                "common",
+                "melee"
+            ],
             "damage": 1,
             "armor": 1,
             "actions": 0,
@@ -62,6 +74,10 @@
             "id": "InexArcher",
             "name": "Inexperienced Archer",
             "descr": "A young archer, early in his career",
+            "tags": [
+                "common",
+                "ranged"
+            ],
             "damage": 2,
             "armor": 0,
             "actions": 0,
@@ -81,6 +97,9 @@
             "id": "Provisions",
             "name": "Travelling Provisions",
             "descr": "Hard and stale, they fill your stomach still",
+            "tags": [
+                "common"
+            ],
             "damage": 0,
             "armor": 0,
             "actions": 1,
@@ -99,6 +118,10 @@
         {
             "id": "Horses",
             "name": "Draft Horses",
+            "tags": [
+                "common",
+                "beast"
+            ],
             "descr": "Strong enough to pull the cart",
             "damage": 0,
             "armor": 0,
@@ -119,6 +142,9 @@
             "id": "Quartermaster",
             "name": "The Quartermaster",
             "descr": "He gets things done around here",
+            "tags": [
+                "unique"
+            ],
             "damage": 5,
             "armor": 0,
             "actions": 1,
@@ -142,6 +168,9 @@
             "id": "Constable",
             "name": "The Constable",
             "descr": "The right-hand mand of the Quartermaster",
+            "tags": [
+                "unique"
+            ],
             "damage": 1,
             "armor": 1,
             "actions": 1,
@@ -169,6 +198,9 @@
             "id": "FamishedFarmer",
             "name": "Famished Farmer",
             "descr": "Too weak to be of any use",
+            "tags": [
+                "common"
+            ],
             "damage": 0,
             "armor": 0,
             "actions": 0,
@@ -179,6 +211,9 @@
             "id": "BrokenGlass",
             "name": "Broken Cup",
             "descr": "It's in the way and makes you waste time!",
+            "tags": [
+                "clog"
+            ],
             "damage": 0,
             "armor": 0,
             "actions": 0,

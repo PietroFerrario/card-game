@@ -30,16 +30,27 @@ std::unique_ptr<CardDefinition> CardsLoader::loadCard(const json& card)
 {
     return std::make_unique<CardDefinition>(
         card.at("id").get_ref<const std::string&>(), card.at("name").get_ref<const std::string&>(),
-        card.at("descr").get_ref<const std::string&>(),
+        card.at("descr").get_ref<const std::string&>(), makeCardTagSet(card.at("tags")),
+        card.contains("cardDisposalMode")
+            ? card::cardDisposalModeMap.at(
+                  card.at("cardDisposalMode").get_ref<const std::string&>())
+            : CardDisposalMode::Discard,
         CardParams{.damage = card.at("damage").get<int>(),
                    .armor = card.at("armor").get<int>(),
                    .actions = card.at("actions").get<int>(),
                    .drawing = card.at("drawing").get<int>()},
-        m_effectFactory.makeEffectList(makeEffectDataList(card.at("effectList"))),
-        card.contains("cardDisposalMode")
-            ? card::cardDisposalModeMap.at(
-                  card.at("cardDisposalMode").get_ref<const std::string&>())
-            : CardDisposalMode::Discard);
+        m_effectFactory.makeEffectList(makeEffectDataList(card.at("effectList"))));
+}
+
+std::unordered_set<CardTag> CardsLoader::makeCardTagSet(const json& cardTagData)
+{
+    std::unordered_set<CardTag> cardTagSet;
+
+    for (auto const& cardTag : cardTagData)
+    {
+        cardTagSet.insert(m_cardTagMap.at(cardTag.get_ref<const std::string&>()));
+    }
+    return cardTagSet;
 }
 
 std::vector<std::pair<EffectName, Target>>

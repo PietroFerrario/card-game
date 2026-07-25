@@ -51,16 +51,15 @@
                 },
                 {
                     "rewardType": "equip",
-                    "rewardName": "Rusty sword",
-                    "description": "You can give this sword to a card of your choice, its attack and defense will be increased by 1",
+                    "rewardName": "whetstone",
+                    "description": "You can give this whetstone to a card of your choice, its attack will be increased by 1",
                     "effectList": [
                         {
                             "effectType": "upgradeCard",
                             "amount": 1,
                             "cardId": "",
                             "upgradeCardParams": [
-                                "attack",
-                                "armor"
+                                "attack"
                             ]
                         }
                     ]
@@ -85,6 +84,12 @@
                             "effectType": "gainCard",
                             "amount": 0,
                             "cardId": "FamishedFarmer",
+                            "upgradeCardParams": []
+                        },
+                        {
+                            "effectType": "gainPopulation",
+                            "amount": 4,
+                            "cardId": "",
                             "upgradeCardParams": []
                         }
                     ]

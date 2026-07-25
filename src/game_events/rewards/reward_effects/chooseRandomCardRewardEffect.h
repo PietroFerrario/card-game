@@ -16,8 +16,7 @@ class ChooseRandomCardRewardEffect : public RewardEffect
     void resolve(RewardContext& rewardContext) override;
 
   private:
-    const std::vector<std::unique_ptr<CardInstance>>
-    generateRandomCards(ICardFactory& cardFactory) const;
+    std::vector<std::unique_ptr<CardInstance>> generateRandomCards(ICardFactory& cardFactory) const;
 
     int m_amount;
 };

@@ -2,7 +2,7 @@
     "configList": [
         {
             "id": "config0",
-            "playerHp": 50,
+            "playerHp": 20,
             "cardsDrawnPerTurn": 4,
             "actionsPerTurn": 2
         },

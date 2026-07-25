@@ -19,13 +19,17 @@ CardFactory::CardFactory() { registerCards(); }
 
 CardFactory::~CardFactory() {}
 
-const std::vector<std::string> CardFactory::getRegisteredCardsId() const
+std::vector<std::string> CardFactory::getRegisteredCardsId() const
 {
     std::vector<std::string> cardList;
 
     for (const auto& card : m_cardMap)
     {
-        cardList.push_back(card.first);
+        // To be fixed in a second time if it's needed, for now it's okay
+        if (card.second->hasTag(CardTag::Common))
+        {
+            cardList.push_back(card.first);
+        }
     }
 
     return cardList;

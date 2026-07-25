@@ -125,6 +125,7 @@ MatchData CardMatch::turnLoop()
         {
             // Refactor Match result to be shown in the Event Sequence, not in the CardMatch!
             m_matchView.showEndOfMatch(m_matchData);
+            resetPhase();
             return m_matchData;
         }
         resetPhase();

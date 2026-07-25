@@ -1,136 +1,77 @@
-[LOG] cardFactory.cpp:45 CardDefinition for ShieldWarrior has been inserted in the map.
-[LOG] cardFactory.cpp:45 CardDefinition for Farmer has been inserted in the map.
-[LOG] cardFactory.cpp:45 CardDefinition for InexGuard has been inserted in the map.
-[LOG] cardFactory.cpp:45 CardDefinition for InexArcher has been inserted in the map.
-[LOG] cardFactory.cpp:45 CardDefinition for Provisions has been inserted in the map.
-[LOG] cardFactory.cpp:45 CardDefinition for Horses has been inserted in the map.
-[LOG] cardFactory.cpp:45 CardDefinition for Quartermaster has been inserted in the map.
-[LOG] cardFactory.cpp:45 CardDefinition for Constable has been inserted in the map.
-[LOG] cardFactory.cpp:45 CardDefinition for FamishedFarmer has been inserted in the map.
-[LOG] cardFactory.cpp:45 CardDefinition for BrokenGlass has been inserted in the map.
-[LOG] cardFactory.cpp:41 CardDefinition for ShieldWarrior is already present in the map.
-[LOG] cardFactory.cpp:41 CardDefinition for Farmer is already present in the map.
-[LOG] cardFactory.cpp:41 CardDefinition for InexGuard is already present in the map.
-[LOG] cardFactory.cpp:41 CardDefinition for InexArcher is already present in the map.
-[LOG] cardFactory.cpp:41 CardDefinition for Provisions is already present in the map.
-[LOG] cardFactory.cpp:41 CardDefinition for Horses is already present in the map.
-[LOG] cardFactory.cpp:41 CardDefinition for Quartermaster is already present in the map.
-[LOG] cardFactory.cpp:41 CardDefinition for Constable is already present in the map.
-[LOG] cardFactory.cpp:41 CardDefinition for FamishedFarmer is already present in the map.
-[LOG] cardFactory.cpp:41 CardDefinition for BrokenGlass is already present in the map.
+[LOG] cardFactory.cpp:49 CardDefinition for ShieldWarrior has been inserted in the map.
+[LOG] cardFactory.cpp:49 CardDefinition for Farmer has been inserted in the map.
+[LOG] cardFactory.cpp:49 CardDefinition for InexGuard has been inserted in the map.
+[LOG] cardFactory.cpp:49 CardDefinition for InexArcher has been inserted in the map.
+[LOG] cardFactory.cpp:49 CardDefinition for Provisions has been inserted in the map.
+[LOG] cardFactory.cpp:49 CardDefinition for Horses has been inserted in the map.
+[LOG] cardFactory.cpp:49 CardDefinition for Quartermaster has been inserted in the map.
+[LOG] cardFactory.cpp:49 CardDefinition for Constable has been inserted in the map.
+[LOG] cardFactory.cpp:49 CardDefinition for FamishedFarmer has been inserted in the map.
+[LOG] cardFactory.cpp:49 CardDefinition for BrokenGlass has been inserted in the map.
+[LOG] cardFactory.cpp:45 CardDefinition for ShieldWarrior is already present in the map.
+[LOG] cardFactory.cpp:45 CardDefinition for Farmer is already present in the map.
+[LOG] cardFactory.cpp:45 CardDefinition for InexGuard is already present in the map.
+[LOG] cardFactory.cpp:45 CardDefinition for InexArcher is already present in the map.
+[LOG] cardFactory.cpp:45 CardDefinition for Provisions is already present in the map.
+[LOG] cardFactory.cpp:45 CardDefinition for Horses is already present in the map.
+[LOG] cardFactory.cpp:45 CardDefinition for Quartermaster is already present in the map.
+[LOG] cardFactory.cpp:45 CardDefinition for Constable is already present in the map.
+[LOG] cardFactory.cpp:45 CardDefinition for FamishedFarmer is already present in the map.
+[LOG] cardFactory.cpp:45 CardDefinition for BrokenGlass is already present in the map.
 [LOG] rewardLoader.cpp:25 Checking rewardListId: [banditFirst] vs [banditFirst]
 [LOG] rewardLoader.cpp:25 Checking rewardListId: [banditFirst] vs [runawayFarmers]
 [LOG] rewardLoader.cpp:25 Checking rewardListId: [runawayFarmers] vs [runawayFarmers]
 [LOG] rewardLoader.cpp:25 Checking rewardListId: [banditFirst] vs [NormanPatrol1]
 [LOG] rewardLoader.cpp:25 Checking rewardListId: [runawayFarmers] vs [NormanPatrol1]
 [LOG] rewardLoader.cpp:25 Checking rewardListId: [NormanPatrol1] vs [NormanPatrol1]
-[LOG] cardFactory.cpp:78 Card instance being created: InexGuard
-[LOG] cardFactory.cpp:81 CardInstance of InexGuard has been created.
-[LOG] cardFactory.cpp:78 Card instance being created: InexGuard
-[LOG] cardFactory.cpp:81 CardInstance of InexGuard has been created.
-[LOG] cardFactory.cpp:78 Card instance being created: InexArcher
-[LOG] cardFactory.cpp:81 CardInstance of InexArcher has been created.
-[LOG] cardFactory.cpp:78 Card instance being created: InexArcher
-[LOG] cardFactory.cpp:81 CardInstance of InexArcher has been created.
-[LOG] cardFactory.cpp:78 Card instance being created: Provisions
-[LOG] cardFactory.cpp:81 CardInstance of Provisions has been created.
-[LOG] cardFactory.cpp:78 Card instance being created: Horses
-[LOG] cardFactory.cpp:81 CardInstance of Horses has been created.
-[LOG] cardFactory.cpp:78 Card instance being created: Quartermaster
-[LOG] cardFactory.cpp:81 CardInstance of Quartermaster has been created.
-[LOG] cardFactory.cpp:78 Card instance being created: Constable
-[LOG] cardFactory.cpp:81 CardInstance of Constable has been created.
+[LOG] cardFactory.cpp:82 Card instance being created: InexGuard
+[LOG] cardFactory.cpp:85 CardInstance of InexGuard has been created.
+[LOG] cardFactory.cpp:82 Card instance being created: InexGuard
+[LOG] cardFactory.cpp:85 CardInstance of InexGuard has been created.
+[LOG] cardFactory.cpp:82 Card instance being created: InexArcher
+[LOG] cardFactory.cpp:85 CardInstance of InexArcher has been created.
+[LOG] cardFactory.cpp:82 Card instance being created: InexArcher
+[LOG] cardFactory.cpp:85 CardInstance of InexArcher has been created.
+[LOG] cardFactory.cpp:82 Card instance being created: Provisions
+[LOG] cardFactory.cpp:85 CardInstance of Provisions has been created.
+[LOG] cardFactory.cpp:82 Card instance being created: Horses
+[LOG] cardFactory.cpp:85 CardInstance of Horses has been created.
+[LOG] cardFactory.cpp:82 Card instance being created: Quartermaster
+[LOG] cardFactory.cpp:85 CardInstance of Quartermaster has been created.
+[LOG] cardFactory.cpp:82 Card instance being created: Constable
+[LOG] cardFactory.cpp:85 CardInstance of Constable has been created.
 [LOG] cardMatch.cpp:115 Starting turn loop
 [LOG] cardMatch.cpp:118 Match state: Running. Turn continues
 [LOG] deckCombat.cpp:31 Requesting to draw 4 cards from the deck: ...
-[LOG] deckCombat.cpp:72 Drawn InexArcher from the deck, placed in the handPile.
-[LOG] deckCombat.cpp:72 Drawn InexArcher from the deck, placed in the handPile.
-[LOG] deckCombat.cpp:72 Drawn InexGuard from the deck, placed in the handPile.
+[LOG] deckCombat.cpp:72 Drawn Horses from the deck, placed in the handPile.
 [LOG] deckCombat.cpp:72 Drawn Provisions from the deck, placed in the handPile.
+[LOG] deckCombat.cpp:72 Drawn InexGuard from the deck, placed in the handPile.
+[LOG] deckCombat.cpp:72 Drawn Quartermaster from the deck, placed in the handPile.
 [LOG] cardMatch.cpp:29 Drawing cards completed.
-[LOG] cardMatch.cpp:193 Starting enemy action
+[LOG] cardMatch.cpp:194 Starting enemy action
 [LOG] limitCardToPlayEffect.cpp:11 Applied effect LimitCardToPlay
 [LOG] combatSystem.cpp:14 Increasing Attack of Ragged Bandits: +3
 [LOG] gainAttackEffect.cpp:9 Applied effect GainAttack
-[LOG] cardMatch.cpp:206 Applied all the effect from Ambush!!!
-[LOG] cardMatch.cpp:157 Starting player turn: Drawing4 cards
-[LOG] cardMatch.cpp:137 Checking is the player can act in this turn
-[LOG] cardMatch.cpp:163 Player can act: Starting valid action loop
-[LOG] cardMatch.cpp:168 Asking the player how to act: Play a card or Pass
+[LOG] cardMatch.cpp:207 Applied all the effect from Ambush!!!
+[LOG] cardMatch.cpp:158 Starting player turn: Drawing4 cards
+[LOG] cardMatch.cpp:138 Checking is the player can act in this turn
+[LOG] cardMatch.cpp:164 Player can act: Starting valid action loop
+[LOG] cardMatch.cpp:169 Asking the player how to act: Play a card or Pass
 [LOG] deckCombat.cpp:89 Took a card from hand
-[LOG] cardMatch.cpp:41 Playing card: InexArcher from hand index: 0
-[LOG] combatSystem.cpp:14 Increasing Attack of Malliano: +2
-[LOG] gainAttackEffect.cpp:9 Applied effect GainAttack
-[LOG] combatSystem.cpp:8 Increasing Armor of Malliano: +0
-[LOG] gainArmorEffect.cpp:9 Applied effect GainArmor
-[LOG] cardMatch.cpp:55 Applied all the effect from card InexArcher.
-[LOG] deckCombat.cpp:106 Moved the used card to the played card pile
-[LOG] cardMatch.cpp:175 Spending one action
-[LOG] cardMatch.cpp:187 Ending action loop
-[LOG] cardMatch.cpp:137 Checking is the player can act in this turn
-[LOG] cardMatch.cpp:163 Player can act: Starting valid action loop
-[LOG] cardMatch.cpp:168 Asking the player how to act: Play a card or Pass
-[LOG] deckCombat.cpp:89 Took a card from hand
-[LOG] cardMatch.cpp:41 Playing card: InexArcher from hand index: 0
-[LOG] combatSystem.cpp:14 Increasing Attack of Malliano: +2
-[LOG] gainAttackEffect.cpp:9 Applied effect GainAttack
-[LOG] combatSystem.cpp:8 Increasing Armor of Malliano: +0
-[LOG] gainArmorEffect.cpp:9 Applied effect GainArmor
-[LOG] cardMatch.cpp:55 Applied all the effect from card InexArcher.
-[LOG] deckCombat.cpp:106 Moved the used card to the played card pile
-[LOG] cardMatch.cpp:175 Spending one action
-[LOG] cardMatch.cpp:187 Ending action loop
-[LOG] cardMatch.cpp:137 Checking is the player can act in this turn
-[LOG] combatSystem.cpp:33 Starting dealDamage combat system
-[LOG] combatSystem.cpp:33 Starting dealDamage combat system
-[LOG] combatSystem.cpp:24 Resetting Armor and Attack of Malliano and Ragged Bandits
-[LOG] deckCombat.cpp:149 Exhausting the whole turnPlayedPile into discardPile (End of the Turn)
-[LOG] deckCombat.cpp:138 Discarding the whole hand
-[LOG] cardMatch.cpp:118 Match state: Running. Turn continues
-[LOG] deckCombat.cpp:31 Requesting to draw 4 cards from the deck: ...
-[LOG] deckCombat.cpp:72 Drawn Constable from the deck, placed in the handPile.
-[LOG] deckCombat.cpp:72 Drawn InexGuard from the deck, placed in the handPile.
-[LOG] deckCombat.cpp:72 Drawn Quartermaster from the deck, placed in the handPile.
-[LOG] deckCombat.cpp:72 Drawn Horses from the deck, placed in the handPile.
-[LOG] cardMatch.cpp:29 Drawing cards completed.
-[LOG] cardMatch.cpp:193 Starting enemy action
-[LOG] deckCombat.cpp:89 Took a card from hand
-[LOG] hostageCardEffect.cpp:9 Applied effect GainAction
-[LOG] cardFactory.cpp:78 Card instance being created: BrokenGlass
-[LOG] cardFactory.cpp:81 CardInstance of BrokenGlass has been created.
-[LOG] cardFactory.cpp:78 Card instance being created: BrokenGlass
-[LOG] cardFactory.cpp:81 CardInstance of BrokenGlass has been created.
-[LOG] cardFactory.cpp:78 Card instance being created: BrokenGlass
-[LOG] cardFactory.cpp:81 CardInstance of BrokenGlass has been created.
-[LOG] cardFactory.cpp:78 Card instance being created: BrokenGlass
-[LOG] cardFactory.cpp:81 CardInstance of BrokenGlass has been created.
-[LOG] cardFactory.cpp:78 Card instance being created: BrokenGlass
-[LOG] cardFactory.cpp:81 CardInstance of BrokenGlass has been created.
-[LOG] cardMatch.cpp:206 Applied all the effect from Hostage
-[LOG] cardMatch.cpp:157 Starting player turn: Drawing4 cards
-[LOG] cardMatch.cpp:137 Checking is the player can act in this turn
-[LOG] cardMatch.cpp:163 Player can act: Starting valid action loop
-[LOG] cardMatch.cpp:168 Asking the player how to act: Play a card or Pass
-[LOG] deckCombat.cpp:89 Took a card from hand
-[LOG] cardMatch.cpp:41 Playing card: Constable from hand index: 0
+[LOG] cardMatch.cpp:41 Playing card: InexGuard from hand index: 2
 [LOG] combatSystem.cpp:14 Increasing Attack of Malliano: +1
 [LOG] gainAttackEffect.cpp:9 Applied effect GainAttack
 [LOG] combatSystem.cpp:8 Increasing Armor of Malliano: +1
 [LOG] gainArmorEffect.cpp:9 Applied effect GainArmor
-[LOG] gainActionsEffect.cpp:9 Applied effect GainAction
-[LOG] deckCombat.cpp:31 Requesting to draw 1 cards from the deck: ...
-[LOG] deckCombat.cpp:72 Drawn BrokenGlass from the deck, placed in the handPile.
-[LOG] combatContext.cpp:126 Drawing cards completed.
-[LOG] drawCardsEffect.cpp:9 Applied effect DrawCards
-[LOG] cardMatch.cpp:55 Applied all the effect from card Constable.
+[LOG] cardMatch.cpp:55 Applied all the effect from card InexGuard.
 [LOG] deckCombat.cpp:106 Moved the used card to the played card pile
-[LOG] cardMatch.cpp:175 Spending one action
-[LOG] cardMatch.cpp:187 Ending action loop
-[LOG] cardMatch.cpp:137 Checking is the player can act in this turn
-[LOG] cardMatch.cpp:163 Player can act: Starting valid action loop
-[LOG] cardMatch.cpp:168 Asking the player how to act: Play a card or Pass
+[LOG] cardMatch.cpp:176 Spending one action
+[LOG] cardMatch.cpp:188 Ending action loop
+[LOG] cardMatch.cpp:138 Checking is the player can act in this turn
+[LOG] cardMatch.cpp:164 Player can act: Starting valid action loop
+[LOG] cardMatch.cpp:169 Asking the player how to act: Play a card or Pass
 [LOG] deckCombat.cpp:89 Took a card from hand
-[LOG] cardMatch.cpp:41 Playing card: Quartermaster from hand index: 0
+[LOG] cardMatch.cpp:41 Playing card: Quartermaster from hand index: 2
 [LOG] combatSystem.cpp:14 Increasing Attack of Malliano: +5
 [LOG] gainAttackEffect.cpp:9 Applied effect GainAttack
 [LOG] combatSystem.cpp:8 Increasing Armor of Malliano: +0
@@ -138,163 +79,81 @@
 [LOG] gainActionsEffect.cpp:9 Applied effect GainAction
 [LOG] cardMatch.cpp:55 Applied all the effect from card Quartermaster.
 [LOG] deckCombat.cpp:106 Moved the used card to the played card pile
-[LOG] cardMatch.cpp:175 Spending one action
-[LOG] cardMatch.cpp:187 Ending action loop
-[LOG] cardMatch.cpp:137 Checking is the player can act in this turn
-[LOG] cardMatch.cpp:163 Player can act: Starting valid action loop
-[LOG] cardMatch.cpp:168 Asking the player how to act: Play a card or Pass
-[LOG] deckCombat.cpp:89 Took a card from hand
-[LOG] cardMatch.cpp:41 Playing card: Horses from hand index: 0
-[LOG] gainActionsEffect.cpp:9 Applied effect GainAction
-[LOG] deckCombat.cpp:31 Requesting to draw 0 cards from the deck: ...
-[LOG] combatContext.cpp:126 Drawing cards completed.
-[LOG] drawCardsEffect.cpp:9 Applied effect DrawCards
-[LOG] cardMatch.cpp:55 Applied all the effect from card Horses.
-[LOG] deckCombat.cpp:106 Moved the used card to the played card pile
-[LOG] cardMatch.cpp:175 Spending one action
-[LOG] cardMatch.cpp:187 Ending action loop
-[LOG] cardMatch.cpp:137 Checking is the player can act in this turn
-[LOG] cardMatch.cpp:163 Player can act: Starting valid action loop
-[LOG] cardMatch.cpp:168 Asking the player how to act: Play a card or Pass
-[LOG] deckCombat.cpp:89 Took a card from hand
-[LOG] cardMatch.cpp:41 Playing card: BrokenGlass from hand index: 0
-[LOG] cardMatch.cpp:55 Applied all the effect from card BrokenGlass.
-[LOG] deckCombat.cpp:109 Letting the pointer decay -> Gets destroyed
-[LOG] cardMatch.cpp:175 Spending one action
-[LOG] cardMatch.cpp:187 Ending action loop
-[LOG] cardMatch.cpp:137 Checking is the player can act in this turn
+[LOG] cardMatch.cpp:176 Spending one action
+[LOG] cardMatch.cpp:188 Ending action loop
+[LOG] cardMatch.cpp:138 Checking is the player can act in this turn
 [LOG] combatSystem.cpp:33 Starting dealDamage combat system
 [LOG] combatSystem.cpp:33 Starting dealDamage combat system
 [LOG] combatSystem.cpp:24 Resetting Armor and Attack of Malliano and Ragged Bandits
 [LOG] deckCombat.cpp:149 Exhausting the whole turnPlayedPile into discardPile (End of the Turn)
-[LOG] cardMatch.cpp:118 Match state: Running. Turn continues
-[LOG] deckCombat.cpp:31 Requesting to draw 4 cards from the deck: ...
-[LOG] deckCombat.cpp:72 Drawn BrokenGlass from the deck, placed in the handPile.
-[LOG] deckCombat.cpp:72 Drawn BrokenGlass from the deck, placed in the handPile.
-[LOG] deckCombat.cpp:72 Drawn BrokenGlass from the deck, placed in the handPile.
-[LOG] deckCombat.cpp:72 Drawn BrokenGlass from the deck, placed in the handPile.
-[LOG] cardMatch.cpp:29 Drawing cards completed.
-[LOG] cardMatch.cpp:193 Starting enemy action
-[LOG] combatSystem.cpp:14 Increasing Attack of Ragged Bandits: +5
-[LOG] gainAttackEffect.cpp:9 Applied effect GainAttack
-[LOG] combatSystem.cpp:8 Increasing Armor of Ragged Bandits: +2
-[LOG] gainArmorEffect.cpp:9 Applied effect GainArmor
-[LOG] cardMatch.cpp:206 Applied all the effect from Uncoordinated Attack
-[LOG] cardMatch.cpp:157 Starting player turn: Drawing4 cards
-[LOG] cardMatch.cpp:137 Checking is the player can act in this turn
-[LOG] cardMatch.cpp:163 Player can act: Starting valid action loop
-[LOG] cardMatch.cpp:168 Asking the player how to act: Play a card or Pass
-[LOG] deckCombat.cpp:89 Took a card from hand
-[LOG] cardMatch.cpp:41 Playing card: BrokenGlass from hand index: 0
-[LOG] cardMatch.cpp:55 Applied all the effect from card BrokenGlass.
-[LOG] deckCombat.cpp:109 Letting the pointer decay -> Gets destroyed
-[LOG] cardMatch.cpp:175 Spending one action
-[LOG] cardMatch.cpp:187 Ending action loop
-[LOG] cardMatch.cpp:137 Checking is the player can act in this turn
-[LOG] cardMatch.cpp:163 Player can act: Starting valid action loop
-[LOG] cardMatch.cpp:168 Asking the player how to act: Play a card or Pass
-[LOG] deckCombat.cpp:89 Took a card from hand
-[LOG] cardMatch.cpp:41 Playing card: BrokenGlass from hand index: 0
-[LOG] cardMatch.cpp:55 Applied all the effect from card BrokenGlass.
-[LOG] deckCombat.cpp:109 Letting the pointer decay -> Gets destroyed
-[LOG] cardMatch.cpp:175 Spending one action
-[LOG] cardMatch.cpp:187 Ending action loop
-[LOG] cardMatch.cpp:137 Checking is the player can act in this turn
-[LOG] combatSystem.cpp:33 Starting dealDamage combat system
-[LOG] combatSystem.cpp:33 Starting dealDamage combat system
-[LOG] combatSystem.cpp:24 Resetting Armor and Attack of Malliano and Ragged Bandits
 [LOG] deckCombat.cpp:138 Discarding the whole hand
+[LOG] rewardPhase.cpp:14 Entering reward Phase
+[LOG] rewardPhase.cpp:50 Showing the rewards options
+[LOG] cardFactory.cpp:82 Card instance being created: Farmer
+[LOG] cardFactory.cpp:85 CardInstance of Farmer has been created.
+[LOG] rewardPhase.cpp:28 Selecting rewards
+[LOG] rewardPhase.cpp:29 Resolving rewards option effects
+[LOG] upgradeCardRewardEffect.cpp:48 Entering generateDeckCardsForReward method
+[LOG] cardFactory.cpp:82 Card instance being created: InexGuard
+[LOG] cardFactory.cpp:85 CardInstance of InexGuard has been created.
+[LOG] cardFactory.cpp:82 Card instance being created: InexGuard
+[LOG] cardFactory.cpp:85 CardInstance of InexGuard has been created.
+[LOG] cardFactory.cpp:82 Card instance being created: InexArcher
+[LOG] cardFactory.cpp:85 CardInstance of InexArcher has been created.
+[LOG] cardFactory.cpp:82 Card instance being created: InexArcher
+[LOG] cardFactory.cpp:85 CardInstance of InexArcher has been created.
+[LOG] cardFactory.cpp:82 Card instance being created: Provisions
+[LOG] cardFactory.cpp:85 CardInstance of Provisions has been created.
+[LOG] cardFactory.cpp:82 Card instance being created: Horses
+[LOG] cardFactory.cpp:85 CardInstance of Horses has been created.
+[LOG] cardFactory.cpp:82 Card instance being created: Quartermaster
+[LOG] cardFactory.cpp:85 CardInstance of Quartermaster has been created.
+[LOG] cardFactory.cpp:82 Card instance being created: Constable
+[LOG] cardFactory.cpp:85 CardInstance of Constable has been created.
+[LOG] upgradeCardRewardEffect.cpp:34 Checking the effect of the upgrade. Enable or disable it with comments
+[LOG] rewardPhase.cpp:32 Finishing reward Phase
+[LOG] storyEvent.cpp:16 Entering Story Event
+[LOG] rewardPhase.cpp:14 Entering reward Phase
+[LOG] rewardPhase.cpp:50 Showing the rewards options
+[LOG] cardFactory.cpp:82 Card instance being created: FamishedFarmer
+[LOG] cardFactory.cpp:85 CardInstance of FamishedFarmer has been created.
+[LOG] rewardPhase.cpp:28 Selecting rewards
+[LOG] rewardPhase.cpp:29 Resolving rewards option effects
+[LOG] deckPlayer.cpp:28 Added a new card to the deck: FamishedFarmer
+[LOG] rewardPhase.cpp:32 Finishing reward Phase
+[LOG] cardFactory.cpp:82 Card instance being created: InexGuard
+[LOG] cardFactory.cpp:85 CardInstance of InexGuard has been created.
+[LOG] cardFactory.cpp:82 Card instance being created: InexGuard
+[LOG] cardFactory.cpp:85 CardInstance of InexGuard has been created.
+[LOG] cardFactory.cpp:82 Card instance being created: InexArcher
+[LOG] cardFactory.cpp:85 CardInstance of InexArcher has been created.
+[LOG] cardFactory.cpp:82 Card instance being created: InexArcher
+[LOG] cardFactory.cpp:85 CardInstance of InexArcher has been created.
+[LOG] cardFactory.cpp:82 Card instance being created: Provisions
+[LOG] cardFactory.cpp:85 CardInstance of Provisions has been created.
+[LOG] cardFactory.cpp:82 Card instance being created: Horses
+[LOG] cardFactory.cpp:85 CardInstance of Horses has been created.
+[LOG] cardFactory.cpp:82 Card instance being created: Quartermaster
+[LOG] cardFactory.cpp:85 CardInstance of Quartermaster has been created.
+[LOG] cardFactory.cpp:82 Card instance being created: Constable
+[LOG] cardFactory.cpp:85 CardInstance of Constable has been created.
+[LOG] cardFactory.cpp:82 Card instance being created: FamishedFarmer
+[LOG] cardFactory.cpp:85 CardInstance of FamishedFarmer has been created.
+[LOG] cardMatch.cpp:115 Starting turn loop
 [LOG] cardMatch.cpp:118 Match state: Running. Turn continues
 [LOG] deckCombat.cpp:31 Requesting to draw 4 cards from the deck: ...
-[LOG] deckCombat.cpp:59 The deck is empty. Regenerating deck from discard pile
-[LOG] deckCombat.cpp:174 Regenerated deck and shuffled
-[LOG] deckCombat.cpp:72 Drawn BrokenGlass from the deck, placed in the handPile.
 [LOG] deckCombat.cpp:72 Drawn InexGuard from the deck, placed in the handPile.
-[LOG] deckCombat.cpp:72 Drawn Provisions from the deck, placed in the handPile.
-[LOG] deckCombat.cpp:72 Drawn BrokenGlass from the deck, placed in the handPile.
-[LOG] cardMatch.cpp:29 Drawing cards completed.
-[LOG] cardMatch.cpp:193 Starting enemy action
-[LOG] limitCardToPlayEffect.cpp:11 Applied effect LimitCardToPlay
-[LOG] combatSystem.cpp:14 Increasing Attack of Ragged Bandits: +3
-[LOG] gainAttackEffect.cpp:9 Applied effect GainAttack
-[LOG] cardMatch.cpp:206 Applied all the effect from Ambush!!!
-[LOG] cardMatch.cpp:157 Starting player turn: Drawing4 cards
-[LOG] cardMatch.cpp:137 Checking is the player can act in this turn
-[LOG] cardMatch.cpp:163 Player can act: Starting valid action loop
-[LOG] cardMatch.cpp:168 Asking the player how to act: Play a card or Pass
-[LOG] deckCombat.cpp:89 Took a card from hand
-[LOG] cardMatch.cpp:41 Playing card: BrokenGlass from hand index: 0
-[LOG] cardMatch.cpp:55 Applied all the effect from card BrokenGlass.
-[LOG] deckCombat.cpp:109 Letting the pointer decay -> Gets destroyed
-[LOG] cardMatch.cpp:175 Spending one action
-[LOG] cardMatch.cpp:187 Ending action loop
-[LOG] cardMatch.cpp:137 Checking is the player can act in this turn
-[LOG] cardMatch.cpp:163 Player can act: Starting valid action loop
-[LOG] cardMatch.cpp:168 Asking the player how to act: Play a card or Pass
-[LOG] deckCombat.cpp:89 Took a card from hand
-[LOG] cardMatch.cpp:41 Playing card: InexGuard from hand index: 0
-[LOG] combatSystem.cpp:14 Increasing Attack of Malliano: +1
-[LOG] gainAttackEffect.cpp:9 Applied effect GainAttack
-[LOG] combatSystem.cpp:8 Increasing Armor of Malliano: +1
-[LOG] gainArmorEffect.cpp:9 Applied effect GainArmor
-[LOG] cardMatch.cpp:55 Applied all the effect from card InexGuard.
-[LOG] deckCombat.cpp:106 Moved the used card to the played card pile
-[LOG] cardMatch.cpp:175 Spending one action
-[LOG] cardMatch.cpp:187 Ending action loop
-[LOG] cardMatch.cpp:137 Checking is the player can act in this turn
-[LOG] combatSystem.cpp:33 Starting dealDamage combat system
-[LOG] combatSystem.cpp:33 Starting dealDamage combat system
-[LOG] combatSystem.cpp:24 Resetting Armor and Attack of Malliano and Ragged Bandits
-[LOG] deckCombat.cpp:149 Exhausting the whole turnPlayedPile into discardPile (End of the Turn)
-[LOG] deckCombat.cpp:138 Discarding the whole hand
-[LOG] cardMatch.cpp:118 Match state: Running. Turn continues
-[LOG] deckCombat.cpp:31 Requesting to draw 4 cards from the deck: ...
+[LOG] deckCombat.cpp:72 Drawn FamishedFarmer from the deck, placed in the handPile.
 [LOG] deckCombat.cpp:72 Drawn InexArcher from the deck, placed in the handPile.
-[LOG] deckCombat.cpp:72 Drawn Horses from the deck, placed in the handPile.
 [LOG] deckCombat.cpp:72 Drawn InexArcher from the deck, placed in the handPile.
-[LOG] deckCombat.cpp:72 Drawn Constable from the deck, placed in the handPile.
 [LOG] cardMatch.cpp:29 Drawing cards completed.
-[LOG] cardMatch.cpp:193 Starting enemy action
-[LOG] deckCombat.cpp:89 Took a card from hand
-[LOG] hostageCardEffect.cpp:9 Applied effect GainAction
-[LOG] cardFactory.cpp:78 Card instance being created: BrokenGlass
-[LOG] cardFactory.cpp:81 CardInstance of BrokenGlass has been created.
-[LOG] cardFactory.cpp:78 Card instance being created: BrokenGlass
-[LOG] cardFactory.cpp:81 CardInstance of BrokenGlass has been created.
-[LOG] cardFactory.cpp:78 Card instance being created: BrokenGlass
-[LOG] cardFactory.cpp:81 CardInstance of BrokenGlass has been created.
-[LOG] cardFactory.cpp:78 Card instance being created: BrokenGlass
-[LOG] cardFactory.cpp:81 CardInstance of BrokenGlass has been created.
-[LOG] cardFactory.cpp:78 Card instance being created: BrokenGlass
-[LOG] cardFactory.cpp:81 CardInstance of BrokenGlass has been created.
-[LOG] cardMatch.cpp:206 Applied all the effect from Hostage
-[LOG] cardMatch.cpp:157 Starting player turn: Drawing4 cards
-[LOG] cardMatch.cpp:137 Checking is the player can act in this turn
-[LOG] cardMatch.cpp:163 Player can act: Starting valid action loop
-[LOG] cardMatch.cpp:168 Asking the player how to act: Play a card or Pass
-[LOG] deckCombat.cpp:89 Took a card from hand
-[LOG] cardMatch.cpp:41 Playing card: InexArcher from hand index: 0
-[LOG] combatSystem.cpp:14 Increasing Attack of Malliano: +2
-[LOG] gainAttackEffect.cpp:9 Applied effect GainAttack
-[LOG] combatSystem.cpp:8 Increasing Armor of Malliano: +0
-[LOG] gainArmorEffect.cpp:9 Applied effect GainArmor
-[LOG] cardMatch.cpp:55 Applied all the effect from card InexArcher.
-[LOG] deckCombat.cpp:106 Moved the used card to the played card pile
-[LOG] cardMatch.cpp:175 Spending one action
-[LOG] cardMatch.cpp:187 Ending action loop
-[LOG] cardMatch.cpp:137 Checking is the player can act in this turn
-[LOG] cardMatch.cpp:163 Player can act: Starting valid action loop
-[LOG] cardMatch.cpp:168 Asking the player how to act: Play a card or Pass
-[LOG] deckCombat.cpp:89 Took a card from hand
-[LOG] cardMatch.cpp:41 Playing card: Horses from hand index: 0
-[LOG] gainActionsEffect.cpp:9 Applied effect GainAction
-[LOG] deckCombat.cpp:31 Requesting to draw 0 cards from the deck: ...
-[LOG] combatContext.cpp:126 Drawing cards completed.
-[LOG] drawCardsEffect.cpp:9 Applied effect DrawCards
-[LOG] cardMatch.cpp:55 Applied all the effect from card Horses.
-[LOG] deckCombat.cpp:106 Moved the used card to the played card pile
-[LOG] cardMatch.cpp:175 Spending one action
-[LOG] cardMatch.cpp:187 Ending action loop
-[LOG] cardMatch.cpp:137 Checking is the player can act in this turn
-[LOG] cardMatch.cpp:163 Player can act: Starting valid action loop
-[LOG] cardMatch.cpp:168 Asking the player how to act: Play a card or Pass
+[LOG] cardMatch.cpp:194 Starting enemy action
+[LOG] cardFactory.cpp:82 Card instance being created: BrokenGlass
+[LOG] cardFactory.cpp:85 CardInstance of BrokenGlass has been created.
+[LOG] cardFactory.cpp:82 Card instance being created: BrokenGlass
+[LOG] cardFactory.cpp:85 CardInstance of BrokenGlass has been created.
+[LOG] cardMatch.cpp:207 Applied all the effect from Mocking
+[LOG] cardMatch.cpp:158 Starting player turn: Drawing4 cards
+[LOG] cardMatch.cpp:138 Checking is the player can act in this turn
+[LOG] cardMatch.cpp:164 Player can act: Starting valid action loop
+[LOG] cardMatch.cpp:169 Asking the player how to act: Play a card or Pass

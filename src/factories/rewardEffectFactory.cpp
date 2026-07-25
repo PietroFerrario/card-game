@@ -2,6 +2,7 @@
 #include "game_events/rewards/reward_effects/chooseRandomCardRewardEffect.h"
 #include "game_events/rewards/reward_effects/gainCardRewardEffect.h"
 #include "game_events/rewards/reward_effects/gainMoneyRewardEffect.h"
+#include "game_events/rewards/reward_effects/gainPopulationRewardEffect.h"
 #include "game_events/rewards/reward_effects/upgradeCardRewardEffect.h"
 
 #include <cassert>
@@ -25,6 +26,12 @@ std::unique_ptr<RewardEffect>
 RewardEffectFactory::makeGainMoneyRewardEffect(const RewardEffectData& rewardEffectData)
 {
     return std::make_unique<GainMoneyRewardEffect>(rewardEffectData.amount);
+}
+
+std::unique_ptr<RewardEffect>
+RewardEffectFactory::makeGainPopulationRewardEffect(const RewardEffectData& rewardEffectData)
+{
+    return std::make_unique<GainPopulationRewardEffect>(rewardEffectData.amount);
 }
 
 std::unique_ptr<RewardEffect>

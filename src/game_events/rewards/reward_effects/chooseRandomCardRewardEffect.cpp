@@ -26,7 +26,7 @@ void ChooseRandomCardRewardEffect::resolve(RewardContext& rewardContext)
         randomCardToRender.at(selectedCard)->getCardDefinition().getID());
 }
 
-const std::vector<std::unique_ptr<CardInstance>>
+std::vector<std::unique_ptr<CardInstance>>
 ChooseRandomCardRewardEffect::generateRandomCards(ICardFactory& cardFactory) const
 {
     DEBUG_LOG("Entering generatingRandomCards method");

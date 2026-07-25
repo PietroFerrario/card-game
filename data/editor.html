@@ -87,11 +87,15 @@
                     cardList: {
                         type: "array", title: "Cards", items: {
                             type: "object", title: "Card", headerTemplate: "{{self.name}}", additionalProperties: false,
-                            required: ["id", "name", "descr", "damage", "armor", "actions", "drawing", "effectList"],
+                            required: ["id", "name", "descr", "tags", "damage", "armor", "actions", "drawing", "effectList"],
                             properties: {
                                 id: { type: "string", title: "ID" },
                                 name: { type: "string", title: "Name" },
                                 descr: { type: "string", title: "Description", format: "textarea" },
+                                tags: {
+                                    type: "array", title: "Tags", format: "checkbox", uniqueItems: true, default: [],
+                                    items: { type: "string", enum: ["ranged", "melee", "wiht", "beast", "clog", "common", "unique"] }
+                                },
                                 damage: { type: "integer", title: "Damage", minimum: 0, maximum: 99, default: 0 },
                                 armor: { type: "integer", title: "Armor", minimum: 0, maximum: 99, default: 0 },
                                 actions: { type: "integer", title: "Actions", minimum: 0, maximum: 99, default: 0 },
@@ -198,7 +202,7 @@
                                                     properties: {
                                                         effectType: {
                                                             type: "string", title: "Effect Type",
-                                                            enum: ["gainCard", "gainMoney", "upgradeCard", "cardChoice", "registerQuest"]
+                                                            enum: ["gainCard", "gainMoney", "gainPopulation", "upgradeCard", "cardChoice", "registerQuest"]
                                                         },
                                                         amount: { type: "integer", title: "Amount", minimum: 0, default: 0 },
                                                         cardId: { type: "string", title: "Card ID" },
