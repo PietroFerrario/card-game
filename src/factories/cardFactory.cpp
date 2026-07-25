@@ -88,3 +88,8 @@ std::unique_ptr<CardInstance> CardFactory::makeSingleCard(const DeckEntry& deckE
 
     return card;
 }
+
+int CardFactory::getCardPopulation(std::string_view cardId) const
+{
+    return {m_cardMap.at(static_cast<std::string>(cardId))->getCardPopulation()};
+}

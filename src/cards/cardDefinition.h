@@ -41,7 +41,8 @@ class CardDefinition
      * @param baseCost Default cost to play the card (1).
      */
     CardDefinition(std::string_view cardId, std::string_view cardName,
-                   std::string_view cardDescription, std::unordered_set<CardTag> cardTagSet,
+                   std::string_view cardDescription, int cardPopulation,
+                   std::unordered_set<CardTag> cardTagSet,
                    CardDisposalMode cardDisposalMode = {CardDisposalMode::Discard},
                    const CardParams& cardParams = {},
                    std::vector<std::unique_ptr<Effect>> effectList = {}, int baseCost = 1);
@@ -53,6 +54,8 @@ class CardDefinition
     std::string_view getID() const { return m_cardId; }
 
     std::string_view getDescription() const { return m_cardDescription; }
+
+    int getCardPopulation() const { return m_cardPopulation; }
 
     bool hasTag(CardTag cardTag) const;
 
@@ -83,6 +86,7 @@ class CardDefinition
     std::string m_cardId{};
     std::string m_cardName{};
     std::string m_cardDescription{};
+    int m_cardPopulation{0};
     std::unordered_set<CardTag> m_cardTagSet{};
 
     CardDisposalMode m_cardDisposalMode;

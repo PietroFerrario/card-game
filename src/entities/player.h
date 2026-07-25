@@ -54,8 +54,10 @@ class Player : public Entity
      */
     DeckPlayer& getDeckPlayer() { return m_deckPlayer; }
 
-    int getMoney() { return m_money; }
-    int getPopulation() { return m_peopleInTheCaravan; }
+    bool addCardToDeck(std::string_view cardId, int population);
+
+    int getMoney() const { return m_money; }
+    int getPopulation() const { return m_peopleInTheCaravan; }
 
     void increaseMoney(int amount);
     void decreaseMoney(int amount);
@@ -65,8 +67,8 @@ class Player : public Entity
 
   private:
     DeckPlayer m_deckPlayer;
-    int m_money;
-    int m_peopleInTheCaravan;
+    int m_money{0};
+    int m_peopleInTheCaravan{0};
 };
 
 #endif

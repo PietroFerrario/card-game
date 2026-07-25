@@ -47,6 +47,8 @@ class CardFactory : public ICardFactory
 
     std::vector<std::string> getRegisteredCardsId() const override;
 
+    int getCardPopulation(std::string_view cardId) const override;
+
     /// @brief Destructor.
     ~CardFactory();
 

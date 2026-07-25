@@ -30,7 +30,8 @@ std::unique_ptr<CardDefinition> CardsLoader::loadCard(const json& card)
 {
     return std::make_unique<CardDefinition>(
         card.at("id").get_ref<const std::string&>(), card.at("name").get_ref<const std::string&>(),
-        card.at("descr").get_ref<const std::string&>(), makeCardTagSet(card.at("tags")),
+        card.at("descr").get_ref<const std::string&>(), card.at("population").get<int>(),
+        makeCardTagSet(card.at("tags")),
         card.contains("cardDisposalMode")
             ? card::cardDisposalModeMap.at(
                   card.at("cardDisposalMode").get_ref<const std::string&>())

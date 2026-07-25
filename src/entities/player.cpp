@@ -38,3 +38,12 @@ void Player::decreasePopulation(int amount)
         m_peopleInTheCaravan = std::max(0, m_peopleInTheCaravan - amount);
     }
 };
+
+bool Player::addCardToDeck(std::string_view cardId, int population)
+{
+    if (!m_deckPlayer.addCard(cardId))
+        return false;
+
+    increasePopulation(population);
+    return true;
+}

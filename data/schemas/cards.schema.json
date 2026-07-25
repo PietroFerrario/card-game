@@ -24,6 +24,7 @@
                 "id",
                 "name",
                 "descr",
+                "population",
                 "tags",
                 "damage",
                 "armor",
@@ -43,6 +44,11 @@
                 },
                 "descr": {
                     "type": "string"
+                },
+                "population": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 99
                 },
                 "tags": {
                     "type": "array",

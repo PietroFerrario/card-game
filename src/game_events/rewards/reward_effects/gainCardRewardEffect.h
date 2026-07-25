@@ -15,7 +15,8 @@ class GainCardRewardEffect : public RewardEffect
 
     void resolve(RewardContext& rewardContext) override
     {
-        rewardContext.player.getDeckPlayer().addCard(m_cardId);
+        rewardContext.player.addCardToDeck(m_cardId,
+                                           rewardContext.cardFactory.getCardPopulation(m_cardId));
     };
 
   private:

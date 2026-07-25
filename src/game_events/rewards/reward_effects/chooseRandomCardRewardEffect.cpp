@@ -22,8 +22,9 @@ void ChooseRandomCardRewardEffect::resolve(RewardContext& rewardContext)
 
     int selectedCard(rewardContext.rewardView.askPlayerSelectRewardCard(m_amount));
 
-    rewardContext.player.getDeckPlayer().addCard(
-        randomCardToRender.at(selectedCard)->getCardDefinition().getID());
+    rewardContext.player.addCardToDeck(
+        randomCardToRender.at(selectedCard)->getCardDefinition().getID(),
+        randomCardToRender.at(selectedCard)->getCardDefinition().getCardPopulation());
 }
 
 std::vector<std::unique_ptr<CardInstance>>
