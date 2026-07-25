@@ -282,8 +282,8 @@
                 schema: schemas[typeKey],
                 theme: "html",
                 disable_edit_json: true,
-                disable_properties: typeKey !== "decks",   // decks needs the "add deck" button
-                required_by_default: true,
+                disable_properties: false,  // decks needs the "add deck" button
+                required_by_default: false,
                 array_controls_top: true
             });
             editor.on("ready", () => { if (data !== undefined) editor.setValue(data); });
