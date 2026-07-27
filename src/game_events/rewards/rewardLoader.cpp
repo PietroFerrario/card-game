@@ -81,7 +81,8 @@ std::vector<UpgradeCardParam> RewardLoader::loadUpgradeCardParams(const json& ca
     std::vector<UpgradeCardParam> paramList;
     for (auto const& param : cardParams)
     {
-        paramList.emplace_back(m_upgradeCardParamMap.at(param.get_ref<const std::string&>()));
+        paramList.emplace_back(
+            upgradeCardParam::m_upgradeCardParamMap.at(param.get_ref<const std::string&>()));
     }
     return paramList;
 }

@@ -15,15 +15,6 @@ enum class RewardEffectType
     ChooseCards,
 };
 
-enum class UpgradeCardParam
-{
-    None,
-    Attack,
-    Armor,
-    Action,
-    Drawing,
-};
-
 struct RewardEffectData
 {
     RewardEffectType rewardEffectType;

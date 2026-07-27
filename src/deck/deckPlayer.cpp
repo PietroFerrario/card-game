@@ -38,25 +38,7 @@ void DeckPlayer::upgradeCard(DeckEntry& cardToUpgrade, int amount,
 {
     for (auto& up : upgradeCardParam)
     {
-        cardToUpgrade.permanentModifiers += convertUpgradeCardParam(amount, up);
-    }
-}
-
-CardParams DeckPlayer::convertUpgradeCardParam(int amount, UpgradeCardParam upgradeCardParam)
-{
-
-    switch (upgradeCardParam)
-    {
-    case UpgradeCardParam::Attack:
-        return {.damage = amount};
-    case UpgradeCardParam::Armor:
-        return {.armor = amount};
-    case UpgradeCardParam::Action:
-        return {.actions = amount};
-    case UpgradeCardParam::Drawing:
-        return {.drawing = amount};
-    default:
-        return {};
+        cardToUpgrade.permanentModifiers += upgradeCardParam::convertUpgradeCardParam(amount, up);
     }
 }
 

@@ -3,6 +3,16 @@
 
 #include <optional>
 #include <string>
+#include <string_view>
+#include <unordered_map>
+
+enum class UpgradeCardParam
+{
+    Attack,
+    Armor,
+    Action,
+    Drawing,
+};
 
 /**
  * @brief Numeric parameters used to resolve gameplay effects.
@@ -18,8 +28,11 @@ struct CardParams
     // Common one
     int damage{0};
     int armor{0};
+
+    // CardBased
     int actions{0};
     int drawing{0};
+    std::optional<UpgradeCardParam> upgradeCardParam{UpgradeCardParam::None};
 
     // Enemy-based
     std::optional<int> amount;
@@ -34,5 +47,32 @@ struct CardParams
         return *this;
     }
 };
+
+namespace upgradeCardParam
+{
+inline const std::unordered_map<std::string_view, UpgradeCardParam> m_upgradeCardParamMap{
+    {"attack", UpgradeCardParam::Attack},
+    {"armor", UpgradeCardParam::Armor},
+    {"action", UpgradeCardParam::Action},
+    {"drawing", UpgradeCardParam::Drawing}};
+
+CardParams convertUpgradeCardParam(int amount, UpgradeCardParam upgradeCardParam)
+{
+
+    switch (upgradeCardParam)
+    {
+    case UpgradeCardParam::Attack:
+        return {.damage = amount};
+    case UpgradeCardParam::Armor:
+        return {.armor = amount};
+    case UpgradeCardParam::Action:
+        return {.actions = amount};
+    case UpgradeCardParam::Drawing:
+        return {.drawing = amount};
+    default:
+        return {};
+    }
+}
+}; // namespace upgradeCardParam
 
 #endif // CARDPARAMS_H

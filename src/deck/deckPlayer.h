@@ -74,7 +74,7 @@ class DeckPlayer
 
     void upgradeCard(DeckEntry& cardToUpgrade, int amount,
                      std::vector<UpgradeCardParam> upgradeCardParam);
-    CardParams convertUpgradeCardParam(int amount, UpgradeCardParam upgradeCardParam);
+
     DeckEntry& getCardEntry(int cardIndex);
 
   private:

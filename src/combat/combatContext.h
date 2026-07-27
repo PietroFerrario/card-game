@@ -72,6 +72,8 @@ class CombatContext
 
     void gainActions(int amount);
 
+    const DeckCombat& getDeckCombatView() const { return m_deckCombat; }
+
     // Enemy effects
 
     void limitCardToPlay(int amount);

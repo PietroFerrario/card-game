@@ -41,12 +41,6 @@ class RewardLoader
             {"cardChoice", RewardEffectType::ChooseCards},
             {"registerQuest", RewardEffectType::RegisterQuest},
         };
-
-    inline static const std::unordered_map<std::string_view, UpgradeCardParam>
-        m_upgradeCardParamMap{{"attack", UpgradeCardParam::Attack},
-                              {"armor", UpgradeCardParam::Armor},
-                              {"action", UpgradeCardParam::Action},
-                              {"drawing", UpgradeCardParam::Drawing}};
 };
 
 #endif // REWARDLOADER_H
