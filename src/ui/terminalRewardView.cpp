@@ -90,6 +90,23 @@ void TerminalRewardView::showSelectedRewardDescription(std::string_view rewardDe
     showFancyDivisor();
 };
 
+void TerminalRewardView::showNumbericalGainSummaryEffect(int increase, int total,
+                                                         std::string_view resource) const
+{
+    showDivisor();
+    m_io.println(std::format("{:^{}} | {:^{}}", std::format("Added: {} {}", increase, resource),
+                             m_singleBoxWidth, std::format("Total {}: {}", resource, total),
+                             m_singleBoxWidth));
+}
+
+void TerminalRewardView::showAddedCard(std::string_view cardName, int deckSize) const
+{
+    showDivisor();
+    m_io.println(std::format("{:^{}} | {:^{}}", std::format("{} was added to the deck.", cardName),
+                             m_singleBoxWidth, std::format("Card in the deck: {}", deckSize),
+                             m_singleBoxWidth));
+}
+
 std::string TerminalRewardView::color(AnsiColor color, const std::string& text)
 {
     if (color == AnsiColor::None)

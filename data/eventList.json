@@ -15,8 +15,13 @@
         },
         {
             "type": "match",
-            "enemyId": "Norman military patrol",
+            "enemyId": "NormanPatrol",
             "rewardListId": "NormanPatrol1"
+        },
+        {
+            "type": "match",
+            "enemyId": "WihtBoar",
+            "rewardListId": "banditFirst"
         }
     ]
 }

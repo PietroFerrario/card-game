@@ -9,8 +9,9 @@ TerminalMatchView::TerminalMatchView(IOText& io) : m_io{io} {}
 void TerminalMatchView::showStartOfMatch(std::string_view enemyName) const
 {
     showMatchDivisor();
-    m_io.println(
-        std::format("{:^{}}", std::format("Match against {} started!", enemyName), m_mainWidth));
+    m_io.println(color(
+        AnsiColor::Red,
+        std::format("{:^{}}", std::format("Match against {} started!", enemyName), m_mainWidth)));
     showMatchDivisor();
 }
 
@@ -171,7 +172,7 @@ void TerminalMatchView::showFancyDivisor() const
 void TerminalMatchView::showMatchDivisor() const
 {
     std::string str((m_mainWidth), '=');
-    m_io.println(str);
+    m_io.println(color(AnsiColor::Red, str));
 }
 
 void TerminalMatchView::showMatchState(const MatchData& matchData) const

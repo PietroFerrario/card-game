@@ -31,6 +31,7 @@ class EffectFactory
     static std::unique_ptr<Effect> makeLimitCardToPlayEffect(Target target);
     static std::unique_ptr<Effect> makeTakeHostageEffect(Target target);
     static std::unique_ptr<Effect> makeAddClogCardToDeck(Target target);
+    static std::unique_ptr<Effect> makeIncreaseDamaeEnemyMove(Target target);
 };
 
 #endif // EFFECTFACTORY_H

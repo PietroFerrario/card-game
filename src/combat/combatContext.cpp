@@ -4,17 +4,20 @@
 #include "combat/combatEvents.h"
 #include "combatSystem.h"
 #include "deck/deckCombat.h"
+#include "entities/enemies/enemy.h"
 #include "entities/entity.h"
 #include "game_system/matchData.h"
 #include "util/Random.h"
+
 #include "util/debug.h"
 
+#include <algorithm>
 #include <utility>
 
 CombatContext::CombatContext(CombatSystem& combatSystem, Entity& actor, Entity& opponent,
-                             DeckCombat& deckCombat, TurnData& turnData)
+                             DeckCombat& deckCombat, TurnData& turnData, Enemy* enemy)
     : m_combatSystem{combatSystem}, m_actor{actor}, m_opponent{opponent}, m_deckCombat{deckCombat},
-      m_turnData{turnData}
+      m_turnData{turnData}, m_enemy{enemy}
 {
     m_effectMessage = nullptr;
 }
@@ -190,7 +193,43 @@ void CombatContext::addCardToDeck(std::string_view cardId, int amount)
         m_deckCombat.addCardToCombatDeck(card);
     }
 
+    if (m_effectMessage)
+    {
+        m_effectMessage->emplace_back(
+            std::format("{} {} cards added to your deck.", amount, cardId));
+    }
+
     m_deckCombat.shuffle();
+}
+
+void CombatContext::increaseDamageEnemyMove(std::string_view enemyMoveName, int amount)
+{
+
+    if (!m_enemy)
+    {
+        DEBUG_LOG("ModifyEnemyMove called with no enemy in context");
+        return;
+    }
+
+    auto& moveList{m_enemy->getEnemyMovesList()};
+
+    auto foundMove =
+        std::find_if(moveList.begin(), moveList.end(),
+                     [enemyMoveName](const EnemyMove& move) { return move.name == enemyMoveName; });
+
+    if (foundMove == moveList.end())
+    {
+        DEBUG_LOG("No enemy move name " << enemyMoveName << "in enemy " << m_enemy->getName());
+        return;
+    }
+
+    foundMove->effectParams.damage += amount;
+
+    if (m_effectMessage)
+    {
+        m_effectMessage->emplace_back(
+            std::format("{} damage on next turn: +{}", foundMove->name, amount));
+    }
 }
 
 // FOR THE FUTURE: Effect summaries are currently collected as strings for simplicity.

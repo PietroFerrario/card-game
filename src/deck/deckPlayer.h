@@ -70,6 +70,8 @@ class DeckPlayer
     /// @brief Returns the full list of card entries.
     const std::vector<DeckEntry>& getCardList() const { return m_cardsList; }
 
+    int getDeckSize() const { return m_cardsList.size(); }
+
     void upgradeCard(DeckEntry& cardToUpgrade, int amount,
                      std::vector<UpgradeCardParam> upgradeCardParam);
     CardParams convertUpgradeCardParam(int amount, UpgradeCardParam upgradeCardParam);

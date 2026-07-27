@@ -31,6 +31,10 @@ class IRewardView
 
     virtual void showStoryEventTitle(std::string_view enemyName) const = 0;
     virtual void showStoryEventDescription(std::string_view storyEventDescription) const = 0;
+    virtual void showNumbericalGainSummaryEffect(int increase, int total,
+                                                 std::string_view resource) const = 0;
+
+    virtual void showAddedCard(std::string_view cardName, int deckSize) const = 0;
 
   private:
 };

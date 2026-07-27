@@ -6,20 +6,24 @@
 #include "effects/gainArmorEffect.h"
 #include "effects/gainAttackEffect.h"
 #include "effects/hostageCardEffect.h"
+#include "effects/increaseDamageEnemyMove.h"
 #include "effects/limitCardToPlayEffect.h"
 #include "util/debug.h"
 #include <cassert>
 
 EffectFactory::EffectFactory()
 {
+    // cards
     m_effectMap[EffectName::gainArmor] = makeGainArmorEffect;
     m_effectMap[EffectName::gainAttack] = makeGainAttackEffect;
     m_effectMap[EffectName::drawCards] = makeDrawCardsEffect;
     m_effectMap[EffectName::gainActions] = makeGainActionsEffect;
 
+    // enemies
     m_effectMap[EffectName::takeHostage] = makeTakeHostageEffect;
     m_effectMap[EffectName::limitCardToPlay] = makeLimitCardToPlayEffect;
     m_effectMap[EffectName::addClogCardToDeck] = makeAddClogCardToDeck;
+    m_effectMap[EffectName::increaseDamageEnemyMove] = makeIncreaseDamaeEnemyMove;
 }
 
 std::vector<std::unique_ptr<Effect>>
@@ -76,4 +80,9 @@ std::unique_ptr<Effect> EffectFactory::makeTakeHostageEffect(Target target)
 std::unique_ptr<Effect> EffectFactory::makeAddClogCardToDeck(Target target)
 {
     return std::make_unique<AddClogCardToDeckEffect>();
+}
+
+std::unique_ptr<Effect> EffectFactory::makeIncreaseDamaeEnemyMove(Target target)
+{
+    return std::make_unique<IncreaseDamageEnemyMove>();
 }

@@ -12,11 +12,15 @@ class GainPopulationRewardEffect : public RewardEffect
 
     void resolve(RewardContext& rewardContext) override
     {
-        rewardContext.player.increasePopulation(m_amount);
+        auto player{rewardContext.player};
+        player.increasePopulation(m_amount);
+        rewardContext.rewardView.showNumbericalGainSummaryEffect(m_amount, player.getPopulation(),
+                                                                 m_resource);
     };
 
   private:
     int m_amount;
+    std::string m_resource{"population"};
 };
 
 #endif // GAINPOPULATIONREWARDEFFECT_H

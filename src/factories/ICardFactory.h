@@ -5,6 +5,7 @@
 
 #include <memory>
 #include <string>
+#include <string_view>
 #include <vector>
 
 class CardDefinition;
@@ -32,6 +33,7 @@ class ICardFactory
     virtual std::vector<std::string> getRegisteredCardsId() const = 0;
 
     virtual int getCardPopulation(std::string_view cardId) const = 0;
+    virtual std::string_view getCardName(std::string_view cardId) const = 0;
     /// @brief Virtual destructor.
     virtual ~ICardFactory() = default;
 };

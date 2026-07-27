@@ -12,11 +12,16 @@ class GainMoneyRewardEffect : public RewardEffect
 
     void resolve(RewardContext& rewardContext) override
     {
-        rewardContext.player.increaseMoney(m_amount);
-    };
+        auto player{rewardContext.player};
+        player.increaseMoney(m_amount);
+
+        rewardContext.rewardView.showNumbericalGainSummaryEffect(m_amount, player.getMoney(),
+                                                                 m_resource);
+    }
 
   private:
     int m_amount;
+    std::string m_resource{"gold"};
 };
 
 #endif // GAINMONEYREWARDEFFECT_H

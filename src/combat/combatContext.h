@@ -12,6 +12,7 @@
 class CombatSystem;
 class Entity;
 class DeckCombat;
+class Enemy;
 struct TurnData;
 struct DamageResult;
 
@@ -38,7 +39,7 @@ class CombatContext
      * @param opponent Entity opposing the actor (Target::Opponent).
      */
     CombatContext(CombatSystem& combatSystem, Entity& actor, Entity& opponent,
-                  DeckCombat& deckCombat, TurnData& turnData);
+                  DeckCombat& deckCombat, TurnData& turnData, Enemy* enemy = nullptr);
 
     void setEffectMessage(std::vector<std::string>* effectMessage);
     void resetEffectMessage();
@@ -75,6 +76,7 @@ class CombatContext
 
     void limitCardToPlay(int amount);
     void takeCardHostage();
+    void increaseDamageEnemyMove(std::string_view enemyMoveName, int amount);
     void addCardToDeck(std::string_view cardId, int amount);
 
     class EffectMessageScope
@@ -102,6 +104,7 @@ class CombatContext
     std::optional<DrawData> m_drawData;
 
     std::vector<std::string>* m_effectMessage;
+    Enemy* m_enemy;
 
     /**
      * @brief Resolves a logical Target to the corresponding Entity in this context.

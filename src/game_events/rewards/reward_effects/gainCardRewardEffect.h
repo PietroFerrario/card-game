@@ -15,8 +15,20 @@ class GainCardRewardEffect : public RewardEffect
 
     void resolve(RewardContext& rewardContext) override
     {
-        rewardContext.player.addCardToDeck(m_cardId,
-                                           rewardContext.cardFactory.getCardPopulation(m_cardId));
+        int cardPopulation{rewardContext.cardFactory.getCardPopulation(m_cardId)};
+        if (rewardContext.player.addCardToDeck(m_cardId, cardPopulation))
+        {
+            rewardContext.rewardView.showAddedCard(
+                rewardContext.cardFactory.getCardName(m_cardId),
+                rewardContext.player.getDeckPlayer().getDeckSize());
+            if (cardPopulation > 0)
+            {
+
+                rewardContext.rewardView.showNumbericalGainSummaryEffect(
+                    cardPopulation, rewardContext.player.getPopulation(),
+                    std::string{"population"});
+            }
+        }
     };
 
   private:

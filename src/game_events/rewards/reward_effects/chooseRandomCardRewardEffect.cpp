@@ -22,9 +22,20 @@ void ChooseRandomCardRewardEffect::resolve(RewardContext& rewardContext)
 
     int selectedCard(rewardContext.rewardView.askPlayerSelectRewardCard(m_amount));
 
-    rewardContext.player.addCardToDeck(
-        randomCardToRender.at(selectedCard)->getCardDefinition().getID(),
-        randomCardToRender.at(selectedCard)->getCardDefinition().getCardPopulation());
+    auto& cardDefinition{randomCardToRender.at(selectedCard)->getCardDefinition()};
+    if (rewardContext.player.addCardToDeck(cardDefinition.getID(),
+                                           cardDefinition.getCardPopulation()))
+    {
+        rewardContext.rewardView.showAddedCard(cardDefinition.getName(),
+                                               rewardContext.player.getDeckPlayer().getDeckSize());
+        int cardPopulation{cardDefinition.getCardPopulation()};
+        if (cardPopulation > 0)
+        {
+
+            rewardContext.rewardView.showNumbericalGainSummaryEffect(
+                cardPopulation, rewardContext.player.getPopulation(), std::string{"population"});
+        }
+    }
 }
 
 std::vector<std::unique_ptr<CardInstance>>

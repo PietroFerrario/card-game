@@ -196,7 +196,8 @@ void CardMatch::enemyTurn(TurnData& currentTurnData)
 
     std::vector<std::string> effectMessage;
 
-    CombatContext currentContext{m_combatSystem, m_enemy, m_player, m_deckCombat, currentTurnData};
+    CombatContext currentContext{m_combatSystem, m_enemy,         m_player,
+                                 m_deckCombat,   currentTurnData, &m_enemy};
 
     CombatContext::EffectMessageScope logScope(currentContext, effectMessage);
 

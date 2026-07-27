@@ -42,6 +42,8 @@ class Enemy : public Entity
      */
     const EnemyMove& nextMove();
 
+    std::vector<EnemyMove>& getEnemyMovesList() { return m_moves; }
+
   private:
     std::vector<EnemyMove> m_moves{};
     int m_moveIndex{0};

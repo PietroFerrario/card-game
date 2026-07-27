@@ -14,6 +14,7 @@ Need to merge the view at a certain point and refactor them unifying and avoidin
 #include "rewardsRenderer.h"
 #include "terminalMatchView.h" //For ansi color needs to be fixed and refactored
 
+#include <string_view>
 #include <vector>
 
 class TerminalRewardView : public IRewardView
@@ -36,6 +37,10 @@ class TerminalRewardView : public IRewardView
 
     void showStoryEventTitle(std::string_view enemyName) const override;
     void showStoryEventDescription(std::string_view storyEventDescription) const override;
+    void showNumbericalGainSummaryEffect(int increase, int total,
+                                         std::string_view resource) const override;
+
+    void showAddedCard(std::string_view cardName, int deckSize) const override;
 
   private:
     ICardFactory& m_cardFactory;

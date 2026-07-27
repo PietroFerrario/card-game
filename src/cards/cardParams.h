@@ -23,7 +23,7 @@ struct CardParams
 
     // Enemy-based
     std::optional<int> amount;
-    std::optional<std::string> cardId;
+    std::optional<std::string> referenceId;
 
     CardParams& operator+=(const CardParams& other)
     {

@@ -93,3 +93,8 @@ int CardFactory::getCardPopulation(std::string_view cardId) const
 {
     return {m_cardMap.at(static_cast<std::string>(cardId))->getCardPopulation()};
 }
+
+std::string_view CardFactory::getCardName(std::string_view cardId) const
+{
+    return {m_cardMap.at(static_cast<std::string>(cardId))->getName()};
+}

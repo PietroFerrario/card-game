@@ -78,7 +78,7 @@
                 {
                     "rewardType": "upgradeDeck",
                     "rewardName": "Welcome them to the caravan.",
-                    "description": "The farmer and his family join the caravan. They will be dead weight, but in another life the roles could be inverted. Maybe something good will come from this. You gain the card Famished Farmer.",
+                    "description": "The farmer and his family join the caravan. They will be dead weight, but in another life the roles could be inverted. Maybe something good will come from this. You gain the card Famished Farmer. You gain 4 extra population.",
                     "effectList": [
                         {
                             "effectType": "gainCard",
@@ -115,7 +115,7 @@
                     ]
                 },
                 {
-                    "rewardType": "equip",
+                    "rewardType": "upgradeDeck",
                     "rewardName": "Perhaps...",
                     "description": "A soldier begs for mercy and offers to join.",
                     "effectList": [

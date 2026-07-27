@@ -4,6 +4,7 @@
 #include "factories/cardFactory.h"
 #include "game_system/configLoader.h"
 #include "game_system/gameConfig.h"
+#include "game_system/gameSetup.h"
 #include "ui/iotext.h"
 #include "ui/terminalMatchView.h"
 #include "ui/terminalRewardView.h"
@@ -38,7 +39,7 @@ int main()
     std::cout << "Welcome to the demo of an event sqeuence!\n\nSelect the "
                  "game configuration. Press (Enter) to continue with basic configuration.\nPress "
                  "(1) to select config1, press (2) for config2: \n";
-    std::getline(std::cin, configId);
+    std::getline(std::cin, inputConfig);
 
     if (inputConfig == "1")
     {
@@ -79,6 +80,9 @@ int main()
 
     Player mainPlayer{deckLoader.loadDeck(deckName), gameConfig.playerHp};
     mainPlayer.setName("Malliano");
+
+    mainPlayer.setPopulation(
+        gameSetup::calculateInitialPopulation(mainPlayer.getDeckPlayer(), cardFactory));
 
     EventSequence eventSequence{gameConfig, terminalMatchView, terminalRewardView, cardFactory,
                                 mainPlayer};

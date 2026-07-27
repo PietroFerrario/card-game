@@ -83,7 +83,7 @@
                     "minimum": 0,
                     "description": "Optional. Generic scalar interpreted by this move's effect (e.g. limitCardToPlay = max cards the player may play; addClogCardToDeck = number of clog cards to add)."
                 },
-                "cardId": {
+                "referenceId": {
                     "type": "string",
                     "description": "Optional. Card id used by effects that add a card to the deck (e.g. addClogCardToDeck → the card to insert)."
                 },

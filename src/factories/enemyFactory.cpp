@@ -18,7 +18,7 @@ std::unique_ptr<Enemy> EnemyFactory::makeEnemy(std::string enemyId)
     {
         CardParams cardParams{moveData.damage, moveData.armor};
         cardParams.amount = moveData.amount;
-        cardParams.cardId = moveData.cardId;
+        cardParams.referenceId = moveData.referenceId;
 
         enemyMovesList.emplace_back(std::move(moveData.moveName),
                                     std::move(moveData.moveDescription), cardParams,

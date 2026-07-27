@@ -163,6 +163,19 @@ std::vector<const CardInstance*> DeckCombat::getHandView() const
     return handView;
 }
 
+std::vector<const CardInstance*> DeckCombat::getTurnPlayedView() const
+{
+    std::vector<const CardInstance*> TurnPlayedView;
+    TurnPlayedView.reserve(m_turnPlayedPile.size());
+
+    for (const std::unique_ptr<CardInstance>& currentCard : m_turnPlayedPile)
+    {
+        TurnPlayedView.emplace_back(currentCard.get());
+    }
+
+    return TurnPlayedView;
+}
+
 void DeckCombat::shuffle() { std::shuffle(m_drawPile.begin(), m_drawPile.end(), Random::mt); }
 
 void DeckCombat::regenerateDeck()

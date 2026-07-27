@@ -27,7 +27,7 @@ void Player::increasePopulation(int amount)
 {
     if (amount > 0)
     {
-        m_peopleInTheCaravan += amount;
+        m_population += amount;
     }
 };
 
@@ -35,7 +35,7 @@ void Player::decreasePopulation(int amount)
 {
     if (amount > 0)
     {
-        m_peopleInTheCaravan = std::max(0, m_peopleInTheCaravan - amount);
+        m_population = std::max(0, m_population - amount);
     }
 };
 

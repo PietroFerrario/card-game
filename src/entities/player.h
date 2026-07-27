@@ -56,8 +56,10 @@ class Player : public Entity
 
     bool addCardToDeck(std::string_view cardId, int population);
 
+    void setPopulation(int amount) { m_population = amount; }
+
     int getMoney() const { return m_money; }
-    int getPopulation() const { return m_peopleInTheCaravan; }
+    int getPopulation() const { return m_population; }
 
     void increaseMoney(int amount);
     void decreaseMoney(int amount);
@@ -68,7 +70,7 @@ class Player : public Entity
   private:
     DeckPlayer m_deckPlayer;
     int m_money{0};
-    int m_peopleInTheCaravan{0};
+    int m_population{0};
 };
 
 #endif

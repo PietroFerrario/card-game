@@ -11,7 +11,8 @@
                 "drawCards",
                 "limitCardToPlay",
                 "takeHostage",
-                "addClogCardToDeck"
+                "addClogCardToDeck",
+                "increaseDamageEnemyMove"
             ]
         },
         "target": {

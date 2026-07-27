@@ -126,6 +126,8 @@ class DeckCombat
      */
     std::vector<const CardInstance*> getHandView() const;
 
+    std::vector<const CardInstance*> getTurnPlayedView() const;
+
     void shuffle();
 
     void regenerateDeck();

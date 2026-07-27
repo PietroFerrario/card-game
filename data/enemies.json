@@ -29,7 +29,7 @@
                     "damage": 0,
                     "armor": 0,
                     "amount": 0,
-                    "cardId": "",
+                    "referenceId": "",
                     "effectList": [
                         {
                             "effect": "takeHostage",
@@ -42,6 +42,8 @@
                     "moveDescription": "No tactics or discipline, the ragged band leaps at you!",
                     "damage": 5,
                     "armor": 2,
+                    "amount": 0,
+                    "referenceId": "",
                     "effectList": [
                         {
                             "effect": "gainAttack",
@@ -56,9 +58,9 @@
             ]
         },
         {
-            "id": "Norman military patrol",
+            "id": "NormanPatrol",
             "name": "Norman military patrol",
-            "hp": 45,
+            "hp": 15,
             "movesList": [
                 {
                     "moveName": "Mocking",
@@ -66,31 +68,46 @@
                     "damage": 0,
                     "armor": 0,
                     "amount": 2,
-                    "cardId": "BrokenGlass",
+                    "referenceId": "BrokenGlass",
                     "effectList": [
                         {
                             "effect": "addClogCardToDeck",
-                            "target": "opponent"
+                            "target": null
                         }
                     ]
                 },
                 {
-                    "moveName": "Damn Bullies #1",
-                    "moveDescription": "The group of fools attack you :/",
-                    "damage": 3,
-                    "armor": 0,
-                    "effectList": [
-                        {
-                            "effect": "gainAttack",
-                            "target": "self"
-                        }
-                    ]
-                },
-                {
-                    "moveName": "Damn Bullies #2",
-                    "moveDescription": "The group of fools continues to attack you -_-",
+                    "moveName": "Pack of Bullies",
+                    "moveDescription": "They insult you, but their words are backed up by numbers! D:",
                     "damage": 5,
                     "armor": 0,
+                    "amount": 5,
+                    "referenceId": "Pack of Bullies",
+                    "effectList": [
+                        {
+                            "effect": "gainAttack",
+                            "target": "self"
+                        },
+                        {
+                            "effect": "increaseDamageEnemyMove",
+                            "target": null
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "WihtBoar",
+            "name": "Wiht Boar",
+            "hp": 30,
+            "movesList": [
+                {
+                    "moveName": "Charge!!",
+                    "moveDescription": "Low muzzle and pointy tusks, it charge at you!",
+                    "damage": 10,
+                    "armor": 0,
+                    "amount": 0,
+                    "referenceId": "",
                     "effectList": [
                         {
                             "effect": "gainAttack",
@@ -99,14 +116,25 @@
                     ]
                 },
                 {
-                    "moveName": "Damn Bullies #3",
-                    "moveDescription": "The group of fools continues to attack you...they need a lesson at this point >_<",
-                    "damage": 7,
+                    "moveName": "Rest",
+                    "moveDescription": "The beast its spent after the charge. It's your time to strike!",
+                    "damage": 0,
                     "armor": 0,
+                    "amount": 0,
+                    "referenceId": "",
+                    "effectList": []
+                },
+                {
+                    "moveName": "Roar",
+                    "moveDescription": "A sound so mighty echoes in the forest",
+                    "damage": 0,
+                    "armor": 0,
+                    "amount": 1,
+                    "referenceId": "Charge!!",
                     "effectList": [
                         {
-                            "effect": "gainAttack",
-                            "target": "self"
+                            "effect": "increaseDamageEnemyMove",
+                            "target": null
                         }
                     ]
                 }
