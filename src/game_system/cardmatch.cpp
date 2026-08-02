@@ -84,9 +84,15 @@ void CardMatch::reduceAction(TurnData& turnData, int amount)
     turnData.playerRemainingActions = std::max(0, turnData.playerRemainingActions - amount);
 }
 
-bool CardMatch::updateMatchState()
+bool CardMatch::updateMatchState(TurnData& currentTurnData)
 {
     bool playerDead = m_combatSystem.isDead(m_player);
+    if (currentTurnData.avoidDeathFlag && playerDead)
+    {
+        playerDead = false;
+        m_player.setHp(1);
+    }
+
     bool enemyDead = m_combatSystem.isDead(m_enemy);
 
     if (playerDead && !enemyDead)
@@ -121,14 +127,14 @@ MatchData CardMatch::turnLoop()
         enemyTurn(turnData);
         playerTurn(turnData);
         damagePhase();
-        if (updateMatchState())
+        if (updateMatchState(turnData))
         {
             // Refactor Match result to be shown in the Event Sequence, not in the CardMatch!
             m_matchView.showEndOfMatch(m_matchData);
-            resetPhase();
+            resetPhase(turnData);
             return m_matchData;
         }
-        resetPhase();
+        resetPhase(turnData);
     }
     return m_matchData;
 }
@@ -224,9 +230,13 @@ void CardMatch::damagePhase()
     m_matchView.showDamageResult(playerResult);
 }
 
-void CardMatch::resetPhase()
+void CardMatch::resetPhase(TurnData& currentTurnData)
 {
-    m_combatSystem.endTurnReset(m_player, m_enemy);
+    // player reset
+    m_combatSystem.endTurnReset(m_player, currentTurnData.maintainPlayerArmorFlag);
+    // enemy reset
+    m_combatSystem.endTurnReset(m_enemy, currentTurnData.maintainEnemyArmorFlag);
+
     m_deckCombat.movePlayedToDiscardEndTurn();
     m_deckCombat.discardHandEndTurn();
     m_matchView.showEndOfTurn(m_matchData);

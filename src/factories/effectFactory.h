@@ -27,7 +27,12 @@ class EffectFactory
     static std::unique_ptr<Effect> makeGainActionsEffect(Target target);
     static std::unique_ptr<Effect> makeDrawCardsEffect(Target target);
 
-    // Enemies effect
+    // Card effects
+    static std::unique_ptr<Effect> makeBuffIfCardPlayedEffect(Target target);
+    static std::unique_ptr<Effect> makeMaintainExcessArmorEffect(Target target);
+    static std::unique_ptr<Effect> makeAvoidDeathEffect(Target target);
+
+    // Enemies effects
     static std::unique_ptr<Effect> makeLimitCardToPlayEffect(Target target);
     static std::unique_ptr<Effect> makeTakeHostageEffect(Target target);
     static std::unique_ptr<Effect> makeAddClogCardToDeck(Target target);

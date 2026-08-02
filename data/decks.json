@@ -6,6 +6,10 @@
             "amount": 0
         },
         {
+            "id": "ShieldWarrior",
+            "amount": 1
+        },
+        {
             "id": "InexGuard",
             "amount": 2
         },

@@ -65,6 +65,9 @@ class Entity
     /// @brief Increases HP by the given amount.
     void increaseHp(int amount) { m_hp += amount; }
 
+    /// @brief Set the HP by the given amount.
+    void setHp(int amount) { m_hp = amount; }
+
   protected:
     int m_hp{};
     int m_armor{};

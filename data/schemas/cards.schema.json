@@ -18,6 +18,18 @@
         }
     },
     "definitions": {
+        "cardTag": {
+            "type": "string",
+            "enum": [
+                "ranged",
+                "melee",
+                "wiht",
+                "beast",
+                "clog",
+                "common",
+                "unique"
+            ]
+        },
         "card": {
             "type": "object",
             "required": [
@@ -78,6 +90,26 @@
                     "minimum": 0,
                     "maximum": 99
                 },
+                "amount": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 99,
+                    "description": "Optional. Generic magnitude consumed by effects that need one (e.g. buffIfCardPlayed)."
+                },
+                "referenceId": {
+                    "type": "string",
+                    "description": "Optional. The id this card's effects refer to: a card id for buffIfCardPlayed, a move name for increaseDamageEnemyMove."
+                },
+                "upParams": {
+                    "type": "string",
+                    "enum": [
+                        "attack",
+                        "armor",
+                        "action",
+                        "drawing"
+                    ],
+                    "description": "Optional. Which stat an effect modifies. Must match upgradeCardParamMap in cardParams.h."
+                },
                 "cardDisposalMode": {
                     "type": "string",
                     "enum": [
@@ -95,17 +127,5 @@
                 }
             }
         }
-    },
-    "cardTag": {
-        "type": "string",
-        "enum": [
-            "ranged",
-            "melee",
-            "wiht",
-            "beast",
-            "clog",
-            "common",
-            "unique"
-        ]
     }
 }

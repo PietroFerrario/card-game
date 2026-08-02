@@ -20,6 +20,7 @@ target_sources(cardgame_core PRIVATE
     src/effects/gainAttackEffect.cpp
     src/effects/gainActionsEffect.cpp
     src/effects/drawCardsEffect.cpp
+    src/effects/buffIfCardPlayedEffect.cpp
 
     src/effects/limitCardToPlayEffect.cpp
     src/effects/hostageCardEffect.cpp

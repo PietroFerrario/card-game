@@ -1,5 +1,6 @@
 #include "cards/cardDefinition.h"
 #include "cards/cardParams.h"
+#include "cards/cardParamsLoader.h"
 
 #include "cardsLoader.h"
 #include <cassert>
@@ -36,10 +37,7 @@ std::unique_ptr<CardDefinition> CardsLoader::loadCard(const json& card)
             ? card::cardDisposalModeMap.at(
                   card.at("cardDisposalMode").get_ref<const std::string&>())
             : CardDisposalMode::Discard,
-        CardParams{.damage = card.at("damage").get<int>(),
-                   .armor = card.at("armor").get<int>(),
-                   .actions = card.at("actions").get<int>(),
-                   .drawing = card.at("drawing").get<int>()},
+        cardParamsLoader::loadCardParam(card),
         m_effectFactory.makeEffectList(makeEffectDataList(card.at("effectList"))));
 }
 

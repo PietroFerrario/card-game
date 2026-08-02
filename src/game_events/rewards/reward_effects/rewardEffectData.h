@@ -20,7 +20,7 @@ struct RewardEffectData
     RewardEffectType rewardEffectType;
     int amount{0};
     std::string cardId;
-    std::vector<UpgradeCardParam> upgradeCardParam{UpgradeCardParam::None};
+    std::vector<UpgradeCardParam> upgradeCardParam;
 };
 
 #endif // REWARDEFFECTDATA_H

@@ -16,13 +16,9 @@ std::unique_ptr<Enemy> EnemyFactory::makeEnemy(std::string enemyId)
 
     for (auto& moveData : enemyData.moveList)
     {
-        CardParams cardParams{moveData.damage, moveData.armor};
-        cardParams.amount = moveData.amount;
-        cardParams.referenceId = moveData.referenceId;
-
-        enemyMovesList.emplace_back(std::move(moveData.moveName),
-                                    std::move(moveData.moveDescription), cardParams,
-                                    m_effectFactory.makeEffectList(moveData.effectList));
+        enemyMovesList.emplace_back(
+            std::move(moveData.moveName), std::move(moveData.moveDescription),
+            std::move(moveData.cardParams), m_effectFactory.makeEffectList(moveData.effectList));
     }
     return {std::make_unique<Enemy>(enemyData.name, enemyData.hp, std::move(enemyMovesList))};
 }

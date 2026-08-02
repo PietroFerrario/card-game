@@ -24,9 +24,13 @@ struct TurnData
     int initialCardsToDraw;
     int cardsPlayed{0};
 
-    // enemy based
+    // card based
+    bool maintainPlayerArmorFlag{false};
+    bool avoidDeathFlag{false};
 
+    // enemy based
     std::optional<int> cardsToPlayLimit;
+    bool maintainEnemyArmorFlag{false};
 };
 
 // Refactor for both playing card and refactor

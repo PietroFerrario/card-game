@@ -4,7 +4,7 @@
         {
             "id": "ShieldWarrior",
             "name": "Shield Warrior",
-            "descr": "Strong warrior with axe and round shield",
+            "descr": "If the Quartermaster was played, +3 damage",
             "population": 1,
             "tags": [
                 "common",
@@ -14,6 +14,9 @@
             "armor": 2,
             "actions": 0,
             "drawing": 0,
+            "amount": 3,
+            "referenceId": "Quartermaster",
+            "upParams": "attack",
             "effectList": [
                 {
                     "effect": "gainAttack",
@@ -21,6 +24,10 @@
                 },
                 {
                     "effect": "gainArmor",
+                    "target": "self"
+                },
+                {
+                    "effect": "buffIfCardPlayed",
                     "target": "self"
                 }
             ]
@@ -164,25 +171,24 @@
                 {
                     "effect": "gainArmor",
                     "target": "self"
-                },
-                {
-                    "effect": "gainActions",
-                    "target": null
                 }
             ]
         },
         {
             "id": "Constable",
             "name": "The Constable",
-            "descr": "The right-hand mand of the Quartermaster",
+            "descr": "If the Quartermaster was played, +5 damage",
             "population": 1,
             "tags": [
                 "unique"
             ],
-            "damage": 1,
-            "armor": 1,
-            "actions": 1,
-            "drawing": 1,
+            "damage": 5,
+            "armor": 0,
+            "actions": 0,
+            "drawing": 0,
+            "amount": 5,
+            "referenceId": "Quartermaster",
+            "upParams": "attack",
             "effectList": [
                 {
                     "effect": "gainAttack",
@@ -193,11 +199,7 @@
                     "target": "self"
                 },
                 {
-                    "effect": "gainActions",
-                    "target": null
-                },
-                {
-                    "effect": "drawCards",
+                    "effect": "buffIfCardPlayed",
                     "target": "self"
                 }
             ]

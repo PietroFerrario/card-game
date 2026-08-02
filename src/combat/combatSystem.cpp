@@ -14,14 +14,15 @@ void CombatSystem::gainAttack(Entity& target, int amount)
     DEBUG_LOG("Increasing Attack of " << target.getName() << ": +" << amount);
 }
 
-void CombatSystem::endTurnReset(Entity& player, Entity& enemy)
+void CombatSystem::endTurnReset(Entity& entity, bool maintainArmour)
 {
-    player.resetArmor();
-    player.resetAttack();
-    enemy.resetArmor();
-    enemy.resetAttack();
+    if (!maintainArmour)
+    {
+        entity.resetArmor();
+    }
+    entity.resetAttack();
 
-    DEBUG_LOG("Resetting Armor and Attack of " << player.getName() << " and " << enemy.getName());
+    DEBUG_LOG("Resetting Armor and Attack of " << entity.getName());
 }
 
 void CombatSystem::resetArmor(Entity& target) { target.resetArmor(); }

@@ -1,6 +1,8 @@
 #include "effectFactory.h"
 #include "combat/combatTarget.h"
 #include "effects/addClogCardToDeckEffect.h"
+#include "effects/avoidDeathEffect.h"
+#include "effects/buffIfCardPlayedEffect.h"
 #include "effects/drawCardsEffect.h"
 #include "effects/gainActionsEffect.h"
 #include "effects/gainArmorEffect.h"
@@ -8,6 +10,7 @@
 #include "effects/hostageCardEffect.h"
 #include "effects/increaseDamageEnemyMove.h"
 #include "effects/limitCardToPlayEffect.h"
+#include "effects/maintainExcessArmorEffect.h"
 #include "util/debug.h"
 #include <cassert>
 
@@ -18,6 +21,9 @@ EffectFactory::EffectFactory()
     m_effectMap[EffectName::gainAttack] = makeGainAttackEffect;
     m_effectMap[EffectName::drawCards] = makeDrawCardsEffect;
     m_effectMap[EffectName::gainActions] = makeGainActionsEffect;
+    m_effectMap[EffectName::buffIfCardPlayed] = makeBuffIfCardPlayedEffect;
+    m_effectMap[EffectName::maintainExcessArmor] = makeMaintainExcessArmorEffect;
+    m_effectMap[EffectName::avoidDeath] = makeAvoidDeathEffect;
 
     // enemies
     m_effectMap[EffectName::takeHostage] = makeTakeHostageEffect;
@@ -65,6 +71,21 @@ std::unique_ptr<Effect> EffectFactory::makeGainActionsEffect(Target target)
 std::unique_ptr<Effect> EffectFactory::makeDrawCardsEffect(Target target)
 {
     return std::make_unique<DrawCardsEffect>();
+}
+
+std::unique_ptr<Effect> EffectFactory::makeBuffIfCardPlayedEffect(Target target)
+{
+    return std::make_unique<BuffIfCardPlayedEffect>(target);
+}
+
+std::unique_ptr<Effect> EffectFactory::makeMaintainExcessArmorEffect(Target target)
+{
+    return std::make_unique<MaintainExcessArmorEffect>(target);
+}
+
+std::unique_ptr<Effect> EffectFactory::makeAvoidDeathEffect(Target target)
+{
+    return std::make_unique<MaintainExcessArmorEffect>(target);
 }
 
 std::unique_ptr<Effect> EffectFactory::makeLimitCardToPlayEffect(Target target)

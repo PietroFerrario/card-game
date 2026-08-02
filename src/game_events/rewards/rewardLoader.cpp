@@ -1,4 +1,5 @@
 #include "rewardLoader.h"
+#include "cards/cardParams.h"
 #include "util/debug.h"
 
 #include <cassert>
@@ -82,7 +83,7 @@ std::vector<UpgradeCardParam> RewardLoader::loadUpgradeCardParams(const json& ca
     for (auto const& param : cardParams)
     {
         paramList.emplace_back(
-            upgradeCardParam::m_upgradeCardParamMap.at(param.get_ref<const std::string&>()));
+            upgradeCardParam::upgradeCardParamMap.at(param.get_ref<const std::string&>()));
     }
     return paramList;
 }

@@ -33,7 +33,7 @@ class CombatSystem
      */
     void gainAttack(Entity& target, int amount);
 
-    void endTurnReset(Entity& player, Entity& enemy);
+    void endTurnReset(Entity& entity, bool maintainArmour);
 
     /**
      * @brief Resolves damage against a target according to combat rules.

@@ -13,7 +13,10 @@ enum class EffectName
     limitCardToPlay,
     takeHostage,
     addClogCardToDeck,
-    increaseDamageEnemyMove
+    increaseDamageEnemyMove,
+    buffIfCardPlayed,
+    maintainExcessArmor,
+    avoidDeath
 };
 
 namespace effect
@@ -23,6 +26,9 @@ inline const std::unordered_map<std::string_view, EffectName> effectNameMap{
     {"gainAttack", EffectName::gainAttack},
     {"drawCards", EffectName::drawCards},
     {"gainActions", EffectName::gainActions},
+    {"buffIfCardPlayed", EffectName::buffIfCardPlayed},
+    {"maintainExcessArmor", EffectName::maintainExcessArmor},
+    {"avoidDeath", EffectName::avoidDeath},
     {"limitCardToPlay", EffectName::limitCardToPlay},
     {"takeHostage", EffectName::takeHostage},
     {"addClogCardToDeck", EffectName::addClogCardToDeck},

@@ -168,6 +168,11 @@ void CombatContext::limitCardToPlay(int amount)
     }
 }
 
+void CombatContext::maintainPlayerArmor() { m_turnData.maintainPlayerArmorFlag = true; }
+void CombatContext::maintainEnemyArmor() { m_turnData.maintainEnemyArmorFlag = true; }
+
+void CombatContext::avoidPlayerDeath() { m_turnData.avoidDeathFlag = true; }
+
 void CombatContext::takeCardHostage()
 {
     int handSize = m_deckCombat.getHandSize();

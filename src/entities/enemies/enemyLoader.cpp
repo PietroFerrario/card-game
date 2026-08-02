@@ -1,4 +1,5 @@
 #include "enemyLoader.h"
+#include "cards/cardParamsLoader.h"
 
 #include <cassert>
 #include <fstream>
@@ -38,22 +39,10 @@ std::vector<EnemyMoveData> EnemyLoader::makeEnemyMovesDataList(const json& jsonM
     std::vector<EnemyMoveData> enemyMoveDataList;
     for (const auto& jsonMove : jsonMoveList)
     {
-        enemyMoveDataList.emplace_back(
-            jsonMove.at("moveName").get_ref<const std::string&>(),
-            jsonMove.at("moveDescription").get_ref<const std::string&>(),
-            jsonMove.at("damage").get<int>(), jsonMove.at("armor").get<int>(),
-
-            // amount check and adding
-            jsonMove.contains("amount") ? std::optional<int>{jsonMove.at("amount").get<int>()}
-                                        : std::optional<int>{},
-
-            // referenceId check and adding
-            jsonMove.contains("referenceId")
-                ? std::optional<std::string>{jsonMove.at("referenceId")
-                                                 .get_ref<const std::string&>()}
-                : std::optional<std::string>{},
-
-            makeMoveEffectsDataList(jsonMove.at("effectList")));
+        enemyMoveDataList.emplace_back(jsonMove.at("moveName").get_ref<const std::string&>(),
+                                       jsonMove.at("moveDescription").get_ref<const std::string&>(),
+                                       cardParamsLoader::loadCardParam(jsonMove),
+                                       makeMoveEffectsDataList(jsonMove.at("effectList")));
     }
     return enemyMoveDataList;
 }

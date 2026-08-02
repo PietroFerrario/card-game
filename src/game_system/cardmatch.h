@@ -82,7 +82,7 @@ class CardMatch
     void spendAction(TurnData& turnData);
     void reduceAction(TurnData& turnData, int amount);
 
-    bool updateMatchState();
+    bool updateMatchState(TurnData& currentTurnData);
 
     MatchData turnLoop();
 
@@ -102,7 +102,7 @@ class CardMatch
 
     void damagePhase();
 
-    void resetPhase();
+    void resetPhase(TurnData& currentTurnData);
 
   private:
     GameConfig& m_gameConfig;

@@ -74,12 +74,18 @@ class CombatContext
 
     const DeckCombat& getDeckCombatView() const { return m_deckCombat; }
 
+    // Card effects
+
+    void maintainPlayerArmor();
+    void avoidPlayerDeath();
+
     // Enemy effects
 
     void limitCardToPlay(int amount);
     void takeCardHostage();
     void increaseDamageEnemyMove(std::string_view enemyMoveName, int amount);
     void addCardToDeck(std::string_view cardId, int amount);
+    void maintainEnemyArmor();
 
     class EffectMessageScope
     {
