@@ -171,6 +171,10 @@
                 {
                     "effect": "gainArmor",
                     "target": "self"
+                },
+                {
+                    "effect": "gainActions",
+                    "target": null
                 }
             ]
         },
@@ -232,6 +236,102 @@
             "drawing": 0,
             "cardDisposalMode": "destroy",
             "effectList": []
+        },
+        {
+            "id": "Physician",
+            "name": "The Physician",
+            "descr": "He keeps you on your legs. Who knows for how long. Avoid death this round.",
+            "population": 1,
+            "tags": [
+                "unique"
+            ],
+            "damage": 0,
+            "armor": 5,
+            "actions": 0,
+            "drawing": 0,
+            "effectList": [
+                {
+                    "effect": "gainArmor",
+                    "target": "self"
+                },
+                {
+                    "effect": "avoidDeath",
+                    "target": null
+                }
+            ]
+        },
+        {
+            "id": "Armorer",
+            "name": "The Armorer",
+            "descr": "Good metal and rivets, that's how you win a fight. Maintain eccess armor.",
+            "population": 1,
+            "tags": [
+                "unique"
+            ],
+            "damage": 0,
+            "armor": 5,
+            "actions": 0,
+            "drawing": 0,
+            "effectList": [
+                {
+                    "effect": "gainArmor",
+                    "target": "self"
+                },
+                {
+                    "effect": "maintainExcessArmor",
+                    "target": null
+                }
+            ]
+        },
+        {
+            "id": "Huntsman",
+            "name": "The Huntsman",
+            "descr": "Poachers, poachers everywhere. X2 attack every 10 population",
+            "population": 1,
+            "tags": [
+                "unique"
+            ],
+            "damage": 3,
+            "armor": 0,
+            "actions": 0,
+            "drawing": 0,
+            "amount": 10,
+            "upParams": "attack",
+            "effectList": [
+                {
+                    "effect": "gainAttack",
+                    "target": "self"
+                },
+                {
+                    "effect": "buffOnPopulation",
+                    "target": "self"
+                }
+            ]
+        },
+        {
+            "id": "ChiefForager",
+            "name": "The Chief Forager",
+            "descr": "A mushroom there, a erb there. X2 armour every 10 population",
+            "population": 1,
+            "tags": [
+                "unique"
+            ],
+            "damage": 0,
+            "armor": 3,
+            "actions": 0,
+            "drawing": 0,
+            "amount": 10,
+            "upParams": "armor",
+            "effectList": [
+                {
+                    "effect": "gainArmor",
+                    "target": "self"
+                },
+                {
+                    "effect": "buffOnPopulation",
+                    "target": "self"
+                }
+            ]
         }
     ]
 }

@@ -163,7 +163,8 @@ void CardMatch::playerTurn(TurnData& currentTurnData)
 {
     DEBUG_LOG("Starting player turn: Drawing" << m_gameConfig.cardsDrawnPerTurn << " cards");
 
-    CombatContext currentContext{m_combatSystem, m_player, m_enemy, m_deckCombat, currentTurnData};
+    CombatContext currentContext{m_combatSystem, m_player,        m_enemy,
+                                 m_deckCombat,   currentTurnData, m_player};
 
     while (canPlayerAct(currentTurnData))
     {
@@ -202,8 +203,8 @@ void CardMatch::enemyTurn(TurnData& currentTurnData)
 
     std::vector<std::string> effectMessage;
 
-    CombatContext currentContext{m_combatSystem, m_enemy,         m_player,
-                                 m_deckCombat,   currentTurnData, &m_enemy};
+    CombatContext currentContext{m_combatSystem,  m_enemy,  m_player, m_deckCombat,
+                                 currentTurnData, m_player, &m_enemy};
 
     CombatContext::EffectMessageScope logScope(currentContext, effectMessage);
 

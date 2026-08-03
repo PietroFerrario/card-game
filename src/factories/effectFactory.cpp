@@ -3,6 +3,7 @@
 #include "effects/addClogCardToDeckEffect.h"
 #include "effects/avoidDeathEffect.h"
 #include "effects/buffIfCardPlayedEffect.h"
+#include "effects/buffOnPopulationEffect.h"
 #include "effects/drawCardsEffect.h"
 #include "effects/gainActionsEffect.h"
 #include "effects/gainArmorEffect.h"
@@ -24,6 +25,7 @@ EffectFactory::EffectFactory()
     m_effectMap[EffectName::buffIfCardPlayed] = makeBuffIfCardPlayedEffect;
     m_effectMap[EffectName::maintainExcessArmor] = makeMaintainExcessArmorEffect;
     m_effectMap[EffectName::avoidDeath] = makeAvoidDeathEffect;
+    m_effectMap[EffectName::buffOnPopulationEffect] = makeBuffOnPopulationEffect;
 
     // enemies
     m_effectMap[EffectName::takeHostage] = makeTakeHostageEffect;
@@ -80,12 +82,17 @@ std::unique_ptr<Effect> EffectFactory::makeBuffIfCardPlayedEffect(Target target)
 
 std::unique_ptr<Effect> EffectFactory::makeMaintainExcessArmorEffect(Target target)
 {
-    return std::make_unique<MaintainExcessArmorEffect>(target);
+    return std::make_unique<MaintainExcessArmorEffect>();
 }
 
 std::unique_ptr<Effect> EffectFactory::makeAvoidDeathEffect(Target target)
 {
-    return std::make_unique<MaintainExcessArmorEffect>(target);
+    return std::make_unique<MaintainExcessArmorEffect>();
+}
+
+std::unique_ptr<Effect> EffectFactory::makeBuffOnPopulationEffect(Target target)
+{
+    return std::make_unique<BuffOnPopulationEffect>(target);
 }
 
 std::unique_ptr<Effect> EffectFactory::makeLimitCardToPlayEffect(Target target)

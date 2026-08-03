@@ -13,6 +13,7 @@ class CombatSystem;
 class Entity;
 class DeckCombat;
 class Enemy;
+class Player;
 struct TurnData;
 struct DamageResult;
 
@@ -39,7 +40,8 @@ class CombatContext
      * @param opponent Entity opposing the actor (Target::Opponent).
      */
     CombatContext(CombatSystem& combatSystem, Entity& actor, Entity& opponent,
-                  DeckCombat& deckCombat, TurnData& turnData, Enemy* enemy = nullptr);
+                  DeckCombat& deckCombat, TurnData& turnData, const Player& player,
+                  Enemy* enemy = nullptr);
 
     void setEffectMessage(std::vector<std::string>* effectMessage);
     void resetEffectMessage();
@@ -78,6 +80,7 @@ class CombatContext
 
     void maintainPlayerArmor();
     void avoidPlayerDeath();
+    int getPlayerPopulation();
 
     // Enemy effects
 
@@ -112,6 +115,7 @@ class CombatContext
     std::optional<DrawData> m_drawData;
 
     std::vector<std::string>* m_effectMessage;
+    const Player& m_player;
     Enemy* m_enemy;
 
     /**

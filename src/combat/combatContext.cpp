@@ -6,6 +6,7 @@
 #include "deck/deckCombat.h"
 #include "entities/enemies/enemy.h"
 #include "entities/entity.h"
+#include "entities/player.h"
 #include "game_system/matchData.h"
 #include "util/Random.h"
 
@@ -15,9 +16,10 @@
 #include <utility>
 
 CombatContext::CombatContext(CombatSystem& combatSystem, Entity& actor, Entity& opponent,
-                             DeckCombat& deckCombat, TurnData& turnData, Enemy* enemy)
+                             DeckCombat& deckCombat, TurnData& turnData, const Player& player,
+                             Enemy* enemy)
     : m_combatSystem{combatSystem}, m_actor{actor}, m_opponent{opponent}, m_deckCombat{deckCombat},
-      m_turnData{turnData}, m_enemy{enemy}
+      m_turnData{turnData}, m_player{player}, m_enemy{enemy}
 {
     m_effectMessage = nullptr;
 }
@@ -170,6 +172,8 @@ void CombatContext::limitCardToPlay(int amount)
 
 void CombatContext::maintainPlayerArmor() { m_turnData.maintainPlayerArmorFlag = true; }
 void CombatContext::maintainEnemyArmor() { m_turnData.maintainEnemyArmorFlag = true; }
+
+int CombatContext::getPlayerPopulation() { return m_player.getPopulation(); }
 
 void CombatContext::avoidPlayerDeath() { m_turnData.avoidDeathFlag = true; }
 

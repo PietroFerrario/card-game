@@ -43,4 +43,5 @@ void BuffIfCardPlayedEffect::resolve(CombatContext& combatContext, const CardPar
             }
         }
     }
+    DEBUG_LOG("Applied effect BuffIfCardPlayed");
 }

@@ -11,11 +11,11 @@
         },
         {
             "id": "InexGuard",
-            "amount": 2
+            "amount": 0
         },
         {
             "id": "InexArcher",
-            "amount": 2
+            "amount": 0
         },
         {
             "id": "Provisions",
@@ -31,6 +31,22 @@
         },
         {
             "id": "Constable",
+            "amount": 1
+        },
+        {
+            "id": "Armorer",
+            "amount": 1
+        },
+        {
+            "id": "Physician",
+            "amount": 1
+        },
+        {
+            "id": "ChiefForager",
+            "amount": 1
+        },
+        {
+            "id": "Huntsman",
             "amount": 1
         }
     ],
