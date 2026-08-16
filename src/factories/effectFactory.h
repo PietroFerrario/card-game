@@ -30,6 +30,7 @@ class EffectFactory
     // Card effects
     static std::unique_ptr<Effect> makeBuffIfCardPlayedEffect(Target target);
     static std::unique_ptr<Effect> makeMaintainExcessArmorEffect(Target target);
+    static std::unique_ptr<Effect> makeConvertExcessArmorIntoAttackEffect(Target target);
     static std::unique_ptr<Effect> makeAvoidDeathEffect(Target target);
     static std::unique_ptr<Effect> makeBuffOnPopulationEffect(Target target);
 

@@ -147,8 +147,8 @@ bool CardMatch::canPlayerAct(TurnData& currentTurnData)
     const bool hasCards = m_deckCombat.getHandSize() > 0;
 
     const bool isUnderCardsLimit =
-        !currentTurnData.cardsToPlayLimit.has_value() ||
-        currentTurnData.cardsPlayed < currentTurnData.cardsToPlayLimit.value();
+            !currentTurnData.cardsToPlayLimit.has_value() ||
+            currentTurnData.cardsPlayed < currentTurnData.cardsToPlayLimit.value();
 
     return hasAction && hasCards && isUnderCardsLimit;
 }
@@ -175,7 +175,7 @@ void CardMatch::playerTurn(TurnData& currentTurnData)
 
         DEBUG_LOG("Asking the player how to act: Play a card or Pass");
         PlayCardDecision decision{
-            m_matchView.askPlayerAction(static_cast<int>(m_deckCombat.getHandSize()))};
+                m_matchView.askPlayerAction(static_cast<int>(m_deckCombat.getHandSize()))};
 
         if (decision.playerChoice == PlayerChoice::PlayCard)
         {
@@ -222,8 +222,11 @@ void CardMatch::enemyTurn(TurnData& currentTurnData)
     }
 }
 
+void CardMatch::multiplierPhase() { m_player. }
+
 void CardMatch::damagePhase()
 {
+
     DamageResult enemyResult{m_combatSystem.dealDamage(m_player, m_enemy.getAttack())};
     m_matchView.showDamageResult(enemyResult);
 

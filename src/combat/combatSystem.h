@@ -2,8 +2,7 @@
 #define COMBATSYSTEM_H
 
 #include "combatEvents.h"
-
-class Entity;
+#include "entities/entity.h"
 
 /**
  * @brief Central authority for combat rules and state mutation.
@@ -60,6 +59,8 @@ class CombatSystem
      * @param target Entity whose armor is reset.
      */
     void resetArmor(Entity& target);
+
+    void changeArmorPolicy(Entity& target, Entity::EndOfTurnArmorPolicy armorPolicy);
 
     /**
      * @brief Checks whether the target entity is dead.

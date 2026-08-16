@@ -109,6 +109,15 @@ void CombatContext::gainArmor(Target target, int amount)
     }
 }
 
+void CombatContext::changeArmorPolicy(Target target, Entity::EndOfTurnArmorPolicy armorPolicy)
+{
+    m_combatSystem.changeArmorPolicy(resolveTarget(target), armorPolicy);
+    // if (m_effectMessage)
+    // {
+    //     m_effectMessage->emplace_back(std::format("{}: +{}", messageTarget(target), amount));
+    // }
+}
+
 void CombatContext::gainAttack(Target target, int amount)
 {
     m_combatSystem.gainAttack(resolveTarget(target), amount);
@@ -170,9 +179,6 @@ void CombatContext::limitCardToPlay(int amount)
     }
 }
 
-void CombatContext::maintainPlayerArmor() { m_turnData.maintainPlayerArmorFlag = true; }
-void CombatContext::maintainEnemyArmor() { m_turnData.maintainEnemyArmorFlag = true; }
-
 int CombatContext::getPlayerPopulation() { return m_player.getPopulation(); }
 
 void CombatContext::avoidPlayerDeath() { m_turnData.avoidDeathFlag = true; }
@@ -183,12 +189,12 @@ void CombatContext::takeCardHostage()
     if (handSize > 0)
     {
         std::unique_ptr<CardInstance> cardTakenHostage =
-            m_deckCombat.takeFromHand(Random::get(0, handSize - 1));
+                m_deckCombat.takeFromHand(Random::get(0, handSize - 1));
 
         if (m_effectMessage && cardTakenHostage)
         {
             m_effectMessage->emplace_back(std::format(
-                "Card taken hostage: {}", cardTakenHostage->getCardDefinition().getName()));
+                    "Card taken hostage: {}", cardTakenHostage->getCardDefinition().getName()));
         }
     }
 }
@@ -205,7 +211,7 @@ void CombatContext::addCardToDeck(std::string_view cardId, int amount)
     if (m_effectMessage)
     {
         m_effectMessage->emplace_back(
-            std::format("{} {} cards added to your deck.", amount, cardId));
+                std::format("{} {} cards added to your deck.", amount, cardId));
     }
 
     m_deckCombat.shuffle();
@@ -223,8 +229,8 @@ void CombatContext::increaseDamageEnemyMove(std::string_view enemyMoveName, int 
     auto& moveList{m_enemy->getEnemyMovesList()};
 
     auto foundMove =
-        std::find_if(moveList.begin(), moveList.end(),
-                     [enemyMoveName](const EnemyMove& move) { return move.name == enemyMoveName; });
+            std::find_if(moveList.begin(), moveList.end(), [enemyMoveName](const EnemyMove& move)
+                         { return move.name == enemyMoveName; });
 
     if (foundMove == moveList.end())
     {
@@ -237,7 +243,7 @@ void CombatContext::increaseDamageEnemyMove(std::string_view enemyMoveName, int 
     if (m_effectMessage)
     {
         m_effectMessage->emplace_back(
-            std::format("{} damage on next turn: +{}", foundMove->name, amount));
+                std::format("{} damage on next turn: +{}", foundMove->name, amount));
     }
 }
 

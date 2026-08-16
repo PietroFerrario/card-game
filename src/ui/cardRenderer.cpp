@@ -2,6 +2,7 @@
 #include "cards/cardDefinition.h"
 #include "cards/cardInstance.h"
 #include "cards/cardParams.h"
+#include "textWrap.h"
 
 #include <cassert>
 #include <iostream>
@@ -29,15 +30,12 @@ std::vector<std::string> CardRenderer::renderCard(const CardInstance& cardToRend
     writeSlot(grid, m_effectsSumSlot,
               fitText(m_effectsSumSlot, drawEffects(cardToRender.getCardParams())));
 
-    NameLayout descriptionLayout{
-        drawLayout(cardToRender.getCardDefinition().getDescription(), m_firstDescrSlot)};
+    const auto descr{wrapText(cardToRender.getCardDefinition().getDescription(),
+                              m_descriptionSlot.front().maxWidth)};
 
-    writeSlot(grid, m_firstDescrSlot, fitText(m_firstDescrSlot, descriptionLayout.firstName));
-
-    if (descriptionLayout.secondName.has_value())
+    for (int i{0}; i < descr.size() && i < m_descriptionSlot.size(); i++)
     {
-        writeSlot(grid, m_secondDescrSlot,
-                  fitText(m_secondDescrSlot, *descriptionLayout.secondName));
+        writeSlot(grid, m_descriptionSlot.at(i), fitText(m_descriptionSlot.at(i), descr[i]));
     }
 
     return grid;

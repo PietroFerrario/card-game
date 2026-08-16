@@ -17,6 +17,13 @@
 class Entity
 {
   public:
+    enum class EndOfTurnArmorPolicy
+    {
+        Reset,
+        Maintain,
+        ConvertToAttack
+    };
+
     Entity() {}
     Entity(int hp, std::string_view name = "emptyName", int attack = 0, int armor = 0)
         : m_hp{hp}, m_name{name}, m_attack{attack}, m_armor{armor}
@@ -43,6 +50,10 @@ class Entity
 
     /// @brief Increases attack by the given amount.
     void increaseAttack(int amount) { m_attack += amount; }
+
+    void setArmorPolicy(EndOfTurnArmorPolicy armorPolicy) { m_armorPolicy = armorPolicy; }
+
+    EndOfTurnArmorPolicy getArmorPolicy() const { return m_armorPolicy; }
 
     /**
      * @brief Decreases armor by the given amount.
@@ -73,6 +84,8 @@ class Entity
     int m_armor{};
     int m_attack{};
     std::string m_name{};
+
+    EndOfTurnArmorPolicy m_armorPolicy{EndOfTurnArmorPolicy::Reset};
 };
 
 #endif // ENTITY_H

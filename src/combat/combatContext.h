@@ -3,6 +3,7 @@
 
 #include "combatTarget.h"
 #include "deck/drawData.h"
+#include "entities/entity.h"
 
 #include <optional>
 #include <string>
@@ -75,10 +76,11 @@ class CombatContext
     void gainActions(int amount);
 
     const DeckCombat& getDeckCombatView() const { return m_deckCombat; }
+    const DeckPlayer& getDeckPlayerView() const { return m_player.getDeckPlayer(); }
 
     // Card effects
 
-    void maintainPlayerArmor();
+    void changeArmorPolicy(Target target, Entity::EndOfTurnArmorPolicy armorPolicy);
     void avoidPlayerDeath();
     int getPlayerPopulation();
 
@@ -88,7 +90,6 @@ class CombatContext
     void takeCardHostage();
     void increaseDamageEnemyMove(std::string_view enemyMoveName, int amount);
     void addCardToDeck(std::string_view cardId, int amount);
-    void maintainEnemyArmor();
 
     class EffectMessageScope
     {

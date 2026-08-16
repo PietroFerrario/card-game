@@ -118,8 +118,8 @@ class CardRenderer
 
     std::string drawEffects(const CardParams& cardParams) const;
 
-    const int m_width{24};
-    const int m_height{12};
+    const int m_width{26};
+    const int m_height{15};
 
     const int m_nameWidth{16};
     const int m_nameColumn{m_width / 2 - m_nameWidth / 2};
@@ -137,8 +137,10 @@ class CardRenderer
     Slot m_damageValueSlot{5, 8, 2, SlotAlignment::Right};
     Slot m_armorValueSlot{5, m_width - 4, 2, SlotAlignment::Right};
     Slot m_effectsSumSlot{7, 3, 18, SlotAlignment::Center};
-    Slot m_firstDescrSlot{9, 2, m_width - 4, SlotAlignment::Left};
-    Slot m_secondDescrSlot{10, 2, m_width - 4, SlotAlignment::Left};
+    std::vector<Slot> m_descriptionSlot{{9, 2, m_width - 4, SlotAlignment::Left},
+                                        {10, 2, m_width - 4, SlotAlignment::Left},
+                                        {11, 2, m_width - 4, SlotAlignment::Left},
+                                        {12, 2, m_width - 4, SlotAlignment::Left}};
 };
 
 #endif // CARDRENDERER_H

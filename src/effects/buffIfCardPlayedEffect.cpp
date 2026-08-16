@@ -15,12 +15,12 @@ void BuffIfCardPlayedEffect::resolve(CombatContext& combatContext, const CardPar
 
     {
         auto foundCard =
-            std::find_if(combatDeckView.begin(), combatDeckView.end(),
-                         [&values](const CardInstance* playedCard)
-                         {
-                             return playedCard->getCardDefinition().getID() ==
-                                    static_cast<std::string_view>(values.referenceId.value());
-                         });
+                std::find_if(combatDeckView.begin(), combatDeckView.end(),
+                             [&values](const CardInstance* playedCard)
+                             {
+                                 return playedCard->getCardDefinition().getID() ==
+                                        static_cast<std::string_view>(values.referenceId.value());
+                             });
 
         if (foundCard != combatDeckView.end())
         {
@@ -39,7 +39,7 @@ void BuffIfCardPlayedEffect::resolve(CombatContext& combatContext, const CardPar
                 combatContext.drawMultipleCardFromEffect(values.amount.value());
                 break;
             default:
-                DEBUG_LOG("End of BufIfCardPlayedSwitch, nothing happens");
+                DEBUG_LOG("End of BufFIfCardPlayedSwitch, nothing happens");
             }
         }
     }

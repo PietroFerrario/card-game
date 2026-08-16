@@ -27,6 +27,8 @@ struct TurnData
     // card based
     bool maintainPlayerArmorFlag{false};
     bool avoidDeathFlag{false};
+    double attackMultiplier{1.0};
+    double armorMultiplier{1.0};
 
     // enemy based
     std::optional<int> cardsToPlayLimit;

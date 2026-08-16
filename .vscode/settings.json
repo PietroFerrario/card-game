@@ -1,4 +1,13 @@
 {
     "cmake.sourceDirectory": "${workspaceFolder}",
-    "cmake.useCMakePresets": "always"
+    "cmake.useCMakePresets": "always",
+
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "[cpp]": {
+        "editor.defaultFormatter": "ms-vscode.cpptools"
+    },
+    "[c]": {
+        "editor.defaultFormatter": "ms-vscode.cpptools"
+    }
 }

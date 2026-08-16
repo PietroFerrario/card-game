@@ -100,6 +100,7 @@ class CardMatch
      */
     void enemyTurn(TurnData& currentTurnData);
 
+    void multiplierPhase();
     void damagePhase();
 
     void resetPhase(TurnData& currentTurnData);

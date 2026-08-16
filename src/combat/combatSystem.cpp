@@ -27,6 +27,12 @@ void CombatSystem::endTurnReset(Entity& entity, bool maintainArmour)
 
 void CombatSystem::resetArmor(Entity& target) { target.resetArmor(); }
 
+void CombatSystem::changeArmorPolicy(Entity& target, Entity::EndOfTurnArmorPolicy armorPolicy)
+{
+    target.setArmorPolicy(armorPolicy);
+    DEBUG_LOG("Changing Armor Policy of " << target.getName());
+}
+
 void CombatSystem::heal(Entity& target, int amount) { target.increaseHp(amount); }
 
 DamageResult CombatSystem::dealDamage(Entity& target, int amount, bool ignoreArmor)

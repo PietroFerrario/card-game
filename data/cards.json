@@ -279,7 +279,7 @@
                 },
                 {
                     "effect": "maintainExcessArmor",
-                    "target": null
+                    "target": "self"
                 }
             ]
         },
@@ -329,6 +329,29 @@
                 },
                 {
                     "effect": "buffOnPopulation",
+                    "target": "self"
+                }
+            ]
+        },
+        {
+            "id": "ChiefCook",
+            "name": "The Chief Cook",
+            "descr": "Good soup keeps the morale high. Excess armor converted into Damage next turn",
+            "population": 1,
+            "tags": [
+                "unique"
+            ],
+            "damage": 0,
+            "armor": 5,
+            "actions": 0,
+            "drawing": 0,
+            "effectList": [
+                {
+                    "effect": "gainArmor",
+                    "target": "self"
+                },
+                {
+                    "effect": "convertExcessArmorIntoAttack",
                     "target": "self"
                 }
             ]

@@ -24,6 +24,7 @@ target_sources(cardgame_core PRIVATE
     src/effects/buffOnPopulationEffect.cpp
     src/effects/avoidDeathEffect.cpp
     src/effects/maintainExcessArmorEffect.cpp
+    src/effects/convertExcessArmorIntoAttackEffect.cpp
 
     src/effects/limitCardToPlayEffect.cpp
     src/effects/hostageCardEffect.cpp
@@ -106,8 +107,8 @@ add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
 # Sandbox executables
 
 
-add_executable(sandbox_creating_cards sandbox/creatingCardsTest.cpp)
-target_link_libraries(sandbox_creating_cards PRIVATE cardgame_core)
+# add_executable(sandbox_creating_cards sandbox/creatingCardsTest.cpp)
+# target_link_libraries(sandbox_creating_cards PRIVATE cardgame_core)
 
 add_executable(sandbox_hand_print sandbox/handPrintTest.cpp)
 target_link_libraries(sandbox_hand_print PRIVATE cardgame_core)

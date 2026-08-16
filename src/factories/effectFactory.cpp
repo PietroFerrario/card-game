@@ -4,6 +4,7 @@
 #include "effects/avoidDeathEffect.h"
 #include "effects/buffIfCardPlayedEffect.h"
 #include "effects/buffOnPopulationEffect.h"
+#include "effects/convertExcessArmorIntoAttackEffect.h"
 #include "effects/drawCardsEffect.h"
 #include "effects/gainActionsEffect.h"
 #include "effects/gainArmorEffect.h"
@@ -24,6 +25,7 @@ EffectFactory::EffectFactory()
     m_effectMap[EffectName::gainActions] = makeGainActionsEffect;
     m_effectMap[EffectName::buffIfCardPlayed] = makeBuffIfCardPlayedEffect;
     m_effectMap[EffectName::maintainExcessArmor] = makeMaintainExcessArmorEffect;
+    m_effectMap[EffectName::convertExcessArmorIntoAttack] = makeConvertExcessArmorIntoAttackEffect;
     m_effectMap[EffectName::avoidDeath] = makeAvoidDeathEffect;
     m_effectMap[EffectName::buffOnPopulationEffect] = makeBuffOnPopulationEffect;
 
@@ -80,14 +82,19 @@ std::unique_ptr<Effect> EffectFactory::makeBuffIfCardPlayedEffect(Target target)
     return std::make_unique<BuffIfCardPlayedEffect>(target);
 }
 
+std::unique_ptr<Effect> EffectFactory::makeConvertExcessArmorIntoAttackEffect(Target target)
+{
+    return std::make_unique<ConvertExcessArmorIntoAttackEffect>(target);
+}
+
 std::unique_ptr<Effect> EffectFactory::makeMaintainExcessArmorEffect(Target target)
 {
-    return std::make_unique<MaintainExcessArmorEffect>();
+    return std::make_unique<MaintainExcessArmorEffect>(target);
 }
 
 std::unique_ptr<Effect> EffectFactory::makeAvoidDeathEffect(Target target)
 {
-    return std::make_unique<MaintainExcessArmorEffect>();
+    return std::make_unique<AvoidDeathEffect>();
 }
 
 std::unique_ptr<Effect> EffectFactory::makeBuffOnPopulationEffect(Target target)
