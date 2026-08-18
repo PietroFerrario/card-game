@@ -72,7 +72,7 @@ class RewardOptionRenderer
                                                    Slot currentSlot) const;
 
     const int m_width{50};
-    const int m_height{25};
+    const int m_height{27};
 
     const int m_nameWidth{16};
     const int m_nameColumn{m_width / 2 - m_nameWidth / 2};
@@ -94,9 +94,9 @@ class RewardOptionRenderer
     // Slot m_effectsSumSlot{7, 3, 18, SlotAlignment::Center};
 
     std::vector<Slot> m_descriptionSlots{
-        {5, 2, m_width - 4, SlotAlignment::Left}, {6, 2, m_width - 4, SlotAlignment::Left},
-        {7, 2, m_width - 4, SlotAlignment::Left}, {8, 2, m_width - 4, SlotAlignment::Left},
-        {9, 2, m_width - 4, SlotAlignment::Left}, {10, 2, m_width - 4, SlotAlignment::Left}};
+            {5, 2, m_width - 4, SlotAlignment::Left}, {6, 2, m_width - 4, SlotAlignment::Left},
+            {7, 2, m_width - 4, SlotAlignment::Left}, {8, 2, m_width - 4, SlotAlignment::Left},
+            {9, 2, m_width - 4, SlotAlignment::Left}, {10, 2, m_width - 4, SlotAlignment::Left}};
 };
 
 #endif // REWARDOPTIONRENDERER_H

@@ -9,7 +9,7 @@ class MultiplierIfCardIsPresentInDeckEffect : public Effect
 {
 
   public:
-    MultiplierIfCardIsPresentInDeckEffect() : m_target{target} {}
+    MultiplierIfCardIsPresentInDeckEffect() = default;
 
     void resolve(CombatContext& combatContext, const CardParams& values) override;
 

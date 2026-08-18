@@ -17,6 +17,7 @@ enum class EffectName
     buffIfCardPlayed,
     maintainExcessArmor,
     convertExcessArmorIntoAttack,
+    multiplierIfCardIsPresentInDeck,
     avoidDeath,
     buffOnPopulationEffect
 };
@@ -31,6 +32,7 @@ inline const std::unordered_map<std::string_view, EffectName> effectNameMap{
         {"buffIfCardPlayed", EffectName::buffIfCardPlayed},
         {"maintainExcessArmor", EffectName::maintainExcessArmor},
         {"convertExcessArmorIntoAttack", EffectName::convertExcessArmorIntoAttack},
+        {"multiplierIfCardIsPresentInDeck", EffectName::multiplierIfCardIsPresentInDeck},
         {"avoidDeath", EffectName::avoidDeath},
         {"buffOnPopulation", EffectName::buffOnPopulationEffect},
         {"limitCardToPlay", EffectName::limitCardToPlay},

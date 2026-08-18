@@ -15,6 +15,7 @@ class Entity;
 class DeckCombat;
 class Enemy;
 class Player;
+class DeckPlayer;
 struct TurnData;
 struct DamageResult;
 
@@ -76,13 +77,15 @@ class CombatContext
     void gainActions(int amount);
 
     const DeckCombat& getDeckCombatView() const { return m_deckCombat; }
-    const DeckPlayer& getDeckPlayerView() const { return m_player.getDeckPlayer(); }
+    const DeckPlayer& getDeckPlayerView() const;
 
     // Card effects
 
     void changeArmorPolicy(Target target, Entity::EndOfTurnArmorPolicy armorPolicy);
     void avoidPlayerDeath();
     int getPlayerPopulation();
+    void addArmorMultiplier(double multiplier);
+    void addAttackMultiplier(double multiplier);
 
     // Enemy effects
 

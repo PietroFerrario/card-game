@@ -48,17 +48,18 @@ bool Player::addCardToDeck(std::string_view cardId, int population)
     return true;
 }
 
-void Player::multiplyAttack(int multiplier)
+void Player::multiplyAttack(double multiplier)
 {
     if (multiplier > 0)
     {
-        m_attack = m_attack * multiplier;
+        m_attack = static_cast<int>(m_attack * multiplier);
     }
 }
-void Player::multiplyArmor(int multiplier)
+
+void Player::multiplyArmor(double multiplier)
 {
     if (multiplier > 0)
     {
-        m_armor = m_armor * multiplier;
+        m_armor = static_cast<int>(m_armor * multiplier);
     }
 }

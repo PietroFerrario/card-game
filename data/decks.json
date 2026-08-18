@@ -48,6 +48,14 @@
         {
             "id": "Huntsman",
             "amount": 1
+        },
+        {
+            "id": "ChiefCook",
+            "amount": 1
+        },
+        {
+            "id": "Erbalist",
+            "amount": 1
         }
     ],
     "basicDeck2": [],

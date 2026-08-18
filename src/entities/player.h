@@ -67,8 +67,8 @@ class Player : public Entity
     void increasePopulation(int amount);
     void decreasePopulation(int amount);
 
-    void multiplyAttack(int multiplier);
-    void multiplyArmor(int multiplier);
+    void multiplyAttack(double multiplier);
+    void multiplyArmor(double multiplier);
 
   private:
     DeckPlayer m_deckPlayer;

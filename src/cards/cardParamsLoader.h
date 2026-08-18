@@ -18,21 +18,28 @@ inline CardParams loadCardParam(const nlohmann::json& jsonCardParam)
 
             // upgradeCardParams check and adding
             .upgradeCardParam =
-                {jsonCardParam.contains("upParams")
-                     ? std::optional<UpgradeCardParam>{upgradeCardParam::upgradeCardParamMap.at(
-                           jsonCardParam.at("upParams").get_ref<const std::string&>())}
-                     : std::optional<UpgradeCardParam>{}},
+                    {jsonCardParam.contains("upParams")
+                             ? std::optional<
+                                       UpgradeCardParam>{upgradeCardParam::upgradeCardParamMap.at(
+                                       jsonCardParam.at("upParams").get_ref<const std::string&>())}
+                             : std::optional<UpgradeCardParam>{}},
 
             // amount check and adding
             .amount = {jsonCardParam.contains("amount")
-                           ? std::optional<int>{jsonCardParam.at("amount").get<int>()}
-                           : std::optional<int>{}},
+                               ? std::optional<int>{jsonCardParam.at("amount").get<int>()}
+                               : std::optional<int>{}},
 
+            // amount check and adding
+            .multiplier =
+                    {jsonCardParam.contains("multiplier")
+                             ? std::optional<double>{jsonCardParam.at("multiplier").get<double>()}
+                             : std::optional<double>{}},
             // referenceId check and adding
-            .referenceId = {jsonCardParam.contains("referenceId")
-                                ? std::optional<std::string>{jsonCardParam.at("referenceId")
+            .referenceId = {
+                    jsonCardParam.contains("referenceId")
+                            ? std::optional<std::string>{jsonCardParam.at("referenceId")
                                                                  .get_ref<const std::string&>()}
-                                : std::optional<std::string>{}}};
+                            : std::optional<std::string>{}}};
 }
 } // namespace cardParamsLoader
 

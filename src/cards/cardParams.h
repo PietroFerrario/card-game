@@ -34,8 +34,8 @@ struct CardParams
     int drawing{0};
     std::optional<UpgradeCardParam> upgradeCardParam;
 
-    // Enemy-based
     std::optional<int> amount;
+    std::optional<double> multiplier;
     std::optional<std::string> referenceId;
 
     CardParams& operator+=(const CardParams& other)
@@ -51,10 +51,10 @@ struct CardParams
 namespace upgradeCardParam
 {
 inline const std::unordered_map<std::string_view, UpgradeCardParam> upgradeCardParamMap{
-    {"attack", UpgradeCardParam::Attack},
-    {"armor", UpgradeCardParam::Armor},
-    {"action", UpgradeCardParam::Action},
-    {"drawing", UpgradeCardParam::Drawing}};
+        {"attack", UpgradeCardParam::Attack},
+        {"armor", UpgradeCardParam::Armor},
+        {"action", UpgradeCardParam::Action},
+        {"drawing", UpgradeCardParam::Drawing}};
 
 inline CardParams convertUpgradeCardParam(int amount, UpgradeCardParam upgradeCardParam)
 {

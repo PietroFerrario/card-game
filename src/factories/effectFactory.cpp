@@ -13,6 +13,7 @@
 #include "effects/increaseDamageEnemyMove.h"
 #include "effects/limitCardToPlayEffect.h"
 #include "effects/maintainExcessArmorEffect.h"
+#include "effects/multiplierIfCardIsPresentInDeckEffect.h"
 #include "util/debug.h"
 #include <cassert>
 
@@ -26,6 +27,8 @@ EffectFactory::EffectFactory()
     m_effectMap[EffectName::buffIfCardPlayed] = makeBuffIfCardPlayedEffect;
     m_effectMap[EffectName::maintainExcessArmor] = makeMaintainExcessArmorEffect;
     m_effectMap[EffectName::convertExcessArmorIntoAttack] = makeConvertExcessArmorIntoAttackEffect;
+    m_effectMap[EffectName::multiplierIfCardIsPresentInDeck] =
+            makeMultiplierIfCardIsPresentInDeckEffect;
     m_effectMap[EffectName::avoidDeath] = makeAvoidDeathEffect;
     m_effectMap[EffectName::buffOnPopulationEffect] = makeBuffOnPopulationEffect;
 
@@ -90,6 +93,11 @@ std::unique_ptr<Effect> EffectFactory::makeConvertExcessArmorIntoAttackEffect(Ta
 std::unique_ptr<Effect> EffectFactory::makeMaintainExcessArmorEffect(Target target)
 {
     return std::make_unique<MaintainExcessArmorEffect>(target);
+}
+
+std::unique_ptr<Effect> EffectFactory::makeMultiplierIfCardIsPresentInDeckEffect(Target target)
+{
+    return std::make_unique<MultiplierIfCardIsPresentInDeckEffect>();
 }
 
 std::unique_ptr<Effect> EffectFactory::makeAvoidDeathEffect(Target target)

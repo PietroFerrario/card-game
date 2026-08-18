@@ -311,7 +311,7 @@
         {
             "id": "ChiefForager",
             "name": "The Chief Forager",
-            "descr": "A mushroom there, a erb there. X2 armour every 10 population",
+            "descr": "A mushroom here, a root there. X2 armour every 10 population",
             "population": 1,
             "tags": [
                 "unique"
@@ -352,6 +352,32 @@
                 },
                 {
                     "effect": "convertExcessArmorIntoAttack",
+                    "target": "self"
+                }
+            ]
+        },
+        {
+            "id": "Erbalist",
+            "name": "The Erbalist",
+            "descr": "Terrible smell but incredibly effective, the cook make it commestible. If ChiefCook presents in the deck x2 armor",
+            "population": 1,
+            "tags": [
+                "unique"
+            ],
+            "damage": 0,
+            "armor": 5,
+            "actions": 0,
+            "drawing": 0,
+            "multiplier": 2.0,
+            "referenceId": "ChiefCook",
+            "upParams": "armor",
+            "effectList": [
+                {
+                    "effect": "gainArmor",
+                    "target": "self"
+                },
+                {
+                    "effect": "multiplierIfCardIsPresentInDeck",
                     "target": "self"
                 }
             ]

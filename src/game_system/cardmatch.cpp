@@ -126,6 +126,7 @@ MatchData CardMatch::turnLoop()
         playerTurnSetup(turnData);
         enemyTurn(turnData);
         playerTurn(turnData);
+        multiplierPhase(turnData);
         damagePhase();
         if (updateMatchState(turnData))
         {
@@ -222,7 +223,15 @@ void CardMatch::enemyTurn(TurnData& currentTurnData)
     }
 }
 
-void CardMatch::multiplierPhase() { m_player. }
+void CardMatch::multiplierPhase(TurnData& currentTurnData)
+{
+    DEBUG_LOG("Entering multiplier phase");
+    m_player.multiplyArmor(currentTurnData.armorMultiplier);
+    m_player.multiplyArmor(currentTurnData.attackMultiplier);
+    DEBUG_LOG("Player after multiplying armor: " << m_player.getArmor()
+                                                 << " attack: " << m_player.getAttack());
+    m_matchView.showRecurringMatchStatus(m_matchData, currentTurnData, m_player, m_enemy);
+}
 
 void CardMatch::damagePhase()
 {

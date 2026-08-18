@@ -24,6 +24,8 @@ CombatContext::CombatContext(CombatSystem& combatSystem, Entity& actor, Entity& 
     m_effectMessage = nullptr;
 }
 
+const DeckPlayer& CombatContext::getDeckPlayerView() const { return m_player.getDeckPlayer(); }
+
 CombatContext::EffectMessageScope::EffectMessageScope(CombatContext& combatContext,
                                                       std::vector<std::string>& effectMessage)
     : m_combatContext{combatContext}
@@ -245,6 +247,16 @@ void CombatContext::increaseDamageEnemyMove(std::string_view enemyMoveName, int 
         m_effectMessage->emplace_back(
                 std::format("{} damage on next turn: +{}", foundMove->name, amount));
     }
+}
+
+void CombatContext::addArmorMultiplier(double multiplier)
+{
+    m_turnData.armorMultiplier = m_turnData.armorMultiplier - 1 + multiplier;
+}
+
+void CombatContext::addAttackMultiplier(double multiplier)
+{
+    m_turnData.attackMultiplier = m_turnData.attackMultiplier - 1 + multiplier;
 }
 
 // FOR THE FUTURE: Effect summaries are currently collected as strings for simplicity.
