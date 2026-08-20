@@ -18,6 +18,7 @@ class Player;
 class DeckPlayer;
 struct TurnData;
 struct DamageResult;
+struct CardParams;
 
 /**
  * @brief Execution context for resolving combat effects.
@@ -83,6 +84,7 @@ class CombatContext
 
     void changeArmorPolicy(Target target, Entity::EndOfTurnArmorPolicy armorPolicy);
     void avoidPlayerDeath();
+    void addPendingBuff(std::string_view cardId, CardParams cardParam);
     int getPlayerPopulation();
     void addArmorMultiplier(double multiplier);
     void addAttackMultiplier(double multiplier);

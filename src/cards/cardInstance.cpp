@@ -18,19 +18,19 @@ void CardInstance::increaseDrawing(int amount) { m_baseCardParams.drawing += amo
 
 void CardInstance::decreaseArmor(int amount)
 {
-    m_baseCardParams.armor = std::min(0, m_baseCardParams.armor - amount);
+    m_baseCardParams.armor = std::max(0, m_baseCardParams.armor - amount);
 }
 void CardInstance::decreaseDamage(int amount)
 {
-    m_baseCardParams.damage = std::min(0, m_baseCardParams.damage - amount);
+    m_baseCardParams.damage = std::max(0, m_baseCardParams.damage - amount);
 }
 void CardInstance::decreaseActions(int amount)
 {
-    m_baseCardParams.actions = std::min(0, m_baseCardParams.actions - amount);
+    m_baseCardParams.actions = std::max(0, m_baseCardParams.actions - amount);
 }
 void CardInstance::decreaseDrawing(int amount)
 {
-    m_baseCardParams.drawing = std::min(0, m_baseCardParams.drawing - amount);
+    m_baseCardParams.drawing = std::max(0, m_baseCardParams.drawing - amount);
 }
 
 void CardInstance::applyModifiers(const CardParams& cardParams)

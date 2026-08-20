@@ -69,7 +69,11 @@ class CardMatch
      *
      * @param handIndex Zero-based index of the card in the hand.
      */
-    void playCard(int handIndex, CombatContext& currentContext);
+    void playCard(int handIndex, CombatContext& currentContext,
+                  std::unordered_map<std::string, CardParams>& buffMap);
+
+    void pendingBuffsPhase(std::unordered_map<std::string, CardParams>& buffMap,
+                           std::unique_ptr<CardInstance>& card);
 
     /**
      * @brief Legacy helper that directly increases the player's armor.

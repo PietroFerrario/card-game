@@ -30,7 +30,23 @@ void CardMatch::drawMultipleCardsNoEffect(int amount)
     m_matchView.showDrawCards(drawData);
 }
 
-void CardMatch::playCard(int handIndex, CombatContext& currentContext)
+void CardMatch::pendingBuffsPhase(std::unordered_map<std::string, CardParams>& buffMap,
+                                  std::unique_ptr<CardInstance>& card)
+{
+    DEBUG_LOG("Entering pendingBuffsPhase");
+    if (const auto& buffFound{buffMap.find(std::string(card->getCardDefinition().getID()))};
+        buffFound != buffMap.end())
+    {
+        DEBUG_LOG("Found buff pending for card " << card->getCardDefinition().getID()
+                                                 << ". Applying modifiers.");
+        card->applyModifiers(buffFound->second);
+        DEBUG_LOG("Applied modifiers");
+        buffMap.erase(buffFound);
+    }
+}
+
+void CardMatch::playCard(int handIndex, CombatContext& currentContext,
+                         std::unordered_map<std::string, CardParams>& buffMap)
 {
 
     std::unique_ptr<CardInstance> cardBeingPlayed = m_deckCombat.takeFromHand(handIndex);
@@ -40,6 +56,8 @@ void CardMatch::playCard(int handIndex, CombatContext& currentContext)
     }
     DEBUG_LOG("Playing card: " << cardBeingPlayed->getCardDefinition().getID()
                                << " from hand index: " << handIndex);
+
+    pendingBuffsPhase(buffMap, cardBeingPlayed);
 
     std::vector<std::string> effectMessage;
 
@@ -180,7 +198,7 @@ void CardMatch::playerTurn(TurnData& currentTurnData)
 
         if (decision.playerChoice == PlayerChoice::PlayCard)
         {
-            playCard(decision.selectedCard.value(), currentContext);
+            playCard(decision.selectedCard.value(), currentContext, currentTurnData.pendingBuffs);
             DEBUG_LOG("Spending one action");
             // Add validation to the spending of action only the the card was actually played.
             spendAction(currentTurnData);

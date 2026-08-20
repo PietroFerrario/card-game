@@ -1,7 +1,11 @@
 #ifndef MATCHDATA_H
 #define MATCHDATA_H
 
+#include "cards/cardParams.h"
+
 #include <optional>
+#include <string>
+#include <unordered_map>
 
 enum class MatchState
 {
@@ -25,6 +29,7 @@ struct TurnData
     int cardsPlayed{0};
 
     // card based
+    std::unordered_map<std::string, CardParams> pendingBuffs{};
     bool maintainPlayerArmorFlag{false};
     bool avoidDeathFlag{false};
     double attackMultiplier{1.0};

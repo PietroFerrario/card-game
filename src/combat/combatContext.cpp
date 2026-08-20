@@ -1,6 +1,7 @@
 #include "combatContext.h"
 #include "cards/cardDefinition.h"
 #include "cards/cardInstance.h"
+#include "cards/cardParams.h"
 #include "combat/combatEvents.h"
 #include "combatSystem.h"
 #include "deck/deckCombat.h"
@@ -13,6 +14,8 @@
 #include "util/debug.h"
 
 #include <algorithm>
+#include <string>
+#include <string_view>
 #include <utility>
 
 CombatContext::CombatContext(CombatSystem& combatSystem, Entity& actor, Entity& opponent,
@@ -184,6 +187,11 @@ void CombatContext::limitCardToPlay(int amount)
 int CombatContext::getPlayerPopulation() { return m_player.getPopulation(); }
 
 void CombatContext::avoidPlayerDeath() { m_turnData.avoidDeathFlag = true; }
+
+void CombatContext::addPendingBuff(std::string_view cardId, CardParams cardParams)
+{
+    m_turnData.pendingBuffs.insert({std::string(cardId), cardParams});
+}
 
 void CombatContext::takeCardHostage()
 {
