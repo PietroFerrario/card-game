@@ -1,8 +1,9 @@
-#ifndef EVENTSEQUENCE_H
-#define EVENTSEQUENCE_H
+#ifndef EVENTGRAPH_H
+#define EVENTGRAPH_H
 
 #include "entities/enemies/enemyLoader.h"
 #include "entities/player.h"
+#include "eventNode.h"
 #include "factories/ICardFactory.h"
 #include "factories/enemyFactory.h"
 #include "game_events/gameEvent.h"
@@ -14,18 +15,22 @@
 #include <memory>
 #include <vector>
 
-class EventSequence
+class IProgressionView;
+
+class EventGraph
 {
   public:
-    EventSequence(GameConfig& gameConfig, IMatchView& matchView, IRewardView& rewardView,
-                  ICardFactory& cardFactory, Player& player);
+    EventGraph(GameConfig& gameConfig, IMatchView& matchView, IRewardView& rewardView,
+               IProgressionView& progressionView, ICardFactory& cardFactory, Player& player);
 
-    void resolveEventSequence();
+    void resolveEvent();
 
   private:
     void loadEvents();
     void makeMatchEvents(const std::vector<MatchEventData>& list);
     void makeEvents(const std::vector<EventData>& list);
+    EventNode makeNode(const std::vector<EventData>& list, const MatchEventData& matchData,
+                       std::vector<RewardOption>& eventRewardList);
 
     GameConfig& m_gameConfig;
 
@@ -39,7 +44,11 @@ class EventSequence
     RewardLoader m_rewardLoader;
     EnemyLoader m_enemyLoader;
     EnemyFactory m_enemyFactory;
-    std::vector<std::unique_ptr<GameEvent>> m_eventList;
+
+    std::vector<EventNode> m_eventNodeList;
+    int m_currentNode;
+
+    IProgressionView& m_progressionView;
 };
 
-#endif // EVENTSEQUENCE_H
+#endif // EVENTGRAPH_H

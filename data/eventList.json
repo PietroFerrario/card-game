@@ -2,9 +2,15 @@
     "$schema": "./schemas/eventList.schema.json",
     "eventList": [
         {
+            "id": "n0",
             "type": "match",
             "enemyId": "RaggedBandits",
-            "rewardListId": "banditFirst"
+            "rewardListId": "banditFirst",
+            "next": [
+                "n1",
+                "n2"
+            ],
+            "prevDescription": "blablabla"
         },
         {
             "type": "story",
