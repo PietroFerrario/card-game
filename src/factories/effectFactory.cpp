@@ -3,6 +3,7 @@
 #include "effects/addClogCardToDeckEffect.h"
 #include "effects/avoidDeathEffect.h"
 #include "effects/buffIfCardPlayedEffect.h"
+#include "effects/buffNextSpecifiedCardPlayedInTurnEffect.h"
 #include "effects/buffOnPopulationEffect.h"
 #include "effects/convertExcessArmorIntoAttackEffect.h"
 #include "effects/drawCardsEffect.h"
@@ -25,6 +26,8 @@ EffectFactory::EffectFactory()
     m_effectMap[EffectName::drawCards] = makeDrawCardsEffect;
     m_effectMap[EffectName::gainActions] = makeGainActionsEffect;
     m_effectMap[EffectName::buffIfCardPlayed] = makeBuffIfCardPlayedEffect;
+    m_effectMap[EffectName::buffNextSpecifiedCardPlayedInTurn] =
+            makeBuffNextSpecifiedCardPlayedInTurnEffect;
     m_effectMap[EffectName::maintainExcessArmor] = makeMaintainExcessArmorEffect;
     m_effectMap[EffectName::convertExcessArmorIntoAttack] = makeConvertExcessArmorIntoAttackEffect;
     m_effectMap[EffectName::multiplierIfCardIsPresentInDeck] =
@@ -83,6 +86,11 @@ std::unique_ptr<Effect> EffectFactory::makeDrawCardsEffect(Target target)
 std::unique_ptr<Effect> EffectFactory::makeBuffIfCardPlayedEffect(Target target)
 {
     return std::make_unique<BuffIfCardPlayedEffect>(target);
+}
+
+std::unique_ptr<Effect> EffectFactory::makeBuffNextSpecifiedCardPlayedInTurnEffect(Target target)
+{
+    return std::make_unique<BuffNextSpecifiedCardPlayedInTurnEffect>();
 }
 
 std::unique_ptr<Effect> EffectFactory::makeConvertExcessArmorIntoAttackEffect(Target target)

@@ -26,6 +26,7 @@ target_sources(cardgame_core PRIVATE
     src/effects/maintainExcessArmorEffect.cpp
     src/effects/convertExcessArmorIntoAttackEffect.cpp
     src/effects/multiplierIfCardIsPresentInDeckEffect.cpp
+    src/effects/buffNextSpecifiedCardPlayedInTurnEffect.cpp
 
     src/effects/limitCardToPlayEffect.cpp
     src/effects/hostageCardEffect.cpp

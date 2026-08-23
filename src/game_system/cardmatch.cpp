@@ -39,10 +39,22 @@ void CardMatch::pendingBuffsPhase(std::unordered_map<std::string, CardParams>& b
     {
         DEBUG_LOG("Found buff pending for card " << card->getCardDefinition().getID()
                                                  << ". Applying modifiers.");
-        card->applyModifiers(buffFound->second);
-        DEBUG_LOG("Applied modifiers");
+        const CardParams& buff{buffFound->second};
+
+        DEBUG_LOG("Applying multiplier modifiers");
+        if (buff.multiplier.has_value() || buff.amount.has_value())
+        {
+            card->applyTemporaryBuff(buff);
+            DEBUG_LOG("Applied modifiers");
+        }
+
         buffMap.erase(buffFound);
     }
+}
+
+void CardMatch::resetTemporaryBuffsPhase(std::unique_ptr<CardInstance>& card)
+{
+    card->resetTemporaryModifiers();
 }
 
 void CardMatch::playCard(int handIndex, CombatContext& currentContext,
@@ -68,7 +80,7 @@ void CardMatch::playCard(int handIndex, CombatContext& currentContext,
     // implementation.
     for (const auto& effectPtr : cardBeingPlayed->getCardDefinition().getEffectList())
     {
-        effectPtr->resolve(currentContext, cardBeingPlayed->getCardParams());
+        effectPtr->resolve(currentContext, cardBeingPlayed->getTotalCardParams());
     }
     DEBUG_LOG("Applied all the effect from card " << cardBeingPlayed->getCardDefinition().getID()
                                                   << ".");
@@ -85,6 +97,7 @@ void CardMatch::playCard(int handIndex, CombatContext& currentContext,
         m_matchView.showDrawCards(drawData.value());
     }
 
+    resetTemporaryBuffsPhase(cardBeingPlayed);
     m_deckCombat.discard(std::move(cardBeingPlayed));
 }
 

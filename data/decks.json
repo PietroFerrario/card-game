@@ -56,8 +56,25 @@
         {
             "id": "Erbalist",
             "amount": 1
+        },
+        {
+            "id": "Kenneler",
+            "amount": 1
+        },
+        {
+            "id": "HuntingDogs",
+            "amount": 1
         }
     ],
-    "basicDeck2": [],
+    "basicDeck2": [
+        {
+            "id": "Kenneler",
+            "amount": 3
+        },
+        {
+            "id": "HuntingDogs",
+            "amount": 6
+        }
+    ],
     "basicDeck3": []
 }

@@ -14,10 +14,10 @@ void MultiplierIfCardIsPresentInDeckEffect::resolve(CombatContext& combatContext
         {
         case UpgradeCardParam::Attack:
             combatContext.addAttackMultiplier(values.multiplier.value());
-            break;
+
         case UpgradeCardParam::Armor:
             combatContext.addArmorMultiplier(values.multiplier.value());
-            break;
+
         default:
             DEBUG_LOG("End of MultiplierIfCardIsPresentInDeckEffect, nothing happens");
         }

@@ -34,6 +34,7 @@ class EffectFactory
     static std::unique_ptr<Effect> makeMultiplierIfCardIsPresentInDeckEffect(Target target);
     static std::unique_ptr<Effect> makeAvoidDeathEffect(Target target);
     static std::unique_ptr<Effect> makeBuffOnPopulationEffect(Target target);
+    static std::unique_ptr<Effect> makeBuffNextSpecifiedCardPlayedInTurnEffect(Target target);
 
     // Enemies effects
     static std::unique_ptr<Effect> makeLimitCardToPlayEffect(Target target);

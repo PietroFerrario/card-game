@@ -46,6 +46,13 @@ struct CardParams
         drawing += other.drawing;
         return *this;
     }
+
+    CardParams operator+(const CardParams& other) const
+    {
+        CardParams result{*this};
+        result += other;
+        return result;
+    }
 };
 
 namespace upgradeCardParam

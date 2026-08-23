@@ -381,6 +381,51 @@
                     "target": "self"
                 }
             ]
+        },
+        {
+            "id": "Kenneler",
+            "name": "The Kenneler",
+            "descr": "Weird and lonely, better with beasts than with other people. Next hounting dogs played in the turn x2 attack.",
+            "population": 1,
+            "tags": [
+                "unique"
+            ],
+            "damage": 5,
+            "armor": 0,
+            "actions": 0,
+            "drawing": 0,
+            "multiplier": 2.0,
+            "referenceId": "HuntingDogs",
+            "upParams": "attack",
+            "effectList": [
+                {
+                    "effect": "gainAttack",
+                    "target": "self"
+                },
+                {
+                    "effect": "buffNextSpecifiedCardPlayedInTurn",
+                    "target": "self"
+                }
+            ]
+        },
+        {
+            "id": "HuntingDogs",
+            "name": "Hunting Dogs",
+            "descr": "Woof Woof",
+            "population": 1,
+            "tags": [
+                "beast"
+            ],
+            "damage": 2,
+            "armor": 0,
+            "actions": 0,
+            "drawing": 0,
+            "effectList": [
+                {
+                    "effect": "gainAttack",
+                    "target": "self"
+                }
+            ]
         }
     ]
 }

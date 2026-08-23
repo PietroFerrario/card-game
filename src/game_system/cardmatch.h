@@ -75,6 +75,8 @@ class CardMatch
     void pendingBuffsPhase(std::unordered_map<std::string, CardParams>& buffMap,
                            std::unique_ptr<CardInstance>& card);
 
+    void resetTemporaryBuffsPhase(std::unique_ptr<CardInstance>& card);
+
     /**
      * @brief Legacy helper that directly increases the player's armor.
      *

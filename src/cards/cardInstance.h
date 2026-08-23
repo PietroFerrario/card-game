@@ -44,7 +44,22 @@ class CardInstance
     void decreaseActions(int amount);
     void decreaseDrawing(int amount);
 
+    void increaseTemporaryArmor(int amount);
+    void increaseTemporaryDamage(int amount);
+    void increaseTemporaryActions(int amount);
+    void increaseTemporaryDrawing(int amount);
+
+    void multiplyArmor(int multiplier);
+    void multiplyDamage(int multiplier);
+    void multiplyActions(int multiplier);
+    void multiplyDrawing(int multiplier);
+
     void applyModifiers(const CardParams& cardParams);
+    void applyMultiplier(const CardParams& cardParams);
+    void applyTemporaryModifiers(const CardParams& cardParams);
+
+    void resetTemporaryModifiers();
+    void applyTemporaryBuff(const CardParams& cardParams);
 
     /**
      * @brief Returns the immutable definition this instance was created from.
@@ -53,7 +68,7 @@ class CardInstance
      */
     const CardDefinition& getCardDefinition() const;
 
-    const CardParams& getCardParams() const;
+    CardParams getTotalCardParams() const;
 
   private:
     const CardDefinition* m_definition; ///< Non-owning pointer to shared static definition.

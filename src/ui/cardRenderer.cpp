@@ -28,7 +28,7 @@ std::vector<std::string> CardRenderer::renderCard(const CardInstance& cardToRend
               fitText(m_armorValueSlot, std::to_string(cardToRender.getArmor())));
 
     writeSlot(grid, m_effectsSumSlot,
-              fitText(m_effectsSumSlot, drawEffects(cardToRender.getCardParams())));
+              fitText(m_effectsSumSlot, drawEffects(cardToRender.getTotalCardParams())));
 
     const auto descr{wrapText(cardToRender.getCardDefinition().getDescription(),
                               m_descriptionSlot.front().maxWidth)};
