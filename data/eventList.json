@@ -3,28 +3,47 @@
     "eventList": [
         {
             "id": "n0",
+            "next": [
+                "n1"
+            ],
+            "layer": 0,
+            "column": 0,
+            "prevDescription": "blablabla",
             "type": "match",
             "enemyId": "RaggedBandits",
-            "rewardListId": "banditFirst",
-            "next": [
-                "n1",
-                "n2"
-            ],
-            "prevDescription": "blablabla"
+            "rewardListId": "banditFirst"
         },
         {
+            "id": "n1",
+            "next": [
+                "n2",
+                "n3"
+            ],
+            "layer": 1,
+            "column": 0,
+            "prevDescription": "You passes many faces on the road, many faces pass you.",
             "type": "story",
             "storyId": "runawayFarmers",
             "storyTitle": "Runaway Farmers",
-            "storyDescription": "From the side of the street a farmer approach the head of the caravan. He explains that he and his family are on the run from the war, while pointing back to three emaciated people, a woman and two kids. He's asking to join you.",
+            "storyDescription": "From the side of the road a farmer approach the head of the caravan. He explains that he and his family are on the run from the war, while pointing back to three emaciated people, a woman and two kids. He's asking to join you.",
             "rewardListId": "runawayFarmers"
         },
         {
+            "id": "n2",
+            "next": [],
+            "layer": 2,
+            "column": 0,
+            "prevDescription": "The road leads closer to the city. Encounter ",
             "type": "match",
             "enemyId": "NormanPatrol",
             "rewardListId": "NormanPatrol1"
         },
         {
+            "id": "n3",
+            "next": [],
+            "layer": 2,
+            "column": 1,
+            "prevDescription": "The road leads into a darker section of the forest. Encounter",
             "type": "match",
             "enemyId": "WihtBoar",
             "rewardListId": "banditFirst"

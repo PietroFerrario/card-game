@@ -3,19 +3,19 @@
 
 #include "entities/enemies/enemyLoader.h"
 #include "entities/player.h"
-#include "eventNode.h"
 #include "factories/ICardFactory.h"
 #include "factories/enemyFactory.h"
+#include "game_events/eventNode.h"
+#include "game_events/eventNodeLoader.h"
 #include "game_events/gameEvent.h"
-#include "game_events/matchEventLoader.h"
 #include "game_events/rewards/rewardLoader.h"
 #include "game_system/gameConfig.h"
 #include "ui/IMatchView.h"
+#include "ui/IProgressionView.h"
 #include "ui/IRewardView.h"
 #include <memory>
+#include <unordered_map>
 #include <vector>
-
-class IProgressionView;
 
 class EventGraph
 {
@@ -23,32 +23,30 @@ class EventGraph
     EventGraph(GameConfig& gameConfig, IMatchView& matchView, IRewardView& rewardView,
                IProgressionView& progressionView, ICardFactory& cardFactory, Player& player);
 
-    void resolveEvent();
+    void resolveEvents();
 
   private:
-    void loadEvents();
-    void makeMatchEvents(const std::vector<MatchEventData>& list);
-    void makeEvents(const std::vector<EventData>& list);
-    EventNode makeNode(const std::vector<EventData>& list, const MatchEventData& matchData,
-                       std::vector<RewardOption>& eventRewardList);
+    void loadEventNodes();
+    void makeNodes(const std::vector<EventNodeData>& list);
+    std::unique_ptr<GameEvent> makeEvent(const EventData& eventData);
 
     GameConfig& m_gameConfig;
 
     IMatchView& m_matchView;
     IRewardView& m_rewardView;
+    IProgressionView& m_progressionView;
 
     Player& m_player;
 
     ICardFactory& m_cardFactory;
-    MatchEventLoader m_matchEventLoader;
+    EventNodeLoader m_eventNodeLoader;
     RewardLoader m_rewardLoader;
     EnemyLoader m_enemyLoader;
     EnemyFactory m_enemyFactory;
 
     std::vector<EventNode> m_eventNodeList;
-    int m_currentNode;
-
-    IProgressionView& m_progressionView;
+    std::unordered_map<std::string, int> m_idToIndexMap;
+    int m_currentNode{0};
 };
 
 #endif // EVENTGRAPH_H

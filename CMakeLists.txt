@@ -54,9 +54,10 @@ target_sources(cardgame_core PRIVATE
     src/combat/combatSystem.cpp
 
     src/game_events/matchEvent.cpp
-    src/game_events/matchEventLoader.cpp
-
     src/game_events/storyEvent.cpp
+    src/game_events/matchEventLoader.cpp
+    src/game_events/eventNodeLoader.cpp
+
 
 
     src/game_events/rewards/rewardLoader.cpp
@@ -67,9 +68,11 @@ target_sources(cardgame_core PRIVATE
     src/game_events/rewards/reward_effects/upgradeCardRewardEffect.cpp
 
     src/game_system/eventSequence.cpp
+    src/game_system/eventGraph.cpp
     src/game_system/cardMatch.cpp
     src/game_system/game.cpp
     src/game_system/configLoader.cpp
+
 
     src/ui/iotext.cpp
     src/ui/text.cpp
@@ -79,6 +82,9 @@ target_sources(cardgame_core PRIVATE
     src/ui/terminalRewardView.cpp
     src/ui/rewardOptionRenderer.cpp
     src/ui/rewardsRenderer.cpp
+    src/ui/nodeRenderer.cpp
+    src/ui/progressionRenderer.cpp
+    src/ui/terminalProgressionView.cpp
     src/ui/textWrap.cpp
     
 )
@@ -120,3 +126,6 @@ target_link_libraries(sandbox_turn_loop PRIVATE cardgame_core)
 
 add_executable(sandbox_event_sequence sandbox/eventSequenceTest.cpp)
 target_link_libraries(sandbox_event_sequence PRIVATE cardgame_core)
+
+add_executable(sandbox_event_graph sandbox/eventGraphTest.cpp)
+target_link_libraries(sandbox_event_graph PRIVATE cardgame_core)

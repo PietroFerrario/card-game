@@ -375,3 +375,242 @@
 [LOG] rewardPhase.cpp:50 Showing the rewards options
 [LOG] cardFactory.cpp:82 Card instance being created: InexGuard
 [LOG] cardFactory.cpp:85 CardInstance of InexGuard has been created.
+[LOG] cardFactory.cpp:49 CardDefinition for ShieldWarrior has been inserted in the map.
+[LOG] cardFactory.cpp:49 CardDefinition for Farmer has been inserted in the map.
+[LOG] cardFactory.cpp:49 CardDefinition for InexGuard has been inserted in the map.
+[LOG] cardFactory.cpp:49 CardDefinition for InexArcher has been inserted in the map.
+[LOG] cardFactory.cpp:49 CardDefinition for Provisions has been inserted in the map.
+[LOG] cardFactory.cpp:49 CardDefinition for Horses has been inserted in the map.
+[LOG] cardFactory.cpp:49 CardDefinition for Quartermaster has been inserted in the map.
+[LOG] cardFactory.cpp:49 CardDefinition for Constable has been inserted in the map.
+[LOG] cardFactory.cpp:49 CardDefinition for FamishedFarmer has been inserted in the map.
+[LOG] cardFactory.cpp:49 CardDefinition for BrokenGlass has been inserted in the map.
+[LOG] cardFactory.cpp:49 CardDefinition for Physician has been inserted in the map.
+[LOG] cardFactory.cpp:49 CardDefinition for Armorer has been inserted in the map.
+[LOG] cardFactory.cpp:49 CardDefinition for Huntsman has been inserted in the map.
+[LOG] cardFactory.cpp:49 CardDefinition for ChiefForager has been inserted in the map.
+[LOG] cardFactory.cpp:49 CardDefinition for ChiefCook has been inserted in the map.
+[LOG] cardFactory.cpp:49 CardDefinition for Erbalist has been inserted in the map.
+[LOG] cardFactory.cpp:49 CardDefinition for Kenneler has been inserted in the map.
+[LOG] cardFactory.cpp:49 CardDefinition for HuntingDogs has been inserted in the map.
+[LOG] cardFactory.cpp:49 CardDefinition for ShieldWarrior has been inserted in the map.
+[LOG] cardFactory.cpp:49 CardDefinition for Farmer has been inserted in the map.
+[LOG] cardFactory.cpp:49 CardDefinition for InexGuard has been inserted in the map.
+[LOG] cardFactory.cpp:49 CardDefinition for InexArcher has been inserted in the map.
+[LOG] cardFactory.cpp:49 CardDefinition for Provisions has been inserted in the map.
+[LOG] cardFactory.cpp:49 CardDefinition for Horses has been inserted in the map.
+[LOG] cardFactory.cpp:49 CardDefinition for Quartermaster has been inserted in the map.
+[LOG] cardFactory.cpp:49 CardDefinition for Constable has been inserted in the map.
+[LOG] cardFactory.cpp:49 CardDefinition for FamishedFarmer has been inserted in the map.
+[LOG] cardFactory.cpp:49 CardDefinition for BrokenGlass has been inserted in the map.
+[LOG] cardFactory.cpp:49 CardDefinition for Physician has been inserted in the map.
+[LOG] cardFactory.cpp:49 CardDefinition for Armorer has been inserted in the map.
+[LOG] cardFactory.cpp:49 CardDefinition for Huntsman has been inserted in the map.
+[LOG] cardFactory.cpp:49 CardDefinition for ChiefForager has been inserted in the map.
+[LOG] cardFactory.cpp:49 CardDefinition for ChiefCook has been inserted in the map.
+[LOG] cardFactory.cpp:49 CardDefinition for Erbalist has been inserted in the map.
+[LOG] cardFactory.cpp:49 CardDefinition for Kenneler has been inserted in the map.
+[LOG] cardFactory.cpp:49 CardDefinition for HuntingDogs has been inserted in the map.
+[LOG] cardFactory.cpp:49 CardDefinition for ShieldWarrior has been inserted in the map.
+[LOG] cardFactory.cpp:49 CardDefinition for Farmer has been inserted in the map.
+[LOG] cardFactory.cpp:49 CardDefinition for InexGuard has been inserted in the map.
+[LOG] cardFactory.cpp:49 CardDefinition for InexArcher has been inserted in the map.
+[LOG] cardFactory.cpp:49 CardDefinition for Provisions has been inserted in the map.
+[LOG] cardFactory.cpp:49 CardDefinition for Horses has been inserted in the map.
+[LOG] cardFactory.cpp:49 CardDefinition for Quartermaster has been inserted in the map.
+[LOG] cardFactory.cpp:49 CardDefinition for Constable has been inserted in the map.
+[LOG] cardFactory.cpp:49 CardDefinition for FamishedFarmer has been inserted in the map.
+[LOG] cardFactory.cpp:49 CardDefinition for BrokenGlass has been inserted in the map.
+[LOG] cardFactory.cpp:49 CardDefinition for Physician has been inserted in the map.
+[LOG] cardFactory.cpp:49 CardDefinition for Armorer has been inserted in the map.
+[LOG] cardFactory.cpp:49 CardDefinition for Huntsman has been inserted in the map.
+[LOG] cardFactory.cpp:49 CardDefinition for ChiefForager has been inserted in the map.
+[LOG] cardFactory.cpp:49 CardDefinition for ChiefCook has been inserted in the map.
+[LOG] cardFactory.cpp:49 CardDefinition for Erbalist has been inserted in the map.
+[LOG] cardFactory.cpp:49 CardDefinition for Kenneler has been inserted in the map.
+[LOG] cardFactory.cpp:49 CardDefinition for HuntingDogs has been inserted in the map.
+[LOG] cardFactory.cpp:49 CardDefinition for ShieldWarrior has been inserted in the map.
+[LOG] cardFactory.cpp:49 CardDefinition for Farmer has been inserted in the map.
+[LOG] cardFactory.cpp:49 CardDefinition for InexGuard has been inserted in the map.
+[LOG] cardFactory.cpp:49 CardDefinition for InexArcher has been inserted in the map.
+[LOG] cardFactory.cpp:49 CardDefinition for Provisions has been inserted in the map.
+[LOG] cardFactory.cpp:49 CardDefinition for Horses has been inserted in the map.
+[LOG] cardFactory.cpp:49 CardDefinition for Quartermaster has been inserted in the map.
+[LOG] cardFactory.cpp:49 CardDefinition for Constable has been inserted in the map.
+[LOG] cardFactory.cpp:49 CardDefinition for FamishedFarmer has been inserted in the map.
+[LOG] cardFactory.cpp:49 CardDefinition for BrokenGlass has been inserted in the map.
+[LOG] cardFactory.cpp:49 CardDefinition for Physician has been inserted in the map.
+[LOG] cardFactory.cpp:49 CardDefinition for Armorer has been inserted in the map.
+[LOG] cardFactory.cpp:49 CardDefinition for Huntsman has been inserted in the map.
+[LOG] cardFactory.cpp:49 CardDefinition for ChiefForager has been inserted in the map.
+[LOG] cardFactory.cpp:49 CardDefinition for ChiefCook has been inserted in the map.
+[LOG] cardFactory.cpp:49 CardDefinition for Erbalist has been inserted in the map.
+[LOG] cardFactory.cpp:49 CardDefinition for Kenneler has been inserted in the map.
+[LOG] cardFactory.cpp:49 CardDefinition for HuntingDogs has been inserted in the map.
+[LOG] cardFactory.cpp:45 CardDefinition for ShieldWarrior is already present in the map.
+[LOG] cardFactory.cpp:45 CardDefinition for Farmer is already present in the map.
+[LOG] cardFactory.cpp:45 CardDefinition for InexGuard is already present in the map.
+[LOG] cardFactory.cpp:45 CardDefinition for InexArcher is already present in the map.
+[LOG] cardFactory.cpp:45 CardDefinition for Provisions is already present in the map.
+[LOG] cardFactory.cpp:45 CardDefinition for Horses is already present in the map.
+[LOG] cardFactory.cpp:45 CardDefinition for Quartermaster is already present in the map.
+[LOG] cardFactory.cpp:45 CardDefinition for Constable is already present in the map.
+[LOG] cardFactory.cpp:45 CardDefinition for FamishedFarmer is already present in the map.
+[LOG] cardFactory.cpp:45 CardDefinition for BrokenGlass is already present in the map.
+[LOG] cardFactory.cpp:45 CardDefinition for Physician is already present in the map.
+[LOG] cardFactory.cpp:45 CardDefinition for Armorer is already present in the map.
+[LOG] cardFactory.cpp:45 CardDefinition for Huntsman is already present in the map.
+[LOG] cardFactory.cpp:45 CardDefinition for ChiefForager is already present in the map.
+[LOG] cardFactory.cpp:45 CardDefinition for ChiefCook is already present in the map.
+[LOG] cardFactory.cpp:45 CardDefinition for Erbalist is already present in the map.
+[LOG] cardFactory.cpp:45 CardDefinition for Kenneler is already present in the map.
+[LOG] cardFactory.cpp:45 CardDefinition for HuntingDogs is already present in the map.
+[LOG] rewardLoader.cpp:26 Checking rewardListId: [banditFirst] vs [banditFirst]
+[LOG] rewardLoader.cpp:26 Checking rewardListId: [banditFirst] vs [runawayFarmers]
+[LOG] rewardLoader.cpp:26 Checking rewardListId: [runawayFarmers] vs [runawayFarmers]
+[LOG] rewardLoader.cpp:26 Checking rewardListId: [banditFirst] vs [NormanPatrol1]
+[LOG] rewardLoader.cpp:26 Checking rewardListId: [runawayFarmers] vs [NormanPatrol1]
+[LOG] rewardLoader.cpp:26 Checking rewardListId: [NormanPatrol1] vs [NormanPatrol1]
+[LOG] rewardLoader.cpp:26 Checking rewardListId: [banditFirst] vs [banditFirst]
+[LOG] eventGraph.cpp:101 Resolving node n0
+[LOG] cardFactory.cpp:82 Card instance being created: ShieldWarrior
+[LOG] cardFactory.cpp:85 CardInstance of ShieldWarrior has been created.
+[LOG] cardFactory.cpp:82 Card instance being created: Provisions
+[LOG] cardFactory.cpp:85 CardInstance of Provisions has been created.
+[LOG] cardFactory.cpp:82 Card instance being created: Horses
+[LOG] cardFactory.cpp:85 CardInstance of Horses has been created.
+[LOG] cardFactory.cpp:82 Card instance being created: Quartermaster
+[LOG] cardFactory.cpp:85 CardInstance of Quartermaster has been created.
+[LOG] cardFactory.cpp:82 Card instance being created: Constable
+[LOG] cardFactory.cpp:85 CardInstance of Constable has been created.
+[LOG] cardFactory.cpp:82 Card instance being created: Armorer
+[LOG] cardFactory.cpp:85 CardInstance of Armorer has been created.
+[LOG] cardFactory.cpp:82 Card instance being created: Physician
+[LOG] cardFactory.cpp:85 CardInstance of Physician has been created.
+[LOG] cardFactory.cpp:82 Card instance being created: ChiefForager
+[LOG] cardFactory.cpp:85 CardInstance of ChiefForager has been created.
+[LOG] cardFactory.cpp:82 Card instance being created: Huntsman
+[LOG] cardFactory.cpp:85 CardInstance of Huntsman has been created.
+[LOG] cardFactory.cpp:82 Card instance being created: ChiefCook
+[LOG] cardFactory.cpp:85 CardInstance of ChiefCook has been created.
+[LOG] cardFactory.cpp:82 Card instance being created: Erbalist
+[LOG] cardFactory.cpp:85 CardInstance of Erbalist has been created.
+[LOG] cardFactory.cpp:82 Card instance being created: Kenneler
+[LOG] cardFactory.cpp:85 CardInstance of Kenneler has been created.
+[LOG] cardFactory.cpp:82 Card instance being created: HuntingDogs
+[LOG] cardFactory.cpp:85 CardInstance of HuntingDogs has been created.
+[LOG] cardMatch.cpp:152 Starting turn loop
+[LOG] cardMatch.cpp:155 Match state: Running. Turn continues
+[LOG] deckCombat.cpp:31 Requesting to draw 4 cards from the deck: ...
+[LOG] deckCombat.cpp:72 Drawn Physician from the deck, placed in the handPile.
+[LOG] deckCombat.cpp:72 Drawn ChiefCook from the deck, placed in the handPile.
+[LOG] deckCombat.cpp:72 Drawn Armorer from the deck, placed in the handPile.
+[LOG] deckCombat.cpp:72 Drawn Provisions from the deck, placed in the handPile.
+[LOG] cardMatch.cpp:29 Drawing cards completed.
+[LOG] cardMatch.cpp:233 Starting enemy action
+[LOG] limitCardToPlayEffect.cpp:11 Applied effect LimitCardToPlay
+[LOG] combatSystem.cpp:14 Increasing Attack of Ragged Bandits: +3
+[LOG] gainAttackEffect.cpp:9 Applied effect GainAttack
+[LOG] cardMatch.cpp:247 Applied all the effect from Ambush!!!
+[LOG] cardMatch.cpp:196 Starting player turn: Drawing4 cards
+[LOG] cardMatch.cpp:176 Checking is the player can act in this turn
+[LOG] cardMatch.cpp:203 Player can act: Starting valid action loop
+[LOG] cardMatch.cpp:208 Asking the player how to act: Play a card or Pass
+[LOG] deckCombat.cpp:89 Took a card from hand
+[LOG] cardMatch.cpp:69 Playing card: Physician from hand index: 0
+[LOG] cardMatch.cpp:36 Entering pendingBuffsPhase
+[LOG] combatSystem.cpp:8 Increasing Armor of Malliano: +5
+[LOG] gainArmorEffect.cpp:9 Applied effect GainArmor
+[LOG] avoidDeathEffect.cpp:8 Applied effect AvoidDeath
+[LOG] cardMatch.cpp:85 Applied all the effect from card Physician.
+[LOG] deckCombat.cpp:106 Moved the used card to the played card pile
+[LOG] cardMatch.cpp:215 Spending one action
+[LOG] cardMatch.cpp:227 Ending action loop
+[LOG] cardMatch.cpp:176 Checking is the player can act in this turn
+[LOG] cardMatch.cpp:203 Player can act: Starting valid action loop
+[LOG] cardMatch.cpp:208 Asking the player how to act: Play a card or Pass
+[LOG] deckCombat.cpp:89 Took a card from hand
+[LOG] cardMatch.cpp:69 Playing card: ChiefCook from hand index: 0
+[LOG] cardMatch.cpp:36 Entering pendingBuffsPhase
+[LOG] combatSystem.cpp:8 Increasing Armor of Malliano: +5
+[LOG] gainArmorEffect.cpp:9 Applied effect GainArmor
+[LOG] combatSystem.cpp:33 Changing Armor Policy of Malliano
+[LOG] convertExcessArmorIntoAttackEffect.cpp:10 Applied effect ConvertExcessArmorIntoAttack
+[LOG] cardMatch.cpp:85 Applied all the effect from card ChiefCook.
+[LOG] deckCombat.cpp:106 Moved the used card to the played card pile
+[LOG] cardMatch.cpp:215 Spending one action
+[LOG] cardMatch.cpp:227 Ending action loop
+[LOG] cardMatch.cpp:176 Checking is the player can act in this turn
+[LOG] cardMatch.cpp:259 Entering multiplier phase
+[LOG] cardMatch.cpp:262 Player after multiplying armor: 10 attack: 0
+[LOG] combatSystem.cpp:40 Starting dealDamage combat system
+[LOG] combatSystem.cpp:40 Starting dealDamage combat system
+[LOG] combatSystem.cpp:25 Resetting Armor and Attack of Malliano
+[LOG] combatSystem.cpp:25 Resetting Armor and Attack of Ragged Bandits
+[LOG] deckCombat.cpp:149 Exhausting the whole turnPlayedPile into discardPile (End of the Turn)
+[LOG] deckCombat.cpp:138 Discarding the whole hand
+[LOG] cardMatch.cpp:155 Match state: Running. Turn continues
+[LOG] deckCombat.cpp:31 Requesting to draw 4 cards from the deck: ...
+[LOG] deckCombat.cpp:72 Drawn Huntsman from the deck, placed in the handPile.
+[LOG] deckCombat.cpp:72 Drawn ShieldWarrior from the deck, placed in the handPile.
+[LOG] deckCombat.cpp:72 Drawn ChiefForager from the deck, placed in the handPile.
+[LOG] deckCombat.cpp:72 Drawn Horses from the deck, placed in the handPile.
+[LOG] cardMatch.cpp:29 Drawing cards completed.
+[LOG] cardMatch.cpp:233 Starting enemy action
+[LOG] deckCombat.cpp:89 Took a card from hand
+[LOG] hostageCardEffect.cpp:9 Applied effect GainAction
+[LOG] cardMatch.cpp:247 Applied all the effect from Hostage
+[LOG] cardMatch.cpp:196 Starting player turn: Drawing4 cards
+[LOG] cardMatch.cpp:176 Checking is the player can act in this turn
+[LOG] cardMatch.cpp:203 Player can act: Starting valid action loop
+[LOG] cardMatch.cpp:208 Asking the player how to act: Play a card or Pass
+[LOG] deckCombat.cpp:89 Took a card from hand
+[LOG] cardMatch.cpp:69 Playing card: ShieldWarrior from hand index: 0
+[LOG] cardMatch.cpp:36 Entering pendingBuffsPhase
+[LOG] combatSystem.cpp:14 Increasing Attack of Malliano: +1
+[LOG] gainAttackEffect.cpp:9 Applied effect GainAttack
+[LOG] combatSystem.cpp:8 Increasing Armor of Malliano: +2
+[LOG] gainArmorEffect.cpp:9 Applied effect GainArmor
+[LOG] buffIfCardPlayedEffect.cpp:46 Applied effect BuffIfCardPlayed
+[LOG] cardMatch.cpp:85 Applied all the effect from card ShieldWarrior.
+[LOG] deckCombat.cpp:106 Moved the used card to the played card pile
+[LOG] cardMatch.cpp:215 Spending one action
+[LOG] cardMatch.cpp:227 Ending action loop
+[LOG] cardMatch.cpp:176 Checking is the player can act in this turn
+[LOG] cardMatch.cpp:203 Player can act: Starting valid action loop
+[LOG] cardMatch.cpp:208 Asking the player how to act: Play a card or Pass
+[LOG] deckCombat.cpp:89 Took a card from hand
+[LOG] cardMatch.cpp:69 Playing card: ChiefForager from hand index: 0
+[LOG] cardMatch.cpp:36 Entering pendingBuffsPhase
+[LOG] combatSystem.cpp:8 Increasing Armor of Malliano: +3
+[LOG] gainArmorEffect.cpp:9 Applied effect GainArmor
+[LOG] buffOnPopulationEffect.cpp:32 Applied effect BuffOnPopulation
+[LOG] cardMatch.cpp:85 Applied all the effect from card ChiefForager.
+[LOG] deckCombat.cpp:106 Moved the used card to the played card pile
+[LOG] cardMatch.cpp:215 Spending one action
+[LOG] cardMatch.cpp:227 Ending action loop
+[LOG] cardMatch.cpp:176 Checking is the player can act in this turn
+[LOG] cardMatch.cpp:259 Entering multiplier phase
+[LOG] cardMatch.cpp:262 Player after multiplying armor: 5 attack: 1
+[LOG] combatSystem.cpp:40 Starting dealDamage combat system
+[LOG] combatSystem.cpp:40 Starting dealDamage combat system
+[LOG] combatSystem.cpp:25 Resetting Armor and Attack of Malliano
+[LOG] combatSystem.cpp:25 Resetting Armor and Attack of Ragged Bandits
+[LOG] deckCombat.cpp:149 Exhausting the whole turnPlayedPile into discardPile (End of the Turn)
+[LOG] deckCombat.cpp:138 Discarding the whole hand
+[LOG] rewardPhase.cpp:14 Entering reward Phase
+[LOG] rewardPhase.cpp:50 Showing the rewards options
+[LOG] cardFactory.cpp:82 Card instance being created: Farmer
+[LOG] cardFactory.cpp:85 CardInstance of Farmer has been created.
+[LOG] rewardPhase.cpp:28 Selecting rewards
+[LOG] rewardPhase.cpp:29 Resolving rewards option effects
+[LOG] rewardPhase.cpp:32 Finishing reward Phase
+[LOG] eventGraph.cpp:101 Resolving node n1
+[LOG] storyEvent.cpp:16 Entering Story Event
+[LOG] rewardPhase.cpp:14 Entering reward Phase
+[LOG] rewardPhase.cpp:50 Showing the rewards options
+[LOG] cardFactory.cpp:82 Card instance being created: FamishedFarmer
+[LOG] cardFactory.cpp:85 CardInstance of FamishedFarmer has been created.
+[LOG] rewardPhase.cpp:28 Selecting rewards
+[LOG] rewardPhase.cpp:29 Resolving rewards option effects
+[LOG] rewardPhase.cpp:32 Finishing reward Phase
